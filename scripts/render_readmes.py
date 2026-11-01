@@ -55,15 +55,15 @@ COPY = {
 "assistance": "Auteurs et assistance", "assistance_text": "Responsable : **Zijian Zeng, UCSI University** · 1002266693@ucsiuniversity.edu.my. La recherche, le code, les preuves et la rédaction ont utilisé une assistance substantielle de l’IA, déclarée dans les manuscrits. Les mentions de licence existantes sont conservées ; voir [RIGHTS.md](RIGHTS.md)."
 },
 "ja": {
-"intro": "理論計算機科学の研究稿、再現可能なコード、厳密な証明書をまとめたリポジトリ。本スナップショットには、初期の五編と継続研究の五編、計 **10 セットの稿件資料**を収録する。各課題について、概要、PDF、変更していないソースアーカイブ、閲覧可能なコードを用意している。",
-"status": "**結果の範囲に注意：**七編は明示した研究目標の完全な解答としてローカル記録されている。初期の三編は部分結果であり、元のより一般的な問いは未解決である。これらはローカルの研究・公開確認記録で、外部査読や STOC 採択を意味しない。元の著者一覧を維持し、後の五編は Zijian Zeng の単著である。",
-"overview": "稿件一覧", "topic": "課題", "pages": "ページ数", "scope": "結果の範囲", "artifacts": "ファイル", "resolved": "明示した目標の完全解答", "partial": "初期の部分結果", "abstract": "概要", "subjects": "各課題の研究内容",
+"intro": "理論計算機科学の研究稿、再現可能なコード、厳密な証明書をまとめたリポジトリ。本スナップショットには、初期の五編と継続研究の五編、計 **10 セットの論文資料**を収録する。各課題について、概要、PDF、変更していないソースアーカイブ、閲覧可能なコードを用意している。",
+"status": "**結果の範囲に注意：**研究記録上、七編は明示した研究目標の完全な解答に位置付けられている。初期の三編は部分結果であり、元のより一般的な問いは未解決である。これらはローカルの研究・公開確認記録で、外部査読や STOC 採択を意味しない。元の著者一覧を維持し、後の五編は Zijian Zeng の単著である。",
+"overview": "論文原稿一覧", "topic": "課題", "pages": "ページ数", "scope": "結果の範囲", "artifacts": "ファイル", "resolved": "明示した目標の完全解答", "partial": "初期の部分結果", "abstract": "概要", "subjects": "各課題の研究内容",
 "notes_title": "検証済み研究ノート：元の問いは未解決",
 "notes": "二つの追加資料は、特定の証明方法の限界を示す。[二進パリティ・インターフェース](notes/tp-parity-interface/)では、共有72項目表によって対象の TP 彩色を合成できないが、元の三彩色予想を否定したわけではない。[頂点削除に沿うサイクル持ち上げの障害](notes/facet-cycle-lifting/)は、P19 の200個の極大独立集合と基礎サイクルの189頂点を比較し、ある帰納法を排除する。両資料に厳密なデータと検証コードがある。",
 "repro": "再現とビルド", "requirements": "可搬な数学的チェックに必要なのは **Python 3.10 以降の標準ライブラリ**のみ。PDF の再ビルドには LaTeX、`latexmk`、Poppler（`pdftotext`） も必要で、未変更の公式 acmart ファイルを同梱している。スクリプトは一時コピーで動作し、アーカイブを変更しない。",
 "commands_note": "以下はリポジトリのルートで実行する。個別の課題には `--all` の代わりに `--paper ID` を指定する。有限計算が検証するのは明記された範囲だけであり、一般的な証明は本文を参照。TeX の時刻情報により再ビルドした PDF のバイト列が変わることがある。",
 "layout": "ディレクトリ構成", "layout_text": "`papers/ID/paper.pdf` は公開 PDF、`source.zip` は元の未変更ソース、`source/` は同じ内容を閲覧するための展開版。`catalog.json` はハッシュと再現コマンド、`validation/` は実際の確認結果を記録する。出典確認の範囲とアクセス制限は各 provenance に保存されている。",
-"assistance": "著者と研究支援", "assistance_text": "管理者：**Zijian Zeng, UCSI University** · 1002266693@ucsiuniversity.edu.my。研究、コード、証明の検討、執筆には実質的な AI 支援を利用しており、稿件で開示している。同梱ファイルの既存ライセンス表示は維持する。[RIGHTS.md](RIGHTS.md) を参照。"
+"assistance": "著者と研究支援", "assistance_text": "管理者：**Zijian Zeng, UCSI University** · 1002266693@ucsiuniversity.edu.my。研究、コード、証明の検討、執筆には実質的な AI 支援を利用しており、論文原稿で開示している。同梱ファイルの既存ライセンス表示は維持する。[RIGHTS.md](RIGHTS.md) を参照。"
 }}
 
 

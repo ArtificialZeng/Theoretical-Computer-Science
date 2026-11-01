@@ -55,7 +55,7 @@ Manuscrits de recherche, code reproductible et certificats exacts en informatiqu
 
 ### A Size-Independent Discrepancy Bound for Sparse Coverage Functions
 
-**Résumé.** Peut-on équilibrer des fonctions de couverture creuses avec une erreur indépendante du nombre d’objets ? Si chaque objet appartient à au plus t occurrences de caractéristiques dans toute la famille, une partition déterministe en temps polynomial en k≥2 classes garantit une discrépance entre classes d’au plus 4kt(kt−1)². Des témoins de Hall équilibrent les grandes caractéristiques, puis un arrondi de Beck–Fiala à choix multiples traite les interactions restantes.
+**Résumé.** Peut-on équilibrer des fonctions de couverture creuses avec une erreur indépendante du nombre d’objets ? Si chaque objet appartient à au plus t occurrences de caractéristiques dans toute la famille, un algorithme déterministe en temps polynomial partitionne les objets en k≥2 classes et garantit une discrépance entre classes d’au plus 4kt(kt−1)². Des témoins de Hall équilibrent les grandes caractéristiques, puis un arrondi de Beck–Fiala à choix multiples traite les interactions restantes.
 
 [PDF](papers/c002-coverage/paper.pdf) · [ZIP](papers/c002-coverage/source.zip) · [Code](papers/c002-coverage/source/) · [Reproduce](papers/c002-coverage/README.md)
 
