@@ -1,0 +1,26 @@
+{
+  "kind": "resolution-paper",
+  "statement": "There exists a nontrivial universal partial cycle over the binary alphabet {0,1} for words of length n=12 with diamondicity d=3 and cyclic length L=512. An exact witness is obtained by prefixing each three-bit binary expansion of the 128 octal digits in evidence/research2-witness/witness.json by a wildcard. Every binary 12-word is compatible with exactly one of its 512 cyclic windows. This answers the immutable source.md existence Question 9.2 affirmatively in its full original scope.",
+  "original_status": "proved",
+  "contribution": "An explicit, exhaustively verified upcycle with diamondicity greater than one, crossing the boundary left open in the inspected July 2026 primary paper. The complete finite-certificate proof uses ordinary conflicts for all 130816 pairs of cyclic windows and 512*8=4096 coverage, corroborated by direct all-word/all-start comparison. This is one cyclic word, not a disconnected quasi-family or a finite negative search. The proposed substantive novelty is the existence witness and consequent full affirmative resolution; no novelty of the SAT/Euler tools, general construction, minimality, or publication quality is claimed. Fresh correctness, current novelty and theoretical significance review remains required.",
+  "proposer_job_id": "c012-upcycles-research-456cb4499028",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "publication-policy.json",
+    "evidence/research2-proof.md",
+    "evidence/research2-witness/witness.json",
+    "evidence/research2-witness/word.txt",
+    "evidence/research2-witness/minimal_check.py",
+    "evidence/research2-witness/minimal-check.log",
+    "evidence/research2_verify_witness.py",
+    "evidence/research2-witness/standalone-verification.json",
+    "evidence/research2-witness/inverse-coverage.json",
+    "evidence/research2-witness/pair-conflicts.json",
+    "evidence/research2-literature.md",
+    "evidence/research2-primary-open-records.json",
+    "evidence/research2-primary-exact-statements.json",
+    "evidence/research2-novelty-search.json",
+    "evidence/research2-further-novelty-search.json"
+  ]
+}

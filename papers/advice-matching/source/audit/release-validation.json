@@ -1,0 +1,47 @@
+{
+  "job_id": "advice-matching-release-01731cae3c13",
+  "ok": true,
+  "pages": 6,
+  "ordered_authors": [
+    "Zijian Zeng",
+    "Jiayin Cao",
+    "Weinan Dai",
+    "Rui Wang",
+    "Fei Ding"
+  ],
+  "all_institutions_emails_in_xmp": true,
+  "letter": true,
+  "all_fonts_embedded": true,
+  "official_class_unchanged": true,
+  "evidence_hashes_unchanged": true,
+  "source_digest": "3ec230456a31ba9b004000be9e79c74a77636a28a31e9b4eec31918f5ab305ed",
+  "local_TeX_inputs": [
+    "manuscript/acmart.cls",
+    "manuscript/body.tex",
+    "manuscript/main.bbl",
+    "manuscript/main.tex"
+  ],
+  "dependency_scope_complete": true,
+  "citation_keys": [
+    "BCH25",
+    "CGLB24",
+    "FLWZ25",
+    "FM18",
+    "JM24",
+    "LMP26"
+  ],
+  "undefined_citations": false,
+  "final_TeX_warnings": 0,
+  "final_BibTeX_warnings": 0,
+  "AI_before_final_bibliography": true,
+  "caption_font_size_at_poppler_1_5_zoom": [
+    16
+  ],
+  "portable_archive_matches_current_sources": true,
+  "prebuild_and_rebuilt_pdf_text_equal": true,
+  "snapshot_digest": "9e5ce19e70bcedf07302fd469630c6922133d2418685a0789184566a1578f92c",
+  "manuscript_digest": "190ac5d740b6eba350826842752400ef3de5381f01b0c88aaf1f9350a2472763",
+  "pdf_digest": "97f90509d1413691ce7cb13e0c7dc8bc0ee2a2b1f133131cc43a2ed9cea6ffa2",
+  "build_log": "manuscript/main.log",
+  "build_log_digest": "8f828024ac2e268889bd5a4d5928a8a0d90bc7f9f71d6504a769005be780b9e0"
+}

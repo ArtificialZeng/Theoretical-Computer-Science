@@ -1,0 +1,220 @@
+{
+  "arithmetic": "fractions.Fraction (exact rational)",
+  "local_inequality_cases": 3320,
+  "product_inequality_cases": 34631,
+  "finite_lp_cases": [
+    {
+      "k": 2,
+      "m": 2,
+      "occupancy_profiles": 6,
+      "bases_enumerated": 20,
+      "alpha": "3/4",
+      "exact_optimum": "7/8",
+      "analytic_upper": "7/8",
+      "ratio": "8/7",
+      "dual": [
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "primal": [
+        {
+          "profile": [
+            0,
+            2,
+            0
+          ],
+          "weight": "1/2"
+        },
+        {
+          "profile": [
+            1,
+            0,
+            1
+          ],
+          "weight": "1/2"
+        }
+      ],
+      "all_dual_constraints_checked_exactly": true
+    },
+    {
+      "k": 2,
+      "m": 3,
+      "occupancy_profiles": 10,
+      "bases_enumerated": 120,
+      "alpha": "3/4",
+      "exact_optimum": "5/6",
+      "analytic_upper": "5/6",
+      "ratio": "6/5",
+      "dual": [
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "primal": [
+        {
+          "profile": [
+            1,
+            2,
+            0
+          ],
+          "weight": "2/3"
+        },
+        {
+          "profile": [
+            2,
+            0,
+            1
+          ],
+          "weight": "1/3"
+        }
+      ],
+      "all_dual_constraints_checked_exactly": true
+    },
+    {
+      "k": 2,
+      "m": 4,
+      "occupancy_profiles": 15,
+      "bases_enumerated": 455,
+      "alpha": "3/4",
+      "exact_optimum": "13/16",
+      "analytic_upper": "13/16",
+      "ratio": "16/13",
+      "dual": [
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "primal": [
+        {
+          "profile": [
+            2,
+            2,
+            0
+          ],
+          "weight": "3/4"
+        },
+        {
+          "profile": [
+            3,
+            0,
+            1
+          ],
+          "weight": "1/4"
+        }
+      ],
+      "all_dual_constraints_checked_exactly": true
+    },
+    {
+      "k": 3,
+      "m": 2,
+      "occupancy_profiles": 10,
+      "bases_enumerated": 120,
+      "alpha": "19/27",
+      "exact_optimum": "5/6",
+      "analytic_upper": "47/54",
+      "ratio": "6/5",
+      "dual": [
+        "1/3",
+        "1/9",
+        "1/9"
+      ],
+      "primal": [
+        {
+          "profile": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "weight": "3/4"
+        },
+        {
+          "profile": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "weight": "1/4"
+        }
+      ],
+      "all_dual_constraints_checked_exactly": true
+    },
+    {
+      "k": 3,
+      "m": 3,
+      "occupancy_profiles": 20,
+      "bases_enumerated": 1140,
+      "alpha": "19/27",
+      "exact_optimum": "65/81",
+      "analytic_upper": "22/27",
+      "ratio": "81/65",
+      "dual": [
+        "8/27",
+        "11/81",
+        "8/81"
+      ],
+      "primal": [
+        {
+          "profile": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "weight": "2/3"
+        },
+        {
+          "profile": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "weight": "1/3"
+        }
+      ],
+      "all_dual_constraints_checked_exactly": true
+    },
+    {
+      "k": 4,
+      "m": 3,
+      "occupancy_profiles": 35,
+      "bases_enumerated": 6545,
+      "alpha": "175/256",
+      "exact_optimum": "31/40",
+      "analytic_upper": "207/256",
+      "ratio": "40/31",
+      "dual": [
+        "27/80",
+        "13/160",
+        "9/160"
+      ],
+      "primal": [
+        {
+          "profile": [
+            0,
+            2,
+            1,
+            0,
+            0
+          ],
+          "weight": "4/5"
+        },
+        {
+          "profile": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ],
+          "weight": "1/5"
+        }
+      ],
+      "all_dual_constraints_checked_exactly": true
+    }
+  ],
+  "scope": "Only the enumerated finite ranges; analytic proof required for all k,m."
+}

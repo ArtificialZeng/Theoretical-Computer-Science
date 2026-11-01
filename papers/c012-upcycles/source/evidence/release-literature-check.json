@@ -1,0 +1,77 @@
+{
+  "job_id": "c012-upcycles-release-0294a4f8ea65",
+  "checked_at": "2026-11-01T05:28:09.550077+00:00",
+  "method": "citation-check-skill: fixed extraction followed by primary-source web verification",
+  "sources": [
+    {
+      "key": "FGKMM26",
+      "url": "https://link.springer.com/article/10.1007/s10623-026-01841-x",
+      "status": "verified",
+      "metadata": "Five authors, title, DCC94 article152, published 4 July 2026, DOI10.1007/s10623-026-01841-x",
+      "passages": [
+        "Section2 definitions",
+        "Theorem3.1 and displayed binary examples",
+        "Theorem5.1 and Corollary5.2",
+        "Corollary8.14",
+        "Question9.2 and following paragraph"
+      ],
+      "preprint": "https://arxiv.org/abs/2310.13067",
+      "version": "v3, 14 April 2025; bibliography cites 2026 version of record"
+    },
+    {
+      "key": "CKKP25",
+      "url": "https://link.springer.com/article/10.1007/s10623-025-01609-9",
+      "status": "verified",
+      "metadata": "Four authors, title, DCC93 pp2803-2822, published 27 March 2025, DOI10.1007/s10623-025-01609-9",
+      "passages": [
+        "Definition8.2"
+      ],
+      "preprint": "https://arxiv.org/abs/2409.12417",
+      "version": "v2, 31 March 2025; bibliography cites 2025 version of record"
+    },
+    {
+      "key": "CKMS17",
+      "url": "https://dmtcs.episciences.org/en/articles/2205",
+      "full_text": "https://dmtcs.episciences.org/3690/pdf",
+      "status": "verified",
+      "metadata": "Four authors, title, DMTCS19(1) paper16, published31May2017, DOI10.23638/DMTCS-19-1-16",
+      "passages": [
+        "Original PDF p1 abstract and p2 Section1.2"
+      ],
+      "preprint": "https://arxiv.org/abs/1601.06456",
+      "version": "Publisher PDF v4,30May2017; arXiv latest v5,1June2017. Introductory attribution checked against original publisher PDF."
+    }
+  ],
+  "query_templates_executed": [
+    "Fillmore 2026 The existence and",
+    "\"The existence and structure of universal partial cycles\" site:semanticscholar.org OR site:arxiv.org",
+    "Fillmore 2026 Designs Codes Cryptography",
+    "doi:10.1007/s10623-026-01841-x",
+    "arxiv:2310.13067",
+    "Carey 2025 Universal partial tori",
+    "\"Universal partial tori\" site:semanticscholar.org OR site:arxiv.org",
+    "Carey 2025 Designs Codes Cryptography",
+    "doi:10.1007/s10623-025-01609-9",
+    "arxiv:2409.12417",
+    "Chen 2017 On universal partial",
+    "\"On universal partial words\" site:semanticscholar.org OR site:arxiv.org",
+    "Chen 2017 Discrete Mathematics Theoretical Computer Science",
+    "doi:10.23638/DMTCS-19-1-16",
+    "arxiv:1601.06456",
+    "\"upcycle\" \"diamondicity\" \"3\" \"2026\"",
+    "\"universal partial cycles\" \"d > 1\" 2026",
+    "\"universal partial\" \"512\" \"12\"",
+    "\"universal partial cycles\" \"diamondicity\" \"2026\"",
+    "\"upcycle\" \"n=12\"",
+    "\"universal partial cycles\" \"diamondicity greater than one\"",
+    "\"universal partial cycles\" \"three\" \"wildcards\"",
+    "\"Periods of strongly connected multivariate digraphs\""
+  ],
+  "query_note": "Author/title/venue/DOI/arXiv templates all run; quotes and additional topic words varied as preserved by the tool transcript. Search results alone were not adopted as theorem evidence.",
+  "novelty_result": "No equivalent d3,n12,L512 witness found in this bounded current screen; no absolute priority guarantee. Manuscript makes no claim of a general construction or global minimality.",
+  "optional_access_limits": [
+    "Incorrect short DMTCS path failed; canonical /en/articles/2205 and original /3690/pdf succeeded.",
+    "Uncited Qian/Wu/Zhu author PDF and publisher full-text endpoint were inaccessible on refresh; search returned its primary abstract, but this release does not claim a fresh theorem-level comparison of that optional source. No cited record is unverified."
+  ],
+  "bibliography_basis": "No user-designated Excel/BibTeX authority; three directly verified relevant primary papers."
+}

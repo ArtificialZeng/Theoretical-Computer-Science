@@ -1,0 +1,23 @@
+{
+  "job_id": "c009-cycle2-triage-408b44cde59f",
+  "role": "triage",
+  "budget_seconds": 480,
+  "first_observed_utc": "2026-11-01T02:24:39+00:00",
+  "finished_utc": "2026-11-01T02:29:31.663598+00:00",
+  "elapsed_since_first_clock_seconds": 292.664,
+  "agents_spawned": 0,
+  "background_workers": 0,
+  "research_passes_run": 0,
+  "exact_block_tests": 252,
+  "exact_density_tests": 18,
+  "prior_criterion_lengths_tested": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "operational_observations": [
+    "NumPy and SymPy unavailable; exact checks completed using standard library."
+  ],
+  "runner_state_modified": false
+}

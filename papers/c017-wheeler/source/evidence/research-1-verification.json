@@ -1,0 +1,89 @@
+{
+  "job_id": "c017-wheeler-research-8ca2b0cef7a6",
+  "phase": "research",
+  "pass": 1,
+  "recorded_at_utc": "2026-11-01T10:53:49.699149+00:00",
+  "source_unchanged": true,
+  "source_sha256": "40fc8e967aeefd233cb62ffd0f70d77e772fafbdeb6086724c4c2ab5f591106d",
+  "claim_contract_fields_checked": [
+    "kind",
+    "statement",
+    "original_status",
+    "contribution",
+    "proposer_job_id",
+    "evidence_files"
+  ],
+  "tests_run": [
+    "python3 evidence/check_membership.py",
+    "python3 evidence/check_exact_certificates.py"
+  ],
+  "all_final_test_runs_passed": true,
+  "prior_failed_run": "First certificate replay failed a manually reversed interval-direction label; corrected increasing direction and full successful replay documented in research-1-adversarial.md.",
+  "agents_or_background_workers_spawned": false,
+  "manuscript_or_pdf_created": false,
+  "fresh_referee_verdict": null,
+  "usage": "Exact token usage unavailable here; no prior usage/counters overwritten.",
+  "limits": "Process/contract checks and finite controls do not certify mathematical truth or novelty.",
+  "claim_evidence": [
+    {
+      "path": "source.md",
+      "bytes": 2675,
+      "sha256": "40fc8e967aeefd233cb62ffd0f70d77e772fafbdeb6086724c4c2ab5f591106d"
+    },
+    {
+      "path": "problem.md",
+      "bytes": 6192,
+      "sha256": "d13a8b276b676449a3f8fc84d603e4f2e6dd2fb69070147f806ff835571fff96"
+    },
+    {
+      "path": "evidence/research-1-resolution.md",
+      "bytes": 17187,
+      "sha256": "f1de4e78c480ff6049acab414bac037ec70e98f66a4561358d3ca8920ad28bee"
+    },
+    {
+      "path": "evidence/research-1-adversarial.md",
+      "bytes": 6189,
+      "sha256": "0eda2defc9b1159bd9d2c6e19f9d0ddf75f2d49769e90b9bebc735996aab776b"
+    },
+    {
+      "path": "evidence/research-1-literature.md",
+      "bytes": 4263,
+      "sha256": "aebf1041c5bebdb9870ce512236a50e626c2fa6985c74a9888badbed7d27eaa8"
+    },
+    {
+      "path": "evidence/check_membership.py",
+      "bytes": 14713,
+      "sha256": "4958dd6ea361f9e4d9b1dc206d67bf03c555448fa13aa5dd55f15427db4321de"
+    },
+    {
+      "path": "evidence/membership-check.json",
+      "bytes": 6827,
+      "sha256": "cc931ef119c7d89e96569b9cb199fcd3c0af9413cb9c0c6a1c0e54657eb1424c"
+    },
+    {
+      "path": "evidence/check_exact_certificates.py",
+      "bytes": 4371,
+      "sha256": "fe8e159c5031c5f321287ba39e08e09c50002d587ce16aa55bc829cd94b20bf6"
+    },
+    {
+      "path": "evidence/exact-certificates.json",
+      "bytes": 7013,
+      "sha256": "c62d76ade77e707c417d51ac5c4d3db203519e778047723b4ebf78534af87173"
+    },
+    {
+      "path": "evidence/first-test.md",
+      "bytes": 3882,
+      "sha256": "5984788f4ef97d066d086a82351f4eb0c9dc763931c3de50acd2bf73b783b2c5"
+    },
+    {
+      "path": "intake/wheeler-fixed-certificate-verification.md",
+      "bytes": 6163,
+      "sha256": "99a6be2a1569a6ca60356a7ed1fdcbc06b48501088db0b07acbd4ad40387c4bb"
+    },
+    {
+      "path": "intake/wheeler-nested-turn-control.md",
+      "bytes": 2631,
+      "sha256": "73362d363797c361c30c7c6682bb4c2a2c96e1b5e7dafa099d56ffa903723da6"
+    }
+  ]
+}

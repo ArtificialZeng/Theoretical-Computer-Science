@@ -1,0 +1,30 @@
+{
+  "job_id": "c012-upcycles-research-cfe911474960",
+  "label": "bad_flip_n4",
+  "status": "UNSAT",
+  "returncode": 20,
+  "hard_timeout": false,
+  "elapsed_seconds": 0.006317208055406809,
+  "cap_seconds": 60,
+  "child_cpu_seconds": 0.0034170000000000103,
+  "command": [
+    "/opt/homebrew/bin/cadical",
+    "--check",
+    "--lrat",
+    "--no-binary",
+    "-t",
+    "60",
+    "evidence/research1-sat/bad_flip_n4.cnf",
+    "evidence/research1-sat/bad_flip_n4.lrat"
+  ],
+  "completed_utc": "2026-11-01T04:34:16.480931+00:00",
+  "cnf": "evidence/research1-sat/bad_flip_n4.cnf",
+  "encoding": "evidence/research1-sat/bad_flip_n4.encoding.json",
+  "log": "evidence/research1-sat/bad_flip_n4.log",
+  "proof": "evidence/research1-sat/bad_flip_n4.lrat",
+  "cnf_sha256": "a09bcc4804c4688df06f0055fb0b2da7de79652f6e6252f81aed2f1fa684e042",
+  "proof_sha256": "0a2574e991324f3c655f28f585a67ce4df75edfd5e2f904776959f28109e65b8",
+  "source_sha256": "773f9e28946e0ee6f8def64bd988a0e6ae6f1a095968d275914978caa6ce2eac",
+  "variables": 21,
+  "clauses": 94
+}

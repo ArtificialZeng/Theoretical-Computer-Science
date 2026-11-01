@@ -1,0 +1,16 @@
+[
+  {
+    "name": "mcdonald2004",
+    "url": "https://projecteuclid.org/journals/rocky-mountain-journal-of-mathematics/volume-34/issue-1/Almost-skew-symmetric-matrices/10.1216/rmjm/1181069905.pdf",
+    "utc": "2026-11-01T02:35:19.048352+00:00",
+    "status": "access-blocked",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "name": "gregory-kirkland1999",
+    "url": "https://journals.uwyo.edu/index.php/ela/article/download/61/61/61",
+    "utc": "2026-11-01T02:35:19.067880+00:00",
+    "status": "access-blocked",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  }
+]

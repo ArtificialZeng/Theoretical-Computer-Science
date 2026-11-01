@@ -1,0 +1,22 @@
+{
+  "path": "artifacts/advice-matching-source.zip",
+  "sha256": "72eac877f01615fcbbaadc6b990cc82e4b0ce437c69e236e80bf97810a189434",
+  "entries": [
+    "publication.json",
+    "manuscript/README-acmart",
+    "manuscript/README-zh.md",
+    "manuscript/REPRODUCIBILITY.md",
+    "manuscript/acmart.cls",
+    "manuscript/acmart.dtx",
+    "manuscript/acmart.ins",
+    "manuscript/alpha.bst",
+    "manuscript/body.tex",
+    "manuscript/build.sh",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/reproduce.py",
+    "manuscript/template-provenance.json"
+  ],
+  "no_third_party_paper_fulltexts": true
+}

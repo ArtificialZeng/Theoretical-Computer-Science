@@ -1,0 +1,22 @@
+{
+  "job_id": "c012-upcycles-release-0294a4f8ea65",
+  "snapshot_digest": "920933319e6b98bd521f6c300a93b0e7fa46ae3d6600fa970801ea528789f85e",
+  "manuscript_digest": "474c54f68a48ef6fd7c76b39f22078792f656b0f9e2b317cb7c264388336041a",
+  "pdf_digest": "eade3f9df07bd82943ef54b3e0c9c1b95d1510ab9e779dc9ff26a9cdf71cedef",
+  "citations_current_bindings": true,
+  "build_current_bindings": true,
+  "visual_current_bindings": true,
+  "exact_sorted_sources": true,
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "nonempty_scope": true,
+  "existing_bound_build_log": true,
+  "clean_build": true,
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}

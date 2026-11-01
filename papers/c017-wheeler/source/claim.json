@@ -1,0 +1,28 @@
+{
+  "kind": "resolution-paper",
+  "statement": "There is a deterministic terminating algorithm deciding, for every finite trimmed deterministic subsequential transducer in the exact model of source.md and problem.md, whether its reaching languages are totally ordered in colex and whether accumulated transition output on every reaching language admits a finite partition into convex weakly monotone pieces. The algorithm allows partial transitions, arbitrary ordered finite input/output alphabets and empty output words, ignores terminal outputs as required, and runs in O(S^13) bit operations for the explicit encoding size S defined in the proof. For machines passing input order, every failure also admits the exact single-pump disjoint-turn certificate of evidence/first-test.md, with a total computable template bound. In the same exact model, given an arbitrary such transducer, it is also decidable whether any equivalent finite Wheeler transducer over the same ordered alphabets exists; on YES one can effectively construct one. This realizability consequence allows arbitrary terminal words and nonempty residual LCPs without an initial output. No polynomial bound, minimality or optimal complexity is asserted for realizability.",
+  "original_status": "proved",
+  "contribution": "One combined proposed resolution-paper: the complete original-scope membership algorithm and its conservative O(S^13) bit bound and disjoint-turn certificates are incorporated unchanged from research-1-resolution.md. The substantive independent core is the SCC characterization: branching recurrence forces a global orientation; a simple cycle has an exact two-side adjacent-shell test; acyclic states inherit finite partitions. New research-2 evidence supplies a complete effective realizability consequence. Classical onward normalization and residual merging produce canonical colors, synchronous automata and shortlex representatives decide finite maximal convex refinement, and the original membership decider tests the resulting equivalent split machine. Necessity from any Wheeler realization uses the known statewise residual-LCP identity and common-right-append preservation of colex. Those normalization/automatic/refinement ingredients are credited as prior and routine, not a separate innovation or separate paper. Current bounded primary-source checks found no inspected equivalent decision theorem. This strengthened claim requests a new actual freeze and fresh full-scope correctness, novelty and significance review; it does not assert acceptance or authorize a manuscript/PDF.",
+  "proposer_job_id": "c017-wheeler-research-98a17f8eb2fd",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "evidence/research-1-resolution.md",
+    "evidence/research-1-adversarial.md",
+    "evidence/research-1-literature.md",
+    "evidence/check_membership.py",
+    "evidence/membership-check.json",
+    "evidence/check_exact_certificates.py",
+    "evidence/exact-certificates.json",
+    "evidence/first-test.md",
+    "intake/wheeler-fixed-certificate-verification.md",
+    "intake/wheeler-nested-turn-control.md",
+    "evidence/research-2-realizability-proof.md",
+    "evidence/research-2-check-realizability.py",
+    "evidence/research-2-realizability-check.json",
+    "evidence/research-2-adversarial.md",
+    "evidence/research-2-literature.md",
+    "intake/blumensath-1999-automatic.pdf",
+    "intake/wheeler-v3.pdf"
+  ]
+}

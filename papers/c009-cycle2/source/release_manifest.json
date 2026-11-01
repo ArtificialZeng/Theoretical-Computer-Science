@@ -1,0 +1,26 @@
+{
+  "artifacts": {
+    "main.pdf": "519a8f77e5e1fd12c6abf00b04b53c6e43a17273c04d3cfb8668ff6c98866710"
+  },
+  "kind": "resolution-paper",
+  "manuscript_digest": "b4b0a087b93942317cb6f781edea4f1dd83ed888a5847b8da0a4194a99337b0c",
+  "original_status": "proved",
+  "pages": 6,
+  "pdf_digest": "519a8f77e5e1fd12c6abf00b04b53c6e43a17273c04d3cfb8668ff6c98866710",
+  "provenance": {
+    "audit/build.json": "f47f09bfb17c8c20018fc31c10d86dad3afd643036bdb97e9ef9b5b35b58bf61",
+    "audit/build.md": "7553b89739a1f636d40ad3391dfeb38fb986df53ca51026223912bf045352d9c",
+    "audit/citations.json": "9fd83b48a921eda7854a6122e2831dfb3a86f7f150c53ff5feacdc3b95b4c14a",
+    "audit/citations.md": "991c654e119917cad717a8dc4fb6afb27f198c133a33ac23c77bad374f0b40fc",
+    "audit/math.json": "4b80ec7239ebcf4d8351085779df2c48298e172c215feb85b642bb784181ee78",
+    "audit/math.md": "2c2ba537e6e783eb46e20fcdcff1372acfc00c8384656d69e24d47f828b02ca7",
+    "audit/visual.json": "739ccab96ac51134f54f037877d9d185dfecb82c88ce8102432a1ab8d4b9e91b",
+    "audit/visual.md": "621d0ade2658baa95ad6847ed79ef4553fb5c4f5f9418f4109ae818483e7efa7",
+    "jobs/c009-cycle2-referee-eb6d40fb0393/role.json": "a6b3daf043583cd7c3ddee921715ac2a2e4b4eabb80f7feacc30afdbe6068171",
+    "jobs/c009-cycle2-release-70b6b8b76475/role.json": "18e7fdbfed8adc55e820897a390d53c7a8e34619fb74e8174bee22745ce4f898",
+    "jobs/c009-cycle2-research-347a4f87d1ce/role.json": "d5471b739ad66ac4d4396512644e45ba84445304e5d1ea207e2edf1e701b0a8f",
+    "manuscript/build/main.log": "338e305c11b52d4c02150cf911f144c81c58dd1d13cfb0cfb718949caadbad6f"
+  },
+  "schema": 1,
+  "snapshot_digest": "06b470c27e7195c3ffb2ba0d198581e77aa79d1b5d87d6485d396b6af906d1bc"
+}

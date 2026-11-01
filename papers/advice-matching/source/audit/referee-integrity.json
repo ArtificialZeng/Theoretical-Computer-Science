@@ -1,0 +1,24 @@
+{
+  "job_id": "advice-matching-referee-aa04e7abc7cb",
+  "snapshot_digest": "9e5ce19e70bcedf07302fd469630c6922133d2418685a0789184566a1578f92c",
+  "mapping_digest_matches": true,
+  "all_files_match": true,
+  "files": {
+    "claim.json": true,
+    "evidence/check_frontiers.py": true,
+    "evidence/check_obstruction.py": true,
+    "evidence/frontier-checks.json": true,
+    "evidence/frontier-proof.md": true,
+    "evidence/known-obstruction.md": true,
+    "evidence/obstruction-check.json": true,
+    "literature/research-comparison.md": true,
+    "literature/root-additional-search.md": true,
+    "literature/triage-sources.md": true,
+    "problem.md": true,
+    "requirements.md": true,
+    "source.md": true
+  },
+  "phase": "completed fresh mathematical review",
+  "final_all_files_match": true,
+  "source_unchanged": true
+}

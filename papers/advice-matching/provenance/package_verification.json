@@ -1,0 +1,17 @@
+{
+  "paper_number": 5,
+  "title": "Matching Advice on Degree-Two Bipartite Graphs: Exact Consistency\u2013Robustness Frontiers",
+  "archive_sha256": "ca90273f18980b5ac5cdb96b22ef6585bf958b1b56ac26183a3f0d75f2d585fb",
+  "delivered_pdf_sha256": "97f90509d1413691ce7cb13e0c7dc8bc0ee2a2b1f133131cc43a2ed9cea6ffa2",
+  "supplied_publication_inputs_rehashed": 15,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/tmp/delivery-check/paper5-vffvii7k/paper5_source",
+  "rebuilt_pages": 6,
+  "rebuilt_pdf_text_matches_delivery": true,
+  "rebuilt_page_renders_match_delivery": true,
+  "finite_reproduction": {
+    "entry_point": "python3 manuscript/reproduce.py",
+    "scope": "finite exact checks only",
+    "output": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/tmp/delivery-check/paper5-vffvii7k/finite-reproduced.json"
+  },
+  "scope": "Archive/build/finite reproducibility, not a new mathematical or novelty review."
+}

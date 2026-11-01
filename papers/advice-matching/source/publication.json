@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "title": "Matching Advice on Degree-Two Bipartite Graphs: Exact Consistency–Robustness Frontiers",
+  "writer_job_id": "advice-matching-write-7c7b770a22e9",
+  "pdf": "manuscript/main.pdf",
+  "source_files": [
+    "manuscript/README-acmart",
+    "manuscript/README-zh.md",
+    "manuscript/REPRODUCIBILITY.md",
+    "manuscript/acmart.cls",
+    "manuscript/acmart.dtx",
+    "manuscript/acmart.ins",
+    "manuscript/alpha.bst",
+    "manuscript/body.tex",
+    "manuscript/build.sh",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/reproduce.py",
+    "manuscript/template-provenance.json"
+  ],
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "institution": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    },
+    {
+      "name": "Jiayin Cao",
+      "institution": "Ningbo University",
+      "email": "2795820153@qq.com"
+    },
+    {
+      "name": "Weinan Dai",
+      "institution": "Zhejiang University",
+      "email": "21725058@zju.edu.cn"
+    },
+    {
+      "name": "Rui Wang",
+      "institution": "Nanchang Institute of Technology",
+      "email": "2002007@nut.edu.cn"
+    },
+    {
+      "name": "Fei Ding",
+      "institution": "Alibaba Group",
+      "email": "dingfei@email.ncu.edu.cn"
+    }
+  ],
+  "build_command": "sh manuscript/build.sh",
+  "reproduce_command": "python3 manuscript/reproduce.py",
+  "max_total_pages": 12,
+  "scope": "The exact unchanged claim in claim.json accepted by audit/math.json. Oblivious graph/order/advice; integral unweighted both-sides maximum degree two and 2-regular subclass.",
+  "release_status": "pending fresh release review"
+}

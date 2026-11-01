@@ -1,0 +1,10 @@
+{
+  "job_id": "coverage-sparse-referee-20ee9a6fefc3",
+  "snapshot_digest": "639fb67b280db040c9a3c5059288d96a35e8cb02d493e698aaf573087cfca4e8",
+  "status": "complete",
+  "mathematical_review": "complete exact frozen scope",
+  "verification": "audit/referee-20ee9a6fefc3-verification.json",
+  "report": "audit/math.md",
+  "structural_gate": "audit/referee-20ee9a6fefc3-gate.json",
+  "frozen_inputs_unchanged": true
+}

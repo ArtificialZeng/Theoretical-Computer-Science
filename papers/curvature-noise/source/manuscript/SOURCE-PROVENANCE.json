@@ -1,0 +1,24 @@
+{
+  "official_template": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "class_unmodified": true,
+  "original_source_sha256": "55e12bf5b8e7b5489014d1286ec0463b9bec718f4d5369b338c8e1403a6259cd",
+  "metadata_basis": "Primary official proceedings and author arXiv pages; no authoritative user workbook was supplied.",
+  "source_urls": [
+    "https://proceedings.neurips.cc/paper_files/paper/2016/hash/81c8727c62e800be708dbf37c4695dff-Abstract.html",
+    "https://arxiv.org/abs/1311.4728v3",
+    "https://proceedings.mlr.press/v65/hassidim17a.html",
+    "https://arxiv.org/abs/2510.21128v2"
+  ],
+  "fulltexts_not_distributed": true,
+  "math_scope": "Accepted subsidiary finite query bound and sparse-cardinality corollary; original joint-parameter task unresolved."
+}

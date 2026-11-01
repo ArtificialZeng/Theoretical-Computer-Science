@@ -1,0 +1,1408 @@
+{
+  "job_id": "coverage-sparse-referee-ec417dd22ce0",
+  "arithmetic": "fractions.Fraction; exact",
+  "integrity": {
+    "snapshot_digest": "ba492ed8d19230f30aeb099795ee5fe0c4f47586352bcddd1a3ce1254a1f3220",
+    "all_frozen_files_match": true,
+    "source_sha256": "eb7061a17cead0bc8cc0e4426f3f8260ac3137dd23b6f4813d8f4952b00ec731"
+  },
+  "direct_subset_attacks": [
+    {
+      "k": 2,
+      "m": 1,
+      "all_subsets": 4,
+      "explicit_features": 2,
+      "tested_edges": 1
+    },
+    {
+      "k": 2,
+      "m": 2,
+      "all_subsets": 16,
+      "explicit_features": 4,
+      "tested_edges": 2
+    },
+    {
+      "k": 2,
+      "m": 3,
+      "all_subsets": 64,
+      "explicit_features": 8,
+      "tested_edges": 3
+    },
+    {
+      "k": 2,
+      "m": 4,
+      "all_subsets": 256,
+      "explicit_features": 16,
+      "tested_edges": 4
+    },
+    {
+      "k": 2,
+      "m": 5,
+      "all_subsets": 1024,
+      "explicit_features": 32,
+      "tested_edges": 5
+    },
+    {
+      "k": 2,
+      "m": 6,
+      "all_subsets": 4096,
+      "explicit_features": 64,
+      "tested_edges": 6
+    },
+    {
+      "k": 3,
+      "m": 1,
+      "all_subsets": 8,
+      "explicit_features": 3,
+      "tested_edges": 3
+    },
+    {
+      "k": 3,
+      "m": 2,
+      "all_subsets": 64,
+      "explicit_features": 9,
+      "tested_edges": 6
+    },
+    {
+      "k": 3,
+      "m": 3,
+      "all_subsets": 512,
+      "explicit_features": 27,
+      "tested_edges": 9
+    },
+    {
+      "k": 3,
+      "m": 4,
+      "all_subsets": 4096,
+      "explicit_features": 81,
+      "tested_edges": 12
+    },
+    {
+      "k": 4,
+      "m": 1,
+      "all_subsets": 16,
+      "explicit_features": 4,
+      "tested_edges": 6
+    },
+    {
+      "k": 4,
+      "m": 2,
+      "all_subsets": 256,
+      "explicit_features": 16,
+      "tested_edges": 12
+    },
+    {
+      "k": 4,
+      "m": 3,
+      "all_subsets": 4096,
+      "explicit_features": 64,
+      "tested_edges": 18
+    },
+    {
+      "k": 5,
+      "m": 1,
+      "all_subsets": 32,
+      "explicit_features": 5,
+      "tested_edges": 10
+    },
+    {
+      "k": 5,
+      "m": 2,
+      "all_subsets": 1024,
+      "explicit_features": 25,
+      "tested_edges": 20
+    }
+  ],
+  "independent_projected_law_checks": {
+    "n": 4,
+    "k_range": [
+      1,
+      4
+    ],
+    "all_labeled_colorings": 354,
+    "laws_per_coloring": 4,
+    "law_cases": 1416,
+    "feature_cases": 22656,
+    "tested_edge_equalities": 6096,
+    "serialized_laws": [
+      {
+        "0": "1"
+      },
+      {
+        "15": "1"
+      },
+      {
+        "1": "1/3",
+        "14": "2/3"
+      },
+      {
+        "0": "4/101",
+        "1": "11/101",
+        "2": "7/101",
+        "3": "3/101",
+        "4": "10/101",
+        "5": "6/101",
+        "6": "2/101",
+        "7": "9/101",
+        "8": "5/101",
+        "9": "1/101",
+        "10": "8/101",
+        "11": "4/101",
+        "12": "11/101",
+        "13": "7/101",
+        "14": "3/101",
+        "15": "10/101"
+      }
+    ]
+  },
+  "exact_symmetrized_LP_attacks": [
+    {
+      "k": 2,
+      "m": 1,
+      "model": "equality",
+      "delta": null,
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            2
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 4
+    },
+    {
+      "k": 2,
+      "m": 1,
+      "model": "upper-error",
+      "delta": "0",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            2
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 4
+    },
+    {
+      "k": 2,
+      "m": 1,
+      "model": "upper-error",
+      "delta": "1/3",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            2
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 3
+    },
+    {
+      "k": 2,
+      "m": 1,
+      "model": "upper-error",
+      "delta": "2",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            2
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 3
+    },
+    {
+      "k": 2,
+      "m": 1,
+      "model": "upper-error",
+      "delta": "100",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            2
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 3
+    },
+    {
+      "k": 2,
+      "m": 2,
+      "model": "equality",
+      "delta": null,
+      "exact_optimum": "7/8",
+      "claimed_upper_bound": "7/8",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            2
+          ],
+          "mass": "1/2"
+        },
+        {
+          "profile": [
+            1,
+            1
+          ],
+          "mass": "1/2"
+        }
+      ],
+      "feasible_vertices": 13
+    },
+    {
+      "k": 2,
+      "m": 2,
+      "model": "upper-error",
+      "delta": "0",
+      "exact_optimum": "7/8",
+      "claimed_upper_bound": "7/8",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            2
+          ],
+          "mass": "1/2"
+        },
+        {
+          "profile": [
+            1,
+            1
+          ],
+          "mass": "1/2"
+        }
+      ],
+      "feasible_vertices": 18
+    },
+    {
+      "k": 2,
+      "m": 2,
+      "model": "upper-error",
+      "delta": "1/3",
+      "exact_optimum": "11/12",
+      "claimed_upper_bound": "11/12",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            2
+          ],
+          "mass": "2/3"
+        },
+        {
+          "profile": [
+            1,
+            1
+          ],
+          "mass": "1/3"
+        }
+      ],
+      "feasible_vertices": 23
+    },
+    {
+      "k": 2,
+      "m": 2,
+      "model": "upper-error",
+      "delta": "2",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            2
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 14
+    },
+    {
+      "k": 2,
+      "m": 2,
+      "model": "upper-error",
+      "delta": "100",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            2
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 14
+    },
+    {
+      "k": 2,
+      "m": 3,
+      "model": "equality",
+      "delta": null,
+      "exact_optimum": "5/6",
+      "claimed_upper_bound": "5/6",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            2
+          ],
+          "mass": "1/3"
+        },
+        {
+          "profile": [
+            0,
+            1,
+            1
+          ],
+          "mass": "2/3"
+        }
+      ],
+      "feasible_vertices": 38
+    },
+    {
+      "k": 2,
+      "m": 3,
+      "model": "upper-error",
+      "delta": "0",
+      "exact_optimum": "5/6",
+      "claimed_upper_bound": "5/6",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            2
+          ],
+          "mass": "1/3"
+        },
+        {
+          "profile": [
+            0,
+            1,
+            1
+          ],
+          "mass": "2/3"
+        }
+      ],
+      "feasible_vertices": 49
+    },
+    {
+      "k": 2,
+      "m": 3,
+      "model": "upper-error",
+      "delta": "1/3",
+      "exact_optimum": "31/36",
+      "claimed_upper_bound": "31/36",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            2
+          ],
+          "mass": "4/9"
+        },
+        {
+          "profile": [
+            0,
+            1,
+            1
+          ],
+          "mass": "5/9"
+        }
+      ],
+      "feasible_vertices": 47
+    },
+    {
+      "k": 2,
+      "m": 3,
+      "model": "upper-error",
+      "delta": "2",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            2
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 75
+    },
+    {
+      "k": 2,
+      "m": 3,
+      "model": "upper-error",
+      "delta": "100",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            2
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 30
+    },
+    {
+      "k": 2,
+      "m": 4,
+      "model": "equality",
+      "delta": null,
+      "exact_optimum": "13/16",
+      "claimed_upper_bound": "13/16",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "1/4"
+        },
+        {
+          "profile": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "mass": "3/4"
+        }
+      ],
+      "feasible_vertices": 83
+    },
+    {
+      "k": 2,
+      "m": 4,
+      "model": "upper-error",
+      "delta": "0",
+      "exact_optimum": "13/16",
+      "claimed_upper_bound": "13/16",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "1/4"
+        },
+        {
+          "profile": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "mass": "3/4"
+        }
+      ],
+      "feasible_vertices": 101
+    },
+    {
+      "k": 2,
+      "m": 4,
+      "model": "upper-error",
+      "delta": "1/3",
+      "exact_optimum": "5/6",
+      "claimed_upper_bound": "5/6",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "1/3"
+        },
+        {
+          "profile": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "mass": "2/3"
+        }
+      ],
+      "feasible_vertices": 108
+    },
+    {
+      "k": 2,
+      "m": 4,
+      "model": "upper-error",
+      "delta": "2",
+      "exact_optimum": "15/16",
+      "claimed_upper_bound": "15/16",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "3/4"
+        },
+        {
+          "profile": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "mass": "1/4"
+        }
+      ],
+      "feasible_vertices": 102
+    },
+    {
+      "k": 2,
+      "m": 4,
+      "model": "upper-error",
+      "delta": "100",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 50
+    },
+    {
+      "k": 2,
+      "m": 5,
+      "model": "equality",
+      "delta": null,
+      "exact_optimum": "4/5",
+      "claimed_upper_bound": "4/5",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "1/5"
+        },
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "mass": "4/5"
+        }
+      ],
+      "feasible_vertices": 154
+    },
+    {
+      "k": 2,
+      "m": 5,
+      "model": "upper-error",
+      "delta": "0",
+      "exact_optimum": "4/5",
+      "claimed_upper_bound": "4/5",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "1/5"
+        },
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "mass": "4/5"
+        }
+      ],
+      "feasible_vertices": 180
+    },
+    {
+      "k": 2,
+      "m": 5,
+      "model": "upper-error",
+      "delta": "1/3",
+      "exact_optimum": "49/60",
+      "claimed_upper_bound": "49/60",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "4/15"
+        },
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "mass": "11/15"
+        }
+      ],
+      "feasible_vertices": 186
+    },
+    {
+      "k": 2,
+      "m": 5,
+      "model": "upper-error",
+      "delta": "2",
+      "exact_optimum": "9/10",
+      "claimed_upper_bound": "9/10",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "3/5"
+        },
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "mass": "2/5"
+        }
+      ],
+      "feasible_vertices": 208
+    },
+    {
+      "k": 2,
+      "m": 5,
+      "model": "upper-error",
+      "delta": "100",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 74
+    },
+    {
+      "k": 2,
+      "m": 6,
+      "model": "equality",
+      "delta": null,
+      "exact_optimum": "19/24",
+      "claimed_upper_bound": "19/24",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "1/6"
+        },
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "mass": "5/6"
+        }
+      ],
+      "feasible_vertices": 257
+    },
+    {
+      "k": 2,
+      "m": 6,
+      "model": "upper-error",
+      "delta": "0",
+      "exact_optimum": "19/24",
+      "claimed_upper_bound": "19/24",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "1/6"
+        },
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "mass": "5/6"
+        }
+      ],
+      "feasible_vertices": 292
+    },
+    {
+      "k": 2,
+      "m": 6,
+      "model": "upper-error",
+      "delta": "1/3",
+      "exact_optimum": "29/36",
+      "claimed_upper_bound": "29/36",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "2/9"
+        },
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "mass": "7/9"
+        }
+      ],
+      "feasible_vertices": 302
+    },
+    {
+      "k": 2,
+      "m": 6,
+      "model": "upper-error",
+      "delta": "2",
+      "exact_optimum": "7/8",
+      "claimed_upper_bound": "7/8",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "1/2"
+        },
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "mass": "1/2"
+        }
+      ],
+      "feasible_vertices": 463
+    },
+    {
+      "k": 2,
+      "m": 6,
+      "model": "upper-error",
+      "delta": "100",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 102
+    },
+    {
+      "k": 3,
+      "m": 1,
+      "model": "equality",
+      "delta": null,
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            3
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 7
+    },
+    {
+      "k": 3,
+      "m": 1,
+      "model": "upper-error",
+      "delta": "0",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            3
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 7
+    },
+    {
+      "k": 3,
+      "m": 1,
+      "model": "upper-error",
+      "delta": "1/3",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            3
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 4
+    },
+    {
+      "k": 3,
+      "m": 1,
+      "model": "upper-error",
+      "delta": "2",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            3
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 4
+    },
+    {
+      "k": 3,
+      "m": 1,
+      "model": "upper-error",
+      "delta": "100",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            3
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 4
+    },
+    {
+      "k": 3,
+      "m": 2,
+      "model": "equality",
+      "delta": null,
+      "exact_optimum": "5/6",
+      "claimed_upper_bound": "47/54",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            3
+          ],
+          "mass": "1/4"
+        },
+        {
+          "profile": [
+            1,
+            2
+          ],
+          "mass": "3/4"
+        }
+      ],
+      "feasible_vertices": 59
+    },
+    {
+      "k": 3,
+      "m": 2,
+      "model": "upper-error",
+      "delta": "0",
+      "exact_optimum": "5/6",
+      "claimed_upper_bound": "47/54",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            3
+          ],
+          "mass": "1/4"
+        },
+        {
+          "profile": [
+            1,
+            2
+          ],
+          "mass": "3/4"
+        }
+      ],
+      "feasible_vertices": 71
+    },
+    {
+      "k": 3,
+      "m": 2,
+      "model": "upper-error",
+      "delta": "1/3",
+      "exact_optimum": "8/9",
+      "claimed_upper_bound": "25/27",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            3
+          ],
+          "mass": "1/2"
+        },
+        {
+          "profile": [
+            1,
+            2
+          ],
+          "mass": "1/2"
+        }
+      ],
+      "feasible_vertices": 75
+    },
+    {
+      "k": 3,
+      "m": 2,
+      "model": "upper-error",
+      "delta": "2",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            3
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 34
+    },
+    {
+      "k": 3,
+      "m": 2,
+      "model": "upper-error",
+      "delta": "100",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            3
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 34
+    },
+    {
+      "k": 3,
+      "m": 3,
+      "model": "equality",
+      "delta": null,
+      "exact_optimum": "65/81",
+      "claimed_upper_bound": "22/27",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            3
+          ],
+          "mass": "1/3"
+        },
+        {
+          "profile": [
+            1,
+            1,
+            1
+          ],
+          "mass": "2/3"
+        }
+      ],
+      "feasible_vertices": 384
+    },
+    {
+      "k": 3,
+      "m": 3,
+      "model": "upper-error",
+      "delta": "0",
+      "exact_optimum": "65/81",
+      "claimed_upper_bound": "22/27",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            3
+          ],
+          "mass": "1/3"
+        },
+        {
+          "profile": [
+            1,
+            1,
+            1
+          ],
+          "mass": "2/3"
+        }
+      ],
+      "feasible_vertices": 407
+    },
+    {
+      "k": 3,
+      "m": 3,
+      "model": "upper-error",
+      "delta": "1/3",
+      "exact_optimum": "203/243",
+      "claimed_upper_bound": "23/27",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            3
+          ],
+          "mass": "4/9"
+        },
+        {
+          "profile": [
+            1,
+            1,
+            1
+          ],
+          "mass": "5/9"
+        }
+      ],
+      "feasible_vertices": 331
+    },
+    {
+      "k": 3,
+      "m": 3,
+      "model": "upper-error",
+      "delta": "2",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            3
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 303
+    },
+    {
+      "k": 3,
+      "m": 3,
+      "model": "upper-error",
+      "delta": "100",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            0,
+            3
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 106
+    },
+    {
+      "k": 4,
+      "m": 1,
+      "model": "equality",
+      "delta": null,
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            4
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 11
+    },
+    {
+      "k": 4,
+      "m": 1,
+      "model": "upper-error",
+      "delta": "0",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            4
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 11
+    },
+    {
+      "k": 4,
+      "m": 1,
+      "model": "upper-error",
+      "delta": "1/3",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            4
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 5
+    },
+    {
+      "k": 4,
+      "m": 1,
+      "model": "upper-error",
+      "delta": "2",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            4
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 5
+    },
+    {
+      "k": 4,
+      "m": 1,
+      "model": "upper-error",
+      "delta": "100",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            4
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 5
+    },
+    {
+      "k": 4,
+      "m": 2,
+      "model": "equality",
+      "delta": null,
+      "exact_optimum": "13/16",
+      "claimed_upper_bound": "223/256",
+      "orbit_witness": [
+        {
+          "profile": [
+            1,
+            3
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 219
+    },
+    {
+      "k": 4,
+      "m": 2,
+      "model": "upper-error",
+      "delta": "0",
+      "exact_optimum": "13/16",
+      "claimed_upper_bound": "223/256",
+      "orbit_witness": [
+        {
+          "profile": [
+            1,
+            3
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 235
+    },
+    {
+      "k": 4,
+      "m": 2,
+      "model": "upper-error",
+      "delta": "1/3",
+      "exact_optimum": "7/8",
+      "claimed_upper_bound": "239/256",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            4
+          ],
+          "mass": "1/3"
+        },
+        {
+          "profile": [
+            1,
+            3
+          ],
+          "mass": "2/3"
+        }
+      ],
+      "feasible_vertices": 224
+    },
+    {
+      "k": 4,
+      "m": 2,
+      "model": "upper-error",
+      "delta": "2",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            4
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 75
+    },
+    {
+      "k": 4,
+      "m": 2,
+      "model": "upper-error",
+      "delta": "100",
+      "exact_optimum": "1",
+      "claimed_upper_bound": "1",
+      "orbit_witness": [
+        {
+          "profile": [
+            0,
+            4
+          ],
+          "mass": "1"
+        }
+      ],
+      "feasible_vertices": 75
+    }
+  ],
+  "limitations": "Finite checks only; all-parameter conclusions use the analytic proof in audit/math.md. No owner script was executed."
+}

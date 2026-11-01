@@ -1,0 +1,70 @@
+{
+  "utc": "2026-11-01T02:23:51.032801+00:00",
+  "scope": "Exact finite orientation coefficients and floating point evaluation of Grzesik et al2212.09343v3 Theorem12; not a proof of novelty or infinite-family result",
+  "rows": [
+    {
+      "length": 4,
+      "exact_coefficients": {},
+      "gamma": 1,
+      "alpha2": 0,
+      "theorem12_scaled_expression_float": 0,
+      "theorem12_rational_upper_using_pi_lt_22_over_7": "0",
+      "float_sufficient_test_passes": true
+    },
+    {
+      "length": 8,
+      "exact_coefficients": {
+        "2,2": -4,
+        "4": 8
+      },
+      "gamma": 1,
+      "alpha2": 0,
+      "theorem12_scaled_expression_float": 64.0,
+      "theorem12_rational_upper_using_pi_lt_22_over_7": "64",
+      "float_sufficient_test_passes": true
+    },
+    {
+      "length": 12,
+      "exact_coefficients": {
+        "2,2": -6,
+        "2,2,2,2": 3,
+        "2,2,4": -12,
+        "2,6": -12,
+        "4": 12,
+        "4,4": 18,
+        "8": 12
+      },
+      "gamma": 1,
+      "alpha2": 0,
+      "theorem12_scaled_expression_float": 38.52467950117125,
+      "theorem12_rational_upper_using_pi_lt_22_over_7": "565088/14641",
+      "float_sufficient_test_passes": true
+    },
+    {
+      "length": 16,
+      "exact_coefficients": {
+        "2,2": -8,
+        "2,2,2,2": 12,
+        "2,2,2,6": 16,
+        "2,2,4": -48,
+        "2,2,4,4": -8,
+        "2,2,8": -16,
+        "2,4,6": -32,
+        "2,6": -16,
+        "2,10": -16,
+        "4": 16,
+        "4,4": 56,
+        "4,4,4": 16,
+        "4,8": 48,
+        "6,6": -8,
+        "8": 16,
+        "12": 16
+      },
+      "gamma": 1,
+      "alpha2": 0,
+      "theorem12_scaled_expression_float": -47.540739299813396,
+      "theorem12_rational_upper_using_pi_lt_22_over_7": "-91274726528/1929229929",
+      "float_sufficient_test_passes": false
+    }
+  ]
+}

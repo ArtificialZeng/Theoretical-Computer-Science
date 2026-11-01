@@ -1,0 +1,22 @@
+{
+  "job_id": "c012-upcycles-release-0294a4f8ea65",
+  "snapshot_digest": "920933319e6b98bd521f6c300a93b0e7fa46ae3d6600fa970801ea528789f85e",
+  "manuscript_digest": "474c54f68a48ef6fd7c76b39f22078792f656b0f9e2b317cb7c264388336041a",
+  "pdf_digest": "eade3f9df07bd82943ef54b3e0c9c1b95d1510ab9e779dc9ff26a9cdf71cedef",
+  "verdict": "accept",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/alpha.bst",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/verify.py"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "All seven publication source_files, every rendered/extracted citation and three relevant primary references; precise attributions and metadata verified against accessible current publisher text and original DMTCS PDF. Original finite mathematical claims traced to accepted proof and recomputed. Bounded current novelty search found no equivalent; not exhaustive priority assurance. No designated Excel bibliography. Optional uncited hydra full-text refresh inaccessible; no cited reference unverified.",
+  "citation_audit_method": "citation-check-skill + primary-source-manual",
+  "checked_at": "2026-11-01T05:28:09.550077+00:00"
+}

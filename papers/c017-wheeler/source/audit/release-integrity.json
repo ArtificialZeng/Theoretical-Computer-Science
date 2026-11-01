@@ -1,0 +1,50 @@
+{
+  "job_id": "c017-wheeler-release-bce62e5f5c55",
+  "frozen_hashes_match": true,
+  "fls_project_inputs": [
+    "manuscript/acmart.cls",
+    "manuscript/main.aux",
+    "manuscript/main.bbl",
+    "manuscript/main.out",
+    "manuscript/main.tex"
+  ],
+  "declared_sources": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "auxiliary_generated_inputs": [
+    "manuscript/main.aux",
+    "manuscript/main.out"
+  ],
+  "citation_keys": [
+    "BC00",
+    "BG00",
+    "Becker23",
+    "Blum99",
+    "DP26",
+    "DP26short"
+  ],
+  "bibliography_keys": [
+    "BC00",
+    "BG00",
+    "Becker23",
+    "Blum99",
+    "DP26",
+    "DP26short"
+  ],
+  "undefined_keys": [],
+  "unused_keys": [],
+  "official_style_hashes": {
+    "acmart.cls": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+    "ACM-Reference-Format.bst": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04"
+  },
+  "official_acmart.cls_byte_identical": true,
+  "official_ACM-Reference-Format.bst_byte_identical": true,
+  "snapshot_digest": "e049cdd6f4851af0fd18969fa672c8ab343b1916120d8417cddc05007f4084bb",
+  "manuscript_digest": "3e3ee96154364ccb7df28378b07e5b269c38b0a7d88fbb532eeb0a89dd579b2d",
+  "pdf_digest": "f634d9f8abb35aab26ba0f93564fdd36b9f59aee0f150228002611a8fbb71de1"
+}

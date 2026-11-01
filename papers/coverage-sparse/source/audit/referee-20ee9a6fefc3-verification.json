@@ -1,0 +1,173 @@
+{
+  "job_id": "coverage-sparse-referee-20ee9a6fefc3",
+  "snapshot_digest": "639fb67b280db040c9a3c5059288d96a35e8cb02d493e698aaf573087cfca4e8",
+  "arithmetic": "exact rational; Python standard library only",
+  "certificates": [
+    {
+      "k": 2,
+      "m": 2,
+      "model": "equality",
+      "exact_optimum": "7/8",
+      "all_subsets": 16,
+      "explicit_features": 4,
+      "individual_marginals": 4,
+      "individual_tested_pairs": 2,
+      "support_size": 6,
+      "minimum_dual_slack": "0"
+    },
+    {
+      "k": 2,
+      "m": 3,
+      "model": "equality",
+      "exact_optimum": "5/6",
+      "all_subsets": 64,
+      "explicit_features": 8,
+      "individual_marginals": 6,
+      "individual_tested_pairs": 3,
+      "support_size": 15,
+      "minimum_dual_slack": "0"
+    },
+    {
+      "k": 3,
+      "m": 2,
+      "model": "equality",
+      "exact_optimum": "5/6",
+      "all_subsets": 64,
+      "explicit_features": 9,
+      "individual_marginals": 6,
+      "individual_tested_pairs": 6,
+      "support_size": 20,
+      "minimum_dual_slack": "0"
+    },
+    {
+      "k": 3,
+      "m": 3,
+      "model": "equality",
+      "exact_optimum": "65/81",
+      "all_subsets": 512,
+      "explicit_features": 27,
+      "individual_marginals": 9,
+      "individual_tested_pairs": 9,
+      "support_size": 30,
+      "minimum_dual_slack": "0"
+    },
+    {
+      "k": 3,
+      "m": 3,
+      "model": "upper",
+      "exact_optimum": "73/81",
+      "all_subsets": 512,
+      "explicit_features": 27,
+      "individual_marginals": 9,
+      "individual_tested_pairs": 9,
+      "support_size": 30,
+      "minimum_dual_slack": "0"
+    }
+  ],
+  "integer_duals": {
+    "local_cases": 558,
+    "local_k_range": [
+      2,
+      32
+    ],
+    "integer_line_cases": 3193,
+    "integer_t_range": "0..6k",
+    "occupancy_profiles": 12819,
+    "occupancy_k_range": [
+      2,
+      7
+    ],
+    "occupancy_m_range": [
+      1,
+      7
+    ]
+  },
+  "matching": {
+    "m_range": [
+      1,
+      20
+    ],
+    "exact_coupling_cases": 292,
+    "modes": [
+      "equality",
+      "multiplicative",
+      "additive"
+    ]
+  },
+  "resampling": {
+    "ground_set_size": 5,
+    "color_counts": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "exact_law_conversions": 25,
+    "features_checked": 800,
+    "boundaries": "zero and one marginals; empty feature; deterministic laws"
+  },
+  "product_and_table": {
+    "exact_product_cases": [
+      {
+        "k": 2,
+        "m": 1,
+        "product_expectation": "1"
+      },
+      {
+        "k": 2,
+        "m": 3,
+        "product_expectation": "19/27"
+      },
+      {
+        "k": 3,
+        "m": 2,
+        "product_expectation": "3/4"
+      },
+      {
+        "k": 3,
+        "m": 3,
+        "product_expectation": "19/27"
+      },
+      {
+        "k": 4,
+        "m": 2,
+        "product_expectation": "3/4"
+      }
+    ],
+    "constant_table": [
+      {
+        "k": 2,
+        "alpha": "3/4",
+        "inverse": "4/3",
+        "finite_coefficient": "1/4"
+      },
+      {
+        "k": 3,
+        "alpha": "19/27",
+        "inverse": "27/19",
+        "finite_coefficient": "1/3"
+      },
+      {
+        "k": 4,
+        "alpha": "175/256",
+        "inverse": "256/175",
+        "finite_coefficient": "3/8"
+      },
+      {
+        "k": 5,
+        "alpha": "2101/3125",
+        "inverse": "3125/2101",
+        "finite_coefficient": "2/5"
+      },
+      {
+        "k": 6,
+        "alpha": "31031/46656",
+        "inverse": "46656/31031",
+        "finite_coefficient": "5/12"
+      }
+    ],
+    "alpha_k_lower_bound_for_full_hierarchy": "false; k=2,m=3,t=6 gives 19/27 < 3/4"
+  },
+  "limits": "Finite checks supplement the all-parameter analytic audit; no formalization or optimizer."
+}

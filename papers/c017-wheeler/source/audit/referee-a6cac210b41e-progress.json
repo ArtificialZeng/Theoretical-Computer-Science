@@ -1,0 +1,22 @@
+{
+  "job_id": "c017-wheeler-referee-a6cac210b41e",
+  "snapshot_digest": "e049cdd6f4851af0fd18969fa672c8ab343b1916120d8417cddc05007f4084bb",
+  "phase": "completed",
+  "scope": [
+    "original membership",
+    "polynomial membership bound",
+    "single-pump certificate necessity",
+    "equivalent Wheeler realizability"
+  ],
+  "completed": [
+    "frozen file hashes checked: 20 files, no mismatch",
+    "source v3 definitions and Section 4 independently read",
+    "membership block/SCC proof reconstructed",
+    "realizability normalization and right-invariance reconstructed",
+    "Fresh exact finite-domain and unary controls passed",
+    "Current primary comparison includes September 2026 conference paper",
+    "Exact combined frozen claim accepted in fresh math and innovation reports",
+    "Actual release_gate.py check-math passed with current fresh referee job and unchanged snapshot"
+  ],
+  "remaining": []
+}

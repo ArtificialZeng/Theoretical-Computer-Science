@@ -1,0 +1,18 @@
+{
+  "job_id": "c002-coverage-triage-beb2748f534b",
+  "all_assertions_passed": true,
+  "arithmetic": "fractions.Fraction",
+  "counts": {
+    "families": 1208,
+    "hall_subfamilies": 113,
+    "affine_identities": 17066,
+    "coefficient_columns": 11165,
+    "repeated_families": 182,
+    "same_block_intersections": 14,
+    "large_occurrences": 107
+  },
+  "extra_fixtures": 6,
+  "source_sha256": "b79ed29f77420ec62a957e727b934deb6b9435b41ed86deaa2c8d77c01b66f9d",
+  "coverage": "All multisets of <=3 nonempty incidence subsets on [n], n=1..4, satisfying t=1 or 2; k=2 or 3; plus six listed fixtures. Alternating two function tags; nonuniform block laws.",
+  "limitations": "Checks Hall feasibility, interaction degree/classes, class-affine identities and column l1 bounds on finite cases only. Does not test the complete rounding algorithm, prove an all-parameter bound, or establish novelty/acceptance."
+}

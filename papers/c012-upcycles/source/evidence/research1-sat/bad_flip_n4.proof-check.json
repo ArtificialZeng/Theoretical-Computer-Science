@@ -1,0 +1,13 @@
+{
+  "cnf": "evidence/research1-sat/bad_flip_n4.cnf",
+  "proof": "evidence/research1-sat/bad_flip_n4.lrat",
+  "cnf_sha256": "a09bcc4804c4688df06f0055fb0b2da7de79652f6e6252f81aed2f1fa684e042",
+  "proof_sha256": "0a2574e991324f3c655f28f585a67ce4df75edfd5e2f904776959f28109e65b8",
+  "initial_clauses": 94,
+  "checked_additions": 14,
+  "deletions": 0,
+  "checked_empty_clause": true,
+  "verdict": "verified-UNSAT-of-this-CNF",
+  "checker": "independent Python LRAT/RUP-only checker",
+  "elapsed_seconds": 0.0005318329203873873
+}

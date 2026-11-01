@@ -1,0 +1,9 @@
+{
+  "job_id": "privacy-interpolation-research-294f008bff48",
+  "research_pass": 2,
+  "source": "source.md",
+  "before_sha256": "9488f12633da72d763b0ad127ff791f002ff7451ea26826a68d35a832f0bad15",
+  "current_sha256": "9488f12633da72d763b0ad127ff791f002ff7451ea26826a68d35a832f0bad15",
+  "unchanged": true,
+  "scope": "New mandatory-excursion subsidiary target; previous unrestricted work remains parked as known."
+}

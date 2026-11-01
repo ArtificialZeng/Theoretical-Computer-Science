@@ -1,0 +1,21 @@
+{
+  "kind": "resolution-paper",
+  "statement": "There is a deterministic terminating algorithm deciding, for every finite trimmed deterministic subsequential transducer in the exact model of source.md and problem.md, whether its reaching languages are totally ordered in colex and whether accumulated transition output on every reaching language admits a finite partition into convex weakly monotone pieces. The algorithm allows partial transitions, arbitrary ordered finite input/output alphabets and empty output words, ignores terminal outputs as required, and runs in O(S^13) bit operations for the explicit encoding size S defined in the proof. For machines passing input order, every failure also admits the exact single-pump disjoint-turn certificate of evidence/first-test.md, with a total computable template bound.",
+  "original_status": "proved",
+  "contribution": "A proposed full positive resolution of the immutable membership-decidability question, rather than a subclass or one-piece result. The new structural step uses convex incoming-transition blocks and common right-concatenation: independent regular output-range comparisons decide all global monotonicity flags; branching recurrent components require global monotonicity, and simple cycles admit an exact two-side adjacent-annular-copy test and at most two convex pieces per state. Acyclic states then inherit finite partitions. The same proof constructs ordered disjoint pump witnesses on rejection and yields a computable bound. The nearest primary paper explicitly leaves this membership problem open. Current bounded searches found no inspected equivalent resolution; novelty and theoretical significance remain for the actual fresh referee to assess. This file requests review and does not claim acceptance, external peer review or authorization to create a manuscript/PDF.",
+  "proposer_job_id": "c017-wheeler-research-8ca2b0cef7a6",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "evidence/research-1-resolution.md",
+    "evidence/research-1-adversarial.md",
+    "evidence/research-1-literature.md",
+    "evidence/check_membership.py",
+    "evidence/membership-check.json",
+    "evidence/check_exact_certificates.py",
+    "evidence/exact-certificates.json",
+    "evidence/first-test.md",
+    "intake/wheeler-fixed-certificate-verification.md",
+    "intake/wheeler-nested-turn-control.md"
+  ]
+}

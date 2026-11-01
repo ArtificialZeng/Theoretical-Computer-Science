@@ -1,0 +1,6 @@
+{
+  "job_id": "c012-upcycles-referee-9a733cb83e73",
+  "command": "release_gate.py check-math PROJECT_DIR",
+  "exit_code": 0,
+  "output": "{\"ok\":true,\"snapshot_digest\":\"920933319e6b98bd521f6c300a93b0e7fa46ae3d6600fa970801ea528789f85e\",\"referee_job_id\":\"c012-upcycles-referee-9a733cb83e73\"}"
+}

@@ -1,0 +1,23 @@
+{
+  "job_id": "c002-coverage-write-64c05c6e47b4",
+  "commands": [
+    [
+      "latexmk",
+      "-C",
+      "main.tex"
+    ],
+    [
+      "latexmk",
+      "-pdf",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "main.tex"
+    ]
+  ],
+  "cwd": "manuscript",
+  "TEXINPUTS": "./vendor:",
+  "BSTINPUTS": "./vendor:",
+  "pdf": "output/pdf/sparse-coverage-discrepancy.pdf",
+  "pdf_sha256": "b2dac13ca628fb6c3b7495516ee0acbdd390a90b0942127ada2935401ba873db",
+  "bytes": 395202
+}

@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=1cm,y=1cm, every node/.style={font=\normalsize},
+ vertex/.style={circle,draw=black,fill=white,inner sep=0pt,minimum size=6pt},
+ feature/.style={circle,draw=orange!80!black,fill=orange!80,inner sep=0pt,minimum size=8pt}]
+\fill[blue!8,rounded corners] (2.0,-.25) rectangle (3.8,1.55);
+\foreach \r/\x in {1/0,2/2.2,3/4.4}{
+ \coordinate (a\r) at (\x,0);
+ \coordinate (b\r) at (\x+1.4,0);
+ \coordinate (c\r) at (\x+.7,1.2);
+ \draw[thick] (a\r)--(b\r)--(c\r)--cycle;
+ \node[vertex] at (a\r) {};
+ \node[vertex] at (b\r) {};
+ \node[vertex] at (c\r) {};
+ \node at (\x+.7,-.45) {\(B_\r\)};
+}
+\node[feature] at (a1) {};
+\node[feature] at (c2) {};
+\node[feature] at (b3) {};
+\node[anchor=west] at (6.3,1.1) {\(T=\sum_r a_r\)};
+\node[anchor=west] at (6.3,.45) {\(C=\sum_r\binom{a_r}{2}\)};
+\draw[-{Stealth},thick] (6.35,-.05)--(6.35,-.6);
+\node[anchor=west] at (6.65,-.35) {\(f(S)\leq\alpha_k+\beta_k(T-k)+C/k^2\)};
+\end{tikzpicture}

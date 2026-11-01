@@ -1,0 +1,139 @@
+{
+  "job_id": "robust-stopping-research-cd75b220d422",
+  "status": "passed",
+  "KF26_target": "arXiv:2603.29233v1, Appendix D.2, eq. (26), Algorithms 2 and 3",
+  "support_threshold": "14/5",
+  "support_threshold_policy_is_forced": {
+    "2": "1/2",
+    "3": "1/2"
+  },
+  "threshold_prescription_cost": "11/5",
+  "true_expected_optimum": "39/20",
+  "threshold_prescription_trace": [
+    {
+      "h": "3/2",
+      "allowed_prefix": [],
+      "updates": [],
+      "remaining_mass": "1",
+      "remaining_moment_budget": "3/2",
+      "first_allowed_tail": null,
+      "tail_required_moment": null,
+      "feasible": false,
+      "policy_if_feasible": null,
+      "expected_cost_if_feasible": null
+    },
+    {
+      "h": "8/5",
+      "allowed_prefix": [],
+      "updates": [],
+      "remaining_mass": "1",
+      "remaining_moment_budget": "3/2",
+      "first_allowed_tail": 3,
+      "tail_required_moment": "2",
+      "feasible": false,
+      "policy_if_feasible": null,
+      "expected_cost_if_feasible": null
+    },
+    {
+      "h": "2",
+      "allowed_prefix": [],
+      "updates": [],
+      "remaining_mass": "1",
+      "remaining_moment_budget": "3/2",
+      "first_allowed_tail": 3,
+      "tail_required_moment": "2",
+      "feasible": false,
+      "policy_if_feasible": null,
+      "expected_cost_if_feasible": null
+    },
+    {
+      "h": "14/5",
+      "allowed_prefix": [
+        2
+      ],
+      "updates": [
+        {
+          "day": 2,
+          "atom": "1/2",
+          "F": "1/2",
+          "mu": "1/2"
+        }
+      ],
+      "remaining_mass": "1/2",
+      "remaining_moment_budget": "1",
+      "first_allowed_tail": 3,
+      "tail_required_moment": "1",
+      "feasible": true,
+      "policy_if_feasible": {
+        "2": "1/2",
+        "3": "1/2"
+      },
+      "expected_cost_if_feasible": "11/5"
+    },
+    {
+      "h": "29/10",
+      "allowed_prefix": [
+        2
+      ],
+      "updates": [
+        {
+          "day": 2,
+          "atom": "1/2",
+          "F": "1/2",
+          "mu": "1/2"
+        }
+      ],
+      "remaining_mass": "1/2",
+      "remaining_moment_budget": "1",
+      "first_allowed_tail": 3,
+      "tail_required_moment": "1",
+      "feasible": true,
+      "policy_if_feasible": {
+        "2": "1/2",
+        "3": "1/2"
+      },
+      "expected_cost_if_feasible": "11/5"
+    }
+  ],
+  "literal_algorithm3_singleton_trace": {
+    "s": 2,
+    "e": 2,
+    "line11_atom": "1/2",
+    "line12_mu": "1",
+    "line15_F": "1/2",
+    "line16_mu": "1/2",
+    "line26_tail_candidates": []
+  },
+  "literal_algorithm3_output": "not asserted: no dj>=b in its written tail loop; zero-slope tail and indexing require conventions not supplied",
+  "normalization_example": {
+    "b": 3,
+    "R": "3/2",
+    "p": {
+      "1": "1/2",
+      "2": "1/2"
+    },
+    "cost_policy": {
+      "1": "1/4",
+      "3": "3/4"
+    },
+    "cost_minimum": "15/8",
+    "cost_certificate": {
+      "lambda": "3/4",
+      "alpha": 3,
+      "y": {}
+    },
+    "ratio_policy": {
+      "2": "1/2",
+      "3": "1/2"
+    },
+    "ratio_minimum": "5/4",
+    "ratio_certificate": {
+      "lambda": "1/2",
+      "alpha": 2,
+      "y": {}
+    },
+    "ratio_at_cost_policy": "21/16",
+    "cost_at_ratio_policy": "2"
+  },
+  "infinite_tail_check": "For t>=3 the objective coefficients are constant; reduced costs increase by the strictly positive lambda at each later integer."
+}

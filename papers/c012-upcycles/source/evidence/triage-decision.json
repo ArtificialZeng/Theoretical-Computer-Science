@@ -1,0 +1,18 @@
+{
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Precise full existential target is open-supported by current primary sources. Known witnesses and bad controls validate the literal checker; safe mask enumeration leaves four frames each for binary n8d2/d3. No new upcycle, nonexistence claim, or publication candidate is asserted.",
+  "next_test": "Benchmark exact global-position XOR CNFs, then search the eight surviving n8d2/d3 masks with <=60 seconds per mask; independently expand any model into all 256 word counts. Preserve per-mask artifacts; negative finite tests cannot resolve the original question.",
+  "evidence": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/triage-literature.md",
+    "evidence/triage_sanity.py",
+    "evidence/triage-sanity.json",
+    "evidence/triage-web-confirmation.json",
+    "evidence/triage-duplicate-screen.json",
+    "evidence/triage-integrity.json",
+    "evidence/triage-usage.json"
+  ]
+}

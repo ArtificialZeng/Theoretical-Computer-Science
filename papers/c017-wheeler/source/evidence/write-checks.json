@@ -1,0 +1,31 @@
+{
+  "job_id": "c017-wheeler-write-147289d53db0",
+  "tool_basis": "Poppler metadata, plain layout text, font enumeration, rasterization; direct inspection of every final PNG",
+  "page_count": 10,
+  "page_cap": 12,
+  "us_letter": true,
+  "undefined_citations_or_references": false,
+  "overfull_boxes": 0,
+  "bibtex_warnings": 0,
+  "nonfatal_underfull_vboxes": 1,
+  "text_characters": 34739,
+  "visual_pages_checked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "source_sha256": "40fc8e967aeefd233cb62ffd0f70d77e772fafbdeb6086724c4c2ab5f591106d",
+  "pdf_sha256": "f634d9f8abb35aab26ba0f93564fdd36b9f59aee0f150228002611a8fbb71de1",
+  "operational_limitations": [
+    "Optional pdfplumber check unavailable in system Python.",
+    "Optional bbox-layout extraction aborted; partial output was not used."
+  ],
+  "authority": "Writer self-check only; separate release review required."
+}

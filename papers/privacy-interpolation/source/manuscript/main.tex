@@ -1,0 +1,89 @@
+\documentclass[manuscript,11pt,screen,nonacm,natbib=false]{acmart}
+% Based on the unmodified official ACM manuscript sample in template/.
+% STOC submission requirements override proceedings layout defaults.
+\geometry{letterpaper,margin=1in,heightrounded=false,headheight=14pt,footskip=24pt}
+% Keep the page folios at the same nominal size as the submission text.
+\fancypagestyle{submission}{%
+  \fancyhf{}
+  \fancyfoot[C]{\normalfont\normalsize\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}}
+\setcopyright{none}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\acmDOI{}
+\acmISBN{}
+\acmVolume{}
+\acmNumber{}
+\hypersetup{keeppdfinfo=true,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={Mandatory Excursions in Privacy-Constrained Probability Paths},
+ pdfauthor={Zijian Zeng, Jiayin Cao, Weinan Dai, Rui Wang, Fei Ding},
+ pdfpublisher={},pdfmetalang={en},
+ pdfsubject={Privacy-constrained probability paths. Affiliations in author order: UCSI University; Ningbo University; Zhejiang University; Nanchang Institute of Technology; Alibaba Group},
+ pdfkeywords={theory of computing}}
+% Keep an unpublished manuscript from inheriting ACM publisher/type metadata.
+\makeatletter
+\let\hyxmp@parse@acmart\relax
+\makeatother
+\hypersetup{pdfcontactemail={1002266693@ucsiuniversity.edu.my; 2795820153@qq.com; 21725058@zju.edu.cn; 2002007@nut.edu.cn; dingfei@email.ncu.edu.cn}}
+\renewcommand{\bibliofont}{\normalfont\normalsize}
+\usepackage{needspace}
+\captionsetup{font=normalsize,labelfont={sf,normalsize},textfont={sf,normalsize}}
+\newcommand{\cost}{\mathcal L}
+\newcommand{\Lmon}{\Lambda_{\mathrm{mon}}}
+\newcommand{\Lbox}{\Lambda_{\mathrm{box}}}
+\newcommand{\dDP}{d_{\mathrm{DP}}}
+\newcommand{\simplex}{\Delta_n^\circ}
+\DeclareMathOperator*{\esssup}{ess\,sup}
+\title{Mandatory Excursions in Privacy-Constrained Probability Paths}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\city{}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\author{Jiayin Cao}
+\affiliation{\institution{Ningbo University}\city{}\country{China}}
+\email{2795820153@qq.com}
+\author{Weinan Dai}
+\affiliation{\institution{Zhejiang University}\city{}\country{China}}
+\email{21725058@zju.edu.cn}
+\author{Rui Wang}
+\affiliation{\institution{Nanchang Institute of Technology}\city{}\country{China}}
+\email{2002007@nut.edu.cn}
+\author{Fei Ding}
+\affiliation{\institution{Alibaba Group}\city{}\country{China}}
+\email{dingfei@email.ncu.edu.cn}
+% The user supplied institutions and emails; no city was supplied.
+% Display all contact details at the requested minimum text size.
+\authorsaddresses{\normalsize
+\begin{tabular}{@{}ll@{}}
+Zijian Zeng & \href{mailto:1002266693@ucsiuniversity.edu.my}{1002266693@ucsiuniversity.edu.my}\\
+Jiayin Cao & \href{mailto:2795820153@qq.com}{2795820153@qq.com}\\
+Weinan Dai & \href{mailto:21725058@zju.edu.cn}{21725058@zju.edu.cn}\\
+Rui Wang & \href{mailto:2002007@nut.edu.cn}{2002007@nut.edu.cn}\\
+Fei Ding & \href{mailto:dingfei@email.ncu.edu.cn}{dingfei@email.ncu.edu.cn}
+\end{tabular}\spacefactor=3000 }
+\date{}
+\begin{document}
+\singlespacing
+\begin{abstract}
+\normalsize
+We study positive probability paths whose coordinate log derivatives are bounded by a privacy budget. For every swapped triplet $(c,a,b)$ and $(c,b,a)$, with $0<a<b$ and $c=1-a-b>0$, we determine the minimum feasible budget $T_*$ and the smallest possible peak of the unchanged-endpoint coordinate at every budget $L\ge T_*$. The peak is $\max\{c,1-2a e^{L/2}\}$, attained by an explicit path; the minimum-budget path is unique. We also determine the sharp cost of requiring every coordinate to be monotone, or to remain between its endpoint values. At endpoint privacy distance $\eta>0$, the worst ratio to the unrestricted optimum is $2\log((e^\eta+1)/2)/\eta$ in every dimension at least three, with positive attaining examples, whereas the binary ratio is one. For general endpoints we give necessary excursion certificates evaluable exactly by a rational breakpoint sweep and one square root per coordinate.
+\end{abstract}
+\hypersetup{pageanchor=false}
+\maketitle
+\hypersetup{
+ pdftitle={Mandatory Excursions in Privacy-Constrained Probability Paths},
+ pdfauthor={Zijian Zeng, Jiayin Cao, Weinan Dai, Rui Wang, Fei Ding},
+ pdfpublisher={},pdfpubtype={},pdfsubject={Privacy-constrained probability paths. Affiliations in author order: UCSI University; Ningbo University; Zhejiang University; Nanchang Institute of Technology; Alibaba Group},
+ pdfkeywords={theory of computing}}
+\enlargethispage{-12pt}
+\thispagestyle{empty}
+\clearpage
+\setcounter{page}{1}
+\hypersetup{pageanchor=true}
+\pagestyle{submission}
+\input{body}
+\clearpage
+\bibliographystyle{alpha}
+\bibliography{references}
+\clearpage
+\onehalfspacing
+\end{document}

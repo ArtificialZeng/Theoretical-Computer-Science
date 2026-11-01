@@ -1,0 +1,33 @@
+{
+  "job_id": "coverage-sparse-research-6239617d8b3f",
+  "source_sha256_at_intake": "eb7061a17cead0bc8cc0e4426f3f8260ac3137dd23b6f4813d8f4952b00ec731",
+  "source_sha256_at_completion": "eb7061a17cead0bc8cc0e4426f3f8260ac3137dd23b6f4813d8f4952b00ec731",
+  "source_unchanged": true,
+  "relative_existing_evidence_paths_verified": [
+    "source.md",
+    "problem.md",
+    "evidence/research-proof.md",
+    "evidence/research_verify.py",
+    "evidence/research-checks.json",
+    "evidence/research-literature.md",
+    "evidence/triage-literature.md",
+    "claim.json",
+    "checkpoint.md"
+  ],
+  "sha256": {
+    "source.md": "eb7061a17cead0bc8cc0e4426f3f8260ac3137dd23b6f4813d8f4952b00ec731",
+    "problem.md": "40a5e9325e06d4b9432e1b38d4afa523f21a5477381643014d326946d31c8db2",
+    "evidence/research-proof.md": "e98689ad28376d3de9ebc66cc6a438a56b00f81ec72a31aa6f2962d130964856",
+    "evidence/research_verify.py": "9be3b0d03e16558c891ea8b0c1801c9f1d66d5877772a33cc94db063c5d38e60",
+    "evidence/research-checks.json": "24166fdc8ae6e7a45423c55da712443592424810371256e063d5ddaf3634b97f",
+    "evidence/research-literature.md": "aa58c5fbe2e9f1dc53fc3be11f6e8dc3c48deceb46f7386051c7d467d181051d",
+    "evidence/triage-literature.md": "3f6c809e8b54a946ef3dbbf1c589eb4ca6e94e156e372ced2b7af1b68e38290c",
+    "claim.json": "19cf1c9553a4e1a4b14d3b98a7fec048c5ee276d1d9cd3c262a4b80032a38d11",
+    "checkpoint.md": "8a7023169ac1e35e0f9db70d35f453526b1f4d27755ae596c1b76dac63ff3606"
+  },
+  "checkpoint_words": 408,
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "limitations": "Process integrity only. No fresh referee acceptance or mathematical certification."
+}

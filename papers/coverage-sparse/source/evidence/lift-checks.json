@@ -1,0 +1,54 @@
+{
+  "arithmetic": "exact rational",
+  "full_set_lifts": [
+    {
+      "k": 2,
+      "m": 2,
+      "sets_enumerated": 16,
+      "vertices_checked": 4,
+      "edges_checked": 2,
+      "verified_optimum": "7/8"
+    },
+    {
+      "k": 2,
+      "m": 3,
+      "sets_enumerated": 64,
+      "vertices_checked": 6,
+      "edges_checked": 3,
+      "verified_optimum": "5/6"
+    },
+    {
+      "k": 2,
+      "m": 4,
+      "sets_enumerated": 256,
+      "vertices_checked": 8,
+      "edges_checked": 4,
+      "verified_optimum": "13/16"
+    },
+    {
+      "k": 3,
+      "m": 2,
+      "sets_enumerated": 64,
+      "vertices_checked": 6,
+      "edges_checked": 6,
+      "verified_optimum": "5/6"
+    },
+    {
+      "k": 3,
+      "m": 3,
+      "sets_enumerated": 512,
+      "vertices_checked": 9,
+      "edges_checked": 9,
+      "verified_optimum": "65/81"
+    },
+    {
+      "k": 4,
+      "m": 3,
+      "sets_enumerated": 4096,
+      "vertices_checked": 12,
+      "edges_checked": 18,
+      "verified_optimum": "31/40"
+    }
+  ],
+  "status": "all finite primal/dual certificates verified"
+}

@@ -1,0 +1,22 @@
+{
+  "job_id": "advice-matching-release-01731cae3c13",
+  "research_mismatches": [],
+  "manuscript_mismatches": [],
+  "source_digest": "3ec230456a31ba9b004000be9e79c74a77636a28a31e9b4eec31918f5ab305ed",
+  "initial_pdf_digest": "6dd60b1709480f325a0f8e2e6a225d3935adb20a5a9cf071c6bfe42b95861367",
+  "stage": "ready; actual release gate check passed",
+  "snapshot_digest": "9e5ce19e70bcedf07302fd469630c6922133d2418685a0789184566a1578f92c",
+  "manuscript_digest": "190ac5d740b6eba350826842752400ef3de5381f01b0c88aaf1f9350a2472763",
+  "current_pdf_digest": "97f90509d1413691ce7cb13e0c7dc8bc0ee2a2b1f133131cc43a2ed9cea6ffa2",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "source_digest_unchanged": true,
+  "gate_evidence": "audit/release-gate-check.json",
+  "next_test": "Supervisor publish, then check exact activated PDF digest."
+}

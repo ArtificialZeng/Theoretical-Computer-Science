@@ -1,0 +1,11 @@
+{
+  "job_id": "robust-stopping-release-ff035ab58689",
+  "snapshot_digest": "c70f1a41d2a4a68c3ad3f996323997e58e2b037484d8e4d79a5f9e8327bd3f3d",
+  "manuscript_digest": "2947c811f73b90b79c82634fc3909aad696aa457956ffd61ec1744834d8f8da1",
+  "pdf_digest": "750891c12b44b7761c1c8c96968e8005e68e4b8b7f3f4299a8a5fe80fd96ce84",
+  "verdict": "accept",
+  "report": "audit/build.md",
+  "build_log": "audit/release-ff035ab58689/clean-source/main.log",
+  "build_log_digest": "d1495cef72d24b1b73e8c51883560ac7a1ea6ace2aee025cb129e820f53f2627",
+  "clean_build": true
+}

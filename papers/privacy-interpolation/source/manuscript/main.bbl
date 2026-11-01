@@ -1,0 +1,38 @@
+\begin{thebibliography}{FHMR{\.{Z}}26}
+
+\bibitem[BCSZ18]{BCSZ18}
+Christian Borgs, Jennifer Chayes, Adam Smith, and Ilias Zadik.
+\newblock Private algorithms can always be extended.
+\newblock \href{https://arxiv.org/abs/1810.12518v2}{arXiv:1810.12518v2}, 2018.
+
+\bibitem[DRS19]{DRS19}
+Jinshuo Dong, Aaron Roth, and Weijie~J. Su.
+\newblock Gaussian differential privacy.
+\newblock \href{https://arxiv.org/abs/1905.02383v3}{arXiv:1905.02383v3}, 2019.
+
+\bibitem[FHMR{\.{Z}}26]{FHMZ26}
+Alfonso {Fern\'andez de Bobadilla}, Mykhailo Hontarenko, Guillem
+  M{\"u}ller-Rigat, and Karol {\.{Z}}yczkowski.
+\newblock Reachable sets under {Kolmogorov} dynamics in the probability
+  simplex.
+\newblock \href{https://arxiv.org/abs/2609.38382v1}{arXiv:2609.38382v1}, 2026.
+
+\bibitem[LQ26]{LQ26}
+Ruiyao Liu and Chenxi Qiu.
+\newblock A graph-based framework for extending metric differential privacy
+  mechanisms.
+\newblock \href{https://arxiv.org/abs/2609.14125v1}{arXiv:2609.14125v1}, 2026.
+
+\bibitem[LR15]{LR15}
+Bas Lemmens and Mark Roelands.
+\newblock Unique geodesics for {Thompson}'s metric.
+\newblock {\em Annales de l'Institut Fourier}, 65(1):315--348, 2015.
+\newblock \href{https://doi.org/10.5802/aif.2932}{doi:10.5802/aif.2932}.
+
+\bibitem[Qiu26]{Qiu26}
+Chenxi Qiu.
+\newblock Interpolation-based optimization for enforcing {$\ell_p$}-norm metric
+  differential privacy in continuous and fine-grained domains.
+\newblock \href{https://arxiv.org/abs/2601.09946v1}{arXiv:2601.09946v1}, 2026.
+
+\end{thebibliography}

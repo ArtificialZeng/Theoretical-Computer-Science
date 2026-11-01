@@ -1,0 +1,42 @@
+{
+  "job_id": "c012-upcycles-release-0294a4f8ea65",
+  "snapshot_digest": "920933319e6b98bd521f6c300a93b0e7fa46ae3d6600fa970801ea528789f85e",
+  "manuscript_digest": "474c54f68a48ef6fd7c76b39f22078792f656b0f9e2b317cb7c264388336041a",
+  "pdf_digest": "eade3f9df07bd82943ef54b3e0c9c1b95d1510ab9e779dc9ff26a9cdf71cedef",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "renderer": "pdftoppm -png -r120",
+  "images": {
+    "1": {
+      "path": "evidence/release-render/page-1.png",
+      "sha256": "1600d449b5eb389469a4797efe41729ee209a984abe0e2399516b49d608007a9",
+      "observation": "Title page, sole author and affiliation, two abstract paragraphs, and email footer are legible; no overlap. The deliberate title-page white space is acceptable."
+    },
+    "2": {
+      "path": "evidence/release-render/page-2.png",
+      "sha256": "19ba9bfd0ca302a8b93c74b2e242c43dfd14ffb3f8516dcecf5f62d337539d7c",
+      "observation": "Definitions, theorem, three citation keys, all four 32-digit octal rows, decoding examples and conflict lemma are legible. Wildcards and binary symbols render correctly; no clipping."
+    },
+    "3": {
+      "path": "evidence/release-render/page-3.png",
+      "sha256": "ff0ca61adb9e68d59ded0de8bd158c9db5528342fda4cb36bf3885849801b9eb",
+      "observation": "Full theorem proof, quantified conflict equation, cardinality sum and finite-proof explanation fit cleanly. The equation number and proof-ending square do not collide. Deliberate clearpage leaves white space before the complete code page."
+    },
+    "4": {
+      "path": "evidence/release-render/page-4.png",
+      "sha256": "87addc3238db36a1c8c2c06247fcf1e62aa591de2abea25bdf744607c624c04b",
+      "observation": "Entire verifier and output fit on one page, with readable indentation, quotes, operators and all128 digits. Frame borders and last code/output lines are intact."
+    },
+    "5": {
+      "path": "evidence/release-render/page-5.png",
+      "sha256": "fb61abcfd6b77005226771bbfea8ec0eff6bcc50f359b905bc726ad932fa9eed",
+      "observation": "Compatibility count, discovery scope, further questions, substantial AI disclosure and all three complete references/DOI links are readable. No overflow, missing glyph, unresolved citation or overlapping lines."
+    }
+  },
+  "rebuild_render_identical": true
+}

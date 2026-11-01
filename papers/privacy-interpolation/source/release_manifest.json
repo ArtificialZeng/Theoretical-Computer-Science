@@ -1,0 +1,26 @@
+{
+  "artifacts": {
+    "main.pdf": "8ec2d595f7e1285ce79dc26f46caadf881d9065bce1928a7865f9d81d91b2d43"
+  },
+  "kind": "result-note",
+  "manuscript_digest": "047b8dae44c9bc2fafeacc831a6d376cc7f4685248bdddf89de7677467ebba3a",
+  "original_status": "unresolved",
+  "pages": 7,
+  "pdf_digest": "8ec2d595f7e1285ce79dc26f46caadf881d9065bce1928a7865f9d81d91b2d43",
+  "provenance": {
+    "audit/build.json": "13e84814bfa40a89921589cdf3d23fa685d7ee759e5e50822d3fa6758d21ba7f",
+    "audit/build.md": "7d149a8c0765e01517cc3b6109293497a7e35b26a00b6e3d427e4b813e0bfbef",
+    "audit/citations.json": "6f037f09d90bebfb7a5e73d148cb1d80f25944d037ffde9d19012e1c9e2e7fda",
+    "audit/citations.md": "c9611e5bd1ff3ef01e1eec99ae1a57fd3c2cb1f1451a7429fdc8fe852c24e497",
+    "audit/math.json": "e10ae519f4c824fae892c9fcbc3e47bba486f28bf5a29d3da61b2b968d9549bf",
+    "audit/math.md": "74037ef05d0a8b71575b40fa3c2486794a8a8664b1449cd7668dcc3464f824dc",
+    "audit/visual.json": "45cdc1a672c02e3018b55e8756e74397775c68c4e253779c2ef899e31260d991",
+    "audit/visual.md": "c7a517a0c0b4289676d1b5340ddd06d1b2ae5b1cf5d3f024f42f17e1a9b5ad70",
+    "jobs/privacy-interpolation-referee-4ed762972744/role.json": "750c17bd7a1db391ef83bd37969876383cc80a5644b527749206de727b1e3f43",
+    "jobs/privacy-interpolation-release-7c62cfdb7be8/role.json": "114e07063defc8686ea3eca7bf983e1a59d929795673f89628f13a38ab645c09",
+    "jobs/privacy-interpolation-research-294f008bff48/role.json": "20bc39ca40cdc6a0af0e38d820337be2147ce506fea0abcd31c75a46bc683cbf",
+    "manuscript/main.log": "25b9ca29d1131394174e76b716b1b3e8839657083b2c4d4b1b2fcf9e2a386a04"
+  },
+  "schema": 1,
+  "snapshot_digest": "932c1ba086d51ef9c99afb17ae2046a2a43a19517b9778f2a2a06e751683f641"
+}

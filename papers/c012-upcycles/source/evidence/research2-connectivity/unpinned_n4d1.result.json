@@ -1,0 +1,40 @@
+{
+  "job_id": "c012-upcycles-research-456cb4499028",
+  "label": "unpinned_n4d1",
+  "n": 4,
+  "d": 1,
+  "mask": "...*",
+  "max_rounds": 20,
+  "total_solver_wall_cap_seconds": 10,
+  "per_call_wall_cap_seconds": 5,
+  "encoding": "evidence/research2-connectivity/unpinned_n4d1.encoding.json",
+  "initial_clauses": 248,
+  "rounds": [
+    {
+      "round": 0,
+      "status": "SAT",
+      "returncode": 10,
+      "wall_timeout": false,
+      "elapsed_seconds": 0.005378708941861987,
+      "wall_cap_seconds": 5,
+      "child_cpu_seconds": 0.003565000000000002,
+      "clauses": 248,
+      "cnf": "evidence/research2-connectivity/unpinned_n4d1.r00.cnf",
+      "log": "evidence/research2-connectivity/unpinned_n4d1.r00.log",
+      "proof": "evidence/research2-connectivity/unpinned_n4d1.r00.lrat",
+      "cnf_sha256": "66409d77ab6b9f119a61d45ba238f91fbd56af424bde71c9ac15f328f4b33407",
+      "proof_sha256": "459859e94799a8be9c3ab017b0023e2ca1da0cfd4ddd2a4ac2d9bcc024ecbeb2",
+      "model_verification": "evidence/research2-connectivity/unpinned_n4d1.r00.model-verification.json",
+      "component_count": 1,
+      "component_edge_counts": [
+        8
+      ]
+    }
+  ],
+  "cut_groups": [],
+  "outcome": "connected-witness",
+  "original_question_resolved": false,
+  "witness": "evidence/research2-connectivity/unpinned_n4d1.r00.model-verification.json",
+  "solver_wall_seconds": 0.005378708941861987,
+  "completed_utc": "2026-11-01T04:51:57.745348+00:00"
+}

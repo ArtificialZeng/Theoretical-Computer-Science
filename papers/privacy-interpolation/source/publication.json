@@ -1,0 +1,71 @@
+{
+  "kind": "result-note",
+  "original_status": "unresolved",
+  "title": "Mandatory Excursions in Privacy-Constrained Probability Paths",
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    },
+    {
+      "name": "Jiayin Cao",
+      "affiliation": "Ningbo University",
+      "email": "2795820153@qq.com"
+    },
+    {
+      "name": "Weinan Dai",
+      "affiliation": "Zhejiang University",
+      "email": "21725058@zju.edu.cn"
+    },
+    {
+      "name": "Rui Wang",
+      "affiliation": "Nanchang Institute of Technology",
+      "email": "2002007@nut.edu.cn"
+    },
+    {
+      "name": "Fei Ding",
+      "affiliation": "Alibaba Group",
+      "email": "dingfei@email.ncu.edu.cn"
+    }
+  ],
+  "pdf": "manuscript/main.pdf",
+  "source_files": [
+    "manuscript/README_中文.md",
+    "manuscript/REFERENCE_NOTES.md",
+    "manuscript/REPRODUCIBILITY.md",
+    "manuscript/acmart.cls",
+    "manuscript/alpha.bst",
+    "manuscript/body.tex",
+    "manuscript/checks/provenance.json",
+    "manuscript/checks/research-excursion-path-certificates.json",
+    "manuscript/checks/research-swapped-path-certificates.json",
+    "manuscript/checks/sweep.py",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/reproduce.py",
+    "manuscript/template/README-official",
+    "manuscript/template/acmart.dtx",
+    "manuscript/template/download-provenance.json"
+  ],
+  "build_command": "latexmk -cd -pdf -interaction=nonstopmode -halt-on-error -file-line-error manuscript/main.tex",
+  "reproduce_command": "python3 manuscript/reproduce.py",
+  "source_archive": "manuscript-source.zip",
+  "format": {
+    "class": "Official unmodified acmart 2.20 from CTAN",
+    "mode": "manuscript, non-anonymous",
+    "paper": "US Letter",
+    "body_caption_reference_points": 11,
+    "spacing": "single",
+    "nominal_text_margin_inches": 1,
+    "separate_cover": true,
+    "maximum_total_pages": 12,
+    "bibliography_last": true
+  },
+  "accepted_scope": "Frozen Theorems 1-3: every positive swapped-triplet all-budget frontier and minimum-budget uniqueness; exact global monotone/endpoint-box penalty; exact general necessary excursion-certificate evaluation. Optional geometric comparison excluded.",
+  "math_snapshot_digest": "932c1ba086d51ef9c99afb17ae2046a2a43a19517b9778f2a2a06e751683f641",
+  "write_job_id": "privacy-interpolation-write-c32672494e69",
+  "bibliography_basis": "No user workbook was supplied; six relevant primary works, pinned arXiv versions and journal metadata. See manuscript/REFERENCE_NOTES.md.",
+  "release_status": "Pending separate fresh citation/build/visual review and real release gate."
+}

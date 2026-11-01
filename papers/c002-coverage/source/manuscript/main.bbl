@@ -1,0 +1,47 @@
+\begin{thebibliography}{HMMS25}
+
+\bibitem[ARW26]{ARW26}
+Tatiana~Rocha Avila, Lars Rohwedder, and Leo Wennmann.
+\newblock {Non-Additive Discrepancy: Coverage Functions in a Beck-Fiala
+  Setting}.
+\newblock In Philip Bille, Seth Pettie, and Sabine Storandt, editors, {\em 34th
+  Annual European Symposium on Algorithms (ESA 2026)}, volume 388 of {\em
+  Leibniz International Proceedings in Informatics (LIPIcs)}, pages
+  139:1--139:19. Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik, 2026.
+\newblock
+  \href{https://doi.org/10.4230/LIPIcs.ESA.2026.139}{doi:10.4230/LIPIcs.ESA.2026.139}.
+
+\bibitem[DF25]{DF25}
+Max {Dupr{\'e} la Tour} and Kaito Fujii.
+\newblock {Discrepancy and Fair Division for Non-Additive Valuations}.
+\newblock arXiv:2509.16802v1, 2025.
+\newblock
+  \href{https://arxiv.org/abs/2509.16802v1}{arxiv.org/abs/2509.16802v1}.
+
+\bibitem[DS03]{DS03}
+Benjamin Doerr and Anand Srivastav.
+\newblock {Multicolour Discrepancies}.
+\newblock {\em Combinatorics, Probability and Computing}, 12(4):365--399, 2003.
+\newblock
+  \href{https://doi.org/10.1017/S0963548303005662}{doi:10.1017/S0963548303005662}.
+
+\bibitem[GRW11]{GRW11}
+Christian Gla{\ss}er, Christian Reitwie{\ss}ner, and Maximilian Witek.
+\newblock {Applications of Discrepancy Theory in Multiobjective Approximation}.
+\newblock In Supratik Chakraborty and Amit Kumar, editors, {\em IARCS Annual
+  Conference on Foundations of Software Technology and Theoretical Computer
+  Science (FSTTCS 2011)}, volume~13 of {\em Leibniz International Proceedings
+  in Informatics (LIPIcs)}, pages 55--65. Schloss Dagstuhl -- Leibniz-Zentrum
+  f{\"u}r Informatik, 2011.
+\newblock
+  \href{https://doi.org/10.4230/LIPIcs.FSTTCS.2011.55}{doi:10.4230/LIPIcs.FSTTCS.2011.55}.
+
+\bibitem[HMMS25]{HMMS25}
+Alexandros Hollender, Pasin Manurangsi, Raghu Meka, and Warut Suksompong.
+\newblock {Discrepancy Beyond Additive Functions with Applications to Fair
+  Division}.
+\newblock arXiv:2509.09252v2, 2025.
+\newblock
+  \href{https://arxiv.org/abs/2509.09252v2}{arxiv.org/abs/2509.09252v2}.
+
+\end{thebibliography}

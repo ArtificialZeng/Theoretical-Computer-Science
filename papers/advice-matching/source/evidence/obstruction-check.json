@@ -1,0 +1,39 @@
+{
+  "job_id": "advice-matching-triage-5cc2f73291d9",
+  "scope": "n=2 graph checks and three deterministic first-action continuation bounds",
+  "graphs": {
+    "good": {
+      "maximum_degree_both_sides": 2,
+      "optimum": 2,
+      "advice_contained_in_graph": true
+    },
+    "bad": {
+      "maximum_degree_both_sides": 2,
+      "optimum": 2,
+      "advice_contained_in_graph": false
+    }
+  },
+  "first_action_rows": [
+    {
+      "first_action": "a",
+      "best_good": 2,
+      "best_bad": 1,
+      "sum": 3
+    },
+    {
+      "first_action": "b",
+      "best_good": 1,
+      "best_bad": 2,
+      "sum": 3
+    },
+    {
+      "first_action": null,
+      "best_good": 1,
+      "best_bad": 1,
+      "sum": 2
+    }
+  ],
+  "randomized_extension": "Affine inequality holds for every convex combination; see known-obstruction.md",
+  "source_sha256": "3ec230456a31ba9b004000be9e79c74a77636a28a31e9b4eec31918f5ab305ed",
+  "novel_contribution": false
+}

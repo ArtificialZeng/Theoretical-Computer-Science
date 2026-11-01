@@ -1,0 +1,74 @@
+{
+  "phase": "write",
+  "job_id": "curvature-noise-write-cf9542198fc2",
+  "not_a_fresh_release_audit": true,
+  "pdf": "manuscript/main.pdf",
+  "pdf_sha256": "a8c5f1aecb0478cc48a2437277893c087cfa015ddcf60d9ba2375edaeb257255",
+  "page_count_including_cover_and_references": 6,
+  "letter_paper": true,
+  "class_unmodified": true,
+  "frozen_evidence_unchanged": true,
+  "source_sha256": "55e12bf5b8e7b5489014d1286ec0463b9bec718f4d5369b338c8e1403a6259cd",
+  "authors_info_and_xmp": [
+    "Zijian Zeng",
+    "Jiayin Cao",
+    "Weinan Dai",
+    "Rui Wang",
+    "Fei Ding"
+  ],
+  "cover_institutions_and_emails_checked": [
+    "UCSI University",
+    "Ningbo University",
+    "Zhejiang University",
+    "Nanchang Institute of Technology",
+    "Alibaba Group",
+    "1002266693@ucsiuniversity.edu.my",
+    "2795820153@qq.com",
+    "21725058@zju.edu.cn",
+    "2002007@nut.edu.cn",
+    "dingfei@email.ncu.edu.cn"
+  ],
+  "caption_font_check": [
+    {
+      "page": 3,
+      "font_size": 11
+    }
+  ],
+  "all_fonts_embedded": true,
+  "build_logs_checked": {
+    "main": {
+      "pages": 6,
+      "errors": false,
+      "undefined_references": false,
+      "overfull_boxes": false,
+      "underfull_vboxes": 1
+    },
+    "isolated_archive": {
+      "pages": 6,
+      "errors": false,
+      "undefined_references": false,
+      "overfull_boxes": false,
+      "underfull_vboxes": 1
+    }
+  },
+  "source_dependency_closure_checked": true,
+  "source_archive": "manuscript/curvature-noise-source.zip",
+  "source_archive_sha256": "cd1c19cf71614a56e7b0b6483c7f71bcbbe6cf03e40b1712e467c06650bcde65",
+  "source_archive_contains_external_fulltexts": false,
+  "isolated_archive_build_passed": true,
+  "isolated_archive_verifier_passed": true,
+  "archive_python_version": "3.9.6",
+  "reproduction_matches_accepted_finite_cases": true,
+  "visual_pages_inspected": [
+    "audit/write-pages/page-1.png",
+    "audit/write-pages/page-2.png",
+    "audit/write-pages/page-3.png",
+    "audit/write-pages/page-4.png",
+    "audit/write-pages/page-5.png",
+    "audit/write-pages/page-6.png"
+  ],
+  "visual_findings": "All six final pages inspected: no clipping, overlaps, missing glyphs or illegible equations. Caption is 11pt; table lies in its explanatory subsection.",
+  "bibliography_authority": "No user Excel/BibTeX authority supplied; existing user_bibliography_check.md read before PDF generation.",
+  "citation_map": "audit/write-citation-map.md",
+  "pending": "Separate fresh citation/build/visual release gate and script publication; no release claim."
+}

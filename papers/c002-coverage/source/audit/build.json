@@ -1,0 +1,12 @@
+{
+  "verdict": "accept",
+  "job_id": "c002-coverage-release-c84ac066553a",
+  "snapshot_digest": "26d2a64f317984b35b49212bdc46529ccb7f19bc1be1b5e471d28d308d18456e",
+  "manuscript_digest": "cbd9e040f4147d3e60fc3daafd59dcd1d2dfe965798be52063afe7345dcd085f",
+  "pdf_digest": "b2dac13ca628fb6c3b7495516ee0acbdd390a90b0942127ada2935401ba873db",
+  "report": "audit/build.md",
+  "build_log": "manuscript/main.log",
+  "build_log_digest": "a4576867b017c71ca6c58563a59101da92e601860f10d51a553b33af9169247a",
+  "clean_build": true,
+  "review_basis": "Existing actual clean foreground build transcript, current final compiler/BibTeX logs, recorder dependencies, byte-identical compiler/canonical PDFs and fresh PDF tools; no new compilation claimed."
+}

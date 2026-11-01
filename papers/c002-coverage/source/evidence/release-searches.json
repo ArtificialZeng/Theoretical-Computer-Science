@@ -1,0 +1,93 @@
+{
+  "job_id": "c002-coverage-release-c84ac066553a",
+  "search_date": "2026-10-31 UTC / 2026-11-01 Asia/Shanghai",
+  "method": "citation-check-skill search-mode two-pass; mandatory applicable academic search templates",
+  "groups": [
+    {
+      "queries": [
+        "Avila 2026 Non-Additive Discrepancy Coverage",
+        "\"Non-Additive Discrepancy: Coverage Functions in a Beck-Fiala Setting\" site:arxiv.org OR site:semanticscholar.org",
+        "Avila Rohwedder Wennmann 2026 ESA discrepancy",
+        "doi:10.4230/LIPIcs.ESA.2026.139"
+      ],
+      "primary_hits": [
+        "Non-Additive Discrepancy: Coverage Functions in a Beck-Fiala Setting (https://arxiv.org/abs/2602.09948)",
+        "34th Annual European Symposium on Algorithms (ESA 2026) (https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-388)",
+        "Coverage Is Not Ordering: Ancillary Leakage and Representation Dependence in Covariance-Based Inference (https://arxiv.org/abs/2609.20007)"
+      ]
+    },
+    {
+      "queries": [
+        "Glasser 2011 Applications of Discrepancy",
+        "\"Applications of Discrepancy Theory in Multiobjective Approximation\" site:arxiv.org OR site:semanticscholar.org",
+        "Glasser Reitwiessner Witek 2011 FSTTCS",
+        "doi:10.4230/LIPIcs.FSTTCS.2011.55"
+      ],
+      "primary_hits": [
+        "Applications of Discrepancy Theory in Multiobjective Approximation (https://arxiv.org/abs/1107.0634)",
+        "Applications of Discrepancy Theory in (https://drops.dagstuhl.de/storage/00lipics/lipics-vol013-fsttcs2011/LIPIcs.FSTTCS.2011.55/LIPIcs.FSTTCS.2011.55.pdf)",
+        "Frontmatter, Table of Contents, Preface, Conference Organization, External Reviewers (https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSTTCS.2011.i)",
+        "Comment on `A general integral identity' (https://arxiv.org/abs/1109.6418)",
+        "Calculation of Discrepancy Measures and Applications (https://arxiv.org/abs/1405.1653)",
+        "A discrepancy lower bound for information complexity (https://arxiv.org/abs/1112.2000)"
+      ]
+    },
+    {
+      "queries": [
+        "Doerr 2003 Multicolour Discrepancies",
+        "\"Multicolour Discrepancies\" site:arxiv.org OR site:semanticscholar.org",
+        "Doerr Srivastav 2003 Combinatorics Probability Computing",
+        "doi:10.1017/S0963548303005662"
+      ],
+      "primary_hits": [
+        "Multicolour Discrepancies | Combinatorics, Probability and Computing | Cambridge Core (https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/multicolour-discrepancies/B3B9E2D4477711A2B29A197DCA886EDE)",
+        "All issues | Combinatorics, Probability and Computing | Cambridge Core (https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/all-issues)",
+        "Hereditary Discrepancies in Different Numbers of Colors II (https://arxiv.org/abs/cs/0611126)",
+        "An ultraviolet-selected galaxy redshift survey - III: Multicolour imaging and non-uniform star formation histories (https://arxiv.org/abs/astro-ph/0310388)",
+        "Calculation of Discrepancy Measures and Applications (https://arxiv.org/abs/1405.1653)",
+        "Discrepancies of Spanning Trees and Hamilton Cycles (https://arxiv.org/abs/2012.05155)"
+      ]
+    },
+    {
+      "queries": [
+        "Hollender 2025 Discrepancy Beyond Additive",
+        "\"Discrepancy Beyond Additive Functions with Applications to Fair Division\" site:arxiv.org OR site:semanticscholar.org",
+        "Hollender Manurangsi Meka Suksompong 2025 arXiv",
+        "arxiv:2509.09252"
+      ],
+      "primary_hits": [
+        "Discrepancy Beyond Additive Functions with Applications to Fair Division (https://arxiv.org/abs/2509.09252)",
+        "Discrepancy Beyond Additive Functions with (https://drops.dagstuhl.de/storage/00lipics/lipics-vol362-itcs2026/LIPIcs.ITCS.2026.77/LIPIcs.ITCS.2026.77.pdf)",
+        "Tight Lower Bound for Multicolor Discrepancy (https://arxiv.org/abs/2504.18489)",
+        "17th Innovations in Theoretical (https://drops.dagstuhl.de/storage/00lipics/lipics-vol362-itcs2026/LIPIcs.ITCS.2026/LIPIcs.ITCS.2026.pdf)",
+        "When Do Envy-Free Allocations Exist? (https://arxiv.org/abs/1811.01630)",
+        "Asymptotic Existence of Fair Divisions for Groups (https://arxiv.org/abs/1706.08219)"
+      ]
+    },
+    {
+      "queries": [
+        "Dupre la Tour 2025 Discrepancy and Fair",
+        "\"Discrepancy and Fair Division for Non-Additive Valuations\" site:arxiv.org OR site:semanticscholar.org",
+        "Dupre la Tour Fujii 2025 arXiv discrepancy",
+        "arxiv:2509.16802"
+      ],
+      "primary_hits": [
+        "Discrepancy And Fair Division For Non-Additive Valuations (https://arxiv.org/abs/2509.16802)",
+        "Differentially Private Multicolor Discrepancy and Fair Division of Indivisible Goods (https://arxiv.org/abs/2609.15372)",
+        "Non-Additive Discrepancy: Coverage Functions in a Beck-Fiala Setting (https://arxiv.org/abs/2602.09948)",
+        "Balanced Fair Division for Three Agents under General Valuations and Laminar Constraints (https://arxiv.org/abs/2608.09437)"
+      ]
+    }
+  ],
+  "novelty_queries": [
+    "\"coverage functions\" discrepancy \"size-independent\"",
+    "\"non-additive discrepancy\" \"Hall\" coverage",
+    "\"coverage\" \"discrepancy\" \"cyclic\" \"witness\"",
+    "\"coverage discrepancy\" \"polynomial\" \"logarithmic\""
+  ],
+  "novelty_result": "No equivalent coverage resolution found in this bounded refresh; irrelevant hits not used as evidence; this is not a priority certificate.",
+  "access_limits": [
+    "Separate publisher BibTeX endpoints returned cache misses; same official records displayed complete inline BibTeX, which was checked successfully.",
+    "Original DS03 full text not obtained; Cambridge metadata/abstract and the explicit GRW11 primary theorem/restatement were read."
+  ]
+}

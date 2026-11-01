@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "title": "Coverage Correlation Gaps under Graph-Constrained Pairwise Independence",
+  "writer_job_id": "coverage-sparse-write-c0d4909c8d81",
+  "source_files": [
+    "README-交接.md",
+    "evidence/revision-research/discover_finite.py",
+    "evidence/revision-research/finite-certificates.json",
+    "evidence/revision-research/verify_revision.py",
+    "manuscript/REPRODUCIBILITY.md",
+    "manuscript/acmart.cls",
+    "manuscript/alpha.bst",
+    "manuscript/body.tex",
+    "manuscript/construction.tex",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/reproduce.py",
+    "output/pdf/main.bbl",
+    "response_to_reviews_zh.md",
+    "template/ACM-Reference-Format.bst",
+    "template/README-official",
+    "template/acmart.dtx",
+    "template/acmart.ins",
+    "template/download-provenance.json",
+    "template/official-acmmanuscript.tex",
+    "template/samples.dtx"
+  ],
+  "pdf": "output/pdf/main.pdf",
+  "build_command": "cd manuscript && latexmk -gg -pdf -interaction=nonstopmode -halt-on-error -outdir=../output/pdf main.tex",
+  "build_engine": "pdfLaTeX and BibTeX alpha, driven by latexmk (installed TeX Live 2026)",
+  "format": "Official unmodified acmart manuscript class, 11pt, non-anonymous, non-review, single-column, normal single spacing, US Letter, one-inch text margins, separate title/abstract page; total eight PDF pages",
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    },
+    {
+      "name": "Jiayin Cao",
+      "affiliation": "Ningbo University",
+      "email": "2795820153@qq.com"
+    },
+    {
+      "name": "Weinan Dai",
+      "affiliation": "Zhejiang University",
+      "email": "21725058@zju.edu.cn"
+    },
+    {
+      "name": "Rui Wang",
+      "affiliation": "Nanchang Institute of Technology",
+      "email": "2002007@nut.edu.cn"
+    },
+    {
+      "name": "Fei Ding",
+      "affiliation": "Alibaba Group",
+      "email": "dingfei@email.ncu.edu.cn"
+    }
+  ],
+  "author_metadata_basis": "Ordered five-author override in requirements.md, supplied by the user; no personal verification or author agreement is asserted. Cities were not supplied and are left empty. Institution countries are included for acmart affiliation requirements.",
+  "official_template_basis": "Official CTAN acmart distribution authorized by the STOC CFP; ACM publisher endpoints returned 403. The downloaded archive is preserved unchanged outside this project.",
+  "official_class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "official_archive": "/Users/mac/Documents/ChatGPT/STOC理论计算机/templates/acm-official/acmart-official-ctan.zip",
+  "official_archive_sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+  "source_scope_note": "All actual local TeX/BibTeX/figure and generated bbl inputs are included, together with the official source/template provenance, supplementary exact-arithmetic code and certificate data, source reproduction instructions and the reviewer response/handoff. System TeX packages/fonts are listed by the compiler recorder. No system package was installed.",
+  "bibliography_applicability": "No user Excel bibliography exists, as literature/user_bibliography_check.md records. Seven genuinely relevant primary papers are cited with the RN2025 mutual/pairwise model correction; local primary texts and publisher metadata were inspected.",
+  "handoff": "README-交接.md",
+  "authoring_evidence": "evidence/write/revision-c0d4909c8d81/authoring-review.md",
+  "status": "Fresh citation, clean-build and every-page visual audits completed; pending final structural check and supervisor local publish; no external submission",
+  "source_archive": "output/source/coverage-sparse-source.zip",
+  "response_to_reviews": "response_to_reviews_zh.md",
+  "release_review_job_id": "coverage-sparse-release-baf234409c0d"
+}

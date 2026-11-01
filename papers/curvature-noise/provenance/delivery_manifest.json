@@ -1,0 +1,77 @@
+{
+  "project": "curvature-noise",
+  "paper_number": 4,
+  "title": "A Sparse-Cardinality Curvature Bound under Persistent Adversarial Noise",
+  "pages": 6,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    },
+    {
+      "name": "Jiayin Cao",
+      "affiliation": "Ningbo University",
+      "email": "2795820153@qq.com"
+    },
+    {
+      "name": "Weinan Dai",
+      "affiliation": "Zhejiang University",
+      "email": "21725058@zju.edu.cn"
+    },
+    {
+      "name": "Rui Wang",
+      "affiliation": "Nanchang Institute of Technology",
+      "email": "2002007@nut.edu.cn"
+    },
+    {
+      "name": "Fei Ding",
+      "affiliation": "Alibaba Group",
+      "email": "dingfei@email.ncu.edu.cn"
+    }
+  ],
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "pdf": "paper4_submission.pdf",
+  "pdf_sha256": "2a3b071bfdd103f2e2bbbde6f590ea75ee26229a96b46b0c79b3e02d754cf012",
+  "source_archive": "paper4_source_and_reproducibility.zip",
+  "source_archive_sha256": "18ee55050ceb21213f3c8376efab377d5103dc95bbb83ec718a0b370737d79fd",
+  "citation_verdict": "accept",
+  "citation_limitations": [],
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "2a3b071bfdd103f2e2bbbde6f590ea75ee26229a96b46b0c79b3e02d754cf012"
+    },
+    "kind": "result-note",
+    "manuscript_digest": "461b304d23fe9953c8530bace0f1fd06480deecffd645e16b5608b67b7f21d47",
+    "original_status": "unresolved",
+    "pages": 6,
+    "pdf_digest": "2a3b071bfdd103f2e2bbbde6f590ea75ee26229a96b46b0c79b3e02d754cf012",
+    "provenance": {
+      "audit/build.json": "7ddd7323417e02295ccd7e3166986ecc12b2e29da6c306106e97505ce87b5fda",
+      "audit/build.md": "02913546e9d19ec5c28ebb9736ac90f54b928a47d27bd317a327d9fdebe71c1c",
+      "audit/citations.json": "46d92521f6b0280e9eb501c1b4a3c47a7844fa66d17822a526f443d0b74d8f4f",
+      "audit/citations.md": "9602a92be9f2a44641d03f069604aabf18dcbb06fe830fbac17b400965b7c98a",
+      "audit/math.json": "e28b6b5aa30a3d481c77f1fdf09ff02312d1375a902f7ae9ea19ee883b5c852f",
+      "audit/math.md": "0a8d6116457b815987e17b406b415bf612d7c1a52670c5ca7b5c3b7217a786b1",
+      "audit/release-build.log": "b4ac62345e6d4f5dcf62d3d347765819b07df2f88eebde1b4afd05763b8fc495",
+      "audit/visual.json": "091fa4863591ad22cfbbeec7ebe1b96c3197b7cb1caad7b5d9436d341cc57d55",
+      "audit/visual.md": "663093ca47dec81192a562ce2b54aed421242ef785cdd566c7dfa918a6c6afdd",
+      "jobs/curvature-noise-referee-01938a157e47/role.json": "8846320f1b7608bc3560c0fb0100c3ee597e4a197b243b51248b3e24ae847de5",
+      "jobs/curvature-noise-release-132a90b124b3/role.json": "dd4e7a8f7212d8491dfc8ab1ec278bc0cd70e48b65c9019531f97bb7ccd13f56",
+      "jobs/curvature-noise-research-5a09759394ef/role.json": "20c3c2bd012be19b33cf1aa98eb91af6575a15f7f99f05cd9fb22b7d3a8a8cff"
+    },
+    "schema": 1,
+    "snapshot_digest": "52edefc6f6361e426065ff407f44843ddc5a208b768db3f0cb7b916dd62ef407"
+  },
+  "external_submission_performed": false
+}

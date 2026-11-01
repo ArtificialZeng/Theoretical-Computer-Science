@@ -1,0 +1,486 @@
+\documentclass[manuscript,11pt,screen,nonacm]{acmart}
+% Based on the unmodified official ACM manuscript sample in template/.
+% STOC submission requirements override proceedings layout defaults.
+\geometry{letterpaper,margin=1in,heightrounded=false,headheight=14pt,footskip=24pt}
+% Keep the page folios at the same nominal size as the submission text.
+\fancypagestyle{submission}{%
+  \fancyhf{}
+  \fancyfoot[C]{\normalfont\normalsize\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}}
+\setcopyright{none}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\acmDOI{}
+\acmISBN{}
+\acmVolume{}
+\acmNumber{}
+\hypersetup{keeppdfinfo=true,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={A Sparse-Cardinality Curvature Bound under Persistent Adversarial Noise},
+ pdfauthor={Zijian Zeng, Jiayin Cao, Weinan Dai, Rui Wang, Fei Ding},
+ pdfpublisher={The authors},pdfpubtype={report},pdfpubstatus={AO},
+ pdfcontactemail={1002266693@ucsiuniversity.edu.my, 2795820153@qq.com, 21725058@zju.edu.cn, 2002007@nut.edu.cn, dingfei@email.ncu.edu.cn},
+ pdfcontactaddress={UCSI University; Ningbo University; Zhejiang University; Nanchang Institute of Technology; Alibaba Group},pdfmetalang={en},
+ pdfsubject={Submodular maximization with bounded curvature and persistent adversarial value noise},
+ pdfkeywords={submodular maximization, total curvature, persistent noise, query lower bound}}
+\renewcommand{\bibliofont}{\normalfont\normalsize}
+\captionsetup{font=normalsize,labelfont={normalfont,normalsize},textfont={normalfont,normalsize}}
+\newcommand{\E}{\mathbb E}
+\newcommand{\OPT}{\operatorname{OPT}}
+\newcommand{\eps}{\varepsilon}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\Prb}{\mathbb P}
+\newcommand{\D}{\mathcal D}
+\newcommand{\C}{\mathcal C}
+\newcommand{\B}{\mathcal B}
+\newcommand{\eq}{\mathrm{eq}}
+\newcommand{\up}{\mathrm{up}}
+\newcommand{\add}{\mathrm{add}}
+\usepackage{needspace}
+\DeclareMathOperator{\supp}{supp}
+\title{A Sparse-Cardinality Curvature Bound under Persistent Adversarial Noise}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\city{}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\author{Jiayin Cao}
+\affiliation{\institution{Ningbo University}\city{}\country{China}}
+\email{2795820153@qq.com}
+\author{Weinan Dai}
+\affiliation{\institution{Zhejiang University}\city{}\country{China}}
+\email{21725058@zju.edu.cn}
+\author{Rui Wang}
+\affiliation{\institution{Nanchang Institute of Technology}\city{}\country{China}}
+\email{2002007@nut.edu.cn}
+\author{Fei Ding}
+\affiliation{\institution{Alibaba Group}\city{}\country{China}}
+\email{dingfei@email.ncu.edu.cn}
+% The user supplied institutions and emails; no city was supplied.
+% Display all contact details at the requested minimum text size.
+\authorsaddresses{\normalsize
+\begin{tabular}{@{}ll@{}}
+Zijian Zeng & \href{mailto:1002266693@ucsiuniversity.edu.my}{1002266693@ucsiuniversity.edu.my}\\
+Jiayin Cao & \href{mailto:2795820153@qq.com}{2795820153@qq.com}\\
+Weinan Dai & \href{mailto:21725058@zju.edu.cn}{21725058@zju.edu.cn}\\
+Rui Wang & \href{mailto:2002007@nut.edu.cn}{2002007@nut.edu.cn}\\
+Fei Ding & \href{mailto:dingfei@email.ncu.edu.cn}{dingfei@email.ncu.edu.cn}
+\end{tabular}\spacefactor=3000 }
+\date{}
+\begin{document}
+\singlespacing
+\begin{abstract}
+\normalsize
+We study cardinality-constrained maximization of a monotone submodular
+function when a fixed value oracle has adversarial multiplicative error.
+The objective is the true function value, and queries may have any size.
+For exact total curvature $0\le\kappa<1$ and noise $0<\eps<1$, we calibrate
+a hidden-set construction to give an explicit lower bound against adaptive
+randomized query algorithms. If $k=\lfloor n^\alpha\rfloor$ for fixed
+$0<\alpha<1/2$ and $\eps_n k\to\infty$, every algorithm family with a fixed
+polynomial query bound has fixed valid instances on which its expected
+approximation is at most
+$\frac{1-\eps_n}{1+\eps_n}(1-\kappa)+o(1)$.
+The standard method of choosing the largest noisy singletons guarantees
+$\frac{1-\eps_n}{1+\eps_n}(1-\kappa+\kappa/k)$, giving additive asymptotic
+matching in this regime. For vanishing noise with $\eps_n k\to\infty$,
+the limiting factor is $1-\kappa$, separated from the exact-oracle
+benchmark $1-\kappa/e$ when $\kappa>0$.
+\end{abstract}
+\hypersetup{pageanchor=false}
+\maketitle
+\hypersetup{
+ pdftitle={A Sparse-Cardinality Curvature Bound under Persistent Adversarial Noise},
+ pdfauthor={Zijian Zeng, Jiayin Cao, Weinan Dai, Rui Wang, Fei Ding},
+ pdfpublisher={The authors},pdfpubtype={report},pdfpubstatus={AO},
+ pdfcontactemail={1002266693@ucsiuniversity.edu.my, 2795820153@qq.com, 21725058@zju.edu.cn, 2002007@nut.edu.cn, dingfei@email.ncu.edu.cn},
+ pdfcontactaddress={UCSI University; Ningbo University; Zhejiang University; Nanchang Institute of Technology; Alibaba Group},
+ pdfsubject={Submodular maximization with bounded curvature and persistent adversarial value noise},
+ pdfkeywords={submodular maximization, total curvature, persistent noise, query lower bound}}
+\enlargethispage{-12pt}
+\thispagestyle{empty}
+\clearpage
+\setcounter{page}{1}
+\hypersetup{pageanchor=true}
+\pagestyle{submission}
+
+\section{Model and contribution}
+
+Curvature measures how much an element's marginal value can fall as a set
+grows. With exact value access, this structure improves the approximation
+factor for monotone submodular maximization to $1-\kappa/e$, up to arbitrary
+accuracy slack~\cite[Theorems 6.1 and 7.1]{SVW14}. Persistent adversarial
+noise can remove much of that benefit. We identify a sparse-cardinality
+regime in which even unrestricted computation and adaptive randomized
+queries cannot asymptotically improve a simple singleton method.
+
+Let $V=[n]$ and $n\ge k\ge2$. The true function
+$f:2^V\to\mathbb R_{\ge0}$ is normalized, monotone and submodular, and
+$f(\{i\})>0$ for every $i$. Write
+$f(i\mid T)=f(T\cup\{i\})-f(T)$ for $i\notin T$ and define its total curvature by
+\[
+ \kappa(f)=1-\min_{i\in V}
+ \frac{f(i\mid V\setminus\{i\})}{f(\{i\})}.
+\]
+A valid oracle is a single map $g:2^V\to\mathbb R$, fixed before the
+algorithm's private random choices, such that
+\begin{equation}\label{eq:noise}
+ (1-\eps)f(T)\le g(T)\le(1+\eps)f(T)\qquad(T\subseteq V).
+\end{equation}
+Repeated queries return the same value. Errors across different sets may
+be arbitrarily correlated; $g$ need not be submodular or monotone.
+Queries of every cardinality are permitted. The output $A$ must satisfy
+$|A|\le k$, and approximation is measured by
+$f(A)/\OPT(f,k)$, where $\OPT(f,k)=\max_{|T|\le k}f(T)$.
+Algorithms may know $n,k,\kappa,\eps$ and use arbitrary computation.
+A polynomial query family has a bound $C n^d$ for constants $C,d$ fixed
+for that family. We impose no bit-complexity or numerical precision bound.
+
+\begin{theorem}[Finite query bound]\label{thm:finite}
+Let $n,k,r$ be integers with $n>k+r$ and $1\le r<k$. For
+$0\le\kappa<1$ and $0<\eps<1$, set
+\begin{equation}\label{eq:parameters}
+ \rho=\frac{1-\eps}{1+\eps},\qquad
+ a=\rho(1-\kappa),\qquad b=\rho\kappa,\qquad
+ c=\frac{(1-\rho)(1-\kappa)}{1-a}.
+\end{equation}
+Suppose $cn>e k$. For every possibly randomized adaptive algorithm making
+at most $Q$ queries on every valid input and returning a feasible set,
+there is a fixed valid pair $(f_H,g_H)$, independent of its private seed,
+with $\kappa(f_H)=\kappa$ and $\OPT(f_H,k)=k$, such that
+\begin{equation}\label{eq:finite}
+ \frac{\E[f_H(A)]}{k}
+ \le a+\frac{br}{k}+\frac{(1-a)k}{n}
+       +\min\left\{1,Q\left(\frac{e k}{cn}\right)^{cr}\right\}.
+\end{equation}
+Here $H\subseteq V$ has size $k$, and the pair is explicitly
+\begin{align}
+ f_H(S)&=|S\cap H|+a|S\setminus H|+b\min\{|S\setminus H|,r\},
+                                                        \label{eq:family}\\
+ g_H(S)&=\max\big\{(1+\eps)[a|S|+b\min\{|S|,r\}],
+                         (1-\eps)f_H(S)\big\}.          \label{eq:oracle}
+\end{align}
+The expectation is only over the algorithm's randomness.
+\end{theorem}
+
+Almost-sure query and feasibility promises suffice. Since the proof uses
+only finitely many valid inputs at each $n$, their exceptional null sets
+of seeds can be discarded together.
+
+\begin{corollary}[Sparse cardinality]\label{cor:asymptotic}
+Fix $0<\alpha<1/2$ and $0\le\kappa<1$, let
+$k_n=\lfloor n^\alpha\rfloor$, and suppose $0<\eps_n<1$ with
+$\eps_n k_n\to\infty$. Put $\rho_n=(1-\eps_n)/(1+\eps_n)$.
+For every algorithm family using at most $C n^d$ queries, there is a sequence
+of fixed valid pairs of exact curvature $\kappa$ for which
+\begin{equation}\label{eq:asymptotic}
+ \frac{\E[f_n(A_n)]}{\OPT(f_n,k_n)}
+ \le \rho_n(1-\kappa)+o(1).
+\end{equation}
+On every valid input, selecting the $k_n$ largest noisy singleton values
+guarantees $\rho_n(1-\kappa+\kappa/k_n)$.
+The bounds match additively; they match relatively when $\rho_n$ is bounded
+away from zero.
+\end{corollary}
+
+The instances may depend on the algorithm family, but each oracle is fixed
+independently of its private seed. The statement quantifies separately over
+each fixed polynomial query bound. It does not optimize over unbounded
+polynomial degrees at a fixed $n$. For example, $\kappa=1/2$ and
+$\eps=1/3$ yield the matching limiting factor $1/4$.
+If $\eps_n\to0$ while $\eps_n k_n\to\infty$, the factor tends to
+$1-\kappa$; for $\kappa>0$ this is separated from the exact-oracle benchmark.
+
+\paragraph{Relation to prior work.}
+Horel and Singer~\cite[Section 2.1 and Proposition 8]{HorelSinger16}
+study an approximately submodular objective $F$ satisfying the same
+pointwise sandwich as~\eqref{eq:noise}. They supply both the hidden
+capped-rank pattern and the largest-noisy-singleton method. Their
+curvature factor $(1-\kappa)\rho^2$ is stated for the approximate
+objective $F$. Directly analyzing the same singleton method against
+true $f$ gives one factor of $\rho$, as proved below. That normalization
+and its $\kappa/k$ refinement are elementary baselines.
+Sviridenko, Vondr\'ak and Ward~\cite[Section 7]{SVW14} use a uniform
+modular shift to tune curvature in exact-oracle lower bounds.
+Hassidim and Singer~\cite[Theorem 8 and Section 5]{HassidimSinger17}
+already establish adversarial-noise hardness for randomized algorithms.
+Their displayed hardness regime does not prescribe the exact curvature
+below one used here. Persistence also appears in stochastic-noise
+algorithms: Bhawalkar, Cai, Feng, Liaw and Lin~\cite[Section 2]{BCFLL25}
+require unbiased noise and independence across distinct sets, assumptions
+absent from~\eqref{eq:noise}.
+
+The calibration in~\eqref{eq:parameters} and finite bound~\eqref{eq:finite}
+yield~\eqref{eq:asymptotic}
+for every sequence $\eps_n k_n\to\infty$ in the stated regime.
+All-query-size leakage control is needed because queries are unrestricted.
+The construction and transcript strategy build on the preceding work.
+
+\section{Construction and leakage}
+
+\subsection{Global oracle validity and exact curvature}
+
+Use the parameters of Theorem~\ref{thm:finite}. For $s=|S|$,
+$h=|S\cap H|$ and $t=s-h$, define the baseline
+\begin{equation}\label{eq:baseline}
+ F_0(S)=a s+b\min\{s,r\},\qquad g_0(S)=(1+\eps)F_0(S).
+\end{equation}
+All formulas define values on every subset before an algorithm is run.
+The marginal of an element of $H$ in $f_H$ is always one. Outside $H$,
+it is $a+b=\rho$ while fewer than $r$ outside elements are present,
+and $a$ thereafter. These marginals are positive and diminishing, so
+$f_H$ is normalized, monotone and submodular. Since $n-k>r$, the
+full-set marginal of an outside element is $a$.
+
+\begin{table}[htbp]
+\caption{Calibration of the hard family. The noisy intervals of the two
+singleton types meet at $1-\eps$; both can receive that same answer.}
+\label{tab:calibration}
+\centering
+\begin{tabular}{lccc}
+\toprule
+Element type & True singleton & Full-set marginal & Marginal/singleton\\
+\midrule
+Inside $H$ & $1$ & $1$ & $1$\\
+Outside $H$ & $\rho$ & $\rho(1-\kappa)$ & $1-\kappa$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:calibration} proves that $\kappa(f_H)=\kappa$, including
+$\kappa=0$. Also $f_H(S)\le h+(a+b)t\le s$ and $f_H(H)=k$,
+so the feasible optimum is exactly $k$.
+Replacing $s$ by $s-h$ decreases its capped value by between zero and $h$.
+It follows that
+\begin{equation}\label{eq:difference}
+ (1-\rho)h\le f_H(S)-F_0(S)\le(1-a)h.
+\end{equation}
+Thus $F_0(S)\le f_H(S)$. Both terms in the maximum~\eqref{eq:oracle}
+are at most $(1+\eps)f_H(S)$, and the second term supplies the lower
+endpoint in~\eqref{eq:noise}. This verifies the multiplicative promise
+globally, including unqueried sets, large sets and the empty set.
+
+The baseline pair $(F_0,g_0)$ is also a valid input of exact curvature
+$\kappa$: its singleton value is $\rho$ and its full-set marginal is $a$.
+We may therefore use the algorithm's query and output promises on this
+baseline. Finally,
+\begin{equation}\label{eq:c}
+ 0<c\le1,\qquad c\ge(1-\kappa)\eps.
+\end{equation}
+Indeed the denominator defining $c$ is positive, and subtracting its
+numerator from that denominator gives $\kappa$. The second bound follows
+from $1-\rho=2\eps/(1+\eps)\ge\eps$ and $1-a\le1$.
+
+\needspace{8\baselineskip}
+The unequal singleton values are essential to this calibration. In contrast,
+the particular uniformly shifted family
+\[
+ U_H(S)=(1-\kappa)|S|+
+             \kappa\bigl(|S\cap H|+\min\{|S\setminus H|,r\}\bigr)
+\]
+has optimum $k$ and gives every $k$-set value at least $(1-\kappa)k$.
+It cannot witness the smaller fixed-noise factor $\rho(1-\kappa)$.
+The calibration in Table~\ref{tab:calibration} retains exact curvature
+while lowering the outside marginal to that product.
+
+\subsection{A tail bound valid for all query sizes}
+
+Let $H$ be uniform among the $k$-subsets of $V$.
+If $s\le r$, then $f_H(S)=\rho s+(1-\rho)h\le s$ and
+$g_0(S)=(1-\eps)s$, so $g_H(S)=g_0(S)$ for every $H$.
+For $s>r$, the upper bound in~\eqref{eq:difference} implies equality
+of the oracle answers whenever
+\begin{equation}\label{eq:theta}
+ h\le\theta(s):=
+ \frac{(1-\rho)[(1-\kappa)s+\kappa r]}{1-a}\ge cs.
+\end{equation}
+To see this, equality is guaranteed by
+$(1-\eps)[F_0(S)+(1-a)h]\le(1+\eps)F_0(S)$;
+solving this inequality gives~\eqref{eq:theta}.
+
+Fix an $s$-set $S$ with $s>r$ and let $j=\lceil cs\rceil$.
+By~\eqref{eq:c}, $1\le j\le s$. A revealing answer requires
+$|S\cap H|>cs$, hence lies in the enlarged event
+$|S\cap H|\ge j$, even when $cs$ is an integer. If $j>k$ that event
+is empty. Otherwise a union bound over the $j$-subsets of $S$ gives
+\begin{align}
+ \Prb[g_H(S)\ne g_0(S)]
+ &\le \binom{s}{j}\frac{(k)_j}{(n)_j}
+ \le \binom{s}{j}\left(\frac{k}{n}\right)^j \notag\\
+ &\le\left(\frac{e s k}{j n}\right)^j
+ \le\left(\frac{e k}{cn}\right)^j
+ \le\left(\frac{e k}{cn}\right)^{cr}.             \label{eq:tail}
+\end{align}
+Here $(m)_j=m(m-1)\cdots(m-j+1)$ and
+$(k-i)/(n-i)\le k/n$. The standard estimate
+$\binom{s}{j}\le(e s/j)^j$ follows from $j!\ge(j/e)^j$.
+The last inequality uses $cn>e k$ and $j\ge cs>cr$.
+No independence among membership indicators is used.
+Together with the nonrevealing case $s\le r$, this controls every query size.
+
+\section{Adaptive queries and fixed hard instances}
+
+\begin{proof}[Proof of Theorem~\ref{thm:finite}]
+The construction already verifies the structural promises and optimum.
+Fix a private seed $\omega$ and run the algorithm on $g_0$.
+Let $S_1(\omega),\ldots,S_m(\omega)$ be its baseline queries, where
+$m\le Q$, and let $A_0(\omega)$ be its output. All these sets are
+independent of $H$. Let $B$ be the event that at least one baseline
+query has different answers under $g_H$ and $g_0$.
+By~\eqref{eq:tail} and a union bound,
+\begin{equation}\label{eq:bad}
+ \Prb_H(B\mid\omega)\le
+ \eta:=\min\left\{1,Q\left(\frac{e k}{cn}\right)^{cr}\right\}.
+\end{equation}
+When $B$ does not occur, induction through the successive queries shows
+that the run on $g_H$ has the same transcript, stopping time and output
+as the baseline run. The induction uses independence from $H$ only for
+the baseline queries; it makes no assertion about queries after a divergence.
+Every feasible output has true value at most $k$. Pointwise, therefore,
+\[
+ f_H(A^{g_H}_\omega)\le f_H(A_0(\omega))+k\mathbf 1_B.
+\]
+The baseline output need not have been queried. Nevertheless, with
+$m_0=|A_0|\le k$, symmetry gives $\E_H|A_0\cap H|=m_0 k/n$.
+Using~\eqref{eq:family},
+\begin{align*}
+ \E_H[f_H(A_0)]
+ &=a m_0+(1-a)\E_H|A_0\cap H|
+                  +b\E_H\min\{|A_0\setminus H|,r\}\\
+ &\le ak+(1-a)k^2/n+br.
+\end{align*}
+Average over $H$ and then over $\omega$, and apply~\eqref{eq:bad}.
+This yields~\eqref{eq:finite} on the joint average.
+Since the collection of $H$ is finite, at least one single $H$ has
+private-seed expected ratio at most that average. Its oracle is the fixed
+map~\eqref{eq:oracle}, independent of the seed, as required.
+\end{proof}
+
+\section{Matching algorithm and asymptotic regime}
+
+\begin{proposition}[Standard singleton method]\label{prop:singletons}
+For any $n\ge k\ge2$, $0\le\eps<1$, and a valid pair $(f,g)$
+with total curvature $\kappa$, selecting the $k$ largest $g(\{i\})$
+values returns $S$ with
+\begin{equation}\label{eq:singleton}
+ f(S)\ge\rho(1-\kappa+\kappa/k)\OPT(f,k).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Let $O$ be an optimal $k$-set, extending a smaller optimizer if necessary.
+Singleton ordering and submodularity imply
+\begin{align*}
+ (1+\eps)\sum_{i\in S}f(\{i\})
+ &\ge\sum_{i\in S}g(\{i\})
+ \ge\sum_{i\in O}g(\{i\})\\
+ &\ge(1-\eps)\sum_{i\in O}f(\{i\})
+ \ge(1-\eps)f(O).
+\end{align*}
+Enumerate $S$ starting with its largest true singleton. Diminishing
+marginals and curvature give every later marginal at least
+$(1-\kappa)f(\{i\})$. Hence
+\[
+ f(S)\ge(1-\kappa)\sum_{i\in S}f(\{i\})
+                  +\kappa\max_{i\in S}f(\{i\})
+ \ge(1-\kappa+\kappa/k)\sum_{i\in S}f(\{i\}).
+\]
+Combining the inequalities proves the claim. The true singleton order is
+used only in the analysis; the algorithm queries and sorts noisy values.
+This is the direct true-objective analysis of the method in
+Horel--Singer~\cite[Proposition 8]{HorelSinger16}.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:asymptotic}]
+Suppress subscripts and set $u=\eps k\to\infty$,
+$\delta=1-\kappa>0$, and $r=\lceil\sqrt{k/\eps}\rceil$.
+Then
+\[
+ \frac r k\le\frac1{\sqrt u}+\frac1k\to0.
+\]
+Eventually $1\le r<k$ and $n>k+r$. By~\eqref{eq:c},
+\begin{equation}\label{eq:growth}
+ cr\ge\delta\sqrt u\to\infty,\qquad
+ \frac{cn}{k}\ge\delta u\frac{n}{k^2}
+                      \ge\delta u n^{1-2\alpha}.
+\end{equation}
+Put $\gamma=(1-2\alpha)/2>0$. Eventually
+$e k/(cn)\le n^{-\gamma}<1$, so Theorem~\ref{thm:finite} applies.
+For the fixed query bound $Q\le C n^d$, the disagreement term is at most
+\[
+ C n^{d-\gamma cr}=n^{-\omega(1)}.
+\]
+The remaining error terms satisfy
+\[
+ \frac{br}{k}\le\kappa\left(\frac1{\sqrt u}+\frac1k\right)\to0,
+ \qquad \frac{(1-a)k}{n}\le\frac{k}{n}\to0.
+\]
+Applying the finite theorem separately at each sufficiently large $n$
+gives~\eqref{eq:asymptotic}. Proposition~\ref{prop:singletons} supplies
+the deterministic lower guarantee. Its gap above $\rho_n(1-\kappa)$
+is $\rho_n\kappa/k_n=o(1)$, giving additive matching. When
+$\inf_n\rho_n>0$, the central factor is bounded below by a positive
+constant, so the additive remainders also give relative matching.
+\end{proof}
+
+\section{Exact finite checks and boundaries}
+
+The same transcript proof has a finite alternative that avoids the
+condition $cn>e k$. Retain $n>k+r$, $1\le r<k$ and the other
+parameters of Theorem~\ref{thm:finite}, and define
+\begin{align}
+ p&=\max_{0\le s\le n}
+       \Prb_H[g_H(S_s)\ne g_0(S_s)],\label{eq:p}\\
+ \beta&=a+\frac{(1-a)k}{n}
+              +\frac b k\E[\min\{k-X,r\}],\qquad
+ X\sim\operatorname{Hypergeom}(n,k,k),\label{eq:beta}
+\end{align}
+where $S_s$ is any fixed $s$-set. Symmetry makes~\eqref{eq:p}
+independent of its choice.
+
+\begin{lemma}[Exact-tail alternative]\label{lem:exact}
+For every $Q$-query algorithm as in Theorem~\ref{thm:finite}, some
+fixed $H$ satisfies
+\begin{equation}\label{eq:exact}
+ \frac{\E[f_H(A)]}{k}\le\beta+\min\{1,Qp\}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The baseline union bound is at most $\min\{1,Qp\}$. Extend any
+baseline output of size below $k$ to a $k$-set and use monotonicity.
+For every fixed $k$-set, its expected true value divided by $k$ is
+exactly~\eqref{eq:beta}, by the hypergeometric law of its intersection
+with $H$. The same coupling and finite averaging prove~\eqref{eq:exact}.
+\end{proof}
+
+All probabilities in~\eqref{eq:p} can be computed by summing
+\[
+ \frac{\binom{s}{h}\binom{n-s}{k-h}}{\binom{n}{k}}
+\]
+over feasible $h$ for which the formulas~\eqref{eq:baseline}
+and~\eqref{eq:oracle} differ. For $n=6,k=3,r=2$, $\eps=1/2$ and
+$\kappa=1/3$, this gives $p=1/20$ and $\beta=359/540$.
+Exhaustive optimization of deterministic adaptive decision trees of
+depth zero, one and two gives respective best uniform-prior expected
+ratios $359/540$, $7/10$ and $13/18$, each satisfying~\eqref{eq:exact}.
+A randomized policy is a mixture of deterministic policies, so it cannot
+improve those prior optima. The portable supplementary script reproduces
+these checks and verifies additional all-subset and count-based instances.
+These finite observations supplement the analytic proofs.
+
+The curvature-one endpoint, the transition with bounded $\eps k$,
+and dense cardinality remain open directions for a fuller joint-parameter
+characterization. The case $k=n$ provides a boundary condition: returning
+$V$ is optimal. Further questions include exact finite minimax factors
+and high-probability guarantees on fixed adversarial inputs.
+
+\paragraph{Computational and AI assistance.}
+Codex assisted with the construction, proof development, exact finite checks,
+literature comparison and drafting. A separate model-context pass checked
+the mathematical arguments.
+
+\bibliographystyle{alpha}
+\bibliography{references}
+\clearpage
+\onehalfspacing
+\end{document}

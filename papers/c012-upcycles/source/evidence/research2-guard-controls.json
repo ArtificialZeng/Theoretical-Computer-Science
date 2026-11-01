@@ -1,0 +1,44 @@
+{
+  "job_id": "c012-upcycles-research-456cb4499028",
+  "all_subgraphs": 512,
+  "connected_balanced_nonempty": 63,
+  "guarded_cut_evaluations": 1512,
+  "all_sound": true,
+  "dropping_root_guard_counterexample": {
+    "bits": [
+      true,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "S": [
+      0,
+      1
+    ],
+    "root": 8,
+    "internal": 4
+  },
+  "dropping_internal_guard_counterexample": {
+    "bits": [
+      true,
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "S": [
+      2
+    ],
+    "root": 4,
+    "internal": 8
+  }
+}

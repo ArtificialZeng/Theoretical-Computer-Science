@@ -1,0 +1,23 @@
+{
+  "job_id": "c015-imagebound-research-337b679e5617",
+  "role": "research",
+  "research_pass_observed": 1,
+  "job_started_at": "2026-11-01T08:40:23+00:00",
+  "first_clock_reading_utc": "2026-11-01T08:42:24Z",
+  "source_sha256": "7cf4a0de6b28019b0fa2f5e92ea04bee150c74cb9db945e382c75d8379326aa7",
+  "source_expected_sha256": "7cf4a0de6b28019b0fa2f5e92ea04bee150c74cb9db945e382c75d8379326aa7",
+  "scheduler_state_sha256_before_completion": "c88df94d6b92dfd4ff0f27a3b4b76b0d7a82f003295be8af75de394aef1d255b",
+  "scheduler_state_edited": false,
+  "prior_triage_timeout": "Reported by supervisor; not relabelled as a completed pass",
+  "prior_triage_token_usage": "UNKNOWN; no estimate invented",
+  "current_token_usage": "Not exposed to this worker; runner owns accounting",
+  "agents_or_background_workers_spawned": 0,
+  "mathematical_basis": "All-parameter proof, supported by finite complete closures; no operational failure used as a theorem",
+  "failure_records_preserved": [
+    "evidence/checkpoint-triage-preserved.md",
+    "evidence/next-test.md",
+    "evidence/research-source-receipts.json"
+  ],
+  "result": "Complete full-scope proof proposed for fresh referee, not accepted",
+  "known_mathematical_gaps": []
+}

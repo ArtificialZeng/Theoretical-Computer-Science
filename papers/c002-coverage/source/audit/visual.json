@@ -1,0 +1,27 @@
+{
+  "verdict": "accept",
+  "job_id": "c002-coverage-release-c84ac066553a",
+  "snapshot_digest": "26d2a64f317984b35b49212bdc46529ccb7f19bc1be1b5e471d28d308d18456e",
+  "manuscript_digest": "cbd9e040f4147d3e60fc3daafd59dcd1d2dfe965798be52063afe7345dcd085f",
+  "pdf_digest": "b2dac13ca628fb6c3b7495516ee0acbdd390a90b0942127ada2935401ba873db",
+  "report": "audit/visual.md",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "render_command": "pdftoppm -r 120 -png output/pdf/sparse-coverage-discrepancy.pdf tmp/pdfs/release/page",
+  "page_images": [
+    "tmp/pdfs/release/page-1.png",
+    "tmp/pdfs/release/page-2.png",
+    "tmp/pdfs/release/page-3.png",
+    "tmp/pdfs/release/page-4.png",
+    "tmp/pdfs/release/page-5.png",
+    "tmp/pdfs/release/page-6.png",
+    "tmp/pdfs/release/page-7.png"
+  ]
+}

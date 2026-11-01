@@ -1,0 +1,66 @@
+{
+  "package_schema": 3,
+  "project": "c017-wheeler",
+  "title": "Deciding Membership and Realizability for Wheeler Transducers",
+  "pages": 10,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "original_status": "proved",
+  "kind": "resolution-paper",
+  "pdf": "c017-wheeler_submission.pdf",
+  "pdf_sha256": "f634d9f8abb35aab26ba0f93564fdd36b9f59aee0f150228002611a8fbb71de1",
+  "source_archive": "c017-wheeler_source_and_reproducibility.zip",
+  "source_archive_sha256": "fe24b373f84e25470ab2d223863f78073f2a0a35f3105c8952794b3d10a5787d",
+  "class_file": "manuscript/acmart.cls",
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "reproduce_scripts": [
+    "evidence/check_membership.py",
+    "evidence/check_exact_certificates.py",
+    "evidence/research-2-check-realizability.py"
+  ],
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "f634d9f8abb35aab26ba0f93564fdd36b9f59aee0f150228002611a8fbb71de1"
+    },
+    "kind": "resolution-paper",
+    "manuscript_digest": "3e3ee96154364ccb7df28378b07e5b269c38b0a7d88fbb532eeb0a89dd579b2d",
+    "original_status": "proved",
+    "pages": 10,
+    "pdf_digest": "f634d9f8abb35aab26ba0f93564fdd36b9f59aee0f150228002611a8fbb71de1",
+    "provenance": {
+      "audit/build.json": "7a5584a515d96c6ae9fc9341911b245c41b8fc835950cad2793dec8eaece0e58",
+      "audit/build.md": "fd73e84812e5646ecd9ec038895d4cd84b3473e67b6c72a04b65565032b7028c",
+      "audit/citations.json": "8cf2d973798470fd187b258d0ba9d62151643b5c98860a319718690e667bf039",
+      "audit/citations.md": "7fae05e0bda5954c1a682364739e77bcb34bf1983bb62676c7db24c7e2740879",
+      "audit/math.json": "f6d0acdea332c379c5c3b085f818d3d861c5d2a4b7059ecc05be59bb8b4cadb9",
+      "audit/math.md": "d30b2711f2e131d127011736747b614a753ca011e83a6321adbe94ee1723506f",
+      "audit/visual.json": "9912e21afe5648df146a936bc8b0ef52798c625a6150d9feba09126e60529d0c",
+      "audit/visual.md": "37b357b32dd6042e57cffc79978b3308db4df3c59fc426c0c10c9ab68e740177",
+      "jobs/c017-wheeler-referee-a6cac210b41e/role.json": "c6a8cbef3bb50fea3608ec322a18bd3b8b19aa79c2a32337487bf6d8806ea247",
+      "jobs/c017-wheeler-release-bce62e5f5c55/role.json": "fc6b1359fe49e4143f1f36e40afa430c4f1f357c83b464e84f24fc99e806b9c2",
+      "jobs/c017-wheeler-research-98a17f8eb2fd/role.json": "e001ac5ac8c7a4d263beef1555792a7e7b033fcd9f306f3dab339d6b7277f8cc",
+      "manuscript/main.log": "06e57e7d43ff783fc098df185288da07292f040c145531318de5455ae0e4685b"
+    },
+    "schema": 1,
+    "snapshot_digest": "e049cdd6f4851af0fd18969fa672c8ab343b1916120d8417cddc05007f4084bb"
+  },
+  "citation_verdict": "accept",
+  "citation_limitations": [],
+  "excluded_third_party_text_caches": [],
+  "external_submission_performed": false
+}

@@ -1,0 +1,86 @@
+{
+  "job_id": "curvature-noise-release-132a90b124b3",
+  "snapshot_digest": "52edefc6f6361e426065ff407f44843ddc5a208b768db3f0cb7b916dd62ef407",
+  "manuscript_digest": "461b304d23fe9953c8530bace0f1fd06480deecffd645e16b5608b67b7f21d47",
+  "pdf_digest": "2a3b071bfdd103f2e2bbbde6f590ea75ee26229a96b46b0c79b3e02d754cf012",
+  "frozen_evidence_unchanged": true,
+  "manuscript_sources_unchanged": true,
+  "pdf_unchanged": true,
+  "original_source_sha256": "55e12bf5b8e7b5489014d1286ec0463b9bec718f4d5369b338c8e1403a6259cd",
+  "recorded_local_inputs": [
+    "manuscript/acmart.cls",
+    "manuscript/main.bbl",
+    "manuscript/main.tex"
+  ],
+  "generated_cross_reference_inputs": [
+    "manuscript/main.aux",
+    "manuscript/main.out"
+  ],
+  "undeclared_local_inputs": [],
+  "cited_keys": [
+    "BCFLL25",
+    "HassidimSinger17",
+    "HorelSinger16",
+    "SVW14"
+  ],
+  "bibtex_keys": [
+    "BCFLL25",
+    "HassidimSinger17",
+    "HorelSinger16",
+    "SVW14"
+  ],
+  "rendered_bibitem_keys": [
+    "BCFLL25",
+    "HassidimSinger17",
+    "HorelSinger16",
+    "SVW14"
+  ],
+  "undefined_citations": false,
+  "official_class_unmodified": true,
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "source_archive_digest_matches": true,
+  "archive_sources_match": {
+    "manuscript/README-ZH.md": true,
+    "manuscript/REPRODUCIBILITY.md": true,
+    "manuscript/SOURCE-PROVENANCE.json": true,
+    "manuscript/acmart.cls": true,
+    "manuscript/alpha.bst": true,
+    "manuscript/main.bbl": true,
+    "manuscript/main.tex": true,
+    "manuscript/references.bib": true,
+    "manuscript/reproduce.py": true,
+    "manuscript/vendor/README-acmart": true,
+    "manuscript/vendor/acmart.dtx": true
+  },
+  "archive_contains_no_fulltexts": true,
+  "build_log_sha256": "b4ac62345e6d4f5dcf62d3d347765819b07df2f88eebde1b4afd05763b8fc495",
+  "final_build_log_matches_original": true,
+  "fatal_or_undefined_diagnostics": [],
+  "underfull_diagnostics": [
+    "Underfull \\vbox (badness 3646) has occurred while \\output is active []"
+  ],
+  "page_count": 6,
+  "letter_page_size": true,
+  "all_fonts_embedded": true,
+  "xmp_authors": [
+    "Zijian Zeng",
+    "Jiayin Cao",
+    "Weinan Dai",
+    "Rui Wang",
+    "Fei Ding"
+  ],
+  "xmp_author_order_correct": true,
+  "info_author_order_correct": true,
+  "all_five_emails_in_xmp": true,
+  "ai_disclosure_before_bibliography": true,
+  "references_last": true,
+  "reproduction_passed": true,
+  "page_pngs": {
+    "1": "d6f27176663c53ec7a5a5c702c77930374f84f67ff7697982a4a66dfe0b9afa7",
+    "2": "b9bc3896f66732539d8ccd159a0fcf465fc184c06f9a47156cf45a08764e95fd",
+    "3": "589a0fbdf6c39ae73bb627e0d03bbc8d0a3aff233d442f38cec9a6f6c3194973",
+    "4": "62180ac43cbeadc3af8c929e5b7a2b91aa3d16160115b52774a336c7a402a356",
+    "5": "8152531cac51914036fa64473db13e904622fd7b5dbb423d9e7c1ab85baa13cc",
+    "6": "0605ed1ff7edeee0fcead9556d9c6d7be177841a6fa541c591a125814c43e3b2"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "all_checks_passed": true,
+  "independent_cases": [
+    {
+      "n": 6,
+      "k": 3,
+      "r": 2,
+      "epsilon": "1/2",
+      "curvature": "1/3",
+      "submodular_set_pairs": 4096,
+      "hidden_set_oracle_entries": 1280,
+      "revealing_entries_checked": 20,
+      "p_exact": "1/20",
+      "beta_exact": "359/540",
+      "exact_best_uniform_prior_ratios_Q_0_1_2": [
+        "359/540",
+        "7/10",
+        "13/18"
+      ],
+      "checked_bound_for_all_depth_two_policies": true
+    },
+    {
+      "n": 7,
+      "k": 3,
+      "r": 1,
+      "epsilon": "1/7",
+      "curvature": "0",
+      "submodular_set_pairs": 16384,
+      "hidden_set_oracle_entries": 4480,
+      "revealing_entries_checked": 0,
+      "p_exact": "0",
+      "beta_exact": "6/7"
+    },
+    {
+      "n": 8,
+      "k": 3,
+      "r": 2,
+      "epsilon": "7/8",
+      "curvature": "6/7",
+      "submodular_set_pairs": 65536,
+      "hidden_set_oracle_entries": 14336,
+      "revealing_entries_checked": 1792,
+      "p_exact": "1",
+      "beta_exact": "81/196"
+    },
+    {
+      "n": 8,
+      "k": 4,
+      "r": 1,
+      "epsilon": "1/17",
+      "curvature": "16/17",
+      "submodular_set_pairs": 65536,
+      "hidden_set_oracle_entries": 17920,
+      "revealing_entries_checked": 16520,
+      "p_exact": "1",
+      "beta_exact": "7843/10710"
+    }
+  ],
+  "finite_theorem_regime_exact_count_checks": [
+    {
+      "n": 128,
+      "k": 5,
+      "r": 2,
+      "epsilon": "1/2",
+      "curvature": "1/3",
+      "c": "4/7",
+      "max_leak_probability": "5/170688",
+      "maximizing_query_size": 3,
+      "cn_greater_than_3k": true,
+      "stronger_rational_exponential_bound_verified": true
+    },
+    {
+      "n": 257,
+      "k": 7,
+      "r": 3,
+      "epsilon": "3/5",
+      "curvature": "2/5",
+      "c": "9/17",
+      "max_leak_probability": "8771/8984341696",
+      "maximizing_query_size": 5,
+      "cn_greater_than_3k": true,
+      "stronger_rational_exponential_bound_verified": true
+    },
+    {
+      "n": 89,
+      "k": 4,
+      "r": 1,
+      "epsilon": "1/7",
+      "curvature": "0",
+      "c": "1",
+      "max_leak_probability": "0",
+      "maximizing_query_size": 0,
+      "cn_greater_than_3k": true,
+      "stronger_rational_exponential_bound_verified": true
+    },
+    {
+      "n": 512,
+      "k": 5,
+      "r": 4,
+      "epsilon": "1/19",
+      "curvature": "1/2",
+      "c": "1/11",
+      "max_leak_probability": "589982537/10268411264",
+      "maximizing_query_size": 6,
+      "cn_greater_than_3k": true,
+      "stronger_rational_exponential_bound_verified": true
+    }
+  ],
+  "limits": "Finite exact checks; not a proof or novelty certificate.",
+  "job_id": "curvature-noise-release-132a90b124b3",
+  "snapshot_digest": "52edefc6f6361e426065ff407f44843ddc5a208b768db3f0cb7b916dd62ef407",
+  "manuscript_digest": "461b304d23fe9953c8530bace0f1fd06480deecffd645e16b5608b67b7f21d47",
+  "pdf_digest": "2a3b071bfdd103f2e2bbbde6f590ea75ee26229a96b46b0c79b3e02d754cf012",
+  "command": "python3 manuscript/reproduce.py",
+  "exit_code": 0,
+  "provenance_note": "Original script output fields preserved; release job and digest fields added by the auditor."
+}

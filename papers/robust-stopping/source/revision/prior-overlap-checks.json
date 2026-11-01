@@ -1,0 +1,125 @@
+{
+  "status": "passed",
+  "source": "https://arxiv.org/html/2603.29233v1#A3.SS4",
+  "statement": "For r<=1-1/b the uniform candidate coincides with C.1(ii), y=b; above that cut it selects another one-hot-b optimum.",
+  "records": [
+    {
+      "b": 2,
+      "exact_C1_selected_policy_cases": 4
+    },
+    {
+      "b": 3,
+      "exact_C1_selected_policy_cases": 7
+    },
+    {
+      "b": 4,
+      "exact_C1_selected_policy_cases": 10
+    },
+    {
+      "b": 5,
+      "exact_C1_selected_policy_cases": 13
+    },
+    {
+      "b": 6,
+      "exact_C1_selected_policy_cases": 16
+    },
+    {
+      "b": 7,
+      "exact_C1_selected_policy_cases": 19
+    },
+    {
+      "b": 8,
+      "exact_C1_selected_policy_cases": 22
+    },
+    {
+      "b": 9,
+      "exact_C1_selected_policy_cases": 25
+    },
+    {
+      "b": 10,
+      "exact_C1_selected_policy_cases": 28
+    },
+    {
+      "b": 11,
+      "exact_C1_selected_policy_cases": 31
+    },
+    {
+      "b": 12,
+      "exact_C1_selected_policy_cases": 34
+    },
+    {
+      "b": 13,
+      "exact_C1_selected_policy_cases": 37
+    },
+    {
+      "b": 14,
+      "exact_C1_selected_policy_cases": 40
+    },
+    {
+      "b": 15,
+      "exact_C1_selected_policy_cases": 43
+    },
+    {
+      "b": 16,
+      "exact_C1_selected_policy_cases": 46
+    },
+    {
+      "b": 17,
+      "exact_C1_selected_policy_cases": 49
+    },
+    {
+      "b": 18,
+      "exact_C1_selected_policy_cases": 52
+    },
+    {
+      "b": 19,
+      "exact_C1_selected_policy_cases": 55
+    },
+    {
+      "b": 20,
+      "exact_C1_selected_policy_cases": 58
+    },
+    {
+      "b": 21,
+      "exact_C1_selected_policy_cases": 61
+    },
+    {
+      "b": 22,
+      "exact_C1_selected_policy_cases": 64
+    },
+    {
+      "b": 23,
+      "exact_C1_selected_policy_cases": 67
+    },
+    {
+      "b": 24,
+      "exact_C1_selected_policy_cases": 70
+    },
+    {
+      "b": 25,
+      "exact_C1_selected_policy_cases": 73
+    },
+    {
+      "b": 26,
+      "exact_C1_selected_policy_cases": 76
+    },
+    {
+      "b": 27,
+      "exact_C1_selected_policy_cases": 79
+    },
+    {
+      "b": 28,
+      "exact_C1_selected_policy_cases": 82
+    },
+    {
+      "b": 29,
+      "exact_C1_selected_policy_cases": 85
+    },
+    {
+      "b": 30,
+      "exact_C1_selected_policy_cases": 88
+    }
+  ],
+  "selected_policy_cases": 1334,
+  "limitation": "This is overlap evidence, not an additional novelty claim."
+}

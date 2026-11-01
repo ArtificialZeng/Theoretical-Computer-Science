@@ -1,0 +1,62 @@
+{
+  "job_id": "coverage-sparse-triage-8c18589f991c",
+  "arithmetic": "exact fractions.Fraction",
+  "cases": [
+    {
+      "k": 2,
+      "m": 2,
+      "original_subsets_checked": 16,
+      "tested_edges": 2,
+      "optimum": "7/8",
+      "primal_marginals_and_each_edge_checked": true,
+      "dual_checked_on_each_subset": true
+    },
+    {
+      "k": 2,
+      "m": 3,
+      "original_subsets_checked": 64,
+      "tested_edges": 3,
+      "optimum": "5/6",
+      "primal_marginals_and_each_edge_checked": true,
+      "dual_checked_on_each_subset": true
+    },
+    {
+      "k": 2,
+      "m": 4,
+      "original_subsets_checked": 256,
+      "tested_edges": 4,
+      "optimum": "13/16",
+      "primal_marginals_and_each_edge_checked": true,
+      "dual_checked_on_each_subset": true
+    },
+    {
+      "k": 3,
+      "m": 2,
+      "original_subsets_checked": 64,
+      "tested_edges": 6,
+      "optimum": "5/6",
+      "primal_marginals_and_each_edge_checked": true,
+      "dual_checked_on_each_subset": true
+    },
+    {
+      "k": 3,
+      "m": 3,
+      "original_subsets_checked": 512,
+      "tested_edges": 9,
+      "optimum": "65/81",
+      "primal_marginals_and_each_edge_checked": true,
+      "dual_checked_on_each_subset": true
+    },
+    {
+      "k": 4,
+      "m": 3,
+      "original_subsets_checked": 4096,
+      "tested_edges": 18,
+      "optimum": "31/40",
+      "primal_marginals_and_each_edge_checked": true,
+      "dual_checked_on_each_subset": true
+    }
+  ],
+  "source_sha256": "eb7061a17cead0bc8cc0e4426f3f8260ac3137dd23b6f4813d8f4952b00ec731",
+  "scope": "Six finite witness instances only; no infinite theorem or novelty certification."
+}

@@ -1,0 +1,19 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "result-note",
+  "original_status": "unresolved",
+  "summary": "Wrote, clean-built, visually inspected and froze the six-page accepted-scope ACM manuscript, portable verifier and source ZIP. Original problem remains unresolved; fresh release review is pending.",
+  "next_test": "A separate fresh release reviewer must audit citations, all six pages, source closure, build and metadata, then run the actual release gate.",
+  "evidence": [
+    "manuscript/main.pdf",
+    "manuscript/main.tex",
+    "manuscript/curvature-noise-source.zip",
+    "publication.json",
+    "audit/manuscript-snapshot.json",
+    "audit/write-freeze-gate.json",
+    "audit/write-checks.json",
+    "audit/write.md",
+    "audit/write-citation-map.md",
+    "checkpoint.md"
+  ]
+}

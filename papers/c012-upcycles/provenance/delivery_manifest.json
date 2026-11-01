@@ -1,0 +1,106 @@
+{
+  "package_schema": 3,
+  "project": "c012-upcycles",
+  "title": "A Universal Partial Cycle with Three Wildcards per Window",
+  "pages": 5,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "original_status": "proved",
+  "kind": "resolution-paper",
+  "pdf": "c012-upcycles_submission.pdf",
+  "pdf_sha256": "eade3f9df07bd82943ef54b3e0c9c1b95d1510ab9e779dc9ff26a9cdf71cedef",
+  "source_archive": "c012-upcycles_source_and_reproducibility.zip",
+  "source_archive_sha256": "a168975746a1ff1a422eddf3a6cd61af683a828b1399e587fad3b298f73da999",
+  "class_file": "manuscript/acmart.cls",
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "reproduce_scripts": [
+    "manuscript/verify.py",
+    "evidence/research2-witness/minimal_check.py"
+  ],
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "eade3f9df07bd82943ef54b3e0c9c1b95d1510ab9e779dc9ff26a9cdf71cedef"
+    },
+    "kind": "resolution-paper",
+    "manuscript_digest": "474c54f68a48ef6fd7c76b39f22078792f656b0f9e2b317cb7c264388336041a",
+    "original_status": "proved",
+    "pages": 5,
+    "pdf_digest": "eade3f9df07bd82943ef54b3e0c9c1b95d1510ab9e779dc9ff26a9cdf71cedef",
+    "provenance": {
+      "audit/build.json": "ec37362adea2ecf46a7e4903723d067461066953680ed77b846b1e0b30902f55",
+      "audit/build.md": "b8887bbc85ae0b42424f37b5beef1f39b2e8dc7cda0795836c9adf2205cfa7f7",
+      "audit/citations.json": "16d4bda95d5355b44f1386b25254c4cb675d67a65c250148d698c90bad576d39",
+      "audit/citations.md": "c3dec37de1effff004fcba19f00446064c2164aa01bbc1c2cc9ad32be438def3",
+      "audit/math.json": "8100e3258805c0bb7ec02ce0501bb978a75f0a7cb5f79fa42175b00ffe128ee2",
+      "audit/math.md": "b0f1c589a1af8abe89f0b153b7b6e6364525d3dfd672cc8dc2487aa40bfdab6d",
+      "audit/visual.json": "26e295ebe847039769bb4eedc43e7bbad2794be3700e41d5d9dc7b14a65652e1",
+      "audit/visual.md": "13c8e717ee5df3875033f0cb6e8cb4b0ebd68f809d4c12e9b93c410abb7d7a52",
+      "jobs/c012-upcycles-referee-9a733cb83e73/role.json": "de3abed35a9de6c00c22542647adb1efe5e77649ddc69923e68b75fc15a1d92f",
+      "jobs/c012-upcycles-release-0294a4f8ea65/role.json": "d2a90d0d421d8178d666d598fd456bdc6cc2790612048079b3c4dda7b45bd68f",
+      "jobs/c012-upcycles-research-456cb4499028/role.json": "698b2369c16169f42b190c623f50d7fd4e074ce9a1a582b00199ce8d68babeb6",
+      "manuscript/main.log": "9d67fa0835bb430c653f8fa5e7587d950a9c9766e4fa8d9ea5a0ab2b4ef63a61"
+    },
+    "schema": 1,
+    "snapshot_digest": "920933319e6b98bd521f6c300a93b0e7fa46ae3d6600fa970801ea528789f85e"
+  },
+  "citation_verdict": "accept",
+  "citation_limitations": [],
+  "excluded_third_party_text_caches": [
+    {
+      "path": "evidence/research1-additional-primary.json",
+      "sha256": "f1486fbe76f7cbedef98087a832b2298abb07e2cdb4e68632813f60ca8b57298",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    },
+    {
+      "path": "evidence/research1-upqf-comparison.json",
+      "sha256": "d8ec4186a9dac7fc551211cf326f7285ea91cc4521fb6a7ac79cc6bd0ccbf004",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    },
+    {
+      "path": "evidence/research1-web-confirmation.json",
+      "sha256": "41a93090334aa58ea129fa593d4ab1d18324661ee09cb9de1ddd1cd4b7632b53",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    },
+    {
+      "path": "evidence/research2-further-novelty-search.json",
+      "sha256": "ed226a1af7ce7d68e36e4dc4f049eb3c54ef073ec437cf57d90189b0a41acdc4",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    },
+    {
+      "path": "evidence/research2-novelty-search.json",
+      "sha256": "d92125f3ac966fb442269865be522ae0b68f9441df910ff8c3cc983ca88aabaa",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    },
+    {
+      "path": "evidence/research2-primary-exact-statements.json",
+      "sha256": "eb16ee040d7e45c90d6cb733d7121200f154b14ec089359e6c8dfba1d82db047",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    },
+    {
+      "path": "evidence/research2-primary-open-records.json",
+      "sha256": "2c18bacc0b69b94c0238f78d576e5215c3fdcba47a7291283afe18073a9d6761",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    },
+    {
+      "path": "evidence/triage-web-confirmation.json",
+      "sha256": "f47fa5b3ea6c0d6a3bf356cbb93420e30b085e21f9726b3ca131eb492d2c40cc",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    }
+  ],
+  "external_submission_performed": false
+}

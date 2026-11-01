@@ -1,0 +1,99 @@
+{
+  "job_id": "c012-upcycles-referee-9a733cb83e73",
+  "snapshot_digest": "920933319e6b98bd521f6c300a93b0e7fa46ae3d6600fa970801ea528789f85e",
+  "snapshot_integrity": true,
+  "source_sha256": "773f9e28946e0ee6f8def64bd988a0e6ae6f1a095968d275914978caa6ce2eac",
+  "word_sha256": "c52b51a5317f1aa0080108366f9253d68e33e0723136a8ab261dadc8f5b73bb3",
+  "a": 2,
+  "n": 12,
+  "d": 3,
+  "length": 512,
+  "octal_digits": 128,
+  "wildcard_count": 128,
+  "ordinary_count": 384,
+  "diamondicities": [
+    3
+  ],
+  "exact_all_word_count": 4096,
+  "all_start_count": 512,
+  "compatibility_tests": 2097152,
+  "coverage_count_histogram": {
+    "1": 4096
+  },
+  "direct_bitmask_comparison_agrees_with_independent_expansion": true,
+  "saved_inverse_entries_checked": 4096,
+  "saved_pair_conflict_entries_checked": 130816,
+  "all_pairs_also_have_integer_mask_conflicts": true,
+  "starts_per_total_word": 1,
+  "completions_per_start": 8,
+  "wrap_starts": 11,
+  "words_covered_by_wrap_starts": 88,
+  "controls": [
+    {
+      "label": "known_n4d1",
+      "expected_valid": true,
+      "observed_valid": true,
+      "minimum_count": 1,
+      "maximum_count": 1
+    },
+    {
+      "label": "known_n8d1_theorem3_1",
+      "expected_valid": true,
+      "observed_valid": true,
+      "minimum_count": 1,
+      "maximum_count": 1
+    },
+    {
+      "label": "bad_n4_single_bit",
+      "expected_valid": false,
+      "observed_valid": false,
+      "minimum_count": 0,
+      "maximum_count": 3
+    },
+    {
+      "label": "bad_n4_all_zero",
+      "expected_valid": false,
+      "observed_valid": false,
+      "minimum_count": 0,
+      "maximum_count": 8
+    },
+    {
+      "label": "bad_n12_single_bit",
+      "expected_valid": false,
+      "observed_valid": false,
+      "minimum_count": 0,
+      "maximum_count": 3
+    },
+    {
+      "label": "bad_n12_all_zero",
+      "expected_valid": false,
+      "observed_valid": false,
+      "minimum_count": 0,
+      "maximum_count": 512
+    },
+    {
+      "label": "rotation_n12",
+      "expected_valid": true,
+      "observed_valid": true,
+      "minimum_count": 1,
+      "maximum_count": 1
+    },
+    {
+      "label": "reflection_n12",
+      "expected_valid": true,
+      "observed_valid": true,
+      "minimum_count": 1,
+      "maximum_count": 1
+    },
+    {
+      "label": "alphabet_complement_n12",
+      "expected_valid": true,
+      "observed_valid": true,
+      "minimum_count": 1,
+      "maximum_count": 1
+    }
+  ],
+  "no_candidate_program_imports": true,
+  "no_solver_dependency": true,
+  "valid_original_existential_witness": true
+}

@@ -1,0 +1,74 @@
+{
+  "job_id": "c012-upcycles-research-456cb4499028",
+  "verifier": "standalone all-words/all-starts literal comparison and separate pairwise ordinary conflicts",
+  "solver_or_builder_imported": false,
+  "all_total_words": 4096,
+  "all_cyclic_starts": 512,
+  "all_window_pairs": 130816,
+  "word_sha256": "c52b51a5317f1aa0080108366f9253d68e33e0723136a8ab261dadc8f5b73bb3",
+  "minimum_count": 1,
+  "maximum_count": 1,
+  "diamondicities": [
+    3
+  ],
+  "diamond_periodic": true,
+  "wildcard_positions_exactly_mod4_zero": true,
+  "wrap_start_count": 11,
+  "words_unique_to_wrap_starts": 88,
+  "tests": [
+    {
+      "label": "source_example_0",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "label": "source_example_1",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "label": "bad_n4_bit",
+      "expected": false,
+      "actual": false,
+      "number_of_compatible_window_pairs": 6,
+      "first_compatible_pair": [
+        0,
+        2
+      ],
+      "literal_counts_reject": true
+    },
+    {
+      "label": "bad_n4_zero",
+      "expected": false,
+      "actual": false,
+      "number_of_compatible_window_pairs": 28,
+      "first_compatible_pair": [
+        0,
+        1
+      ],
+      "literal_counts_reject": true
+    },
+    {
+      "label": "bad_n12_bit",
+      "expected": false,
+      "actual": false,
+      "number_of_compatible_window_pairs": 68,
+      "first_compatible_pair": [
+        0,
+        205
+      ]
+    },
+    {
+      "label": "bad_n12_all_zero",
+      "expected": false,
+      "actual": false,
+      "number_of_compatible_window_pairs": 130816,
+      "first_compatible_pair": [
+        0,
+        1
+      ]
+    }
+  ],
+  "valid_original_scope_witness": true,
+  "elapsed_seconds": 0.8792472910135984
+}

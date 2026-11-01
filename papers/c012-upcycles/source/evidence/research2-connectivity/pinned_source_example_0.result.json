@@ -1,0 +1,40 @@
+{
+  "job_id": "c012-upcycles-research-456cb4499028",
+  "label": "pinned_source_example_0",
+  "n": 4,
+  "d": 1,
+  "mask": "...*",
+  "max_rounds": 20,
+  "total_solver_wall_cap_seconds": 10,
+  "per_call_wall_cap_seconds": 10,
+  "encoding": "evidence/research2-connectivity/pinned_source_example_0.encoding.json",
+  "initial_clauses": 280,
+  "rounds": [
+    {
+      "round": 0,
+      "status": "SAT",
+      "returncode": 10,
+      "wall_timeout": false,
+      "elapsed_seconds": 0.020885540987364948,
+      "wall_cap_seconds": 10,
+      "child_cpu_seconds": 0.004679999999999999,
+      "clauses": 280,
+      "cnf": "evidence/research2-connectivity/pinned_source_example_0.r00.cnf",
+      "log": "evidence/research2-connectivity/pinned_source_example_0.r00.log",
+      "proof": "evidence/research2-connectivity/pinned_source_example_0.r00.lrat",
+      "cnf_sha256": "b5cb562b6388ab9857a0ba2c19ef6a63a4352a75af5a3e7941d521435c9ec07e",
+      "proof_sha256": "9c70b0e6ff51183f2fa0ceca846dd3a5194fd5f183695cf8fbcb03df3c58e613",
+      "model_verification": "evidence/research2-connectivity/pinned_source_example_0.r00.model-verification.json",
+      "component_count": 1,
+      "component_edge_counts": [
+        8
+      ]
+    }
+  ],
+  "cut_groups": [],
+  "outcome": "connected-witness",
+  "original_question_resolved": false,
+  "witness": "evidence/research2-connectivity/pinned_source_example_0.r00.model-verification.json",
+  "solver_wall_seconds": 0.020885540987364948,
+  "completed_utc": "2026-11-01T04:51:57.680326+00:00"
+}

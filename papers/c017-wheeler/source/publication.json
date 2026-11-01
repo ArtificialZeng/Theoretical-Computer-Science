@@ -1,0 +1,25 @@
+{
+  "source_files": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "pdf": "manuscript/main.pdf",
+  "title": "Deciding Membership and Realizability for Wheeler Transducers",
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "build_command": "cd manuscript && latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error main.tex",
+  "format": "Official unmodified acmart v2.20, acmsmall/nonacm 11pt, single column, US Letter, one-inch margins, separate title page; STOC 2027 submission layout rather than proceedings layout",
+  "max_total_pages": 12,
+  "bibliography_basis": "literature/user_bibliography_check.md",
+  "external_submission_authorized": false,
+  "writer_job_id": "c017-wheeler-write-147289d53db0"
+}

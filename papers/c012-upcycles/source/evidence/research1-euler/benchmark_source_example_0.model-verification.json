@@ -1,0 +1,88 @@
+{
+  "selected_indices": [
+    2,
+    7,
+    12,
+    13,
+    17,
+    24,
+    26,
+    31
+  ],
+  "coverage_counts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "components": [
+    [
+      "*00",
+      "*11",
+      "0*0",
+      "001",
+      "01*",
+      "1*1",
+      "10*",
+      "110"
+    ]
+  ],
+  "component_count": 1,
+  "component_edge_counts": [
+    8
+  ],
+  "euler_tour": [
+    26,
+    2,
+    12,
+    24,
+    31,
+    7,
+    13,
+    17
+  ],
+  "upcycle": {
+    "valid": true,
+    "word": "*001*110",
+    "n": 4,
+    "a": 2,
+    "length": 8,
+    "diamondicities": [
+      1
+    ],
+    "diamond_periodic": true,
+    "length_identity": true,
+    "coverage_counts": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "missing": 0,
+    "multiply_covered": 0
+  }
+}

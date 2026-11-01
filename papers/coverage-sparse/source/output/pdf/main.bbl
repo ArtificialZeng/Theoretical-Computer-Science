@@ -1,0 +1,52 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{CCPV11}
+
+\bibitem[ADSY12]{Agrawal2012}
+Shipra Agrawal, Yichuan Ding, Amin Saberi, and Yinyu Ye.
+\newblock Price of correlations in stochastic optimization.
+\newblock {\em Operations Research}, 60(1):150--162, 2012.
+\newblock \url{https://doi.org/10.1287/opre.1110.1011}.
+
+\bibitem[CCPV11]{Calinescu2011}
+Gruia Calinescu, Chandra Chekuri, Martin P{\'a}l, and Jan Vondr{\'a}k.
+\newblock Maximizing a monotone submodular function subject to a matroid
+  constraint.
+\newblock {\em SIAM Journal on Computing}, 40(6):1740--1766, 2011.
+\newblock \url{https://doi.org/10.1137/080733991}.
+
+\bibitem[DFL{\etalchar{+}}25]{Dutting2025}
+Paul D{\"u}tting, Federico Fusco, Silvio Lattanzi, Ashkan Norouzi-Fard, Ola
+  Svensson, and Morteza Zadimoghaddam.
+\newblock The cost of consistency: Submodular maximization with constant
+  recourse.
+\newblock In {\em Proceedings of the 57th Annual ACM Symposium on Theory of
+  Computing}, STOC '25, pages 1406--1417. Association for Computing Machinery,
+  2025.
+\newblock \url{https://doi.org/10.1145/3717823.3718131}. Full version:
+  \url{https://arxiv.org/abs/2412.02492v1}.
+
+\bibitem[Ram26]{Ramachandra2026}
+Arjun Ramachandra.
+\newblock Dimension dependent correlation gap bounds under restricted
+  independence.
+\newblock \href{https://arxiv.org/abs/2609.02659v1}{arXiv:2609.02659v1}, 2026.
+
+\bibitem[RN25]{RamachandraNatarajan2025}
+Arjun Ramachandra and Karthik Natarajan.
+\newblock Pairwise independent correlation gap.
+\newblock {\em Operations Research Letters}, 60:107255, 2025.
+\newblock \url{https://doi.org/10.1016/j.orl.2025.107255}.
+
+\bibitem[RN26]{RamachandraNatarajan2026}
+Arjun Ramachandra and Karthik Natarajan.
+\newblock Counterexample to a conjecture on the pairwise independent
+  correlation gap using {AI}.
+\newblock \href{https://arxiv.org/abs/2606.19663v1}{arXiv:2606.19663v1}, 2026.
+
+\bibitem[UW26]{UdwaniWajc2026}
+Rajan Udwani and David Wajc.
+\newblock Online submodular welfare maximization: Computation is not the
+  bottleneck.
+\newblock \href{https://arxiv.org/abs/2610.16060v1}{arXiv:2610.16060v1}, 2026.
+
+\end{thebibliography}

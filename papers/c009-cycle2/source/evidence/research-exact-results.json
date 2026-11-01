@@ -1,0 +1,1951 @@
+{
+  "job_id": "c009-cycle2-research-347a4f87d1ce",
+  "seed": 347487,
+  "scope": "Finite exact identities, exhaustive specified weighted grids and independent vertex-map normalization. Not universal certification or review.",
+  "identity_tests": 270,
+  "identity_dimensions": [
+    1,
+    9
+  ],
+  "identity_degeneracies": [
+    "b=0 in rational rotated basis",
+    "D=0 in rational rotated basis",
+    "arbitrary real-skew rational entries at five scales"
+  ],
+  "identity_cases": [
+    {
+      "n": 1,
+      "case": 0,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 1,
+      "degeneracy": "D=0",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 2,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 3,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 4,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 5,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 6,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 7,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 8,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 9,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 10,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 11,
+      "degeneracy": "D=0",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 12,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 13,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 14,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 15,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 16,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 17,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 18,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 19,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 20,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 21,
+      "degeneracy": "D=0",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 22,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 23,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 24,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 25,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 26,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 27,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 28,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 1,
+      "case": 29,
+      "degeneracy": "unrestricted",
+      "residual": "0"
+    },
+    {
+      "n": 2,
+      "case": 0,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 2,
+      "case": 1,
+      "degeneracy": "D=0",
+      "residual": "288"
+    },
+    {
+      "n": 2,
+      "case": 2,
+      "degeneracy": "unrestricted",
+      "residual": "475398"
+    },
+    {
+      "n": 2,
+      "case": 3,
+      "degeneracy": "unrestricted",
+      "residual": "4980000/117649"
+    },
+    {
+      "n": 2,
+      "case": 4,
+      "degeneracy": "unrestricted",
+      "residual": "4001800000000/729"
+    },
+    {
+      "n": 2,
+      "case": 5,
+      "degeneracy": "unrestricted",
+      "residual": "405729/250000000000"
+    },
+    {
+      "n": 2,
+      "case": 6,
+      "degeneracy": "unrestricted",
+      "residual": "5780241/1024000000"
+    },
+    {
+      "n": 2,
+      "case": 7,
+      "degeneracy": "unrestricted",
+      "residual": "891/16"
+    },
+    {
+      "n": 2,
+      "case": 8,
+      "degeneracy": "unrestricted",
+      "residual": "1049313280000/729"
+    },
+    {
+      "n": 2,
+      "case": 9,
+      "degeneracy": "unrestricted",
+      "residual": "16384051200000000"
+    },
+    {
+      "n": 2,
+      "case": 10,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 2,
+      "case": 11,
+      "degeneracy": "D=0",
+      "residual": "3078"
+    },
+    {
+      "n": 2,
+      "case": 12,
+      "degeneracy": "unrestricted",
+      "residual": "160867/11664"
+    },
+    {
+      "n": 2,
+      "case": 13,
+      "degeneracy": "unrestricted",
+      "residual": "1841266875/16"
+    },
+    {
+      "n": 2,
+      "case": 14,
+      "degeneracy": "unrestricted",
+      "residual": "4001800000000/729"
+    },
+    {
+      "n": 2,
+      "case": 15,
+      "degeneracy": "unrestricted",
+      "residual": "820656441/3906250000000000"
+    },
+    {
+      "n": 2,
+      "case": 16,
+      "degeneracy": "unrestricted",
+      "residual": "2454/1838265625"
+    },
+    {
+      "n": 2,
+      "case": 17,
+      "degeneracy": "unrestricted",
+      "residual": "313632/117649"
+    },
+    {
+      "n": 2,
+      "case": 18,
+      "degeneracy": "unrestricted",
+      "residual": "256320000"
+    },
+    {
+      "n": 2,
+      "case": 19,
+      "degeneracy": "unrestricted",
+      "residual": "186624259200000000"
+    },
+    {
+      "n": 2,
+      "case": 20,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 2,
+      "case": 21,
+      "degeneracy": "D=0",
+      "residual": "1056/15625"
+    },
+    {
+      "n": 2,
+      "case": 22,
+      "degeneracy": "unrestricted",
+      "residual": "122451/16"
+    },
+    {
+      "n": 2,
+      "case": 23,
+      "degeneracy": "unrestricted",
+      "residual": "7356063750"
+    },
+    {
+      "n": 2,
+      "case": 24,
+      "degeneracy": "unrestricted",
+      "residual": "2916016200000000"
+    },
+    {
+      "n": 2,
+      "case": 25,
+      "degeneracy": "unrestricted",
+      "residual": "1251/3906250000"
+    },
+    {
+      "n": 2,
+      "case": 26,
+      "degeneracy": "unrestricted",
+      "residual": "1251/3906250000"
+    },
+    {
+      "n": 2,
+      "case": 27,
+      "degeneracy": "unrestricted",
+      "residual": "313632/117649"
+    },
+    {
+      "n": 2,
+      "case": 28,
+      "degeneracy": "unrestricted",
+      "residual": "45663750"
+    },
+    {
+      "n": 2,
+      "case": 29,
+      "degeneracy": "unrestricted",
+      "residual": "45563512500000"
+    },
+    {
+      "n": 3,
+      "case": 0,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 3,
+      "case": 1,
+      "degeneracy": "D=0",
+      "residual": "151693440/117649"
+    },
+    {
+      "n": 3,
+      "case": 2,
+      "degeneracy": "unrestricted",
+      "residual": "1473716089945/62348092416"
+    },
+    {
+      "n": 3,
+      "case": 3,
+      "degeneracy": "unrestricted",
+      "residual": "1539509210107962886/9529569"
+    },
+    {
+      "n": 3,
+      "case": 4,
+      "degeneracy": "unrestricted",
+      "residual": "382223237120000/81"
+    },
+    {
+      "n": 3,
+      "case": 5,
+      "degeneracy": "unrestricted",
+      "residual": "253867460921/250000000000000000"
+    },
+    {
+      "n": 3,
+      "case": 6,
+      "degeneracy": "unrestricted",
+      "residual": "13845793/324000000"
+    },
+    {
+      "n": 3,
+      "case": 7,
+      "degeneracy": "unrestricted",
+      "residual": "142859062400/531441"
+    },
+    {
+      "n": 3,
+      "case": 8,
+      "degeneracy": "unrestricted",
+      "residual": "72340843457310720/9826162129"
+    },
+    {
+      "n": 3,
+      "case": 9,
+      "degeneracy": "unrestricted",
+      "residual": "34848072800000000"
+    },
+    {
+      "n": 3,
+      "case": 10,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 3,
+      "case": 11,
+      "degeneracy": "D=0",
+      "residual": "693306461638/4750104241"
+    },
+    {
+      "n": 3,
+      "case": 12,
+      "degeneracy": "unrestricted",
+      "residual": "3615236915/8503056"
+    },
+    {
+      "n": 3,
+      "case": 13,
+      "degeneracy": "unrestricted",
+      "residual": "747597833125/6561"
+    },
+    {
+      "n": 3,
+      "case": 14,
+      "degeneracy": "unrestricted",
+      "residual": "840927759136000000000/771895089"
+    },
+    {
+      "n": 3,
+      "case": 15,
+      "degeneracy": "unrestricted",
+      "residual": "17042401/410062500000000"
+    },
+    {
+      "n": 3,
+      "case": 16,
+      "degeneracy": "unrestricted",
+      "residual": "119226853831/23347444050000"
+    },
+    {
+      "n": 3,
+      "case": 17,
+      "degeneracy": "unrestricted",
+      "residual": "220844965/3111696"
+    },
+    {
+      "n": 3,
+      "case": 18,
+      "degeneracy": "unrestricted",
+      "residual": "14383067750/531441"
+    },
+    {
+      "n": 3,
+      "case": 19,
+      "degeneracy": "unrestricted",
+      "residual": "22597329733968146654687500/515607849"
+    },
+    {
+      "n": 3,
+      "case": 20,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 3,
+      "case": 21,
+      "degeneracy": "D=0",
+      "residual": "2176"
+    },
+    {
+      "n": 3,
+      "case": 22,
+      "degeneracy": "unrestricted",
+      "residual": "279269160221/250000"
+    },
+    {
+      "n": 3,
+      "case": 23,
+      "degeneracy": "unrestricted",
+      "residual": "277717066739857459840000/7163272192041"
+    },
+    {
+      "n": 3,
+      "case": 24,
+      "degeneracy": "unrestricted",
+      "residual": "313231727907840000"
+    },
+    {
+      "n": 3,
+      "case": 25,
+      "degeneracy": "unrestricted",
+      "residual": "72046301574661/45562500000000000000"
+    },
+    {
+      "n": 3,
+      "case": 26,
+      "degeneracy": "unrestricted",
+      "residual": "239141180409086/521156689453125"
+    },
+    {
+      "n": 3,
+      "case": 27,
+      "degeneracy": "unrestricted",
+      "residual": "1594003414/3360173089"
+    },
+    {
+      "n": 3,
+      "case": 28,
+      "degeneracy": "unrestricted",
+      "residual": "2895020000/81"
+    },
+    {
+      "n": 3,
+      "case": 29,
+      "degeneracy": "unrestricted",
+      "residual": "18726291457031250"
+    },
+    {
+      "n": 4,
+      "case": 0,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 4,
+      "case": 1,
+      "degeneracy": "D=0",
+      "residual": "11368"
+    },
+    {
+      "n": 4,
+      "case": 2,
+      "degeneracy": "unrestricted",
+      "residual": "54987645195517766159/114612355072656"
+    },
+    {
+      "n": 4,
+      "case": 3,
+      "degeneracy": "unrestricted",
+      "residual": "61322227195915000/10673289"
+    },
+    {
+      "n": 4,
+      "case": 4,
+      "degeneracy": "unrestricted",
+      "residual": "583816099558731943633980625/343064484"
+    },
+    {
+      "n": 4,
+      "case": 5,
+      "degeneracy": "unrestricted",
+      "residual": "373324776713/312500000000000000"
+    },
+    {
+      "n": 4,
+      "case": 6,
+      "degeneracy": "unrestricted",
+      "residual": "186801458639/18382656250000"
+    },
+    {
+      "n": 4,
+      "case": 7,
+      "degeneracy": "unrestricted",
+      "residual": "12182879282488133/8004966750000"
+    },
+    {
+      "n": 4,
+      "case": 8,
+      "degeneracy": "unrestricted",
+      "residual": "891953590594/729"
+    },
+    {
+      "n": 4,
+      "case": 9,
+      "degeneracy": "unrestricted",
+      "residual": "752108380342685752343750/6947055801"
+    },
+    {
+      "n": 4,
+      "case": 10,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 4,
+      "case": 11,
+      "degeneracy": "D=0",
+      "residual": "100825336019304/2565726409"
+    },
+    {
+      "n": 4,
+      "case": 12,
+      "degeneracy": "unrestricted",
+      "residual": "411472172981/1000000"
+    },
+    {
+      "n": 4,
+      "case": 13,
+      "degeneracy": "unrestricted",
+      "residual": "591799283406586961590/2449566181881"
+    },
+    {
+      "n": 4,
+      "case": 14,
+      "degeneracy": "unrestricted",
+      "residual": "14484021394469622500/729"
+    },
+    {
+      "n": 4,
+      "case": 15,
+      "degeneracy": "unrestricted",
+      "residual": "23763577/256000000000"
+    },
+    {
+      "n": 4,
+      "case": 16,
+      "degeneracy": "unrestricted",
+      "residual": "256228470181/4000000000000"
+    },
+    {
+      "n": 4,
+      "case": 17,
+      "degeneracy": "unrestricted",
+      "residual": "32119250487479/5955980625"
+    },
+    {
+      "n": 4,
+      "case": 18,
+      "degeneracy": "unrestricted",
+      "residual": "140485958787162656/531441"
+    },
+    {
+      "n": 4,
+      "case": 19,
+      "degeneracy": "unrestricted",
+      "residual": "1136616260488290329701250/108651322129"
+    },
+    {
+      "n": 4,
+      "case": 20,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 4,
+      "case": 21,
+      "degeneracy": "D=0",
+      "residual": "1932854/729"
+    },
+    {
+      "n": 4,
+      "case": 22,
+      "degeneracy": "unrestricted",
+      "residual": "57462563483933/6947055801"
+    },
+    {
+      "n": 4,
+      "case": 23,
+      "degeneracy": "unrestricted",
+      "residual": "4087532947045211209309/857661210000"
+    },
+    {
+      "n": 4,
+      "case": 24,
+      "degeneracy": "unrestricted",
+      "residual": "38661270135347231250/1681"
+    },
+    {
+      "n": 4,
+      "case": 25,
+      "degeneracy": "unrestricted",
+      "residual": "52660706974719630285649/958258458062500000000000000"
+    },
+    {
+      "n": 4,
+      "case": 26,
+      "degeneracy": "unrestricted",
+      "residual": "8209611151453/37015056000000"
+    },
+    {
+      "n": 4,
+      "case": 27,
+      "degeneracy": "unrestricted",
+      "residual": "328321067609599/3430644840000"
+    },
+    {
+      "n": 4,
+      "case": 28,
+      "degeneracy": "unrestricted",
+      "residual": "987793834105/1458"
+    },
+    {
+      "n": 4,
+      "case": 29,
+      "degeneracy": "unrestricted",
+      "residual": "14854652705850112965145703125/9826162129"
+    },
+    {
+      "n": 5,
+      "case": 0,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 5,
+      "case": 1,
+      "degeneracy": "D=0",
+      "residual": "180984155885/8503056"
+    },
+    {
+      "n": 5,
+      "case": 2,
+      "degeneracy": "unrestricted",
+      "residual": "8205787954841283146461/81107777364009984"
+    },
+    {
+      "n": 5,
+      "case": 3,
+      "degeneracy": "unrestricted",
+      "residual": "381405613529710546165625/11177126654841"
+    },
+    {
+      "n": 5,
+      "case": 4,
+      "degeneracy": "unrestricted",
+      "residual": "3839225158224565702067200000000/7163272192041"
+    },
+    {
+      "n": 5,
+      "case": 5,
+      "degeneracy": "unrestricted",
+      "residual": "714217505712571/116640000000000000000"
+    },
+    {
+      "n": 5,
+      "case": 6,
+      "degeneracy": "unrestricted",
+      "residual": "4076498168991284719937/45362336701500000000000"
+    },
+    {
+      "n": 5,
+      "case": 7,
+      "degeneracy": "unrestricted",
+      "residual": "168160419736600946098309/705578135964800000"
+    },
+    {
+      "n": 5,
+      "case": 8,
+      "degeneracy": "unrestricted",
+      "residual": "7003314843557827064/5955980625"
+    },
+    {
+      "n": 5,
+      "case": 9,
+      "degeneracy": "unrestricted",
+      "residual": "3447943640506872126140000/20820969"
+    },
+    {
+      "n": 5,
+      "case": 10,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 5,
+      "case": 11,
+      "degeneracy": "D=0",
+      "residual": "7200"
+    },
+    {
+      "n": 5,
+      "case": 12,
+      "degeneracy": "unrestricted",
+      "residual": "375492999349286336989/7335190724649984"
+    },
+    {
+      "n": 5,
+      "case": 13,
+      "degeneracy": "unrestricted",
+      "residual": "42615266403750088546/515607849"
+    },
+    {
+      "n": 5,
+      "case": 14,
+      "degeneracy": "unrestricted",
+      "residual": "297115674982155691000000/194481"
+    },
+    {
+      "n": 5,
+      "case": 15,
+      "degeneracy": "unrestricted",
+      "residual": "74723163287916865399/31682725532816400000000000"
+    },
+    {
+      "n": 5,
+      "case": 16,
+      "degeneracy": "unrestricted",
+      "residual": "240496438578384661/11911961250000000000"
+    },
+    {
+      "n": 5,
+      "case": 17,
+      "degeneracy": "unrestricted",
+      "residual": "2568069391457008294187/87824507904000000"
+    },
+    {
+      "n": 5,
+      "case": 18,
+      "degeneracy": "unrestricted",
+      "residual": "1134671716361928790/1750329"
+    },
+    {
+      "n": 5,
+      "case": 19,
+      "degeneracy": "unrestricted",
+      "residual": "23143588630221561517110950000/795919132449"
+    },
+    {
+      "n": 5,
+      "case": 20,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 5,
+      "case": 21,
+      "degeneracy": "D=0",
+      "residual": "19557265004200/6321363049"
+    },
+    {
+      "n": 5,
+      "case": 22,
+      "degeneracy": "unrestricted",
+      "residual": "1442223755877063832/3767105332683"
+    },
+    {
+      "n": 5,
+      "case": 23,
+      "degeneracy": "unrestricted",
+      "residual": "7669593968131377500/4782969"
+    },
+    {
+      "n": 5,
+      "case": 24,
+      "degeneracy": "unrestricted",
+      "residual": "4172369169051317755210937500/9826162129"
+    },
+    {
+      "n": 5,
+      "case": 25,
+      "degeneracy": "unrestricted",
+      "residual": "75514515559849550417/1000376035344000000000000"
+    },
+    {
+      "n": 5,
+      "case": 26,
+      "degeneracy": "unrestricted",
+      "residual": "102280626235659541/4303400887296000000"
+    },
+    {
+      "n": 5,
+      "case": 27,
+      "degeneracy": "unrestricted",
+      "residual": "31757391856277/127060920000"
+    },
+    {
+      "n": 5,
+      "case": 28,
+      "degeneracy": "unrestricted",
+      "residual": "1669906328802654480623296/1255701777561"
+    },
+    {
+      "n": 5,
+      "case": 29,
+      "degeneracy": "unrestricted",
+      "residual": "4183004216554510709840000/28588707"
+    },
+    {
+      "n": 6,
+      "case": 0,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 6,
+      "case": 1,
+      "degeneracy": "D=0",
+      "residual": "1159443413800/4826809"
+    },
+    {
+      "n": 6,
+      "case": 2,
+      "degeneracy": "unrestricted",
+      "residual": "4187600089836551874083/5903156224000000"
+    },
+    {
+      "n": 6,
+      "case": 3,
+      "degeneracy": "unrestricted",
+      "residual": "3584716045216128887/5308416"
+    },
+    {
+      "n": 6,
+      "case": 4,
+      "degeneracy": "unrestricted",
+      "residual": "822045443329193920625583290000/5064403678929"
+    },
+    {
+      "n": 6,
+      "case": 5,
+      "degeneracy": "unrestricted",
+      "residual": "8429350111436112334756732993/502280711024400000000000000000000"
+    },
+    {
+      "n": 6,
+      "case": 6,
+      "degeneracy": "unrestricted",
+      "residual": "457794083813234051359393/186779552400000000000000"
+    },
+    {
+      "n": 6,
+      "case": 7,
+      "degeneracy": "unrestricted",
+      "residual": "133944566599935953661997/6000219266690250000"
+    },
+    {
+      "n": 6,
+      "case": 8,
+      "degeneracy": "unrestricted",
+      "residual": "264347081895191422444/53603825625"
+    },
+    {
+      "n": 6,
+      "case": 9,
+      "degeneracy": "unrestricted",
+      "residual": "32683279501761616102293361/343064484"
+    },
+    {
+      "n": 6,
+      "case": 10,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 6,
+      "case": 11,
+      "degeneracy": "D=0",
+      "residual": "2202120947246/85766121"
+    },
+    {
+      "n": 6,
+      "case": 12,
+      "degeneracy": "unrestricted",
+      "residual": "79795759556696/238239225"
+    },
+    {
+      "n": 6,
+      "case": 13,
+      "degeneracy": "unrestricted",
+      "residual": "1346542249490207120/10673289"
+    },
+    {
+      "n": 6,
+      "case": 14,
+      "degeneracy": "unrestricted",
+      "residual": "53466321259779544805108989760000/46501256787489"
+    },
+    {
+      "n": 6,
+      "case": 15,
+      "degeneracy": "unrestricted",
+      "residual": "165801931020377395566983/1225230300000000000000000000"
+    },
+    {
+      "n": 6,
+      "case": 16,
+      "degeneracy": "unrestricted",
+      "residual": "197371309735618699576549/157660912023890625000000"
+    },
+    {
+      "n": 6,
+      "case": 17,
+      "degeneracy": "unrestricted",
+      "residual": "58151040491075582177/201188279787138"
+    },
+    {
+      "n": 6,
+      "case": 18,
+      "degeneracy": "unrestricted",
+      "residual": "793630217646025/2916"
+    },
+    {
+      "n": 6,
+      "case": 19,
+      "degeneracy": "unrestricted",
+      "residual": "122778175910627621651805217187500/60660747827001"
+    },
+    {
+      "n": 6,
+      "case": 20,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 6,
+      "case": 21,
+      "degeneracy": "D=0",
+      "residual": "69163357480/4826809"
+    },
+    {
+      "n": 6,
+      "case": 22,
+      "degeneracy": "unrestricted",
+      "residual": "937512275307469/6353046000"
+    },
+    {
+      "n": 6,
+      "case": 23,
+      "degeneracy": "unrestricted",
+      "residual": "122900717855625822672768125/5064403678929"
+    },
+    {
+      "n": 6,
+      "case": 24,
+      "degeneracy": "unrestricted",
+      "residual": "159467795162122653565270975938125/24000877066761"
+    },
+    {
+      "n": 6,
+      "case": 25,
+      "degeneracy": "unrestricted",
+      "residual": "379676086405855192469815193/9500032596422088000000000000000"
+    },
+    {
+      "n": 6,
+      "case": 26,
+      "degeneracy": "unrestricted",
+      "residual": "14056458339024358793251/39240680548781250000000"
+    },
+    {
+      "n": 6,
+      "case": 27,
+      "degeneracy": "unrestricted",
+      "residual": "211476867434958559/209952000000"
+    },
+    {
+      "n": 6,
+      "case": 28,
+      "degeneracy": "unrestricted",
+      "residual": "574368780480378967873976/1255701777561"
+    },
+    {
+      "n": 6,
+      "case": 29,
+      "degeneracy": "unrestricted",
+      "residual": "10292748668389513214569907500/2449566181881"
+    },
+    {
+      "n": 7,
+      "case": 0,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 7,
+      "case": 1,
+      "degeneracy": "D=0",
+      "residual": "187590121687566/1838265625"
+    },
+    {
+      "n": 7,
+      "case": 2,
+      "degeneracy": "unrestricted",
+      "residual": "89320860443606203930335313/384014033068176000000"
+    },
+    {
+      "n": 7,
+      "case": 3,
+      "degeneracy": "unrestricted",
+      "residual": "3173874135900618117289244/24000877066761"
+    },
+    {
+      "n": 7,
+      "case": 4,
+      "degeneracy": "unrestricted",
+      "residual": "11109893256246132210992392250000/5064403678929"
+    },
+    {
+      "n": 7,
+      "case": 5,
+      "degeneracy": "unrestricted",
+      "residual": "15525934623007198669664602267/134125519858092000000000000000000"
+    },
+    {
+      "n": 7,
+      "case": 6,
+      "degeneracy": "unrestricted",
+      "residual": "46062353515306825548011/99352236931920000000000"
+    },
+    {
+      "n": 7,
+      "case": 7,
+      "degeneracy": "unrestricted",
+      "residual": "9945825373393146608076377153/16628144795626896000000"
+    },
+    {
+      "n": 7,
+      "case": 8,
+      "degeneracy": "unrestricted",
+      "residual": "485428937783732152020326305/703706118253488"
+    },
+    {
+      "n": 7,
+      "case": 9,
+      "degeneracy": "unrestricted",
+      "residual": "574189836109266287497734275600000/242354559843081"
+    },
+    {
+      "n": 7,
+      "case": 10,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 7,
+      "case": 11,
+      "degeneracy": "D=0",
+      "residual": "192754375/1024"
+    },
+    {
+      "n": 7,
+      "case": 12,
+      "degeneracy": "unrestricted",
+      "residual": "30362649807026/367653125"
+    },
+    {
+      "n": 7,
+      "case": 13,
+      "degeneracy": "unrestricted",
+      "residual": "807550151661972402717191/8782450790400"
+    },
+    {
+      "n": 7,
+      "case": 14,
+      "degeneracy": "unrestricted",
+      "residual": "4765752417814088426611488403750/22046095636929"
+    },
+    {
+      "n": 7,
+      "case": 15,
+      "degeneracy": "unrestricted",
+      "residual": "3234278863418970507087340159/9600350826704400000000000000000"
+    },
+    {
+      "n": 7,
+      "case": 16,
+      "degeneracy": "unrestricted",
+      "residual": "14398608056678536501/500188017672000000"
+    },
+    {
+      "n": 7,
+      "case": 17,
+      "degeneracy": "unrestricted",
+      "residual": "130395272842893929953/4269246912000000"
+    },
+    {
+      "n": 7,
+      "case": 18,
+      "degeneracy": "unrestricted",
+      "residual": "831626393304383650000/673246809"
+    },
+    {
+      "n": 7,
+      "case": 19,
+      "degeneracy": "unrestricted",
+      "residual": "19957360963069944390536271846250/3771753039621"
+    },
+    {
+      "n": 7,
+      "case": 20,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 7,
+      "case": 21,
+      "degeneracy": "D=0",
+      "residual": "16684051509/1882384"
+    },
+    {
+      "n": 7,
+      "case": 22,
+      "degeneracy": "unrestricted",
+      "residual": "1156436437358701688470921/362898693612000000"
+    },
+    {
+      "n": 7,
+      "case": 23,
+      "degeneracy": "unrestricted",
+      "residual": "244978750753382950/583443"
+    },
+    {
+      "n": 7,
+      "case": 24,
+      "degeneracy": "unrestricted",
+      "residual": "612602066526903948068639404375/166043210256"
+    },
+    {
+      "n": 7,
+      "case": 25,
+      "degeneracy": "unrestricted",
+      "residual": "37319847567457207274381/201014346093750000000000000"
+    },
+    {
+      "n": 7,
+      "case": 26,
+      "degeneracy": "unrestricted",
+      "residual": "1909594498299407344811/1372257936000000000000"
+    },
+    {
+      "n": 7,
+      "case": 27,
+      "degeneracy": "unrestricted",
+      "residual": "364564610507/12960000"
+    },
+    {
+      "n": 7,
+      "case": 28,
+      "degeneracy": "unrestricted",
+      "residual": "22450156151110/27"
+    },
+    {
+      "n": 7,
+      "case": 29,
+      "degeneracy": "unrestricted",
+      "residual": "9798574636565890752616802575/21956126976"
+    },
+    {
+      "n": 8,
+      "case": 0,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 8,
+      "case": 1,
+      "degeneracy": "D=0",
+      "residual": "10437902013252736/42180533641"
+    },
+    {
+      "n": 8,
+      "case": 2,
+      "degeneracy": "unrestricted",
+      "residual": "239128157150091534298153/67240638864000000"
+    },
+    {
+      "n": 8,
+      "case": 3,
+      "degeneracy": "unrestricted",
+      "residual": "856718743721187254080552661/4157036198906724"
+    },
+    {
+      "n": 8,
+      "case": 4,
+      "degeneracy": "unrestricted",
+      "residual": "29033765311633765932500/1750329"
+    },
+    {
+      "n": 8,
+      "case": 5,
+      "degeneracy": "unrestricted",
+      "residual": "108576307517613143820572629/22354253309682000000000000000000"
+    },
+    {
+      "n": 8,
+      "case": 6,
+      "degeneracy": "unrestricted",
+      "residual": "403518680393916679294440863/54138875855536080000000000"
+    },
+    {
+      "n": 8,
+      "case": 7,
+      "degeneracy": "unrestricted",
+      "residual": "1307430901566967162621/8782450790400000"
+    },
+    {
+      "n": 8,
+      "case": 8,
+      "degeneracy": "unrestricted",
+      "residual": "62453361825021424860926312/60660747827001"
+    },
+    {
+      "n": 8,
+      "case": 9,
+      "degeneracy": "unrestricted",
+      "residual": "1030724689136502215972015621875/1255701777561"
+    },
+    {
+      "n": 8,
+      "case": 10,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 8,
+      "case": 11,
+      "degeneracy": "D=0",
+      "residual": "102160310/729"
+    },
+    {
+      "n": 8,
+      "case": 12,
+      "degeneracy": "unrestricted",
+      "residual": "190654293756410551549981/2546941223836800000"
+    },
+    {
+      "n": 8,
+      "case": 13,
+      "degeneracy": "unrestricted",
+      "residual": "3578473148671501404608035/1614473714007"
+    },
+    {
+      "n": 8,
+      "case": 14,
+      "degeneracy": "unrestricted",
+      "residual": "2865092262819299166989528520625/7163272192041"
+    },
+    {
+      "n": 8,
+      "case": 15,
+      "degeneracy": "unrestricted",
+      "residual": "33610550109766548071208117949/519629524863340500000000000000000"
+    },
+    {
+      "n": 8,
+      "case": 16,
+      "degeneracy": "unrestricted",
+      "residual": "19352600067209305251869/77189508900000000000000"
+    },
+    {
+      "n": 8,
+      "case": 17,
+      "degeneracy": "unrestricted",
+      "residual": "52154217902877422686023811/63365451065632800000"
+    },
+    {
+      "n": 8,
+      "case": 18,
+      "degeneracy": "unrestricted",
+      "residual": "8226978854481821618920/37822859361"
+    },
+    {
+      "n": 8,
+      "case": 19,
+      "degeneracy": "unrestricted",
+      "residual": "43405585643699190789160422805000/22046095636929"
+    },
+    {
+      "n": 8,
+      "case": 20,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 8,
+      "case": 21,
+      "degeneracy": "D=0",
+      "residual": "4584145437895846/75418890625"
+    },
+    {
+      "n": 8,
+      "case": 22,
+      "degeneracy": "unrestricted",
+      "residual": "2928166881785123263730307257/430852550832144000000"
+    },
+    {
+      "n": 8,
+      "case": 23,
+      "degeneracy": "unrestricted",
+      "residual": "3263596678727559122293829/2449566181881"
+    },
+    {
+      "n": 8,
+      "case": 24,
+      "degeneracy": "unrestricted",
+      "residual": "115735207208466422997876923276/30241557801"
+    },
+    {
+      "n": 8,
+      "case": 25,
+      "degeneracy": "unrestricted",
+      "residual": "361297279145907935420103893/688940488654031250000000000000"
+    },
+    {
+      "n": 8,
+      "case": 26,
+      "degeneracy": "unrestricted",
+      "residual": "123335788297624420675503929/293217300240921000000000000"
+    },
+    {
+      "n": 8,
+      "case": 27,
+      "degeneracy": "unrestricted",
+      "residual": "89502994974481983743551/35021166075000000"
+    },
+    {
+      "n": 8,
+      "case": 28,
+      "degeneracy": "unrestricted",
+      "residual": "23734954057856741384196905/4093298395452"
+    },
+    {
+      "n": 8,
+      "case": 29,
+      "degeneracy": "unrestricted",
+      "residual": "271197900663670278595005278180000/410216697993249"
+    },
+    {
+      "n": 9,
+      "case": 0,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 9,
+      "case": 1,
+      "degeneracy": "D=0",
+      "residual": "71656"
+    },
+    {
+      "n": 9,
+      "case": 2,
+      "degeneracy": "unrestricted",
+      "residual": "695102170867174253026604107/670210971979248000000"
+    },
+    {
+      "n": 9,
+      "case": 3,
+      "degeneracy": "unrestricted",
+      "residual": "5586528700218439216/28588707"
+    },
+    {
+      "n": 9,
+      "case": 4,
+      "degeneracy": "unrestricted",
+      "residual": "222997055173735428528471758750/272174020209"
+    },
+    {
+      "n": 9,
+      "case": 5,
+      "degeneracy": "unrestricted",
+      "residual": "411720262160899675897477/7335190724649984000000000000"
+    },
+    {
+      "n": 9,
+      "case": 6,
+      "degeneracy": "unrestricted",
+      "residual": "9885167432367661841892487/1405192126464000000000000"
+    },
+    {
+      "n": 9,
+      "case": 7,
+      "degeneracy": "unrestricted",
+      "residual": "17757653355591410377980107/166281447956268960000"
+    },
+    {
+      "n": 9,
+      "case": 8,
+      "degeneracy": "unrestricted",
+      "residual": "183280288362141001553776004/311351615351343"
+    },
+    {
+      "n": 9,
+      "case": 9,
+      "degeneracy": "unrestricted",
+      "residual": "1086324511480103914010425931740000/216007893600849"
+    },
+    {
+      "n": 9,
+      "case": 10,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 9,
+      "case": 11,
+      "degeneracy": "D=0",
+      "residual": "1620935249184/4826809"
+    },
+    {
+      "n": 9,
+      "case": 12,
+      "degeneracy": "unrestricted",
+      "residual": "17508837689129886844354111/16000584711174000000"
+    },
+    {
+      "n": 9,
+      "case": 13,
+      "degeneracy": "unrestricted",
+      "residual": "8538710699506603640046625/22602631996098"
+    },
+    {
+      "n": 9,
+      "case": 14,
+      "degeneracy": "unrestricted",
+      "residual": "251638103280635684487536033057500/120028742912169"
+    },
+    {
+      "n": 9,
+      "case": 15,
+      "degeneracy": "unrestricted",
+      "residual": "88379664381754008764514930247/1172869200963684000000000000000000"
+    },
+    {
+      "n": 9,
+      "case": 16,
+      "degeneracy": "unrestricted",
+      "residual": "88968665445802809462940957/24000877066761000000000000"
+    },
+    {
+      "n": 9,
+      "case": 17,
+      "degeneracy": "unrestricted",
+      "residual": "11748609845990499431/1037232000000"
+    },
+    {
+      "n": 9,
+      "case": 18,
+      "degeneracy": "unrestricted",
+      "residual": "636447292630365362187620623/1438916737499136"
+    },
+    {
+      "n": 9,
+      "case": 19,
+      "degeneracy": "unrestricted",
+      "residual": "7406171258204026456090621999/4202539929"
+    },
+    {
+      "n": 9,
+      "case": 20,
+      "degeneracy": "b=0",
+      "residual": "0"
+    },
+    {
+      "n": 9,
+      "case": 21,
+      "degeneracy": "D=0",
+      "residual": "2581591845544/24137569"
+    },
+    {
+      "n": 9,
+      "case": 22,
+      "degeneracy": "unrestricted",
+      "residual": "36926313507294427597/27445158720000"
+    },
+    {
+      "n": 9,
+      "case": 23,
+      "degeneracy": "unrestricted",
+      "residual": "1153376168841918274122919969/242354559843081"
+    },
+    {
+      "n": 9,
+      "case": 24,
+      "degeneracy": "unrestricted",
+      "residual": "1815253206560853711645546800/4202539929"
+    },
+    {
+      "n": 9,
+      "case": 25,
+      "degeneracy": "unrestricted",
+      "residual": "19611020086747205198716433/1790818048010250000000000000000"
+    },
+    {
+      "n": 9,
+      "case": 26,
+      "degeneracy": "unrestricted",
+      "residual": "1311468738912456962813539/171532242000000000000000"
+    },
+    {
+      "n": 9,
+      "case": 27,
+      "degeneracy": "unrestricted",
+      "residual": "2730108758478542190369439/1340095640625000000"
+    },
+    {
+      "n": 9,
+      "case": 28,
+      "degeneracy": "unrestricted",
+      "residual": "55909429321514899916218443133/4185672591870000"
+    },
+    {
+      "n": 9,
+      "case": 29,
+      "degeneracy": "unrestricted",
+      "residual": "6852459342797453848706411015755000/676735948194201"
+    }
+  ],
+  "weighted_grid_tests": {
+    "2": {
+      "grid": [
+        "0",
+        "1/4",
+        "1/2",
+        "3/4",
+        "1"
+      ],
+      "matrices": 5,
+      "ell_range": [
+        1,
+        8
+      ],
+      "trace_tests": 40,
+      "minimum_density_to_baseline_ratio": "1"
+    },
+    "3": {
+      "grid": [
+        "0",
+        "1/4",
+        "1/2",
+        "3/4",
+        "1"
+      ],
+      "matrices": 125,
+      "ell_range": [
+        1,
+        6
+      ],
+      "trace_tests": 750,
+      "minimum_density_to_baseline_ratio": "1"
+    },
+    "4": {
+      "grid": [
+        "0",
+        "1/2",
+        "1"
+      ],
+      "matrices": 729,
+      "ell_range": [
+        1,
+        4
+      ],
+      "trace_tests": 2916,
+      "minimum_density_to_baseline_ratio": "1"
+    }
+  },
+  "direct_density_tests": [
+    {
+      "n": 2,
+      "ell": 3,
+      "vertex_maps": 4096,
+      "density": "8586369/34359738368"
+    },
+    {
+      "n": 3,
+      "ell": 2,
+      "vertex_maps": 6561,
+      "density": "5977/1492992"
+    },
+    {
+      "n": 4,
+      "ell": 1,
+      "vertex_maps": 256,
+      "density": "2151/32768"
+    }
+  ],
+  "sharpness_tests": [
+    {
+      "r": "1/2",
+      "ell": 1,
+      "excess": "1/72"
+    },
+    {
+      "r": "1/2",
+      "ell": 2,
+      "excess": "1/10368"
+    },
+    {
+      "r": "1/2",
+      "ell": 3,
+      "excess": "1/1492992"
+    },
+    {
+      "r": "1/2",
+      "ell": 4,
+      "excess": "1/214990848"
+    },
+    {
+      "r": "1/2",
+      "ell": 5,
+      "excess": "1/30958682112"
+    },
+    {
+      "r": "1/2",
+      "ell": 6,
+      "excess": "1/4458050224128"
+    },
+    {
+      "r": "1/2",
+      "ell": 7,
+      "excess": "1/641959232274432"
+    },
+    {
+      "r": "1/2",
+      "ell": 8,
+      "excess": "1/92442129447518208"
+    },
+    {
+      "r": "1/2",
+      "ell": 9,
+      "excess": "1/13311666640442621952"
+    },
+    {
+      "r": "1/2",
+      "ell": 10,
+      "excess": "1/1916879996223737561088"
+    },
+    {
+      "r": "1/2",
+      "ell": 11,
+      "excess": "1/276030719456218208796672"
+    },
+    {
+      "r": "1/2",
+      "ell": 12,
+      "excess": "1/39748423601695422066720768"
+    },
+    {
+      "r": "1/7",
+      "ell": 1,
+      "excess": "2/21609"
+    },
+    {
+      "r": "1/7",
+      "ell": 2,
+      "excess": "2/466948881"
+    },
+    {
+      "r": "1/7",
+      "ell": 3,
+      "excess": "2/10090298369529"
+    },
+    {
+      "r": "1/7",
+      "ell": 4,
+      "excess": "2/218041257467152161"
+    },
+    {
+      "r": "1/7",
+      "ell": 5,
+      "excess": "2/4711653532607691047049"
+    },
+    {
+      "r": "1/7",
+      "ell": 6,
+      "excess": "2/101814121186119595835681841"
+    },
+    {
+      "r": "1/7",
+      "ell": 7,
+      "excess": "2/2200101344710858346413248902169"
+    },
+    {
+      "r": "1/7",
+      "ell": 8,
+      "excess": "2/47541989957856938007643895526969921"
+    },
+    {
+      "r": "1/7",
+      "ell": 9,
+      "excess": "2/1027334860999330573407176938442293022889"
+    },
+    {
+      "r": "1/7",
+      "ell": 10,
+      "excess": "2/22199679011334534360755686462799509931608401"
+    },
+    {
+      "r": "1/7",
+      "ell": 11,
+      "excess": "2/479712863755927953001569628774634610112125937209"
+    },
+    {
+      "r": "1/7",
+      "ell": 12,
+      "excess": "2/10366115272901847136410918108191079289912929377149281"
+    },
+    {
+      "r": "1/31",
+      "ell": 1,
+      "excess": "2/8311689"
+    },
+    {
+      "r": "1/31",
+      "ell": 2,
+      "excess": "2/69084174032721"
+    },
+    {
+      "r": "1/31",
+      "ell": 3,
+      "excess": "2/574206169381852775769"
+    },
+    {
+      "r": "1/31",
+      "ell": 4,
+      "excess": "2/4772623101783282515978663841"
+    },
+    {
+      "r": "1/31",
+      "ell": 5,
+      "excess": "2/39668558936237989671952184481937449"
+    },
+    {
+      "r": "1/31",
+      "ell": 6,
+      "excess": "2/329712724956181000138478580284490193541361"
+    },
+    {
+      "r": "1/31",
+      "ell": 7,
+      "excess": "2/2740469629178315100859990892486214012265601268729"
+    },
+    {
+      "r": "1/31",
+      "ell": 8,
+      "excess": "2/22777931271675480662351876841177847657393863143680873281"
+    },
+    {
+      "r": "1/31",
+      "ell": 9,
+      "excess": "2/189323080793541104190982808870172663417636340958837733960081609"
+    },
+    {
+      "r": "1/31",
+      "ell": 10,
+      "excess": "2/1573594568077786866752045711675316554629070381147821046140936748627601"
+    },
+    {
+      "r": "1/31",
+      "ell": 11,
+      "excess": "2/13079228661951892244727444069228900178628343367212151563178116423263796328089"
+    },
+    {
+      "r": "1/31",
+      "ell": 12,
+      "excess": "2/108710480998030261299686404868325088096803236653480200814000355315961040038417732321"
+    },
+    {
+      "r": "1/101",
+      "ell": 1,
+      "excess": "2/936543609"
+    },
+    {
+      "r": "1/101",
+      "ell": 2,
+      "excess": "2/877113931558744881"
+    },
+    {
+      "r": "1/101",
+      "ell": 3,
+      "excess": "2/821455446966205926362015529"
+    },
+    {
+      "r": "1/101",
+      "ell": 4,
+      "excess": "2/769328848934438599312270264043704161"
+    },
+    {
+      "r": "1/101",
+      "ell": 5,
+      "excess": "2/720510016688874930188818511070873628671257049"
+    },
+    {
+      "r": "1/101",
+      "ell": 6,
+      "excess": "2/674789051350449157268659139804322442978704951237149841"
+    },
+    {
+      "r": "1/101",
+      "ell": 7,
+      "excess": "2/631969373465435977519398613383175694546973045177809326963916169"
+    },
+    {
+      "r": "1/101",
+      "ell": 8,
+      "excess": "2/591866877802788247144460444887475064852103755756545593788647061688713921"
+    },
+    {
+      "r": "1/101",
+      "ell": 9,
+      "excess": "2/554309141784985295243456929412661496134098302658689735779867502381193770141880889"
+    },
+    {
+      "r": "1/101",
+      "ell": 10,
+      "excess": "2/519134684149002830419237686308192247884767972332743580358533540221899307216993569832188401"
+    },
+    {
+      "r": "1/101",
+      "ell": 11,
+      "excess": "2/486192270649982204552047845763884254099823212936119821620562515706964238015602904020431249440479209"
+    },
+    {
+      "r": "1/101",
+      "ell": 12,
+      "excess": "2/455340263822439109636951117812383521192921478105169144196957847070319473905067742042175292087365629086325281"
+    }
+  ],
+  "failures": [],
+  "elapsed_seconds": 1.131,
+  "utc": "2026-11-01T02:37:09.734541+00:00",
+  "source_sha256": "d0dbd81f856b64b6fc49f3e0a0d9242427573bf2460ba28a4f3c1beb93ed635d"
+}

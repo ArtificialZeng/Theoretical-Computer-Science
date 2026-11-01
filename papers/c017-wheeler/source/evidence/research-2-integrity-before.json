@@ -1,0 +1,7 @@
+{
+  "job_id": "c017-wheeler-research-98a17f8eb2fd",
+  "old_snapshot_digest": "aaa91b59e8425f6cb4943fc3132e3ef9680e93dbb77aad8bca7bfce55d898516",
+  "old_packet_files": 13,
+  "all_unchanged_before_pass2": true,
+  "old_acceptance_scope": "Membership only; no acceptance of the proposed realizability consequence."
+}

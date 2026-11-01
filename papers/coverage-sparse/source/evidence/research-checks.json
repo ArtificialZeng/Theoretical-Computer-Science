@@ -1,0 +1,265 @@
+{
+  "job_id": "coverage-sparse-research-6239617d8b3f",
+  "arithmetic": "fractions.Fraction (exact)",
+  "local_and_line": {
+    "local_k_range": [
+      2,
+      120
+    ],
+    "local_a_range": "0..k",
+    "local_cases": 7378,
+    "supporting_line_t_range": "0..12k",
+    "supporting_line_cases": 87227
+  },
+  "occupancy_dual": {
+    "k_range": [
+      2,
+      10
+    ],
+    "m_range": [
+      1,
+      6
+    ],
+    "sorted_occupancy_profiles_checked": 31779,
+    "ordered_vectors_covered_by_permutation_symmetry": 4176612,
+    "symmetry_reason": "objective, T, C, and dual are block-permutation invariant"
+  },
+  "resampling": {
+    "seed": 6239617,
+    "k_range": [
+      1,
+      4
+    ],
+    "n": "k+2",
+    "laws_checked": 40,
+    "feature_inequalities_checked": 1200,
+    "individual_edge_equalities_checked": 250,
+    "law_coverage": "3 boundary/structured and 7 fixed-seed rational laws for each k"
+  },
+  "one_sided_error_attacks": {
+    "scope": "finite explicit matching laws, not a new general optimization claim",
+    "m_range": [
+      1,
+      7
+    ],
+    "cases": [
+      {
+        "m": 1,
+        "delta": "0",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 1,
+        "delta": "1/3",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 1,
+        "delta": "1",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 1,
+        "delta": "2",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 2,
+        "delta": "0",
+        "explicit_feasible_value": "7/8"
+      },
+      {
+        "m": 2,
+        "delta": "1/3",
+        "explicit_feasible_value": "11/12"
+      },
+      {
+        "m": 2,
+        "delta": "1",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 2,
+        "delta": "2",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 2,
+        "delta": "3",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 3,
+        "delta": "0",
+        "explicit_feasible_value": "5/6"
+      },
+      {
+        "m": 3,
+        "delta": "1/3",
+        "explicit_feasible_value": "31/36"
+      },
+      {
+        "m": 3,
+        "delta": "1",
+        "explicit_feasible_value": "11/12"
+      },
+      {
+        "m": 3,
+        "delta": "2",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 3,
+        "delta": "3",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 3,
+        "delta": "4",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 4,
+        "delta": "0",
+        "explicit_feasible_value": "13/16"
+      },
+      {
+        "m": 4,
+        "delta": "1/3",
+        "explicit_feasible_value": "5/6"
+      },
+      {
+        "m": 4,
+        "delta": "1",
+        "explicit_feasible_value": "7/8"
+      },
+      {
+        "m": 4,
+        "delta": "2",
+        "explicit_feasible_value": "15/16"
+      },
+      {
+        "m": 4,
+        "delta": "3",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 4,
+        "delta": "4",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 4,
+        "delta": "5",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 5,
+        "delta": "0",
+        "explicit_feasible_value": "4/5"
+      },
+      {
+        "m": 5,
+        "delta": "1/3",
+        "explicit_feasible_value": "49/60"
+      },
+      {
+        "m": 5,
+        "delta": "1",
+        "explicit_feasible_value": "17/20"
+      },
+      {
+        "m": 5,
+        "delta": "2",
+        "explicit_feasible_value": "9/10"
+      },
+      {
+        "m": 5,
+        "delta": "4",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 5,
+        "delta": "5",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 5,
+        "delta": "6",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 6,
+        "delta": "0",
+        "explicit_feasible_value": "19/24"
+      },
+      {
+        "m": 6,
+        "delta": "1/3",
+        "explicit_feasible_value": "29/36"
+      },
+      {
+        "m": 6,
+        "delta": "1",
+        "explicit_feasible_value": "5/6"
+      },
+      {
+        "m": 6,
+        "delta": "2",
+        "explicit_feasible_value": "7/8"
+      },
+      {
+        "m": 6,
+        "delta": "5",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 6,
+        "delta": "6",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 6,
+        "delta": "7",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 7,
+        "delta": "0",
+        "explicit_feasible_value": "11/14"
+      },
+      {
+        "m": 7,
+        "delta": "1/3",
+        "explicit_feasible_value": "67/84"
+      },
+      {
+        "m": 7,
+        "delta": "1",
+        "explicit_feasible_value": "23/28"
+      },
+      {
+        "m": 7,
+        "delta": "2",
+        "explicit_feasible_value": "6/7"
+      },
+      {
+        "m": 7,
+        "delta": "6",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 7,
+        "delta": "7",
+        "explicit_feasible_value": "1"
+      },
+      {
+        "m": 7,
+        "delta": "8",
+        "explicit_feasible_value": "1"
+      }
+    ]
+  },
+  "source_sha256": "eb7061a17cead0bc8cc0e4426f3f8260ac3137dd23b6f4813d8f4952b00ec731",
+  "scope": "Only finite checks as specified; infinite theorem relies on analytic proof."
+}

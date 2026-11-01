@@ -1,0 +1,625 @@
+\documentclass[acmsmall,screen,nonacm,11pt]{acmart}
+\geometry{letterpaper,margin=1in,headheight=14pt,heightrounded=false}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\setcopyright{none}
+\renewcommand{\bibfont}{\normalfont\normalsize}
+\renewcommand{\shortauthors}{Zijian Zeng}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\co}{\mathrel{<_{\mathrm{co}}}}
+\newcommand{\cole}{\mathrel{\leq_{\mathrm{co}}}}
+\newcommand{\rev}{\operatorname{rev}}
+\newcommand{\lcp}{\operatorname{lcp}}
+\newcommand{\dom}{\operatorname{dom}}
+\newcommand{\Pref}{\operatorname{Pref}}
+\newcommand{\Rep}{\operatorname{Rep}}
+\newcommand{\out}{\operatorname{out}}
+\newcommand{\sgnset}{\{+,-\}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\title{Deciding Membership and Realizability for Wheeler Transducers}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\city{Kuala Lumpur}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\begin{abstract}
+\normalsize
+Wheeler transducers combine a total colexicographic order on reaching
+languages with a finite convex piecewise monotonicity condition on accumulated
+output. The number of monotone pieces is unspecified. We give a deterministic
+polynomial-time membership algorithm for finite trimmed deterministic
+subsequential transducers, allowing partial transitions and erasing outputs.
+This resolves the membership question for the piecewise definition of
+D'Agostino and Paradiso.
+
+The structural criterion distinguishes two forms of recurrence. In a branching
+strongly connected component, a strict output turn can be replicated in
+disjoint input intervals, so finite piecewise monotonicity requires global
+monotonicity. A simple cycle instead has two sides approaching a central cut;
+each side is monotone exactly when two adjacent levels are monotone. These
+conditions reduce membership to finitely many comparisons of independent
+regular output ranges. A direct implementation takes $O(S^{13})$ bit
+operations for explicit encoding size $S$; this bound is conservative.
+Every output failure after input-order success has a common-loop pumped
+certificate of disjoint strict turns, with a total computable template bound.
+
+As a consequence, equivalent Wheeler realizability is decidable and a
+realization can be constructed on positive instances. This uses classical
+prefix normalization and residual merging, an effective automatic convex
+quotient, and the membership algorithm. No complexity or minimality claim is
+made for the realization construction.
+\end{abstract}
+\begin{document}
+\maketitle
+\pagestyle{plain}
+\newpage
+
+\section{The decision problems and the contribution}
+
+A subsequential transducer reads its input deterministically, emits a finite
+word on each transition, and may append a terminal word. D'Agostino and
+Paradiso define a Wheeler transducer by requiring both a total colexicographic
+order on its reaching languages and finite piecewise monotonicity of its
+accumulated output on each such language~\cite{DP26,DP26short}.
+Their current definition permits a different finite number of convex pieces
+at each state, with either orientation on each piece. Section~4 of both
+versions asks whether membership is decidable and whether an equivalent
+Wheeler realization can be found. The issue is effective control of an
+unbounded partition, rather than recognition for a prescribed number of pieces.
+
+Our principal contribution is an exact criterion on strongly connected
+components (SCCs). After checking input order, global output monotonicity is
+decidable by propagating local violations. Branching cyclic SCCs must satisfy
+this global condition. A simple cycle permits a different phenomenon: two
+monotone sides can meet at an unrealized cut, even with infinitely many turns
+crossing that cut. We characterize its two sides by adjacent-level tests.
+Acyclic states then inherit finite partitions. All tests use finite automata
+for independent output ranges; no arbitrary intersection of rational
+relations is required. This supplies an algorithm, a polynomial bound, and
+effective obstructions for the original unrestricted membership problem.
+
+For context, Wheeler \emph{language} recognition from a DFA already has an
+$O(mn)$ algorithm~\cite{Becker23}. That problem does not test accumulated
+output. Prefix normalization and minimization are classical~\cite{BC00},
+as are effective first-order queries and representatives in automatic
+structures~\cite{Blum99,BG00}. We use these as established tools for the
+realizability consequence. The statewise residual-prefix identity used there
+is already recorded in Remark~3 of~\cite{DP26}. The independent structural
+step here is the SCC criterion for finite convex output partitions.
+
+\subsection{Model and statements}
+
+Both finite alphabets $\Sigma,\Gamma$ have specified total orders. For words,
+$u\co v$ means $\rev(u)<_{\mathrm{lex}}\rev(v)$, with a proper prefix smaller
+in lexicographic order. Thus a proper suffix is smaller in colexicographic
+order. A set is convex relative to an ordered domain if it contains every
+domain element between two of its elements. A function is \emph{piecewise
+monotone} if its domain has a finite partition into nonempty convex sets on
+each of which it is weakly increasing or weakly decreasing.
+
+Let $T=(Q,s,\Sigma,\Gamma,\delta,\omega,F,t)$ be finite and trimmed:
+every state is accessible and can reach a final state. The deterministic
+transition function $\delta$ is partial; $\omega$ has the same domain and
+takes values in $\Gamma^*$, including $\eps$. There is no initial output.
+For a defined path, write $A(u)=\omega(s,u)$ and
+\[
+ I_q=\{u:\delta(s,u)=q\},\qquad D=\bigcup_{q\in Q}I_q.
+\]
+On accepted inputs the partial function is $f(u)=A(u)t(\delta(s,u))$.
+Trimming gives $D=\Pref(\dom f)$. A nonempty trimmed instance has a
+nonempty accepted domain. An encoding admitting an empty function can handle
+that degenerate case separately.
+
+We use precisely the literal reaching-language definition in
+Definitions~4--5 of~\cite{DP26}: distinct states must satisfy either
+$I_p<I_q$ or $I_q<I_p$, where $X<Y$ abbreviates
+$\forall x\in X\,\forall y\in Y\;(x\co y)$; and $A|_{I_q}$ must be
+piecewise monotone for every $q$. No additional input-consistency or
+initial-indegree convention is imposed. Membership tests accumulated
+transition output $A$, not the terminal-output function $f$.
+
+\begin{theorem}\label{thm:member}
+Membership in this class is decidable in $O(S^{13})$ bit operations, where
+$S\geq2$ is the total explicit encoding size, counting states, transitions,
+ordered alphabet descriptions, and all output characters. Partial
+transitions, erasure, and arbitrary terminal words are allowed.
+\end{theorem}
+
+\begin{theorem}\label{thm:realize}
+Given such a transducer, it is decidable whether an equivalent finite Wheeler
+transducer over the same ordered alphabets exists. On a positive instance one
+can construct one, without introducing an initial output. No polynomial bound
+or minimality assertion is made for this construction.
+\end{theorem}
+
+Section~\ref{sec:cert} proves the additional pumped-certificate assertion.
+All arguments below apply to infinite reaching languages. Finite controls
+described at the end supplement the proofs rather than establishing them.
+
+\section{Convex blocks and exact global monotonicity}\label{sec:blocks}
+
+We first check whether all reaching languages are pairwise separated. They
+are regular. Reverse their automata and use the regular-language comparison
+test below to decide each of the two possible universal strict orders.
+Reject a pair for which neither holds. Otherwise the induced state relation
+is a strict total order: transitivity follows directly from the universal
+definition and nonemptiness. Each $I_q$ is then convex in $D$, since an
+intervening word in another state would contradict separation.
+
+\begin{lemma}[Recursive blocks]\label{lem:blocks}
+Assume input order passes. The immediate ordered disjoint blocks of $I_q$
+are $\{\eps\}$ if $q=s$, followed by all $I_p a$ with $\delta(p,a)=q$,
+sorted first by $a$ and then by the order of $p$. Each is convex in $I_q$.
+More generally, if $\delta(p,z)=q$, then $I_pz$ is convex in $I_q$, and
+\begin{equation}\label{eq:transport}
+ A(uz)=A(u)\omega(p,z)\quad(u\in I_p).
+\end{equation}
+Common right concatenation preserves and reflects every colex comparison.
+\end{lemma}
+\begin{proof}
+Every nonempty word has a unique last transition. Different last letters
+determine their colex order, and a common last letter cancels, leaving the
+separated predecessor languages. The empty word is least. This proves the
+immediate decomposition and convexity. Iterating it proves the assertion for
+$z$; the output identity follows from the path definition. Finally, reversal
+turns a common right suffix into a common left prefix, which cancels in lex
+order. This also holds for an empty suffix and proper-suffix comparisons.
+\end{proof}
+
+Let $O_p=\{A(u):u\in I_p\}$. This is an effective regular language: start
+at $s$, accept at $p$, forget input labels, and read each transition's output
+word, subdividing word edges and retaining epsilon edges. A block $I_pz$
+has output range $O_p\omega(p,z)$. Singleton blocks have singleton ranges.
+These ranges can be used independently when the input blocks are distinct
+and already ordered; no relation between their chosen words is required.
+
+\begin{lemma}[Regular range comparison]\label{lem:range}
+For two epsilon-NFAs one can decide whether some accepted words $x,y$
+satisfy $x<_{\mathrm{lex}}y$, $x>_{\mathrm{lex}}y$, or $x=y$, in polynomial
+time. The same holds in colex order and for universal weak or strict order.
+\end{lemma}
+\begin{proof}
+Compute epsilon closures. Synchronize both automata on equal symbols until
+the first mismatch. A strict inequality is possible exactly when a reachable
+product state either permits two suitably ordered distinct next symbols
+with accepting continuations on both sides, or permits acceptance on the
+shorter side and a positive-length accepted continuation on the other.
+All these predicates are finite reachability tests. Equality uses simultaneous
+acceptance after a common word. Reversing automata gives colex comparison.
+Universal weak order excludes the opposite strict comparison; universal
+strict order excludes both the opposite comparison and equality.
+\end{proof}
+
+For $e\in\sgnset$, orientation $+$ means weakly increasing and $-$ weakly
+decreasing. Let $S_e$ be the states with a violating pair from two distinct
+immediate blocks in their prescribed order. Lemma~\ref{lem:range} decides
+these seeds. Let $B_e$ contain all states reachable in the input graph from
+$S_e$, including seeds, and put $G_e(q)\iff q\notin B_e$.
+
+\begin{lemma}\label{lem:global}
+$G_e(q)$ holds exactly when $A|_{I_q}$ has global orientation $e$.
+\end{lemma}
+\begin{proof}
+A seed violation propagates along every defined path by
+\eqref{eq:transport}. Conversely, take a violating pair at $q$. If its words
+are in different immediate blocks, $q$ is a seed. Otherwise they lie in one
+$I_pa$; neither can be the singleton epsilon block. Delete the common last
+letter. The pair remains strictly violating at $p$. Repetition terminates
+because the sum of lengths decreases, reaching a seed. The removed letters
+give a path from that seed to $q$.
+\end{proof}
+
+Write $M(q)=G_+(q)\lor G_-(q)$. We will also use two elementary order facts.
+First, a map between total orders is globally monotone in some orientation
+exactly when it has no strict peak or valley triple. Indeed, if a rising and
+a falling pair exist, sort their at most four arguments. Delete consecutive
+equal values. The successive strict signs include both orientations, so a
+sign change gives a strict turn. Second, infinitely many strictly separated
+closed strict-turn intervals preclude every finite convex monotone
+partition: each interval must cross a piece boundary, and a boundary can
+split at most one interval in such a family. Both increasing and decreasing
+families of intervals are covered.
+
+\section{The SCC criterion}\label{sec:scc}
+
+SCCs refer to the ordinary input graph, counting distinct labeled edges.
+A cyclic SCC is \emph{simple} if its internal graph is a directed simple
+cycle, including a single self-loop. A loop-free singleton is acyclic.
+
+\subsection{Branching recurrence}
+
+\begin{lemma}\label{lem:branch}
+In a cyclic nonsimple SCC, finite piecewise monotonicity at every state is
+equivalent to $M(q)$ at every state.
+\end{lemma}
+\begin{proof}
+Sufficiency is immediate. For necessity, a nonsimple strongly connected
+component has a vertex $r$ with two internal outgoing edges. Determinism
+makes their input letters distinct. Completing return paths gives nonempty
+loops $u,v$ at $r$ with distinct first letters, hence $uv\ne vu$.
+The infinite words $\rev(u)^\omega$ and $\rev(v)^\omega$ must differ:
+if equal to $w$, the two periods imply that both
+$\rev(u)\rev(v)$ and $\rev(v)\rev(u)$ are the same-length prefix of $w$.
+Effectively choose $k$ large enough that $A_0=u^k$ and $B_0=v^k$ have a
+mismatch in reversal before either ends. They are suffix-incomparable.
+
+If some $q$ in the component fails $M(q)$, it has a strict turn. Appending
+a path from $q$ to $r$ transports that turn to words
+$\alpha_1\co\alpha_2\co\alpha_3$ reaching $r$. For $n\geq0$ set
+\begin{equation}\label{eq:branchpump}
+ U_i(n)=\alpha_i A_0B_0^n\quad(1\leq i\leq3).
+\end{equation}
+The outputs retain the same strict turn by common suffix cancellation.
+The suffix cylinders of $A_0B_0^n$ are strictly separated in a fixed direction.
+For consecutive indices, cancel the common reversed $B_0^n$; the comparison
+then encounters the fixed mismatch between $\rev(A_0)$ and $\rev(B_0)$,
+before any prefix $\alpha_i$ can matter. Thus either every interval precedes
+the next, or every interval follows it. The order fact above rules out a
+finite partition at $r$, proving necessity for the component property.
+\end{proof}
+
+\subsection{Simple cycles and their two sides}
+
+Let $C$ be a simple cyclic SCC. Choose $q\in C$, let $c$ be the nonempty
+input word for one full traversal from $q$ to itself, and put
+$b=\omega(q,c)$. Expand the unique internal predecessor block repeatedly
+for $|C|$ steps in Lemma~\ref{lem:blocks}. Retain that child and list all
+other children to its left or right. This yields
+\begin{equation}\label{eq:shell}
+ I_q=L\;\dot\cup\;I_qc\;\dot\cup\;R,\qquad L<I_qc<R.
+\end{equation}
+Each side is a finite ordered list of singleton words arising from $s$, or
+blocks $I_pz$ with $p\notin C$ and $z$ an explicit entering path of length
+at most $|C|$. There is only one internal predecessor at every step; this
+is why the construction stops after one traversal. Either side may be empty.
+
+Put $L_n=Lc^n$ and $R_n=Rc^n$. Iteration of~\eqref{eq:shell} gives
+\begin{equation}\label{eq:levels}
+ I_q=\Bigl(\dot\bigcup_{n\geq0}L_n\Bigr)
+       \;\dot\cup\;
+       \Bigl(\dot\bigcup_{n\geq0}R_n\Bigr).
+\end{equation}
+There is no leftover finite word: membership in every $I_qc^n$ would require
+length at least $n|c|$ for all $n$. The $L_n$ increase in the order, the
+$R_n$ decrease, every left level precedes every right level, and each level
+and each whole side is convex in $I_q$.
+
+\begin{lemma}[Two-side test]\label{lem:cycle}
+$A|_{I_q}$ is piecewise monotone if and only if each restriction
+\begin{equation}\label{eq:adjacent}
+ A|_{L\cup Lc}\quad\hbox{and}\quad A|_{Rc\cup R}
+\end{equation}
+is globally weakly monotone, with directions chosen independently.
+If this holds, two pieces suffice at $q$.
+\end{lemma}
+\begin{proof}
+If one restriction fails both orientations, it has a strict turn
+$v_1\co v_2\co v_3$. Appending $c^{2n}$ places its three points on levels
+$2n$ and/or $2n+1$ of the same side. Consecutive pairs of levels are strictly
+separated, increasingly on the left and decreasingly on the right.
+The strict output turn persists after appending $b^{2n}$, including when
+$b=\eps$. Infinitely many separated turn intervals contradict any finite
+partition.
+
+Conversely, if the left restriction has orientation $e$, appending $c^n$
+proves the same orientation on $L_n\cup L_{n+1}$ for every $n$. If $L$ is
+nonempty, all its levels are nonempty. For points on nonadjacent levels,
+insert one point in each intervening level and apply transitivity of the
+weak output order. Hence the whole left side has orientation $e$. An empty
+side needs no piece. The identical argument in decreasing level order
+applies on the right, using its independently chosen orientation. The two
+convex sides in~\eqref{eq:levels} give the asserted partition.
+\end{proof}
+
+The test is effective. Expand~\eqref{eq:adjacent} into its finite ordered
+lists, appending $c$ to paths for the second copies. Orientation $e$ holds
+on such a list exactly when every nonsingleton block $I_pz$ has $G_e(p)$,
+and every earlier/later pair of blocks has output ranges in weak order $e$.
+Lemma~\ref{lem:blocks} checks the within-block condition exactly; the
+independent ranges and Lemma~\ref{lem:range} check all cross-block pairs.
+Thus arbitrary regular prefix-output ranges are retained, without a depth
+bound or a bounded-expression assumption. All states of $C$ inherit finite
+partitions from $q$: append a path from the chosen state to $q$, restrict
+the partition there, and use suffix cancellation. The preimages are convex.
+
+The separation of the sides is essential. Consider the three-state machine
+with transitions $s\xrightarrow{0/\eps}p$,
+$s\xrightarrow{1/\eps}r$, $r\xrightarrow{0/\eps}p$,
+$p\xrightarrow{0/0}p$, sole final state $p$, and empty terminal output.
+Here $I_p=0^+\cup10^+$; $A(0^m)=A(10^m)=0^{m-1}$.
+Its first part increases and its second decreases in colex. Infinitely many
+peak triples $0^{n+1},0^{n+2},10^{n+1}$, for $n\geq0$, cross the same
+central cut, but the map has two pieces. A cyclic turn alone is therefore
+not a nonmembership certificate. Lemma~\ref{lem:cycle} detects precisely
+the turns that can recur in disjoint levels.
+
+\subsection{Algorithm and proof of Theorem~\ref{thm:member}}
+
+Check input order, compute regular ranges and the two global flags, and
+compute SCCs. Require $M(q)$ at every state in each branching cyclic SCC.
+At one representative of each simple cyclic SCC require the two-side test.
+Reject on a failed requirement, and otherwise accept. Every rejection is
+sound by the preceding lemmas. Every passing cyclic SCC has finite partitions
+at all its states. The remaining components are loop-free singletons.
+In a topological order, their immediate blocks inherit the finite partitions
+of predecessor states, transported by their last transitions. Concatenating
+these partitions, with the initial singleton if present, gives a finite
+convex monotone partition. This proves sufficiency at every state.
+All constructions terminate; terminal words are unused. Empty input or
+output alphabets and the epsilon-only domain obey the same finite tests.
+
+For completeness, a loose explicit resource bound follows. Write
+$n=|Q|\leq S$, $m\leq S$ for the edge count, and $M\leq S$ for the maximum
+edge-output length. The range NFAs have $O(S)$ states and edges. There are
+at most $m+1$ immediate blocks over all states. In one annular expansion per
+simple SCC, each external incoming edge occurs once, and the initial
+singleton occurs at most once overall. The doubled annular lists therefore
+have $O(S)$ blocks in total. Appended paths have length at most $2n$ and
+output length at most $2nM$. Every compared output NFA has size $O(S^2)$,
+and there are $O(S^2)$ comparisons; input-order tests use $O(n^2)$ pairs of
+$O(S)$-size input automata.
+
+With $K$ states and edges, straightforward epsilon elimination costs at
+most $O((|\Gamma|+1)K^4)$ operations. Enumerating synchronized transitions,
+live unequal-symbol transitions, and prefix cases in a product comparison
+costs at most $O((|\Gamma|+1)^2K^4)$. For $K=O(S^2)$ this is $O(S^{10})$
+per comparison, hence $O(S^{12})$ operations overall. Allowing $S$ bit
+operations per explicitly encoded symbol or index comparison gives
+$O(S^{13})$ bit operations. This deliberately conservative bound concerns
+membership only and proves Theorem~\ref{thm:member}.
+
+\section{Effective pumped failure certificates}\label{sec:cert}
+
+\begin{corollary}\label{cor:pump}
+For every input-ordered nonmember, some state has words
+$U_i(n)=x_i y_i^n z_i$, $1\leq i\leq3$, such that for every $n\geq0$:
+all three reach that state, $U_1(n)\co U_2(n)\co U_3(n)$, their outputs
+form a strict peak for every $n$ or a strict valley for every $n$, and either
+\[
+ U_3(n)\co U_1(n+1)\ \text{for all }n,
+ \quad\text{or}\quad U_3(n+1)\co U_1(n)\ \text{for all }n.
+\]
+The three pumps can be chosen equal. There is a total computable bound
+$B(T)$ on the lengths of the nine template words needed for a certificate.
+\end{corollary}
+\begin{proof}
+Every output rejection occurs in a branching or simple cyclic SCC.
+Equation~\eqref{eq:branchpump} gives $x_i=\alpha_iA_0$, common $y_i=B_0$,
+and $z_i=\eps$. The failed side in Lemma~\ref{lem:cycle} gives $x_i=v_i$,
+common $y_i=c^2$, and $z_i=\eps$. The proofs supply all universal
+inequalities, in either interval direction. Conversely any such certificate
+precludes a finite partition by separated turn intervals.
+
+Run the membership algorithm first. On a rejection after input order,
+enumerate a finite strict-turn witness in the indicated state or regular
+two-level restriction; existence was proved, so this terminates. In the
+branching case the finite-power mismatch search also terminates. Output
+the maximum template length as $B(T)$. Set $B(T)=0$ on acceptance,
+input-order failure, or a malformed or nontrimmed description. These cases
+are decidable, so $B$ is total. No numerical complexity bound for $B$ or
+the witness enumeration follows from the membership runtime.
+\end{proof}
+
+Validity of a fixed template is itself decidable, independently of that
+construction. For each fixed $x_i,y_i,z_i$, finite orbit decomposition of
+the state action of $y_i$ gives a transient and a common period. On each
+residue, defined runs and their outputs have the form $P Q^t R$ with fixed
+words, allowing $Q=\eps$. A position has a given character precisely when
+it lies in a fixed prefix or suffix, or in the repeated block with its
+offset in a fixed residue modulo $|Q|$. All lengths are affine in $t$;
+when $Q=\eps$ omit that block rather than taking a zero modulus.
+Strict lex comparison is a first differing position with equality before
+it, or a proper-prefix comparison. Thus input/output comparisons, with
+reversal for colex, are Presburger formulas using only constant
+coefficients and moduli. Finite transient checks and Presburger
+decidability verify every $n$, including consecutive-index separation.
+There is no multiplication of variables and no claim that a Presburger
+solver was executed. The polynomial membership algorithm does not use it.
+
+\section{Deciding equivalent realizability}\label{sec:realize}
+
+We prove Theorem~\ref{thm:realize}. The input here need not satisfy input
+order. Its partial function $f$ and prefix domain $D$ are fixed. The
+construction must merge redundant residuals \emph{before} taking convex
+components: otherwise a redundant unary parity coloring of a constant
+function would create a false obstruction.
+
+\subsection{Normalization and canonical colors}
+
+Let $O_p(v)$ be the accepted continuation output from $p$, including its
+terminal word, and let
+$\lambda_p=\lcp\{O_p(v):v\in\dom O_p\}$.
+Coaccessibility makes this range nonempty. Its output language is regular.
+Find one accepted output $y$ and, among the finitely many prefixes of $y$,
+choose the longest $z$ for which the entire range is contained in
+$z\Gamma^*$. Regular inclusion decides these tests and computes $\lambda_p$.
+For a transition $p\xrightarrow{a/w}r$, $\lambda_p$ is a prefix of
+$w\lambda_r$, the LCP of all its accepted continuation outputs. It is
+also a prefix of $t(p)$ when $p$ is final. Normalize to edge and terminal
+words
+\begin{equation}\label{eq:normalize}
+ n(p,a)=\lambda_p^{-1}(w\lambda_r),\qquad
+ n_t(p)=\lambda_p^{-1}t(p),
+\end{equation}
+where inverse notation means deletion of the verified prefix. Telescoping
+gives normalized residual $g_p(v)=\lambda_p^{-1}O_p(v)$, with the same
+partial domain and with empty range LCP. This is classical prefix
+normalization~\cite{BC00}.
+
+Finite partition refinement computes equality of the $g_p$. Specifically,
+require equal final flags and normalized terminal words, equal defined
+letters and normalized edge words, and equivalent successors. These
+conditions suffice by induction on accepted continuation length. They are
+also necessary for equal functions: coaccessibility makes defined letters
+detectable from the partial domain, and the LCP of outputs on $a$-beginning
+continuations is exactly $n(p,a)$, since its target residual has empty LCP.
+Left cancellation then gives equal successor residuals. The greatest such
+finite relation is therefore exact. Write $[p]$ for these merged classes.
+
+Create a distinct new initial state $e$ with no incoming edges. Its terminal
+word is $f(\eps)$ if defined. For each original edge
+$s\xrightarrow{a/w}r$, create
+$e\xrightarrow{a/(w\lambda_r)}[r]$; elsewhere use the normalized quotient.
+Delete unreachable classes, obtaining $C$. It is trimmed and computes
+exactly $f$ without initial output. For every nonempty $u\in D$ its
+accumulated output is
+\begin{equation}\label{eq:H}
+ A_C(u)=A_T(u)\lambda_{\delta(s,u)}
+       =H(u):=\lcp\{f(uv):uv\in\dom f\}.
+\end{equation}
+At epsilon it remains $\eps$, even if $H(\eps)\ne\eps$. Nonempty returns
+to the old initial state use its normalized class, not $e$. Hence initial
+cycles and nonempty initial LCPs are covered.
+
+For nonempty $u$, the $C$-state is exactly its normalized continuation
+function $R_u(v)=H(u)^{-1}f(uv)$, on $u^{-1}\dom f$. Color each nonempty
+word by that state, and color epsilon by the unique color $e$. The colors
+are regular reaching languages. For any other trimmed realization $W$ of
+$f$, with reaching set $J_p$ and continuation LCP $\lambda'_p$, the
+statewise identity already used in~\cite[Remark~3]{DP26} is
+\begin{equation}\label{eq:otherH}
+ H(u)=A_W(u)\lambda'_p\qquad(u\in J_p).
+\end{equation}
+It follows by factoring $A_W(u)$ from all accepted continuation outputs.
+Thus $J_p\setminus\{\eps\}$ is monochromatic in the canonical coloring,
+regardless of output timing or the original machine's redundant states.
+
+\subsection{An effective convex quotient}
+
+Define $E(u,v)$ on $D$ by equal canonical color and no word of a different
+color strictly between $u$ and $v$ in either direction. Its classes are
+exactly the maximal convex monochromatic components. Transitivity follows
+because the outer interval lies in the union of the intervals to a common
+point. Every convex monochromatic subset lies in a single component.
+
+We detail the effective construction to distinguish synchronous regular
+relations from arbitrary rational relations. Encode words by reversal and
+use right-padded convolutions. Regular color predicates, equality, lex
+order, and shortlex order are synchronous regular. A lex comparator
+remembers the first differing symbol, treating an ended word as smaller;
+shortlex compares lengths first and then lex on equal lengths. Ended bits
+forbid a genuine symbol after padding. Boolean operations are relative
+to the regular universe of valid padded tuples. Existential projection
+guesses the removed track, including its end. Its witness can be longer
+than every free word: after projection, take the right quotient by an
+arbitrary all-padding suffix, equivalently marking a state final if it
+can reach acceptance along all-padding columns. This finite construction
+preserves padding invariance and imposes no length bound.
+
+Apply these operations to
+\[
+ z\in D,\quad \mathrm{color}(z)\ne\mathrm{color}(u),\quad
+ (u\co z\co v\ \lor\ v\co z\co u).
+\]
+Project $z$, complement, and intersect with equal-color endpoints in $D$.
+This computes $E$. These are standard automatic-structure
+operations~\cite{Blum99,BG00}. Next compute the regular language
+\begin{equation}\label{eq:rep}
+ \Rep(u)\iff u\in D\ \land\
+ \neg\exists v\in D\;(E(u,v)\land
+            \rev(v)<_{\mathrm{shortlex}}\rev(u)).
+\end{equation}
+Shortlex is a well-order on a finite alphabet, so it selects exactly one
+representative per component, including components without a least colex
+word. Remove padding for the ordinary word encoding. A finite automaton
+decides finiteness of $\Rep$: its reachable, coaccessible subgraph contains
+a genuine-letter cycle exactly when the language is infinite. If finite,
+enumerate its words in the useful acyclic graph. Thus the number of convex
+components is decidable without a guessed bound. Fixing a representative
+in $E$ also gives an effective regular language for its component.
+
+The relation $E$ is right invariant. If $uEv$, their $C$-colors give the same
+defined letters and successor colors. For $u\co v$, any word $z\in D$
+between $ua$ and $va$ ends in $a$, because that suffix cylinder is convex.
+Write $z=wa$. Prefix closure puts $w$ in $D$, and suffix cancellation gives
+$u\co w\co v$. Hence $w$ has the endpoint color and $z$ the common
+successor color. Therefore $ua\,E\,va$. Equality and the reverse endpoint
+order give the other cases; partial definedness also agrees.
+
+If $\Rep$ is finite, build a transducer $C_c$ with one state per component,
+initial component $\{\eps\}$, and the transition and terminal outputs of
+its $C$-color. At representative $u$, the target on $a$ is the unique
+component whose representative $r$ satisfies $E(ua,r)$. Right invariance
+makes the choice independent of $u$. Induction shows that every $w\in D$
+reaches its own component with exactly $A_C(w)$, and the same accepted
+domain and terminal output as $C$. Every component is accessible and
+coaccessible. Thus $C_c$ is finite, trimmed, equivalent to $f$, and its
+reaching languages are exactly the separated convex components.
+
+\subsection{Why no other realization can evade the tests}
+
+Suppose a finite Wheeler $W$ computes $f$. Its reaching sets $J_p$ are
+convex in $D$. Each $J_p\setminus\{\eps\}$ is canonically monochromatic by
+\eqref{eq:otherH}, and removing epsilon preserves convexity because epsilon
+is least. These sets, with singleton epsilon, give a finite convex
+refinement of the canonical coloring. Therefore $E$ has finitely many
+classes and $\Rep$ is finite.
+
+Moreover, common right append of $\lambda'_p$ preserves each orientation
+on each monotone piece of $A_W|_{J_p\setminus\{\eps\}}$. Equation
+\eqref{eq:otherH} transfers those pieces to $H$. Finitely many states and
+pieces thus give a finite convex monotone partition of $H$ on
+$D\setminus\{\eps\}$. Add singleton epsilon with output $A_C(\eps)=\eps$.
+By~\eqref{eq:H} this is a partition for $A_C$ on $D$. Intersect it with
+each convex $E$-class. The resulting finitely many convex monotone pieces
+prove the output condition for $C_c$, whose input order already holds.
+Consequently \emph{every} Wheeler realization forces this particular
+canonical convex split to pass membership.
+
+The complete decision algorithm is now: construct $C$; compute $E$ and
+$\Rep$; reject if $\Rep$ is infinite; otherwise construct $C_c$ and apply
+Theorem~\ref{thm:member}, returning $C_c$ exactly on acceptance. All steps
+terminate. An infinite representative language rules out every Wheeler
+realization; a failed membership test also rules out every such realization
+by the preceding necessity argument. A positive answer supplies an
+equivalent Wheeler machine. This proves Theorem~\ref{thm:realize}.
+
+\section{Verification, scope, and AI methodology}
+
+The proofs establish the claims for all promised finite inputs. Deterministic
+Python prototypes additionally implement regular-range comparison, seed
+propagation, SCC tests, normalization and residual merging, synchronous
+projection, regular representatives, finiteness, and the split construction.
+The membership controls covered all 544 accessible input-ordered binary
+partial machines through two states with outputs in $\{\eps,0,1\}$, and
+600 seeded machines with three to five states. All states were final.
+Direct sorted finite paths and a segmentation dynamic program checked the
+reported implications and piece bounds, through lengths seven and eight.
+Realizability controls included 13 boundary examples and 20 complete finite
+domains, checking 1,475 function values, 1,318 LCP identities, 8,171 relation
+comparisons, and 1,315 component-successor tests. Complete finite domains
+were compared against their entire direct convex decompositions; infinite
+controls used exact regular-language finiteness with supplementary literal
+replays through length seven.
+
+Checks included erasure, partial terminal domains, the epsilon-only domain,
+redundant unary parity, nonempty initial LCP with an initial cycle, and
+finite canonical components whose output still fails membership. A separate
+model context reconstructed the arguments and ran additional finite checks.
+These activities are internal computational and mathematical checks, not
+external peer review or formal verification. No absence of a sampled
+counterexample is used as an infinite assertion. The accompanying local
+code and reports specify the finite coverage and retain failed approaches.
+
+The membership exponent is not optimized, the certificate bound is only
+computable, and no practical indexing improvement, minimal realization, or
+realizability complexity bound is asserted. The results concern the stated
+piecewise definition with its literal reaching-language convention.
+The literature comparison is bounded by inspected primary sources; it is
+not a universal priority claim.
+
+\paragraph{AI methodology.}
+OpenAI Codex was used substantially throughout the project: it proposed and
+developed proof arguments, searched primary literature, generated and executed
+verification code, performed separate-context mathematical checks, and drafted
+and revised the exposition. This materially affected all technical sections,
+the computational controls, and the references. The checks do not constitute
+formal proofs or independent human peer review. No claim of an additional
+human verification is made here; the named author retains responsibility for
+the content and any future submission.
+
+\clearpage
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,17 @@
+{
+  "paper_number": 3,
+  "title": "Certified Expected-Cost Optimization for Robust Ski Rental",
+  "archive_sha256": "feedbf5adb3b34ce65942ee8a08c0544f32c33a2c534a5dfe516eee9e006c8a2",
+  "delivered_pdf_sha256": "750891c12b44b7761c1c8c96968e8005e68e4b8b7f3f4299a8a5fe80fd96ce84",
+  "supplied_publication_inputs_rehashed": 24,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/tmp/delivery-check/paper3-i5x_723x/paper3_source",
+  "rebuilt_pages": 11,
+  "rebuilt_pdf_text_matches_delivery": true,
+  "rebuilt_page_renders_match_delivery": true,
+  "finite_reproduction": {
+    "entry_point": "python3 manuscript/reproduce.py",
+    "scope": "Exact finite certificate checks; universal claims use the manuscript proofs.",
+    "output": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/tmp/delivery-check/paper3-i5x_723x/finite-reproduced.json"
+  },
+  "scope": "Archive/build/finite reproducibility, not a new mathematical or novelty review."
+}

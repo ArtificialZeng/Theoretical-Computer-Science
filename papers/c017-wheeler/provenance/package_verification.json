@@ -1,0 +1,81 @@
+{
+  "project": "c017-wheeler",
+  "actual_archive_sha256": "fe24b373f84e25470ab2d223863f78073f2a0a35f3105c8952794b3d10a5787d",
+  "actual_pdf_sha256": "f634d9f8abb35aab26ba0f93564fdd36b9f59aee0f150228002611a8fbb71de1",
+  "build_inputs_rehashed": 7,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c017-wheeler-aep32h0v/c017-wheeler_source",
+  "pages": 10,
+  "text_matches": true,
+  "all_page_renders_match": true,
+  "finite_reproduction": [
+    {
+      "entry": "evidence/check_membership.py",
+      "summary": {
+        "controls": 8,
+        "exhaustive": [
+          {
+            "states": 1,
+            "input_ordered_output_tables": 16,
+            "members": 9,
+            "nonmembers": 7,
+            "word_length_control": 7
+          },
+          {
+            "states": 2,
+            "input_ordered_output_tables": 528,
+            "members": 169,
+            "nonmembers": 359,
+            "word_length_control": 7
+          }
+        ],
+        "random": {
+          "seed": 1701001,
+          "attempts": 25236,
+          "input_ordered_tables": 600,
+          "members": 299,
+          "nonmembers": 301,
+          "states": [
+            3,
+            4,
+            5
+          ],
+          "output_words": [
+            "",
+            "0",
+            "1",
+            "00",
+            "01",
+            "10",
+            "11",
+            "001"
+          ],
+          "word_length_control": 8,
+          "all_states_final": true
+        },
+        "status": "all checks passed"
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c017-wheeler-aep32h0v/reproduction-0.stdout.log"
+    },
+    {
+      "entry": "evidence/check_exact_certificates.py",
+      "summary": {
+        "comparator_pairs": 16384,
+        "certificate_families": 3,
+        "status": "passed"
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c017-wheeler-aep32h0v/reproduction-1.stdout.log"
+    },
+    {
+      "entry": "evidence/research-2-check-realizability.py",
+      "summary": {
+        "status": "passed",
+        "controls": 13,
+        "whole_function_checks": 1475,
+        "automatic_relation_checks": 8171,
+        "component_successor_checks": 1315
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c017-wheeler-aep32h0v/reproduction-2.stdout.log"
+    }
+  ],
+  "scope": "Actual delivered archive clean build/render/reproduction; not a new math or novelty verdict."
+}

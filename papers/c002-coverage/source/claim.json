@@ -1,0 +1,24 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "For all positive integers n,m,t and every integer k>=2, every finite tagged-occurrence coverage family f_i(T)=sum_{u in U_i} 1[S_(i,u) intersects T] on [n], with nonempty incidence subsets and each item belonging to at most t occurrences across all functions, has a coloring chi:[n]->[k] satisfying max_{i,c,c'} |f_i(chi^{-1}(c))-f_i(chi^{-1}(c'))| <= 4kt(kt-1)^2, independent of n,m and all feature counts and sizes. Equal incidence subsets at distinct occurrences remain distinct. A deterministic polynomial-time construction exists for explicitly listed incidences and item slots, allowing binary-encoded k and t. This resolves the immutable source.md qualitative polynomial-existence question; no claim retains the sharper exponents of the source's logarithmic bound.",
+  "contribution": "Proposed full-scope size-independent bound via a categorical rainbow-witness reduction: Hall matching assigns disjoint k-item witness blocks to all large occurrences; cyclic block states preserve their coverage identically, and the remaining features have class-affine coverage matrices with column l1 norm at most kt. Known multiple-choice Beck-Fiala rounding then telescopes over at most (kt-1)^2 classes. Hall matching, graph independent classes and the 2||A||_1 rounding theorem are credited prior tools, not claimed innovations. The proposed structural reduction and qualitative removal of size dependence are the submitted mathematical delta; current bounded primary comparison found no equivalent, while fresh novelty and substantive-value review remain required.",
+  "proposer_job_id": "c002-coverage-research-8e44b8ae65fb",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "research/proof.md",
+    "evidence/research_rounding_check.py",
+    "evidence/research_rounding_check.json",
+    "literature/research-primary-comparison.md",
+    "literature/glaesser-source-record.md",
+    "literature/publisher-source.pdf",
+    "literature/publisher-source.txt",
+    "literature/source.pdf",
+    "literature/source.txt",
+    "literature/hollender-nonadditive.pdf",
+    "literature/hollender-nonadditive.txt",
+    "literature/dupre-fujii-nonadditive.pdf",
+    "literature/dupre-fujii-nonadditive.txt"
+  ]
+}

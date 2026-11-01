@@ -1,0 +1,11 @@
+{
+  "status": "all serialized continuous cells verified exactly",
+  "job_id": "privacy-interpolation-research-294f008bff48",
+  "certificates": 210,
+  "half_cells": 510,
+  "coordinate_cells": 1530,
+  "degenerate_half_cells": 34,
+  "full_path_rule": "reflect time and swap the two changing coordinates",
+  "input_sha256": "75b3497906f79867b7520632c4a1b00bf2beb59cfa5246a70f07dbd806f8c160",
+  "limits": "Independent implementation in this research context; no fresh referee or novelty acceptance."
+}

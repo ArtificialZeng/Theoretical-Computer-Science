@@ -1,0 +1,44 @@
+{
+  "job_id": "c017-wheeler-referee-a6cac210b41e",
+  "verdict": "accept",
+  "snapshot_digest": "e049cdd6f4851af0fd18969fa672c8ab343b1916120d8417cddc05007f4084bb",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    {
+      "reference": "Giovanna D'Agostino and Andrea Paradiso, Finite-State Transducers in the Wheeler Setting, arXiv:2606.29405v3 (13 August 2026), Definitions 4-5, Remark 3, Theorem 3.1 and Section 4",
+      "url": "https://arxiv.org/html/2606.29405v3",
+      "verified_relation": "Defines the exact class, proves the statewise residual-LCP identity and a finite-index characterization, and leaves membership and realizability as decision questions. Frozen PDF and current live version checked."
+    },
+    {
+      "reference": "Giovanna D'Agostino and Andrea Paradiso, same title, ICTCS 2026, CEUR Workshop Proceedings 4269, pp. 66-70 (published 19 September 2026), Definition 3.1, Theorem 3.6 and Section 4",
+      "url": "https://ceur-ws.org/Vol-4269/paper46.pdf",
+      "verified_relation": "This newer primary short paper was independently found and read; it retains the piecewise definition and still poses both decision problems on p. 69."
+    },
+    {
+      "reference": "Marie-Pierre Beal and Olivier Carton, Computing the prefix of an automaton, RAIRO TIA 34(6) (2000), pp. 503-514, abstract and introduction pp. 503-504",
+      "url": "https://www.numdam.org/item/ITA_2000__34_6_503_0.pdf",
+      "verified_relation": "Prefix normalization followed by ordinary minimization is classical, including empty-labeled cycles. This is credited prior machinery, not the proposed innovation."
+    },
+    {
+      "reference": "Achim Blumensath, Automatic Structures, diploma thesis (1999), Theorem 3.4 and Definition 3.9/Proposition 3.10, printed pp. 11, 13-14; also Blumensath and Gradel, LICS 2000, pp. 51-62",
+      "url": "https://www.fi.muni.cz/~blumens/Publications/AutStr.pdf",
+      "verified_relation": "Regular representatives and effective first-order synchronous automata queries are standard. Relevant frozen scan pages were read and locally rendered; official LICS metadata and query abstract checked."
+    },
+    {
+      "reference": "Ruben Becker, Davide Cenzato, Sung-Hwan Kim, Bojana Kodric, Alberto Policriti and Nicola Prezza, Optimal Wheeler Language Recognition, arXiv:2306.04737v2 (18 December 2023), primary abstract O(mn) theorem",
+      "url": "https://arxiv.org/abs/2306.04737",
+      "verified_relation": "Decides whether a DFA language admits a Wheeler realization. It does not test the accumulated output finite-piece property. Only the primary abstract was checked in this review."
+    }
+  ],
+  "substantive_delta": "A complete deterministic original-scope membership algorithm for the current-v3 finite convex weak-monotonicity definition, with a conservative O(S^13) bit bound and exact common-loop disjoint-turn certificates for every output failure after input-order success. Its SCC criterion makes branching recurrence require global monotonicity, reduces a simple cycle to two adjacent-level side tests, and treats acyclic components by finite inheritance. The combined scope also decides equivalent Wheeler realizability and constructs a realization on YES using credited standard normalization and automatic convex quotient machinery.",
+  "why_nonroutine": "The decisive new step is an exact characterization of an existential finite partition of unbounded size, with independent erasing output ranges. Input-order recognition, normalization and automatic closure alone do not decide that property: a cyclic turn can be harmless when all its intervals cross one cut. The two-side simple-cycle equivalence separates that case from disjoint recurrent turns, and the branching argument supplies effective obstruction structure. No inspected prior theorem implies this complete SCC test as an elementary corollary. Standard realization ingredients are not promoted as a separate contribution.",
+  "significance": "The result settles the immutable open-supported decision question on every promised finite input, including partial transitions and erasure, instead of restricting to a bounded path subclass or a fixed number of pieces. It gives a polynomial decision procedure, a computable obstruction bound, and a constructive semantic realization consequence for the same transducer class. This is substantive structural and algorithmic value in automata theory. No claim of optimal complexity, practical indexing improvement, minimal realization or STOC acceptance is made.",
+  "remaining_gaps": [],
+  "scope_limits": [
+    "Novelty comparison is bounded by the inspected current primary sources, not universal priority.",
+    "No polynomial bound for realizability, optimality or minimization is asserted.",
+    "Finite code controls supplement the written proof and are not formal verification."
+  ],
+  "report": "audit/math.md",
+  "literature_report": "audit/referee-a6cac210b41e-literature.md"
+}

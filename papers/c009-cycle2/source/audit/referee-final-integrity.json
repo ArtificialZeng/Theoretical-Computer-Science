@@ -1,0 +1,15 @@
+{
+  "job_id": "c009-cycle2-referee-eb6d40fb0393",
+  "checked_at": "2026-11-01T02:51:44.303463+00:00",
+  "snapshot_digest": "06b470c27e7195c3ffb2ba0d198581e77aa79d1b5d87d6485d396b6af906d1bc",
+  "all_21_frozen_files_match": true,
+  "snapshot_unchanged": true,
+  "source_unchanged": true,
+  "transient_mismatch_record": "audit/referee-integrity.json",
+  "transient_rejection_records": [
+    "audit/referee-transient-reject.md",
+    "audit/referee-transient-reject.json",
+    "audit/referee-initial-gate-check.json"
+  ],
+  "referee_wrote_restoration": false
+}

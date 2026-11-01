@@ -1,0 +1,362 @@
+\section{Introduction}
+
+A proposed matching can guide an online allocation rule, but the proposal may
+be wrong about edges that have not yet appeared. Robustness measures performance
+for every such proposal; consistency measures performance when the proposal is
+an optimum matching. We determine their exact tradeoff for unweighted bipartite
+graphs of maximum degree two on both sides. This restriction separates paths
+from cycles and makes the cost of using advice explicit: perfect consistency
+permits robustness $1/2$ when paths are allowed, and $3/4$ when every component
+is a cycle.
+
+The structural reason for the stronger cycle guarantee is local. Once an
+offline vertex has appeared twice, it cannot be used by a future arrival.
+Prioritizing that vertex over a fresh one protects future options. We show that
+advice can break the remaining ties without sacrificing optimality under
+\emph{any} maximum advised matching, even when it is partial. On cycles, every
+early choice creates one occupied and one free boundary. A later failure
+consumes two occupied boundaries, so arbitrary advice still leaves a
+deterministic $3/4$ matching. This advice-preserving property is the main step
+in the tradeoff characterization.
+
+\paragraph{Model and guarantees.}
+Let $U,V$ be labelled sets of size $n$, with $U$ offline and $V$ online.
+The realized graph $G=(U,V,E)$ is simple and unweighted. Each $v\in V$ arrives
+once in an arbitrary order $\pi$, revealing its whole neighborhood. An online
+algorithm irrevocably matches $v$ to an unused neighbor, or leaves it unmatched.
+Its output is an integral matching. The algorithm knows $U,n$, and the online
+identifiers used in the advice, but does not know future neighborhoods, their
+order, or the component decomposition.
+
+The complete advice is a table $A:V\to U\cup\{\bot\}$ with distinct
+non-$\bot$ values. It specifies a partial matching in the complete bipartite
+graph on the given labels. An advised pair need not be an edge of $G$.
+There are no annotations or additional graph information in the advice.
+The graph, order, and table are fixed independently of the algorithm's private
+randomness: the adversary is oblivious. Write $\OPT(G)$ for maximum matching
+cardinality. An algorithm is $c$-consistent if, for every $G,\pi$ and
+\emph{every} table $A$ that is a maximum matching of $G$,
+\[
+  \E|\ALG(G,\pi,A)|\ge c\OPT(G).
+\]
+It is $r$-robust if the same inequality with $r$ holds for every allowed table.
+All guarantees are uniform over finite $n$ and have no additive loss; inputs
+with $\OPT(G)=0$ impose no condition.
+
+Let $\D$ contain the graphs of maximum degree at most two on both sides,
+including isolated vertices. Let $\C\subset\D$ contain the 2-regular graphs,
+which are disjoint unions of simple even cycles, including four-cycles.
+For a class $\mathcal X$, let $r_{\mathcal X}(c)$ be the largest robustness
+attainable by a $c$-consistent randomized online algorithm on that class.
+
+\begin{theorem}\label{thm:frontiers}
+For every $c\in[0,1]$,
+\[
+ r_{\D}(c)=\min\{3/4,3/2-c\},\qquad
+ r_{\C}(c)=\min\{7/8,7/4-c\}.
+\]
+Both values are attained in the model above.
+\end{theorem}
+
+\paragraph{Closest results and the contribution.}
+F\`abrega and Mu\~noz~\cite{FM18}, Propositions~1--2, already establish the
+advice-free $7/8$ optimum on cycles, the eight-cycle obstruction used below,
+and the edge-orientation argument underlying the cycle analysis. Their ratio
+uses the reciprocal convention. Feng, Li, Wu, and Zhou~\cite{FLWZ25},
+Algorithm~2 and its subsequent discussion, identify the relevant priority rule
+as a degree-two semi-OCS rule. We credit those baselines and the orientation
+method. Our proof includes them to make the path extension and the effect of
+advice self-contained.
+
+Choo, Gouleakis, Ling, and Bhattacharyya~\cite{CGLB24}, Section~3, already give
+the Z-path obstruction and the linear bound $c+r\le3/2$ in the broader
+adversarial-arrival setting. Jin and Ma~\cite{JM24}, Proposition~3.1, also use
+this obstruction and obtain the same numerical unweighted frontier in a
+two-stage model. Their algorithm sees arrivals in batches and their
+consistency benchmark uses the value of following first-stage advice and
+completing later. Here every online choice is irrevocable before the next
+neighborhood appears, and consistency concerns every optimum full matching
+table. The contribution on $\D$ is the sequential achievability argument;
+on $\C$ it is the advice-preserving endpoint and the resulting exact frontier.
+Convex mixing itself is standard.
+
+Two related distinctions matter. Bhangale, Chakraborty, and
+Harsha~\cite{BCH25} bound only the \emph{online} degree in their degree-two
+integral theorem; their separate $3/4$ theorem allows fractional actions.
+Lindermayr, Megow, and Paul~\cite{LMP26} study multistage allocation and also
+give a one-by-one tradeoff for vertex-weighted \emph{fractional} matching.
+An integral prediction in that model does not make its actions integral.
+These statements therefore address different algorithmic classes from
+Theorem~\ref{thm:frontiers}.
+
+\section{Priority rules and the advice-preserving endpoint}
+Maintain $h(u)$, the number of revealed incident edges at $u\in U$.
+On arrival of $v$, increment $h(u)$ for every $u\in N(v)$.
+Call a neighbor \emph{fresh} if $h(u)=1$, and \emph{exhausted} if $h(u)=2$.
+An exhausted neighbor has no future incident edge. A neighbor is available
+when it is unmatched. Fix a label order for deterministic ties.
+
+Both rules below first take an available exhausted neighbor, if one exists,
+and leave $v$ unmatched only when no neighbor is available.
+\begin{itemize}
+\item $\Fair$ ignores the table. Without an available exhausted neighbor, it
+      takes the sole available neighbor, or chooses fairly between two fresh
+      neighbors, independently at each such choice.
+\item $\Trust$ uses the same priority. Without an available exhausted neighbor,
+      it takes $A(v)$ if that is an actual available neighbor; otherwise it
+      takes the first available neighbor in the fixed order.
+\end{itemize}
+These rules use only the revealed prefix and the matching table. In
+particular, an absent advised edge is simply ineligible.
+
+\begin{lemma}\label{lem:advice}
+For every maximum matching table $A$ of a graph in $\D$, the output of
+$\Trust$ has cardinality $\OPT(G)$.
+\end{lemma}
+\begin{proof}
+Let $M$ be the output and suppose $|M|<|A|$. The symmetric difference of
+$A$ and $M$ contains an $M$-augmenting path
+\[
+ v_0,u_0,v_1,u_1,\ldots,v_k,u_k,
+\]
+where $v_i u_i\in A$, $v_{i+1}u_i\in M$, and $v_0,u_k$ are unmatched in
+$M$. If $k=0$, greediness gives an immediate contradiction. Otherwise $u_0$
+was already occupied when $v_0$ arrived, since $v_0$ remained unmatched.
+Thus its partner $v_1$ arrived earlier than $v_0$.
+
+Inductively suppose $v_i$ arrived before $v_{i-1}$, for $i\ge1$.
+The two neighbors of $u_{i-1}$ are precisely $v_i$ and $v_{i-1}$, by the
+offline degree bound, so $u_{i-1}$ was fresh when $v_i$ selected it.
+Consequently no exhausted neighbor was available then. If its advised
+neighbor $u_i$ had been free, $\Trust$ would have preferred $u_i$ to
+$u_{i-1}$: either by exhausted priority or by the advice tie-break.
+Thus $u_i$ was already occupied. For $i<k$ its partner $v_{i+1}$ arrived
+earlier still. At $i=k$ this is impossible, since $u_k$ is free even at
+termination. The resulting strictly decreasing arrival times contradict the
+existence of the augmenting path.
+\end{proof}
+
+The argument applies to every maximum table, including partial ones. The
+offline degree bound, rather than perfection or uniqueness of the advice,
+is what makes the selected neighbor fresh along the augmenting path.
+
+\section{Boundary accounting on paths and cycles}
+We analyze final components only for the proof; the algorithm never needs
+to identify them. Their arrivals can be arbitrarily interleaved.
+
+Within a nontrivial component, classify a degree-two arrival as a
+\emph{root}, \emph{extension}, or \emph{merge} according as it has zero,
+one, or two previously seen neighbors. Let their counts be $a,b,z$.
+A degree-one online vertex is an \emph{initial leaf} if its neighbor is
+fresh, and a \emph{terminal leaf} otherwise; let their counts be $s,t$.
+These events are determined by the fixed graph and order.
+
+An offline vertex seen once is a boundary of the revealed component. Mark
+it with bit $1$ if occupied and bit $0$ if free. A root creates two
+complementary boundary bits. Under $\Fair$ they are assigned by that root's
+independent fair coin. An initial leaf creates one deterministic bit $1$.
+At an extension the old neighbor becomes exhausted. If free, it is chosen
+and the new boundary stays free; if occupied, the new neighbor is chosen
+and the new boundary is occupied. Thus the extension always succeeds and
+transports the old bit unchanged.
+
+A merge consumes its two boundaries and fails exactly when both bits are
+$1$. Its choice between free exhausted neighbors cannot affect a future
+boundary. A terminal leaf consumes one bit and fails exactly when it is
+$1$. Every surviving boundary is therefore an original root or initial-leaf
+bit transported without copying. Its source is fixed by the graph and
+order, independently of all matching outcomes.
+
+Contract extensions. For a final path, the resulting graph of roots and
+initial leaves linked by merges is a path, with terminal leaves or final
+offline endpoints at any remaining ports. For a final cycle it is a cycle
+of roots. In particular, a merge between distinct root objects under
+$\Fair$ fails with probability $1/4$, and a merge between an initial leaf
+and a root fails with probability $1/2$. These are unconditional
+probabilities on a fixed input. No independence conditional on earlier
+successes is needed.
+
+\begin{lemma}\label{lem:expectations}
+Let a nontrivial path have $m$ online vertices and $\ell\in\{0,1,2\}$
+online endpoints. If $a\ge1$, then
+\begin{equation}\label{eq:path}
+ \E|\Fair(\text{path})|=m-\frac{a-1}{4}-\frac{\ell}{2}.
+\end{equation}
+If $a=0$, $\Fair$ is optimal on the path. On a cycle with $m$ online
+vertices,
+\begin{equation}\label{eq:cycle}
+ \E|\Fair(\text{cycle})|=
+ \begin{cases}m,&a=1,\\m-a/4,&a\ge2.\end{cases}
+\end{equation}
+\end{lemma}
+\begin{proof}
+For a path with $q$ offline vertices, count first appearances and all
+arrivals to obtain
+\begin{equation}\label{eq:counts}
+ q=m+1-\ell=2a+b+s,\quad s+t=\ell,\quad
+ m=a+b+z+s+t,\quad z=a+s-1.
+\end{equation}
+Suppose $a\ge1$. In the contracted path, an initial-leaf object has only
+one port. Joining two such objects would complete an entire component
+without a root, so each of the $s$ initial leaves is joined to a root.
+The remaining $z-s=a-1$ merge edges join distinct roots. Likewise a
+terminal leaf consumes a root bit: connecting it directly, after
+extensions, to an initial leaf would complete a separate rootless path.
+The expected failures are therefore
+$(a-1)/4+s/2+t/2$, giving~\eqref{eq:path}.
+
+If $a=0$, the first arrival is an initial leaf and every boundary is
+occupied. Roots and extensions cannot fail; all $z$ merges and $t$
+terminal leaves fail. There are $z+t=\ell-1$ failures, giving
+$m-\ell+1=\min\{m,q\}$ matches, the path optimum. Isolated vertices
+contribute zero and are handled separately.
+
+For a cycle, $s=t=0$, $m=q=2a+b$, and $z=a$.
+If $a=1$, the closing merge sees the complementary bits of its sole root
+and succeeds. If $a\ge2$, every edge of the contracted root cycle joins
+distinct roots: a self-join would already close a separate final cycle.
+Every merge then fails with probability $1/4$. With two roots the
+contracted cycle has two parallel edges, each using different ports.
+Linearity of expectation still gives~\eqref{eq:cycle}, without requiring
+independence between merge failures.
+\end{proof}
+
+\begin{corollary}\label{cor:fair}
+The rule $\Fair$ guarantees $3\OPT/4$ on $\D$ and $7\OPT/8$ on $\C$.
+\end{corollary}
+\begin{proof}
+Rootless paths are optimal. For a path with $a\ge1$ and $\ell=0$,
+$\OPT=m=2a+b-1$; its deficit is $(a-1)/4\le m/8$ because
+$2(a-1)\le m$. For $\ell=2$, $\OPT=q=m-1=2a+b+s$ and its deficit
+relative to $q$ is $(a-1)/4\le q/8$. Thus both unbalanced path types
+have ratio at least $7/8$.
+
+For $\ell=1$, $\OPT=m=2a+b+s$. Its deficit is $(a+1)/4$, which is
+at most $m/4$ since $m\ge2a\ge a+1$. On a cycle, the deficit is at most
+$a/4\le m/8$, since $m=2a+b$. Sum these bounds over final components.
+Interleaving does not change their induced orders or their contributions.
+\end{proof}
+
+\begin{lemma}\label{lem:robust}
+For every allowed advice table, $\Trust$ produces at least $\OPT/2$ matches
+on $\D$ and at least $3\OPT/4$ matches on $\C$, deterministically.
+\end{lemma}
+\begin{proof}
+The output is maximal: an edge between two finally unmatched vertices
+would have been available when its online endpoint arrived. Every optimum
+edge touches an output edge, and each output edge can account for at most
+two optimum edges. This proves the $1/2$ bound.
+
+On a cycle the boundary accounting holds deterministically for $\Trust$.
+Each of its $a$ roots creates exactly one occupied port, regardless of
+advice, and extensions preserve ports. Each failed merge consumes two
+occupied ports that cannot be used again. Hence there are at most
+$\lfloor a/2\rfloor$ failures and
+\[
+ |\Trust(\text{cycle})|\ge m-\lfloor a/2\rfloor
+ \ge m-a/2\ge3m/4,
+\]
+using $m=2a+b$. Since $\OPT=m$ for each cycle, summing proves the claim.
+The bound permits arbitrary correlations between root choices induced by
+the advice table.
+\end{proof}
+
+\section{Interpolation and matching upper bounds}
+The two algorithms give the endpoints in Table~\ref{tab:endpoints}.
+The advantage of cycles persists when advice is arbitrarily wrong, rather
+than only when the table is close to a maximum matching.
+
+\begin{table}[ht]
+\centering\normalsize
+\caption{Endpoints used to attain the exact frontiers. Pairs are
+(consistency, robustness); all bounds are multiplicative.}
+\label{tab:endpoints}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Realized class & Advice-free $\Fair$ & Advice rule $\Trust$ & Upper bounds\\
+\midrule
+Maximum degree two & $(3/4,3/4)$ & $(1,1/2)$ & $r\le3/4$, $c+r\le3/2$\\
+2-regular & $(7/8,7/8)$ & $(1,3/4)$ & $r\le7/8$, $c+r\le7/4$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Achievability.}
+Write $\beta=3/4$ on $\D$ and $\beta=7/8$ on $\C$.
+Corollary~\ref{cor:fair} gives $(\beta,\beta)$, while
+Lemmas~\ref{lem:advice} and~\ref{lem:robust} give $(1,2\beta-1)$.
+For $c\le\beta$, use $\Fair$. For $c\ge\beta$, choose $\Trust$ once
+before processing the input with probability
+\[
+ p=\frac{c-\beta}{1-\beta},
+\]
+and use $\Fair$ otherwise. For every fixed input and table, the mixture
+has consistency at least $(1-p)\beta+p=c$ and robustness at least
+$(1-p)\beta+p(2\beta-1)=2\beta-c$.
+
+\paragraph{Path upper bounds.}
+For completeness, specialize the known Z-path obstruction
+of~\cite{CGLB24,JM24} to the matching-table domain. Take $U=\{0,1\}$,
+online order $x,y$, and $N(x)=\{0,1\}$ in two worlds. Complete with
+$N_0(y)=\{0\}$ and $N_1(y)=\{1\}$. Both graphs belong to $\D$ and have
+optimum two. With a common advice table, the first action is the same
+when the algorithm's random tape is coupled across worlds. If it matches
+$x$, the sum of the best final cardinalities is three; if it abstains,
+the sum is two. Thus the sum of expected outputs is at most three.
+
+Use empty advice in both worlds. Robustness implies $4r\le3$.
+Alternatively use the same table $A(x)=0,A(y)=1$ in both. This table is
+optimal in world 1 and allowed in world 0, so $2c+2r\le3$.
+
+\paragraph{Cycle upper bounds with a common table.}
+Use the eight-cycle pair of F\`abrega and Mu\~noz~\cite{FM18},
+Proposition~1. Take $U=\{0,1,2,3\}$ and online order $x_1,x_2,y_1,y_2$.
+The first two neighborhoods are $N(x_1)=\{0,1\}$ and
+$N(x_2)=\{2,3\}$ in both worlds. The remaining neighborhoods are
+\[
+\begin{array}{c|cc}
+ &N(y_1)&N(y_2)\\ \hline
+G_0&\{0,2\}&\{1,3\}\\
+G_1&\{0,3\}&\{1,2\}.
+\end{array}
+\]
+Each graph is a connected simple 2-regular bipartite graph with optimum
+four. Fix a common advice table and couple the random tape. If the two
+early vertices both match, one free offline vertex remains in each early
+pair. In exactly one world those two free vertices belong to the same late
+neighborhood, allowing at most one more match; in the other world at most
+two more matches are possible. The sum of final cardinalities is at most
+seven. With one or zero early matches the sums are at most six or four.
+This argument allows abstention, correlated choices, and arbitrary later
+strategies. Consequently the sum of expected outputs is at most seven.
+
+Empty common advice gives $8r\le7$. For the consistency bound, use
+\[
+ (A(x_1),A(x_2),A(y_1),A(y_2))=(0,2,3,1).
+\]
+It is a perfect matching of $G_1$ and an allowed injective table for $G_0$.
+Only the pair $(y_1,3)$ is absent in $G_0$; $(y_2,1)$ is present in both
+worlds. Applying consistency in $G_1$ and robustness in $G_0$ gives
+$4c+4r\le7$. These fixed input pairs prove both upper bounds in
+Theorem~\ref{thm:frontiers}; the preceding mixture attains them.
+
+\section{Checks and further questions}
+The accompanying standard-library checker directly enumerates root coin
+strings, maximum matchings, and injective advice tables. It verifies both
+component expectation formulas on paths and cycles through six online
+vertices, and checks all labelled equal-part graphs of size three under
+both degree bounds and all online orders. On these inputs it tests every
+maximum matching as advice; on regular inputs it also tests every allowed
+table, including absent-edge advice. It checks the upper gadgets by exact
+optimal continuation. These finite checks supplement the analytic proofs.
+
+The formulas resolve the matching-table tradeoff under the stated oblivious
+input model. Further questions include adaptive adversaries, weighted
+matching, and a larger offline degree bound. The boundary-bit invariant and
+the decreasing-arrival proof both use the second appearance as the last
+possible appearance, so extensions to those models need additional ideas.
+
+\paragraph{AI assistance.}
+Codex assisted with proof development, exact computations, literature
+comparison, and drafting. A separate model-context pass checked the proofs
+and finite certificates.

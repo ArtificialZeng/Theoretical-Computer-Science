@@ -1,0 +1,21 @@
+{
+  "job_id": "advice-matching-referee-aa04e7abc7cb",
+  "snapshot_digest": "9e5ce19e70bcedf07302fd469630c6922133d2418685a0789184566a1578f92c",
+  "checked": [
+    "snapshot integrity",
+    "central token invariant",
+    "maximum-advice augmenting path",
+    "arbitrary-advice cycle endpoint",
+    "fixed common-table upper bounds",
+    "independent foreground n=4 exhaustive checks"
+  ],
+  "non_scope_errors": [
+    "offline-end path: m=2a+b-1, not m>=2a",
+    "online-end path: m-1=2a+b+s, no trailing -1",
+    "cycle common-table wording: only (y1,3), not the last two advised pairs, is absent in G0"
+  ],
+  "remaining": [],
+  "verdict": "accept",
+  "structural_check": "audit/math-gate.json: ok=true",
+  "completed_at_utc": "2026-10-30 23:36 UTC"
+}

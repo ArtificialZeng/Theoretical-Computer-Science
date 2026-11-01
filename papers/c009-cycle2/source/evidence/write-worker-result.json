@@ -1,0 +1,19 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Prepared, clean-built and froze a six-page manuscript preserving the accepted full-family resolution, forcing theorem and sharpness proof. Official acmart input is unmodified; all pages were visually checked. Separate release review remains required.",
+  "next_test": "Fresh release review of the frozen manuscript/PDF: verify scope and all five citation attributions, reproduce the clean build, inspect every page, then run the remaining release gates.",
+  "evidence": [
+    "manuscript/main.tex",
+    "manuscript/build/main.pdf",
+    "publication.json",
+    "audit/manuscript-snapshot.json",
+    "evidence/write-freeze.json",
+    "evidence/write-verification.json",
+    "evidence/write-visual-check.md",
+    "evidence/write-format-check.md",
+    "literature/user_bibliography_check.md",
+    "checkpoint.md"
+  ]
+}

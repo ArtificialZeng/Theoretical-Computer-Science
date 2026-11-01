@@ -1,0 +1,26 @@
+{
+  "verdict": "accept",
+  "job_id": "c009-cycle2-release-70b6b8b76475",
+  "snapshot_digest": "06b470c27e7195c3ffb2ba0d198581e77aa79d1b5d87d6485d396b6af906d1bc",
+  "manuscript_digest": "b4b0a087b93942317cb6f781edea4f1dd83ed888a5847b8da0a4194a99337b0c",
+  "pdf_digest": "519a8f77e5e1fd12c6abf00b04b53c6e43a17273c04d3cfb8668ff6c98866710",
+  "report": "audit/visual.md",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "page_count": 6,
+  "render_command": "pdftoppm -r 120 -png manuscript/build/main.pdf audit/render/page",
+  "render_digests": {
+    "audit/render/page-1.png": "e2dcf95c7e0c12e2ed592dd95bed88ba929804f79d2073979401dc5b1de24ad6",
+    "audit/render/page-2.png": "8565b202288db931beac8c736edfca03a74cab3138195f0b7600b8684edc9bf5",
+    "audit/render/page-3.png": "0db7c7a05cfd0b1e87a7a6a333320e8ca3716f155b24d2f1c3b74ad5d3048842",
+    "audit/render/page-4.png": "b89c1e51d532f5a07e570f1f49de2c9ccaff66dc33ab0af745101b71dc972773",
+    "audit/render/page-5.png": "87022c77010980828f8024691d39d119add01803e7f5c7428d78f67b481202d8",
+    "audit/render/page-6.png": "edbc3d6cebcd0b4d0308c38c35081facfa1de309de3c02a69426477a009fc7ee"
+  }
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "cnf": "evidence/research1-relaxation/n8d3_xoxoxooo.cnf",
+    "proof": "evidence/research1-relaxation/n8d3_xoxoxooo.lrat",
+    "cnf_sha256": "f94e04043b327543e7369185a5544709f7cd4c308f1c3a416505ae3a0a490819",
+    "proof_sha256": "f0be3efa31da078315fa1dd015edab25b5580900fd1d14ac28febc812749775c",
+    "initial_clauses": 12561,
+    "checked_additions": 2995,
+    "deletions": 3261,
+    "checked_empty_clause": true,
+    "verdict": "verified-UNSAT-of-this-CNF",
+    "checker": "independent Python LRAT/RUP-only checker",
+    "elapsed_seconds": 0.04591504100244492
+  },
+  {
+    "cnf": "evidence/research1-relaxation/n8d3_xxooxooo.cnf",
+    "proof": "evidence/research1-relaxation/n8d3_xxooxooo.lrat",
+    "cnf_sha256": "4f8c5369c92bb2aff41f5b9ea01ab619fd970f80681ccf2ba2574eccc061270b",
+    "proof_sha256": "eb0fd32a45cabd93145005e2a709e32761a59eccb638dd726d4e248b4a5f5ae3",
+    "initial_clauses": 12561,
+    "checked_additions": 7060,
+    "deletions": 9911,
+    "checked_empty_clause": true,
+    "verdict": "verified-UNSAT-of-this-CNF",
+    "checker": "independent Python LRAT/RUP-only checker",
+    "elapsed_seconds": 0.12371674994938076
+  },
+  {
+    "cnf": "evidence/research1-relaxation/n8d3_xxoxoooo.cnf",
+    "proof": "evidence/research1-relaxation/n8d3_xxoxoooo.lrat",
+    "cnf_sha256": "e70540b6d7a258d0e415a9bed244a783cb0f799e7046a0a88e0cfade91784141",
+    "proof_sha256": "9dd3d382f0b444da2426a1391cb60533e5747392e6fcd8d8dfb70c73b409f309",
+    "initial_clauses": 12561,
+    "checked_additions": 14369,
+    "deletions": 16910,
+    "checked_empty_clause": true,
+    "verdict": "verified-UNSAT-of-this-CNF",
+    "checker": "independent Python LRAT/RUP-only checker",
+    "elapsed_seconds": 0.34583291597664356
+  },
+  {
+    "cnf": "evidence/research1-relaxation/n8d3_xxxooooo.cnf",
+    "proof": "evidence/research1-relaxation/n8d3_xxxooooo.lrat",
+    "cnf_sha256": "7a207ebb120a0a8549a134476950b061d373dc2e6cfc8e9bf6b0de7d9bc2c55c",
+    "proof_sha256": "db58d74746a4f88eaf34e9c1e33644d6724efa4c32c2e7e6bd0a0b286ca263fa",
+    "initial_clauses": 12561,
+    "checked_additions": 7444,
+    "deletions": 9591,
+    "checked_empty_clause": true,
+    "verdict": "verified-UNSAT-of-this-CNF",
+    "checker": "independent Python LRAT/RUP-only checker",
+    "elapsed_seconds": 0.13924458296969533
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "clean_source_zip_build": true,
+  "same_pdf_text": true,
+  "same_generated_bbl": true,
+  "same_exact_check_output": true,
+  "no_external_fulltexts_or_network_needed": true,
+  "portable_build_log": "audit/write-portable-build.log",
+  "portable_check_output": "audit/write-portable-reproduce.json"
+}

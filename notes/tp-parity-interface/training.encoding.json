@@ -1,0 +1,22 @@
+{
+  "cases": [
+    "n3-t000",
+    "n4-t001",
+    "n5-t002",
+    "n5-t003",
+    "n5-t004",
+    "n6-t005",
+    "n6-t006",
+    "n6-t007",
+    "n6-t008",
+    "n6-t009",
+    "n6-t010"
+  ],
+  "states": 2852,
+  "edges": 6985,
+  "factor_states": 490,
+  "factor_types": 8,
+  "variables": 10242,
+  "clauses": 114459,
+  "cnf_sha256": "3e9821fb2df6fa10066e594af77530d6dfc28d5f0fad3fc15669961e6f9a3d33"
+}

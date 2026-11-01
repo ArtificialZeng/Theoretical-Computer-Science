@@ -1,0 +1,37 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{HMN{\etalchar{+}}25}
+
+\bibitem[FHMZ22]{FHMZ22}
+Jacob Fox, Zoe Himwich, Nitya Mani, and Yunkun Zhou.
+\newblock A note on directed analogues of the {Sidorenko} and forcing
+  conjectures.
+\newblock arXiv:2210.16971v1, 2022.
+\newblock URL: \url{https://arxiv.org/abs/2210.16971v1}.
+
+\bibitem[FHMZ24]{FHMZ24}
+Jacob Fox, Zoe Himwich, Nitya Mani, and Yunkun Zhou.
+\newblock Variations on {Sidorenko}'s conjecture in tournaments.
+\newblock arXiv:2402.08418v1, 2024.
+\newblock URL: \url{https://arxiv.org/abs/2402.08418v1}.
+
+\bibitem[GIKK23]{GIKK23}
+Andrzej Grzesik, Daniel Il'kovi{\v{c}}, Bart{\l}omiej Kielak, and Daniel
+  Kr{\'a}l'.
+\newblock Quasirandom forcing orientations of cycles.
+\newblock arXiv:2212.09343v3, 2023.
+\newblock URL: \url{https://arxiv.org/abs/2212.09343v3}.
+
+\bibitem[HMN{\etalchar{+}}25]{HMNTW25}
+Xiaoyu He, Nitya Mani, Jiaxi Nie, Nathan Tung, and Fan Wei.
+\newblock New {Sidorenko}-type inequalities in tournaments.
+\newblock arXiv:2512.11222v1, 2025.
+\newblock URL: \url{https://arxiv.org/abs/2512.11222v1}.
+
+\bibitem[MPT04]{MPT04}
+J.~J. McDonald, P.~J. Psarrakos, and M.~J. Tsatsomeros.
+\newblock Almost skew-symmetric matrices.
+\newblock {\em Rocky Mountain Journal of Mathematics}, 34(1):269--288, 2004.
+\newblock \href {https://doi.org/10.1216/rmjm/1181069905}
+  {\path{doi:10.1216/rmjm/1181069905}}.
+
+\end{thebibliography}

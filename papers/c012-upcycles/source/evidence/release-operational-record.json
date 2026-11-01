@@ -1,0 +1,26 @@
+{
+  "job_id": "c012-upcycles-release-0294a4f8ea65",
+  "operations": [
+    {
+      "step": "read artifact inventory",
+      "result": "Optional build/ directory absent; actual PDF lives in manuscript/. No mathematical implication."
+    },
+    {
+      "step": "PDF code extraction initial",
+      "result": "IndentationError from common pdftotext layout margin. Initial file/error preserved; remove one margin column; AST matches and rerun passes."
+    },
+    {
+      "step": "source refresh",
+      "result": "Short DMTCS URL inaccessible;canonical page and PDF accessible. Uncited hydra full-text endpoints inaccessible; bounded access disclosed."
+    },
+    {
+      "step": "artifact marker",
+      "result": "PDF-skill marker exited0 before clean reproduction."
+    }
+  ],
+  "agents_spawned": 0,
+  "other_codex_processes_started": 0,
+  "background_workers_started": 0,
+  "original_status_unchanged": "proved",
+  "research_passes_preserved": 2
+}

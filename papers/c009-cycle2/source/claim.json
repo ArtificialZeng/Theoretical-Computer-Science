@@ -1,0 +1,29 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "For every integer ell>=1, every integer n>=1, and every real weighted tournament matrix A in [0,1]^(n by n) with A+A^T=J (hence A_ii=1/2), let H_ell be the oriented cycle on 4ell cyclic vertices with clockwise edge word (++--) repeated ell times, and define t_Hell(A) by summing weights over all vertex maps and dividing by n^(4ell). Then t_Hell(A)>=16^(-ell), so the ENTIRE 2-subdivided alternating-even-cycle family in immutable source.md Problem3.23 is LTS, with no restriction on the spectral perturbation. More precisely, for B=(A-J/2)/n and E=t_Hell(A)-16^(-ell), E>=16^(-ell)||B||op^(4ell); equality in the density bound holds exactly at A=J/2. For each fixed ell, exponent4ell cannot be decreased in any positive-constant bound of this form over all weighted tournaments. The proof rests on ||(uu^T/2+B)^2||op>=1/4 for arbitrary real unit u and real skew B, established by exact identity(R).",
+  "contribution": "Proposed complete resolution of the original explicitly posed all-length local question, strengthened to a global weighted inequality and a dimension-free forcing modulus with optimal exponent. The standard almost-skew block reduction is credited to prior work; the proposed substantive step is a square-norm Rayleigh certificate and second-eigenvalue control that bypass the verified earlier short-cycle criterion and inapplicable directed-edge transfer. No equivalent full-family implication was found in the inspected current primary sources. Correctness, current novelty and theoretical significance remain subject to actual fresh review; the dossier identifies incomplete old operator leads and does not assert priority or acceptance.",
+  "proposer_job_id": "c009-cycle2-research-347a4f87d1ce",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "AGENTS.md",
+    "publication-policy.json",
+    "evidence/research-proof.md",
+    "evidence/research-literature.md",
+    "evidence/research-failure-dossier.md",
+    "evidence/research_exact.py",
+    "evidence/research-exact-results.json",
+    "evidence/research-source-integrity.json",
+    "evidence/research-primary-retrievals.json",
+    "evidence/primary/research-web-passages.txt",
+    "evidence/theorem12-results.json",
+    "evidence/check_theorem12.py",
+    "evidence/primary/2512.11222-paper.txt",
+    "evidence/primary/2212.09343-paper.txt",
+    "evidence/primary/2210.16971-paper.txt",
+    "evidence/primary/2402.08418-paper.txt",
+    "evidence/primary/2605.14138-paper.txt",
+    "intake/prior-cycle-coefficients.json"
+  ]
+}

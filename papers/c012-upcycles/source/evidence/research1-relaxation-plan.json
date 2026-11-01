@@ -1,0 +1,7 @@
+{
+  "job_id": "c012-upcycles-research-cfe911474960",
+  "per_mask_seconds": 20,
+  "overall_solver_budget_seconds": 160,
+  "changed_test": "Remove cyclic overlap and test phase-balanced exact subcube partitions.",
+  "possible_meaning": "UNSAT proves obstruction already at balanced tiling; SAT localizes remaining gap to literal cyclic gluing. No full original resolution from either outcome."
+}

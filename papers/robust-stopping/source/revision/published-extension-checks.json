@@ -1,0 +1,1674 @@
+{
+  "job_id": "robust-stopping-research-024409e96ffb",
+  "role": "research",
+  "status": "checks_passed",
+  "scope": "Finite software observations and exact evaluations; not referee acceptance",
+  "python": "3.14.7",
+  "repository_commit": "0a86125f31e9e1b1abbba5bd4fde32a332860124",
+  "published_pdf_sha256": "5c5842ff3d0d2df8b802bc9968d520410ade6a059f83b3ca9fb1ac6a8f53ec4c",
+  "published_pdf_bytes": 560062,
+  "published_pdf_pages": 34,
+  "fresh_pdf_extraction_matches_prior": true,
+  "published_model_page": 7,
+  "published_inference_pages": [
+    29,
+    30
+  ],
+  "critical_inference_page": 30,
+  "fresh_extraction_sha256": "863eaacb2def1e0e2ea9f7ddb4cf5aaa402963cccaf491b22031dc84e62eb37e",
+  "global_optimum": {
+    "law": {
+      "1": "1/4",
+      "3": "3/4"
+    },
+    "normalization": "1",
+    "cost": "39/20",
+    "moment": "3/2",
+    "prefix_rows": {
+      "1": "1/2",
+      "2": "1/4"
+    },
+    "direct_horizon_costs": {
+      "1": "3/2",
+      "2": "9/4",
+      "3": "9/2"
+    },
+    "constant_cost_for_all_x_ge": 3,
+    "constant_tail_cost": "9/2",
+    "raw_support_maximum": "3"
+  },
+  "minimum_support_level_law": {
+    "law": {
+      "2": "1/2",
+      "3": "1/2"
+    },
+    "normalization": "1",
+    "cost": "11/5",
+    "moment": "3/2",
+    "prefix_rows": {
+      "1": "0",
+      "2": "1"
+    },
+    "direct_horizon_costs": {
+      "1": "1",
+      "2": "3",
+      "3": "9/2"
+    },
+    "constant_cost_for_all_x_ge": 3,
+    "constant_tail_cost": "9/2",
+    "raw_support_maximum": "14/5"
+  },
+  "global_dual": {
+    "alpha": "3",
+    "lambda": "7/10",
+    "y": {},
+    "reduced_costs_t_1_2_3": [
+      "0",
+      "1/2",
+      "0"
+    ],
+    "reduced_cost_tail_increment": "7/10"
+  },
+  "software_runs": [
+    {
+      "file": "Figure1_Performance_Comparison_Under_Prediction_Error.py",
+      "sha256": "a63482866e819cb695298aae494b792d1babb0679b31c851dd68c0f6e23018a3",
+      "tolerance": 1e-05,
+      "water_level": 3.000001907348633,
+      "exact_binary_water_level": "1572865/524288",
+      "is_feasible_at_14_over_5": false,
+      "is_feasible_at_3": true,
+      "exact_original_model_checks": {
+        "law": {
+          "1": "1/4",
+          "2": "3/8",
+          "3": "3/8"
+        },
+        "normalization": "1",
+        "cost": "12/5",
+        "moment": "9/8",
+        "prefix_rows": {
+          "1": "1/2",
+          "2": "1"
+        },
+        "direct_horizon_costs": {
+          "1": "3/2",
+          "2": "3",
+          "3": "33/8"
+        },
+        "constant_cost_for_all_x_ge": 3,
+        "constant_tail_cost": "33/8",
+        "raw_support_maximum": "3"
+      }
+    },
+    {
+      "file": "Figure1_Performance_Comparison_Under_Prediction_Error.py",
+      "sha256": "a63482866e819cb695298aae494b792d1babb0679b31c851dd68c0f6e23018a3",
+      "tolerance": 1e-09,
+      "water_level": 3.0000000004656613,
+      "exact_binary_water_level": "6442450945/2147483648",
+      "is_feasible_at_14_over_5": false,
+      "is_feasible_at_3": true,
+      "exact_original_model_checks": {
+        "law": {
+          "1": "1/4",
+          "2": "3/8",
+          "3": "3/8"
+        },
+        "normalization": "1",
+        "cost": "12/5",
+        "moment": "9/8",
+        "prefix_rows": {
+          "1": "1/2",
+          "2": "1"
+        },
+        "direct_horizon_costs": {
+          "1": "3/2",
+          "2": "3",
+          "3": "33/8"
+        },
+        "constant_cost_for_all_x_ge": 3,
+        "constant_tail_cost": "33/8",
+        "raw_support_maximum": "3"
+      }
+    },
+    {
+      "file": "Figure1_Performance_Comparison_Under_Prediction_Error.py",
+      "sha256": "a63482866e819cb695298aae494b792d1babb0679b31c851dd68c0f6e23018a3",
+      "tolerance": 1e-12,
+      "water_level": 2.9999999999995453,
+      "exact_binary_water_level": "6597069766655/2199023255552",
+      "is_feasible_at_14_over_5": false,
+      "is_feasible_at_3": true,
+      "exact_original_model_checks": {
+        "law": {
+          "1": "1/4",
+          "2": "3/8",
+          "3": "3/8"
+        },
+        "normalization": "1",
+        "cost": "12/5",
+        "moment": "9/8",
+        "prefix_rows": {
+          "1": "1/2",
+          "2": "1"
+        },
+        "direct_horizon_costs": {
+          "1": "3/2",
+          "2": "3",
+          "3": "33/8"
+        },
+        "constant_cost_for_all_x_ge": 3,
+        "constant_tail_cost": "33/8",
+        "raw_support_maximum": "3"
+      }
+    },
+    {
+      "file": "Table2_Consistency_Comparison_under_Fixed_Robustness.py",
+      "sha256": "f906417295005ffc8aeda7e3868350e9498acaf61d1876b7a23d27a2d9733b81",
+      "tolerance": 1e-05,
+      "water_level": 3.000001907348633,
+      "exact_binary_water_level": "1572865/524288",
+      "is_feasible_at_14_over_5": false,
+      "is_feasible_at_3": true,
+      "exact_original_model_checks": {
+        "law": {
+          "1": "1/4",
+          "2": "3/8",
+          "3": "3/8"
+        },
+        "normalization": "1",
+        "cost": "12/5",
+        "moment": "9/8",
+        "prefix_rows": {
+          "1": "1/2",
+          "2": "1"
+        },
+        "direct_horizon_costs": {
+          "1": "3/2",
+          "2": "3",
+          "3": "33/8"
+        },
+        "constant_cost_for_all_x_ge": 3,
+        "constant_tail_cost": "33/8",
+        "raw_support_maximum": "3"
+      }
+    },
+    {
+      "file": "Table2_Consistency_Comparison_under_Fixed_Robustness.py",
+      "sha256": "f906417295005ffc8aeda7e3868350e9498acaf61d1876b7a23d27a2d9733b81",
+      "tolerance": 1e-09,
+      "water_level": 3.0000000004656613,
+      "exact_binary_water_level": "6442450945/2147483648",
+      "is_feasible_at_14_over_5": false,
+      "is_feasible_at_3": true,
+      "exact_original_model_checks": {
+        "law": {
+          "1": "1/4",
+          "2": "3/8",
+          "3": "3/8"
+        },
+        "normalization": "1",
+        "cost": "12/5",
+        "moment": "9/8",
+        "prefix_rows": {
+          "1": "1/2",
+          "2": "1"
+        },
+        "direct_horizon_costs": {
+          "1": "3/2",
+          "2": "3",
+          "3": "33/8"
+        },
+        "constant_cost_for_all_x_ge": 3,
+        "constant_tail_cost": "33/8",
+        "raw_support_maximum": "3"
+      }
+    },
+    {
+      "file": "Table2_Consistency_Comparison_under_Fixed_Robustness.py",
+      "sha256": "f906417295005ffc8aeda7e3868350e9498acaf61d1876b7a23d27a2d9733b81",
+      "tolerance": 1e-12,
+      "water_level": 2.9999999999995453,
+      "exact_binary_water_level": "6597069766655/2199023255552",
+      "is_feasible_at_14_over_5": false,
+      "is_feasible_at_3": true,
+      "exact_original_model_checks": {
+        "law": {
+          "1": "1/4",
+          "2": "3/8",
+          "3": "3/8"
+        },
+        "normalization": "1",
+        "cost": "12/5",
+        "moment": "9/8",
+        "prefix_rows": {
+          "1": "1/2",
+          "2": "1"
+        },
+        "direct_horizon_costs": {
+          "1": "3/2",
+          "2": "3",
+          "3": "33/8"
+        },
+        "constant_cost_for_all_x_ge": 3,
+        "constant_tail_cost": "33/8",
+        "raw_support_maximum": "3"
+      }
+    }
+  ],
+  "literal_execution_traces": [
+    {
+      "file": "Figure1_Performance_Comparison_Under_Prediction_Error.py",
+      "method": "is_feasible",
+      "h_binary_exact": "3152519739159347/1125899906842624",
+      "events": [
+        {
+          "event": "line",
+          "source_line": 79,
+          "state_before_line_or_at_return": {}
+        },
+        {
+          "event": "line",
+          "source_line": 80,
+          "state_before_line_or_at_return": {
+            "F": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 81,
+          "state_before_line_or_at_return": {
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 103,
+          "state_before_line_or_at_return": {
+            "e_i": "0",
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 106,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "0",
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 103,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "2",
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 106,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 110,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "0",
+            "mu": "0",
+            "mass": "1/2"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 111,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "1/2",
+            "mu": "0",
+            "mass": "1/2"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 112,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "1/2",
+            "mu": "1",
+            "mass": "1/2"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 103,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "3",
+            "F": "1/2",
+            "mu": "1",
+            "mass": "1/2"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 106,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "1/2",
+            "mu": "1",
+            "mass": "1/2"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 110,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "1/2",
+            "mu": "1",
+            "mass": "1/4"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 111,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "3/4",
+            "mu": "1",
+            "mass": "1/4"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 112,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "3/4",
+            "mu": "7/4",
+            "mass": "1/4"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 127,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "3/4",
+            "mu": "7/4",
+            "mass": "1/4",
+            "remaining_prob": "1/4"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 131,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "3/4",
+            "mu": "7/4",
+            "mass": "1/4",
+            "remaining_prob": "1/4",
+            "max_allowed_d": "-1"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 133,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "3/4",
+            "mu": "7/4",
+            "mass": "1/4",
+            "remaining_prob": "1/4",
+            "start_idx": "2",
+            "max_allowed_d": "-1"
+          }
+        },
+        {
+          "event": "return",
+          "source_line": 138,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "3/4",
+            "mu": "7/4",
+            "mass": "1/4",
+            "remaining_prob": "1/4",
+            "start_idx": "2",
+            "max_allowed_d": "-1"
+          },
+          "returned": false
+        }
+      ]
+    },
+    {
+      "file": "Figure1_Performance_Comparison_Under_Prediction_Error.py",
+      "method": "is_feasible",
+      "h_binary_exact": "3",
+      "events": [
+        {
+          "event": "line",
+          "source_line": 79,
+          "state_before_line_or_at_return": {}
+        },
+        {
+          "event": "line",
+          "source_line": 80,
+          "state_before_line_or_at_return": {
+            "F": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 81,
+          "state_before_line_or_at_return": {
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 103,
+          "state_before_line_or_at_return": {
+            "e_i": "1",
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 106,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "1",
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 121,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "1",
+            "F": "1/4",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 103,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "2",
+            "F": "1/4",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 106,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "1/4",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 110,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "1/4",
+            "mu": "0",
+            "mass": "3/8"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 111,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "5/8",
+            "mu": "0",
+            "mass": "3/8"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 112,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "5/8",
+            "mu": "3/4",
+            "mass": "3/8"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 103,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "3",
+            "F": "5/8",
+            "mu": "3/4",
+            "mass": "3/8"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 106,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "5/8",
+            "mu": "3/4",
+            "mass": "3/8"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 111,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "1",
+            "mu": "3/4",
+            "mass": "3/8"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 112,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "1",
+            "mu": "15/8",
+            "mass": "3/8"
+          }
+        },
+        {
+          "event": "return",
+          "source_line": 113,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "1",
+            "mu": "15/8",
+            "mass": "3/8"
+          },
+          "returned": true
+        }
+      ]
+    },
+    {
+      "file": "Figure1_Performance_Comparison_Under_Prediction_Error.py",
+      "method": "construct_policy_pmf",
+      "h_binary_exact": "3",
+      "events": [
+        {
+          "event": "line",
+          "source_line": 156,
+          "state_before_line_or_at_return": {}
+        },
+        {
+          "event": "line",
+          "source_line": 158,
+          "state_before_line_or_at_return": {
+            "F": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 159,
+          "state_before_line_or_at_return": {
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 161,
+          "state_before_line_or_at_return": {
+            "F": "0",
+            "mu": "0",
+            "pmf": {}
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 181,
+          "state_before_line_or_at_return": {
+            "e_i": "1",
+            "F": "0",
+            "mu": "0",
+            "pmf": {}
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 186,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "1",
+            "F": "0",
+            "mu": "0",
+            "pmf": {}
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 207,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "1",
+            "F": "0",
+            "mu": "0",
+            "pmf": {
+              "1": "1/4"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 208,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "1",
+            "F": "1/4",
+            "mu": "0",
+            "pmf": {
+              "1": "1/4"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 181,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "2",
+            "F": "1/4",
+            "mu": "0",
+            "pmf": {
+              "1": "1/4"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 186,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "1/4",
+            "mu": "0",
+            "pmf": {
+              "1": "1/4"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 190,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "1/4",
+            "mu": "0",
+            "mass": "3/8",
+            "pmf": {
+              "1": "1/4"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 192,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "1/4",
+            "mu": "0",
+            "mass": "3/8",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 193,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "5/8",
+            "mu": "0",
+            "mass": "3/8",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 194,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "5/8",
+            "mu": "3/4",
+            "mass": "3/8",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 161,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "5/8",
+            "mu": "3/8",
+            "mass": "3/8",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 181,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "3",
+            "F": "5/8",
+            "mu": "3/8",
+            "mass": "3/8",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 186,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "5/8",
+            "mu": "3/8",
+            "mass": "3/8",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 190,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "5/8",
+            "mu": "3/8",
+            "mass": "9/16",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 192,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "5/8",
+            "mu": "3/8",
+            "mass": "9/16",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8",
+              "3": "9/16"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 193,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "19/16",
+            "mu": "3/8",
+            "mass": "9/16",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8",
+              "3": "9/16"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 194,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "19/16",
+            "mu": "33/16",
+            "mass": "9/16",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8",
+              "3": "9/16"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 196,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "19/16",
+            "mu": "33/16",
+            "mass": "9/16",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8",
+              "3": "9/16"
+            },
+            "total": "19/16"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 198,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "19/16",
+            "mu": "33/16",
+            "mass": "9/16",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8",
+              "3": "3/8"
+            },
+            "total": "19/16"
+          }
+        },
+        {
+          "event": "return",
+          "source_line": 198,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "19/16",
+            "mu": "33/16",
+            "mass": "9/16",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8",
+              "3": "3/8"
+            },
+            "total": "19/16"
+          },
+          "returned": {
+            "1": "1/4",
+            "2": "3/8",
+            "3": "3/8"
+          }
+        }
+      ]
+    },
+    {
+      "file": "Table2_Consistency_Comparison_under_Fixed_Robustness.py",
+      "method": "is_feasible",
+      "h_binary_exact": "3152519739159347/1125899906842624",
+      "events": [
+        {
+          "event": "line",
+          "source_line": 82,
+          "state_before_line_or_at_return": {}
+        },
+        {
+          "event": "line",
+          "source_line": 83,
+          "state_before_line_or_at_return": {
+            "F": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 84,
+          "state_before_line_or_at_return": {
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 106,
+          "state_before_line_or_at_return": {
+            "e_i": "0",
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 109,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "0",
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 106,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "2",
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 109,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 113,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "0",
+            "mu": "0",
+            "mass": "1/2"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 114,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "1/2",
+            "mu": "0",
+            "mass": "1/2"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 115,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "1/2",
+            "mu": "1",
+            "mass": "1/2"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 106,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "3",
+            "F": "1/2",
+            "mu": "1",
+            "mass": "1/2"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 109,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "1/2",
+            "mu": "1",
+            "mass": "1/2"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 113,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "1/2",
+            "mu": "1",
+            "mass": "1/4"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 114,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "3/4",
+            "mu": "1",
+            "mass": "1/4"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 115,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "3/4",
+            "mu": "7/4",
+            "mass": "1/4"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 130,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "3/4",
+            "mu": "7/4",
+            "mass": "1/4",
+            "remaining_prob": "1/4"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 134,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "3/4",
+            "mu": "7/4",
+            "mass": "1/4",
+            "remaining_prob": "1/4",
+            "max_allowed_d": "-1"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 136,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "3/4",
+            "mu": "7/4",
+            "mass": "1/4",
+            "remaining_prob": "1/4",
+            "start_idx": "2",
+            "max_allowed_d": "-1"
+          }
+        },
+        {
+          "event": "return",
+          "source_line": 141,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "3/4",
+            "mu": "7/4",
+            "mass": "1/4",
+            "remaining_prob": "1/4",
+            "start_idx": "2",
+            "max_allowed_d": "-1"
+          },
+          "returned": false
+        }
+      ]
+    },
+    {
+      "file": "Table2_Consistency_Comparison_under_Fixed_Robustness.py",
+      "method": "is_feasible",
+      "h_binary_exact": "3",
+      "events": [
+        {
+          "event": "line",
+          "source_line": 82,
+          "state_before_line_or_at_return": {}
+        },
+        {
+          "event": "line",
+          "source_line": 83,
+          "state_before_line_or_at_return": {
+            "F": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 84,
+          "state_before_line_or_at_return": {
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 106,
+          "state_before_line_or_at_return": {
+            "e_i": "1",
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 109,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "1",
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 124,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "1",
+            "F": "1/4",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 106,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "2",
+            "F": "1/4",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 109,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "1/4",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 113,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "1/4",
+            "mu": "0",
+            "mass": "3/8"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 114,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "5/8",
+            "mu": "0",
+            "mass": "3/8"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 115,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "5/8",
+            "mu": "3/4",
+            "mass": "3/8"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 106,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "3",
+            "F": "5/8",
+            "mu": "3/4",
+            "mass": "3/8"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 109,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "5/8",
+            "mu": "3/4",
+            "mass": "3/8"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 114,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "1",
+            "mu": "3/4",
+            "mass": "3/8"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 115,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "1",
+            "mu": "15/8",
+            "mass": "3/8"
+          }
+        },
+        {
+          "event": "return",
+          "source_line": 116,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "1",
+            "mu": "15/8",
+            "mass": "3/8"
+          },
+          "returned": true
+        }
+      ]
+    },
+    {
+      "file": "Table2_Consistency_Comparison_under_Fixed_Robustness.py",
+      "method": "construct_policy_pmf",
+      "h_binary_exact": "3",
+      "events": [
+        {
+          "event": "line",
+          "source_line": 159,
+          "state_before_line_or_at_return": {}
+        },
+        {
+          "event": "line",
+          "source_line": 161,
+          "state_before_line_or_at_return": {
+            "F": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 162,
+          "state_before_line_or_at_return": {
+            "F": "0",
+            "mu": "0"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 164,
+          "state_before_line_or_at_return": {
+            "F": "0",
+            "mu": "0",
+            "pmf": {}
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 184,
+          "state_before_line_or_at_return": {
+            "e_i": "1",
+            "F": "0",
+            "mu": "0",
+            "pmf": {}
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 189,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "1",
+            "F": "0",
+            "mu": "0",
+            "pmf": {}
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 210,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "1",
+            "F": "0",
+            "mu": "0",
+            "pmf": {
+              "1": "1/4"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 211,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "1",
+            "F": "1/4",
+            "mu": "0",
+            "pmf": {
+              "1": "1/4"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 184,
+          "state_before_line_or_at_return": {
+            "s": "0",
+            "e_i": "2",
+            "F": "1/4",
+            "mu": "0",
+            "pmf": {
+              "1": "1/4"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 189,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "1/4",
+            "mu": "0",
+            "pmf": {
+              "1": "1/4"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 193,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "1/4",
+            "mu": "0",
+            "mass": "3/8",
+            "pmf": {
+              "1": "1/4"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 195,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "1/4",
+            "mu": "0",
+            "mass": "3/8",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 196,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "5/8",
+            "mu": "0",
+            "mass": "3/8",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 197,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "5/8",
+            "mu": "3/4",
+            "mass": "3/8",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 164,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "2",
+            "F": "5/8",
+            "mu": "3/8",
+            "mass": "3/8",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 184,
+          "state_before_line_or_at_return": {
+            "s": "2",
+            "e_i": "3",
+            "F": "5/8",
+            "mu": "3/8",
+            "mass": "3/8",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 189,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "5/8",
+            "mu": "3/8",
+            "mass": "3/8",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 193,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "5/8",
+            "mu": "3/8",
+            "mass": "9/16",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 195,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "5/8",
+            "mu": "3/8",
+            "mass": "9/16",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8",
+              "3": "9/16"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 196,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "19/16",
+            "mu": "3/8",
+            "mass": "9/16",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8",
+              "3": "9/16"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 197,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "19/16",
+            "mu": "33/16",
+            "mass": "9/16",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8",
+              "3": "9/16"
+            }
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 199,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "19/16",
+            "mu": "33/16",
+            "mass": "9/16",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8",
+              "3": "9/16"
+            },
+            "total": "19/16"
+          }
+        },
+        {
+          "event": "line",
+          "source_line": 201,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "19/16",
+            "mu": "33/16",
+            "mass": "9/16",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8",
+              "3": "3/8"
+            },
+            "total": "19/16"
+          }
+        },
+        {
+          "event": "return",
+          "source_line": 201,
+          "state_before_line_or_at_return": {
+            "s": "3",
+            "e_i": "3",
+            "F": "19/16",
+            "mu": "33/16",
+            "mass": "9/16",
+            "pmf": {
+              "1": "1/4",
+              "2": "3/8",
+              "3": "3/8"
+            },
+            "total": "19/16"
+          },
+          "returned": {
+            "1": "1/4",
+            "2": "3/8",
+            "3": "3/8"
+          }
+        }
+      ]
+    }
+  ],
+  "trace_limit": "Line events show state before the named line; return events show final locals. Internal mu is not assumed to be the true model moment.",
+  "infinite_robustness_check": "Direct costs through max(3,max support); all later costs equal 3+moment <=9/2."
+}

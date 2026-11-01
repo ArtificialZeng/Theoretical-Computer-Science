@@ -1,0 +1,26 @@
+{
+  "job_id": "c002-coverage-research-8e44b8ae65fb",
+  "role": "research",
+  "pass": 1,
+  "started_utc": "2026-10-31 21:28:51 UTC",
+  "recorded_finish_utc": "2026-10-31 21:38:13 UTC",
+  "elapsed_wall_seconds": 562,
+  "wall_ceiling_seconds": 1500,
+  "delegated_agents": 0,
+  "other_codex_processes": 0,
+  "background_workers": 0,
+  "deterministic_checker_elapsed_seconds": 13.919,
+  "token_usage": "not available to worker; no estimate substituted",
+  "outcome": "candidate",
+  "operational_events": [
+    {
+      "label": "access-blocked",
+      "detail": "Command-line urllib attempt for the official FSTTCS 2011 primary PDF failed on name resolution; web PDF inspection succeeded. No mathematical conclusion drawn from the access failure."
+    },
+    {
+      "label": "edit-corrected",
+      "detail": "An apply_patch batch attempting delete-and-add of checkpoint.md in one patch was rejected before writing. The edits were reapplied successfully with a checkpoint replacement; mathematical evidence was unaffected."
+    }
+  ],
+  "scope": "One bounded job only; no scheduler-state writes, fresh-review impersonation, manuscript/PDF authoring, or external submission."
+}

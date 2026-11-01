@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python",
+    "/Users/mac/.codex/skills/4prove-or-disprove-math/scripts/release_gate.py",
+    "check-math",
+    "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/research/queue/projects/privacy-interpolation"
+  ],
+  "exit_code": 0,
+  "result": {
+    "ok": true,
+    "snapshot_digest": "932c1ba086d51ef9c99afb17ae2046a2a43a19517b9778f2a2a06e751683f641",
+    "referee_job_id": "privacy-interpolation-referee-4ed762972744"
+  },
+  "stderr": ""
+}

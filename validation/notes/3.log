@@ -1,0 +1,2 @@
+gcc drat-trim.c -std=c99 -O2 -o drat-trim
+gcc lrat-check.c -std=c99 -DLONGTYPE -O2 -o lrat-check

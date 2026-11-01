@@ -1,0 +1,77 @@
+{
+  "project": "privacy-interpolation",
+  "paper_number": 2,
+  "title": "Mandatory Excursions in Privacy-Constrained Probability Paths",
+  "pages": 7,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    },
+    {
+      "name": "Jiayin Cao",
+      "affiliation": "Ningbo University",
+      "email": "2795820153@qq.com"
+    },
+    {
+      "name": "Weinan Dai",
+      "affiliation": "Zhejiang University",
+      "email": "21725058@zju.edu.cn"
+    },
+    {
+      "name": "Rui Wang",
+      "affiliation": "Nanchang Institute of Technology",
+      "email": "2002007@nut.edu.cn"
+    },
+    {
+      "name": "Fei Ding",
+      "affiliation": "Alibaba Group",
+      "email": "dingfei@email.ncu.edu.cn"
+    }
+  ],
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "pdf": "paper2_submission.pdf",
+  "pdf_sha256": "8ec2d595f7e1285ce79dc26f46caadf881d9065bce1928a7865f9d81d91b2d43",
+  "source_archive": "paper2_source_and_reproducibility.zip",
+  "source_archive_sha256": "dfea246476d1a5b57a549ea309c146872017e8ee7c65f0cb96f136bc7631342a",
+  "citation_verdict": "accept",
+  "citation_limitations": [],
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "8ec2d595f7e1285ce79dc26f46caadf881d9065bce1928a7865f9d81d91b2d43"
+    },
+    "kind": "result-note",
+    "manuscript_digest": "047b8dae44c9bc2fafeacc831a6d376cc7f4685248bdddf89de7677467ebba3a",
+    "original_status": "unresolved",
+    "pages": 7,
+    "pdf_digest": "8ec2d595f7e1285ce79dc26f46caadf881d9065bce1928a7865f9d81d91b2d43",
+    "provenance": {
+      "audit/build.json": "13e84814bfa40a89921589cdf3d23fa685d7ee759e5e50822d3fa6758d21ba7f",
+      "audit/build.md": "7d149a8c0765e01517cc3b6109293497a7e35b26a00b6e3d427e4b813e0bfbef",
+      "audit/citations.json": "6f037f09d90bebfb7a5e73d148cb1d80f25944d037ffde9d19012e1c9e2e7fda",
+      "audit/citations.md": "c9611e5bd1ff3ef01e1eec99ae1a57fd3c2cb1f1451a7429fdc8fe852c24e497",
+      "audit/math.json": "e10ae519f4c824fae892c9fcbc3e47bba486f28bf5a29d3da61b2b968d9549bf",
+      "audit/math.md": "74037ef05d0a8b71575b40fa3c2486794a8a8664b1449cd7668dcc3464f824dc",
+      "audit/visual.json": "45cdc1a672c02e3018b55e8756e74397775c68c4e253779c2ef899e31260d991",
+      "audit/visual.md": "c7a517a0c0b4289676d1b5340ddd06d1b2ae5b1cf5d3f024f42f17e1a9b5ad70",
+      "jobs/privacy-interpolation-referee-4ed762972744/role.json": "750c17bd7a1db391ef83bd37969876383cc80a5644b527749206de727b1e3f43",
+      "jobs/privacy-interpolation-release-7c62cfdb7be8/role.json": "114e07063defc8686ea3eca7bf983e1a59d929795673f89628f13a38ab645c09",
+      "jobs/privacy-interpolation-research-294f008bff48/role.json": "20bc39ca40cdc6a0af0e38d820337be2147ce506fea0abcd31c75a46bc683cbf",
+      "manuscript/main.log": "25b9ca29d1131394174e76b716b1b3e8839657083b2c4d4b1b2fcf9e2a386a04"
+    },
+    "schema": 1,
+    "snapshot_digest": "932c1ba086d51ef9c99afb17ae2046a2a43a19517b9778f2a2a06e751683f641"
+  },
+  "external_submission_performed": false
+}

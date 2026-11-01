@@ -1,0 +1,19 @@
+{
+  "job_id": "c002-coverage-referee-3e90f78a9294",
+  "all_assertions_passed": true,
+  "method": "Fresh exact Fraction enumeration; no submitted code imported or executed.",
+  "seed": 391057,
+  "counts": {
+    "serialized_certificates": 7,
+    "hall_subfamilies": 4111,
+    "affine_laws": 24,
+    "class_matrices": 45,
+    "direct_states": 6900,
+    "column_checks": 291,
+    "generic_exhaustive_rounding_cases": 160,
+    "multi_item_block_features": 5,
+    "repeated_tagged_cases": 2
+  },
+  "source_sha256": "b79ed29f77420ec62a957e727b934deb6b9435b41ed86deaa2c8d77c01b66f9d",
+  "limitations": "Finite diagnostics only; the all-parameter conclusion rests on the written proof audit. No exhaustive full-product enumeration for the two largest serialized fixtures."
+}

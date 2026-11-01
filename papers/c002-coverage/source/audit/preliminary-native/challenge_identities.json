@@ -1,0 +1,15 @@
+{
+  "kind": "independent finite evidence; not proof or acceptance",
+  "native_agent": "/root/coverage_route_challenge",
+  "seed": 118037,
+  "all_assertions_passed": true,
+  "counts": {
+    "families": 43,
+    "large_occurrences": 22,
+    "hall_subfamilies": 30,
+    "feature_class_color_identities": 1449,
+    "coefficient_columns": 641,
+    "repeated_occurrence_families": 15,
+    "multiple_same_block_tests": 6
+  }
+}

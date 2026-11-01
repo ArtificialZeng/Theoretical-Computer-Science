@@ -1,0 +1,91 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{3}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter does
+%%% not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+\makeatletter
+\@ifundefined{NAT@parse@date}{}{\let\NAT@parse@date@orig\NAT@parse@date}
+\@ifundefined{NAT@parse@date}{}{\def\NAT@parse@date#1#2#3#4#5#6@@{\NAT@parse@date@orig#1#2#3#4#5#6@@\def\NAT@tempyear{0000}\def\NAT@tempexlab{{?}}\ifx\NAT@year\NAT@tempyear\ifx\NAT@exlab\NAT@tempexlab\def\NAT@date{[n.\,d.]}\else\edef\NAT@date{[n.\,d.]\NAT@exlab}\fi\fi}}
+\makeatother
+
+\bibitem[Ananichev(2017)]%
+        {A2017}
+\bibfield{author}{\bibinfo{person}{D.~S. Ananichev}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{A New Lower Bound for Reset Threshold of
+  Synchronizing Automata with Sink State}.
+\newblock \bibinfo{howpublished}{arXiv:1701.07954v1}.
+\newblock
+\href{https://doi.org/10.48550/arXiv.1701.07954}{doi:\nolinkurl{10.48550/arXiv.1701.07954}}
+\newblock
+\shownote{Section 2, Lemma 2.1 reproduces Vorel's appended-tail lemma}.
+
+
+\bibitem[Kiefer and Ryzhikov(2025)]%
+        {KR2025}
+\bibfield{author}{\bibinfo{person}{Stefan Kiefer} {and} \bibinfo{person}{Andrew
+  Ryzhikov}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{The Complexity of Reachability Problems in Strongly
+  Connected Finite Automata}. In \bibinfo{booktitle}{\emph{50th International
+  Symposium on Mathematical Foundations of Computer Science (MFCS 2025)}}
+  \emph{(\bibinfo{series}{Leibniz International Proceedings in Informatics
+  (LIPIcs)}, Vol.~\bibinfo{volume}{345})},
+  \bibfield{editor}{\bibinfo{person}{Pawe{\l} Gawrychowski},
+  \bibinfo{person}{Filip Mazowiecki}, {and} \bibinfo{person}{Micha{\l}
+  Skrzypczak}} (Eds.). \bibinfo{publisher}{Schloss Dagstuhl -- Leibniz-Zentrum
+  f{\"u}r Informatik}, \bibinfo{address}{Dagstuhl, Germany},
+  \bibinfo{pages}{62:1--62:19}.
+\newblock
+\href{https://doi.org/10.4230/LIPIcs.MFCS.2025.62}{doi:\nolinkurl{10.4230/LIPIcs.MFCS.2025.62}}
+
+
+\bibitem[Ryzhikov(2024)]%
+        {R2024}
+\bibfield{author}{\bibinfo{person}{Andrew Ryzhikov}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{On Shortest Products for Nonnegative Matrix
+  Mortality}. In \bibinfo{booktitle}{\emph{Reachability Problems: 18th
+  International Conference, RP 2024}} \emph{(\bibinfo{series}{Lecture Notes in
+  Computer Science}, Vol.~\bibinfo{volume}{15050})},
+  \bibfield{editor}{\bibinfo{person}{Laura Kov{\'a}cs} {and}
+  \bibinfo{person}{Ana Sokolova}} (Eds.). \bibinfo{publisher}{Springer},
+  \bibinfo{address}{Cham, Switzerland}, \bibinfo{pages}{104--119}.
+\newblock
+\href{https://doi.org/10.1007/978-3-031-72621-7_8}{doi:\nolinkurl{10.1007/978-3-031-72621-7_8}}
+\newblock
+\shownote{Corrected author version: arXiv:2405.19622v4, 15 June 2025}.
+
+
+\end{thebibliography}

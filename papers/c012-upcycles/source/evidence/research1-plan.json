@@ -1,0 +1,16 @@
+{
+  "job_id": "c012-upcycles-research-cfe911474960",
+  "research_pass": 1,
+  "job_budget_seconds": 1500,
+  "first_observed_clock_utc": "2026-11-01T04:32:47+00:00",
+  "solver": "cadical 3.0.1",
+  "target_masks": ["**......", "*.*.....", "*..*....", "*...*...", "***.....", "**.*....", "**..*...", "*.*.*..."],
+  "per_target_wall_seconds": 60,
+  "external_kill_margin_seconds": 2,
+  "target_solver_wall_budget_seconds": 480,
+  "symmetries": "Only rotations/reversal for mask enumeration; global binary complement fixes first ordinary bit to 0 for unpinned search. No arbitrary coordinate permutations.",
+  "encoding": "One Boolean per ordinary cyclic position. Each shared XOR auxiliary is equivalent to the XOR of its two global position variables using four clauses. Pairwise window clauses require a genuine ordinary mismatch. Identical-position XORs are false and omitted.",
+  "positive_gate": "Every SAT model must satisfy every CNF clause and independent literal expansion. Recompute length, d, n-periodicity and all 2^n counts.",
+  "negative_limit": "UNSAT of one mask concerns only that finite encoding. Timeout is unknown. Full existential question remains unresolved without a positive witness or unrestricted proof.",
+  "after_failed_targets": "Extract a structural obstruction or explicit minimal kernel, or change construction. Do not request a blind time-cap increase. No manuscript or PDF for unresolved work."
+}

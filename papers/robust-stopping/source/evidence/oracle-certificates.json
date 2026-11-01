@@ -1,0 +1,15 @@
+{
+  "job_id": "robust-stopping-research-a43d444f406e",
+  "status": "all serialized rational inequalities verified",
+  "counts": {
+    "evidence/oracle-test-cases.json": 611,
+    "evidence/bisection-test-cases.json": 3,
+    "evidence/linear-oracle-test-cases.json": 144
+  },
+  "hashes": {
+    "evidence/oracle-test-cases.json": "467f1cbc954fcf9c1a2dd3274a52ae05fbd064e58b719216fd03433f44421913",
+    "evidence/bisection-test-cases.json": "ca3970e0e9073ec7459327e3bee7183c300051ee5461729f0613d3bad1ec2b5c",
+    "evidence/linear-oracle-test-cases.json": "693104cb38c0527ca9811a94b6fe6f9850c0adbdfa6107c6a6609e4889f42376"
+  },
+  "meaning": "Same-worker independent arithmetic checker; no fresh referee"
+}

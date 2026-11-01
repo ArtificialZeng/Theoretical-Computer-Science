@@ -1,0 +1,67 @@
+{
+  "job_id": "privacy-interpolation-referee-4ed762972744",
+  "checked_on_utc": "2026-10-30",
+  "method": "Fresh read-only primary-source inspection and bounded equivalent-statement searches; no priority guarantee.",
+  "sources": [
+    {
+      "title": "Private Algorithms Can Always Be Extended",
+      "url": "https://arxiv.org/html/1810.12518v2",
+      "passages": "Proposition 2.1 and its normalized-envelope construction",
+      "comparison": "General factor-two extension is prior theory. It does not state the optimized reservoir peak or the exact cost of coordinate endpoint-range restrictions."
+    },
+    {
+      "title": "Gaussian Differential Privacy",
+      "url": "https://arxiv.org/html/1905.02383v3",
+      "passages": "Theorem 2.10, Theorem 2.14, Proposition 2.15 and the latter proof",
+      "comparison": "Blackwell comparison and the continuous-group Laplace limit are credited background. None of the three accepted proofs needs a new unrestricted-reachability claim."
+    },
+    {
+      "title": "Unique geodesics for Thompson's metric",
+      "url": "https://aif.centre-mersenne.org/item/10.5802/aif.2932.pdf",
+      "metadata_url": "https://numdam.org/articles/10.5802/aif.2932/",
+      "passages": "Theorems 4.3, 5.1 and 5.2",
+      "comparison": "Cone Thompson uniqueness and section Hilbert uniqueness have different hypotheses and metrics. The candidate's fixed-time uniqueness follows directly from saturation of both changing binary coordinates, not from an ambient-space uniqueness inference.",
+      "access": "Primary PDF text accessible. Screenshot requests returned cache misses; no visual review of this source is claimed."
+    },
+    {
+      "title": "Interpolation-Based Optimization for Enforcing lp-Norm Metric Differential Privacy in Continuous and Fine-Grained Domains",
+      "url": "https://arxiv.org/abs/2601.09946",
+      "primary_cache": "literature/privacy-interpolation.html",
+      "passages": "Definitions 5 and 6, Proposition 3, Appendix B.5",
+      "comparison": "Normalization is explicit and Proposition 3 accounts for its factor-two cost. This does not assert that normalized coordinates remain between their endpoint probabilities. The frozen theorem makes no contrary attribution."
+    },
+    {
+      "title": "A Graph-Based Framework for Extending Metric Differential Privacy Mechanisms",
+      "url": "https://arxiv.org/html/2609.14125v1",
+      "primary_cache": "literature/privacy-framework.html",
+      "passages": "Section 5.2 calibrated pre-normalization budget; Appendix E endpoint envelopes and normalized log-convex construction",
+      "comparison": "Endpoint envelopes and budget calibration are prior ingredients. The candidate's additional optimization is a cap on an individual normalized output throughout an entire path. No new general envelope principle is accepted."
+    },
+    {
+      "title": "Software for the Thompson and Funk Polygonal Geometry",
+      "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol332-socg2025/html/LIPIcs.SoCG.2025.82/LIPIcs.SoCG.2025.82.html",
+      "passages": "Definitions 1, 4 and 5; Lemma 6",
+      "comparison": "Maximum forward/reverse Funk distance and ball intersections are prior constructions. They do not supply the path-constrained frontier. Endpoint distance and the length metric of its infinitesimal symmetrization must remain distinguished."
+    },
+    {
+      "title": "Shape And Structure Preserving Differential Privacy",
+      "url": "https://papers.neurips.cc/paper_files/paper/2022/file/9c84feb75eae1ef6389f31b3ef050b6a-Paper-Conference.pdf",
+      "passages": "Abstract and introduction",
+      "comparison": "These passages concern private estimation on Riemannian manifolds and preservation of geometric data shape, rather than coordinate endpoint ranges along probability paths. No full-paper exclusion is claimed."
+    },
+    {
+      "title": "Reachable sets under Kolmogorov dynamics in the probability simplex",
+      "url": "https://arxiv.org/html/2609.38382v1",
+      "passages": "Theorem 5, Proposition 6, Theorem 8 and Corollary 8.1",
+      "comparison": "A fresh additional comparison: its diagonal-infinity control gives the one-sided instantaneous cost max over negative velocities of |v_i|/p_i. The candidate uses the maximum of that cost in both velocity directions before taking path length. Symmetrizing the optimized endpoint quasi-distance does not perform this operation. No all-budget peak or sharp endpoint-range penalty is stated in these passages."
+    }
+  ],
+  "search_families": [
+    "Thompson metric probability simplex intrinsic length and geodesics",
+    "Finsler probability simplex infinity metric",
+    "coordinate-monotone and range-preserving differential privacy interpolation",
+    "mandatory probability excursions and interpolation overshoot",
+    "max-relative entropy geodesic probability paths"
+  ],
+  "limits": "No equivalent frontier or exact shape-penalty statement was located in these inspected primary passages and search results. Older constrained-control and function-algebra literature were not exhaustively screened. Failed access is not evidence of nonexistence."
+}

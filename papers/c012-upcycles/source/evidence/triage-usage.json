@@ -1,0 +1,20 @@
+{
+  "job_id": "c012-upcycles-triage-8176c8933a92",
+  "role": "triage",
+  "budget_seconds": 480,
+  "first_observed_clock_utc": "2026-11-01T04:27:41+00:00",
+  "completed_at_utc": "2026-11-01T04:31:56.917424+00:00",
+  "elapsed_since_first_observed_clock_seconds": 255.917424,
+  "timing_limit": "First observed tool clock is not an exact process start timestamp. Job finished well before the 8-minute ceiling.",
+  "research_passes_consumed": 0,
+  "sat_solver_runs": 0,
+  "subagents_or_background_workers_started": 0,
+  "token_usage": "not exposed to worker; no invented count",
+  "deterministic_checks": "One completed sanity-script run: eight known positives, four intentional negatives, 64 fixed-frame assignments, eight XOR rows, all 84 masks. pdftotext extraction and exact cmp passed.",
+  "operational_failures": [
+    "Personal-site web open: cache miss, not relied on.",
+    "Initial registry filename glob had no match; actual queue subsequently located."
+  ],
+  "mathematical_failed_routes": [],
+  "dependency_changes": []
+}

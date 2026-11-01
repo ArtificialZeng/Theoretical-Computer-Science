@@ -1,0 +1,10 @@
+{
+  "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+  "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+  "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+  "bytes": 15106903,
+  "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+  "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+  "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+  "previous_ctan_attempts": []
+}

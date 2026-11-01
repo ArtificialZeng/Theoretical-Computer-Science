@@ -1,0 +1,28 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{BCF{\etalchar{+}}25}
+
+\bibitem[BCF{\etalchar{+}}25]{BCFLL25}
+Kshipra Bhawalkar, Yang Cai, Zhe Feng, Christopher Liaw, and Tao Lin.
+\newblock A unified approach to submodular maximization under noise, 2025.
+\newblock arXiv:2510.21128v2.
+
+\bibitem[HS16]{HorelSinger16}
+Thibaut Horel and Yaron Singer.
+\newblock Maximization of approximately submodular functions.
+\newblock In {\em Advances in Neural Information Processing Systems},
+  volume~29, 2016.
+
+\bibitem[HS17]{HassidimSinger17}
+Avinatan Hassidim and Yaron Singer.
+\newblock Submodular optimization under noise.
+\newblock In {\em Proceedings of the 2017 Conference on Learning Theory},
+  volume~65 of {\em Proceedings of Machine Learning Research}, pages
+  1069--1122. PMLR, 2017.
+
+\bibitem[SVW14]{SVW14}
+Maxim Sviridenko, Jan Vondr{\'a}k, and Justin Ward.
+\newblock Optimal approximation for submodular and supermodular optimization
+  with bounded curvature, 2014.
+\newblock arXiv:1311.4728v3.
+
+\end{thebibliography}

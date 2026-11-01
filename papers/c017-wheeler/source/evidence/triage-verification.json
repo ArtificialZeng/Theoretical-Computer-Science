@@ -1,0 +1,28 @@
+{
+  "job_id": "c017-wheeler-triage-b86cccc47ffc",
+  "phase": "triage",
+  "completed_at_utc": "2026-11-01T09:57:00.649725+00:00",
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "source_sha256": "40fc8e967aeefd233cb62ffd0f70d77e772fafbdeb6086724c4c2ab5f591106d",
+  "source_unchanged": true,
+  "outer_root_note_present": false,
+  "research_passes_observed": 0,
+  "research_passes_modified": false,
+  "new_computational_search": false,
+  "manuscript_or_pdf_authored": false,
+  "artifact_sha256": {
+    "problem.md": "0dff15784f3a81684024d707923cd8d7af393a67156ae50edf7b8cef824cb5e1",
+    "checkpoint.md": "5f8a8185e0ec41c9724b9dac0dd5e4ab9be81700431fb605d8748f810904d9af",
+    "evidence/triage-literature.md": "9c21639d0cdecc76eab1f921d9d7e97c3730d1f436fb751222d25e0450be0432",
+    "evidence/triage-baseline.md": "c22ce6434ebd03884bf23d4d9f4afdffbe36062427332cc4bd8ddf0300bdbf32",
+    "evidence/first-test.md": "5984788f4ef97d066d086a82351f4eb0c9dc763931c3de50acd2bf73b783b2c5"
+  },
+  "limitations": [
+    "Bounded literature search is not exhaustive priority verification.",
+    "Pumping necessity and computable size bound unproved.",
+    "Universal-n output comparison routine unproved.",
+    "No mathematical referee or publication decision performed."
+  ]
+}

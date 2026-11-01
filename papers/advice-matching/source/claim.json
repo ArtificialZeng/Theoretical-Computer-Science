@@ -1,0 +1,21 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "In the exact model frozen in source.md and problem.md, with a simple unweighted realized bipartite graph, both part sizes n, maximum realized degree at most two on both sides, arbitrary vertex-by-vertex online arrival order, irrevocable integral matching, and an injective partial advice matching table whose pairs may be absent, fix graph, order and advice independently of the algorithm's private coins. For every requested consistency c in [0,1], where consistency is required for every maximum realized matching table, the maximum achievable robustness is min{3/4,3/2-c}. On the 2-regular subclass it is min{7/8,7/4-c}. Guarantees are uniform over all finite n and have no additive loss. Both frontiers have complete proposed analytic proofs; this is a candidate awaiting fresh referee scrutiny, not mathematical acceptance. No adaptive-adversary, fractional, weighted, or online-degree-only claim is made.",
+  "contribution": "Proposed exact sequential matching-advice frontier characterization, with a self-contained path-component analysis and an advice-preserving exhausted-neighbor priority rule. The priority rule is optimal for every maximum advised matching; on cycles it retains 3/4 robustness under arbitrary wrong advice. A common-table 8-cycle bound matches interpolation with the known 7/8 cycle baseline. The Z obstruction, the cycle advice-free optimum and its orientation method, the priority baseline, and random mixing are credited as known. No equivalent advice-frontier statement was found in the bounded primary-source screen. Because the argument is short and several ingredients are known, the fresh referee must separately assess whether the advice lemma and frontier are substantive rather than routine corollaries; no novelty or venue-fit certification is asserted.",
+  "proposer_job_id": "advice-matching-research-eee7dbe89d57",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "requirements.md",
+    "evidence/frontier-proof.md",
+    "evidence/check_frontiers.py",
+    "evidence/frontier-checks.json",
+    "evidence/known-obstruction.md",
+    "evidence/check_obstruction.py",
+    "evidence/obstruction-check.json",
+    "literature/research-comparison.md",
+    "literature/triage-sources.md",
+    "literature/root-additional-search.md"
+  ]
+}

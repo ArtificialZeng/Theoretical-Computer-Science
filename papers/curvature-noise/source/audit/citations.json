@@ -1,0 +1,27 @@
+{
+  "verdict": "accept",
+  "job_id": "curvature-noise-release-132a90b124b3",
+  "snapshot_digest": "52edefc6f6361e426065ff407f44843ddc5a208b768db3f0cb7b916dd62ef407",
+  "manuscript_digest": "461b304d23fe9953c8530bace0f1fd06480deecffd645e16b5608b67b7f21d47",
+  "pdf_digest": "2a3b071bfdd103f2e2bbbde6f590ea75ee26229a96b46b0c79b3e02d754cf012",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/README-ZH.md",
+    "manuscript/REPRODUCIBILITY.md",
+    "manuscript/SOURCE-PROVENANCE.json",
+    "manuscript/acmart.cls",
+    "manuscript/alpha.bst",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/reproduce.py",
+    "manuscript/vendor/README-acmart",
+    "manuscript/vendor/acmart.dtx"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "Complete eleven-file publication dependency closure, four cited records and substantive primary passages (Horel--Singer Section 2.1/Proposition 8/Appendix D; SVW Theorems 6.1/7.1 and modular shift; Hassidim--Singer Theorem 8/Section 5; BCFLL Section 2), all extracted/rendered references, accepted mathematical scope, and bounded novelty language checked on 2026-10-31. No authoritative user Excel/BibTeX list was supplied, as literature/user_bibliography_check.md records; metadata basis is accessible primary sources. An uncited adjacent fulltext comparison remains limited in the accepted dossier; no unsupported priority claim is made. All four cited records and necessary attributions verified; no unverified cited record remains.",
+  "citation_audit_method": "citation-check-skill-advisory-plus-primary-source-manual",
+  "metadata_basis": "primary_source_records",
+  "extraction_report": "audit/release-extraction.md"
+}

@@ -1,0 +1,24 @@
+{
+  "paper_number": 1,
+  "title": "Coverage Correlation Gaps under Graph-Constrained Pairwise Independence",
+  "archive_sha256": "15c6e43066ef6f93af8220da721b8fd9f32d6a096307cc1547f427fea44c679a",
+  "delivered_pdf_sha256": "a1fb1c406f6c59c5196dbe1481bb9ea12e5528d261f6be3fe228ee9d3f8d1bca",
+  "supplied_publication_inputs_rehashed": 22,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/tmp/delivery-check/paper1-ypv99tku/paper1_source",
+  "rebuilt_pages": 8,
+  "rebuilt_pdf_text_matches_delivery": true,
+  "rebuilt_page_renders_match_delivery": true,
+  "finite_reproduction": {
+    "entry_point": "python3 manuscript/reproduce.py",
+    "scope": "finite verification; infinite statements have analytic proofs in the article",
+    "output": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/tmp/delivery-check/paper1-ypv99tku/finite-reproduced.json",
+    "five_exact_optima": [
+      "7/8",
+      "5/6",
+      "5/6",
+      "65/81",
+      "73/81"
+    ]
+  },
+  "scope": "Archive/build/finite reproducibility, not a new mathematical or novelty review."
+}

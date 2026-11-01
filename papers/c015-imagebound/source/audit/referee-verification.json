@@ -1,0 +1,460 @@
+{
+  "job_id": "c015-imagebound-referee-c91c0d194005",
+  "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+  "frozen_integrity_verified": true,
+  "finite_scope": "22 fixed automata: complete singleton/global closures, every boundary subset and phase residue; 836 arithmetic samples. These finite checks do not prove the infinite theorem.",
+  "replayed_cases": [
+    {
+      "m": 2,
+      "lengths": [
+        3,
+        5
+      ],
+      "n": 10,
+      "k": 2,
+      "L": 15,
+      "row_closure_count": 26,
+      "global_closure_count": 65,
+      "shortest_mortal_length": 48,
+      "shortest_word": "baaaaaaaaaaaaaabaaaaaaaaaaaaaababaaaaaaaaaaaaaab",
+      "lower_bound": 46,
+      "upper_bound": 50,
+      "potential_configurations_and_residues": 240,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "c6031c182245f671cc078cc2e29c72f9b0f179b3cfbf3de8098953a3e5a2303a",
+      "complete_row_closure_sha256": "49d16157f0e6ebb6cc966a1ef52b523a3d1316d59750efb60ec62351fefc5a99"
+    },
+    {
+      "m": 2,
+      "lengths": [
+        2,
+        3,
+        5
+      ],
+      "n": 12,
+      "k": 3,
+      "L": 30,
+      "row_closure_count": 43,
+      "global_closure_count": 125,
+      "shortest_mortal_length": 91,
+      "shortest_word": "baaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+      "lower_bound": 91,
+      "upper_bound": 95,
+      "potential_configurations_and_residues": 240,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "94079746559341a47684be1e0a5b8e2955cf9e81f818a4af8b1d0aa20676cff6",
+      "complete_row_closure_sha256": "3f7a09174b4ee8d042976670b1e456067b4fc02ead68a21448d037ace4b3ea5a"
+    },
+    {
+      "m": 2,
+      "lengths": [
+        3,
+        4,
+        5
+      ],
+      "n": 14,
+      "k": 3,
+      "L": 60,
+      "row_closure_count": 75,
+      "global_closure_count": 245,
+      "shortest_mortal_length": 181,
+      "shortest_word": "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+      "lower_bound": 181,
+      "upper_bound": 185,
+      "potential_configurations_and_residues": 480,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "24ee81602d298aa97138bf640be5bcc1b1240a22aa73797ccbd844b99929684a",
+      "complete_row_closure_sha256": "230c94619ba5ee9eb149f4e73426e36be347522496a99542367b4edd96a53e1f"
+    },
+    {
+      "m": 3,
+      "lengths": [
+        3,
+        5
+      ],
+      "n": 11,
+      "k": 2,
+      "L": 15,
+      "row_closure_count": 27,
+      "global_closure_count": 129,
+      "shortest_mortal_length": 63,
+      "shortest_word": "baaaaaaaaaaaaaabaaaaaaaaaaaaaabaaaaaaaaaaaaaababaaaaaaaaaaaaaab",
+      "lower_bound": 61,
+      "upper_bound": 70,
+      "potential_configurations_and_residues": 240,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "bb56c5bb742700e47ee2f6560b552bd04144ebc9d065830b4a66833746f8bb08",
+      "complete_row_closure_sha256": "a6f303e70946bcbccc311f9778d097d2f2017c69e0f89ff860c9933e1cd5a67e"
+    },
+    {
+      "m": 3,
+      "lengths": [
+        2,
+        3,
+        5
+      ],
+      "n": 13,
+      "k": 3,
+      "L": 30,
+      "row_closure_count": 44,
+      "global_closure_count": 249,
+      "shortest_mortal_length": 123,
+      "shortest_word": "baaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaababaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+      "lower_bound": 121,
+      "upper_bound": 130,
+      "potential_configurations_and_residues": 480,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "5f44ab1fdb9782a6d63defc4180b02ae5749396bf395381cd9d7eef5290650bb",
+      "complete_row_closure_sha256": "d11485d30ca577ab8c7a1064d410de0f0b5fe99e13621bcbc79af338935b13f8"
+    },
+    {
+      "m": 3,
+      "lengths": [
+        3,
+        4,
+        5
+      ],
+      "n": 15,
+      "k": 3,
+      "L": 60,
+      "row_closure_count": 76,
+      "global_closure_count": 489,
+      "shortest_mortal_length": 243,
+      "shortest_word": "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+      "lower_bound": 241,
+      "upper_bound": 250,
+      "potential_configurations_and_residues": 960,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "b75c83b1a2427a8fb92bf3b71f17029ba10a1f464e55c2f95e2852ea785d1ba7",
+      "complete_row_closure_sha256": "7fe286ff8253c2f7390fdef40754a363e2cc17f9c2edd06344549929fc21bea3"
+    },
+    {
+      "m": 4,
+      "lengths": [
+        3,
+        5
+      ],
+      "n": 12,
+      "k": 2,
+      "L": 15,
+      "row_closure_count": 28,
+      "global_closure_count": 257,
+      "shortest_mortal_length": 78,
+      "shortest_word": "baaaaaaaaaaaaaabaaaaaaaaaaaaaabaaaaaaaaaaaaaabaaaaaaaaaaaaaababaaaaaaaaaaaaaab",
+      "lower_bound": 76,
+      "upper_bound": 92,
+      "potential_configurations_and_residues": 1920,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "9b79dedd42c52fb1a8803cfe25b32b72ce85f49aff075a74265207a0ea8023ff",
+      "complete_row_closure_sha256": "91e37fe49ef5c66327b84a37871d2890b7561ed29e11ec3bbcc6175304272fbf"
+    },
+    {
+      "m": 4,
+      "lengths": [
+        2,
+        3,
+        5
+      ],
+      "n": 14,
+      "k": 3,
+      "L": 30,
+      "row_closure_count": 45,
+      "global_closure_count": 497,
+      "shortest_mortal_length": 155,
+      "shortest_word": "baaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+      "lower_bound": 151,
+      "upper_bound": 167,
+      "potential_configurations_and_residues": 1920,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "3251baa3d3e3c0d0acddf584e451674b46d1107cfeb2f4b44738b83710127e07",
+      "complete_row_closure_sha256": "9b7bb1ed9d4a4b19db6197d0effcaec15a3a4719ae902d02b18a60629aa90b67"
+    },
+    {
+      "m": 4,
+      "lengths": [
+        3,
+        4,
+        5
+      ],
+      "n": 16,
+      "k": 3,
+      "L": 60,
+      "row_closure_count": 77,
+      "global_closure_count": 977,
+      "shortest_mortal_length": 301,
+      "shortest_word": "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+      "lower_bound": 301,
+      "upper_bound": 317,
+      "potential_configurations_and_residues": 1920,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "6aaf178b352f851b52772572d648875553442b332e6a7e764b814b79066611c1",
+      "complete_row_closure_sha256": "1c521d362dfd6974075b994f18c785ae4561906634b051a89f93ca19a4c6fc12"
+    },
+    {
+      "m": 2,
+      "lengths": [
+        2
+      ],
+      "n": 4,
+      "k": 1,
+      "L": 2,
+      "row_closure_count": 5,
+      "global_closure_count": 11,
+      "shortest_mortal_length": 7,
+      "shortest_word": "bababab",
+      "lower_bound": 7,
+      "upper_bound": 11,
+      "potential_configurations_and_residues": 16,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "f5746e62600618e10c8d1c16373be619bd57d5635c19073d70fdf34debf23c25",
+      "complete_row_closure_sha256": "6248a1ad271bc18c58c9618bc2465315e132faf615179df4010a8f831de755a1"
+    },
+    {
+      "m": 3,
+      "lengths": [
+        4
+      ],
+      "n": 7,
+      "k": 1,
+      "L": 4,
+      "row_closure_count": 8,
+      "global_closure_count": 41,
+      "shortest_mortal_length": 21,
+      "shortest_word": "baaabaaababaaababaaab",
+      "lower_bound": 17,
+      "upper_bound": 26,
+      "potential_configurations_and_residues": 192,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "a56bd840426579e672a9bf8ef843c65cf071cd877cc7d9ad659068f85901fe61",
+      "complete_row_closure_sha256": "cb7414959387cbd55e2c1e9eedd54a7a7a6a1472347ca90fc340a29027499b3b"
+    },
+    {
+      "m": 5,
+      "lengths": [
+        3
+      ],
+      "n": 8,
+      "k": 1,
+      "L": 3,
+      "row_closure_count": 9,
+      "global_closure_count": 129,
+      "shortest_mortal_length": 21,
+      "shortest_word": "baabaabaabaabaababaab",
+      "lower_bound": 19,
+      "upper_bound": 44,
+      "potential_configurations_and_residues": 960,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "2335f6bc3e89e28a63d458c7c4fd0326d2c9cfe2e6d5d95c2fcb0fc272ad5c06",
+      "complete_row_closure_sha256": "206451ccd9a3b1bb7955cacfdc23fdbb72c810a59c51dd34d7e9f930746a174c"
+    },
+    {
+      "m": 2,
+      "lengths": [
+        2,
+        2
+      ],
+      "n": 6,
+      "k": 2,
+      "L": 2,
+      "row_closure_count": 9,
+      "global_closure_count": 11,
+      "shortest_mortal_length": 7,
+      "shortest_word": "bababab",
+      "lower_bound": 7,
+      "upper_bound": 11,
+      "potential_configurations_and_residues": 16,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "7a51b4600ed769c1a40d4b72358784463ffe4a17a382888f42c148626581cdca",
+      "complete_row_closure_sha256": "eddcca47c5262d26708a73cbb8134d8356a3baa9627420c88273ab65c960d2fc"
+    },
+    {
+      "m": 3,
+      "lengths": [
+        2,
+        4
+      ],
+      "n": 9,
+      "k": 2,
+      "L": 4,
+      "row_closure_count": 14,
+      "global_closure_count": 41,
+      "shortest_mortal_length": 21,
+      "shortest_word": "baaabaaababaaababaaab",
+      "lower_bound": 17,
+      "upper_bound": 26,
+      "potential_configurations_and_residues": 192,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "1386a6a22ce7f739cfdce06cb3521dd61410c04049d47272fea9f0ceae362a78",
+      "complete_row_closure_sha256": "4ea5b741ed041143052cb40bf18c19c2bc1d3e7a6976611c13c1026c583809b1"
+    },
+    {
+      "m": 5,
+      "lengths": [
+        2,
+        4,
+        6
+      ],
+      "n": 17,
+      "k": 3,
+      "L": 12,
+      "row_closure_count": 30,
+      "global_closure_count": 417,
+      "shortest_mortal_length": 80,
+      "shortest_word": "baaaaaaaaaaabaaaaaaaaaaabaaaaaaaaaaabaaabaaaaaaaaaaabaaaaaaaaaaabaabaaaaaaaaaaab",
+      "lower_bound": 73,
+      "upper_bound": 98,
+      "potential_configurations_and_residues": 3840,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "88511188c345dd152a38dce2123ded64c5646d191f710981ce00e77b83da5e42",
+      "complete_row_closure_sha256": "0a6177d258e75eabe65a984704fa80b1da6a1a0dd6e2e10b318455ce7b702e8a"
+    },
+    {
+      "m": 2,
+      "lengths": [
+        2,
+        3,
+        4
+      ],
+      "n": 11,
+      "k": 3,
+      "L": 12,
+      "row_closure_count": 24,
+      "global_closure_count": 53,
+      "shortest_mortal_length": 37,
+      "shortest_word": "baaaaaaaaaaabaaaaaaaaaaabaaaaaaaaaaab",
+      "lower_bound": 37,
+      "upper_bound": 41,
+      "potential_configurations_and_residues": 96,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "97f704a0e60d50cf52d4ad37525fc72f2b628b41b38e5683761da19748b6cec4",
+      "complete_row_closure_sha256": "a075a7489aa9273c08f71e92aa784c4a65ea70325fc5ab931d4c68c6dec101f3"
+    },
+    {
+      "m": 5,
+      "lengths": [
+        2,
+        2,
+        3,
+        3
+      ],
+      "n": 15,
+      "k": 4,
+      "L": 6,
+      "row_closure_count": 22,
+      "global_closure_count": 225,
+      "shortest_mortal_length": 45,
+      "shortest_word": "baaaaabaaaaababaaaaababaaaaababaaaaababaaaaab",
+      "lower_bound": 37,
+      "upper_bound": 62,
+      "potential_configurations_and_residues": 1920,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "d02ee419d0d788fdacc90f70de3d6c5d1e145afe4172c806ef621fd2def9d55f",
+      "complete_row_closure_sha256": "049fdf885e6c03d0dbb6399f97f67cd18b4cd5b95c5c44ad386790b4953f4008"
+    },
+    {
+      "m": 3,
+      "lengths": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "n": 20,
+      "k": 4,
+      "L": 210,
+      "row_closure_count": 231,
+      "global_closure_count": 1689,
+      "shortest_mortal_length": 843,
+      "shortest_word": "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+      "lower_bound": 841,
+      "upper_bound": 850,
+      "potential_configurations_and_residues": 3360,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "95a516cf3960dcc83829e030e0e3cec88d63321a777736f77c8828c96c60f3fa",
+      "complete_row_closure_sha256": "e8071230fd1cd0cdf2ddbb270ed82f67bd8fbd7d28cb28260d623b7411c4fffe"
+    }
+  ],
+  "fresh_controls": [
+    {
+      "m": 2,
+      "lengths": [
+        2,
+        3
+      ],
+      "n": 7,
+      "k": 2,
+      "L": 6,
+      "row_closure_count": 14,
+      "global_closure_count": 29,
+      "shortest_mortal_length": 19,
+      "shortest_word": "baaaaabaaaaabaaaaab",
+      "lower_bound": 19,
+      "upper_bound": 23,
+      "potential_configurations_and_residues": 48,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "34af91280b8789e6da8b2373374dfd598d3667260ee00e46173e1d09264b2fe7",
+      "complete_row_closure_sha256": "0980755690d7fa0d199880fc41314f06a80246f1288e1ce6b041d3c4bf7b67de"
+    },
+    {
+      "m": 4,
+      "lengths": [
+        2,
+        2
+      ],
+      "n": 8,
+      "k": 2,
+      "L": 2,
+      "row_closure_count": 11,
+      "global_closure_count": 49,
+      "shortest_mortal_length": 13,
+      "shortest_word": "bababaaababab",
+      "lower_bound": 11,
+      "upper_bound": 27,
+      "potential_configurations_and_residues": 128,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "050c70ab395b8f6294a5dd9be91724a1514f8997e1692a54e6f0062311ee3d8b",
+      "complete_row_closure_sha256": "432eb2c7fed16fcab762636c95c61a9fba87c2f7609d85f2a641fddffd25dad9"
+    },
+    {
+      "m": 3,
+      "lengths": [
+        3,
+        6
+      ],
+      "n": 12,
+      "k": 2,
+      "L": 6,
+      "row_closure_count": 19,
+      "global_closure_count": 57,
+      "shortest_mortal_length": 27,
+      "shortest_word": "baaaaabaaaaabaaaaababaaaaab",
+      "lower_bound": 25,
+      "upper_bound": 34,
+      "potential_configurations_and_residues": 96,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "83066ea05da56e335ce3b979d27bd4007fb5a6c2b58ba35810b7588157a1aabe",
+      "complete_row_closure_sha256": "509cf427cdb4053fa9c0d5cc244d384372247ef12e328796595defde730e5fa0"
+    },
+    {
+      "m": 4,
+      "lengths": [
+        2
+      ],
+      "n": 6,
+      "k": 1,
+      "L": 2,
+      "row_closure_count": 7,
+      "global_closure_count": 49,
+      "shortest_mortal_length": 13,
+      "shortest_word": "bababaaababab",
+      "lower_bound": 11,
+      "upper_bound": 27,
+      "potential_configurations_and_residues": 128,
+      "strong_connectivity": true,
+      "complete_bfs_sha256": "761556f3bbc62a78d472a272f178f8541b62eded52144e684f82cda11169d2b5",
+      "complete_row_closure_sha256": "619255259e6f98f01d169e3874b96194372ccd65f54337261bdefb4d49e23ed5"
+    }
+  ],
+  "arithmetic_samples": 836,
+  "elapsed_seconds": 0.050184540916234255
+}

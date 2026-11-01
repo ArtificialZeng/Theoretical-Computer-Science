@@ -1,0 +1,676 @@
+{
+  "scope": "37 packet inputs with n <= 6; only 11 two-factor graphs enter the interface CNF",
+  "cases": [
+    {
+      "id": "n1-t000",
+      "n": 1,
+      "shape": "()",
+      "adjacency_bits": [
+        0
+      ],
+      "search_tree_count": 1,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 0,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n1-t000.json.gz"
+    },
+    {
+      "id": "n2-t000",
+      "n": 2,
+      "shape": "(())",
+      "adjacency_bits": [
+        2,
+        1
+      ],
+      "search_tree_count": 2,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n2-t000.json.gz"
+    },
+    {
+      "id": "n3-t000",
+      "n": 3,
+      "shape": "(()())",
+      "adjacency_bits": [
+        6,
+        1,
+        1
+      ],
+      "search_tree_count": 5,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 5,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n3-t000.json.gz"
+    },
+    {
+      "id": "n3-t001",
+      "n": 3,
+      "shape": "((()))",
+      "adjacency_bits": [
+        6,
+        5,
+        3
+      ],
+      "search_tree_count": 6,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 6,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n3-t001.json.gz"
+    },
+    {
+      "id": "n4-t000",
+      "n": 4,
+      "shape": "(()()())",
+      "adjacency_bits": [
+        14,
+        1,
+        1,
+        1
+      ],
+      "search_tree_count": 16,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 24,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n4-t000.json.gz"
+    },
+    {
+      "id": "n4-t001",
+      "n": 4,
+      "shape": "(()(()))",
+      "adjacency_bits": [
+        14,
+        1,
+        9,
+        5
+      ],
+      "search_tree_count": 18,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 27,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n4-t001.json.gz"
+    },
+    {
+      "id": "n4-t002",
+      "n": 4,
+      "shape": "((()()))",
+      "adjacency_bits": [
+        14,
+        13,
+        3,
+        3
+      ],
+      "search_tree_count": 22,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 33,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n4-t002.json.gz"
+    },
+    {
+      "id": "n4-t003",
+      "n": 4,
+      "shape": "(((())))",
+      "adjacency_bits": [
+        14,
+        13,
+        11,
+        7
+      ],
+      "search_tree_count": 24,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 36,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n4-t003.json.gz"
+    },
+    {
+      "id": "n5-t000",
+      "n": 5,
+      "shape": "(()()()())",
+      "adjacency_bits": [
+        30,
+        1,
+        1,
+        1,
+        1
+      ],
+      "search_tree_count": 65,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 130,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n5-t000.json.gz"
+    },
+    {
+      "id": "n5-t001",
+      "n": 5,
+      "shape": "(()()(()))",
+      "adjacency_bits": [
+        30,
+        1,
+        1,
+        17,
+        9
+      ],
+      "search_tree_count": 70,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 140,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n5-t001.json.gz"
+    },
+    {
+      "id": "n5-t002",
+      "n": 5,
+      "shape": "(()(()()))",
+      "adjacency_bits": [
+        30,
+        1,
+        25,
+        5,
+        5
+      ],
+      "search_tree_count": 79,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 158,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n5-t002.json.gz"
+    },
+    {
+      "id": "n5-t003",
+      "n": 5,
+      "shape": "(()((())))",
+      "adjacency_bits": [
+        30,
+        1,
+        25,
+        21,
+        13
+      ],
+      "search_tree_count": 84,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 168,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n5-t003.json.gz"
+    },
+    {
+      "id": "n5-t004",
+      "n": 5,
+      "shape": "((())(()))",
+      "adjacency_bits": [
+        30,
+        5,
+        3,
+        17,
+        9
+      ],
+      "search_tree_count": 76,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 152,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n5-t004.json.gz"
+    },
+    {
+      "id": "n5-t005",
+      "n": 5,
+      "shape": "((()()()))",
+      "adjacency_bits": [
+        30,
+        29,
+        3,
+        3,
+        3
+      ],
+      "search_tree_count": 98,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 196,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n5-t005.json.gz"
+    },
+    {
+      "id": "n5-t006",
+      "n": 5,
+      "shape": "((()(())))",
+      "adjacency_bits": [
+        30,
+        29,
+        3,
+        19,
+        11
+      ],
+      "search_tree_count": 104,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 208,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n5-t006.json.gz"
+    },
+    {
+      "id": "n5-t007",
+      "n": 5,
+      "shape": "(((()())))",
+      "adjacency_bits": [
+        30,
+        29,
+        27,
+        7,
+        7
+      ],
+      "search_tree_count": 114,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 228,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n5-t007.json.gz"
+    },
+    {
+      "id": "n5-t008",
+      "n": 5,
+      "shape": "((((()))))",
+      "adjacency_bits": [
+        30,
+        29,
+        27,
+        23,
+        15
+      ],
+      "search_tree_count": 120,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 240,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n5-t008.json.gz"
+    },
+    {
+      "id": "n6-t000",
+      "n": 6,
+      "shape": "(()()()()())",
+      "adjacency_bits": [
+        62,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "search_tree_count": 326,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 815,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t000.json.gz"
+    },
+    {
+      "id": "n6-t001",
+      "n": 6,
+      "shape": "(()()()(()))",
+      "adjacency_bits": [
+        62,
+        1,
+        1,
+        1,
+        33,
+        17
+      ],
+      "search_tree_count": 342,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 855,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t001.json.gz"
+    },
+    {
+      "id": "n6-t002",
+      "n": 6,
+      "shape": "(()()(()()))",
+      "adjacency_bits": [
+        62,
+        1,
+        1,
+        49,
+        9,
+        9
+      ],
+      "search_tree_count": 368,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 920,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t002.json.gz"
+    },
+    {
+      "id": "n6-t003",
+      "n": 6,
+      "shape": "(()()((())))",
+      "adjacency_bits": [
+        62,
+        1,
+        1,
+        49,
+        41,
+        25
+      ],
+      "search_tree_count": 384,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 960,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t003.json.gz"
+    },
+    {
+      "id": "n6-t004",
+      "n": 6,
+      "shape": "(()(())(()))",
+      "adjacency_bits": [
+        62,
+        1,
+        9,
+        5,
+        33,
+        17
+      ],
+      "search_tree_count": 360,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 900,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t004.json.gz"
+    },
+    {
+      "id": "n6-t005",
+      "n": 6,
+      "shape": "(()(()()()))",
+      "adjacency_bits": [
+        62,
+        1,
+        57,
+        5,
+        5,
+        5
+      ],
+      "search_tree_count": 416,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1040,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t005.json.gz"
+    },
+    {
+      "id": "n6-t006",
+      "n": 6,
+      "shape": "(()(()(())))",
+      "adjacency_bits": [
+        62,
+        1,
+        57,
+        5,
+        37,
+        21
+      ],
+      "search_tree_count": 434,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1085,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t006.json.gz"
+    },
+    {
+      "id": "n6-t007",
+      "n": 6,
+      "shape": "(()((()())))",
+      "adjacency_bits": [
+        62,
+        1,
+        57,
+        53,
+        13,
+        13
+      ],
+      "search_tree_count": 462,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1155,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t007.json.gz"
+    },
+    {
+      "id": "n6-t008",
+      "n": 6,
+      "shape": "(()(((()))))",
+      "adjacency_bits": [
+        62,
+        1,
+        57,
+        53,
+        45,
+        29
+      ],
+      "search_tree_count": 480,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1200,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t008.json.gz"
+    },
+    {
+      "id": "n6-t009",
+      "n": 6,
+      "shape": "((())(()()))",
+      "adjacency_bits": [
+        62,
+        5,
+        3,
+        49,
+        9,
+        9
+      ],
+      "search_tree_count": 390,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 975,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t009.json.gz"
+    },
+    {
+      "id": "n6-t010",
+      "n": 6,
+      "shape": "((())((())))",
+      "adjacency_bits": [
+        62,
+        5,
+        3,
+        49,
+        41,
+        25
+      ],
+      "search_tree_count": 408,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1020,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t010.json.gz"
+    },
+    {
+      "id": "n6-t011",
+      "n": 6,
+      "shape": "((()()()()))",
+      "adjacency_bits": [
+        62,
+        61,
+        3,
+        3,
+        3,
+        3
+      ],
+      "search_tree_count": 522,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1305,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t011.json.gz"
+    },
+    {
+      "id": "n6-t012",
+      "n": 6,
+      "shape": "((()()(())))",
+      "adjacency_bits": [
+        62,
+        61,
+        3,
+        3,
+        35,
+        19
+      ],
+      "search_tree_count": 544,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1360,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t012.json.gz"
+    },
+    {
+      "id": "n6-t013",
+      "n": 6,
+      "shape": "((()(()())))",
+      "adjacency_bits": [
+        62,
+        61,
+        3,
+        51,
+        11,
+        11
+      ],
+      "search_tree_count": 578,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1445,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t013.json.gz"
+    },
+    {
+      "id": "n6-t014",
+      "n": 6,
+      "shape": "((()((()))))",
+      "adjacency_bits": [
+        62,
+        61,
+        3,
+        51,
+        43,
+        27
+      ],
+      "search_tree_count": 600,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1500,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t014.json.gz"
+    },
+    {
+      "id": "n6-t015",
+      "n": 6,
+      "shape": "(((())(())))",
+      "adjacency_bits": [
+        62,
+        61,
+        11,
+        7,
+        35,
+        19
+      ],
+      "search_tree_count": 568,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1420,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t015.json.gz"
+    },
+    {
+      "id": "n6-t016",
+      "n": 6,
+      "shape": "(((()()())))",
+      "adjacency_bits": [
+        62,
+        61,
+        59,
+        7,
+        7,
+        7
+      ],
+      "search_tree_count": 636,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1590,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t016.json.gz"
+    },
+    {
+      "id": "n6-t017",
+      "n": 6,
+      "shape": "(((()(()))))",
+      "adjacency_bits": [
+        62,
+        61,
+        59,
+        7,
+        39,
+        23
+      ],
+      "search_tree_count": 660,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1650,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t017.json.gz"
+    },
+    {
+      "id": "n6-t018",
+      "n": 6,
+      "shape": "((((()()))))",
+      "adjacency_bits": [
+        62,
+        61,
+        59,
+        55,
+        15,
+        15
+      ],
+      "search_tree_count": 696,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1740,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t018.json.gz"
+    },
+    {
+      "id": "n6-t019",
+      "n": 6,
+      "shape": "(((((())))))",
+      "adjacency_bits": [
+        62,
+        61,
+        59,
+        55,
+        47,
+        31
+      ],
+      "search_tree_count": 720,
+      "all_orders_checked": true,
+      "tube_replacement_checked": true,
+      "rotation_edges": 1800,
+      "status": "SAT_CHECKED",
+      "packet": "packets/n6-t019.json.gz"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+\documentclass[manuscript,11pt,screen,nonacm]{acmart}
+% Based on the unmodified official ACM manuscript sample in template/.
+% STOC submission requirements override proceedings layout defaults.
+\geometry{letterpaper,margin=1in,heightrounded=false,headheight=14pt,footskip=24pt}
+% Keep the page folios at the same nominal size as the submission text.
+\fancypagestyle{submission}{%
+  \fancyhf{}
+  \fancyfoot[C]{\normalfont\normalsize\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}}
+% hyperxmp otherwise infers an ACM journal publisher from the class, even
+% for nonacm manuscripts. All submission metadata is supplied explicitly.
+\makeatletter
+\let\hyxmp@parse@acmart\relax
+\makeatother
+\captionsetup{font=normalsize,labelfont={normalfont,normalsize},textfont={normalfont,normalsize}}
+\hypersetup{pdfcontactemail={1002266693@ucsiuniversity.edu.my; 2795820153@qq.com; 21725058@zju.edu.cn; 2002007@nut.edu.cn; dingfei@email.ncu.edu.cn},
+ pdfcontactaddress={UCSI University; Ningbo University; Zhejiang University; Nanchang Institute of Technology; Alibaba Group}}
+\setcopyright{none}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\acmDOI{}
+\acmISBN{}
+\acmVolume{}
+\acmNumber{}
+\hypersetup{keeppdfinfo=true,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={Matching Advice on Degree-Two Bipartite Graphs: Exact Consistency--Robustness Frontiers},
+ pdfauthor={Zijian Zeng, Jiayin Cao, Weinan Dai, Rui Wang, Fei Ding},
+ pdfpublisher={},pdfmetalang={en},
+ pdfsubject={Theory of computing manuscript},
+ pdfkeywords={theory of computing}}
+\renewcommand{\bibliofont}{\normalfont\normalsize}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prb}{\mathbb P}
+\newcommand{\D}{\mathcal D}
+\newcommand{\C}{\mathcal C}
+\newcommand{\B}{\mathcal B}
+\newcommand{\eq}{\mathrm{eq}}
+\newcommand{\up}{\mathrm{up}}
+\newcommand{\add}{\mathrm{add}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\DeclareMathOperator{\OPT}{OPT}
+\newcommand{\ALG}{\mathsf{ALG}}
+\newcommand{\Fair}{\mathsf{E}}
+\newcommand{\Trust}{\mathsf{T}}
+\DeclareMathOperator{\supp}{supp}
+\title{Matching Advice on Degree-Two Bipartite Graphs: Exact Consistency--Robustness Frontiers}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\city{}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\author{Jiayin Cao}
+\affiliation{\institution{Ningbo University}\city{}\country{China}}
+\email{2795820153@qq.com}
+\author{Weinan Dai}
+\affiliation{\institution{Zhejiang University}\city{}\country{China}}
+\email{21725058@zju.edu.cn}
+\author{Rui Wang}
+\affiliation{\institution{Nanchang Institute of Technology}\city{}\country{China}}
+\email{2002007@nut.edu.cn}
+\author{Fei Ding}
+\affiliation{\institution{Alibaba Group}\city{}\country{China}}
+\email{dingfei@email.ncu.edu.cn}
+% The user supplied institutions and emails; no city was supplied.
+% Display all contact details at the requested minimum text size.
+\authorsaddresses{\normalsize
+\begin{tabular}{@{}ll@{}}
+Zijian Zeng & \href{mailto:1002266693@ucsiuniversity.edu.my}{1002266693@ucsiuniversity.edu.my}\\
+Jiayin Cao & \href{mailto:2795820153@qq.com}{2795820153@qq.com}\\
+Weinan Dai & \href{mailto:21725058@zju.edu.cn}{21725058@zju.edu.cn}\\
+Rui Wang & \href{mailto:2002007@nut.edu.cn}{2002007@nut.edu.cn}\\
+Fei Ding & \href{mailto:dingfei@email.ncu.edu.cn}{dingfei@email.ncu.edu.cn}
+\end{tabular}\spacefactor=3000 }
+\date{}
+\begin{document}
+\singlespacing
+\begin{abstract}
+\normalsize
+We study unweighted online bipartite matching when every realized vertex has degree at most two and advice is an injective partial matching table that may contain absent edges. Against an oblivious adversary, we determine the largest robustness attainable at every requested consistency $c$: it is $\min\{3/4,3/2-c\}$ on this class and $\min\{7/8,7/4-c\}$ on its 2-regular subclass. Consistency holds for every maximum matching supplied as advice. The central algorithm gives priority to available offline neighbors whose second incident edge has appeared, and uses advice only among fresh neighbors. It is optimal under maximum-matching advice and retains a deterministic $3/4$ guarantee on cycles under arbitrary advice. Combining this endpoint with the known $7/8$ cycle baseline gives the cycle frontier; common advice tables on small indistinguishable inputs give matching upper bounds.
+\end{abstract}
+\hypersetup{pageanchor=false}
+\maketitle
+\hypersetup{
+ pdftitle={Matching Advice on Degree-Two Bipartite Graphs: Exact Consistency--Robustness Frontiers},
+ pdfauthor={Zijian Zeng, Jiayin Cao, Weinan Dai, Rui Wang, Fei Ding},
+ pdfpublisher={},pdfpubtype={},pdfsubject={Theory of computing manuscript},
+ pdfkeywords={theory of computing}}
+\enlargethispage{-12pt}
+\thispagestyle{empty}
+\clearpage
+\setcounter{page}{1}
+\hypersetup{pageanchor=true}
+\pagestyle{submission}
+\input{body}
+\bibliographystyle{alpha}
+\bibliography{references}
+\clearpage
+\onehalfspacing
+\end{document}

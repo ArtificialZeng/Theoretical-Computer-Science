@@ -1,0 +1,23 @@
+{
+  "job_id": "c017-wheeler-release-bce62e5f5c55",
+  "snapshot_digest": "e049cdd6f4851af0fd18969fa672c8ab343b1916120d8417cddc05007f4084bb",
+  "manuscript_digest": "3e3ee96154364ccb7df28378b07e5b269c38b0a7d88fbb532eeb0a89dd579b2d",
+  "pdf_digest": "f634d9f8abb35aab26ba0f93564fdd36b9f59aee0f150228002611a8fbb71de1",
+  "verdict": "accept",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "Complete declared local source dependency scope; all six primary bibliography records, every substantive citation/attribution, exact finite-coverage counts, bounded novelty comparison, accepted-proof transcription and extracted/rendered references checked on 2026-11-01 using advisory citation-check-skill plus primary-source manual review. No designated Excel bibliography. No unresolved metadata or text-access limitation for the claims used; BG00 and Becker23 support is limited to their cited primary abstracts, with detailed automatic representative facts verified in Blum99.",
+  "citation_audit_method": "citation-check-skill+primary-source-manual",
+  "claim_extraction": "audit/citation-extraction.md",
+  "search_record": "audit/citation-search.md",
+  "unverified_citations": []
+}

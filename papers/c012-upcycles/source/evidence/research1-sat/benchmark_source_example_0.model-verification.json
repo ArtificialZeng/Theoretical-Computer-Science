@@ -1,0 +1,32 @@
+{
+  "valid": true,
+  "word": "001*110*",
+  "n": 4,
+  "a": 2,
+  "length": 8,
+  "diamondicities": [
+    1
+  ],
+  "diamond_periodic": true,
+  "length_identity": true,
+  "coverage_counts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "missing": 0,
+  "multiply_covered": 0
+}

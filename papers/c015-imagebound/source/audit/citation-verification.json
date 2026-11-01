@@ -1,0 +1,135 @@
+{
+  "job_id": "c015-imagebound-release-b1a7d726335d",
+  "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+  "manuscript_digest": "5ae9b29ebb33f83bef87cb0ff1d33997e8bf05741cfd88f6086d02fb05f2a360",
+  "pdf_digest": "0abeb3c8720795bb730d6501ea49669b8e9f1006bc34b0e0d9578051921c4d19",
+  "checked_utc": "2026-11-01T09:23:11.371609+00:00",
+  "claims": [
+    {
+      "claim_id": "C01",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "support": "KR2025 Sections 2 and 7; publisher full text"
+    },
+    {
+      "claim_id": "C02",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "KR2025 Section 9 final paragraph; local primary.txt and current publisher HTML"
+    },
+    {
+      "claim_id": "C03",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "Accepted claim.json and research-proof.md; manuscript Theorem 1, Sections 2-5; constants and quantifiers identical"
+    },
+    {
+      "claim_id": "C04",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "R2024 v4 Section 1 subset counting argument; manuscript fixed-k qualification"
+    },
+    {
+      "claim_id": "C05",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "support": "R2024 v4 Section 4, paragraph starting mt_d(n,m), credits Rystsov 1997; manuscript explicitly uses indirect attribution"
+    },
+    {
+      "claim_id": "C06",
+      "status": "Verified",
+      "confidence": "interpretation",
+      "support": "R2024 v4 Section 4 displayed q_i/p_i transitions; identify q_1 with p_0 and q_(j+1) with p_j"
+    },
+    {
+      "claim_id": "C07",
+      "status": "Verified",
+      "confidence": "interpretation",
+      "support": "R2024 v4 Section 3 resets explicitly send a state to an unbounded-size set; no fixed global image hypothesis"
+    },
+    {
+      "claim_id": "C08",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "support": "A2017 v1 Section 2, printed page 6, Lemma 2.1 and preceding almost-permutation definition; k divisible by order of a, increment n*k"
+    },
+    {
+      "claim_id": "C09",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "Manuscript packet definition and pairwise-coprime arithmetic; accepted proof Lemma 1 and state-count argument"
+    },
+    {
+      "claim_id": "C10",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "Manuscript Lemma 3; accepted proof singleton/packet closure and paths through p_0"
+    },
+    {
+      "claim_id": "C11",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "Manuscript equation (5), nonterminal clocks supply p_0; accepted lower-bound proof"
+    },
+    {
+      "claim_id": "C12",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "Manuscript equation (6); accepted port-separated potential proof, all eta/epsilon cases"
+    },
+    {
+      "claim_id": "C13",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "Manuscript Lemma 4, m+1 disjoint unit drops each costing L; accepted proof"
+    },
+    {
+      "claim_id": "C14",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "Manuscript Lemma 5; at most m preliminary forks of cost at most m; accepted construction"
+    },
+    {
+      "claim_id": "C15",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "Manuscript Section 4 equation (7) and prime divisor argument; accepted every-n construction"
+    },
+    {
+      "claim_id": "C16",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "Manuscript Section 5; shortest continuations cannot repeat a subset and padded increasing lists inject into Q^k"
+    },
+    {
+      "claim_id": "C17",
+      "status": "Verified",
+      "confidence": "interpretation",
+      "support": "Manuscript transition b: p_0 forks to k zero clock states, each returns to p_0 on b because ell_i>=2; independent concatenation gives k^r paths"
+    },
+    {
+      "claim_id": "C18",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "audit/referee-verification.json and freshly replayed evidence/portable-check.py; audit/release-portable-results.json: 22 complete finite automata, 19392 potential checks, 1212 arithmetic cases"
+    },
+    {
+      "claim_id": "C19",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "Current Dagstuhl publisher metadata and official BibTeX; all listed author/year/volume/page/DOI fields agree"
+    },
+    {
+      "claim_id": "C20",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "Current Springer chapter page plus arXiv:2405.19622v4 record: RP2024, LNCS15050, 104-119, related DOI and 2025-06-15 v4 date agree"
+    },
+    {
+      "claim_id": "C21",
+      "status": "Verified",
+      "confidence": "exact",
+      "support": "Current arXiv:1701.07954v1 abstract record and PDF first page: D. S. Ananichev, exact title, 2017 and DOI agree"
+    }
+  ]
+}

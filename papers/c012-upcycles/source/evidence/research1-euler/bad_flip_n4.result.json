@@ -1,0 +1,21 @@
+{
+  "job_id": "c012-upcycles-research-cfe911474960",
+  "label": "bad_flip_n4",
+  "n": 4,
+  "d": 1,
+  "mask": "...*",
+  "status": "UNSAT",
+  "returncode": 20,
+  "cap_seconds": 10,
+  "elapsed_seconds": 0.006024083006195724,
+  "child_cpu_seconds": 0.0034590000000000037,
+  "variables": 32,
+  "clauses": 280,
+  "cnf": "evidence/research1-euler/bad_flip_n4.cnf",
+  "proof": "evidence/research1-euler/bad_flip_n4.lrat",
+  "log": "evidence/research1-euler/bad_flip_n4.log",
+  "encoding": "evidence/research1-euler/bad_flip_n4.encoding.json",
+  "cnf_sha256": "6facb04df6d8621094c0b582139bb89b6fe316f35f317cb73efe36b2f0c7ca9d",
+  "proof_sha256": "c99666bd99dfce8d74930e0b58c4ff928bb53ad870a753cd2dec7d7ce0dee4bc",
+  "scope": "exact subcube partition plus balanced literal-overlap graph; connectedness checked on models"
+}

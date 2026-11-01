@@ -1,0 +1,26 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "title": "A Universal Partial Cycle with Three Wildcards per Window",
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "source_files": [
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/acmart.cls",
+    "manuscript/verify.py",
+    "manuscript/README.md",
+    "manuscript/main.bbl",
+    "manuscript/alpha.bst"
+  ],
+  "pdf": "manuscript/main.pdf",
+  "build": "cd manuscript && latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex",
+  "max_total_pages": 12,
+  "external_submission_authorized": false,
+  "writer_job_id": "c012-upcycles-write-e722c4031892"
+}

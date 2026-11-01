@@ -1,0 +1,44 @@
+{
+  "tested": 62,
+  "first_separation": {
+    "b": 3,
+    "R": "3/2",
+    "p": {
+      "1": "2/5",
+      "2": "3/5"
+    },
+    "M": 7,
+    "vertices": 7,
+    "costs": [
+      "3",
+      "14/5",
+      "8/5",
+      "8/5",
+      "8/5",
+      "8/5",
+      "8/5"
+    ],
+    "optimum": "39/20",
+    "optimizer": [
+      "1/4",
+      "0",
+      "3/4",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "threshold": "14/5",
+    "restricted_optimum": "11/5",
+    "restricted_optimizer": [
+      "0",
+      "1/2",
+      "1/2",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "strict_policy_separation": true
+  }
+}

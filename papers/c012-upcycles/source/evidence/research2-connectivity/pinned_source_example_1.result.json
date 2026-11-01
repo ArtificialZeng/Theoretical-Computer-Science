@@ -1,0 +1,40 @@
+{
+  "job_id": "c012-upcycles-research-456cb4499028",
+  "label": "pinned_source_example_1",
+  "n": 8,
+  "d": 1,
+  "mask": ".......*",
+  "max_rounds": 20,
+  "total_solver_wall_cap_seconds": 10,
+  "per_call_wall_cap_seconds": 10,
+  "encoding": "evidence/research2-connectivity/pinned_source_example_1.encoding.json",
+  "initial_clauses": 13184,
+  "rounds": [
+    {
+      "round": 0,
+      "status": "SAT",
+      "returncode": 10,
+      "wall_timeout": false,
+      "elapsed_seconds": 0.03619545802939683,
+      "wall_cap_seconds": 10,
+      "child_cpu_seconds": 0.031373,
+      "clauses": 13184,
+      "cnf": "evidence/research2-connectivity/pinned_source_example_1.r00.cnf",
+      "log": "evidence/research2-connectivity/pinned_source_example_1.r00.log",
+      "proof": "evidence/research2-connectivity/pinned_source_example_1.r00.lrat",
+      "cnf_sha256": "a328238fbe7ae00e5f60cdf5b3eb50f2794e7079b1ff38abe6705e0e392fa136",
+      "proof_sha256": "a9d2ed17a4dd7f860095d302c194c44ff5ec983d95b653f2164be1a1e90ec82d",
+      "model_verification": "evidence/research2-connectivity/pinned_source_example_1.r00.model-verification.json",
+      "component_count": 1,
+      "component_edge_counts": [
+        128
+      ]
+    }
+  ],
+  "cut_groups": [],
+  "outcome": "connected-witness",
+  "original_question_resolved": false,
+  "witness": "evidence/research2-connectivity/pinned_source_example_1.r00.model-verification.json",
+  "solver_wall_seconds": 0.03619545802939683,
+  "completed_utc": "2026-11-01T04:51:57.737903+00:00"
+}

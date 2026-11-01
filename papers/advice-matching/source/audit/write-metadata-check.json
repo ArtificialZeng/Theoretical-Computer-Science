@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "writer_job_id": "advice-matching-write-7c7b770a22e9",
+  "pages": 6,
+  "letter": true,
+  "ordered_authors": [
+    "Zijian Zeng",
+    "Jiayin Cao",
+    "Weinan Dai",
+    "Rui Wang",
+    "Fei Ding"
+  ],
+  "all_institutions_emails_in_xmp": true,
+  "no_publisher_or_journal_type_in_xmp": true,
+  "final_log_has_no_warnings_or_box_warnings": true,
+  "bibliography_entries": 6,
+  "AI_before_final_bibliography": true,
+  "caption_font_poppler_size_at_1_5_zoom": [
+    16
+  ],
+  "local_TeX_input_closure": [
+    "manuscript/acmart.cls",
+    "manuscript/body.tex",
+    "manuscript/main.bbl",
+    "manuscript/main.tex"
+  ],
+  "frozen_evidence_and_official_class_unchanged": true,
+  "pdf_sha256": "6dd60b1709480f325a0f8e2e6a225d3935adb20a5a9cf071c6bfe42b95861367",
+  "fresh_release_review": "pending"
+}

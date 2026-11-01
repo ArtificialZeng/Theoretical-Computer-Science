@@ -1,0 +1,134 @@
+{
+  "repository": "https://github.com/JihwanKim4689/distributional-ski-rental",
+  "commit": "0a86125f31e9e1b1abbba5bd4fde32a332860124",
+  "execution": "Unmodified AST class node only",
+  "scope": "Six floating-point software runs; exact evaluation of their returned laws",
+  "records": [
+    {
+      "file": "Figure1_Performance_Comparison_Under_Prediction_Error.py",
+      "sha256": "a63482866e819cb695298aae494b792d1babb0679b31c851dd68c0f6e23018a3",
+      "tolerance": 1e-05,
+      "water_level": 3.000001907348633,
+      "feasible_at_14_over_5": false,
+      "feasible_at_3": true,
+      "policy": {
+        "1": 0.25,
+        "2": 0.375,
+        "3": 0.375
+      },
+      "exact_policy": {
+        "1": "1/4",
+        "2": "3/8",
+        "3": "3/8"
+      },
+      "reported_cost": 2.4,
+      "exact_model_cost": "12/5",
+      "exact_model_moment": "9/8"
+    },
+    {
+      "file": "Figure1_Performance_Comparison_Under_Prediction_Error.py",
+      "sha256": "a63482866e819cb695298aae494b792d1babb0679b31c851dd68c0f6e23018a3",
+      "tolerance": 1e-09,
+      "water_level": 3.0000000004656613,
+      "feasible_at_14_over_5": false,
+      "feasible_at_3": true,
+      "policy": {
+        "1": 0.25,
+        "2": 0.375,
+        "3": 0.375
+      },
+      "exact_policy": {
+        "1": "1/4",
+        "2": "3/8",
+        "3": "3/8"
+      },
+      "reported_cost": 2.4,
+      "exact_model_cost": "12/5",
+      "exact_model_moment": "9/8"
+    },
+    {
+      "file": "Figure1_Performance_Comparison_Under_Prediction_Error.py",
+      "sha256": "a63482866e819cb695298aae494b792d1babb0679b31c851dd68c0f6e23018a3",
+      "tolerance": 1e-12,
+      "water_level": 2.9999999999995453,
+      "feasible_at_14_over_5": false,
+      "feasible_at_3": true,
+      "policy": {
+        "1": 0.25,
+        "2": 0.375,
+        "3": 0.375
+      },
+      "exact_policy": {
+        "1": "1/4",
+        "2": "3/8",
+        "3": "3/8"
+      },
+      "reported_cost": 2.4,
+      "exact_model_cost": "12/5",
+      "exact_model_moment": "9/8"
+    },
+    {
+      "file": "Table2_Consistency_Comparison_under_Fixed_Robustness.py",
+      "sha256": "f906417295005ffc8aeda7e3868350e9498acaf61d1876b7a23d27a2d9733b81",
+      "tolerance": 1e-05,
+      "water_level": 3.000001907348633,
+      "feasible_at_14_over_5": false,
+      "feasible_at_3": true,
+      "policy": {
+        "1": 0.25,
+        "2": 0.375,
+        "3": 0.375
+      },
+      "exact_policy": {
+        "1": "1/4",
+        "2": "3/8",
+        "3": "3/8"
+      },
+      "reported_cost": 2.4,
+      "exact_model_cost": "12/5",
+      "exact_model_moment": "9/8"
+    },
+    {
+      "file": "Table2_Consistency_Comparison_under_Fixed_Robustness.py",
+      "sha256": "f906417295005ffc8aeda7e3868350e9498acaf61d1876b7a23d27a2d9733b81",
+      "tolerance": 1e-09,
+      "water_level": 3.0000000004656613,
+      "feasible_at_14_over_5": false,
+      "feasible_at_3": true,
+      "policy": {
+        "1": 0.25,
+        "2": 0.375,
+        "3": 0.375
+      },
+      "exact_policy": {
+        "1": "1/4",
+        "2": "3/8",
+        "3": "3/8"
+      },
+      "reported_cost": 2.4,
+      "exact_model_cost": "12/5",
+      "exact_model_moment": "9/8"
+    },
+    {
+      "file": "Table2_Consistency_Comparison_under_Fixed_Robustness.py",
+      "sha256": "f906417295005ffc8aeda7e3868350e9498acaf61d1876b7a23d27a2d9733b81",
+      "tolerance": 1e-12,
+      "water_level": 2.9999999999995453,
+      "feasible_at_14_over_5": false,
+      "feasible_at_3": true,
+      "policy": {
+        "1": 0.25,
+        "2": 0.375,
+        "3": 0.375
+      },
+      "exact_policy": {
+        "1": "1/4",
+        "2": "3/8",
+        "3": "3/8"
+      },
+      "reported_cost": 2.4,
+      "exact_model_cost": "12/5",
+      "exact_model_moment": "9/8"
+    }
+  ]
+}

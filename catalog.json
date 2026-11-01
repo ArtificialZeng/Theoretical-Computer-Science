@@ -1,0 +1,202 @@
+{
+  "schema": 1,
+  "snapshot_date": "2026-11-01",
+  "papers": [
+    {
+      "id": "coverage-sparse",
+      "series": "legacy",
+      "title": "Coverage Correlation Gaps under Graph-Constrained Pairwise Independence",
+      "status": "proved",
+      "kind": "resolution-paper",
+      "pages": 8,
+      "pdf": "papers/coverage-sparse/paper.pdf",
+      "source_archive": "papers/coverage-sparse/source.zip",
+      "source_directory": "papers/coverage-sparse/source",
+      "pdf_sha256": "a1fb1c406f6c59c5196dbe1481bb9ea12e5528d261f6be3fe228ee9d3f8d1bca",
+      "source_archive_sha256": "15c6e43066ef6f93af8220da721b8fd9f32d6a096307cc1547f427fea44c679a",
+      "reproduction_commands": [
+        [
+          "manuscript/reproduce.py"
+        ]
+      ]
+    },
+    {
+      "id": "privacy-interpolation",
+      "series": "legacy",
+      "title": "Mandatory Excursions in Privacy-Constrained Probability Paths",
+      "status": "unresolved",
+      "kind": "result-note",
+      "pages": 7,
+      "pdf": "papers/privacy-interpolation/paper.pdf",
+      "source_archive": "papers/privacy-interpolation/source.zip",
+      "source_directory": "papers/privacy-interpolation/source",
+      "pdf_sha256": "8ec2d595f7e1285ce79dc26f46caadf881d9065bce1928a7865f9d81d91b2d43",
+      "source_archive_sha256": "dfea246476d1a5b57a549ea309c146872017e8ee7c65f0cb96f136bc7631342a",
+      "reproduction_commands": [
+        [
+          "manuscript/reproduce.py"
+        ]
+      ]
+    },
+    {
+      "id": "robust-stopping",
+      "series": "legacy",
+      "title": "Certified Expected-Cost Optimization for Robust Ski Rental",
+      "status": "unresolved",
+      "kind": "result-note",
+      "pages": 11,
+      "pdf": "papers/robust-stopping/paper.pdf",
+      "source_archive": "papers/robust-stopping/source.zip",
+      "source_directory": "papers/robust-stopping/source",
+      "pdf_sha256": "750891c12b44b7761c1c8c96968e8005e68e4b8b7f3f4299a8a5fe80fd96ce84",
+      "source_archive_sha256": "feedbf5adb3b34ce65942ee8a08c0544f32c33a2c534a5dfe516eee9e006c8a2",
+      "reproduction_commands": [
+        [
+          "manuscript/reproduce.py"
+        ]
+      ]
+    },
+    {
+      "id": "curvature-noise",
+      "series": "legacy",
+      "title": "A Sparse-Cardinality Curvature Bound under Persistent Adversarial Noise",
+      "status": "unresolved",
+      "kind": "result-note",
+      "pages": 6,
+      "pdf": "papers/curvature-noise/paper.pdf",
+      "source_archive": "papers/curvature-noise/source.zip",
+      "source_directory": "papers/curvature-noise/source",
+      "pdf_sha256": "2a3b071bfdd103f2e2bbbde6f590ea75ee26229a96b46b0c79b3e02d754cf012",
+      "source_archive_sha256": "18ee55050ceb21213f3c8376efab377d5103dc95bbb83ec718a0b370737d79fd",
+      "reproduction_commands": [
+        [
+          "manuscript/reproduce.py"
+        ]
+      ]
+    },
+    {
+      "id": "advice-matching",
+      "series": "legacy",
+      "title": "Matching Advice on Degree-Two Bipartite Graphs: Exact Consistency–Robustness Frontiers",
+      "status": "proved",
+      "kind": "resolution-paper",
+      "pages": 6,
+      "pdf": "papers/advice-matching/paper.pdf",
+      "source_archive": "papers/advice-matching/source.zip",
+      "source_directory": "papers/advice-matching/source",
+      "pdf_sha256": "97f90509d1413691ce7cb13e0c7dc8bc0ee2a2b1f133131cc43a2ed9cea6ffa2",
+      "source_archive_sha256": "ca90273f18980b5ac5cdb96b22ef6585bf958b1b56ac26183a3f0d75f2d585fb",
+      "reproduction_commands": [
+        [
+          "manuscript/reproduce.py"
+        ]
+      ]
+    },
+    {
+      "id": "c002-coverage",
+      "series": "continuous",
+      "title": "A Size-Independent Discrepancy Bound for Sparse Coverage Functions",
+      "status": "proved",
+      "kind": "resolution-paper",
+      "pages": 7,
+      "pdf": "papers/c002-coverage/paper.pdf",
+      "source_archive": "papers/c002-coverage/source.zip",
+      "source_directory": "papers/c002-coverage/source",
+      "pdf_sha256": "b2dac13ca628fb6c3b7495516ee0acbdd390a90b0942127ada2935401ba873db",
+      "source_archive_sha256": "6a3806ba431e96816ec34b1c99fb27bca833bd81b4f287ac29bd4835e8b458dd",
+      "reproduction_commands": [
+        [
+          "evidence/research_rounding_check.py"
+        ],
+        [
+          "audit/referee_verify.py"
+        ]
+      ]
+    },
+    {
+      "id": "c009-cycle2",
+      "series": "continuous",
+      "title": "A Global Sidorenko Inequality for 2-Subdivided Alternating Cycles",
+      "status": "proved",
+      "kind": "resolution-paper",
+      "pages": 6,
+      "pdf": "papers/c009-cycle2/paper.pdf",
+      "source_archive": "papers/c009-cycle2/source.zip",
+      "source_directory": "papers/c009-cycle2/source",
+      "pdf_sha256": "519a8f77e5e1fd12c6abf00b04b53c6e43a17273c04d3cfb8668ff6c98866710",
+      "source_archive_sha256": "23f1aaee41421169bc64403340c70d2fa50d2bbfef625c80224e1d969cc83294",
+      "reproduction_commands": [
+        [
+          "evidence/research_exact.py"
+        ],
+        [
+          "audit/referee_verify.py"
+        ]
+      ]
+    },
+    {
+      "id": "c012-upcycles",
+      "series": "continuous",
+      "title": "A Universal Partial Cycle with Three Wildcards per Window",
+      "status": "proved",
+      "kind": "resolution-paper",
+      "pages": 5,
+      "pdf": "papers/c012-upcycles/paper.pdf",
+      "source_archive": "papers/c012-upcycles/source.zip",
+      "source_directory": "papers/c012-upcycles/source",
+      "pdf_sha256": "eade3f9df07bd82943ef54b3e0c9c1b95d1510ab9e779dc9ff26a9cdf71cedef",
+      "source_archive_sha256": "a168975746a1ff1a422eddf3a6cd61af683a828b1399e587fad3b298f73da999",
+      "reproduction_commands": [
+        [
+          "manuscript/verify.py"
+        ],
+        [
+          "evidence/research2-witness/minimal_check.py"
+        ]
+      ]
+    },
+    {
+      "id": "c015-imagebound",
+      "series": "continuous",
+      "title": "Tight Mortality Bounds for Image-Bounded Nondeterministic Automata",
+      "status": "proved",
+      "kind": "resolution-paper",
+      "pages": 6,
+      "pdf": "papers/c015-imagebound/paper.pdf",
+      "source_archive": "papers/c015-imagebound/source.zip",
+      "source_directory": "papers/c015-imagebound/source",
+      "pdf_sha256": "0abeb3c8720795bb730d6501ea49669b8e9f1006bc34b0e0d9578051921c4d19",
+      "source_archive_sha256": "248b548066b31fff764c541e9f74ee6cca52231bb368e4423350dc6c9a7fafbd",
+      "reproduction_commands": [
+        [
+          "evidence/portable-check.py"
+        ]
+      ]
+    },
+    {
+      "id": "c017-wheeler",
+      "series": "continuous",
+      "title": "Deciding Membership and Realizability for Wheeler Transducers",
+      "status": "proved",
+      "kind": "resolution-paper",
+      "pages": 10,
+      "pdf": "papers/c017-wheeler/paper.pdf",
+      "source_archive": "papers/c017-wheeler/source.zip",
+      "source_directory": "papers/c017-wheeler/source",
+      "pdf_sha256": "f634d9f8abb35aab26ba0f93564fdd36b9f59aee0f150228002611a8fbb71de1",
+      "source_archive_sha256": "fe24b373f84e25470ab2d223863f78073f2a0a35f3105c8952794b3d10a5787d",
+      "reproduction_commands": [
+        [
+          "evidence/check_membership.py"
+        ],
+        [
+          "evidence/check_exact_certificates.py"
+        ],
+        [
+          "evidence/research-2-check-realizability.py"
+        ]
+      ]
+    }
+  ],
+  "status_convention": "Manuscript scope/local release status; no external peer-review or conference-acceptance claim"
+}

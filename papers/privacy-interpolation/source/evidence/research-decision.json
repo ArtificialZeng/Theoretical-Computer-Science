@@ -1,0 +1,57 @@
+{
+  "job_id": "privacy-interpolation-research-1e71d7ce81cd",
+  "role": "research",
+  "research_pass": 1,
+  "decision": "park",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "source_sha256_before": "9488f12633da72d763b0ad127ff791f002ff7451ea26826a68d35a832f0bad15",
+  "source_sha256_after": "9488f12633da72d763b0ad127ff791f002ff7451ea26826a68d35a832f0bad15",
+  "unchanged_prior_evidence": [
+    "problem.md",
+    "evidence/source-integrity.json",
+    "evidence/triage-analysis.md",
+    "evidence/triage_exact_check.py",
+    "evidence/triage-exact-results.json",
+    "literature/triage-screen.md"
+  ],
+  "new_mathematical_evidence": [
+    "Complete sorted-prefix reduction and self-contained finite greedy-path sufficiency.",
+    "Exact value formula; finite rational attaining-path representation; honest exponential construction cost.",
+    "Sharp finite-distance envelope/equality derivation; fixed affine and geometric path formulas.",
+    "Exact reparameterized-affine counterexample and unavoidable excursion of a coordinate with equal endpoints."
+  ],
+  "not_resolved": "Complete comparison of specified transform-linear families; no qualified nonroutine new contribution established.",
+  "parking_reason": "The proposed value and construction delta currently consists of elementary Laplace-ROC inversion and standard greedy-base/GLS decomposition; no specialized complexity improvement established. The auxiliary example alone does not justify a paper.",
+  "operational_limits_not_mathematical_results": true,
+  "review_status": "No candidate freeze, no fresh referee, no acceptance or release claimed.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "evidence/research-source-integrity.json",
+    "evidence/research-analysis.md",
+    "evidence/research_exact_check.py",
+    "evidence/research-exact-results.json",
+    "evidence/research-path-certificates.json",
+    "evidence/research_verify_certificates.py",
+    "evidence/research-independent-verification.json",
+    "evidence/research-affine-obstruction.md",
+    "literature/research-screen.md"
+  ],
+  "evidence_sha256": {
+    "source.md": "9488f12633da72d763b0ad127ff791f002ff7451ea26826a68d35a832f0bad15",
+    "problem.md": "e3dfa4f586e429f292b89a87c19fdc202afd07ce825468a8910a677ad41cb465",
+    "checkpoint.md": "57b4fd6384f73ed0a9e32678f79d777e7d0a7300ded2111d44890b7e276febe4",
+    "evidence/research-source-integrity.json": "14cb85e40ed67b24beaa01d7f3bef4cc7d7ae51f76fb4223eb4a3a731e92a6eb",
+    "evidence/research-analysis.md": "3f2c5548a298e214bbe89c916cc0a4b0e483f983c6304ab1817a4039b450681a",
+    "evidence/research_exact_check.py": "a6e34a046ac5afcf7b15fe8e1ad78dc4b4acf60ed3119df761199f10ff7c240a",
+    "evidence/research-exact-results.json": "7dc24c5e20cea7fc800af57d1d3c1b5ec7b28cde108674801dc3a72e00d553bf",
+    "evidence/research-path-certificates.json": "7e12a82f15eaefe22ce3303147d89a6db0f2519a43c543a07fce82cacf0dc267",
+    "evidence/research_verify_certificates.py": "184f1363ea631aa7cf0c9524ede61e69e58aab01aad1d766bf9385473e55ebd4",
+    "evidence/research-independent-verification.json": "2c24636982dae183210ec3006bc719a31a51772fd3ee38b1819e837d8c36f3bf",
+    "evidence/research-affine-obstruction.md": "47cde5c640825a372d312778c0cea5d4b6b38bb1720bcf39e050ad8c97f18e01",
+    "literature/research-screen.md": "d011303c284363e5b806a708bc5e79426cc5bbeb25fd182a75bcaa1b82409909"
+  },
+  "next_test": "Reopen only to derive and verify an O(n^2)-arithmetic algorithm outputting at most n greedy optimal paths for rational p,q, then compare with existing general polymatroid/convex-order algorithms."
+}

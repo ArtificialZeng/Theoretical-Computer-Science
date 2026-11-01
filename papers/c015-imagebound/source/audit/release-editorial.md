@@ -1,0 +1,3 @@
+# Presentation-only release edits
+
+Job c015-imagebound-release-b1a7d726335d. Applied the explicit outer-root-note.md editorial handoff: compressed repeated scope limitations and AI prose, retained substantive Codex roles and separate-context checking, kept every mathematical statement, hypothesis, construction and proof. Moved pdfauthor before document start as a conservative metadata setting; the actual metadata result is reported in audit/build.md. The previous manuscript and snapshot are audit/release-before-editorial.tex and audit/release-before-editorial-snapshot.txt. No frozen mathematical evidence or acceptance was changed. PDF skill edit marker succeeded once immediately before this command.

@@ -1,0 +1,10 @@
+{
+  "command": "python3 /Users/mac/.codex/skills/4prove-or-disprove-math/scripts/release_gate.py check-math PROJECT_DIR",
+  "exit_code": 0,
+  "result": {
+    "ok": true,
+    "snapshot_digest": "aaa91b59e8425f6cb4943fc3132e3ef9680e93dbb77aad8bca7bfce55d898516",
+    "referee_job_id": "c017-wheeler-referee-dd13950aae3a"
+  },
+  "scope": "Actual successful check-math output from this job; structural integrity and provenance only."
+}

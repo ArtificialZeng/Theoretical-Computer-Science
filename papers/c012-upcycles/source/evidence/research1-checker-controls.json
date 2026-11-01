@@ -1,0 +1,146 @@
+{
+  "valid_unsat_control": {
+    "cnf": "evidence/research1-checker-controls/tiny-unsat.cnf",
+    "proof": "evidence/research1-checker-controls/valid.lrat",
+    "cnf_sha256": "ac42a371b5a124286c410ed5dfa2e3be7ee7d5b1feac6f08e7e1715f0c3669a8",
+    "proof_sha256": "2e9bf73f333fd3624376d1eb676ce8d6240ba39924936c22bc1a522bfb01b8cc",
+    "initial_clauses": 2,
+    "checked_additions": 1,
+    "deletions": 0,
+    "checked_empty_clause": true,
+    "verdict": "verified-UNSAT-of-this-CNF",
+    "checker": "independent Python LRAT/RUP-only checker",
+    "elapsed_seconds": 0.00012299988884478807
+  },
+  "invalid_certificates_rejected": [
+    {
+      "cnf": "evidence/research1-checker-controls/tiny-sat.cnf",
+      "proof": "evidence/research1-checker-controls/invalid.lrat",
+      "reason": "(1, 'no RUP conflict')"
+    },
+    {
+      "cnf": "evidence/research1-checker-controls/tiny-unsat.cnf",
+      "proof": "evidence/research1-checker-controls/missing-hint.lrat",
+      "reason": "(1, 'missing hint', 99)"
+    },
+    {
+      "cnf": "evidence/research1-checker-controls/tiny-unsat.cnf",
+      "proof": "evidence/research1-checker-controls/incomplete.lrat",
+      "reason": "No checked empty clause: not an UNSAT certificate"
+    }
+  ],
+  "cardinality_recurrence_all_16_rows": [
+    {
+      "a": false,
+      "b": false,
+      "x": false,
+      "y": false,
+      "clauses_hold": true
+    },
+    {
+      "a": false,
+      "b": false,
+      "x": false,
+      "y": true,
+      "clauses_hold": false
+    },
+    {
+      "a": false,
+      "b": false,
+      "x": true,
+      "y": false,
+      "clauses_hold": true
+    },
+    {
+      "a": false,
+      "b": false,
+      "x": true,
+      "y": true,
+      "clauses_hold": false
+    },
+    {
+      "a": false,
+      "b": true,
+      "x": false,
+      "y": false,
+      "clauses_hold": true
+    },
+    {
+      "a": false,
+      "b": true,
+      "x": false,
+      "y": true,
+      "clauses_hold": false
+    },
+    {
+      "a": false,
+      "b": true,
+      "x": true,
+      "y": false,
+      "clauses_hold": false
+    },
+    {
+      "a": false,
+      "b": true,
+      "x": true,
+      "y": true,
+      "clauses_hold": true
+    },
+    {
+      "a": true,
+      "b": false,
+      "x": false,
+      "y": false,
+      "clauses_hold": false
+    },
+    {
+      "a": true,
+      "b": false,
+      "x": false,
+      "y": true,
+      "clauses_hold": true
+    },
+    {
+      "a": true,
+      "b": false,
+      "x": true,
+      "y": false,
+      "clauses_hold": false
+    },
+    {
+      "a": true,
+      "b": false,
+      "x": true,
+      "y": true,
+      "clauses_hold": true
+    },
+    {
+      "a": true,
+      "b": true,
+      "x": false,
+      "y": false,
+      "clauses_hold": false
+    },
+    {
+      "a": true,
+      "b": true,
+      "x": false,
+      "y": true,
+      "clauses_hold": true
+    },
+    {
+      "a": true,
+      "b": true,
+      "x": true,
+      "y": false,
+      "clauses_hold": false
+    },
+    {
+      "a": true,
+      "b": true,
+      "x": true,
+      "y": true,
+      "clauses_hold": true
+    }
+  ]
+}

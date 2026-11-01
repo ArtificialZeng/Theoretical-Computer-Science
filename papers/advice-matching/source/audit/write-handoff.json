@@ -1,0 +1,15 @@
+{
+  "writer_job_id": "advice-matching-write-7c7b770a22e9",
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "manuscript_digest": "190ac5d740b6eba350826842752400ef3de5381f01b0c88aaf1f9350a2472763",
+  "pdf_digest": "6dd60b1709480f325a0f8e2e6a225d3935adb20a5a9cf071c6bfe42b95861367",
+  "math_snapshot_digest": "9e5ce19e70bcedf07302fd469630c6922133d2418685a0789184566a1578f92c",
+  "pages": 6,
+  "pdf": "manuscript/main.pdf",
+  "source_zip": "artifacts/advice-matching-source.zip",
+  "fresh_release_review": "pending",
+  "source_and_frozen_evidence": "unchanged",
+  "next_test": "Fresh RELEASE citation/build/every-page visual audits, followed by the real local release gate."
+}

@@ -1,0 +1,13 @@
+{
+  "cnf": "evidence/research1-sat/n8d2_xoxooooo.cnf",
+  "proof": "evidence/research1-sat/n8d2_xoxooooo.lrat",
+  "cnf_sha256": "9d558b2e0526ebc06387616739a7c2ca29ff037c5cb87cc8d94b91698effca11",
+  "proof_sha256": "422224eac4f36242cf115bfe6da7a774448a6627be9d26e433c561c6eb3a28a1",
+  "initial_clauses": 6529,
+  "checked_additions": 26589,
+  "deletions": 26070,
+  "checked_empty_clause": true,
+  "verdict": "verified-UNSAT-of-this-CNF",
+  "checker": "independent Python LRAT/RUP-only checker",
+  "elapsed_seconds": 0.4533113749930635
+}

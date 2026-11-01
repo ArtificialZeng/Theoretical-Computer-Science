@@ -1,0 +1,104 @@
+{
+  "job_id": "robust-stopping-research-a43d444f406e",
+  "arithmetic": "exact rational; no floating point",
+  "full_optimizer_enumeration_cases": 606,
+  "full_optimizer_dual_only_cases": 5,
+  "signed_linear_oracle_enumeration_cases": 144,
+  "forced_bisection_cases": 3,
+  "coverage": [
+    {
+      "b": 2,
+      "R": "4/3",
+      "M": 7,
+      "vertices": 1,
+      "cases": 66
+    },
+    {
+      "b": 2,
+      "R": "3/2",
+      "M": 7,
+      "vertices": 7,
+      "cases": 66
+    },
+    {
+      "b": 2,
+      "R": "2",
+      "M": 7,
+      "vertices": 11,
+      "cases": 66
+    },
+    {
+      "b": 3,
+      "R": "27/19",
+      "M": 7,
+      "vertices": 1,
+      "cases": 66
+    },
+    {
+      "b": 3,
+      "R": "3/2",
+      "M": 7,
+      "vertices": 7,
+      "cases": 66
+    },
+    {
+      "b": 3,
+      "R": "2",
+      "M": 7,
+      "vertices": 17,
+      "cases": 66
+    },
+    {
+      "b": 4,
+      "R": "256/175",
+      "M": 7,
+      "vertices": 1,
+      "cases": 66
+    },
+    {
+      "b": 4,
+      "R": "3/2",
+      "M": 7,
+      "vertices": 7,
+      "cases": 66
+    },
+    {
+      "b": 4,
+      "R": "2",
+      "M": 7,
+      "vertices": 25,
+      "cases": 66
+    },
+    {
+      "b": 5,
+      "R": "3125/2101",
+      "M": 9,
+      "vertices": 1,
+      "cases": 3
+    },
+    {
+      "b": 5,
+      "R": "3/2",
+      "M": 9,
+      "vertices": 9,
+      "cases": 3
+    },
+    {
+      "b": 5,
+      "R": "7/4",
+      "M": 9,
+      "vertices": 116,
+      "cases": 3
+    },
+    {
+      "b": 5,
+      "R": "3",
+      "M": 9,
+      "vertices": 16,
+      "cases": 3
+    }
+  ],
+  "max_oracle_calls": 8,
+  "mismatches": 0,
+  "scope": "Finite tests and same-worker certificates; no fresh referee"
+}

@@ -1,0 +1,95 @@
+{
+  "job_id": "c012-upcycles-write-e722c4031892",
+  "pdf": "manuscript/main.pdf",
+  "pdf_sha256": "c175224de5654bfe9775b48f9d83f1b673d6e10414f29fe00c7a8c405bbf90b7",
+  "pages": 5,
+  "within_user_12_total_page_cap": true,
+  "letter_paper": true,
+  "class": "unmodified official acmart v2.20",
+  "class_matches_official": true,
+  "body_font": "11pt class setting; abstract, listing and bibliography use normal size",
+  "layout": "single column and single spaced; document geometry sets one-inch margins including head/foot area",
+  "source_unchanged": true,
+  "accepted_witness_encoding_preserved": true,
+  "every_encoding_row_occurs_twice_in_pdf": true,
+  "printed_code_extracted_and_executed": true,
+  "extracted_code_exit_code": 0,
+  "extracted_code_stdout": "Verified: 512 windows, 130816 pairs, 4096 words.",
+  "clean_build_succeeded": true,
+  "final_build_succeeded": true,
+  "undefined_references_or_citations": false,
+  "overfull_or_underfull_boxes": false,
+  "all_fonts_embedded": true,
+  "xml_text_bounds": [
+    {
+      "page": 1,
+      "left_min_px": 107,
+      "right_max_px": 813,
+      "top_min_px": 148,
+      "bottom_max_px": 1037,
+      "scale": 1.5
+    },
+    {
+      "page": 2,
+      "left_min_px": 107,
+      "right_max_px": 813,
+      "top_min_px": 152,
+      "bottom_max_px": 1073,
+      "scale": 1.5
+    },
+    {
+      "page": 3,
+      "left_min_px": 107,
+      "right_max_px": 813,
+      "top_min_px": 152,
+      "bottom_max_px": 1073,
+      "scale": 1.5
+    },
+    {
+      "page": 4,
+      "left_min_px": 108,
+      "right_max_px": 810,
+      "top_min_px": 152,
+      "bottom_max_px": 1073,
+      "scale": 1.5
+    },
+    {
+      "page": 5,
+      "left_min_px": 107,
+      "right_max_px": 813,
+      "top_min_px": 152,
+      "bottom_max_px": 1073,
+      "scale": 1.5
+    }
+  ],
+  "mathematical_scope_changed": false,
+  "independent_release_review_pending": true,
+  "listing_frame_inside_text_margins": true,
+  "rendered_pages": [
+    "evidence/write-render/final-1.png",
+    "evidence/write-render/final-2.png",
+    "evidence/write-render/final-3.png",
+    "evidence/write-render/final-4.png",
+    "evidence/write-render/final-5.png"
+  ],
+  "rendered_page_sha256": {
+    "evidence/write-render/final-1.png": "4fdfcf980717d91114aefdb0584ad0300362cc994cdb242c1e6f756b5c670d0e",
+    "evidence/write-render/final-2.png": "9b3b49cfc5151fa09f3b7e15ac5d9fde1528913f704d290589becec1c352874a",
+    "evidence/write-render/final-3.png": "159ffb301a72a5552c61bb38e910e150e0bcf969111c5ced999f8e9c8ee8b6d6",
+    "evidence/write-render/final-4.png": "d0d46249fabc57051ab200e1f5f54d6228dd6e29f80ffbd832eb9a7288b1e64c",
+    "evidence/write-render/final-5.png": "0c97f665ae778d23fbe739e856994685df72720859e166e5fbae1077fa839ef5"
+  },
+  "frozen_manuscript_digest": "b4319b27a2d3244908a1364d10f70dc0bbd124673b312c4ce9899d7122668c34",
+  "writer_visual_inspection": {
+    "job_id": "c012-upcycles-write-e722c4031892",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "method": "pdftoppm PNG rendering and direct visual inspection of all final pages",
+    "observations": "No clipping, overlaps, missing glyphs or broken listing. Encoding and complete code are readable; title-page email is unbroken; references and DOI links are legible. This is the writer QA, not the separate fresh release audit."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "job_id": "c012-upcycles-write-e722c4031892",
+  "failures": [
+    {
+      "stage": "initial build",
+      "exit_code": 12,
+      "reason": "acmart required country in affiliation; supplied verified university location fields before successful builds"
+    },
+    {
+      "stage": "optional bounding-box text extraction",
+      "attempts": 2,
+      "exit_code": 134,
+      "reason": "Poppler pdftotext -bbox-layout terminated with std::out_of_range basic_string",
+      "fallback": "All five pdftoppm rendered pages were available and inspected; pdftotext -layout and pdftohtml XML succeeded. No mathematical inference from diagnostic failure."
+    }
+  ],
+  "source_or_claim_changed": false,
+  "counters_reset": false,
+  "subagents_or_background_workers_spawned": false
+}

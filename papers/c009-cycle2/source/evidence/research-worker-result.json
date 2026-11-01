@@ -1,0 +1,21 @@
+{
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Complete proposed proof resolves the full immutable all-ell weighted question globally, with a forcing bound of optimal exponent. Exact adversarial diagnostics pass; current primary comparison and novelty limitations are documented. Fresh correctness, novelty and significance review is required; no acceptance or manuscript.",
+  "next_test": "Freeze claim.json and its evidence, then obtain a fresh referee rederivation of identity(R), the all-n/all-ell trace implication and sharp forcing bound, plus independent primary-literature/nonroutine-value scrutiny including the old operator leads.",
+  "evidence": [
+    "claim.json",
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "evidence/research-proof.md",
+    "evidence/research-literature.md",
+    "evidence/research-failure-dossier.md",
+    "evidence/research-exact-results.json",
+    "evidence/research_exact.py",
+    "evidence/research-source-integrity.json",
+    "evidence/research-usage.json",
+    "evidence/primary/research-web-passages.txt"
+  ]
+}

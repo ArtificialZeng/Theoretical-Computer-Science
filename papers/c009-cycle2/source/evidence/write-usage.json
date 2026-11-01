@@ -1,0 +1,56 @@
+{
+  "job_id": "c009-cycle2-write-9354f37401a8",
+  "role": "write",
+  "first_recorded_utc": "2026-11-01T02:54:25+00:00",
+  "completed_recorded_utc": "2026-11-01T03:03:09.119936+00:00",
+  "wall_ceiling_minutes": 20,
+  "agents_spawned": 0,
+  "other_codex_processes_spawned": 0,
+  "background_research_workers": 0,
+  "build_invocations": [
+    {
+      "attempt": 1,
+      "outcome": "failed",
+      "reason": "acmart manuscript option rejected changed baseline spacing",
+      "evidence": "evidence/write-build-attempt1.log"
+    },
+    {
+      "attempt": 2,
+      "outcome": "success",
+      "change": "existing single-spaced acmsmall option, unmodified official class",
+      "pages": 6
+    },
+    {
+      "attempt": 3,
+      "outcome": "success",
+      "change": "11pt abstract/affiliation/contact/references and factual AI disclosure",
+      "pages": 6
+    },
+    {
+      "attempt": 4,
+      "outcome": "success",
+      "change": "precise eigenvalue-ordering prose and attempted empty publisher metadata",
+      "pages": 6
+    },
+    {
+      "attempt": 5,
+      "outcome": "success",
+      "change": "author-name publisher metadata replaces automatic ACM attribution",
+      "pages": 6,
+      "evidence": "manuscript/build/main.log"
+    }
+  ],
+  "checkpoint_patch_attempts": [
+    {
+      "outcome": "rejected_without_execution",
+      "reason": "multiple operations targeted checkpoint.md in one apply_patch",
+      "resolution": "direct atomic-scope Python file write; predecessor checkpoint already saved"
+    }
+  ],
+  "pdf_marker_runs": 1,
+  "marker_exit_code": 0,
+  "source_unchanged": true,
+  "mathematical_scope_changed": false,
+  "external_submissions_or_messages": 0,
+  "release_performed": false
+}

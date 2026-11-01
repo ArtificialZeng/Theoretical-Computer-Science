@@ -1,0 +1,23 @@
+{
+  "project": "c012-upcycles",
+  "actual_archive_sha256": "a168975746a1ff1a422eddf3a6cd61af683a828b1399e587fad3b298f73da999",
+  "actual_pdf_sha256": "eade3f9df07bd82943ef54b3e0c9c1b95d1510ab9e779dc9ff26a9cdf71cedef",
+  "build_inputs_rehashed": 8,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c012-upcycles-rpgxix0n/c012-upcycles_source",
+  "pages": 5,
+  "text_matches": true,
+  "all_page_renders_match": true,
+  "finite_reproduction": [
+    {
+      "entry": "manuscript/verify.py",
+      "summary": "See retained stdout; not a JSON summary.",
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c012-upcycles-rpgxix0n/reproduction-0.stdout.log"
+    },
+    {
+      "entry": "evidence/research2-witness/minimal_check.py",
+      "summary": "See retained stdout; not a JSON summary.",
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c012-upcycles-rpgxix0n/reproduction-1.stdout.log"
+    }
+  ],
+  "scope": "Actual delivered archive clean build/render/reproduction; not a new math or novelty verdict."
+}

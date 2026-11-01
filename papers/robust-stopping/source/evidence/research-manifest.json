@@ -1,0 +1,49 @@
+{
+  "schema": "research-evidence-v1",
+  "job_id": "robust-stopping-research-a43d444f406e",
+  "role": "research",
+  "research_pass": 1,
+  "outcome": "candidate",
+  "kind": "result-note",
+  "original_status": "unresolved",
+  "source_sha256": "9721525d4da99587f7ef8b0f276225877c55b07af8d97e03a873448bbe839b32",
+  "claim_sha256": "64fad07566981f392f3a4df9791c815ee0510a1a4ddeadf67bf755bd933d04a7",
+  "fresh_referee": "pending runner; not performed by this worker",
+  "files": {
+    "source.md": "9721525d4da99587f7ef8b0f276225877c55b07af8d97e03a873448bbe839b32",
+    "problem.md": "8b42f9de27f9693d7417b285ff6b84a65df86d0a31e633405fdb4e4059f4fe78",
+    "requirements.md": "af53df8c8fb70d9d9c20d11bb67c9770309707203e52925e1b413f8128682115",
+    "candidate-argument.md": "6c5c413fa1e6adcc273ef940fb16d699006d83b5ab73606764f5deceb806fac7",
+    "evidence/research-argument.md": "bbdd6cc371e6347d6d57ec7ce3b263b032004b16542fb5a3319075c86f123bce",
+    "evidence/research-findings.md": "8e9be81254a979af3b9ed8edc35ca4f39902b7fe76dde4b87da297f7d1c3c2e8",
+    "evidence/prefix_oracle.py": "1e51b45073b8403501de73b126a901ba0bcd9a5770a4ff109c0e383ba9bfbaa5",
+    "evidence/test_prefix_oracle.py": "e9463aaf87dc38c0fa60e054c95a9d0186ac449bed4d50f283f18f50f2b8c8e4",
+    "evidence/oracle-tests.json": "d8e9c6a81adb7cc5a769ebc759eac06afd3e6833f52a3b55d6540bb93a269ec0",
+    "evidence/oracle-test-cases.json": "467f1cbc954fcf9c1a2dd3274a52ae05fbd064e58b719216fd03433f44421913",
+    "evidence/linear-oracle-test-cases.json": "693104cb38c0527ca9811a94b6fe6f9850c0adbdfa6107c6a6609e4889f42376",
+    "evidence/bisection-test-cases.json": "ca3970e0e9073ec7459327e3bee7183c300051ee5461729f0613d3bad1ec2b5c",
+    "evidence/check_oracle_certificates.py": "6de200c28c508bfb7a554a11cf145ccb83b031776bff9a7832d0b876dd812c2b",
+    "evidence/oracle-certificates.json": "859d6b996aa6ce558e8fb7919b4ed50120c76d4af1a2d4622659c71fbba7fd93",
+    "evidence/triage-findings.md": "2325f584239bdc7244f5ee5d78efc5b174faf95401b5d094f88b31541460bb3a",
+    "evidence/triage_exact.py": "be608fc7ab9336228f341a59bb6bef6add08976837933421865b5194227b6cd5",
+    "evidence/check_triage_certificate.py": "1a41dfefd1e212a577d92ebbcac119f4b232ee4eb9802ca728d700c9c492e488",
+    "evidence/triage-certificate.json": "9aa8ad051ccda732b76062085d5c9313957fe3e23c4a5abd372b20493beb5afd",
+    "literature/triage-screen.md": "e9677e126103d35a9c2ee1b2556f1fa204326f77b1588239cf412fc85b88cc04",
+    "literature/research-screen.md": "d10f074405c7c39776b17109ef6091ed0bcec6dd8d32207fd666e96e89a6f229",
+    "literature/rental-advice.html": "445824d453a962352d2c7c361d6bc0efab2f77357a7b99bf3181282a48d71122"
+  },
+  "checkpoint_sha256": "ba3fbd0eb3559bdfcbf3ff23f64bc9138788cb9b514c47e654fddbbd0f89e9b0",
+  "verification": {
+    "enumeration_optimizer_cases": 606,
+    "enumeration_signed_cost_cases": 144,
+    "larger_dual_only_cases": 5,
+    "forced_bisection_cases": 3,
+    "serialized_certificates_checked": 758,
+    "mismatches": 0
+  },
+  "limits": [
+    "No fresh mathematical acceptance or novelty certification",
+    "Polynomial in numerical b, not log(b)",
+    "No complete Pareto-frontier enumeration or manuscript claimed"
+  ]
+}

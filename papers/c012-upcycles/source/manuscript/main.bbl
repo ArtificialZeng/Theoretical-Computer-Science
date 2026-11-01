@@ -1,0 +1,24 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{FGK{\etalchar{+}}26}
+
+\bibitem[CKKP25]{CKKP25}
+William~D. Carey, Matthew~David Kearney, Rachel Kirsch, and Stefan Popescu.
+\newblock Universal partial tori.
+\newblock {\em Designs, Codes and Cryptography}, 93:2803--2822, 2025.
+\newblock \url{https://doi.org/10.1007/s10623-025-01609-9}.
+
+\bibitem[CKMS17]{CKMS17}
+Herman Z.~Q. Chen, Sergey Kitaev, Torsten M{\"u}tze, and Brian~Y. Sun.
+\newblock On universal partial words.
+\newblock {\em Discrete Mathematics \& Theoretical Computer Science}, 19(1),
+  2017.
+\newblock Paper 16. \url{https://doi.org/10.23638/DMTCS-19-1-16}.
+
+\bibitem[FGK{\etalchar{+}}26]{FGKMM26}
+Dylan Fillmore, Bennet Goeckner, Rachel Kirsch, Kirin Martin, and Daniel
+  McGinnis.
+\newblock The existence and structure of universal partial cycles.
+\newblock {\em Designs, Codes and Cryptography}, 94, 2026.
+\newblock Article 152. \url{https://doi.org/10.1007/s10623-026-01841-x}.
+
+\end{thebibliography}

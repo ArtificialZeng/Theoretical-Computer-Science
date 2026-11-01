@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "title": "A Sparse-Cardinality Curvature Bound under Persistent Adversarial Noise",
+  "kind": "result-note",
+  "original_status": "unresolved",
+  "writer_job_id": "curvature-noise-write-cf9542198fc2",
+  "source_files": [
+    "manuscript/README-ZH.md",
+    "manuscript/REPRODUCIBILITY.md",
+    "manuscript/SOURCE-PROVENANCE.json",
+    "manuscript/acmart.cls",
+    "manuscript/alpha.bst",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/reproduce.py",
+    "manuscript/vendor/README-acmart",
+    "manuscript/vendor/acmart.dtx"
+  ],
+  "pdf": "manuscript/main.pdf",
+  "build": {
+    "cwd": "manuscript",
+    "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder main.tex",
+    "engine": "pdfLaTeX; BibTeX; TeX Live 2026"
+  },
+  "reproduce": {
+    "cwd": "manuscript",
+    "command": "python3 reproduce.py",
+    "dependencies": "Python >=3.9 standard library only"
+  },
+  "source_archive": "manuscript/curvature-noise-source.zip",
+  "source_archive_sha256": "058d644c79c558939e7c90fdd3d2f9176278b1b34314e7da052e5add864b49ed",
+  "presentation_revision": {
+    "scope": "Positive concise abstract, consolidated open questions, full XMP contacts, factual AI disclosure before final bibliography",
+    "mathematical_scope_changed": false,
+    "fresh_release_required": true
+  }
+}

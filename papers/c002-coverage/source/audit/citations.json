@@ -1,0 +1,31 @@
+{
+  "verdict": "accept_with_citation_limitations",
+  "job_id": "c002-coverage-release-c84ac066553a",
+  "snapshot_digest": "26d2a64f317984b35b49212bdc46529ccb7f19bc1be1b5e471d28d308d18456e",
+  "manuscript_digest": "cbd9e040f4147d3e60fc3daafd59dcd1d2dfe965798be52063afe7345dcd085f",
+  "pdf_digest": "b2dac13ca628fb6c3b7495516ee0acbdd390a90b0942127ada2935401ba873db",
+  "report": "audit/citations.md",
+  "citation_audit_method": "citation-check-skill-advisory-plus-primary-source-manual",
+  "sources_checked": [
+    "manuscript/README.md",
+    "manuscript/build.py",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/vendor/acmart.cls",
+    "manuscript/vendor/alpha.bst",
+    "manuscript/vendor/download-provenance.json"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "Complete authored text, all eight publication source files, five bibliography entries, all claim-to-source attributions, accepted-scope fidelity, bounded current novelty comparison, final extracted/rendered references. All metadata verified through primary publisher/arXiv records; no user-designated workbook exists. DS03 original full text not inspected; its exact theorem and attribution are verified in GRW11 Theorem 2 and proved in full in the manuscript. Separate BibTeX endpoints failed but complete official inline BibTeX was available.",
+  "unverified_citations": [
+    {
+      "key": "DS03",
+      "citation": "Benjamin Doerr and Anand Srivastav, Multicolour Discrepancies (2003), DOI 10.1017/S0963548303005662",
+      "limitation": "Original full text not directly inspected; Cambridge metadata/abstract verified. Exact rational theorem and historical attribution verified in the primary GRW11 Theorem 2, p.58; manuscript includes full proof and identifies that formulation source.",
+      "metadata_basis": "primary_publisher_record",
+      "claim_support_basis": "GRW11 primary full text and self-contained manuscript proof"
+    }
+  ]
+}

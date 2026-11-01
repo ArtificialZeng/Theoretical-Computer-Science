@@ -1,0 +1,22 @@
+{
+  "verdict": "accept",
+  "job_id": "c009-cycle2-release-70b6b8b76475",
+  "snapshot_digest": "06b470c27e7195c3ffb2ba0d198581e77aa79d1b5d87d6485d396b6af906d1bc",
+  "manuscript_digest": "b4b0a087b93942317cb6f781edea4f1dd83ed888a5847b8da0a4194a99337b0c",
+  "pdf_digest": "519a8f77e5e1fd12c6abf00b04b53c6e43a17273c04d3cfb8668ff6c98866710",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/acmart.cls",
+    "manuscript/alphaurl.bst",
+    "manuscript/build.sh",
+    "manuscript/build/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "All six publication dependencies, all five primary references, fixed claims C01-C21, complete accepted-scope comparison, regenerated bibliography and extracted/rendered PDF references checked on2026-11-01. Metadata verified from primary arXiv records and author-uploaded MPT04 text; optional DOI/CiteSeer refresh failed but accessible primary evidence sufficed. No Excel bibliography designated. Bounded current novelty comparison; no exhaustive priority guarantee.",
+  "citation_audit_method": "citation-check-skill-advisory-primary-source-manual",
+  "search_date": "2026-11-01",
+  "unverified_citations": []
+}

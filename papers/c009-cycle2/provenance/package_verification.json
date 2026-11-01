@@ -1,0 +1,114 @@
+{
+  "project": "c009-cycle2",
+  "actual_archive_sha256": "23f1aaee41421169bc64403340c70d2fa50d2bbfef625c80224e1d969cc83294",
+  "actual_pdf_sha256": "519a8f77e5e1fd12c6abf00b04b53c6e43a17273c04d3cfb8668ff6c98866710",
+  "build_inputs_rehashed": 7,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c009-cycle2-7wl3j8b3/c009-cycle2_source",
+  "pages": 6,
+  "text_matches": true,
+  "all_page_renders_match": true,
+  "finite_reproduction": [
+    {
+      "entry": "evidence/research_exact.py",
+      "summary": {
+        "identity_tests": 270,
+        "weighted_grid_tests": {
+          "2": {
+            "grid": [
+              "0",
+              "1/4",
+              "1/2",
+              "3/4",
+              "1"
+            ],
+            "matrices": 5,
+            "ell_range": [
+              1,
+              8
+            ],
+            "trace_tests": 40,
+            "minimum_density_to_baseline_ratio": "1"
+          },
+          "3": {
+            "grid": [
+              "0",
+              "1/4",
+              "1/2",
+              "3/4",
+              "1"
+            ],
+            "matrices": 125,
+            "ell_range": [
+              1,
+              6
+            ],
+            "trace_tests": 750,
+            "minimum_density_to_baseline_ratio": "1"
+          },
+          "4": {
+            "grid": [
+              "0",
+              "1/2",
+              "1"
+            ],
+            "matrices": 729,
+            "ell_range": [
+              1,
+              4
+            ],
+            "trace_tests": 2916,
+            "minimum_density_to_baseline_ratio": "1"
+          }
+        },
+        "direct_density_tests": [
+          {
+            "n": 2,
+            "ell": 3,
+            "vertex_maps": 4096,
+            "density": "8586369/34359738368"
+          },
+          {
+            "n": 3,
+            "ell": 2,
+            "vertex_maps": 6561,
+            "density": "5977/1492992"
+          },
+          {
+            "n": 4,
+            "ell": 1,
+            "vertex_maps": 256,
+            "density": "2151/32768"
+          }
+        ],
+        "failures": [],
+        "elapsed_seconds": 0.982
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c009-cycle2-7wl3j8b3/reproduction-0.stdout.log"
+    },
+    {
+      "entry": "audit/referee_verify.py",
+      "summary": {
+        "job_id": "c009-cycle2-referee-eb6d40fb0393",
+        "scope": "Finite exact diagnostics supplementing the analytic referee derivation; no proof by bounded search.",
+        "independent_implementation": true,
+        "seed": 90400393,
+        "rational_residual_checks": 96,
+        "rational_compression_checks": 96,
+        "dimensions": [
+          1,
+          8
+        ],
+        "exact_forcing_checks_dimensions_at_most_3": 15,
+        "sharpness_checks": 15,
+        "source_sha256": "d0dbd81f856b64b6fc49f3e0a0d9242427573bf2460ba28a4f3c1beb93ed635d",
+        "operational_failures": [
+          "First verifier required unavailable sympy and exited at import before any checks; preserved as referee_verify_sympy_unavailable.py. Replaced by standard-library implementation.",
+          "First replacement apply_patch was rejected for multiple operations on one path; no mathematical check ran in that failed call."
+        ],
+        "mathematical_failures": []
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c009-cycle2-7wl3j8b3/reproduction-1.stdout.log"
+    }
+  ],
+  "scope": "Actual delivered archive clean build/render/reproduction; not a new math or novelty verdict."
+}

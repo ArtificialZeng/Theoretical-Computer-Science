@@ -1,0 +1,237 @@
+\documentclass[acmsmall,screen,nonacm,11pt]{acmart}
+\usepackage{mathtools}
+\geometry{letterpaper,margin=1in,headheight=14pt,footskip=24pt}
+\settopmatter{printacmref=false,printfolios=true,printccs=false}
+\setcopyright{none}
+\hypersetup{pdfpublisher={Zijian Zeng}}
+\citestyle{acmnumeric}
+\bibliographystyle{alphaurl}
+\renewcommand{\bibliofont}{\normalfont\normalsize}
+\newcommand{\R}{\mathbb R}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\title[A global Sidorenko inequality for subdivided cycles]{A Global Sidorenko Inequality for\texorpdfstring{\\}{ }2-Subdivided Alternating Cycles}
+\author{Zijian Zeng}
+\affiliation{\normalsize\institution{UCSI University}\city{Kuala Lumpur}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\authorsaddresses{\normalsize Contact: Zijian Zeng, UCSI University, \href{mailto:1002266693@ucsiuniversity.edu.my}{1002266693@ucsiuniversity.edu.my}}
+\renewcommand{\shortauthors}{Zijian Zeng}
+\date{}
+\begin{document}
+\begin{abstract}
+\normalsize
+Let $H_\ell$ be obtained from the alternating cycle of length $2\ell$ by replacing every directed edge with a directed path of two edges. We prove that, for every $\ell\geq 1$, its homomorphism density in every weighted tournament is at least $2^{-4\ell}$. This gives a global affirmative answer to the local tournament Sidorenko question posed by He, Mani, Nie, Tung and Wei for the entire family. The lengths $4$, $8$ and $12$ were already covered by earlier cycle results.
+
+The argument reduces all lengths to a matrix inequality: if $u$ is a real unit vector and $B$ is real skew-symmetric, then $\norm{(uu^{\mathsf T}/2+B)^2}_{\op}\geq 1/4$. An explicit vector proves this inequality through a nonnegative residual identity. A second spectral direction gives a dimension-free forcing estimate: the excess density is at least $16^{-\ell}\norm{(A-J/2)/n}_{\op}^{4\ell}$. Equality holds precisely for the constant weighted tournament, and a three-vertex family shows that the exponent $4\ell$ is optimal.
+\end{abstract}
+\maketitle
+\raggedbottom
+\clearpage
+
+\section{The family and its global inequality}
+
+A tournament assigns a direction to each pair of distinct vertices. A weighted tournament permits a probability for each direction: it is a real matrix $A\in[0,1]^{n\times n}$ satisfying $A+A^{\mathsf T}=J$, where $J$ is the all-ones matrix. In particular $A_{ii}=1/2$. For an oriented graph $F$, write
+\begin{equation}\label{eq:density}
+ t_F(A)=\frac{1}{n^{|V(F)|}}\sum_{\phi:V(F)\to[n]}
+       \prod_{(v,w)\in E(F)} A_{\phi(v),\phi(w)}.
+\end{equation}
+The sum includes all vertex maps, allowing vertices to coincide. The constant matrix $J/2$ has density $2^{-|E(F)|}$. A tournament Sidorenko inequality asks whether this random benchmark is a lower bound.
+
+For $\ell\geq1$, define $H_\ell$ on cyclically ordered vertices $v_0,\ldots,v_{4\ell-1}$ by the edge pattern
+\[
+  v_{4j}\longrightarrow v_{4j+1}\longrightarrow v_{4j+2}
+  \longleftarrow v_{4j+3}\longleftarrow v_{4j+4}
+  \qquad(0\leq j<\ell),
+\]
+with indices modulo $4\ell$. Thus its clockwise edge word is $(++--)^\ell$. This is the directed $2$-subdivision of the alternating cycle of length $2\ell$; the case $\ell=1$ is the four-cycle consisting of two directed two-edge paths with common endpoints.
+
+Problem~3.23 of He, Mani, Nie, Tung and Wei~\cite{HMNTW25} asks whether every member of this family is \emph{locally tournament Sidorenko}. In their Definition~3.1, this means that for each fixed $F$ there is $\varepsilon(F)>0$ such that $t_F(A)\geq2^{-|E(F)|}$ whenever the skew-symmetric perturbation $A-J/2$ has spectral radius at most $\varepsilon(F)n$. For a real skew-symmetric matrix, spectral radius and operator norm agree. We prove the inequality without this restriction.
+
+Throughout, $\norm{\cdot}_{\op}$ is the Euclidean operator norm. We order the eigenvalues of a real symmetric matrix nonincreasingly.
+
+\begin{theorem}\label{thm:main}
+For every integer $\ell\geq1$, every integer $n\geq1$ and every weighted tournament $A\in[0,1]^{n\times n}$, set
+\[
+ B=\frac{A-J/2}{n},\qquad \beta=\norm{B}_{\op}.
+\]
+Then
+\begin{equation}\label{eq:main}
+ t_{H_\ell}(A)-16^{-\ell}\ \geq\ 16^{-\ell}\beta^{4\ell}.
+\end{equation}
+In particular $t_{H_\ell}(A)\geq16^{-\ell}$, with equality if and only if $A=J/2$. For each fixed $\ell$, the exponent $4\ell$ in a positive-constant lower bound in terms of $\beta$ cannot be decreased.
+\end{theorem}
+
+The theorem settles the complete local question affirmatively for every $\ell$. It also explains quantitatively how a density close to the benchmark forces the host close to the constant matrix. If $E=t_{H_\ell}(A)-16^{-\ell}$, then
+\begin{equation}\label{eq:forcing}
+ \frac{1}{n^2}\max_{S,T\subseteq[n]}
+   \left|\sum_{i\in S,\,j\in T}(A_{ij}-1/2)\right|
+ \leq\beta\leq 2E^{1/(4\ell)}.
+\end{equation}
+Indeed, the first inequality follows by applying the operator norm to the indicator vectors of $S$ and $T$, and the second is \eqref{eq:main}. Thus one cycle density controls every rectangle sum of edge-weight deviations, a standard quantitative expression of random-like behavior.
+
+\subsection{Prior work and the point of the proof}
+
+Grzesik, Il'kovi\v{c}, Kielak and Kr\'al'~\cite{GIKK23} study quasirandom-forcing orientations of cycles. Their Theorem~12 already covers the members of the present family of lengths $4$, $8$ and $12$. Theorem~\ref{thm:main} treats every length $4\ell$ uniformly and supplies the explicit forcing estimate \eqref{eq:main}. The four-cycle also occurs as $D_2$ in Fox, Himwich, Mani and Zhou~\cite[Lemma~4.10]{FHMZ24}. Their further parallel-path constructions differ from the serial cycle family here.
+
+The asymmetric Sidorenko transfer in \cite[Theorem~1.5]{FHMZ22} and \cite[Theorem~4.2]{FHMZ24} assumes a homomorphism to a single directed edge. Every $H_\ell$ has a vertex with both positive indegree and positive outdegree, so that hypothesis is absent. The distinction matters even though the underlying undirected graph is an even cycle.
+
+Our main step is a lower bound for the largest singular value of a matrix square. Normalize $T=A/n$. The cycle word gives exactly
+\[
+ t_{H_\ell}(A)=\tr\bigl[(T^2(T^{\mathsf T})^2)^\ell\bigr].
+\]
+The matrix inside the power is positive semidefinite. Consequently a single lower bound $\norm{T^2}_{\op}\geq1/4$ proves the density bound at every length. We obtain it from a vector adapted to the action of the skew part on the constant vector. The forcing estimate additionally controls a second eigenvalue.
+
+Matrices with a rank-one symmetric part are classical almost skew-symmetric matrices. We use the block reduction of McDonald, Psarrakos and Tsatsomeros~\cite[Equation~(3.2)]{MPT04}. Their Theorem~3.7 includes a largest-singular-value lower bound for the matrix itself. A lower bound for $\norm{T}_{\op}$ does not imply one for $\norm{T^2}_{\op}$ by submultiplicativity, and $T^2$ need not have a rank-one symmetric part. For example, with $u=(1,0)^{\mathsf T}$ and $B=\bigl(\begin{smallmatrix}0&-1/4\\1/4&0\end{smallmatrix}\bigr)$, the symmetric part of $(uu^{\mathsf T}/2+B)^2$ is $\diag(3/16,-1/16)$. The square estimate below is therefore proved directly.
+
+Exact rational computations and Codex-assisted derivations were used in developing and checking the argument. The proofs below are analytic and self-contained; the computations are supplementary. The scope of this assistance is described at the end of the paper.
+
+\section{A lower bound for the matrix square}
+
+\begin{lemma}\label{lem:square}
+Let $u\in\R^n$ be a unit vector, $B^{\mathsf T}=-B$, $P=uu^{\mathsf T}$ and $T=P/2+B$. Put $b=Bu$, $a=\norm{b}^2$, and let $D$ be the compression of $B$ to $u^\perp$. For
+\[
+ Q=T^2(T^{\mathsf T})^2
+\]
+one has
+\begin{equation}\label{eq:lambda1}
+ \lambda_1(Q)\geq \frac1{16}+\frac{2a^2}{1+4a}.
+\end{equation}
+In particular $\norm{T^2}_{\op}\geq1/4$, without any bound on $B$.
+\end{lemma}
+
+\begin{proof}
+Skew-symmetry gives $b\perp u$ and $D^{\mathsf T}=-D$. In the orthogonal decomposition $\R u\oplus u^\perp$, the matrices are
+\[
+ B=\begin{pmatrix}0&-b^{\mathsf T}\\ b&D\end{pmatrix},
+ \qquad
+ T=\begin{pmatrix}1/2&-b^{\mathsf T}\\ b&D\end{pmatrix}.
+\]
+Set $x=u+2b$. Then $\norm{x}^2=1+4a>0$. Two multiplications give
+\begin{align*}
+ T^{\mathsf T}x&=(1/2+2a)u-b-2Db,\\
+ (T^{\mathsf T})^2x&=u/4-(1/2+2a)b+Db+2D^2b.
+\end{align*}
+Here the $u$-coordinate in the second line is exactly $1/4$, since $b^{\mathsf T}Db=0$. The identities
+\[
+ \langle b,Db\rangle=\langle Db,D^2b\rangle=0,
+ \qquad \langle b,D^2b\rangle=-\norm{Db}^2
+\]
+yield the residual formula
+\begin{equation}\label{eq:residual}
+\begin{split}
+ \norm{(T^{\mathsf T})^2x}^2-\frac{\norm{x}^2}{16}
+  ={}&2a^2+4a^3+(3+8a)\norm{Db}^2\\
+     &+4\norm{D^2b}^2.
+\end{split}
+\end{equation}
+For completeness, writing $c=1/2+2a$, the squared norm on the left before subtraction is
+\[
+ \frac1{16}+c^2a+(1+4c)\norm{Db}^2+4\norm{D^2b}^2.
+\]
+Subtracting $(1+4a)/16$ gives \eqref{eq:residual}. Every residual term is nonnegative. Since $x^{\mathsf T}Qx=\norm{(T^{\mathsf T})^2x}^2$, the Rayleigh principle, followed by division by $1+4a$, proves \eqref{eq:lambda1}. Finally $Q=T^2(T^2)^{\mathsf T}$, so $\lambda_1(Q)=\norm{T^2}_{\op}^2$. Empty blocks in dimension one are interpreted as zero.
+\end{proof}
+
+\section{From the square to every cycle length}
+
+Take $u=n^{-1/2}(1,\ldots,1)^{\mathsf T}$ and $B=(A-J/2)/n$. Then $P=J/n$, $B^{\mathsf T}=-B$ and $T=A/n=P/2+B$. Expanding a cyclic matrix product gives
+\begin{equation}\label{eq:trace}
+ t_{H_\ell}(A)=\tr\bigl[(TTT^{\mathsf T}T^{\mathsf T})^\ell\bigr]
+              =\tr(Q^\ell).
+\end{equation}
+In fact, at a clockwise edge the factor is $T_{ij}$, and at a counterclockwise edge it is $(T^{\mathsf T})_{ij}=T_{ji}$. Summing the cyclic indices is the trace. There are $4\ell$ factors of $A/n$, giving exactly the normalization in \eqref{eq:density}, including coincident vertex maps.
+
+All eigenvalues of $Q$ are nonnegative. Lemma~\ref{lem:square} therefore gives, for every $n$ and every $\ell\geq1$,
+\begin{equation}\label{eq:global}
+ t_{H_\ell}(A)=\sum_{j=1}^n\lambda_j(Q)^\ell
+        \geq \lambda_1(Q)^\ell\geq16^{-\ell}.
+\end{equation}
+This proves the affirmative answer to Problem~3.23 of \cite{HMNTW25} throughout the class of weighted tournaments.
+
+\section{Quantitative forcing and equality}
+
+We next extract a second spectral direction from the skew compression. Keep the notation of Lemma~\ref{lem:square}, and put $d=\norm{D}_{\op}$.
+
+\begin{lemma}\label{lem:second}
+If $n\geq2$, then $\lambda_2(Q)\geq d^4$.
+\end{lemma}
+
+\begin{proof}
+Multiplying the block matrix for $T$ gives
+\[
+ T^2=\begin{pmatrix}
+  1/4-a&-b^{\mathsf T}/2-b^{\mathsf T}D\\
+  b/2+Db&D^2-bb^{\mathsf T}
+ \end{pmatrix}.
+\]
+Set $y=b/2+Db$ and $K=-D^2+bb^{\mathsf T}$. The compression of $Q=T^2(T^2)^{\mathsf T}$ to $u^\perp$ is
+\[
+ yy^{\mathsf T}+K^2,
+ \qquad K\succeq-D^2\succeq0.
+\]
+If $d=0$, positivity of $Q$ suffices. If $d>0$, the largest eigenvalue $d^2$ of $-D^2$ has multiplicity at least two, by the real skew-symmetric block form. Let $F\subseteq u^\perp$ be its eigenspace. For every $z\in F$,
+\[
+ z^{\mathsf T}Kz\geq d^2\norm{z}^2,
+ \qquad \norm{Kz}\geq d^2\norm{z}.
+\]
+The second inequality follows from Cauchy--Schwarz (and is immediate for $z=0$). Hence, viewing $F$ as a subspace of $\R^n$,
+\[
+ z^{\mathsf T}Qz=(y^{\mathsf T}z)^2+\norm{Kz}^2
+               \geq d^4\norm{z}^2.
+\]
+As $\dim F\geq2$, the min-max principle gives $\lambda_2(Q)\geq d^4$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}, except exponent optimality]
+Write $E=t_{H_\ell}(A)-16^{-\ell}$. Dimension one has $A=J/2$, so suppose $n\geq2$. By \eqref{eq:trace}, Lemmas~\ref{lem:square} and~\ref{lem:second}, and the elementary inequality $(s+h)^\ell\geq s^\ell+\ell s^{\ell-1}h$ for $s,h\geq0$, we have both
+\begin{equation}\label{eq:twoestimates}
+ E\geq \ell16^{-(\ell-1)}\frac{2a^2}{1+4a},
+ \qquad E\geq d^{4\ell}.
+\end{equation}
+For the second bound, retain $\lambda_1(Q)^\ell$ and $\lambda_2(Q)^\ell$ in the trace and use $\lambda_1(Q)\geq1/16$.
+
+Every entry of $B$ has absolute value at most $1/(2n)$. Its Hilbert--Schmidt norm therefore gives
+\[
+ \beta\leq\norm{B}_{\mathrm{HS}}\leq1/2,
+ \qquad a\leq\beta^2\leq1/4.
+\]
+Decompose $B$ into its extended compression $D$ and the off-diagonal block $\bigl(\begin{smallmatrix}0&-b^{\mathsf T}\\b&0\end{smallmatrix}\bigr)$. The latter has norm $\norm{b}=\sqrt a$, so
+\begin{equation}\label{eq:split}
+ \beta\leq d+\sqrt a.
+\end{equation}
+If $d\geq\beta/2$, the second bound in \eqref{eq:twoestimates} gives
+\[
+ E\geq(\beta/2)^{4\ell}=16^{-\ell}\beta^{4\ell}.
+\]
+Otherwise \eqref{eq:split} gives $\sqrt a>\beta/2$. Since $2/(1+4a)\geq1$, the first bound in \eqref{eq:twoestimates} yields
+\[
+ E\geq\ell16^{-(\ell-1)}a^2
+   \geq\ell16^{-\ell}\beta^4
+   \geq16^{-\ell}\beta^{4\ell}.
+\]
+The last step uses $\ell\geq1$ and $0\leq\beta\leq1$. This proves \eqref{eq:main}. If $E=0$, then \eqref{eq:main} forces $\beta=0$, hence $A=J/2$. Conversely, that matrix has density $16^{-\ell}$ directly from \eqref{eq:density}.
+\end{proof}
+
+\section{The forcing exponent is optimal}
+
+For $0<r\leq1/2$, consider the three-vertex weighted tournament
+\[
+ A=J/2+rK_0,\qquad
+ K_0=\begin{pmatrix}0&1&-1\\-1&0&1\\1&-1&0\end{pmatrix}.
+\]
+Here $B=rK_0/3$ annihilates $u=3^{-1/2}(1,1,1)^{\mathsf T}$, so $PB=BP=0$. Its nonzero eigenvalues are $\pm ir/\sqrt3$, and $\beta=r/\sqrt3$. Consequently
+\[
+ T^2=P/4+B^2,\qquad Q=P/16+B^4.
+\]
+The eigenvalues of $Q$ are $1/16,\beta^4,\beta^4$, and thus
+\begin{equation}\label{eq:sharp}
+ t_{H_\ell}(A)-16^{-\ell}=2\beta^{4\ell}.
+\end{equation}
+For each fixed $\ell$ and each $p<4\ell$, the ratio of the left side to $\beta^p$ tends to zero as $r\to0$. No constant $c>0$ can therefore make $E\geq c\beta^p$ valid for all weighted tournaments. This proves the exponent assertion of Theorem~\ref{thm:main}.
+
+\section*{AI methodology}
+OpenAI Codex materially assisted problem selection, proof development, exact rational checks, literature comparison and writing throughout the paper. Separate Codex contexts also scrutinized the mathematical argument.
+
+\bibliography{references}
+\end{document}

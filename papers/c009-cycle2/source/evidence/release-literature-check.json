@@ -1,0 +1,90 @@
+{
+  "job_id": "c009-cycle2-release-70b6b8b76475",
+  "checked_on": "2026-11-01",
+  "method": "citation-check-skill advisory; separate extraction then verification; actual primary-text reading",
+  "queries_run": [
+    [
+      "He 2025 New Sidorenko-type inequalities",
+      "\"New Sidorenko-type inequalities in tournaments\" site:arxiv.org",
+      "He 2025 arXiv Sidorenko tournaments",
+      "arxiv:2512.11222"
+    ],
+    [
+      "Grzesik 2023 Quasirandom forcing orientations",
+      "\"Quasirandom forcing orientations of cycles\" site:arxiv.org",
+      "Grzesik 2023 arXiv cycles",
+      "arxiv:2212.09343"
+    ],
+    [
+      "Fox 2022 A note on",
+      "\"A note on directed analogues of the Sidorenko and forcing conjectures\" site:arxiv.org",
+      "Fox 2022 arXiv directed analogues",
+      "arxiv:2210.16971"
+    ],
+    [
+      "Fox 2024 Variations on Sidorenko",
+      "\"Variations on Sidorenko's conjecture in tournaments\" site:arxiv.org",
+      "Fox 2024 arXiv tournaments",
+      "arxiv:2402.08418"
+    ],
+    [
+      "McDonald 2004 Almost skew-symmetric matrices",
+      "\"Almost skew-symmetric matrices\" site:semanticscholar.org OR site:arxiv.org",
+      "McDonald 2004 Rocky Mountain Journal Mathematics",
+      "doi:10.1216/rmjm/1181069905"
+    ]
+  ],
+  "additional_queries": [
+    "\"2512.11222\" \"3.23\"",
+    "\"subdivided alternating cycles\" tournament Sidorenko2026",
+    "\"almost skew-symmetric\" \"square\" \"norm\"",
+    "\"Sidorenko\" \"alternating\" \"cycle\"2026"
+  ],
+  "sources": [
+    {
+      "key": "HMNTW25",
+      "url": "https://arxiv.org/abs/2512.11222v1",
+      "text": "https://arxiv.org/html/2512.11222v1",
+      "version": "v1, 12 December 2025",
+      "locations": "Definition3.1, printed p7; subdivision convention and Problem3.23, printed p17",
+      "result": "Authors/title/year/version agree. The entire all-ell local family and weighted definition agree; this source is not represented as proving the new global result."
+    },
+    {
+      "key": "GIKK23",
+      "url": "https://arxiv.org/abs/2212.09343v3",
+      "text": "https://arxiv.org/html/2212.09343v3",
+      "version": "v3, 13 July 2023",
+      "locations": "Theorem12, printed p13, with coefficient expansion and proof",
+      "result": "Metadata agree. Criterion and positive residual in its proof cover lengths4,8,12. Coefficient evidence read in audit/referee-prior-criterion.json and frozen theorem12 results. Failure at16 concerns only the criterion; manuscript makes no negative mathematical or exhaustive-priority inference."
+    },
+    {
+      "key": "FHMZ22",
+      "url": "https://arxiv.org/abs/2210.16971v1",
+      "text": "https://arxiv.org/html/2210.16971v1",
+      "version": "v1, 30 October 2022",
+      "locations": "Theorem1.5",
+      "result": "Authors/title/year/version agree. Transfer requires a homomorphism to a directed edge; each current cycle has a mixed vertex, excluding that hypothesis."
+    },
+    {
+      "key": "FHMZ24",
+      "url": "https://arxiv.org/abs/2402.08418v1",
+      "text": "https://arxiv.org/html/2402.08418v1",
+      "version": "v1, 13 February 2024",
+      "locations": "Theorem4.2; Definition4.9; Lemmas4.10-4.11, printed pp16-18",
+      "result": "Metadata agree. Edge-homomorphism hypothesis verified. D2 is precisely the two-parallel-two-edge-path four-cycle; Dk for k>2 has different degree/size structure from the serial family."
+    },
+    {
+      "key": "MPT04",
+      "url": "https://www.researchgate.net/publication/38371363_Almost_Skew-Symmetric_Matrices",
+      "text": "author-uploaded full primary text at same URL",
+      "version": "Rocky Mountain Journal of Mathematics34(1),269-288,2004; DOI10.1216/rmjm/1181069905",
+      "locations": "Equation(3.2), printed p272; Theorem3.7, printed pp277-278",
+      "result": "Authors/title/journal/pages/year and DOI agree with author-uploaded record. Read actual block formula and sigma1(A)>=delta(A) statement. These concern the first power. DOI resolver failed and CiteSeer returned403, but the actual author-uploaded text and metadata were accessible; no citation remains unverified on that basis."
+    }
+  ],
+  "current_followups_checked": [
+    "https://arxiv.org/abs/2605.14138 (v2,22 September2026; paths/spiders)",
+    "https://arxiv.org/abs/2602.12551 (v2,14 July2026; tournament targets in nearly regular hosts)"
+  ],
+  "limits": "Bounded current search; no exhaustive priority claim. Failed optional DOI and CiteSeer refresh superseded by accessible author-uploaded actual text."
+}

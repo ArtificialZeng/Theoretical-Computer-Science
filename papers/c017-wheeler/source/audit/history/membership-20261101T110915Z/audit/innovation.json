@@ -1,0 +1,27 @@
+{
+  "job_id": "c017-wheeler-referee-dd13950aae3a",
+  "verdict": "accept",
+  "snapshot_digest": "aaa91b59e8425f6cb4943fc3132e3ef9680e93dbb77aad8bca7bfce55d898516",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    {
+      "reference": "G. D'Agostino and A. Paradiso, Finite-State Transducers in the Wheeler Setting, arXiv:2606.29405v3, 13 August 2026, Definitions 4 and 5; Section 4",
+      "url": "https://arxiv.org/html/2606.29405v3",
+      "verified_result": "The definitions use total colex separation of reaching languages and finite convex weakly monotone transition-output partitions. Section 4 explicitly leaves this exact membership decision open; the live history still lists v3 on 2026-11-01."
+    },
+    {
+      "reference": "G. D'Agostino, D. Martincigh and A. Policriti, Ordering Regular Languages: A Danger Zone, 2021, Definition 1 and pp. 4-5 input-order recognition discussion",
+      "url": "https://ceur-ws.org/Vol-3072/paper5.pdf",
+      "verified_result": "Known polynomial recognition of graph/input Wheelerness under initial-state and input-consistency conventions supplies a baseline only; it does not address transition-output partitions."
+    },
+    {
+      "reference": "R. Becker, D. Cenzato, S.-H. Kim, B. Kodric, A. Policriti and N. Prezza, Optimal Wheeler Language Recognition, arXiv:2306.04737v2, 18 December 2023, primary abstract",
+      "url": "https://arxiv.org/abs/2306.04737",
+      "verified_result": "The O(mn) theorem recognizes whether a DFA's accepted language admits a Wheeler presentation, a separate predicate without the output condition."
+    }
+  ],
+  "substantive_delta": "The frozen proof completely decides the original current-v3 membership question for arbitrary finite trimmed deterministic subsequential transducers, including erasing outputs. Exact global-orientation flags feed a complete cyclic-component characterization: branching components must be globally monotone, and simple cycles pass precisely when each of two adjacent-shell restrictions has an orientation. It gives a conservative O(S^13) decision bound and common-loop separated-turn certificates for input-ordered rejection.",
+  "why_nonroutine": "Routine output-range automata and input-order comparisons alone do not eliminate the unbounded finite convex partition quantifier. The new SCC distinction and exact two-side criterion do so, while preserving a central cut across which infinitely many nested turns may occur. The proof gives both necessity by disjoint interval packing and sufficiency by common-suffix invariance. No inspected prior theorem supplies this characterization; the contribution is not merely a corollary of recognizing the input automaton.",
+  "significance": "This supplies a complete effective recognition theorem for the exact transducer class whose defining primary paper leaves machine membership open. The structural criterion explains why every recurrent positive instance has one or two pieces and why negative instances have explicit separated pump obstructions, with downstream finite partitions handled constructively. This is substantive value at the claimed automata-theoretic scope, without claiming optimal complexity, practical indexing gains, equivalent realizability, STOC quality or external acceptance. The novelty assessment is bounded by current primary-source searches documented in audit/math.md, not a guarantee of priority.",
+  "remaining_gaps": []
+}

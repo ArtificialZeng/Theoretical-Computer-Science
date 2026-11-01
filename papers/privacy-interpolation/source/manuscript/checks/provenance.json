@@ -1,0 +1,9 @@
+{
+  "source_files": {
+    "audit/referee_verify.py": "5d3992d0e4d137affb6c472bfc615caed8070d076729bc87fbcfd93e1e333b21",
+    "evidence/research_excursion_check.py": "6221e10e9cc7e320050e5552f052b72136ab6b778b6e9a51dd1e2ea4bda33768",
+    "evidence/research-excursion-path-certificates.json": "a662b27ea5b75eb867fb028f255a8c01d0ab17da60b738d32b57f943885b1d90",
+    "evidence/research-swapped-path-certificates.json": "75b3497906f79867b7520632c4a1b00bf2beb59cfa5246a70f07dbd806f8c160"
+  },
+  "code_basis": "reproduce.py adapts audit/referee_verify.py by removing snapshot/audit writes and reading bundled checks; checks/sweep.py contains only the two frozen evaluation functions. This is reproduction of the existing fresh-context check, not another fresh mathematical audit."
+}

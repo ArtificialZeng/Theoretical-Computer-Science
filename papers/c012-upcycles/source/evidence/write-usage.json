@@ -1,0 +1,16 @@
+{
+  "job_id": "c012-upcycles-write-e722c4031892",
+  "phase": "write",
+  "started_at": "2026-11-01T05:05:30+00:00",
+  "recorded_at": "2026-11-01T05:17:07.252015+00:00",
+  "elapsed_wall_seconds": 697.252015,
+  "ceiling_seconds": 1200,
+  "research_passes_consumed_unchanged": 2,
+  "research_passes_remaining_unchanged": 1,
+  "outcome": "ready",
+  "external_actions": [],
+  "subagents": 0,
+  "background_workers": 0,
+  "other_codex_processes": 0,
+  "token_usage": "not measured by this worker; runner-owned accounting preserved"
+}

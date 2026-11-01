@@ -1,0 +1,17 @@
+{
+  "paper_number": 2,
+  "title": "Mandatory Excursions in Privacy-Constrained Probability Paths",
+  "archive_sha256": "dfea246476d1a5b57a549ea309c146872017e8ee7c65f0cb96f136bc7631342a",
+  "delivered_pdf_sha256": "8ec2d595f7e1285ce79dc26f46caadf881d9065bce1928a7865f9d81d91b2d43",
+  "supplied_publication_inputs_rehashed": 18,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/tmp/delivery-check/paper2-fm9o2ngt/paper2_source",
+  "rebuilt_pages": 7,
+  "rebuilt_pdf_text_matches_delivery": true,
+  "rebuilt_page_renders_match_delivery": true,
+  "finite_reproduction": {
+    "entry_point": "python3 manuscript/reproduce.py",
+    "scope": "See supplied script and output",
+    "output": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/tmp/delivery-check/paper2-fm9o2ngt/finite-reproduced.json"
+  },
+  "scope": "Archive/build/finite reproducibility, not a new mathematical or novelty review."
+}

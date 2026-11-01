@@ -1,0 +1,24 @@
+{
+  "job_id": "c012-upcycles-release-0294a4f8ea65",
+  "clean_build_exit": 0,
+  "text_identical": true,
+  "rendered_pages_identical": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+  },
+  "output_sha256": "e31bcb5fbb2c967f36e28515d039258166183a12f29cfa5193b932235be46a60",
+  "final_compiler_log": "evidence/release-build/main.log",
+  "full_build_log": "evidence/release-clean-build.log",
+  "input_sha256": {
+    "acmart.cls": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+    "main.bbl": "bde5e9b09606b183972896407e6bc676f7970eb2addfa27c352e26cbecfa9a8c",
+    "references.bib": "bb012332b376629e12be4f905e65b8e86de531afc7f2366d5e96f993425f0e90",
+    "main.tex": "c1b7385571c4824ee5d17e41c7366c71901a45e846bedafbc63851d832105f0e",
+    "README.md": "daeb5f8ae7f188d7d17385db837924bd3180a9aac8d9ed9011b14acd0df66508",
+    "verify.py": "bd77da4505dacd65eb63b64996917af2bc80a90db6c900690ba349ec0e5a0560",
+    "alpha.bst": "95e0b35ce728b91a136480717dc52cbafa046268f607e22a701633a8d923ea2e"
+  }
+}

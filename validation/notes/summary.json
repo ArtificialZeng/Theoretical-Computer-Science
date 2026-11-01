@@ -1,0 +1,45 @@
+{
+  "checks": [
+    {
+      "command": [
+        "/opt/homebrew/bin/python3",
+        "notes/tp-parity-interface/encoding_audit.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/python3",
+        "notes/facet-cycle-lifting/verify_facet_projection_mis.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "make",
+        "-C",
+        "notes/vendor/drat-trim",
+        "drat-trim",
+        "lrat-check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "notes/vendor/drat-trim/drat-trim",
+        "notes/tp-parity-interface/training.cnf",
+        "notes/tp-parity-interface/training.drat"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "notes/vendor/drat-trim/lrat-check",
+        "notes/tp-parity-interface/training.cnf",
+        "notes/tp-parity-interface/training.lrat"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,9 @@
+{
+  "job_id": "robust-stopping-triage-ef6eadc61ec7",
+  "scope": "deterministic exact check; no fresh review",
+  "optimal_expected_cost": "39/20",
+  "minimum_feasible_support_level": "14/5",
+  "best_expected_cost_at_minimum_support_level": "11/5",
+  "expected_cost_gap": "1/4",
+  "original_status": "unresolved"
+}

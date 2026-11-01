@@ -1,0 +1,21 @@
+{
+  "job_id": "coverage-sparse-triage-8c18589f991c",
+  "source_sha256_at_intake": "eb7061a17cead0bc8cc0e4426f3f8260ac3137dd23b6f4813d8f4952b00ec731",
+  "source_sha256_at_completion": "eb7061a17cead0bc8cc0e4426f3f8260ac3137dd23b6f4813d8f4952b00ec731",
+  "source_unchanged": true,
+  "evidence_files": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/triage-decision.md",
+    "evidence/triage-literature.md",
+    "evidence/triage-certificate-checks.json",
+    "evidence/triage_verify_certificates.py",
+    "evidence/triage-exact-rerun.stdout.json",
+    "evidence/ramachandra2026-excerpts.md",
+    "evidence/cost-consistency2025-excerpts.md"
+  ],
+  "checkpoint_words": 285,
+  "decision": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved"
+}

@@ -1,0 +1,13 @@
+{
+  "cnf": "evidence/research1-relaxation/n8d3_xxoxoooo.cnf",
+  "proof": "evidence/research1-relaxation/n8d3_xxoxoooo.lrat",
+  "cnf_sha256": "e70540b6d7a258d0e415a9bed244a783cb0f799e7046a0a88e0cfade91784141",
+  "proof_sha256": "9dd3d382f0b444da2426a1391cb60533e5747392e6fcd8d8dfb70c73b409f309",
+  "initial_clauses": 12561,
+  "checked_additions": 14369,
+  "deletions": 16910,
+  "checked_empty_clause": true,
+  "verdict": "verified-UNSAT-of-this-CNF",
+  "checker": "independent Python LRAT/RUP-only checker",
+  "elapsed_seconds": 0.34583291597664356
+}

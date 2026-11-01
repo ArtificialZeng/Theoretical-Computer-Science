@@ -1,0 +1,219 @@
+{
+  "utc": "2026-11-01T15:27:18.079205+00:00",
+  "passed": true,
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "python_executable": "python3.14",
+  "scope": "Finite checks accompanying the manuscripts; not an independent proof of all general theorems",
+  "papers": [
+    {
+      "id": "coverage-sparse",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ],
+          "exit_code": 0,
+          "seconds": 0.377,
+          "log": "validation/reproduction/coverage-sparse-1.log"
+        }
+      ]
+    },
+    {
+      "id": "privacy-interpolation",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ],
+          "exit_code": 0,
+          "seconds": 1.263,
+          "log": "validation/reproduction/privacy-interpolation-1.log"
+        }
+      ]
+    },
+    {
+      "id": "robust-stopping",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ],
+          "exit_code": 0,
+          "seconds": 35.749,
+          "log": "validation/reproduction/robust-stopping-1.log"
+        }
+      ]
+    },
+    {
+      "id": "curvature-noise",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ],
+          "exit_code": 0,
+          "seconds": 0.173,
+          "log": "validation/reproduction/curvature-noise-1.log"
+        }
+      ]
+    },
+    {
+      "id": "advice-matching",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ],
+          "exit_code": 0,
+          "seconds": 0.201,
+          "log": "validation/reproduction/advice-matching-1.log"
+        }
+      ]
+    },
+    {
+      "id": "c002-coverage",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/research_rounding_check.py"
+          ],
+          "exit_code": 0,
+          "seconds": 15.592,
+          "log": "validation/reproduction/c002-coverage-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "audit/referee_verify.py"
+          ],
+          "exit_code": 0,
+          "seconds": 0.283,
+          "log": "validation/reproduction/c002-coverage-2.log"
+        }
+      ]
+    },
+    {
+      "id": "c009-cycle2",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/research_exact.py"
+          ],
+          "exit_code": 0,
+          "seconds": 1.192,
+          "log": "validation/reproduction/c009-cycle2-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "audit/referee_verify.py"
+          ],
+          "exit_code": 0,
+          "seconds": 0.237,
+          "log": "validation/reproduction/c009-cycle2-2.log"
+        }
+      ]
+    },
+    {
+      "id": "c012-upcycles",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "manuscript/verify.py"
+          ],
+          "exit_code": 0,
+          "seconds": 0.764,
+          "log": "validation/reproduction/c012-upcycles-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/research2-witness/minimal_check.py"
+          ],
+          "exit_code": 0,
+          "seconds": 0.645,
+          "log": "validation/reproduction/c012-upcycles-2.log"
+        }
+      ]
+    },
+    {
+      "id": "c015-imagebound",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/portable-check.py"
+          ],
+          "exit_code": 0,
+          "seconds": 0.077,
+          "log": "validation/reproduction/c015-imagebound-1.log"
+        }
+      ]
+    },
+    {
+      "id": "c017-wheeler",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/check_membership.py"
+          ],
+          "exit_code": 0,
+          "seconds": 1.112,
+          "log": "validation/reproduction/c017-wheeler-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/check_exact_certificates.py"
+          ],
+          "exit_code": 0,
+          "seconds": 0.575,
+          "log": "validation/reproduction/c017-wheeler-2.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/research-2-check-realizability.py"
+          ],
+          "exit_code": 0,
+          "seconds": 0.248,
+          "log": "validation/reproduction/c017-wheeler-3.log"
+        }
+      ]
+    }
+  ]
+}

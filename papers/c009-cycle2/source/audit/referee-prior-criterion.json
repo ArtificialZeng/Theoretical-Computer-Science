@@ -1,0 +1,63 @@
+{
+  "job_id": "c009-cycle2-referee-eb6d40fb0393",
+  "scope": "Only applicability of one published sufficient criterion at four lengths. Neither failure nor success here proves priority.",
+  "rows": [
+    {
+      "length": 4,
+      "alpha2": 0,
+      "scaled_expression_lower_using_pi_gt_3": "0",
+      "scaled_expression_upper_using_pi_lt_22_over_7": "0",
+      "nonzero_coefficients": {}
+    },
+    {
+      "length": 8,
+      "alpha2": 0,
+      "scaled_expression_lower_using_pi_gt_3": "64",
+      "scaled_expression_upper_using_pi_lt_22_over_7": "64",
+      "nonzero_coefficients": {
+        "2,2": -4,
+        "4": 8
+      }
+    },
+    {
+      "length": 12,
+      "alpha2": 0,
+      "scaled_expression_lower_using_pi_gt_3": "800/27",
+      "scaled_expression_upper_using_pi_lt_22_over_7": "565088/14641",
+      "nonzero_coefficients": {
+        "2,2": -6,
+        "2,2,2,2": 3,
+        "2,2,4": -12,
+        "2,6": -12,
+        "4": 12,
+        "4,4": 18,
+        "8": 12
+      }
+    },
+    {
+      "length": 16,
+      "alpha2": 0,
+      "scaled_expression_lower_using_pi_gt_3": "-167552/2187",
+      "scaled_expression_upper_using_pi_lt_22_over_7": "-91274726528/1929229929",
+      "nonzero_coefficients": {
+        "2,2": -8,
+        "2,2,2,2": 12,
+        "2,2,2,6": 16,
+        "2,2,4": -48,
+        "2,2,4,4": -8,
+        "2,2,8": -16,
+        "2,4,6": -32,
+        "2,6": -16,
+        "2,10": -16,
+        "4": 16,
+        "4,4": 56,
+        "4,4,4": 16,
+        "4,8": 48,
+        "6,6": -8,
+        "8": 16,
+        "12": 16
+      }
+    }
+  ],
+  "all_frozen_coefficients_and_bounds_reproduced": true
+}

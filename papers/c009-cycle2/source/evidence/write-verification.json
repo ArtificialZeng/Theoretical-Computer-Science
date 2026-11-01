@@ -1,0 +1,46 @@
+{
+  "job_id": "c009-cycle2-write-9354f37401a8",
+  "nature": "Writer verification; separate fresh release review remains required",
+  "pdf": "manuscript/build/main.pdf",
+  "pages": 6,
+  "letter_paper": true,
+  "encrypted": false,
+  "final_log_warnings": [],
+  "bibliography_keys": [
+    "FHMZ22",
+    "FHMZ24",
+    "GIKK23",
+    "HMNTW25",
+    "MPT04"
+  ],
+  "citation_keys": [
+    "FHMZ22",
+    "FHMZ24",
+    "GIKK23",
+    "HMNTW25",
+    "MPT04"
+  ],
+  "cited_keys_all_present": true,
+  "all_bibliography_records_used": true,
+  "author_macro_count": 1,
+  "sole_author_correct": true,
+  "email_present": true,
+  "source_files_exist": true,
+  "source_sha256": "d0dbd81f856b64b6fc49f3e0a0d9242427573bf2460ba28a4f3c1beb93ed635d",
+  "class_unmodified": true,
+  "pdf_sha256": "78134004552fd92e57f07b2ace82cf760f19013c2e7f34e7cc07204102f867dc",
+  "placeholder_scan": [],
+  "page_pngs": [
+    "manuscript/render/page-1.png",
+    "manuscript/render/page-2.png",
+    "manuscript/render/page-3.png",
+    "manuscript/render/page-4.png",
+    "manuscript/render/page-5.png",
+    "manuscript/render/page-6.png"
+  ],
+  "rendered_page_count": 6,
+  "body_font_configuration": "11pt acmart base; abstract, affiliation, contact and bibliography explicitly normalsize; mathematical scripts and running heads use their normal smaller sizes",
+  "final_metadata_only_edit_pixel_identical": true,
+  "pdf_xmp_creator": "Zijian Zeng",
+  "pdf_xmp_publisher": "Zijian Zeng (local author-prepared manuscript; no ACM publisher attribution)"
+}

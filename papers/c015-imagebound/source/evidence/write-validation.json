@@ -1,0 +1,44 @@
+{
+  "job_id": "c015-imagebound-write-9f5b77760f77",
+  "checked_utc": "2026-11-01T09:12:01.309487+00:00",
+  "pdf": "manuscript/main.pdf",
+  "pdf_sha256": "7572a3bc325f516a8b9c0e791226dd1f5553a376e56ddb5fd784381c2cd0f03d",
+  "pages": 6,
+  "max_total_pages": 12,
+  "letter_paper": true,
+  "build_exit_code": 0,
+  "clean_build_before_final_metadata_change": true,
+  "final_latex_warnings": false,
+  "final_bibtex_warnings": false,
+  "embedded_font_report": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nUOIVEO+LinBiolinumTB                 Type 1            Custom           yes yes yes     44  0\nPBMBIP+LinBiolinumT                  Type 1            Custom           yes yes yes     45  0\nPHBQLV+LinLibertineT                 Type 1            Custom           yes yes yes     46  0\nPZSWUY+LibertineMathMI               Type 1            Builtin          yes yes yes     47  0\nPLOCIA+LibertineMathMI7              Type 1            Builtin          yes yes yes     48  0\nFZSNOZ+txsys                         Type 1            Builtin          yes yes yes     49  0\nPHBQLV+LinLibertineT                 Type 1            Custom           yes yes yes     50  0\nHGHBOE+LibertineMathRM               Type 1            Builtin          yes yes yes     51  0\nOGYQFN+txmiaX                        Type 1            Builtin          yes yes yes     63  0\nDYSFGA+LinLibertineTI                Type 1            Custom           yes yes yes     64  0\nPHBQLV+LinLibertineT                 Type 1            Custom           yes yes yes     67  0\nXRPOZP+txexs                         Type 1            Builtin          yes yes yes     78  0\nXKEAZI+LibertineMathMI5              Type 1            Builtin          yes yes yes     79  0\nZMKHJD+NewTXMI                       Type 1            Builtin          yes yes yes     81  0\nUMVOPX+txsym                         Type 1            Builtin          yes yes yes     86  0\n",
+  "sole_author_visible": true,
+  "email_visible": true,
+  "bibliography_basis": "literature/user_bibliography_check.md",
+  "scope": "Exact accepted claim.json; no decisive evidence edits",
+  "visual_inspection": {
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "method": "105dpi Poppler PNGs viewed with image tool; all pages inspected after content corrections; title and references rechecked after final metadata-only rebuild.",
+    "finding": "No clipping, overlap, missing visible symbols or unresolved references; title, sole author, email and references readable.",
+    "pngs": [
+      "tmp/pdfs/page-1.png",
+      "tmp/pdfs/page-2.png",
+      "tmp/pdfs/page-3.png",
+      "tmp/pdfs/page-4.png",
+      "tmp/pdfs/page-5.png",
+      "tmp/pdfs/page-6.png"
+    ]
+  },
+  "noncritical_tool_failure": {
+    "command": "pdftotext -bbox-layout manuscript/main.pdf evidence/write-layout.html",
+    "result": "SIGABRT, libc++ basic_string out_of_range",
+    "handling": "No bounding-box assertion inferred. Ordinary pdftotext -layout, pdfinfo, font inspection and PNG rendering succeeded. The partial bbox HTML is removed."
+  },
+  "release_status": "Not released; separate fresh citation/build/visual review required"
+}

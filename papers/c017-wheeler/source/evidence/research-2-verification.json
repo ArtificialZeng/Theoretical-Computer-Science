@@ -1,0 +1,32 @@
+{
+  "job_id": "c017-wheeler-research-98a17f8eb2fd",
+  "generation": "Explicit strengthened combined membership plus realizability proposal",
+  "old_snapshot_digest": "aaa91b59e8425f6cb4943fc3132e3ef9680e93dbb77aad8bca7bfce55d898516",
+  "old_claim_sha256": "9e7f561a01ed595d2c476d92f4e5b21899f8a10cbe98d0dd7f045bef03686726",
+  "old_packet_archive": "audit/history/membership-20261101T110915Z",
+  "old_packet_archive_exact_files_verified": 13,
+  "old_decisive_files_unchanged_except_explicit_claim_replacement": true,
+  "existing_audit_files_preserved_byte_identically": true,
+  "new_claim_sha256": "09efacb6b9f6dd289f1e9298e5e6976a9617272d067304f99f60a444b068941f",
+  "new_claim_evidence_files": 19,
+  "source_sha256": "40fc8e967aeefd233cb62ffd0f70d77e772fafbdeb6086724c4c2ab5f591106d",
+  "new_scope_accepted": false,
+  "new_scope_required_gate": "Runner freeze, fresh referee plus required innovation assessment and actual check-math before any writing",
+  "actual_test_command": "python3 evidence/research-2-check-realizability.py",
+  "actual_test_exit_code": 0,
+  "actual_test_status": "passed",
+  "research_passes_observed": 2,
+  "no_state_or_counters_edited": true,
+  "final_packet_validation": "passed: exact six-field contract; current provenance; original source/problem included; all 19 files exist and are nonempty; prior review/checkpoint excluded from new frozen packet",
+  "old_audit_files_final_verified": [
+    "innovation.json",
+    "math.json",
+    "math.md",
+    "referee-check-math.json",
+    "referee-checks.json",
+    "referee-integrity.json",
+    "referee_checks.py",
+    "snapshot.json"
+  ],
+  "new_scope_has_no_fresh_acceptance": true
+}

@@ -1,0 +1,30 @@
+{
+  "job_id": "c015-imagebound-research-337b679e5617",
+  "date": "2026-11-01",
+  "receipts": [
+    {
+      "url": "https://arxiv.org/html/2405.19622v4",
+      "status": "access failure",
+      "error_type": "URLError",
+      "requested_destination": "intake/ryzhikov-2405.19622v4.html",
+      "local_file_created": false,
+      "web_tool_access": "The corresponding paper HTML or repository README was separately read through the web tool; these failed direct downloads are not mathematical evidence."
+    },
+    {
+      "url": "https://arxiv.org/html/2609.30817v2",
+      "status": "access failure",
+      "error_type": "URLError",
+      "requested_destination": "intake/chandelkar-chadha-2609.30817v2.html",
+      "local_file_created": false,
+      "web_tool_access": "The corresponding paper HTML or repository README was separately read through the web tool; these failed direct downloads are not mathematical evidence."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/umaia1234/agentic-conjectures/main/problems/nfa-mortal-words/README.md",
+      "status": "access failure",
+      "error_type": "URLError",
+      "requested_destination": "intake/public-nfa-mortal-readme.md",
+      "local_file_created": false,
+      "web_tool_access": "The corresponding paper HTML or repository README was separately read through the web tool; these failed direct downloads are not mathematical evidence."
+    }
+  ]
+}

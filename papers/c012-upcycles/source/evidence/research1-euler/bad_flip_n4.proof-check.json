@@ -1,0 +1,13 @@
+{
+  "cnf": "evidence/research1-euler/bad_flip_n4.cnf",
+  "proof": "evidence/research1-euler/bad_flip_n4.lrat",
+  "cnf_sha256": "6facb04df6d8621094c0b582139bb89b6fe316f35f317cb73efe36b2f0c7ca9d",
+  "proof_sha256": "c99666bd99dfce8d74930e0b58c4ff928bb53ad870a753cd2dec7d7ce0dee4bc",
+  "initial_clauses": 280,
+  "checked_additions": 18,
+  "deletions": 0,
+  "checked_empty_clause": true,
+  "verdict": "verified-UNSAT-of-this-CNF",
+  "checker": "independent Python LRAT/RUP-only checker",
+  "elapsed_seconds": 0.0005584590835496783
+}

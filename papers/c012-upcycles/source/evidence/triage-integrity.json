@@ -1,0 +1,21 @@
+{
+  "job_id": "c012-upcycles-triage-8176c8933a92",
+  "source_unchanged": true,
+  "source_sha256": "773f9e28946e0ee6f8def64bd988a0e6ae6f1a095968d275914978caa6ce2eac",
+  "input_pdf_is_not_manuscript": true,
+  "extracted_source_matches_intake_text": true,
+  "sha256": {
+    "source.md": "773f9e28946e0ee6f8def64bd988a0e6ae6f1a095968d275914978caa6ce2eac",
+    "problem.md": "6840c1a6dd895b5731126cd0bac506dc4caca7f92f5ffdad5b52b85bfc4d70ea",
+    "checkpoint.md": "cfe16b20dad06a67cebf1677480c1a0966f9eea9d68271720439ac8fc2c668fb",
+    "evidence/triage-literature.md": "225f9cd52a15cce7e6e874f096732160da76fe92200676abc40761df386491e3",
+    "evidence/triage_sanity.py": "1c0a59dbf5925c9869e11419e64375c4401c52c44df057c2cd369b5ebf06f60b",
+    "evidence/triage-sanity.json": "940dc691af96cb13570442bfcf00fb1a36c5e130160408cb6d3ca730b770801d",
+    "evidence/triage-web-confirmation.json": "f47fa5b3ea6c0d6a3bf356cbb93420e30b085e21f9726b3ca131eb492d2c40cc",
+    "evidence/triage-duplicate-screen.json": "3b34ecfd517e7ca2dd22a1281f04b12504f80851acfae0a40c38f8ff4b31c2d3",
+    "evidence/triage-usage.json": "ac5c554e34cbf177e7d8033f073356f4156158199b548a81ecf884bfa87b901c",
+    "intake/paper.pdf": "60ce1f11820777dbaf608ca21ae42ddb586ddcff19d10fb3ca71a9f6c72c3668",
+    "intake/paper.txt": "a0d8d4a02b3d8edd7bcb5180c178e26d274eebd6844f7ade5900fe02b514a7ee",
+    "intake/triage-extracted.txt": "a0d8d4a02b3d8edd7bcb5180c178e26d274eebd6844f7ade5900fe02b514a7ee"
+  }
+}

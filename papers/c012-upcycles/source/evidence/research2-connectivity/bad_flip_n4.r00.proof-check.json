@@ -1,0 +1,13 @@
+{
+  "cnf": "evidence/research2-connectivity/bad_flip_n4.r00.cnf",
+  "proof": "evidence/research2-connectivity/bad_flip_n4.r00.lrat",
+  "cnf_sha256": "19ad8664b22de7622b96303c0281aac5c4a6341863e6785fa312fffd54a9d275",
+  "proof_sha256": "c99666bd99dfce8d74930e0b58c4ff928bb53ad870a753cd2dec7d7ce0dee4bc",
+  "initial_clauses": 280,
+  "checked_additions": 18,
+  "deletions": 0,
+  "checked_empty_clause": true,
+  "verdict": "verified-UNSAT-of-this-CNF",
+  "checker": "independent Python LRAT/RUP-only checker",
+  "elapsed_seconds": 0.00039941701106727123
+}

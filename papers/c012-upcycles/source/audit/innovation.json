@@ -1,0 +1,15 @@
+{
+  "job_id": "c012-upcycles-referee-9a733cb83e73",
+  "verdict": "accept",
+  "snapshot_digest": "920933319e6b98bd521f6c300a93b0e7fa46ae3d6600fa970801ea528789f85e",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    "Fillmore, Goeckner, Kirsch, Martin and McGinnis, The existence and structure of universal partial cycles, Designs, Codes and Cryptography 94, article 152 (4 July 2026), DOI 10.1007/s10623-026-01841-x: Section 2 definitions, Theorem 3.1 (binary n=8,d=1 existence), Remark 6.6 and Question 9.2 (d>1 existence open). Independently checked publisher full text on 1 November 2026.",
+    "Same 2026 paper, Theorem 5.1 and Corollary 5.2: alphabet multiplication preserves word length and diamondicity; Corollary 8.14 restricts period-four frames to d=n/4 and does not assert their existence. Independently checked publisher statements on 1 November 2026.",
+    "Carey, Kearney, Kirsch and Popescu, Universal partial tori, Designs, Codes and Cryptography 93, 2803-2822 (2025), DOI 10.1007/s10623-025-01609-9: Definition 8.2 allows multiple cycles in a universal partial quasi-family; Section 9 records only diamondicity-one upcycles and quasi-families then known. Independently checked publisher full text on 1 November 2026."
+  ],
+  "substantive_delta": "An explicit single binary cyclic word with n=12, d=3 and length 512, independently verified at every one of the 4096 total words and 512 cyclic starts. This establishes d>1 existence and answers immutable source.md Question 9.2 affirmatively in full scope. No equivalent resolution was located in the bounded current primary-source screen described in audit/referee-literature.md.",
+  "why_nonroutine": "The prior constructions inspected preserve diamondicity under alphabet multiplication, and the known seeds have d=1; their frame restrictions are necessary conditions rather than existence proofs. A disconnected cover would not suffice. The new d=3 seed supplies the missing single-cycle existence phenomenon. The exhaustive verification is elementary once the word is supplied, but the word's existence is not a routine corollary of those prior results; no novelty of SAT, Euler tours or connectivity cuts is asserted.",
+  "significance": "The witness crosses the previously unresolved multiple-wildcard boundary for universal partial cycles and provides a concrete base object for existing structural and alphabet-multiplication theory. It also realizes n not dividing the cycle length (12 does not divide 512), a regime explicitly raised after the source question. This is substantive value for a focused combinatorics resolution, without a claim of a general construction, minimality, venue acceptance or STOC suitability.",
+  "remaining_gaps": []
+}

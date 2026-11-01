@@ -1,0 +1,13 @@
+{
+  "verdict": "accept",
+  "job_id": "c009-cycle2-release-70b6b8b76475",
+  "snapshot_digest": "06b470c27e7195c3ffb2ba0d198581e77aa79d1b5d87d6485d396b6af906d1bc",
+  "manuscript_digest": "b4b0a087b93942317cb6f781edea4f1dd83ed888a5847b8da0a4194a99337b0c",
+  "pdf_digest": "519a8f77e5e1fd12c6abf00b04b53c6e43a17273c04d3cfb8668ff6c98866710",
+  "report": "audit/build.md",
+  "build_log": "manuscript/build/main.log",
+  "build_log_digest": "338e305c11b52d4c02150cf911f144c81c58dd1d13cfb0cfb718949caadbad6f",
+  "clean_build": true,
+  "build_command": "sh manuscript/build.sh",
+  "page_count": 6
+}

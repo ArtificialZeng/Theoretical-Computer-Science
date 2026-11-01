@@ -1,0 +1,378 @@
+{
+  "controls": [
+    {
+      "name": "identity",
+      "decision": {
+        "member": true,
+        "input_order": true,
+        "flags": {
+          "1": [
+            true
+          ],
+          "-1": [
+            false
+          ]
+        },
+        "checks": [
+          {
+            "states": [
+              0
+            ],
+            "type": "branching",
+            "pass": true
+          }
+        ],
+        "piece_bounds": {
+          "0": 1
+        }
+      },
+      "finite": [
+        {
+          "state": 0,
+          "samples": 1023,
+          "pieces": 1,
+          "up": true,
+          "down": false
+        }
+      ]
+    },
+    {
+      "name": "erasing",
+      "decision": {
+        "member": true,
+        "input_order": true,
+        "flags": {
+          "1": [
+            true
+          ],
+          "-1": [
+            true
+          ]
+        },
+        "checks": [
+          {
+            "states": [
+              0
+            ],
+            "type": "branching",
+            "pass": true
+          }
+        ],
+        "piece_bounds": {
+          "0": 1
+        }
+      },
+      "finite": [
+        {
+          "state": 0,
+          "samples": 1023,
+          "pieces": 1,
+          "up": true,
+          "down": true
+        }
+      ]
+    },
+    {
+      "name": "ordered_variable",
+      "decision": {
+        "member": true,
+        "input_order": true,
+        "flags": {
+          "1": [
+            true
+          ],
+          "-1": [
+            false
+          ]
+        },
+        "checks": [
+          {
+            "states": [
+              0
+            ],
+            "type": "branching",
+            "pass": true
+          }
+        ],
+        "piece_bounds": {
+          "0": 1
+        }
+      },
+      "finite": [
+        {
+          "state": 0,
+          "samples": 1023,
+          "pieces": 1,
+          "up": true,
+          "down": false
+        }
+      ]
+    },
+    {
+      "name": "complement",
+      "decision": {
+        "member": false,
+        "input_order": true,
+        "flags": {
+          "1": [
+            false
+          ],
+          "-1": [
+            false
+          ]
+        },
+        "checks": [
+          {
+            "states": [
+              0
+            ],
+            "type": "branching",
+            "pass": false
+          }
+        ]
+      },
+      "finite": [
+        {
+          "state": 0,
+          "samples": 1023,
+          "pieces": 384,
+          "up": false,
+          "down": false
+        }
+      ]
+    },
+    {
+      "name": "length_only",
+      "decision": {
+        "member": false,
+        "input_order": true,
+        "flags": {
+          "1": [
+            false
+          ],
+          "-1": [
+            false
+          ]
+        },
+        "checks": [
+          {
+            "states": [
+              0
+            ],
+            "type": "branching",
+            "pass": false
+          }
+        ]
+      },
+      "finite": [
+        {
+          "state": 0,
+          "samples": 1023,
+          "pieces": 256,
+          "up": false,
+          "down": false
+        }
+      ]
+    },
+    {
+      "name": "mixed_erasure",
+      "decision": {
+        "member": false,
+        "input_order": true,
+        "flags": {
+          "1": [
+            false
+          ],
+          "-1": [
+            false
+          ]
+        },
+        "checks": [
+          {
+            "states": [
+              0
+            ],
+            "type": "branching",
+            "pass": false
+          }
+        ]
+      },
+      "finite": [
+        {
+          "state": 0,
+          "samples": 1023,
+          "pieces": 128,
+          "up": false,
+          "down": false
+        }
+      ]
+    },
+    {
+      "name": "nested_turn_positive",
+      "decision": {
+        "member": true,
+        "input_order": true,
+        "flags": {
+          "1": [
+            true,
+            false,
+            true
+          ],
+          "-1": [
+            true,
+            false,
+            true
+          ]
+        },
+        "checks": [
+          {
+            "states": [
+              1
+            ],
+            "type": "simple",
+            "cycle": "0",
+            "left": [
+              [
+                0,
+                "0"
+              ]
+            ],
+            "right": [
+              [
+                2,
+                "0"
+              ]
+            ],
+            "left_orientations": [
+              1
+            ],
+            "right_orientations": [
+              -1
+            ],
+            "pass": true
+          }
+        ],
+        "piece_bounds": {
+          "1": 2,
+          "0": 1,
+          "2": 1
+        }
+      },
+      "finite": [
+        {
+          "state": 0,
+          "samples": 1,
+          "pieces": 1,
+          "up": true,
+          "down": true
+        },
+        {
+          "state": 1,
+          "samples": 23,
+          "pieces": 2,
+          "up": false,
+          "down": false
+        },
+        {
+          "state": 2,
+          "samples": 1,
+          "pieces": 1,
+          "up": true,
+          "down": true
+        }
+      ]
+    },
+    {
+      "name": "unary",
+      "decision": {
+        "member": true,
+        "input_order": true,
+        "flags": {
+          "1": [
+            true
+          ],
+          "-1": [
+            false
+          ]
+        },
+        "checks": [
+          {
+            "states": [
+              0
+            ],
+            "type": "simple",
+            "cycle": "0",
+            "left": [
+              [
+                null,
+                ""
+              ]
+            ],
+            "right": [],
+            "left_orientations": [
+              1
+            ],
+            "right_orientations": [
+              1,
+              -1
+            ],
+            "pass": true
+          }
+        ],
+        "piece_bounds": {
+          "0": 2
+        }
+      },
+      "finite": [
+        {
+          "state": 0,
+          "samples": 31,
+          "pieces": 1,
+          "up": true,
+          "down": false
+        }
+      ]
+    }
+  ],
+  "exhaustive": [
+    {
+      "states": 1,
+      "input_ordered_output_tables": 16,
+      "members": 9,
+      "nonmembers": 7,
+      "word_length_control": 7
+    },
+    {
+      "states": 2,
+      "input_ordered_output_tables": 528,
+      "members": 169,
+      "nonmembers": 359,
+      "word_length_control": 7
+    }
+  ],
+  "random": {
+    "seed": 1701001,
+    "attempts": 25236,
+    "input_ordered_tables": 600,
+    "members": 299,
+    "nonmembers": 301,
+    "states": [
+      3,
+      4,
+      5
+    ],
+    "output_words": [
+      "",
+      "0",
+      "1",
+      "00",
+      "01",
+      "10",
+      "11",
+      "001"
+    ],
+    "word_length_control": 8,
+    "all_states_final": true
+  },
+  "scope": "Exact NFA decision prototype. Finite sample and DP comparisons are controls, not a proof of the infinite theorem."
+}

@@ -1,0 +1,13 @@
+{
+  "verdict": "accept",
+  "job_id": "privacy-interpolation-release-7c62cfdb7be8",
+  "snapshot_digest": "932c1ba086d51ef9c99afb17ae2046a2a43a19517b9778f2a2a06e751683f641",
+  "manuscript_digest": "047b8dae44c9bc2fafeacc831a6d376cc7f4685248bdddf89de7677467ebba3a",
+  "pdf_digest": "8ec2d595f7e1285ce79dc26f46caadf881d9065bce1928a7865f9d81d91b2d43",
+  "report": "audit/build.md",
+  "build_log": "manuscript/main.log",
+  "build_log_digest": "25b9ca29d1131394174e76b716b1b3e8839657083b2c4d4b1b2fcf9e2a386a04",
+  "clean_build": true,
+  "page_count": 7,
+  "clean_build_basis": "Inspected actual completed clean-build transcript and compiler/BibTeX logs; hashes and recorder closure match frozen present sources and PDF. Primary PDF not regenerated during release."
+}

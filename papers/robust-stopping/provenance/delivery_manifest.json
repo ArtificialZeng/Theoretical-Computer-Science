@@ -1,0 +1,113 @@
+{
+  "project": "robust-stopping",
+  "paper_number": 3,
+  "title": "Certified Expected-Cost Optimization for Robust Ski Rental",
+  "pages": 11,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    },
+    {
+      "name": "Jiayin Cao",
+      "affiliation": "Ningbo University",
+      "email": "2795820153@qq.com"
+    },
+    {
+      "name": "Weinan Dai",
+      "affiliation": "Zhejiang University",
+      "email": "21725058@zju.edu.cn"
+    },
+    {
+      "name": "Rui Wang",
+      "affiliation": "Nanchang Institute of Technology",
+      "email": "2002007@nut.edu.cn"
+    },
+    {
+      "name": "Fei Ding",
+      "affiliation": "Alibaba Group",
+      "email": "dingfei@email.ncu.edu.cn"
+    }
+  ],
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "pdf": "paper3_submission.pdf",
+  "pdf_sha256": "750891c12b44b7761c1c8c96968e8005e68e4b8b7f3f4299a8a5fe80fd96ce84",
+  "source_archive": "paper3_source_and_reproducibility.zip",
+  "source_archive_sha256": "feedbf5adb3b34ce65942ee8a08c0544f32c33a2c534a5dfe516eee9e006c8a2",
+  "citation_verdict": "accept_with_citation_limitations",
+  "citation_limitations": [
+    {
+      "key": "Li_2026",
+      "limitation": "Journal fulltext inaccessible; official journal metadata retained. Exact support/asymptotic comparisons refer explicitly to separately cited, inspected arXiv v1; journal/preprint identity is not assumed."
+    },
+    {
+      "key": "Karlin1994",
+      "limitation": "Journal fulltext unavailable. Narrow limiting competitive-ratio statement is supported by the publisher abstract and inspected original 1990 proceedings text; versions are not assumed identical."
+    },
+    {
+      "key": "Tardos_1986",
+      "limitation": "Fulltext unavailable; only the narrow matrix-dependent arithmetic-step claim supported by the primary publisher abstract is used."
+    },
+    {
+      "key": "Khanafer_2013",
+      "limitation": "Conference fulltext unavailable; only the horizon-moment description supported by the primary Bell Labs institutional abstract is used."
+    }
+  ],
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "750891c12b44b7761c1c8c96968e8005e68e4b8b7f3f4299a8a5fe80fd96ce84"
+    },
+    "citation_verdict": "accept_with_citation_limitations",
+    "kind": "result-note",
+    "manuscript_digest": "2947c811f73b90b79c82634fc3909aad696aa457956ffd61ec1744834d8f8da1",
+    "original_status": "unresolved",
+    "pages": 11,
+    "pdf_digest": "750891c12b44b7761c1c8c96968e8005e68e4b8b7f3f4299a8a5fe80fd96ce84",
+    "provenance": {
+      "audit/build.json": "b99a81f09cbeb8640d0281b12dc796fe86b92a6ccce996802d97ff5f7f48c9a7",
+      "audit/build.md": "948bc55f76b5a614733cb1a818912b3cce79a0861f47ed68d29f92a70cbfbea7",
+      "audit/citations.json": "e7e2c35bc00bee48a55f011cfca7c45b805eaa05aab214592028f750e66af2ff",
+      "audit/citations.md": "d3a4e24bb96595a42044317fb3cb449bdd0a2ca1998bb53df532127813d12df7",
+      "audit/math.json": "6b61d9d40177332e683ac561f8221600dfde2eeba62e2f4998f8b8752b588fd2",
+      "audit/math.md": "8d84697ffabbbb71198afcf001d103e0b5005ed1aabff76efcdd0dd20a7076f4",
+      "audit/release-ff035ab58689/clean-source/main.log": "d1495cef72d24b1b73e8c51883560ac7a1ea6ace2aee025cb129e820f53f2627",
+      "audit/visual.json": "89948fe23daa63493a3b8bbed441a5df541bdee5556611ba7cc13f2711123f2a",
+      "audit/visual.md": "5e67ddcf78292a4a1996efafec26f5ed14918a434b3b2779fbc162991a86e91e",
+      "jobs/robust-stopping-referee-e7c6798337e7/role.json": "e1ce9d1294e5e06f3863fb2881185c21060853009f5cb53b29e4df89fa4d7dff",
+      "jobs/robust-stopping-release-ff035ab58689/role.json": "25cc9eb7d000abee854b3cb7561af5e48fa9762122636c505301102aa2888ddf",
+      "jobs/robust-stopping-research-024409e96ffb/role.json": "0c66facd3ef715f2286cef26549dde375aeaa14413bc9f415f26b9e0081606f8"
+    },
+    "schema": 1,
+    "snapshot_digest": "c70f1a41d2a4a68c3ad3f996323997e58e2b037484d8e4d79a5f9e8327bd3f3d",
+    "unverified_citations": [
+      {
+        "key": "Li_2026",
+        "limitation": "Journal fulltext inaccessible; official journal metadata retained. Exact support/asymptotic comparisons refer explicitly to separately cited, inspected arXiv v1; journal/preprint identity is not assumed."
+      },
+      {
+        "key": "Karlin1994",
+        "limitation": "Journal fulltext unavailable. Narrow limiting competitive-ratio statement is supported by the publisher abstract and inspected original 1990 proceedings text; versions are not assumed identical."
+      },
+      {
+        "key": "Tardos_1986",
+        "limitation": "Fulltext unavailable; only the narrow matrix-dependent arithmetic-step claim supported by the primary publisher abstract is used."
+      },
+      {
+        "key": "Khanafer_2013",
+        "limitation": "Conference fulltext unavailable; only the horizon-moment description supported by the primary Bell Labs institutional abstract is used."
+      }
+    ]
+  },
+  "external_submission_performed": false
+}

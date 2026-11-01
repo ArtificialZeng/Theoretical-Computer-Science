@@ -1,0 +1,15 @@
+{
+  "job_id": "c017-wheeler-release-bce62e5f5c55",
+  "snapshot_digest": "e049cdd6f4851af0fd18969fa672c8ab343b1916120d8417cddc05007f4084bb",
+  "manuscript_digest": "3e3ee96154364ccb7df28378b07e5b269c38b0a7d88fbb532eeb0a89dd579b2d",
+  "pdf_digest": "f634d9f8abb35aab26ba0f93564fdd36b9f59aee0f150228002611a8fbb71de1",
+  "verdict": "accept",
+  "report": "audit/build.md",
+  "build_log": "manuscript/main.log",
+  "build_log_digest": "06e57e7d43ff783fc098df185288da07292f040c145531318de5455ae0e4685b",
+  "clean_build": true,
+  "reproduction_report": "audit/release-rebuild.json",
+  "nonblocking_diagnostics": [
+    "Underfull vertical box, badness 2409, page 6; visually acceptable."
+  ]
+}

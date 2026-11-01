@@ -1,0 +1,19 @@
+{
+  "job_id": "c009-cycle2-release-70b6b8b76475",
+  "snapshot_digest": "06b470c27e7195c3ffb2ba0d198581e77aa79d1b5d87d6485d396b6af906d1bc",
+  "manuscript_digest": "b4b0a087b93942317cb6f781edea4f1dd83ed888a5847b8da0a4194a99337b0c",
+  "pdf_digest": "519a8f77e5e1fd12c6abf00b04b53c6e43a17273c04d3cfb8668ff6c98866710",
+  "source_digest": "d0dbd81f856b64b6fc49f3e0a0d9242427573bf2460ba28a4f3c1beb93ed635d",
+  "manuscript_unchanged_from_initial_snapshot": true,
+  "fresh_clean_build": true,
+  "rendered_pages_actually_seen": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "all_five_primary_citations_checked": true,
+  "no_agents_or_external_submission": true
+}

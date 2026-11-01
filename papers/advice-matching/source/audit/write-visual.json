@@ -1,0 +1,28 @@
+{
+  "writer_job_id": "advice-matching-write-7c7b770a22e9",
+  "pdf_sha256": "6dd60b1709480f325a0f8e2e6a225d3935adb20a5a9cf071c6bfe42b95861367",
+  "rendered_pages": [
+    "audit/write-pages/final-1.png",
+    "audit/write-pages/final-2.png",
+    "audit/write-pages/final-3.png",
+    "audit/write-pages/final-4.png",
+    "audit/write-pages/final-5.png",
+    "audit/write-pages/final-6.png"
+  ],
+  "inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "observations": [
+    "Cover has all five authors, institutions and emails; no proceedings strip.",
+    "Six Letter pages total; one-column 11pt body, table caption and references, single spacing, nominal one-inch margins.",
+    "All formulas, proof endings and the endpoint table are readable and unclipped.",
+    "The endpoint table follows its introduction without interrupting a proof.",
+    "AI assistance paragraph precedes the final bibliography; all six bibliography entries are readable."
+  ],
+  "limitations": "Writer visual inspection only; fresh release-context visual audit remains required."
+}

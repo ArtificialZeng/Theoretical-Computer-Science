@@ -1,0 +1,167 @@
+{
+  "job_id": "c012-upcycles-release-0294a4f8ea65",
+  "pass": "extraction-only",
+  "document": "manuscript/main.tex",
+  "claims": [
+    {
+      "claim_id": "C01",
+      "claim_text": "A nontrivial binary upcycle exists with n=12,d=3,L=512; it answers Question 9.2 affirmatively.",
+      "claim_type": "Existence",
+      "location": "Abstract; Theorem 1; sections 1,4"
+    },
+    {
+      "claim_id": "C02",
+      "claim_text": "The 512 windows partition all 4096 binary 12-words into sets of eight completions.",
+      "claim_type": "Statistic + Existence",
+      "location": "Abstract; proof"
+    },
+    {
+      "claim_id": "C03",
+      "claim_text": "128 octal digits specify the complete cycle.",
+      "claim_type": "Statistic",
+      "location": "Abstract; section 2"
+    },
+    {
+      "claim_id": "C04",
+      "claim_text": "The window length 12 does not divide cycle length 512.",
+      "claim_type": "Existence",
+      "location": "Abstract; section 4"
+    },
+    {
+      "claim_id": "C05",
+      "claim_text": "Chen, Kitaev, Mütze and Sun introduced universal partial words and cyclic versions.",
+      "claim_type": "Attribution",
+      "location": "Section 1 paragraph 1; CKMS17"
+    },
+    {
+      "claim_id": "C06",
+      "claim_text": "Fillmore et al. Theorem 3.1 gives binary n=8,d=1 examples.",
+      "claim_type": "Attribution",
+      "location": "Section 1; FGKMM26"
+    },
+    {
+      "claim_id": "C07",
+      "claim_text": "Fillmore et al. Question 9.2 asks whether upcycles with d>1 exist.",
+      "claim_type": "Attribution",
+      "location": "Abstract; sections 1,4; FGKMM26"
+    },
+    {
+      "claim_id": "C08",
+      "claim_text": "Theorem 5.1 and Corollary 5.2 multiply alphabet size while preserving n,d.",
+      "claim_type": "Attribution",
+      "location": "Section 1; FGKMM26"
+    },
+    {
+      "claim_id": "C09",
+      "claim_text": "Corollary 8.14 requires d=n/4 for nontrivial period-four frames.",
+      "claim_type": "Attribution",
+      "location": "Section 1; FGKMM26"
+    },
+    {
+      "claim_id": "C10",
+      "claim_text": "Carey et al. Definition 8.2 permits several cyclic words in a universal partial quasi-family.",
+      "claim_type": "Attribution",
+      "location": "Section 1; CKKP25"
+    },
+    {
+      "claim_id": "C11",
+      "claim_text": "The four displayed rows have 128 octal digits and decode to the accepted word.",
+      "claim_type": "Statistic + Existence",
+      "location": "Section 2 displayed object"
+    },
+    {
+      "claim_id": "C12",
+      "claim_text": "Digits 0,1,7 decode to wildcard000, wildcard001, wildcard111.",
+      "claim_type": "Existence",
+      "location": "Section 2"
+    },
+    {
+      "claim_id": "C13",
+      "claim_text": "Completion sets are disjoint iff ordinary unequal symbols occur at a common offset.",
+      "claim_type": "Existence",
+      "location": "Lemma 2 and proof"
+    },
+    {
+      "claim_id": "C14",
+      "claim_text": "The cycle has 512 positions with wildcards precisely at indices zero modulo four, also cyclically.",
+      "claim_type": "Statistic + Existence",
+      "location": "Proof of Theorem 1"
+    },
+    {
+      "claim_id": "C15",
+      "claim_text": "Every window has three wildcards and nine ordinary symbols, with no repeated physical position.",
+      "claim_type": "Statistic + Existence",
+      "location": "Proof of Theorem 1"
+    },
+    {
+      "claim_id": "C16",
+      "claim_text": "Each completion set has exactly eight members.",
+      "claim_type": "Statistic",
+      "location": "Proof of Theorem 1"
+    },
+    {
+      "claim_id": "C17",
+      "claim_text": "All 130816 pairs have an ordinary conflict; every test succeeds.",
+      "claim_type": "Statistic + Existence",
+      "location": "Equation 1; proof; listing"
+    },
+    {
+      "claim_id": "C18",
+      "claim_text": "Pairwise disjoint completion sets have union cardinality 512*8=4096=2^12.",
+      "claim_type": "Statistic",
+      "location": "Proof of Theorem 1"
+    },
+    {
+      "claim_id": "C19",
+      "claim_text": "The direct loop checks all 4096 total words at all 512 starts without sampling.",
+      "claim_type": "Statistic",
+      "location": "End of section 2; section 3; listing"
+    },
+    {
+      "claim_id": "C20",
+      "claim_text": "Eleven starts 501 through 511 wrap around and are included.",
+      "claim_type": "Statistic",
+      "location": "Section 3"
+    },
+    {
+      "claim_id": "C21",
+      "claim_text": "The program performs 2097152 compatibility tests and prints the stated counts.",
+      "claim_type": "Statistic",
+      "location": "Section 3"
+    },
+    {
+      "claim_id": "C22",
+      "claim_text": "The direct check counts starting indices, with shared characters read from one decoded word and exact integer counts.",
+      "claim_type": "Existence",
+      "location": "Section 3"
+    },
+    {
+      "claim_id": "C23",
+      "claim_text": "FGKMM26 raises n not dividing cycle length immediately after Question 9.2.",
+      "claim_type": "Attribution",
+      "location": "Section 4"
+    },
+    {
+      "claim_id": "C24",
+      "claim_text": "FGKMM26 has authors Fillmore, Goeckner, Kirsch, Martin, McGinnis; DCC 94 article152 (2026), DOI10.1007/s10623-026-01841-x.",
+      "claim_type": "Attribution + Temporal",
+      "location": "Bibliography"
+    },
+    {
+      "claim_id": "C25",
+      "claim_text": "CKKP25 has authors Carey, Kearney, Kirsch, Popescu; DCC93 pp2803-2822 (2025), DOI10.1007/s10623-025-01609-9.",
+      "claim_type": "Attribution + Temporal",
+      "location": "Bibliography"
+    },
+    {
+      "claim_id": "C26",
+      "claim_text": "CKMS17 has authors Chen, Kitaev, Mütze, Sun; DMTCS19(1) paper16 (2017), DOI10.23638/DMTCS-19-1-16.",
+      "claim_type": "Attribution + Temporal",
+      "location": "Bibliography"
+    }
+  ],
+  "excluded": "Definitions, questions, and methodology descriptions (including discovery and AI disclosure) excluded under citation-check extraction rules. Repeated claims grouped by ID; no charts or quantitative plots.",
+  "snapshot_digest": "920933319e6b98bd521f6c300a93b0e7fa46ae3d6600fa970801ea528789f85e",
+  "manuscript_digest": "474c54f68a48ef6fd7c76b39f22078792f656b0f9e2b317cb7c264388336041a",
+  "pdf_digest": "eade3f9df07bd82943ef54b3e0c9c1b95d1510ab9e779dc9ff26a9cdf71cedef"
+}

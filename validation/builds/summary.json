@@ -1,0 +1,87 @@
+{
+  "utc": "2026-11-01T15:24:45.310472+00:00",
+  "passed": true,
+  "comparison": "Whitespace-normalized pdftotext output; PDF timestamps may differ",
+  "papers": [
+    {
+      "id": "coverage-sparse",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.537,
+      "log": "validation/builds/coverage-sparse.log"
+    },
+    {
+      "id": "privacy-interpolation",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 6.619,
+      "log": "validation/builds/privacy-interpolation.log"
+    },
+    {
+      "id": "robust-stopping",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.732,
+      "log": "validation/builds/robust-stopping.log"
+    },
+    {
+      "id": "curvature-noise",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 6.212,
+      "log": "validation/builds/curvature-noise.log"
+    },
+    {
+      "id": "advice-matching",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 6.013,
+      "log": "validation/builds/advice-matching.log"
+    },
+    {
+      "id": "c002-coverage",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 6.17,
+      "log": "validation/builds/c002-coverage.log"
+    },
+    {
+      "id": "c009-cycle2",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.579,
+      "log": "validation/builds/c009-cycle2.log"
+    },
+    {
+      "id": "c012-upcycles",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 5.885,
+      "log": "validation/builds/c012-upcycles.log"
+    },
+    {
+      "id": "c015-imagebound",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 5.777,
+      "log": "validation/builds/c015-imagebound.log"
+    },
+    {
+      "id": "c017-wheeler",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 4.908,
+      "log": "validation/builds/c017-wheeler.log"
+    }
+  ]
+}

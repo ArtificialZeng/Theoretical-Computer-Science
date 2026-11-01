@@ -1,0 +1,23 @@
+{
+  "old_to_official": {
+    "KF26": "pmlr-v306-kim26l"
+  },
+  "new_entries": [
+    "Karlin1988",
+    "Karlin1994",
+    "NEURIPS2018_73a427ba",
+    "NEURIPS2020_5bd844f1",
+    "Tardos_1986",
+    "Besbes_2025",
+    "pmlr-v139-diakonikolas21a",
+    "Khanafer_2013",
+    "Dinitz_2024",
+    "10.1007/978-3-032-06706-7_6",
+    "kang2025learningaugmentedskirentaldiscrete"
+  ],
+  "excluded_pending_audit": [
+    "LCL25",
+    "CD26",
+    "HJS26"
+  ]
+}

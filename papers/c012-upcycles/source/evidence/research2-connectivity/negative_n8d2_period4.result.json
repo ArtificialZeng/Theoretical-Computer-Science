@@ -1,0 +1,90 @@
+{
+  "job_id": "c012-upcycles-research-456cb4499028",
+  "label": "negative_n8d2_period4",
+  "n": 8,
+  "d": 2,
+  "mask": "*...*...",
+  "max_rounds": 20,
+  "total_solver_wall_cap_seconds": 60,
+  "per_call_wall_cap_seconds": 5,
+  "encoding": "evidence/research2-connectivity/negative_n8d2_period4.encoding.json",
+  "initial_clauses": 2880,
+  "rounds": [
+    {
+      "round": 0,
+      "status": "SAT",
+      "returncode": 10,
+      "wall_timeout": false,
+      "elapsed_seconds": 0.01791687507648021,
+      "wall_cap_seconds": 5,
+      "child_cpu_seconds": 0.008407999999999999,
+      "clauses": 2880,
+      "cnf": "evidence/research2-connectivity/negative_n8d2_period4.r00.cnf",
+      "log": "evidence/research2-connectivity/negative_n8d2_period4.r00.log",
+      "proof": "evidence/research2-connectivity/negative_n8d2_period4.r00.lrat",
+      "cnf_sha256": "0f13f573a036af51b524dbe19cd6c45b9328832d4efbfb3fe308fa91d50eb707",
+      "proof_sha256": "26775a190c4292f9b6c5eafd7b2a69808b408b23cdf835a9fc73449abcdef04f",
+      "model_verification": "evidence/research2-connectivity/negative_n8d2_period4.r00.model-verification.json",
+      "component_count": 4,
+      "component_edge_counts": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "cut_groups": 3,
+      "new_cuts": 48,
+      "cuts": "evidence/research2-connectivity/negative_n8d2_period4.r00.cuts.json"
+    },
+    {
+      "round": 1,
+      "status": "SAT",
+      "returncode": 10,
+      "wall_timeout": false,
+      "elapsed_seconds": 0.011615291936323047,
+      "wall_cap_seconds": 5,
+      "child_cpu_seconds": 0.008785999999999999,
+      "clauses": 2928,
+      "cnf": "evidence/research2-connectivity/negative_n8d2_period4.r01.cnf",
+      "log": "evidence/research2-connectivity/negative_n8d2_period4.r01.log",
+      "proof": "evidence/research2-connectivity/negative_n8d2_period4.r01.lrat",
+      "cnf_sha256": "7e7dbd0cbfd5544535522bb849b2b8659fc6fb9044337d3f170f6c011727f336",
+      "proof_sha256": "23999da602f8d40f858f28c299b2c377c3d04924237c9cfefb3b223fc4e497d6",
+      "model_verification": "evidence/research2-connectivity/negative_n8d2_period4.r01.model-verification.json",
+      "component_count": 4,
+      "component_edge_counts": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "cut_groups": 3,
+      "new_cuts": 48,
+      "cuts": "evidence/research2-connectivity/negative_n8d2_period4.r01.cuts.json"
+    },
+    {
+      "round": 2,
+      "status": "UNSAT",
+      "returncode": 20,
+      "wall_timeout": false,
+      "elapsed_seconds": 0.018346874974668026,
+      "wall_cap_seconds": 5,
+      "child_cpu_seconds": 0.008796000000000005,
+      "clauses": 2976,
+      "cnf": "evidence/research2-connectivity/negative_n8d2_period4.r02.cnf",
+      "log": "evidence/research2-connectivity/negative_n8d2_period4.r02.log",
+      "proof": "evidence/research2-connectivity/negative_n8d2_period4.r02.lrat",
+      "cnf_sha256": "0014f40c8c3c0d0d8aa075f58328a38e8536e1ce9930365318484e7369e99783",
+      "proof_sha256": "c69a31c8219ba4d82448276fc3bbff2c78bb4a700a8d609c6010fa0a1bdde893",
+      "proof_check": "evidence/research2-connectivity/negative_n8d2_period4.r02.proof-check.json"
+    }
+  ],
+  "cut_groups": [
+    "evidence/research2-connectivity/negative_n8d2_period4.r00.cuts.json",
+    "evidence/research2-connectivity/negative_n8d2_period4.r01.cuts.json"
+  ],
+  "outcome": "fixed-frame-UNSAT-with-checked-CNF-certificate",
+  "original_question_resolved": false,
+  "solver_wall_seconds": 0.04787904198747128,
+  "completed_utc": "2026-11-01T04:51:57.814084+00:00"
+}

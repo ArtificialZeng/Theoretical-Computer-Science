@@ -1,0 +1,16 @@
+{
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Full all-ℓ weighted target is precise and open-supported. Inspected prior theorems do not settle the family; Theorem 12 covers lengths 4, 8, 12 but its criterion fails at 16. New exact diagnostics support a concrete global operator route, without proving it or establishing novelty.",
+  "next_test": "Independently prove or refute the arbitrary-dimensional lemma ||(uuᵀ/2+B)²||op≥1/4 via identity (R), and test whether a verified primary operator theorem already implies it.",
+  "evidence": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/triage-assessment.md",
+    "evidence/triage-exact-results.json",
+    "evidence/theorem12-results.json",
+    "evidence/source-integrity.json",
+    "evidence/triage-usage.json"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "job_id": "c017-wheeler-triage-6041b64a3bbb",
+  "phase": "triage",
+  "recorded_at_utc": "2026-11-01T10:32:03.108662+00:00",
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "source_sha256": "40fc8e967aeefd233cb62ffd0f70d77e772fafbdeb6086724c4c2ab5f591106d",
+  "source_unchanged": true,
+  "research_passes_observed": 0,
+  "research_passes_modified": false,
+  "prior_job_timeout_preserved": true,
+  "outer_root_note_read": true,
+  "new_computational_search": false,
+  "manuscript_or_pdf_authored": false,
+  "fresh_referee_performed": false,
+  "evidence": "evidence/triage-recovery-6041b64a3bbb.md"
+}

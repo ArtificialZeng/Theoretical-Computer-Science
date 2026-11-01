@@ -1,0 +1,11 @@
+{
+  "job_id": "c002-coverage-referee-3e90f78a9294",
+  "command": "python3 /Users/mac/.codex/skills/4prove-or-disprove-math/scripts/release_gate.py check-math .",
+  "exit_code": 0,
+  "observed_output": {
+    "ok": true,
+    "snapshot_digest": "26d2a64f317984b35b49212bdc46529ccb7f19bc1be1b5e471d28d308d18456e",
+    "referee_job_id": "c002-coverage-referee-3e90f78a9294"
+  },
+  "meaning": "Structural evidence-integrity and role-provenance gate passed; not a mathematical truth certificate."
+}

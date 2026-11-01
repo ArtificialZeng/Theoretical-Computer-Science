@@ -1,0 +1,27 @@
+{
+  "job_id": "c002-coverage-referee-3e90f78a9294",
+  "verdict": "accept",
+  "snapshot_digest": "26d2a64f317984b35b49212bdc46529ccb7f19bc1be1b5e471d28d308d18456e",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    {
+      "reference": "Tatiana Rocha Avila, Lars Rohwedder and Leo Wennmann, Non-Additive Discrepancy: Coverage Functions in a Beck-Fiala Setting, ESA 2026, LIPIcs 388, 139:1-139:19, DOI 10.4230/LIPIcs.ESA.2026.139; arXiv:2602.09948v3 (2026-07-01).",
+      "theorem": "Theorem 3; Section 5, Lemma 23. The published size-dependent coverage theorem and its itemwise affine-class rounding architecture are the nearest coverage comparison.",
+      "verification": "Frozen full texts of both versions and the official live publisher PDF inspected; current arXiv history checked. See audit/referee-literature.md."
+    },
+    {
+      "reference": "Christian Glaßer, Christian Reitwießner and Maximilian Witek, Applications of Discrepancy Theory in Multiobjective Approximation, FSTTCS 2011, LIPIcs 13, 55-65, DOI 10.4230/LIPIcs.FSTTCS.2011.55.",
+      "theorem": "Theorem 2, printed p.58: rational one-choice-per-group matrix rounding with infinity error at most twice the maximum absolute column sum, computable in polynomial time; attributed to Doerr and Srivastav, Multicolour Discrepancies, CPC 12(4):365-399 (2003), DOI 10.1017/S0963548303005662.",
+      "verification": "Exact statement read in the official primary 2011 full PDF and the proof independently reconstructed; original 2003 full text not read."
+    },
+    {
+      "reference": "Alexandros Hollender, Pasin Manurangsi, Raghu Meka and Warut Suksompong, Discrepancy Beyond Additive Functions with Applications to Fair Division, arXiv:2509.09252v2 (2025-09-29).",
+      "theorem": "Definition 13, Question 14 and Theorem 15, printed p.10: general 1-Lipschitz influence-sparse functions, with a sparse bound retaining item-count dependence. This broader model does not subsume the claimed dimension-free conclusion by an existing theorem.",
+      "verification": "Frozen full primary text inspected; live arXiv version history independently rechecked."
+    }
+  ],
+  "substantive_delta": "The frozen proof establishes the explicit bound 4kt(kt-1)^2 for every tagged-occurrence coverage family in the original question, independent of n,m, feature counts and feature sizes, together with a deterministic polynomial-time construction for explicitly listed incidences and item slots, including binary-encoded k,t. Disjoint Hall witnesses are restricted to cyclic categorical states; all large occurrences are exactly balanced for every state choice, while each class of small-feature interactions admits an affine coverage matrix of column l1 norm at most kt. This supplies a size-independent number of bounded-error stages.",
+  "why_nonroutine": "No novelty is assigned to Hall matching, greedy classes or the known multiple-choice rounding theorem. The independent innovation is their compatible nonlinear reduction: the witness restriction preserves exact large-feature coverage without imposing an arbitrary frozen color bias on small features, and the categorical coefficient calculation still works when one feature contains multiple items of a witness. Itemwise linear rounding does not directly preserve these witnesses, and the linear grouped theorem alone does not linearize coverage. This proves a new structural bridge rather than following by substituting parameters into the inspected prior theorems. The bounded primary search found no equivalent bridge or full resolution.",
+  "significance": "For this unrestricted nonlinear coverage class, every fixed t,k now has a discrepancy bound uniformly over all instance sizes; this is a qualitative resolution of the immutable polynomial-existence question, not a fixed-rank or fixed-parameter special case. The constructive method explains how to remove size dependence while retaining simultaneous control of all functions. The t,k dependence is coarse O(t^3 k^3), and no claim of matching the sharper exponents, resolving general influence-sparse Lipschitz discrepancy, worldwide priority, or STOC acceptance is made. These limitations do not erase the qualitative all-size mathematical gain.",
+  "remaining_gaps": []
+}

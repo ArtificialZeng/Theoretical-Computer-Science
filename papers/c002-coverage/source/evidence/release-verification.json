@@ -1,0 +1,45 @@
+{
+  "job_id": "c002-coverage-release-c84ac066553a",
+  "citation_keys": [
+    "ARW26",
+    "DF25",
+    "DS03",
+    "GRW11",
+    "HMMS25"
+  ],
+  "bibliography_keys": [
+    "ARW26",
+    "DF25",
+    "DS03",
+    "GRW11",
+    "HMMS25"
+  ],
+  "rendered_bibliography_keys": [
+    "ARW26",
+    "DF25",
+    "DS03",
+    "GRW11",
+    "HMMS25"
+  ],
+  "undefined_keys": [],
+  "unused_bibliography_keys": [],
+  "local_recorder_inputs": [
+    "manuscript/main.aux",
+    "manuscript/main.bbl",
+    "manuscript/main.out",
+    "manuscript/main.tex",
+    "manuscript/vendor/acmart.cls"
+  ],
+  "generated_auxiliary_inputs": [
+    "manuscript/main.aux",
+    "manuscript/main.out"
+  ],
+  "unlisted_publication_inputs": [],
+  "final_log_diagnostics": [],
+  "canonical_pdf_matches_compiler_output": true,
+  "acmart_matches_official_input": true,
+  "author_commands": [
+    "Zijian Zeng"
+  ],
+  "source_sha256": "b79ed29f77420ec62a957e727b934deb6b9435b41ed86deaa2c8d77c01b66f9d"
+}

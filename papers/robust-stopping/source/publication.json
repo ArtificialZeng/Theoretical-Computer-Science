@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "kind": "result-note",
+  "original_status": "unresolved",
+  "title": "Certified Expected-Cost Optimization for Robust Ski Rental",
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "institution": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    },
+    {
+      "name": "Jiayin Cao",
+      "institution": "Ningbo University",
+      "email": "2795820153@qq.com"
+    },
+    {
+      "name": "Weinan Dai",
+      "institution": "Zhejiang University",
+      "email": "21725058@zju.edu.cn"
+    },
+    {
+      "name": "Rui Wang",
+      "institution": "Nanchang Institute of Technology",
+      "email": "2002007@nut.edu.cn"
+    },
+    {
+      "name": "Fei Ding",
+      "institution": "Alibaba Group",
+      "email": "dingfei@email.ncu.edu.cn"
+    }
+  ],
+  "pdf": "output/pdf/robust-stopping.pdf",
+  "source_files": [
+    "manuscript/ACM_README",
+    "manuscript/BIBLIOGRAPHY_PROVENANCE.md",
+    "manuscript/Makefile",
+    "manuscript/README_zh.md",
+    "manuscript/REPRODUCIBILITY.md",
+    "manuscript/SOURCE_PROVENANCE.json",
+    "manuscript/acmart.cls",
+    "manuscript/acmart.dtx",
+    "manuscript/acmart.ins",
+    "manuscript/alpha.bst",
+    "manuscript/data/bisection-test-cases.json",
+    "manuscript/data/kf26-software-observations.json",
+    "manuscript/data/linear-oracle-test-cases.json",
+    "manuscript/data/oracle-test-cases.json",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/prefix_oracle.py",
+    "manuscript/references.bib",
+    "manuscript/reproduce.py",
+    "manuscript/reproduce_author_code.py",
+    "manuscript/response_to_reviews_zh.md",
+    "manuscript/uniform_frontier.py",
+    "manuscript/verify_certificates.py"
+  ],
+  "build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -recorder main.tex",
+  "build_working_directory": "manuscript",
+  "reproduction_command": "python3 -B manuscript/reproduce.py",
+  "provenance": {
+    "writer_job_id": "robust-stopping-write-93ae8ac102fa",
+    "math_referee_job_id": "robust-stopping-referee-e7c6798337e7",
+    "snapshot_digest": "c70f1a41d2a4a68c3ad3f996323997e58e2b037484d8e4d79a5f9e8327bd3f3d"
+  },
+  "presentation_revision": {
+    "scope": "Complete reviewer revision within newly accepted combined scope; exact uniform frontier, finite published/software facts, algorithms/figures, full proofs and bibliography",
+    "mathematical_scope_changed": false,
+    "fresh_release_required": true,
+    "root_repairs": [
+      "Corrected expected-cost/ratio coefficient transcription to accepted5/2and3/2",
+      "Corrected TheoremC.1(ii) locator",
+      "Added schematic lower envelope with bracket/intersection",
+      "Made uniform parameter domains explicit",
+      "Synchronized final response and artifact instructions"
+    ],
+    "closing_scope_clarification": "Positive model-specific further questions replace an overbroad output-sensitive-enumeration open-status sentence; no central theorem or citation change"
+  },
+  "pages_including_cover_and_references": 11
+}

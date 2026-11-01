@@ -1,0 +1,23 @@
+{
+  "job_id": "robust-stopping-triage-ef6eadc61ec7",
+  "role": "triage",
+  "source_status": "status-uncertain",
+  "decision": "advance",
+  "original_status": "unresolved",
+  "candidate_kind": "none",
+  "fresh_referee": "not_performed",
+  "files": {
+    "source.md": "9721525d4da99587f7ef8b0f276225877c55b07af8d97e03a873448bbe839b32",
+    "requirements.md": "af53df8c8fb70d9d9c20d11bb67c9770309707203e52925e1b413f8128682115",
+    "problem.md": "8b42f9de27f9693d7417b285ff6b84a65df86d0a31e633405fdb4e4059f4fe78",
+    "checkpoint.md": "6c45b8e4ea231c31c4861f475d5014ee5a7e46d3ae70a86f4c475341f8ddf45f",
+    "literature/rental-advice.html": "445824d453a962352d2c7c361d6bc0efab2f77357a7b99bf3181282a48d71122",
+    "literature/rental-unknown.html": "d4fd548430a7130fa051efade0f32dc7a3e34e87dcf5fb5a6653253b0ac2f0c1",
+    "literature/triage-screen.md": "e9677e126103d35a9c2ee1b2556f1fa204326f77b1588239cf412fc85b88cc04",
+    "evidence/triage-findings.md": "2325f584239bdc7244f5ee5d78efc5b174faf95401b5d094f88b31541460bb3a",
+    "evidence/triage_exact.py": "be608fc7ab9336228f341a59bb6bef6add08976837933421865b5194227b6cd5",
+    "evidence/triage-exact.json": "ae5d43e7e0f07459df95fd3fdb55164e62712bcf296e3c57679051e768a1b854",
+    "evidence/check_triage_certificate.py": "1a41dfefd1e212a577d92ebbcac119f4b232ee4eb9802ca728d700c9c492e488",
+    "evidence/triage-certificate.json": "9aa8ad051ccda732b76062085d5c9313957fe3e23c4a5abd372b20493beb5afd"
+  }
+}

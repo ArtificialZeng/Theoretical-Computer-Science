@@ -1,0 +1,27 @@
+{
+  "job_id": "curvature-noise-triage-903fc47916c5",
+  "status": "finite exact observations; unaccepted; no novelty certification",
+  "source_sha256_before_and_after": "55e12bf5b8e7b5489014d1286ec0463b9bec718f4d5369b338c8e1403a6259cd",
+  "n_range_inclusive": [
+    5,
+    11
+  ],
+  "k_range": "2 <= k <= n-2",
+  "r_range": "1 <= r <= min(k-1,n-k-1)",
+  "epsilon_grid": [
+    "1/10",
+    "1/3",
+    "3/4"
+  ],
+  "curvature_grid": [
+    "0",
+    "1/2",
+    "9/10"
+  ],
+  "hard_family_parameter_tuples": 621,
+  "feasible_hidden_outside_count_pairs": 18639,
+  "marginal_checks": 30312,
+  "exact_hypergeometric_tail_checks": 4653,
+  "coverage": "All feasible (h,t) count pairs and query cardinalities for the stated grids; symmetry compresses subsets.",
+  "not_checked": "General analytic quantifiers, adaptive algorithm theorem, asymptotics, novelty, curvature=1."
+}

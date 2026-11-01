@@ -1,0 +1,14 @@
+{
+  "job_id": "c009-cycle2-referee-eb6d40fb0393",
+  "command": "python3 /Users/mac/.codex/skills/4prove-or-disprove-math/scripts/release_gate.py check-math PROJECT_DIR",
+  "exit_code": 0,
+  "actual_output": {
+    "ok": true,
+    "snapshot_digest": "06b470c27e7195c3ffb2ba0d198581e77aa79d1b5d87d6485d396b6af906d1bc",
+    "referee_job_id": "c009-cycle2-referee-eb6d40fb0393"
+  },
+  "checked_at": "2026-11-01T02:52:08.578801+00:00",
+  "interpretation": "Actual successful structural/provenance check on the final accepted audit; not a truth or novelty certificate. Initial failed gate preserved in audit/referee-initial-gate-check.json.",
+  "audit_provenance_key": "job_id",
+  "innovation_record": "audit/innovation.json"
+}

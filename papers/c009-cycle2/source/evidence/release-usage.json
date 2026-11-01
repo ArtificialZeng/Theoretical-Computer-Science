@@ -1,0 +1,23 @@
+{
+  "job_id": "c009-cycle2-release-70b6b8b76475",
+  "started_at": "2026-11-01T03:06:37+00:00",
+  "completed_at": "2026-11-01T03:12:46.403945+00:00",
+  "elapsed_seconds": 369.4,
+  "lease_limit_seconds": 900,
+  "agents_spawned": 0,
+  "pdf_clean_builds": 1,
+  "pages_visually_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "optional_access_failures": [
+    "MPT04 DOI resolver unavailable",
+    "CiteSeer MPT04 PDF403; author-uploaded actual primary text accessible"
+  ],
+  "failed_release_gates": 0,
+  "source_unchanged": true
+}

@@ -1,0 +1,20 @@
+{
+  "job_id": "c012-upcycles-research-cfe911474960",
+  "mask": "*..*....",
+  "status": "SAT",
+  "returncode": 10,
+  "cap_seconds": 20,
+  "elapsed_seconds": 0.08437695796601474,
+  "cnf": "evidence/research1-relaxation/n8d2_xooxoooo.cnf",
+  "proof": "evidence/research1-relaxation/n8d2_xooxoooo.lrat",
+  "log": "evidence/research1-relaxation/n8d2_xooxoooo.log",
+  "encoding": "evidence/research1-relaxation/n8d2_xooxoooo.encoding.json",
+  "cnf_sha256": "98654f227af36c08d41e632765cd50ce3a586ec2bbf0b880bd142d590aed16f1",
+  "proof_sha256": "56ea9551fd28a4c74261c6a927ac3e99e046b1bb3b7ca5c48532c8b68024a0e8",
+  "scope": "necessary phase-balanced subcube tiling relaxation; no cyclic overlap constraints",
+  "variables": 5121,
+  "clauses": 25873,
+  "model_verification": "evidence/research1-relaxation/n8d2_xooxoooo.model-verification.json",
+  "zero_indegree": 28,
+  "zero_outdegree": 44
+}

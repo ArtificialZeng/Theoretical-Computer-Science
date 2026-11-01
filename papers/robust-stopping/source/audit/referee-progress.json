@@ -1,0 +1,24 @@
+{
+  "job_id": "robust-stopping-referee-1afb6017baeb",
+  "phase": "referee",
+  "status": "complete",
+  "snapshot_digest": "ddab1f97b4e3cfd90e3a03d39b4a5be6796cd12df3f12088626365322167231a",
+  "checks_completed": [
+    "22 frozen file hashes and snapshot digest match",
+    "original source SHA-256 matches",
+    "central triangular elimination and activation derivative reconstructed",
+    "frozen algorithm and exact test/checker source inspected",
+    "758 saved exact certificates independently rechecked",
+    "3240 signed-cost tie tests, 246 exact mass-one tests, 360 randomized full tests and three fallback calls passed",
+    "raw support-level separation independently derived",
+    "closest primary source statements inspected on current web fulltexts",
+    "rational isolation and intermediate bit bounds reconstructed"
+  ],
+  "next_test": "Separate writing phase, constrained to the accepted frozen result-note scope; original_status remains unresolved.",
+  "verdict": "accept",
+  "gate": {
+    "ok": true,
+    "snapshot_digest": "ddab1f97b4e3cfd90e3a03d39b4a5be6796cd12df3f12088626365322167231a",
+    "referee_job_id": "robust-stopping-referee-1afb6017baeb"
+  }
+}

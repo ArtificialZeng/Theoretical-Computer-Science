@@ -1,0 +1,23 @@
+{
+  "status": "passed; finite observations only",
+  "coverage": "all ordered pairs of positive denominator-8 vectors, n=2..4",
+  "arithmetic": "fractions.Fraction",
+  "counts": {
+    "pairs": 1715,
+    "proper_subsets": 19894,
+    "membership_tests": 10290,
+    "greedy_coordinate_tests": 18830
+  },
+  "binary_obstruction": {
+    "p": [
+      "1/4",
+      "3/4"
+    ],
+    "q": [
+      "3/4",
+      "1/4"
+    ],
+    "exp_endpoint_distance": 3,
+    "exp_optimal_binary_cost": 4
+  }
+}

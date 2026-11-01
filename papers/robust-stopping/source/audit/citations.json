@@ -1,0 +1,56 @@
+{
+  "job_id": "robust-stopping-release-ff035ab58689",
+  "snapshot_digest": "c70f1a41d2a4a68c3ad3f996323997e58e2b037484d8e4d79a5f9e8327bd3f3d",
+  "manuscript_digest": "2947c811f73b90b79c82634fc3909aad696aa457956ffd61ec1744834d8f8da1",
+  "pdf_digest": "750891c12b44b7761c1c8c96968e8005e68e4b8b7f3f4299a8a5fe80fd96ce84",
+  "verdict": "accept_with_citation_limitations",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/ACM_README",
+    "manuscript/BIBLIOGRAPHY_PROVENANCE.md",
+    "manuscript/Makefile",
+    "manuscript/README_zh.md",
+    "manuscript/REPRODUCIBILITY.md",
+    "manuscript/SOURCE_PROVENANCE.json",
+    "manuscript/acmart.cls",
+    "manuscript/acmart.dtx",
+    "manuscript/acmart.ins",
+    "manuscript/alpha.bst",
+    "manuscript/data/bisection-test-cases.json",
+    "manuscript/data/kf26-software-observations.json",
+    "manuscript/data/linear-oracle-test-cases.json",
+    "manuscript/data/oracle-test-cases.json",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/prefix_oracle.py",
+    "manuscript/references.bib",
+    "manuscript/reproduce.py",
+    "manuscript/reproduce_author_code.py",
+    "manuscript/response_to_reviews_zh.md",
+    "manuscript/uniform_frontier.py",
+    "manuscript/verify_certificates.py"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "Fresh affected-release advisory citation-check-skill extraction/verification of25 grouped claim units, all16 reference records/15works, current23-file dependency closure, narrowing closing delta,36response items and actual extracted/rendered PDF. Reused just-reviewed primary cache/official exports as expressly requested; fresh KF published extraction and six unchanged-class runs. Four fulltext/version-access limitations preserved. No user-authoritative Excel/BibTeX was supplied. No unsupported strengthening found.",
+  "citation_audit_method": "citation-check-skill-advisory-plus-primary-source-manual",
+  "metadata_basis": "official_primary_exports",
+  "unverified_citations": [
+    {
+      "key": "Li_2026",
+      "limitation": "Journal fulltext inaccessible; official journal metadata retained. Exact support/asymptotic comparisons refer explicitly to separately cited, inspected arXiv v1; journal/preprint identity is not assumed."
+    },
+    {
+      "key": "Karlin1994",
+      "limitation": "Journal fulltext unavailable. Narrow limiting competitive-ratio statement is supported by the publisher abstract and inspected original 1990 proceedings text; versions are not assumed identical."
+    },
+    {
+      "key": "Tardos_1986",
+      "limitation": "Fulltext unavailable; only the narrow matrix-dependent arithmetic-step claim supported by the primary publisher abstract is used."
+    },
+    {
+      "key": "Khanafer_2013",
+      "limitation": "Conference fulltext unavailable; only the horizon-moment description supported by the primary Bell Labs institutional abstract is used."
+    }
+  ]
+}

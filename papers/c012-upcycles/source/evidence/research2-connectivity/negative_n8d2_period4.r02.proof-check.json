@@ -1,0 +1,13 @@
+{
+  "cnf": "evidence/research2-connectivity/negative_n8d2_period4.r02.cnf",
+  "proof": "evidence/research2-connectivity/negative_n8d2_period4.r02.lrat",
+  "cnf_sha256": "0014f40c8c3c0d0d8aa075f58328a38e8536e1ce9930365318484e7369e99783",
+  "proof_sha256": "c69a31c8219ba4d82448276fc3bbff2c78bb4a700a8d609c6010fa0a1bdde893",
+  "initial_clauses": 2976,
+  "checked_additions": 40,
+  "deletions": 12,
+  "checked_empty_clause": true,
+  "verdict": "verified-UNSAT-of-this-CNF",
+  "checker": "independent Python LRAT/RUP-only checker",
+  "elapsed_seconds": 0.0020442090462893248
+}

@@ -1,0 +1,16 @@
+{
+  "job_id": "c012-upcycles-research-456cb4499028",
+  "research_pass": 2,
+  "budget_seconds": 1500,
+  "first_observed_utc": "2026-11-01T04:50:16+00:00",
+  "method": "Exact cube partition and literal overlap balance, with root/internal-edge guarded outgoing connectivity cuts",
+  "controls": "Exhaust all 512 subgraphs of a 3-vertex directed graph for cut guard soundness; pinned source n4d1/n8d1 connected SAT, unpinned n4d1, bad flipped n4 UNSAT, independently certified n8d2 period4 negative control",
+  "target": "binary n12 d3 frame ...* repeated three times",
+  "target_max_rounds": 20,
+  "target_total_solver_wall_seconds": 180,
+  "target_per_call_wall_seconds": 30,
+  "control_negative_max_rounds": 20,
+  "control_negative_total_solver_wall_seconds": 60,
+  "control_negative_per_call_wall_seconds": 5,
+  "stop": "Connected models require full independent literal expansion; finite UNSAT does not resolve original. A timeout or refinement stagnation is not an obstruction theorem. No blind cap escalation."
+}

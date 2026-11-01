@@ -1,0 +1,115 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{KMMO94}
+
+\bibitem[BMM25]{Besbes_2025}
+Omar Besbes, Will Ma, and Omar Mouchtaki.
+\newblock Beyond {IID}: Data-driven decision making in heterogeneous
+  environments.
+\newblock {\em Management Science}, 71(12):10538--10555, December 2025.
+
+\bibitem[CD26a]{10.1007/978-3-032-06706-7_6}
+Qiming Cui and Michael Dinitz.
+\newblock Controlling tail risk in two-slope ski rental.
+\newblock In Jannik Matuschke and Jos{\'e} Verschae, editors, {\em
+  Approximation and Online Algorithms}, pages 81--96, Cham, 2026. Springer
+  Nature Switzerland.
+
+\bibitem[CD26b]{pmlr-v306-cui26a}
+Qiming Cui and Michael Dinitz.
+\newblock Ski rental with distributional predictions of unknown quality.
+\newblock In Tong Zhang, Miroslav Dudik, Martin Jaggi, Alekh Agarwal, Sharon
+  Li, Dale Schuurmans, Jerry Zhu, Felix Berkenkamp, Hanze Dong, and Alberto
+  Bietti, editors, {\em Proceedings of the 43rd International Conference on
+  Machine Learning}, volume 306 of {\em Proceedings of Machine Learning
+  Research}, pages 21805--21828. PMLR, 06--11 Jul 2026.
+
+\bibitem[DIL{\etalchar{+}}24]{Dinitz_2024}
+Michael Dinitz, Sungjin Im, Thomas Lavastida, Benjamin Moseley, and Sergei
+  Vassilvitskii.
+\newblock Controlling tail risk in online ski-rental.
+\newblock In {\em Proceedings of the 2024 Annual ACM-SIAM Symposium on Discrete
+  Algorithms (SODA)}, pages 4247--4263. Society for Industrial and Applied
+  Mathematics, January 2024.
+
+\bibitem[DKT{\etalchar{+}}21]{pmlr-v139-diakonikolas21a}
+Ilias Diakonikolas, Vasilis Kontonis, Christos Tzamos, Ali Vakilian, and Nikos
+  Zarifis.
+\newblock Learning online algorithms with distributional advice.
+\newblock In Marina Meila and Tong Zhang, editors, {\em Proceedings of the 38th
+  International Conference on Machine Learning}, volume 139 of {\em Proceedings
+  of Machine Learning Research}, pages 2687--2696. PMLR, 18--24 Jul 2021.
+
+\bibitem[HJS26]{hartline_et_al:LIPIcs.ITCS.2026.75}
+Jason Hartline, Aleck Johnsen, and Anant Shah.
+\newblock {Prior-Independent and Subgame Optimal Online Algorithms}.
+\newblock In Shubhangi Saraf, editor, {\em 17th Innovations in Theoretical
+  Computer Science Conference (ITCS 2026)}, volume 362 of {\em Leibniz
+  International Proceedings in Informatics (LIPIcs)}, pages 75:1--75:23,
+  Dagstuhl, Germany, 2026. Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r
+  Informatik.
+
+\bibitem[KF26]{pmlr-v306-kim26l}
+Jihwan Kim and Chenglin Fan.
+\newblock Robust and consistent ski rental with distributional advice.
+\newblock In Tong Zhang, Miroslav Dudik, Martin Jaggi, Alekh Agarwal, Sharon
+  Li, Dale Schuurmans, Jerry Zhu, Felix Berkenkamp, Hanze Dong, and Alberto
+  Bietti, editors, {\em Proceedings of the 43rd International Conference on
+  Machine Learning}, volume 306 of {\em Proceedings of Machine Learning
+  Research}, pages 57411--57444. PMLR, 06--11 Jul 2026.
+
+\bibitem[KKP13]{Khanafer_2013}
+Ali Khanafer, Murali Kodialam, and Krishna P.~N. Puttaswamy.
+\newblock The constrained ski-rental problem and its application to online
+  cloud cost optimization.
+\newblock In {\em 2013 Proceedings IEEE INFOCOM}, pages 1492--1500. IEEE, April
+  2013.
+
+\bibitem[KMMO94]{Karlin1994}
+A.~R. Karlin, M.~S. Manasse, L.~A. McGeoch, and S.~Owicki.
+\newblock Competitive randomized algorithms for nonuniform problems.
+\newblock {\em Algorithmica}, 11(6):542--571, Jun 1994.
+
+\bibitem[KMRS88]{Karlin1988}
+Anna~R. Karlin, Mark~S. Manasse, Larry Rudolph, and Daniel~D. Sleator.
+\newblock Competitive snoopy caching.
+\newblock {\em Algorithmica}, 3(1):79--119, Nov 1988.
+
+\bibitem[KPF25]{kang2025learningaugmentedskirentaldiscrete}
+Bosun Kang, Hyejun Park, and Chenglin Fan.
+\newblock Learning-augmented ski rental with discrete distributions: A bayesian
+  approach.
+\newblock arXiv:2512.07313, \url{https://arxiv.org/abs/2512.07313}, 2025.
+
+\bibitem[LCL25]{li2025predictionspecificdesignlearningaugmentedalgorithms}
+Sizhe Li, Nicolas Christianson, and Tongxin Li.
+\newblock Prediction-specific design of learning-augmented algorithms.
+\newblock arXiv:2510.14887v1, \url{https://arxiv.org/abs/2510.14887v1}, 2025.
+
+\bibitem[LCL26]{Li_2026}
+Sizhe Li, Nicolas Christianson, and Tongxin Li.
+\newblock Prediction-specific design of learning-augmented algorithms.
+\newblock {\em Proceedings of the ACM on Measurement and Analysis of Computing
+  Systems}, 10(1):1--57, March 2026.
+
+\bibitem[PSK18]{NEURIPS2018_73a427ba}
+Manish Purohit, Zoya Svitkina, and Ravi Kumar.
+\newblock Improving online algorithms via {ML} predictions.
+\newblock In S.~Bengio, H.~Wallach, H.~Larochelle, K.~Grauman, N.~Cesa-Bianchi,
+  and R.~Garnett, editors, {\em Advances in Neural Information Processing
+  Systems}, volume~31. Curran Associates, Inc., 2018.
+
+\bibitem[Tar86]{Tardos_1986}
+Éva Tardos.
+\newblock A strongly polynomial algorithm to solve combinatorial linear
+  programs.
+\newblock {\em Operations Research}, 34(2):250--256, April 1986.
+
+\bibitem[WZ20]{NEURIPS2020_5bd844f1}
+Alexander Wei and Fred Zhang.
+\newblock Optimal robustness-consistency trade-offs for learning-augmented
+  online algorithms.
+\newblock In H.~Larochelle, M.~Ranzato, R.~Hadsell, M.F. Balcan, and H.~Lin,
+  editors, {\em Advances in Neural Information Processing Systems}, volume~33,
+  pages 8042--8053. Curran Associates, Inc., 2020.
+
+\end{thebibliography}

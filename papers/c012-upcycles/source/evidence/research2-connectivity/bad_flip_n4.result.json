@@ -1,0 +1,35 @@
+{
+  "job_id": "c012-upcycles-research-456cb4499028",
+  "label": "bad_flip_n4",
+  "n": 4,
+  "d": 1,
+  "mask": "...*",
+  "max_rounds": 20,
+  "total_solver_wall_cap_seconds": 10,
+  "per_call_wall_cap_seconds": 5,
+  "encoding": "evidence/research2-connectivity/bad_flip_n4.encoding.json",
+  "initial_clauses": 280,
+  "rounds": [
+    {
+      "round": 0,
+      "status": "UNSAT",
+      "returncode": 20,
+      "wall_timeout": false,
+      "elapsed_seconds": 0.005711541976779699,
+      "wall_cap_seconds": 5,
+      "child_cpu_seconds": 0.0032750000000000036,
+      "clauses": 280,
+      "cnf": "evidence/research2-connectivity/bad_flip_n4.r00.cnf",
+      "log": "evidence/research2-connectivity/bad_flip_n4.r00.log",
+      "proof": "evidence/research2-connectivity/bad_flip_n4.r00.lrat",
+      "cnf_sha256": "19ad8664b22de7622b96303c0281aac5c4a6341863e6785fa312fffd54a9d275",
+      "proof_sha256": "c99666bd99dfce8d74930e0b58c4ff928bb53ad870a753cd2dec7d7ce0dee4bc",
+      "proof_check": "evidence/research2-connectivity/bad_flip_n4.r00.proof-check.json"
+    }
+  ],
+  "cut_groups": [],
+  "outcome": "fixed-frame-UNSAT-with-checked-CNF-certificate",
+  "original_question_resolved": false,
+  "solver_wall_seconds": 0.005711541976779699,
+  "completed_utc": "2026-11-01T04:51:57.752851+00:00"
+}

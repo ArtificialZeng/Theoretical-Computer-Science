@@ -1,0 +1,203 @@
+{
+  "job_id": "curvature-noise-research-5a09759394ef",
+  "status": "exact finite falsification checks only; no fresh review or novelty certification",
+  "source_sha256_before_and_after": "55e12bf5b8e7b5489014d1286ec0463b9bec718f4d5369b338c8e1403a6259cd",
+  "adaptive_policy_checks": [
+    {
+      "n": 6,
+      "k": 2,
+      "r": 1,
+      "epsilon": "3/4",
+      "curvature": "1/2",
+      "hidden_instances": 15,
+      "query_sets_all_sizes": 64,
+      "outputs_all_k_sets": 15,
+      "max_leak_probability": "1/5",
+      "beta": "29/70",
+      "coarse_beta": "5/12",
+      "promise_checks": 960,
+      "adaptive_policy_depth": 2,
+      "bellman_cached_states": 738,
+      "results": [
+        {
+          "Q": 0,
+          "exact_optimal_prior_expected_ratio": "29/70",
+          "bound_8": "29/70",
+          "bound_holds": true
+        },
+        {
+          "Q": 1,
+          "exact_optimal_prior_expected_ratio": "15/28",
+          "bound_8": "43/70",
+          "bound_holds": true
+        },
+        {
+          "Q": 2,
+          "exact_optimal_prior_expected_ratio": "55/84",
+          "bound_8": "57/70",
+          "bound_holds": true
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "k": 2,
+      "r": 1,
+      "epsilon": "1/3",
+      "curvature": "9/10",
+      "hidden_instances": 15,
+      "query_sets_all_sizes": 64,
+      "outputs_all_k_sets": 15,
+      "max_leak_probability": "1",
+      "beta": "173/300",
+      "coarse_beta": "71/120",
+      "promise_checks": 960,
+      "adaptive_policy_depth": 2,
+      "bellman_cached_states": 627,
+      "results": [
+        {
+          "Q": 0,
+          "exact_optimal_prior_expected_ratio": "173/300",
+          "bound_8": "173/300",
+          "bound_holds": true
+        },
+        {
+          "Q": 1,
+          "exact_optimal_prior_expected_ratio": "451/600",
+          "bound_8": "473/300",
+          "bound_holds": true
+        },
+        {
+          "Q": 2,
+          "exact_optimal_prior_expected_ratio": "5/6",
+          "bound_8": "473/300",
+          "bound_holds": true
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "k": 2,
+      "r": 1,
+      "epsilon": "2/5",
+      "curvature": "0",
+      "hidden_instances": 15,
+      "query_sets_all_sizes": 64,
+      "outputs_all_k_sets": 15,
+      "max_leak_probability": "0",
+      "beta": "13/21",
+      "coarse_beta": "13/21",
+      "promise_checks": 960,
+      "adaptive_policy_depth": 2,
+      "bellman_cached_states": 3,
+      "results": [
+        {
+          "Q": 0,
+          "exact_optimal_prior_expected_ratio": "13/21",
+          "bound_8": "13/21",
+          "bound_holds": true
+        },
+        {
+          "Q": 1,
+          "exact_optimal_prior_expected_ratio": "13/21",
+          "bound_8": "13/21",
+          "bound_holds": true
+        },
+        {
+          "Q": 2,
+          "exact_optimal_prior_expected_ratio": "13/21",
+          "bound_8": "13/21",
+          "bound_holds": true
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "k": 2,
+      "r": 1,
+      "epsilon": "99/100",
+      "curvature": "2/3",
+      "hidden_instances": 15,
+      "query_sets_all_sizes": 64,
+      "outputs_all_k_sets": 15,
+      "max_leak_probability": "2/5",
+      "beta": "1003/2985",
+      "coarse_beta": "602/1791",
+      "promise_checks": 960,
+      "adaptive_policy_depth": 2,
+      "bellman_cached_states": 1428,
+      "results": [
+        {
+          "Q": 0,
+          "exact_optimal_prior_expected_ratio": "1003/2985",
+          "bound_8": "1003/2985",
+          "bound_holds": true
+        },
+        {
+          "Q": 1,
+          "exact_optimal_prior_expected_ratio": "4796/8955",
+          "bound_8": "2197/2985",
+          "bound_holds": true
+        },
+        {
+          "Q": 2,
+          "exact_optimal_prior_expected_ratio": "632/995",
+          "bound_8": "3391/2985",
+          "bound_holds": true
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "k": 3,
+      "r": 2,
+      "epsilon": "3/4",
+      "curvature": "1/2",
+      "hidden_instances": 56,
+      "query_sets_all_sizes": 256,
+      "outputs_all_k_sets": 56,
+      "max_leak_probability": "1/14",
+      "beta": "541/1176",
+      "coarse_beta": "157/336",
+      "promise_checks": 14336,
+      "adaptive_policy_depth": 1,
+      "bellman_cached_states": 254,
+      "results": [
+        {
+          "Q": 0,
+          "exact_optimal_prior_expected_ratio": "541/1176",
+          "bound_8": "541/1176",
+          "bound_holds": true
+        },
+        {
+          "Q": 1,
+          "exact_optimal_prior_expected_ratio": "199/392",
+          "bound_8": "625/1176",
+          "bound_holds": true
+        }
+      ]
+    }
+  ],
+  "heldout_count_checks": {
+    "n_range_inclusive": [
+      12,
+      18
+    ],
+    "k_range": "2..min(6,n-2)",
+    "r_values": "1 and k-1 when n>k+r",
+    "epsilon_grid": [
+      "1/101",
+      "2/5",
+      "99/100"
+    ],
+    "curvature_grid": [
+      "1/101",
+      "2/3",
+      "99/100"
+    ],
+    "parameter_tuples": 567,
+    "feasible_count_points": 33894,
+    "exact_hypergeometric_tail_checks": 7308
+  },
+  "limits": "Finite policy horizons and finite grids. No computer proof of asymptotics or arbitrary Q. Exponential relaxation with Euler e is proved analytically, not numerically certified here."
+}

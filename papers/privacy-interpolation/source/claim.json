@@ -1,0 +1,28 @@
+{
+  "kind": "result-note",
+  "original_status": "unresolved",
+  "statement": "In the strictly positive finite probability simplex, with normalized absolutely continuous unit-interval paths and C(r)=ess sup_t max_i |r_i'(t)/r_i(t)|, the following subsidiary results hold. (1) For every 0<a<b with a+b<1, c=1-a-b, p=(c,a,b), q=(c,b,a), let T*=log(b/a) if b<=1/2 and T*=log(1/[4a(1-b)]) otherwise. A path of budget at most L exists exactly when L>=T*. For every feasible L, min_{C(r)<=L} max_t r_0(t)=max{c,1-2a exp(L/2)}, attained by an explicit piecewise path; the minimum-budget unit-interval path is unique. (2) Let Lambda_mon restrict every coordinate to be monotone in its endpoint direction and Lambda_box restrict every coordinate to its closed endpoint range. For every eta>0 and n>=3, the supremum at d_DP(p,q)=eta of either Lambda_mon/Lambda or Lambda_box/Lambda is 2log((exp(eta)+1)/2)/eta, attained in every n>=3; both ratios equal 1 in dimension 2. (3) For arbitrary positive p,q and Z=exp(L)>=max_i{p_i/q_i,q_i/p_i}, every feasible path satisfies max_t r_j(t)>=C_j=1-min_{1<=z<=Z} sum_{i!=j} min(p_i z,Zq_i/z). For rational p,q,Z, a grouped breakpoint sweep computes C_j=1-sqrt(R_j) exactly, R_j rational, in O(n log n) rational arithmetic operations/comparisons for one j and O(n^2+n log n) for all j, plus at most one square root per j. These are necessary certificates, sharp for the swapped triplets, with no general sufficiency, bit-complexity, or general optimal-path decomposition claim. Full hypotheses and proofs are Theorems 1-3 in evidence/research-excursion-proof.md; the frozen original remains unresolved.",
+  "contribution": "Proposed coherent subsidiary contribution: an exact privacy-budget versus mandatory probability-excursion frontier for all positive swapped triplets, together with the sharp dimension threshold and finite-distance cost of coordinate monotonicity or endpoint-range preservation. This extends the supplied small-mass seed to b>1/2. The elementary binary speed bound, affine arc-length argument, standard endpoint Lipschitz envelopes, known Laplace/Blackwell reachability, and routine sweep machinery are explicitly credited. No equivalent constrained frontier/penalty was located in the bounded primary-source comparison; novelty and substantive standalone value remain for the fresh referee. This is not a resolution of source.md or a claim of venue suitability.",
+  "proposer_job_id": "privacy-interpolation-research-294f008bff48",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "requirements.md",
+    "candidate-excursion-argument.md",
+    "evidence/research-excursion-proof.md",
+    "literature/research-excursion-screen.md",
+    "literature/privacy-interpolation.html",
+    "literature/privacy-framework.html",
+    "evidence/research_excursion_check.py",
+    "evidence/research-excursion-exact-results.json",
+    "evidence/research-excursion-path-certificates.json",
+    "evidence/research_verify_excursion_certificates.py",
+    "evidence/research-excursion-independent-verification.json",
+    "evidence/research_swapped_check.py",
+    "evidence/research-swapped-exact-results.json",
+    "evidence/research-swapped-path-certificates.json",
+    "evidence/research-swapped-independent-verification.json",
+    "evidence/research-pass2-source-integrity.json",
+    "evidence/research-pass2-prior-integrity.json"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "Use exactly the original definitions and quantifiers in source.md and problem.md. For every integer k>=1, alpha_k=1-(1-1/k)^k, all four weighted-coverage class suprema for chi(G)<=k and Delta(G)<=k-1, with equality-tested moments or upper moments P(i,j)<= (1+delta)x_i*x_j for any fixed finite delta>=0, equal 1/alpha_k. The following revision additions concern the normalized Cartesian witness on m disjoint k-cliques, k>=2,m>=1, n=mk, x_i=1/m, f^+(x)=1 and n(k-1)/2 tested pairs. Under arbitrary finite nonnegative heterogeneous upper errors e_ij on those pairs, its optimized denominator lies between alpha_k and min{1,alpha_k+(k-1)/(2km)+(1/k^2)sum_E e_ij}. Uniform additive epsilon>=0 therefore gives the upper bound min{1,alpha_k+(k-1)/(2k)*(1/m+m*epsilon)}, while multiplicative delta>=0 gives min{1,alpha_k+(1+delta)(k-1)/(2km)}. For fixed k, delta_m=o(m) or epsilon_m=o(1/m), respectively, implies denominator convergence to alpha_k. For the k=2 witness, exact finite values for every m>=1 are f_eq=3/4+1/(4m), f_up_delta=3/4+(1/4)*min{1,(1+delta)/m}, and f_add_epsilon=3/4+(1/4)*min{1,1/m+m*epsilon}. Thus the equality ratio is 4m/(3m+1). For this matching witness the denominator tends to 3/4 if and only if delta_m/m->0, respectively m*epsilon_m->0. If either scaled error tends to c in [0,infinity] (including infinity), its denominator tends to 3/4+(1/4)*min{1,c} and its ratio tends to 4/[3+min{1,c}]. The exact equality optima at (k,m)=(2,2),(2,3),(3,2),(3,3) are 7/8,5/6,5/6,65/81, and the exact upper-model optimum at (3,3,delta=1) is 73/81. For every full t-wise optimized denominator f_t of this witness with 2<=t<=n, alpha_m<=f_t<=min{1,U}, U=alpha_k+(k-1)/(2km), so 1/U<=f^+/f_t<=1/alpha_m. For k,m>=2, uniformly in this whole t-wise range, 0<=e/(e-1)-f^+/f_t<=(1/k+1/(2m))/(1-1/e)^2. Consequently k,m->infinity recovers the known all-pairs/t-wise asymptotic gap; k=m=s gives error at most 3/[2*(1-1/e)^2*sqrt(n)] on n=s^2. Given any proper k-coloring and a sampler for any marginal-preserving law D, the color-class conversion uses k independent sampler calls, preserves tested-edge equality moments, and retains at least alpha_k of its expected weighted coverage. No general fixed-graph characterization, arbitrary submodular extension, necessary edge-budget theorem or conference-fit claim is included.",
+  "contribution": "Expanded first-paper resolution candidate for fresh review: the original sharp fixed-k sparse graph-class hierarchy, with a single within-block collision certificate yielding heterogeneous/additive tolerance, exact matching-family finite formulas and sharp error transition, exact rational primal/dual certificates for all five requested finite examples, and a short finite full-independence-hierarchy sandwich with explicit rate. The Cartesian family and asymptotic all-pairs/t-wise gap are attributed to Ramachandra 2026; alpha_k is classical and the two-group resampling ingredient is attributed to Dütting et al. The current primary-source screen found no equivalent full sparse theorem or matching/error refinement in its inspected sources, but does not certify priority. RN2025 mutual-versus-pairwise constants are explicitly corrected. This requests a new mathematical referee, and does not transfer the old acceptance to added claims or certify venue suitability.",
+  "proposer_job_id": "coverage-sparse-research-357cde21e920",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "revision/request.md",
+    "revision/mathematical-deltas.md",
+    "evidence/revision-research/proof-dossier.md",
+    "evidence/revision-research/discover_finite.py",
+    "evidence/revision-research/finite-certificates.json",
+    "evidence/revision-research/verify_revision.py",
+    "evidence/revision-research/verification.json",
+    "evidence/revision-research/literature-review.md",
+    "evidence/revision-research/reviewer-math-map.md",
+    "revision/literature/Agrawal2012-crossref.json",
+    "revision/literature/Calinescu2011-crossref.json",
+    "revision/literature/Dutting2025-crossref.json",
+    "revision/literature/RamachandraNatarajan2025-crossref.json",
+    "revision/literature/adsy2012.pdf",
+    "revision/literature/ccpv2011.pdf",
+    "revision/literature/rn2025.html",
+    "revision/literature/rn2026-counterexample.html",
+    "revision/literature/uw2026-record.html",
+    "literature/ramachandra2026.html",
+    "literature/cost-consistency2025.html"
+  ]
+}

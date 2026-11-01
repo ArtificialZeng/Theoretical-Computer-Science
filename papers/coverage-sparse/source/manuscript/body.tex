@@ -1,0 +1,476 @@
+\section{Sparse moment information}\label{sec:intro}
+
+Can \(O(n)\) prescribed pairwise moments enforce a constant loss in the
+best expected coverage, even when almost all pairs remain unrestricted?
+Consider a coupling that selects an entire block: it can cover every
+feature while keeping each vertex's marginal small. Testing pairs within
+blocks restricts precisely the collisions that make this coupling valuable.
+We quantify the resulting loss, identifying a sharp hierarchy indexed by
+a coloring bound. The information consists of exact probability constraints;
+statistical estimation of those probabilities is a separate question.
+
+\paragraph{Model.}
+For a finite ground set \(V\), a simple graph \(G=(V,E)\), and
+\(x\in[0,1]^V\), let \(\D(x)\) be all laws of \(S\subseteq V\)
+with \(\Prb(i\in S)=x_i\). Define
+\begin{align*}
+\D_G^{\eq}(x)&=\{D\in\D(x):\Prb_D(i,j\in S)=x_ix_j\ (ij\in E)\},\\
+\D_{G,\delta}^{\up}(x)&=\{D\in\D(x):\Prb_D(i,j\in S)\leq(1+\delta)x_ix_j\ (ij\in E)\},
+\end{align*}
+where \(\delta\geq0\) is finite. The graph specifies tested pairs:
+nonedges impose no restrictions, unlike a dependency-graph convention.
+In particular \(\D_G^{\eq}(x)\subseteq\D_{G,0}^{\up}(x)\), since
+upper constraints also permit negative correlations.
+A nonnegative weighted coverage function has the form
+\[
+ f(S)=\sum_{H\in\mathcal H}w_H\mathbf1\{S\cap H\ne\varnothing\},
+ \qquad w_H\geq0,
+\]
+with a finite feature family and finite weights. Set
+\[
+ f^+(x)=\max_{D\in\D(x)}\E_D f(S),\quad
+ f_G^{\eq}(x)=\max_{D\in\D_G^{\eq}(x)}\E_D f(S),\quad
+ f_{G,\delta}^{\up}(x)=\max_{D\in\D_{G,\delta}^{\up}(x)}\E_D f(S).
+\]
+All maxima exist: their feasible sets are nonempty closed subsets of a finite
+probability simplex, containing the product law. We consider ratios with
+\(f^+(x)>0\); a positive-weight feature then contains a positive-marginal
+vertex, so the product expectation and every denominator are positive.
+
+For a class \(\mathcal A\) of finite graphs, write
+\[
+ \Gamma^{\eq}(\mathcal A)=\sup_{G\in\mathcal A,\,x,f:\,f^+(x)>0}
+ \frac{f^+(x)}{f_G^{\eq}(x)},\qquad
+ \Gamma_\delta^{\up}(\mathcal A)=\sup_{G\in\mathcal A,\,x,f:\,f^+(x)>0}
+ \frac{f^+(x)}{f_{G,\delta}^{\up}(x)}.
+\]
+The ground set, marginals and finite feature family vary in these suprema.
+Let \(\C_k=\{G:\chi(G)\leq k\}\), \(\B_k=\{G:\Delta(G)\leq k-1\}\),
+and \(\alpha_k=1-(1-1/k)^k\).
+
+\begin{theorem}\label{thm:main}
+For every integer \(k\geq1\) and every fixed finite \(\delta\geq0\),
+\[
+ \Gamma^{\eq}(\C_k)=\Gamma^{\eq}(\B_k)
+ =\Gamma_\delta^{\up}(\C_k)=\Gamma_\delta^{\up}(\B_k)=\alpha_k^{-1}.
+\]
+\end{theorem}
+
+These are class suprema, approached by a sequence of finite witnesses.
+For \(k=2\), a matching on \(2m\) vertices suffices: its specified witness
+has exact equality-model ratio \(4m/(3m+1)\), tending to \(4/3\)
+(Theorem~\ref{thm:matching}). For fixed \(k\), the witnesses use
+\(n(k-1)/2\) tested pairs. Table~\ref{tab:constants} records the first
+constants and the finite-error coefficient.
+
+\begin{table}[!hbp]
+\centering
+\caption{Exact constants. The witness's multiplicative finite upper bound is
+\(\min\{1,\alpha_k+c_k(1+\delta)/m\}\), with \(c_k=(k-1)/(2k)\).}
+\label{tab:constants}
+\begin{tabular}{c|ccccc}
+\toprule
+\(k\)&2&3&4&5&6\\
+\midrule
+\(\alpha_k\)&\(3/4\)&\(19/27\)&\(175/256\)&\(2101/3125\)&\(31031/46656\)\\
+\(\alpha_k^{-1}\)&\(4/3\)&\(27/19\)&\(256/175\)&\(3125/2101\)&\(46656/31031\)\\
+\(c_k\)&\(1/4\)&\(1/3\)&\(3/8\)&\(2/5\)&\(5/12\)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Two complementary ingredients.}
+A coloring converts any marginal-preserving sampler into a feasible law,
+retaining an \(\alpha_k\) fraction of its coverage. This gives the class
+upper bound. For sharpness we use a known Cartesian coverage family on
+disjoint cliques. The obstacle is to control \emph{every} coupling after
+cross-block tests have been removed: deleting tests enlarges the denominator.
+Our pointwise certificate uses only total occupancy and within-block
+collisions, whose expectations are fixed or bounded by the sparse tests.
+It also yields error tolerance, exact matching examples and a finite
+independence-hierarchy bound.
+
+\section{Relation to prior work}\label{sec:related}
+
+Agrawal, Ding, Saberi and Ye~\cite{Agrawal2012} developed correlation-gap
+bounds for stochastic optimization, comparing the unrestricted coupling
+with the mutually independent expectation. The multilinear extension and
+continuous-greedy framework of Calinescu, Chekuri, P\'al and
+Vondr\'ak~\cite{Calinescu2011} provide a related foundation in submodular
+optimization under matroid constraints. Our denominator instead maximizes
+over laws subject to a prescribed collection of moment constraints.
+
+Ramachandra and Natarajan~\cite{RamachandraNatarajan2025} introduced the
+pairwise-independent correlation-gap framework. Their three-variable
+pairwise-optimized bound is \(4/3\) (Theorem 5); the dimension-dependent
+\(27/19\) value discussed in their Section 1.1 uses the \emph{mutually}
+independent denominator. These constants concern different feasible sets.
+Their later five-element coverage counterexample~\cite{RamachandraNatarajan2026}
+gives pairwise ratio at least \(640/479>4/3\), disproving the proposed
+universal pairwise \(4/3\) bound while preserving the three-variable result.
+Here \(k\) measures graph colorability, and the number of variables is
+\(n=mk\).
+
+Ramachandra~\cite[Theorem 2 and Section 4]{Ramachandra2026} gives the
+Cartesian coverage family used below, its unrestricted optimum and the
+asymptotic all-pairs gap \(e/(e-1)\), also noting the \(t\)-wise consequence.
+Our certificate keeps the block size \(k\) fixed and allows arbitrary
+cross-block dependence. It proves the sparse tightness needed for
+Theorem~\ref{thm:main}; Corollary~\ref{cor:twise} also recovers the known
+limit with an explicit finite bound.
+
+The two-group coverage calculation in Section 3.2 of the full version of
+\emph{The Cost of Consistency}, by Paul D\"utting, Federico Fusco, Silvio
+Lattanzi, Ashkan Norouzi-Fard, Ola Svensson and Morteza
+Zadimoghaddam~\cite{Dutting2025}, gives the \(3/4\) resampling factor.
+Lemma~\ref{lem:color} is its elementary \(k\)-group version. Udwani and
+Wajc~\cite[Section 3.1]{UdwaniWajc2026} use the Cartesian coverage polynomial,
+\(\alpha_k\), and a no-collision specialization in online submodular welfare.
+Our collision penalty quantifies the effect of allowing collisions subject
+to tested moments. Thus the contribution combines sparse tightness with a
+sharp graph-class hierarchy and finite error refinements; the construction,
+constant, resampling ingredient and asymptotic full-independence limit have
+the preceding origins.
+
+\section{Resampling and a collision certificate}\label{sec:proof}
+\subsection{A conversion from a coloring}\label{sec:color}
+
+\begin{lemma}\label{lem:color}
+Given a proper \(k\)-coloring of \(G\) and sampler access to a law
+\(D\in\D(x)\), \(k\) independent calls produce a law in
+\(\D_G^{\eq}(x)\) with expected coverage at least \(\alpha_k\E_D f\),
+simultaneously for all nonnegative weighted coverage functions. Consequently
+\(f_G^{\eq}(x)\geq\alpha_k f^+(x)\).
+\end{lemma}
+\begin{proof}
+For \(k\geq2\), partition \(V=C_1\sqcup\cdots\sqcup C_k\) into
+independent color classes, allowing empty classes. Draw independent
+\(S_1,\ldots,S_k\) with law \(D\), and return
+\(R=\bigcup_c(S_c\cap C_c)\). Each vertex keeps its marginal; edge endpoints
+use different independent calls, so their joint probability is \(x_ix_j\).
+
+For a feature \(H\), put \(a_c=\Prb_D(S\cap H\cap C_c\ne\varnothing)\),
+\(s=\sum_c a_c\), and \(b=\Prb_D(S\cap H\ne\varnothing)\).
+The union bound gives \(b\leq\min\{1,s\}\). By independence and AM--GM,
+\[
+ \Prb(R\cap H\ne\varnothing)
+ =1-\prod_c(1-a_c)\geq h(s):=1-(1-s/k)^k.
+\]
+On \([0,k]\), \(h\) is increasing and concave, with \(h(0)=0\) and
+\(h(1)=\alpha_k\). Its chord on \([0,1]\) and monotonicity thereafter give
+\(h(s)\geq\alpha_k\min\{1,s\}\geq\alpha_k b\).
+Multiplying by nonnegative weights and summing proves the claim for the
+single common output law. Apply it to a maximizing input law for the last
+assertion. When \(k=1\), the graph is edgeless and the unchanged input law
+suffices.
+\end{proof}
+
+The conversion uses \(O(k|V|)\) membership operations and no feature
+queries. Its input is a sampler; obtaining a maximizing law for \(f^+\)
+is a distinct optimization problem.
+
+\subsection{The Cartesian witness}\label{sec:construction}
+Fix \(k\geq2\) and \(m\geq1\). Take disjoint blocks \(B_1,\ldots,B_m\)
+of \(k\) vertices, and test all pairs within each block. For every
+\(u\in\{1,\ldots,k\}^m\), give the transversal feature
+\(H_u=\{(r,u_r):1\leq r\leq m\}\) weight \(k^{-m}\).
+For \(a_r=|S\cap B_r|\), counting missed features gives
+\begin{equation}\label{eq:product}
+ f(S)=1-\prod_{r=1}^m(1-a_r/k).
+\end{equation}
+Here \emph{normalized} means \(f(\varnothing)=0\), \(f(V)=1\) and
+\(0\leq f(S)\leq1\). The explicit feature family has \(k^m\) members;
+\eqref{eq:product} evaluates it from block counts in \(O(n+m)\) arithmetic
+operations. Set \(x_i=1/m\). Selecting one whole block uniformly has
+these marginals and hits every transversal, so \(f^+(x)=1\).
+The tested graph has \(n=mk\) vertices and
+\(|E|=m\binom{k}{2}=n(k-1)/2\), with \(\chi(G)=k\) and
+\(\Delta(G)=k-1\). Figure~\ref{fig:construction} shows the construction
+and the statistic that the moment constraints control.
+
+\begin{figure}[!htbp]
+\centering
+\input{construction}
+\caption{The witness for \(k=m=3\). Solid triangle edges are tested pairs;
+there are no cross-block tests. Orange marks identify one transversal
+feature, a set of vertices rather than graph edges. Shading selects the
+whole block \(B_2\), which hits every transversal. Such draws have
+\(C=3\), while equality-tested moments force \(\E C=1\).
+The certificate uses only \(T=|S|\) and \(C\).}
+\label{fig:construction}
+\Description{Three disjoint tested triangles. Orange vertices form one transversal feature. The middle block is shaded to indicate whole-block selection. Total occupancy and within-block collision count enter the displayed pointwise coverage upper bound.}
+\end{figure}
+
+\subsection{A pointwise bound and all error models}\label{sec:certificate}
+\begin{lemma}\label{lem:dual}
+Let \(q=1-1/k\), \(\beta_k=q^k/k\), \(T=|S|\), and
+\(C=\sum_r\binom{|S\cap B_r|}{2}\). Every subset satisfies
+\begin{equation}\label{eq:dual}
+ f(S)\leq\alpha_k+\beta_k(T-k)+C/k^2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For integers \(0\leq a\leq k\), let \(d_a=q^a-(1-a/k)\).
+Then \(d_0=0\) and
+\[
+ d_{a+1}-d_a=(1-q^a)/k,\qquad
+ 0\leq1-q^a=k^{-1}\sum_{j=0}^{a-1}q^j\leq a/k.
+\]
+Summing gives \(0\leq d_a\leq\binom a2/k^2\).
+Set \(A_r=1-a_r/k\) and \(Q_r=q^{a_r}\), so
+\(0\leq A_r\leq Q_r\leq1\). The product identity
+\[
+ \prod_rQ_r-\prod_rA_r
+ =\sum_r(Q_r-A_r)\prod_{s<r}Q_s\prod_{s>r}A_s\leq C/k^2
+\]
+yields \(f(S)\leq1-q^T+C/k^2\).
+For integer \(t\geq0\), \(g(t)=1-q^t\) has decreasing successive
+differences \(q^t/k\). Summing differences above \(k\), or backwards
+below \(k\), gives
+\(g(t)\leq g(k)+\beta_k(t-k)\). Combining the inequalities proves
+\eqref{eq:dual}.
+\end{proof}
+
+For edge budgets \(e_{ij}\geq0\), define \(f_{G,e}^{\up}(x)\) by
+replacing edge equalities with \(\Prb(i,j\in S)\leq x_ix_j+e_{ij}\).
+Write \(f_{G,\epsilon}^{\add}\) for the uniform choice \(e_{ij}=\epsilon\).
+
+\begin{theorem}\label{thm:finite}
+For the witness in Section~\ref{sec:construction} and any finite
+nonnegative edge budgets,
+\begin{equation}\label{eq:hetero}
+ \alpha_k\leq f_{G,e}^{\up}(x)\leq
+ \min\left\{1,\alpha_k+\frac{k-1}{2km}+\frac1{k^2}\sum_{ij\in E}e_{ij}\right\}.
+\end{equation}
+In particular, for finite \(\epsilon,\delta\geq0\),
+\begin{align}
+ \alpha_k\leq f_{G,\epsilon}^{\add}(x)&\leq
+ \min\{1,\alpha_k+\tfrac{k-1}{2k}(1/m+m\epsilon)\},\label{eq:add}\\
+ \alpha_k\leq f_{G,\delta}^{\up}(x)&\leq
+ \min\{1,\alpha_k+\tfrac{(1+\delta)(k-1)}{2km}\}.\label{eq:mult}
+\end{align}
+Also \(\alpha_k\leq f_G^{\eq}(x)\leq
+\min\{1,\alpha_k+(k-1)/(2km)\}\).
+\end{theorem}
+\begin{proof}
+Every admissible law has \(\E T=mk/m=k\), and
+\[
+ \E C=\sum_{ij\in E}\Prb(i,j\in S)
+ \leq \frac{m\binom k2}{m^2}+\sum_{ij\in E}e_{ij}.
+\]
+Average \eqref{eq:dual}; its linear term cancels and its collision coefficient
+is nonnegative. Together with \(f\leq1\), this proves the upper bound.
+Lemma~\ref{lem:color} and inclusion of equality-feasible laws give the
+lower bound. Substituting \(e_{ij}=\epsilon\) or \(\delta/m^2\) gives
+\eqref{eq:add} and \eqref{eq:mult}; equality laws are feasible for the
+zero-error upper model, giving the final assertion. At \(m=1\), all
+vertices are forced present, and every displayed denominator equals one.
+\end{proof}
+
+\subsection{Completing the class theorem}\label{sec:classproof}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+For \(k=1\) every graph in either class is edgeless, giving ratio one.
+For \(k\geq2\), greedy coloring gives \(\B_k\subseteq\C_k\).
+Feasible-set inclusion and Lemma~\ref{lem:color} give the two chains
+\begin{align*}
+ \Gamma_\delta^{\up}(\B_k)&\leq\Gamma^{\eq}(\B_k)
+ \leq\Gamma^{\eq}(\C_k)\leq1/\alpha_k,\\
+ \Gamma_\delta^{\up}(\B_k)&\leq\Gamma_\delta^{\up}(\C_k)
+ \leq\Gamma^{\eq}(\C_k)\leq1/\alpha_k.
+\end{align*}
+The witness belongs to \(\B_k\) and, by \eqref{eq:mult}, has upper-model
+ratio at least \([\alpha_k+(1+\delta)(k-1)/(2km)]^{-1}\).
+Letting \(m\to\infty\) at fixed \(k,\delta\) makes the endpoints of
+both chains equal, proving all four identities.
+\end{proof}
+
+\section{Exact finite examples and error scales}\label{sec:finite}
+\subsection{A matching witness with an exact transition}\label{sec:matching}
+
+\begin{theorem}\label{thm:matching}
+For the Cartesian witness with \(k=2\), every integer \(m\geq1\) and
+finite \(\delta,\epsilon\geq0\),
+\begin{align}
+ f_G^{\eq}(x)&=\frac34+\frac1{4m},&
+ \frac{f^+(x)}{f_G^{\eq}(x)}&=\frac{4m}{3m+1},\label{eq:matching-eq}\\
+ f_{G,\delta}^{\up}(x)&=\frac34+\frac14\min\{1,(1+\delta)/m\},\label{eq:matching-mult}\\
+ f_{G,\epsilon}^{\add}(x)&=\frac34+\frac14\min\{1,1/m+m\epsilon\}.\label{eq:matching-add}
+\end{align}
+For any nonnegative error sequences as \(m\to\infty\), these latter
+denominators tend to \(3/4\) if and only if \(\delta_m/m\to0\),
+respectively \(m\epsilon_m\to0\). If the respective scaled error tends
+to \(c\in[0,\infty]\), the denominator tends to
+\(3/4+\min\{1,c\}/4\) and the ratio to \(4/(3+\min\{1,c\})\).
+\end{theorem}
+\begin{proof}
+For \(m\geq2\), type A selects two distinct uniform blocks and one
+independent fair vertex in each: its marginals are \(1/m\), edge moments
+zero, and coverage \(3/4\). Type B selects one entire uniform block:
+it has the same marginals, edge moments \(1/m\), and coverage one.
+Using type B with probability \(\theta\) gives moments \(\theta/m\)
+and value \(3/4+\theta/4\). For the multiplicative model choose
+\(\theta=\min\{1,(1+\delta)/m\}\); for the additive model choose
+\(\theta=\min\{1,1/m+m\epsilon\}\). Their values meet the respective
+bounds of Theorem~\ref{thm:finite}. For equality take \(\theta=1/m\),
+meeting the zero-error upper bound with each edge equality exact.
+For \(m=1\), the only feasible set is \(V\), giving one in every formula.
+The limit statements follow directly from the formulas and continuity of
+\(\min\{1,u\}\) on the extended nonnegative half-line. Necessity follows
+because \(\min\{1,u_m\}\to0\) forces \(u_m\to0\) for \(u_m\geq0\).
+\end{proof}
+
+\paragraph{General sufficient scales.}
+For every fixed \(k\geq2\), Theorem~\ref{thm:finite} implies convergence
+of the witness denominator to \(\alpha_k\) and of its ratio to
+\(1/\alpha_k\) whenever \(\delta_m=o(m)\), or, in the additive model,
+\(\epsilon_m=o(1/m)\). More generally \(\sum_E e_{ij}^{(m)}\to0\)
+suffices. The per-edge absolute excess in the multiplicative model is
+\(\delta_m/m^2\); there are \(m\binom k2\) tested edges. This explains
+the aggregate scale. The necessity assertions of Theorem~\ref{thm:matching}
+apply to its specified matching witness and uniform marginals.
+
+\subsection{Five rational optimality certificates}\label{sec:certificates}
+A profile is the sorted vector of block occupancies. Averaging a law over
+block permutations and independent within-block vertex permutations preserves
+coverage and all uniform constraints. The group is transitive on vertices
+and on tested edges, so a uniform profile-orbit mixture has marginal
+\(\E T/(mk)\) at each vertex and edge moment
+\(\E C/[m\binom k2]\). Thus \(\E T=k\) and the relevant constraint on
+\(\E C\) suffice for such a mixture to lift to a feasible law.
+
+\begin{proposition}\label{prop:finite}
+The four equality optima at \((k,m)=(2,2),(2,3),(3,2),(3,3)\) are
+\(7/8,5/6,5/6,65/81\), respectively. At \((3,3)\) the upper-model
+optimum with \(\delta=1\) is \(73/81\).
+\end{proposition}
+\begin{proof}
+Table~\ref{tab:certificates} supplies orbit mixtures and pointwise upper
+bounds \(f(S)\leq y_0+y_TT+y_CC\). Their masses sum to one,
+\(\E T=k\), and \(\E C=k(k-1)/(2m)\) for equality, or twice that
+quantity in the last row. Their objectives are the listed values.
+For \(k=2\) the pointwise inequality holds as follows: if \(C=0\),
+then \(f=1-2^{-T}\leq1/4+T/4\), checked at \(T=0,1,2\) and immediate
+for \(T\geq3\); if \(C\geq1\), a full block gives \(f=1\),
+\(T\geq2\), and the asserted upper bound is at least one.
+For \(k=3,m=2\), the exhaustive profiles in order
+\[
+ (0,0),(0,1),(0,2),(0,3),(1,1),(1,2),(1,3),(2,2),(2,3),(3,3)
+\]
+have dual slacks
+\(1/3,1/9,0,0,0,0,1/9,1/9,1/3,2/3\).
+For \(k=m=3\), Table~\ref{tab:slack} exhausts all 20 profiles;
+\eqref{eq:product} depends only on the profile, so these cover all 512
+labeled subsets. Every slack is nonnegative. Averaging the dual bound
+matches the primal values in each row; \(y_C\geq0\) justifies its use
+with the upper constraint. Finite weak duality proves exact optimality.
+\end{proof}
+
+\begin{table}[!htbp]
+\centering
+\caption{Exact primal/dual certificates. Each profile denotes its uniform
+subset orbit. All omitted masses are zero; the last row uses \(\delta=1\).}
+\label{tab:certificates}
+\begin{tabular}{ccclc}
+\toprule
+\((k,m)\)&Model&Primal profiles: masses&\((y_0,y_T,y_C)\)&Optimum\\
+\midrule
+\((2,2)\)&eq&\((0,2):1/2;\ (1,1):1/2\)&\((1/4,1/4,1/4)\)&\(7/8\)\\
+\((2,3)\)&eq&\((0,0,2):1/3;\ (0,1,1):2/3\)&\((1/4,1/4,1/4)\)&\(5/6\)\\
+\((3,2)\)&eq&\((0,3):1/4;\ (1,2):3/4\)&\((1/3,1/9,1/9)\)&\(5/6\)\\
+\((3,3)\)&eq&\((0,0,3):1/3;\ (1,1,1):2/3\)&\((8/27,11/81,8/81)\)&\(65/81\)\\
+\((3,3)\)&up&\((0,0,3):2/3;\ (1,1,1):1/3\)&\((8/27,11/81,8/81)\)&\(73/81\)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Complete pointwise certificate for \(k=m=3\): slack of
+\(8/27+(11/81)T+(8/81)C-f(S)\).}
+\label{tab:slack}
+\begin{tabular}{cc@{\qquad}cc}
+\toprule
+Profile&Slack&Profile&Slack\\
+\midrule
+\((0,0,0)\)&\(8/27\)&\((1,1,1)\)&\(0\)\\
+\((0,0,1)\)&\(8/81\)&\((1,1,2)\)&\(7/81\)\\
+\((0,0,2)\)&\(0\)&\((1,1,3)\)&\(22/81\)\\
+\((0,0,3)\)&\(0\)&\((1,2,2)\)&\(20/81\)\\
+\((0,1,1)\)&\(1/81\)&\((1,2,3)\)&\(41/81\)\\
+\((0,1,2)\)&\(2/81\)&\((1,3,3)\)&\(68/81\)\\
+\((0,1,3)\)&\(11/81\)&\((2,2,2)\)&\(4/9\)\\
+\((0,2,2)\)&\(4/27\)&\((2,2,3)\)&\(20/27\)\\
+\((0,2,3)\)&\(10/27\)&\((2,3,3)\)&\(29/27\)\\
+\((0,3,3)\)&\(19/27\)&\((3,3,3)\)&\(38/27\)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Reproducibility.}
+The accompanying \texttt{finite-certificates.json} stores all five rational
+inputs and certificates. The standalone \texttt{verify\_revision.py}
+reconstructs uniform orbit laws, checks every marginal and tested pair,
+and verifies the objective and dual inequality on every labeled subset
+using exact fractions; \texttt{discover\_finite.py} records the separate
+rational profile search. These files accompany the source package; \texttt{manuscript/reproduce.py}
+provides a read-only launcher.
+
+\section{Consequences and open questions}\label{sec:consequences}
+\subsection{A finite full-independence hierarchy}\label{sec:twise}
+For the same witness, let \(f_t(x)\) maximize expected coverage over laws
+whose indicators are jointly independent on every subfamily of at most
+\(t\) vertices, with \(2\leq t\leq n=mk\). Thus \(t=2\) tests all pairs,
+and \(t=n\) specifies the product law.
+
+\begin{corollary}\label{cor:twise}
+Let \(k,m\geq2\), \(a=1-1/e\), and
+\(U=\alpha_k+(k-1)/(2km)\). Uniformly for \(2\leq t\leq mk\),
+\begin{align}
+ \alpha_m\leq f_t(x)&\leq\min\{1,U\},&
+ \frac1U\leq\frac{f^+(x)}{f_t(x)}&\leq\frac1{\alpha_m},\label{eq:twise}\\
+ 0\leq\frac e{e-1}-\frac{f^+(x)}{f_t(x)}
+ &\leq\frac{1/k+1/(2m)}{(1-1/e)^2}.\label{eq:rate}
+\end{align}
+Consequently any sequences \(k,m\to\infty\), with any admissible choices
+of \(t\), give ratio tending to \(e/(e-1)\). On \(k=m=s\geq2\), the
+error is at most \(3/[2(1-1/e)^2\sqrt n]\), where \(n=s^2\).
+\end{corollary}
+\begin{proof}
+The product law is feasible and hits each \(m\)-vertex feature with
+probability \(1-(1-1/m)^m=\alpha_m\). Every feasible \(t\)-wise law
+satisfies the within-clique equalities, so Theorem~\ref{thm:finite} bounds
+its objective above by \(\min\{1,U\}\). Since \(f^+=1\), this proves
+\eqref{eq:twise}. For \(j\geq2\), \(\log(1-1/j)\leq-1/j\) and
+\(\log(1+1/(j-1))\leq1/(j-1)\) imply
+\[
+ a\leq\alpha_j\leq a+1/(ej)\leq a+1/j.
+\]
+Thus the ratio is at most \(1/a\), while \(U\geq a\) and
+\(U-a\leq1/k+1/(2m)\). Subtracting its lower bound \(1/U\) from
+\(1/a\) gives
+\((U-a)/(aU)\leq(1/k+1/(2m))/a^2\). This proves the rate and its
+square-size specialization.
+\end{proof}
+
+The limiting theorem and family are due to Ramachandra~\cite{Ramachandra2026};
+the finite estimate follows here from within-block moments alone.
+The product expectation is \(\alpha_m\), depending on the number of
+vertices per feature: for example \(k=2,m=3,t=6\) gives \(19/27\).
+
+\subsection{Graph structure and optimization questions}
+The exact matching formulas isolate how a limited moment budget constrains
+a useful unrestricted coupling, and Lemma~\ref{lem:color} converts an
+available sampler into a feasible one with a quantified loss. Together
+these give finite optimization consequences of the class theorem.
+For general fixed graphs, determining the best constant from structure
+beyond an integral coloring remains an open direction here. Fractional-color
+information and high-chromatic triangle-free graphs are natural tests.
+The construction gives a sufficient linear number of tested pairs at fixed
+\(k\); a necessary pair budget requires a separate lower bound.
+Extending the sharp hierarchy to arbitrary monotone submodular objectives
+also remains unresolved.
+
+\paragraph{Computational and AI methodology.}
+OpenAI Codex was used for topic selection, proof development, exact
+computations, literature checks, drafting and typesetting. A separate
+model-context pass checked the proofs and finite certificates.

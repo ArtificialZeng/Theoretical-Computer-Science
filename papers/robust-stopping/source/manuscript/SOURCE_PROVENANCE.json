@@ -1,0 +1,46 @@
+{
+  "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+  "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+  "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+  "bytes": 15106903,
+  "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+  "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+  "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+  "previous_ctan_attempts": [],
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "class_copy_matches_template": true,
+  "optimizer_sha256": "1e51b45073b8403501de73b126a901ba0bcd9a5770a4ff109c0e383ba9bfbaa5",
+  "optimizer_copy_matches_frozen": true,
+  "references": [
+    {
+      "key": "pmlr-v306-kim26l",
+      "url": "https://proceedings.mlr.press/v306/kim26l.html",
+      "passages": "Sections5.1–5.2, Lemma5.1, C.1(ii), D.2 printed p30; complete PDF bound in accepted snapshot"
+    },
+    {
+      "key": "Li_2026",
+      "url": "https://doi.org/10.1145/3788100",
+      "passages": "Publication metadata; support pinpoint explicitly separately cites inspected arXivv1"
+    },
+    {
+      "key": "pmlr-v306-cui26a",
+      "url": "https://proceedings.mlr.press/v306/cui26a.html",
+      "passages": "Sections2.1–2.2, Theorems1–2"
+    },
+    {
+      "key": "hartline_et_al:LIPIcs.ITCS.2026.75",
+      "url": "https://doi.org/10.4230/LIPIcs.ITCS.2026.75",
+      "passages": "Definitions1–2; Sections2.1 and4.1"
+    }
+  ],
+  "user_bibliography": "No authoritative workbook or BibTeX list supplied; see project literature/user_bibliography_check.md. No record invented.",
+  "writer_job_id": "robust-stopping-write-93ae8ac102fa",
+  "accepted_referee_job_id": "robust-stopping-referee-e7c6798337e7",
+  "accepted_snapshot_digest": "c70f1a41d2a4a68c3ad3f996323997e58e2b037484d8e4d79a5f9e8327bd3f3d",
+  "immutable_source_sha256": "9721525d4da99587f7ef8b0f276225877c55b07af8d97e03a873448bbe839b32",
+  "uniform_copy_sha256": "6211a7fbdcc720a76af3d4a371720001c746286b34e7354f983f9aa5c7c6fbd1",
+  "uniform_copy_matches_frozen": true,
+  "wrapper_copy_matches_frozen": true,
+  "bibliography_provenance": "BIBLIOGRAPHY_PROVENANCE.md; raw export hashes remain in the project research cache",
+  "cfp_refreshed": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html; nonanonymous, separate title page; inspected during writing"
+}

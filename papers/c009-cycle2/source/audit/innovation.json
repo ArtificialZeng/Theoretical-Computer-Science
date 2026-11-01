@@ -1,0 +1,18 @@
+{
+  "job_id": "c009-cycle2-referee-eb6d40fb0393",
+  "verdict": "accept",
+  "snapshot_digest": "06b470c27e7195c3ffb2ba0d198581e77aa79d1b5d87d6485d396b6af906d1bc",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    "He, Mani, Nie, Tung and Wei, New Sidorenko-type inequalities in tournaments, arXiv:2512.11222v1, Definition 3.1 and Problem 3.23 (printed pp.7,17), https://arxiv.org/html/2512.11222v1: the entire directed 2-subdivided alternating-even-cycle local question is explicitly posed; the live record remains v1.",
+    "Grzesik, Il'kovic, Kielak and Kral', Quasirandom forcing orientations of cycles, arXiv:2212.09343v3, expansion (5) and Theorem 12, https://arxiv.org/abs/2212.09343: the coefficient criterion proves the already-known lengths 4,8,12; independently recomputed expression fails at length16, without refuting the underlying assertion.",
+    "Fox, Himwich, Mani and Zhou, arXiv:2210.16971 Theorem 1.5 and arXiv:2402.08418 Theorem 4.2/Lemmas 4.10-4.11, https://arxiv.org/abs/2402.08418: the edge-homomorphism transfer requires a hypothesis absent here; the parallel two-edge-path family includes the length4 case but does not identify the all-length serial family.",
+    "McDonald, Psarrakos and Tsatsomeros, Almost Skew-Symmetric Matrices, Rocky Mountain J. Math.34(2004),269-288, DOI10.1216/rmjm/1181069905, equation(3.2) and Theorem3.7, author-uploaded primary text https://www.researchgate.net/publication/38371363_Almost_Skew-Symmetric_Matrices: the rank-one block form and first-power singular-value lower bound are classical; no displayed square-norm conclusion supplies the candidate certificate."
+  ],
+  "substantive_delta": "The proof resolves every ell>=1 and every host size in immutable Problem3.23, strengthening its local assertion to an exact global weighted-host inequality. It also characterizes equality and proves a dimension-free spectral forcing modulus with exponent4ell, shown optimal by the regular three-vertex family. The central square-norm certificate is dimension independent and requires neither entrywise positivity nor a small skew perturbation.",
+  "why_nonroutine": "The classical block reduction is credited rather than claimed as new. The first-power norm bound cannot be squared to give a lower bound for the square, and T^2 leaves the almost-skew class. The candidate supplies an explicit Rayleigh vector with a nonnegative residual identity, followed by a separate two-dimensional min-max argument for the second eigenvalue. The verified asymmetric transfer lacks its edge-homomorphism hypothesis; the verified coefficient test stops applying at length16. No equivalent full-family implication was identified in the inspected current primary sources, so this is not assessed as an elementary corollary of an identified prior theorem.",
+  "significance": "An entire infinite family explicitly left unresolved even locally in a recent primary source is settled globally, uniformly over nonregular weighted hosts and all dimensions. The argument replaces cycle-by-cycle coefficient testing with one reusable matrix-square inequality and adds optimal-exponent quantitative forcing. This is substantive mathematical value independent of proof length; it does not by itself establish STOC quality or acceptance.",
+  "remaining_gaps": [],
+  "literature_limits": "Bounded current search, detailed in audit/referee-literature.md; not an exhaustive priority certificate. Friedland1993 and a 2003 Perron-eigenspace full-text lead remain incompletely inspected. Actual McDonald2004 and current relevant 2026 theorem statements were independently checked.",
+  "review_nature": "Actual local fresh model review, not external peer review or a formal mathematical truth certificate."
+}

@@ -1,0 +1,14 @@
+{
+  "job_id": "privacy-interpolation-research-294f008bff48",
+  "status": "exact rational general-family construction checks passed; consumer verification separate",
+  "parameter_pairs": 30,
+  "certificates": 210,
+  "coverage": "all b>1/2 swapped pairs with a,b,c positive on denominator 12 or 13, plus five boundary/scale cases",
+  "phase_counts": {
+    "cap_in_initial_phase": 120,
+    "cap_after_binary_half_crossing": 90,
+    "exact_minimum_budget": 4,
+    "constant_reservoir_boundary": 30
+  },
+  "limits": "Universal proof is analytic; finite certificates do not establish a theorem or novelty."
+}

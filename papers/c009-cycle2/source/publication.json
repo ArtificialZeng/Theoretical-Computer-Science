@@ -1,0 +1,21 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "title": "A Global Sidorenko Inequality for 2-Subdivided Alternating Cycles",
+  "author_file": "authors.json",
+  "source_files": [
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/build/main.bbl",
+    "manuscript/acmart.cls",
+    "manuscript/alphaurl.bst",
+    "manuscript/build.sh"
+  ],
+  "pdf": "manuscript/build/main.pdf",
+  "build_command": "sh manuscript/build.sh",
+  "build_log": "manuscript/build/main.log",
+  "writer_job_id": "c009-cycle2-write-9354f37401a8",
+  "max_total_pages": 12,
+  "format": "STOC 2027 submission: named title page, single column, 11pt, single-spaced, letter, one-inch margins",
+  "release_status": "awaiting separate release review"
+}

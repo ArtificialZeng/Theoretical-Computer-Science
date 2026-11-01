@@ -1,0 +1,26 @@
+{
+  "frozen_math_files_unchanged": 57,
+  "official_class_unchanged": true,
+  "all_pages_actually_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "root_repairs": [
+    "expected-objective coefficients5/2and3/2",
+    "TheoremC.1(ii) locator",
+    "explicit uniform index domains",
+    "lower-envelope figure2",
+    "response and reproduction figure3 references"
+  ],
+  "pdf_sha256": "a24b87a6ac0c3b8e270606888907d5d2dc8532a3d5eb1433d444b66087bf5bf0",
+  "note": "Root checks are not the fresh release acceptance; sources/PDF must receive current final audits."
+}

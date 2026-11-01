@@ -1,0 +1,13 @@
+{
+  "job_id": "c012-upcycles-release-0294a4f8ea65",
+  "phase": "release",
+  "started_at": "2026-11-01T05:20:15+00:00",
+  "recorded_at": "2026-11-01T05:29:03.954535+00:00",
+  "elapsed_seconds": 528.955,
+  "limit_seconds": 900,
+  "token_usage": "Not exposed in this worker context; runner owns actual token usage. No estimate invented.",
+  "research_passes_consumed_preserved": 2,
+  "agents_spawned": 0,
+  "other_codex_processes_started": 0,
+  "background_workers_started": 0
+}

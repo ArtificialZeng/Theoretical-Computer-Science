@@ -1,0 +1,146 @@
+{
+  "job_id": "c009-cycle2-triage-408b44cde59f",
+  "utc": "2026-11-01T02:27:05.081833+00:00",
+  "scope": "Exact finite tests of Rayleigh identity, compression identity, and cycle trace normalization; no all-parameter certification or novelty conclusion",
+  "seed": 40844,
+  "block_tests_by_dimension": {
+    "1": 36,
+    "2": 36,
+    "3": 36,
+    "4": 36,
+    "5": 36,
+    "6": 36,
+    "7": 36
+  },
+  "block_tests": 252,
+  "density_tests": [
+    {
+      "n": 1,
+      "ell": 1,
+      "trial": 0,
+      "vertex_maps": 1,
+      "density": "1/16"
+    },
+    {
+      "n": 1,
+      "ell": 1,
+      "trial": 1,
+      "vertex_maps": 1,
+      "density": "1/16"
+    },
+    {
+      "n": 1,
+      "ell": 1,
+      "trial": 2,
+      "vertex_maps": 1,
+      "density": "1/16"
+    },
+    {
+      "n": 2,
+      "ell": 1,
+      "trial": 0,
+      "vertex_maps": 16,
+      "density": "2049/32768"
+    },
+    {
+      "n": 2,
+      "ell": 1,
+      "trial": 1,
+      "vertex_maps": 16,
+      "density": "9/128"
+    },
+    {
+      "n": 2,
+      "ell": 1,
+      "trial": 2,
+      "vertex_maps": 16,
+      "density": "9/128"
+    },
+    {
+      "n": 2,
+      "ell": 2,
+      "trial": 0,
+      "vertex_maps": 256,
+      "density": "33281/8388608"
+    },
+    {
+      "n": 2,
+      "ell": 2,
+      "trial": 1,
+      "vertex_maps": 256,
+      "density": "1/256"
+    },
+    {
+      "n": 2,
+      "ell": 2,
+      "trial": 2,
+      "vertex_maps": 256,
+      "density": "1/256"
+    },
+    {
+      "n": 2,
+      "ell": 3,
+      "trial": 0,
+      "vertex_maps": 4096,
+      "density": "38558065649/140737488355328"
+    },
+    {
+      "n": 2,
+      "ell": 3,
+      "trial": 1,
+      "vertex_maps": 4096,
+      "density": "38558065649/140737488355328"
+    },
+    {
+      "n": 2,
+      "ell": 3,
+      "trial": 2,
+      "vertex_maps": 4096,
+      "density": "8586369/34359738368"
+    },
+    {
+      "n": 3,
+      "ell": 1,
+      "trial": 0,
+      "vertex_maps": 81,
+      "density": "2617/41472"
+    },
+    {
+      "n": 3,
+      "ell": 1,
+      "trial": 1,
+      "vertex_maps": 81,
+      "density": "673/10368"
+    },
+    {
+      "n": 3,
+      "ell": 1,
+      "trial": 2,
+      "vertex_maps": 81,
+      "density": "2641/41472"
+    },
+    {
+      "n": 3,
+      "ell": 2,
+      "trial": 0,
+      "vertex_maps": 6561,
+      "density": "24261337/6115295232"
+    },
+    {
+      "n": 3,
+      "ell": 2,
+      "trial": 1,
+      "vertex_maps": 6561,
+      "density": "219650353/55037657088"
+    },
+    {
+      "n": 3,
+      "ell": 2,
+      "trial": 2,
+      "vertex_maps": 6561,
+      "density": "1502857/382205952"
+    }
+  ],
+  "failures": [],
+  "source_sha256": "d0dbd81f856b64b6fc49f3e0a0d9242427573bf2460ba28a4f3c1beb93ed635d"
+}

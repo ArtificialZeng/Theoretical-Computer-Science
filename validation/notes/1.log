@@ -1,0 +1,15 @@
+{
+  "verified": true,
+  "variables": 10242,
+  "clauses": 114459,
+  "graph_cases": 11,
+  "global_states": 2852,
+  "factor_types": 8,
+  "factor_states": 490,
+  "table_entries": 72,
+  "original_clause_duplicate_literal_count": 189,
+  "cnf_sha256": "3e9821fb2df6fa10066e594af77530d6dfc28d5f0fad3fc15669961e6f9a3d33",
+  "scope": "Exact equivalence of copied CNF to the specified finite shared binary parity-interface hypothesis; no universal TP coloring disproof",
+  "fresh_model_review": false,
+  "original_resolved": false
+}

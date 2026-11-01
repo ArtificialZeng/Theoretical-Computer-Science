@@ -1,0 +1,253 @@
+{
+  "job_id": "c012-upcycles-release-0294a4f8ea65",
+  "snapshot_digest": "920933319e6b98bd521f6c300a93b0e7fa46ae3d6600fa970801ea528789f85e",
+  "manuscript_digest": "474c54f68a48ef6fd7c76b39f22078792f656b0f9e2b317cb7c264388336041a",
+  "pdf_digest": "eade3f9df07bd82943ef54b3e0c9c1b95d1510ab9e779dc9ff26a9cdf71cedef",
+  "method": "citation-check-skill",
+  "pass": "verification-only",
+  "fixed_extraction": "audit/citation-extraction.json",
+  "claims": [
+    {
+      "claim_id": "C01",
+      "claim_text": "A nontrivial binary upcycle exists with n=12,d=3,L=512; it answers Question 9.2 affirmatively.",
+      "claim_type": "Existence",
+      "location": "Abstract; Theorem 1; sections 1,4",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "Accepted full-scope claim and proof; fresh execution of displayed verifier and literal wildcard expansion."
+    },
+    {
+      "claim_id": "C02",
+      "claim_text": "The 512 windows partition all 4096 binary 12-words into sets of eight completions.",
+      "claim_type": "Statistic + Existence",
+      "location": "Abstract; proof",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "Fresh count array:4096 entries, all1;512 starts with8 completions each."
+    },
+    {
+      "claim_id": "C03",
+      "claim_text": "128 octal digits specify the complete cycle.",
+      "claim_type": "Statistic",
+      "location": "Abstract; section 2",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "Four32-digit rows, Python literal, and frozen witness agree."
+    },
+    {
+      "claim_id": "C04",
+      "claim_text": "The window length 12 does not divide cycle length 512.",
+      "claim_type": "Existence",
+      "location": "Abstract; section 4",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "Integer arithmetic:512 modulo12 is8."
+    },
+    {
+      "claim_id": "C05",
+      "claim_text": "Chen, Kitaev, Mütze and Sun introduced universal partial words and cyclic versions.",
+      "claim_type": "Attribution",
+      "location": "Section 1 paragraph 1; CKMS17",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "basis": "CKMS17 original PDF p1 abstract,p2 Section1.2 and arXiv abstract explicitly address introduction and cyclic forms."
+    },
+    {
+      "claim_id": "C06",
+      "claim_text": "Fillmore et al. Theorem 3.1 gives binary n=8,d=1 examples.",
+      "claim_type": "Attribution",
+      "location": "Section 1; FGKMM26",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "basis": "FGKMM26 Theorem3.1 and its displayed examples; each displayed block has one wildcard in8 positions."
+    },
+    {
+      "claim_id": "C07",
+      "claim_text": "Fillmore et al. Question 9.2 asks whether upcycles with d>1 exist.",
+      "claim_type": "Attribution",
+      "location": "Abstract; sections 1,4; FGKMM26",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "basis": "FGKMM26 Section9 Question9.2; same immutable source question."
+    },
+    {
+      "claim_id": "C08",
+      "claim_text": "Theorem 5.1 and Corollary 5.2 multiply alphabet size while preserving n,d.",
+      "claim_type": "Attribution",
+      "location": "Section 1; FGKMM26",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "basis": "FGKMM26 Theorem5.1 and Corollary5.2 retain n,d while enlarging alphabet."
+    },
+    {
+      "claim_id": "C09",
+      "claim_text": "Corollary 8.14 requires d=n/4 for nontrivial period-four frames.",
+      "claim_type": "Attribution",
+      "location": "Section 1; FGKMM26",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "basis": "FGKMM26 Corollary8.14, specialize frame period m=4; hypotheses nontrivial and period4 retained."
+    },
+    {
+      "claim_id": "C10",
+      "claim_text": "Carey et al. Definition 8.2 permits several cyclic words in a universal partial quasi-family.",
+      "claim_type": "Attribution",
+      "location": "Section 1; CKKP25",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "basis": "CKKP25 Definition8.2 permits a set of cyclic partial words with unique joint coverage."
+    },
+    {
+      "claim_id": "C11",
+      "claim_text": "The four displayed rows have 128 octal digits and decode to the accepted word.",
+      "claim_type": "Statistic + Existence",
+      "location": "Section 2 displayed object",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "All printed rows and verifier literal match frozen word.txt after decoding."
+    },
+    {
+      "claim_id": "C12",
+      "claim_text": "Digits 0,1,7 decode to wildcard000, wildcard001, wildcard111.",
+      "claim_type": "Existence",
+      "location": "Section 2",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "Three-bit binary expansion of0,1,7 checked directly."
+    },
+    {
+      "claim_id": "C13",
+      "claim_text": "Completion sets are disjoint iff ordinary unequal symbols occur at a common offset.",
+      "claim_type": "Existence",
+      "location": "Lemma 2 and proof",
+      "status": "Verified",
+      "confidence": "interpretation",
+      "basis": "Both implications of the printed lemma checked from coordinate compatibility; consistent specified bits produce a common completion."
+    },
+    {
+      "claim_id": "C14",
+      "claim_text": "The cycle has 512 positions with wildcards precisely at indices zero modulo four, also cyclically.",
+      "claim_type": "Statistic + Existence",
+      "location": "Proof of Theorem 1",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "128 length4 blocks; literal word check gives wildcard iff index mod4=0, and4 divides512."
+    },
+    {
+      "claim_id": "C15",
+      "claim_text": "Every window has three wildcards and nine ordinary symbols, with no repeated physical position.",
+      "claim_type": "Statistic + Existence",
+      "location": "Proof of Theorem 1",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "All512 literal12-windows checked; each has3 wildcards,9 ordinary positions;12<512 prevents repeated indices."
+    },
+    {
+      "claim_id": "C16",
+      "claim_text": "Each completion set has exactly eight members.",
+      "claim_type": "Statistic",
+      "location": "Proof of Theorem 1",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "Three distinct wildcard offsets have2^3=8 independent completions."
+    },
+    {
+      "claim_id": "C17",
+      "claim_text": "All 130816 pairs have an ordinary conflict; every test succeeds.",
+      "claim_type": "Statistic + Existence",
+      "location": "Equation 1; proof; listing",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "Source and PDF-extracted verifier both execute all130816 pairs successfully."
+    },
+    {
+      "claim_id": "C18",
+      "claim_text": "Pairwise disjoint completion sets have union cardinality 512*8=4096=2^12.",
+      "claim_type": "Statistic",
+      "location": "Proof of Theorem 1",
+      "status": "Verified",
+      "confidence": "interpretation",
+      "basis": "Lemma plus disjoint finite union and exact cardinalities512*8=4096=2^12."
+    },
+    {
+      "claim_id": "C19",
+      "claim_text": "The direct loop checks all 4096 total words at all 512 starts without sampling.",
+      "claim_type": "Statistic",
+      "location": "End of section 2; section 3; listing",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "Read loops and reran exact program from source and extracted PDF; literal expansion corroborates."
+    },
+    {
+      "claim_id": "C20",
+      "claim_text": "Eleven starts 501 through 511 wrap around and are included.",
+      "claim_type": "Statistic",
+      "location": "Section 3",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "Start500 ends511 without wrapping; starts501..511 wrap and range512 includes all11."
+    },
+    {
+      "claim_id": "C21",
+      "claim_text": "The program performs 2097152 compatibility tests and prints the stated counts.",
+      "claim_type": "Statistic",
+      "location": "Section 3",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "4096*512=2097152 and recorded actual output matches."
+    },
+    {
+      "claim_id": "C22",
+      "claim_text": "The direct check counts starting indices, with shared characters read from one decoded word and exact integer counts.",
+      "claim_type": "Existence",
+      "location": "Section 3",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "Read program:one window per start,characters read from same u;sum traverses all windows using Python integers."
+    },
+    {
+      "claim_id": "C23",
+      "claim_text": "FGKMM26 raises n not dividing cycle length immediately after Question 9.2.",
+      "claim_type": "Attribution",
+      "location": "Section 4",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "basis": "FGKMM26 paragraph immediately following Question9.2 discusses n not dividing a^(n-d)."
+    },
+    {
+      "claim_id": "C24",
+      "claim_text": "FGKMM26 has authors Fillmore, Goeckner, Kirsch, Martin, McGinnis; DCC 94 article152 (2026), DOI10.1007/s10623-026-01841-x.",
+      "claim_type": "Attribution + Temporal",
+      "location": "Bibliography",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "Current Springer version-of-record metadata and author list match BibTeX and rendered bibliography."
+    },
+    {
+      "claim_id": "C25",
+      "claim_text": "CKKP25 has authors Carey, Kearney, Kirsch, Popescu; DCC93 pp2803-2822 (2025), DOI10.1007/s10623-025-01609-9.",
+      "claim_type": "Attribution + Temporal",
+      "location": "Bibliography",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "Current Springer version-of-record metadata and author list match BibTeX and rendered bibliography."
+    },
+    {
+      "claim_id": "C26",
+      "claim_text": "CKMS17 has authors Chen, Kitaev, Mütze, Sun; DMTCS19(1) paper16 (2017), DOI10.23638/DMTCS-19-1-16.",
+      "claim_type": "Attribution + Temporal",
+      "location": "Bibliography",
+      "status": "Verified",
+      "confidence": "exact",
+      "basis": "DMTCS canonical page gives DOI,authors,year,volume;publisher original PDF header gives paper16."
+    }
+  ],
+  "summary": {
+    "total": 26,
+    "verified": 26,
+    "numerical_errors": 0,
+    "unverified": 0,
+    "hallucinations": 0,
+    "misleading": 0
+  }
+}

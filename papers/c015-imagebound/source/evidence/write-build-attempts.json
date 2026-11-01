@@ -1,0 +1,37 @@
+{
+  "job_id": "c015-imagebound-write-9f5b77760f77",
+  "attempts": [
+    {
+      "attempt": 1,
+      "exit_code": 12,
+      "error": "Undefined control sequence bigdotcup; no PDF produced",
+      "repair": "Use ordinary union over explicitly disjoint sets."
+    },
+    {
+      "attempt": 2,
+      "exit_code": 12,
+      "error": "acmart manuscript mode rejects a baselinestretch change; no PDF produced",
+      "repair": "Use official acmsmall single-column single-spaced option; remove singlespacing command. Class unmodified."
+    },
+    {
+      "attempt": 3,
+      "exit_code": 0,
+      "pages": 6,
+      "remaining_issues": "Duplicate comma in automatic author-contact footer; one BibTeX empty-address warning in R2024. Both repaired before final clean build."
+    },
+    {
+      "attempt": 4,
+      "exit_code": 0,
+      "pages": 6,
+      "clean_build": true,
+      "log_warnings": 0,
+      "bibtex_warnings": 0
+    }
+  ],
+  "other_operational_failure": {
+    "action": "Write this summary from the manuscript working directory",
+    "error": "FileNotFoundError for relative evidence/write-build-attempts.json",
+    "consequence": "No file written at the wrong path; rerun from PROJECT_DIR successfully."
+  },
+  "mathematical_consequence": "None. These are operational typesetting observations only."
+}

@@ -1,0 +1,38 @@
+{
+  "job_id": "robust-stopping-research-024409e96ffb",
+  "role": "research",
+  "official_page": "https://proceedings.mlr.press/v306/kim26l.html",
+  "official_page_read_only_check": "PMLR page and its Software link opened in this pass; authors, venue, volume, pages, PDF URL and linked repository confirmed",
+  "official_record": {
+    "title": "Robust and Consistent Ski Rental with Distributional Advice",
+    "authors": [
+      "Jihwan Kim",
+      "Chenglin Fan"
+    ],
+    "venue": "Proceedings of the 43rd International Conference on Machine Learning",
+    "year": 2026,
+    "volume": 306,
+    "pages": "57411--57444",
+    "key": "pmlr-v306-kim26l"
+  },
+  "software_repository": "https://github.com/JihwanKim4689/distributional-ski-rental",
+  "repository_page_read_only_check": "Official Software link resolved to this repository and listed both named Python files",
+  "commit_specific_web_fetch": "unavailable (cache miss); not treated as mathematical evidence",
+  "commit": "0a86125f31e9e1b1abbba5bd4fde32a332860124",
+  "commit_time": "2026-05-24T22:14:26+09:00",
+  "commit_subject": "Add files via upload",
+  "local_checkout_clean": true,
+  "source_checks": [
+    {
+      "file": "Figure1_Performance_Comparison_Under_Prediction_Error.py",
+      "sha256": "a63482866e819cb695298aae494b792d1babb0679b31c851dd68c0f6e23018a3",
+      "matches_git_commit_blob": true
+    },
+    {
+      "file": "Table2_Consistency_Comparison_under_Fixed_Robustness.py",
+      "sha256": "f906417295005ffc8aeda7e3868350e9498acaf61d1876b7a23d27a2d9733b81",
+      "matches_git_commit_blob": true
+    }
+  ],
+  "scope": "Primary-source provenance and local immutable Git blob checks; not fresh referee acceptance"
+}

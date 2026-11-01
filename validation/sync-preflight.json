@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "manuscripts": 10,
+  "languages": [
+    "en",
+    "zh-CN",
+    "de",
+    "fr",
+    "ja"
+  ],
+  "readme_files_checked": 17,
+  "broken_readme_links": [],
+  "artifact_hashes_and_expanded_source": true,
+  "mathematical_reproductions": true,
+  "clean_builds_and_normalized_text_equality": true,
+  "method_note_checks": true,
+  "released_artifacts_unchanged": true
+}

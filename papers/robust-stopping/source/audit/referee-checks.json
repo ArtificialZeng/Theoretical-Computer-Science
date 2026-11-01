@@ -1,0 +1,44 @@
+{
+  "job_id": "robust-stopping-referee-1afb6017baeb",
+  "snapshot_digest": "ddab1f97b4e3cfd90e3a03d39b4a5be6796cd12df3f12088626365322167231a",
+  "frozen_files_verified": 22,
+  "serialized_certificates_verified": {
+    "oracle-test-cases.json": 611,
+    "bisection-test-cases.json": 3,
+    "linear-oracle-test-cases.json": 144
+  },
+  "new_exhaustive_signed_tie_cases": 3240,
+  "new_exact_prefix_mass_one_cases": 246,
+  "new_random_full_certificates": 360,
+  "new_default_max_calls": 7,
+  "new_forced_bisection": [
+    {
+      "b": 2,
+      "R": "4/3",
+      "value": "4/3",
+      "isolation_steps": 65,
+      "calls": 68
+    },
+    {
+      "b": 3,
+      "R": "3/2",
+      "value": "39/20",
+      "isolation_steps": 139,
+      "calls": 142
+    },
+    {
+      "b": 6,
+      "R": "7/4",
+      "value": "23551/3500",
+      "isolation_steps": 0,
+      "calls": 1
+    }
+  ],
+  "counterexample_values": [
+    "39/20",
+    "14/5",
+    "11/5"
+  ],
+  "arithmetic": "fractions.Fraction only; all inequalities exact",
+  "scope": "Fresh deterministic arithmetic checks, combined with the analytic audit; finite tests alone do not prove the quantified theorem."
+}

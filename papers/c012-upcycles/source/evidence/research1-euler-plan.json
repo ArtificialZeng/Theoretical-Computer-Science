@@ -1,0 +1,12 @@
+{
+  "job_id": "c012-upcycles-research-cfe911474960",
+  "changed_method": "Exact cover on all possible n-window tiles; literal (n-1)-overlap vertex balance; inspect connectedness and recover an Euler tour if connected.",
+  "rationale": "The initial eight finite tests failed. All four n8d2 frame classes admit balanced tile partitions, while all four surviving n8d3 classes fail even tiling. Literal cyclic gluing is therefore a separate kernel at d2.",
+  "benchmarks": "Pinned source n4d1 and n8d1 must recover a connected Euler tour and pass literal expansion; flipped n4 word must be UNSAT.",
+  "n8_diagnostic_masks": ["**......", "*...*..."],
+  "n8_per_mask_cap_seconds": 30,
+  "one_changed_constructive_test": "binary n12d3 with pane ...* repeated three times, the only binary n12 frame type allowed by source restrictions",
+  "n12_cap_seconds": 60,
+  "n12_justification": "Only after new tiling-versus-gluing evidence and a different encoding with 2048 tile selectors instead of global-position XORs. No enlargement of initial mask time caps.",
+  "stop_rule": "Record SAT graph components or checked UNSAT/unknown. No repeated cap increases. A connected SAT graph must yield an independently literally verified upcycle; any other result leaves the original unresolved."
+}

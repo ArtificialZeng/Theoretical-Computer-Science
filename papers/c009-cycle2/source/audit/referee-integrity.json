@@ -1,0 +1,14 @@
+{
+  "job_id": "c009-cycle2-referee-eb6d40fb0393",
+  "checked_at": "2026-11-01T02:44:03.742998+00:00",
+  "snapshot_digest": "06b470c27e7195c3ffb2ba0d198581e77aa79d1b5d87d6485d396b6af906d1bc",
+  "file_mismatches": [
+    {
+      "path": "AGENTS.md",
+      "frozen_sha256": "142e7b7b82bb76e4a604bd9fdc65b0db64dbbca6812d5dea7a8842efcb67c1f0",
+      "current_sha256": "a0404fd94d6b4ac15cc3ae55e95d7d4e7c37589e5c69884c094c53e73d98a9ff"
+    }
+  ],
+  "source_unchanged": true,
+  "review_status": "in_progress; acceptance unavailable while evidence hashes differ"
+}

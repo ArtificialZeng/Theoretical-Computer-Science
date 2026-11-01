@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+/build/
+/validation/workdirs/
+*.aux
+*.fls
+*.fdb_latexmk
+*.synctex.gz

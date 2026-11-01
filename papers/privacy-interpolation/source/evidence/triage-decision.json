@@ -1,0 +1,29 @@
+{
+  "job_id": "privacy-interpolation-triage-3b7d15e2c144",
+  "decision": "advance",
+  "source_status": "new-question",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "novelty_status": "unverified; substantial known-equivalence risk",
+  "source_sha256_before": "9488f12633da72d763b0ad127ff791f002ff7451ea26826a68d35a832f0bad15",
+  "source_sha256_after": "9488f12633da72d763b0ad127ff791f002ff7451ea26826a68d35a832f0bad15",
+  "evidence": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/source-integrity.json",
+    "evidence/triage-analysis.md",
+    "evidence/triage_exact_check.py",
+    "evidence/triage-exact-results.json",
+    "literature/triage-screen.md"
+  ],
+  "evidence_sha256": {
+    "problem.md": "e3dfa4f586e429f292b89a87c19fdc202afd07ce825468a8910a677ad41cb465",
+    "checkpoint.md": "46ebad3be1738d85582f2c47ba5cf65b0e4afda2e9ef7d37ac7bbe3822ae5572",
+    "evidence/source-integrity.json": "12dd2c0e0c51d9a6dec64fc4fd76d2b471185e0572549c89f33e02b47c561aac",
+    "evidence/triage-analysis.md": "e29796e3046360119762614e0bfe27a14fe0544fdffc2cd21d83cc591ff82643",
+    "evidence/triage_exact_check.py": "64e2ba9f9f7bacac30d541bef01bc45b5cc5404860d7fefa2c22cd445ccbd579",
+    "evidence/triage-exact-results.json": "b15e30d08032f5785ee34d386e7b8854c6580bd872e8b8fa45c7f71cab0f6db9",
+    "literature/triage-screen.md": "b875838c3f60caaaf2547fba24b276d82baebee7b0464efe381c3b485211340a"
+  },
+  "next_test": "Prove the sorted-prefix reduction and extract an explicit finite optimal-path representation with justified construction cost, comparing against likelihood-ratio testing and known base-polytope decomposition; park if only routine Laplace-DP inversion remains."
+}

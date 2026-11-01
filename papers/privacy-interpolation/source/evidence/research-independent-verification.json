@@ -1,0 +1,70 @@
+{
+  "job_id": "privacy-interpolation-research-1e71d7ce81cd",
+  "status": "passed independent certificate consumer; not a fresh model referee",
+  "arithmetic": "exact Fraction, no generator import",
+  "coverage": "all six saved n=5 certificates; full exponential cells via monotonicity, not time samples",
+  "certificates": [
+    {
+      "cells": 4,
+      "coordinate_cells": 20,
+      "lower_witness_zero_based": [
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "cells": 5,
+      "coordinate_cells": 25,
+      "lower_witness_zero_based": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "cells": 5,
+      "coordinate_cells": 25,
+      "lower_witness_zero_based": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "cells": 1,
+      "coordinate_cells": 5,
+      "lower_witness_zero_based": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "cells": 5,
+      "coordinate_cells": 25,
+      "lower_witness_zero_based": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "cells": 2,
+      "coordinate_cells": 10,
+      "lower_witness_zero_based": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "affine_obstruction": "two full exponential cells verified, endpoints normalized, coordinate-2 lower bound log 6",
+  "limits": "only serialized certificates and displayed auxiliary path are checked; analytic lemmas remain mathematical arguments"
+}

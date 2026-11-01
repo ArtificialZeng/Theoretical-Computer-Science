@@ -1,0 +1,16 @@
+{
+  "job_id": "c012-upcycles-write-e722c4031892",
+  "math_gate": "passed before manuscript creation",
+  "source_sha256": "773f9e28946e0ee6f8def64bd988a0e6ae6f1a095968d275914978caa6ce2eac",
+  "acmart_source": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/templates/acm-official/distribution/acmart/acmart.cls",
+  "acmart_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "copied_class_matches": true,
+  "artifact_marker": {
+    "operation_kind": "create",
+    "expected_output_count": 1,
+    "output_format": "pdf",
+    "exit_code": 0
+  },
+  "research_passes_consumed": 2,
+  "research_passes_remaining": 1
+}

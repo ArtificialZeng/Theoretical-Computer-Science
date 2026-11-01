@@ -1,0 +1,744 @@
+{
+  "job_id": "c017-wheeler-research-98a17f8eb2fd",
+  "status": "passed",
+  "controls": [
+    {
+      "name": "redundant_unary_parity",
+      "lambda": [
+        "",
+        ""
+      ],
+      "normalized_colors": [
+        0,
+        0
+      ],
+      "canonical_states": 2,
+      "finite_convex_components": true,
+      "component_representatives_reversed": [
+        "",
+        "0"
+      ],
+      "bad_triple_states": 5,
+      "bad_pair_states": 5,
+      "component_relation_states": 6,
+      "representative_states": 3,
+      "membership": true,
+      "quotient_edges": [
+        [
+          [
+            1,
+            ""
+          ]
+        ],
+        [
+          [
+            1,
+            ""
+          ]
+        ]
+      ],
+      "quotient_terminal": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "source_floor_length",
+      "lambda": [
+        "",
+        ""
+      ],
+      "normalized_colors": [
+        0,
+        1
+      ],
+      "canonical_states": 3,
+      "finite_convex_components": false,
+      "component_representatives_reversed": null,
+      "bad_triple_states": 11,
+      "bad_pair_states": 7,
+      "component_relation_states": 3,
+      "representative_states": 3,
+      "membership": "not run: exact infinite representative language"
+    },
+    {
+      "name": "initial_cycle_nonempty_lcp",
+      "lambda": [
+        "0"
+      ],
+      "normalized_colors": [
+        0
+      ],
+      "canonical_states": 2,
+      "finite_convex_components": true,
+      "component_representatives_reversed": [
+        "",
+        "0"
+      ],
+      "bad_triple_states": 5,
+      "bad_pair_states": 5,
+      "component_relation_states": 6,
+      "representative_states": 3,
+      "membership": true,
+      "quotient_edges": [
+        [
+          [
+            1,
+            "00"
+          ]
+        ],
+        [
+          [
+            1,
+            "0"
+          ]
+        ]
+      ],
+      "quotient_terminal": [
+        "0",
+        ""
+      ]
+    },
+    {
+      "name": "binary_identity",
+      "lambda": [
+        ""
+      ],
+      "normalized_colors": [
+        0
+      ],
+      "canonical_states": 2,
+      "finite_convex_components": true,
+      "component_representatives_reversed": [
+        "",
+        "0"
+      ],
+      "bad_triple_states": 7,
+      "bad_pair_states": 5,
+      "component_relation_states": 6,
+      "representative_states": 3,
+      "membership": true,
+      "quotient_edges": [
+        [
+          [
+            1,
+            "0"
+          ],
+          [
+            1,
+            "1"
+          ]
+        ],
+        [
+          [
+            1,
+            "0"
+          ],
+          [
+            1,
+            "1"
+          ]
+        ]
+      ],
+      "quotient_terminal": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "binary_erasure",
+      "lambda": [
+        ""
+      ],
+      "normalized_colors": [
+        0
+      ],
+      "canonical_states": 2,
+      "finite_convex_components": true,
+      "component_representatives_reversed": [
+        "",
+        "0"
+      ],
+      "bad_triple_states": 7,
+      "bad_pair_states": 5,
+      "component_relation_states": 6,
+      "representative_states": 3,
+      "membership": true,
+      "quotient_edges": [
+        [
+          [
+            1,
+            ""
+          ],
+          [
+            1,
+            ""
+          ]
+        ],
+        [
+          [
+            1,
+            ""
+          ],
+          [
+            1,
+            ""
+          ]
+        ]
+      ],
+      "quotient_terminal": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "binary_complement",
+      "lambda": [
+        ""
+      ],
+      "normalized_colors": [
+        0
+      ],
+      "canonical_states": 2,
+      "finite_convex_components": true,
+      "component_representatives_reversed": [
+        "",
+        "0"
+      ],
+      "bad_triple_states": 7,
+      "bad_pair_states": 5,
+      "component_relation_states": 6,
+      "representative_states": 3,
+      "membership": false,
+      "quotient_edges": [
+        [
+          [
+            1,
+            "1"
+          ],
+          [
+            1,
+            "0"
+          ]
+        ],
+        [
+          [
+            1,
+            "1"
+          ],
+          [
+            1,
+            "0"
+          ]
+        ]
+      ],
+      "quotient_terminal": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "partial_terminal_unary_parity",
+      "lambda": [
+        "",
+        ""
+      ],
+      "normalized_colors": [
+        0,
+        1
+      ],
+      "canonical_states": 3,
+      "finite_convex_components": false,
+      "component_representatives_reversed": null,
+      "bad_triple_states": 11,
+      "bad_pair_states": 7,
+      "component_relation_states": 3,
+      "representative_states": 3,
+      "membership": "not run: exact infinite representative language"
+    },
+    {
+      "name": "only_empty_word",
+      "lambda": [
+        "01"
+      ],
+      "normalized_colors": [
+        0
+      ],
+      "canonical_states": 1,
+      "finite_convex_components": true,
+      "component_representatives_reversed": [
+        ""
+      ],
+      "bad_triple_states": 1,
+      "bad_pair_states": 1,
+      "component_relation_states": 2,
+      "representative_states": 2,
+      "membership": true,
+      "quotient_edges": [
+        [
+          null,
+          null
+        ]
+      ],
+      "quotient_terminal": [
+        "01"
+      ]
+    },
+    {
+      "name": "empty_input_alphabet",
+      "lambda": [
+        "1"
+      ],
+      "normalized_colors": [
+        0
+      ],
+      "canonical_states": 1,
+      "finite_convex_components": true,
+      "component_representatives_reversed": [
+        ""
+      ],
+      "bad_triple_states": 1,
+      "bad_pair_states": 1,
+      "component_relation_states": 1,
+      "representative_states": 1,
+      "membership": true,
+      "quotient_edges": [
+        []
+      ],
+      "quotient_terminal": [
+        "1"
+      ]
+    },
+    {
+      "name": "partial_delayed_terminal",
+      "lambda": [
+        "01",
+        "01"
+      ],
+      "normalized_colors": [
+        0,
+        1
+      ],
+      "canonical_states": 3,
+      "finite_convex_components": true,
+      "component_representatives_reversed": [
+        "",
+        "0",
+        "1"
+      ],
+      "bad_triple_states": 13,
+      "bad_pair_states": 8,
+      "component_relation_states": 6,
+      "representative_states": 3,
+      "membership": true,
+      "quotient_edges": [
+        [
+          [
+            1,
+            "01"
+          ],
+          [
+            2,
+            "01"
+          ]
+        ],
+        [
+          [
+            1,
+            ""
+          ],
+          [
+            2,
+            ""
+          ]
+        ],
+        [
+          null,
+          null
+        ]
+      ],
+      "quotient_terminal": [
+        null,
+        null,
+        ""
+      ]
+    },
+    {
+      "name": "suffix_coloring_split",
+      "lambda": [
+        "",
+        ""
+      ],
+      "normalized_colors": [
+        0,
+        1
+      ],
+      "canonical_states": 2,
+      "finite_convex_components": true,
+      "component_representatives_reversed": [
+        "",
+        "0"
+      ],
+      "bad_triple_states": 7,
+      "bad_pair_states": 5,
+      "component_relation_states": 6,
+      "representative_states": 3,
+      "membership": true,
+      "quotient_edges": [
+        [
+          [
+            1,
+            ""
+          ],
+          [
+            1,
+            ""
+          ]
+        ],
+        [
+          [
+            1,
+            ""
+          ],
+          [
+            1,
+            ""
+          ]
+        ]
+      ],
+      "quotient_terminal": [
+        null,
+        ""
+      ]
+    },
+    {
+      "name": "finite_domain_needs_convex_splitting",
+      "lambda": [
+        "",
+        "",
+        ""
+      ],
+      "normalized_colors": [
+        0,
+        1,
+        2
+      ],
+      "canonical_states": 3,
+      "finite_convex_components": true,
+      "component_representatives_reversed": [
+        "",
+        "0",
+        "1",
+        "00",
+        "10"
+      ],
+      "bad_triple_states": 12,
+      "bad_pair_states": 10,
+      "component_relation_states": 4,
+      "representative_states": 4,
+      "membership": true,
+      "quotient_edges": [
+        [
+          [
+            1,
+            ""
+          ],
+          [
+            2,
+            ""
+          ]
+        ],
+        [
+          [
+            3,
+            ""
+          ],
+          [
+            4,
+            ""
+          ]
+        ],
+        [
+          [
+            3,
+            ""
+          ],
+          [
+            4,
+            ""
+          ]
+        ],
+        [
+          null,
+          null
+        ],
+        [
+          null,
+          null
+        ]
+      ],
+      "quotient_terminal": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "binary_length_with_nonempty_lcp",
+      "lambda": [
+        "0"
+      ],
+      "normalized_colors": [
+        0
+      ],
+      "canonical_states": 2,
+      "finite_convex_components": true,
+      "component_representatives_reversed": [
+        "",
+        "0"
+      ],
+      "bad_triple_states": 7,
+      "bad_pair_states": 5,
+      "component_relation_states": 6,
+      "representative_states": 3,
+      "membership": false,
+      "quotient_edges": [
+        [
+          [
+            1,
+            "00"
+          ],
+          [
+            1,
+            "00"
+          ]
+        ],
+        [
+          [
+            1,
+            "0"
+          ],
+          [
+            1,
+            "0"
+          ]
+        ]
+      ],
+      "quotient_terminal": [
+        "0",
+        ""
+      ]
+    }
+  ],
+  "held_out_complete_finite_domains": [
+    {
+      "case": 0,
+      "original_states": 1,
+      "domain_size": 1,
+      "components": 1,
+      "bad_triple_states": 1,
+      "bad_pair_states": 1,
+      "component_relation_states": 2,
+      "representative_states": 2
+    },
+    {
+      "case": 1,
+      "original_states": 2,
+      "domain_size": 3,
+      "components": 2,
+      "bad_triple_states": 3,
+      "bad_pair_states": 3,
+      "component_relation_states": 3,
+      "representative_states": 3
+    },
+    {
+      "case": 2,
+      "original_states": 3,
+      "domain_size": 1,
+      "components": 1,
+      "bad_triple_states": 1,
+      "bad_pair_states": 1,
+      "component_relation_states": 2,
+      "representative_states": 2
+    },
+    {
+      "case": 3,
+      "original_states": 4,
+      "domain_size": 4,
+      "components": 3,
+      "bad_triple_states": 7,
+      "bad_pair_states": 5,
+      "component_relation_states": 5,
+      "representative_states": 4
+    },
+    {
+      "case": 4,
+      "original_states": 5,
+      "domain_size": 2,
+      "components": 2,
+      "bad_triple_states": 1,
+      "bad_pair_states": 1,
+      "component_relation_states": 3,
+      "representative_states": 3
+    },
+    {
+      "case": 5,
+      "original_states": 1,
+      "domain_size": 1,
+      "components": 1,
+      "bad_triple_states": 1,
+      "bad_pair_states": 1,
+      "component_relation_states": 2,
+      "representative_states": 2
+    },
+    {
+      "case": 6,
+      "original_states": 2,
+      "domain_size": 2,
+      "components": 2,
+      "bad_triple_states": 1,
+      "bad_pair_states": 1,
+      "component_relation_states": 3,
+      "representative_states": 3
+    },
+    {
+      "case": 7,
+      "original_states": 3,
+      "domain_size": 2,
+      "components": 2,
+      "bad_triple_states": 1,
+      "bad_pair_states": 1,
+      "component_relation_states": 3,
+      "representative_states": 3
+    },
+    {
+      "case": 8,
+      "original_states": 4,
+      "domain_size": 3,
+      "components": 3,
+      "bad_triple_states": 5,
+      "bad_pair_states": 5,
+      "component_relation_states": 4,
+      "representative_states": 4
+    },
+    {
+      "case": 9,
+      "original_states": 5,
+      "domain_size": 4,
+      "components": 3,
+      "bad_triple_states": 7,
+      "bad_pair_states": 5,
+      "component_relation_states": 5,
+      "representative_states": 4
+    },
+    {
+      "case": 10,
+      "original_states": 1,
+      "domain_size": 1,
+      "components": 1,
+      "bad_triple_states": 1,
+      "bad_pair_states": 1,
+      "component_relation_states": 2,
+      "representative_states": 2
+    },
+    {
+      "case": 11,
+      "original_states": 2,
+      "domain_size": 3,
+      "components": 2,
+      "bad_triple_states": 3,
+      "bad_pair_states": 3,
+      "component_relation_states": 3,
+      "representative_states": 3
+    },
+    {
+      "case": 12,
+      "original_states": 3,
+      "domain_size": 2,
+      "components": 2,
+      "bad_triple_states": 1,
+      "bad_pair_states": 1,
+      "component_relation_states": 3,
+      "representative_states": 3
+    },
+    {
+      "case": 13,
+      "original_states": 4,
+      "domain_size": 5,
+      "components": 3,
+      "bad_triple_states": 8,
+      "bad_pair_states": 7,
+      "component_relation_states": 7,
+      "representative_states": 3
+    },
+    {
+      "case": 14,
+      "original_states": 5,
+      "domain_size": 2,
+      "components": 2,
+      "bad_triple_states": 1,
+      "bad_pair_states": 1,
+      "component_relation_states": 3,
+      "representative_states": 3
+    },
+    {
+      "case": 15,
+      "original_states": 1,
+      "domain_size": 1,
+      "components": 1,
+      "bad_triple_states": 1,
+      "bad_pair_states": 1,
+      "component_relation_states": 2,
+      "representative_states": 2
+    },
+    {
+      "case": 16,
+      "original_states": 2,
+      "domain_size": 1,
+      "components": 1,
+      "bad_triple_states": 1,
+      "bad_pair_states": 1,
+      "component_relation_states": 2,
+      "representative_states": 2
+    },
+    {
+      "case": 17,
+      "original_states": 3,
+      "domain_size": 4,
+      "components": 3,
+      "bad_triple_states": 6,
+      "bad_pair_states": 4,
+      "component_relation_states": 4,
+      "representative_states": 3
+    },
+    {
+      "case": 18,
+      "original_states": 4,
+      "domain_size": 2,
+      "components": 2,
+      "bad_triple_states": 1,
+      "bad_pair_states": 1,
+      "component_relation_states": 3,
+      "representative_states": 3
+    },
+    {
+      "case": 19,
+      "original_states": 5,
+      "domain_size": 3,
+      "components": 3,
+      "bad_triple_states": 5,
+      "bad_pair_states": 5,
+      "component_relation_states": 4,
+      "representative_states": 4
+    }
+  ],
+  "whole_function_checks": 1475,
+  "H_identity_checks": 1318,
+  "automatic_relation_checks": 8171,
+  "component_successor_checks": 1315,
+  "unmerged_redundant_parity_infinite": true,
+  "longer_existential_witness_for_empty_free_word": true,
+  "limits": "Exact finite automata decide representative finiteness and quotient transitions for the listed controls. Direct input checks stop at length 7. No general runtime bound, automatic proof certification, or fresh referee verdict is claimed."
+}

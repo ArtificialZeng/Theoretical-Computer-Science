@@ -1,0 +1,35 @@
+{
+  "job_id": "advice-matching-research-eee7dbe89d57",
+  "source_sha256": "3ec230456a31ba9b004000be9e79c74a77636a28a31e9b4eec31918f5ab305ed",
+  "source_bytes": 2618,
+  "claim_schema_keys": [
+    "kind",
+    "original_status",
+    "statement",
+    "contribution",
+    "proposer_job_id",
+    "evidence_files"
+  ],
+  "evidence_files_verified": [
+    "source.md",
+    "problem.md",
+    "requirements.md",
+    "evidence/frontier-proof.md",
+    "evidence/check_frontiers.py",
+    "evidence/frontier-checks.json",
+    "evidence/known-obstruction.md",
+    "evidence/check_obstruction.py",
+    "evidence/obstruction-check.json",
+    "literature/research-comparison.md",
+    "literature/triage-sources.md",
+    "literature/root-additional-search.md"
+  ],
+  "finite_checks": {
+    "perfect_advice_cases": 910687,
+    "component_arrival_orders": 184930,
+    "cycle_orientation_cases": 309408,
+    "labelled_graph_order_advice_cases": 54060,
+    "labelled_graphs_n3": 265
+  },
+  "no_referee_or_release_claimed": true
+}

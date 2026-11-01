@@ -1,0 +1,77 @@
+{
+  "job_id": "c017-wheeler-release-bce62e5f5c55",
+  "clean_build_exit_code": 0,
+  "source_files_byte_identical": true,
+  "extracted_text_identical": true,
+  "pages": [
+    {
+      "page": 1,
+      "raster_identical": true,
+      "clean_raster": "tmp/pdfs/release-build-bce62e5f5c55/page-01.png",
+      "frozen_raster": "tmp/pdfs/release-bce62e5f5c55-page-01.png"
+    },
+    {
+      "page": 2,
+      "raster_identical": true,
+      "clean_raster": "tmp/pdfs/release-build-bce62e5f5c55/page-02.png",
+      "frozen_raster": "tmp/pdfs/release-bce62e5f5c55-page-02.png"
+    },
+    {
+      "page": 3,
+      "raster_identical": true,
+      "clean_raster": "tmp/pdfs/release-build-bce62e5f5c55/page-03.png",
+      "frozen_raster": "tmp/pdfs/release-bce62e5f5c55-page-03.png"
+    },
+    {
+      "page": 4,
+      "raster_identical": true,
+      "clean_raster": "tmp/pdfs/release-build-bce62e5f5c55/page-04.png",
+      "frozen_raster": "tmp/pdfs/release-bce62e5f5c55-page-04.png"
+    },
+    {
+      "page": 5,
+      "raster_identical": true,
+      "clean_raster": "tmp/pdfs/release-build-bce62e5f5c55/page-05.png",
+      "frozen_raster": "tmp/pdfs/release-bce62e5f5c55-page-05.png"
+    },
+    {
+      "page": 6,
+      "raster_identical": true,
+      "clean_raster": "tmp/pdfs/release-build-bce62e5f5c55/page-06.png",
+      "frozen_raster": "tmp/pdfs/release-bce62e5f5c55-page-06.png"
+    },
+    {
+      "page": 7,
+      "raster_identical": true,
+      "clean_raster": "tmp/pdfs/release-build-bce62e5f5c55/page-07.png",
+      "frozen_raster": "tmp/pdfs/release-bce62e5f5c55-page-07.png"
+    },
+    {
+      "page": 8,
+      "raster_identical": true,
+      "clean_raster": "tmp/pdfs/release-build-bce62e5f5c55/page-08.png",
+      "frozen_raster": "tmp/pdfs/release-bce62e5f5c55-page-08.png"
+    },
+    {
+      "page": 9,
+      "raster_identical": true,
+      "clean_raster": "tmp/pdfs/release-build-bce62e5f5c55/page-09.png",
+      "frozen_raster": "tmp/pdfs/release-bce62e5f5c55-page-09.png"
+    },
+    {
+      "page": 10,
+      "raster_identical": true,
+      "clean_raster": "tmp/pdfs/release-build-bce62e5f5c55/page-10.png",
+      "frozen_raster": "tmp/pdfs/release-bce62e5f5c55-page-10.png"
+    }
+  ],
+  "build_log": "tmp/pdfs/release-build-bce62e5f5c55/main.log",
+  "build_log_digest": "45622f468ecd046c8f414a748d157ce7458b94881744d1d51de0d4821eb41b6d",
+  "frozen_pdf_digest": "f634d9f8abb35aab26ba0f93564fdd36b9f59aee0f150228002611a8fbb71de1",
+  "rebuilt_pdf_digest": "9c3b77cbf66c8878009b5f389942c202f04ae91b1677fc5108038f09c9c3a6be",
+  "artifact_marker_runs": 1,
+  "artifact_marker_exit_code": 0,
+  "snapshot_digest": "e049cdd6f4851af0fd18969fa672c8ab343b1916120d8417cddc05007f4084bb",
+  "manuscript_digest": "3e3ee96154364ccb7df28378b07e5b269c38b0a7d88fbb532eeb0a89dd579b2d",
+  "pdf_digest": "f634d9f8abb35aab26ba0f93564fdd36b9f59aee0f150228002611a8fbb71de1"
+}

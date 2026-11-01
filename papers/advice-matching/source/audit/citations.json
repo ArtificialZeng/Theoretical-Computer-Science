@@ -1,0 +1,28 @@
+{
+  "verdict": "accept",
+  "job_id": "advice-matching-release-01731cae3c13",
+  "snapshot_digest": "9e5ce19e70bcedf07302fd469630c6922133d2418685a0789184566a1578f92c",
+  "manuscript_digest": "190ac5d740b6eba350826842752400ef3de5381f01b0c88aaf1f9350a2472763",
+  "pdf_digest": "97f90509d1413691ce7cb13e0c7dc8bc0ee2a2b1f133131cc43a2ed9cea6ffa2",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/README-acmart",
+    "manuscript/README-zh.md",
+    "manuscript/REPRODUCIBILITY.md",
+    "manuscript/acmart.cls",
+    "manuscript/acmart.dtx",
+    "manuscript/acmart.ins",
+    "manuscript/alpha.bst",
+    "manuscript/body.tex",
+    "manuscript/build.sh",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/reproduce.py",
+    "manuscript/template-provenance.json"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "citation_audit_method": "citation-check-skill-and-primary-source-manual",
+  "scope": "All 14 declared publication sources, six cited primary records/passages, 34 fixed extracted claims, generated/rendered bibliography, exact integral oblivious matching-table scope and closest-result distinctions checked. No user-designated workbook/BibTeX list was supplied (literature/user_bibliography_check.md); none invented. Primary metadata and relevant full texts were accessible. Bounded novelty comparison is not an exhaustive priority search."
+}

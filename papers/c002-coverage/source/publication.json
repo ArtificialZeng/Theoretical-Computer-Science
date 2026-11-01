@@ -1,0 +1,25 @@
+{
+  "title": "A Size-Independent Discrepancy Bound for Sparse Coverage Functions",
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "author": {
+    "name": "Zijian Zeng",
+    "affiliation": "UCSI University",
+    "email": "1002266693@ucsiuniversity.edu.my"
+  },
+  "source_files": [
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/main.bbl",
+    "manuscript/vendor/acmart.cls",
+    "manuscript/vendor/alpha.bst",
+    "manuscript/vendor/download-provenance.json",
+    "manuscript/build.py",
+    "manuscript/README.md"
+  ],
+  "pdf": "output/pdf/sparse-coverage-discrepancy.pdf",
+  "build_command": "python3 manuscript/build.py",
+  "format": "Unmodified official acmart 2.20; acmsmall,11pt,nonacm; single column, single spaced, Letter, one-inch margins; named title page; alpha bibliography",
+  "maximum_total_pages": 12,
+  "external_actions_authorized": false
+}

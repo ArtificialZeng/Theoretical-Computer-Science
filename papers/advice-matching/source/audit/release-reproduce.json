@@ -1,0 +1,18 @@
+{
+  "component_max_online": 6,
+  "counts": {
+    "Z_prefixes": 3,
+    "component_orders_through_6": 3490,
+    "cycle_prefixes": 9,
+    "cycle_root_orientations": 3552,
+    "labelled_n3_graphs": 265,
+    "n3_arbitrary_advice_cases": 54060,
+    "n3_graph_orders": 1590,
+    "n3_maximum_advice_cases": 2652,
+    "n3_regular_arbitrary_advice_cases": 1224
+  },
+  "dependencies": "Python standard library",
+  "minimum_E_ratio_n3": "3/4",
+  "ok": true,
+  "scope": "finite exact checks only"
+}

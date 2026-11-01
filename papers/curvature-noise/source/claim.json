@@ -1,0 +1,18 @@
+{
+  "kind": "result-note",
+  "original_status": "unresolved",
+  "statement": "Subsidiary theorem in the true-objective, globally fixed persistent multiplicative-error oracle model of problem.md. For every integers n,k,r with n>k+r and 1<=r<k, reals 0<=kappa<1 and 0<epsilon<1, define rho=(1-epsilon)/(1+epsilon), a=rho(1-kappa), b=rho*kappa, c=(1-rho)(1-kappa)/(1-a). If cn>exp(1)k, then for every possibly randomized adaptive algorithm with at most Q value queries on every valid input and output cardinality at most k, there is a fixed k-set H and a fixed valid pair f_H,g_H, independent of the private seed, of exact total curvature kappa and true OPT=k, such that E[f_H(A)]/k <= a+br/k+(1-a)k/n+min{1,Q[exp(1)k/(cn)]^(cr)}. The explicit family and all-set oracle are f_H(S)=|S intersect H|+a|S outside H|+b min{|S outside H|,r} and g_H(S)=max{(1+epsilon)[a|S|+b min{|S|,r}],(1-epsilon)f_H(S)}. Queries may have any size. Consequently, for every fixed 0<alpha<1/2 and fixed 0<=kappa<1, k_n=floor(n^alpha), any sequence 0<epsilon_n<1 with epsilon_n*k_n tending to infinity, and every algorithm family with a query bound C n^d for fixed C,d, there exists a sequence of such valid fixed instances with expected true approximation at most rho_n(1-kappa)+o(1). The credited top-k noisy-singleton algorithm guarantees rho_n(1-kappa+kappa/k_n) on every valid input. Matching is additive; relative matching is claimed only when rho_n stays bounded away from zero. This does not resolve curvature 1, zero noise, the bounded epsilon*k transition, all joint parameters, or an exact finite minimax factor. Proof and supporting exact-tail lemma: evidence/research-proof.md, Sections 1-4.",
+  "contribution": "Proposed contribution is the exact-curvature/noise calibration of a finite randomized query lower bound and the resulting matching sparse-cardinality regime, including fixed noise and every sequence epsilon_n*k_n -> infinity. The singleton algorithm, its true-objective normalization, capped-rank hidden family pattern, modular curvature tuning and baseline-transcript strategy are credited known ingredients. A particular uniform modular shift cannot produce the smaller fixed-noise product factor because all its k-sets retain value at least (1-kappa)k. No equivalent calibrated statement was found in the inspected primary passages; novelty and significance require fresh scrutiny, and one adjacent full-text comparison remains unavailable. This is a request for the real fresh-referee gate, not acceptance or permission to create a manuscript.",
+  "proposer_job_id": "curvature-noise-research-5a09759394ef",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "requirements.md",
+    "evidence/research-proof.md",
+    "evidence/research-literature.md",
+    "evidence/research-attacks.md",
+    "evidence/research_check.py",
+    "evidence/research-checks.json",
+    "evidence/horel-singer-nips2016.txt"
+  ]
+}

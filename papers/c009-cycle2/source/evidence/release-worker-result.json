@@ -1,0 +1,20 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Fresh citation, clean-build and all-six-page visual audits passed; release_gate.py check succeeded for the accepted full-scope resolution. Immutable source preserved.",
+  "next_test": "Supervisor: publish the unchanged validated project and verify the activated manifest/PDF digest.",
+  "evidence": [
+    "checkpoint.md",
+    "audit/citations.json",
+    "audit/citations.md",
+    "audit/build.json",
+    "audit/build.md",
+    "audit/visual.json",
+    "audit/visual.md",
+    "audit/manuscript-snapshot.json",
+    "evidence/release-gate-check.json",
+    "evidence/release-usage.json",
+    "manuscript/build/main.pdf"
+  ]
+}

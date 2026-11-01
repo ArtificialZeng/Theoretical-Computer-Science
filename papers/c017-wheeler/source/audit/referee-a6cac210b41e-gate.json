@@ -1,0 +1,12 @@
+{
+  "job_id": "c017-wheeler-referee-a6cac210b41e",
+  "command": "python /Users/mac/.codex/skills/4prove-or-disprove-math/scripts/release_gate.py check-math PROJECT_DIR",
+  "exit_code": 0,
+  "result": {
+    "ok": true,
+    "snapshot_digest": "e049cdd6f4851af0fd18969fa672c8ab343b1916120d8417cddc05007f4084bb",
+    "referee_job_id": "c017-wheeler-referee-a6cac210b41e"
+  },
+  "stderr": "",
+  "scope": "Structural evidence-integrity and role-provenance check; not mathematical certification."
+}

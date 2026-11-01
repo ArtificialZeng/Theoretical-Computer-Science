@@ -1,0 +1,6 @@
+{
+  "verdict": "accept",
+  "job_id": "coverage-sparse-referee-20ee9a6fefc3",
+  "snapshot_digest": "639fb67b280db040c9a3c5059288d96a35e8cb02d493e698aaf573087cfca4e8",
+  "report": "audit/math.md"
+}

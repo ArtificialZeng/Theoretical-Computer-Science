@@ -1,0 +1,480 @@
+\documentclass[acmsmall,11pt,nonacm]{acmart}
+\geometry{reset,letterpaper,margin=1in,headheight=14pt,footskip=24pt}
+\setcopyright{none}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\setcitestyle{numbers,square,nosort,nocompress}
+\renewcommand{\bibfont}{\normalsize}
+\usepackage{mathtools}
+\newcommand{\ind}{\mathbf{1}}
+\newcommand{\disc}{\operatorname{disc}}
+\newcommand{\Zk}{\mathbb{Z}_k}
+\newcommand{\calB}{\mathcal{B}}
+\newcommand{\calE}{\mathcal{E}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\Phiic}{\Phi_{i,c}}
+\title{A Size-Independent Discrepancy Bound for Sparse Coverage Functions}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\city{}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\authorsaddresses{\normalsize Zijian Zeng, UCSI University,
+  \href{mailto:1002266693@ucsiuniversity.edu.my}{1002266693@ucsiuniversity.edu.my}.}
+\renewcommand{\shortauthors}{Zijian Zeng}
+
+\begin{document}
+\begin{abstract}
+\normalsize
+A coverage function counts the features reached by a set of items. Consider
+any family of such functions in which each item belongs to at most $t$
+feature occurrences across the entire family. We prove that, for every
+integer $k\ge 2$, the items can be partitioned into $k$ color classes so
+that every function differs by at most $4kt(kt-1)^2$ between any two
+classes. The bound is independent of the number of items, functions,
+features, and the sizes of the features. It answers affirmatively the
+qualitative question of whether sparse coverage discrepancy admits a
+polynomial bound in $t,k$ alone, motivated by the size-dependent bound of
+Avila, Rohwedder and Wennmann (ESA 2026). Its dependence on $t,k$ is coarser
+than theirs.
+
+The proof first uses Hall's theorem to assign disjoint $k$-item witnesses
+to all features of size at least $kt$. Restricting a witness to cyclic
+color shifts makes every such feature exactly balanced under every allowed
+choice. A graph on the resulting blocks has at most $(kt-1)^2$ independent
+classes of small-feature interactions. Within one class, coverage
+expectations are affine in the block-state probabilities, with maximum
+column sum at most $kt$. Applying the known multiple-choice Beck--Fiala
+rounding theorem class by class proves the bound. The construction is
+deterministic and polynomial time for explicitly listed incidences,
+including binary-encoded $k$ and $t$.
+\end{abstract}
+\maketitle
+\thispagestyle{plain}
+\pagestyle{plain}
+\clearpage
+
+\section{The result and its context}
+\label{sec:intro}
+
+Coverage valuations measure diversity: reaching the same feature twice
+does not increase its contribution. This saturation prevents a direct
+application of linear discrepancy bounds. In the sparse setting, however,
+each item participates in only a bounded number of feature occurrences.
+We show how to exploit that sparsity without any dependence on the size
+of the instance.
+
+Here is the exact model. Let $n,m,t$ be positive integers. For each
+$i\in[m]=\{1,\ldots,m\}$, let $U_i$ be a finite feature-index set. A feature
+occurrence is a tagged pair $e=(i,u)$, with $u\in U_i$, having a nonempty
+incidence set $S_e\subseteq[n]$. Write
+$\calE=\{(i,u):i\in[m],\ u\in U_i\}$, and suppose
+\begin{equation}
+ d(j):=\sum_{e\in\calE}\ind[j\in S_e]\le t
+ \qquad (j\in[n]).
+ \label{eq:sparsity}
+\end{equation}
+The corresponding coverage functions are
+\begin{equation}
+ f_i(T)=\sum_{u\in U_i}\ind[S_{(i,u)}\cap T\ne\varnothing]
+ \qquad (T\subseteq[n]).
+ \label{eq:coverage}
+\end{equation}
+Equal incidence sets at different tags remain distinct occurrences in
+both sums. Empty features can be removed. The indices $U_i$ may be empty.
+For a coloring $\chi:[n]\to\Zk=\{0,\ldots,k-1\}$, put
+$T_c=\chi^{-1}(c)$ and define
+\[
+ \disc(\chi)=\max_{i\in[m]}\max_{c,c'\in\Zk}
+          |f_i(T_c)-f_i(T_{c'})|.
+\]
+Empty color classes are allowed.
+
+\begin{theorem}
+\label{thm:main}
+For every family satisfying \eqref{eq:sparsity} and every integer $k\ge2$,
+there is a coloring $\chi:[n]\to\Zk$ such that
+\begin{equation}
+ \disc(\chi)\le 4kt(kt-1)^2.
+ \label{eq:bound}
+\end{equation}
+For an input that explicitly lists item slots, function and feature tags,
+and all incidences, such a coloring can be computed deterministically in
+time polynomial in the input length, with $k,t$ encoded in binary.
+\end{theorem}
+
+In particular, $P(t,k)=4kt(kt-1)^2$ is one fixed polynomial valid for all
+$n,m,t,k$ in this model. No bound on feature sizes is assumed.
+
+\paragraph{Closest prior work and the change in parameters.}
+Avila, Rohwedder and Wennmann~\cite{ARW26}, Theorem~3, prove a randomized
+polynomial-time bound
+$O(\sqrt{t^3k}\log(ntk))$ for sparse coverage functions. Their
+Section~1.3 discusses avoiding the logarithmic size factor. Our theorem
+gives a positive answer to the qualitative polynomial-existence question
+suggested there: every fixed $t,k$ has a bound uniform over all instance
+sizes. The price is the coarser $O(t^3k^3)$ dependence. We do not establish
+$O(\sqrt{t^3k})$, nor do we claim a pointwise improvement over their bound
+for all parameter ranges.
+
+The sparsity convention is essential. We use the covering-universe
+description in \cite[Section~1.1]{ARW26}: each item covers at most $t$
+feature elements across all functions. Their dual-set notation in
+Definition~4 uses a union of collections, which could be read as
+deduplicating equal incidence subsets. Our explicit tags avoid that
+ambiguity. The theorem concerns occurrence-counted sparsity as in
+\eqref{eq:sparsity}; it does not assert a bound under literal
+deduplication of repeated subsets.
+
+\paragraph{The technical idea.}
+The proof has two requirements that must hold in the same choice space.
+Large features must keep all colors throughout rounding, while small
+features must admit a controlled linearization. Freezing arbitrary colors
+on representatives can bias small features. Rounding witness items
+separately can destroy their rainbow property. Instead, we keep each
+witness as one categorical variable whose states are cyclic shifts.
+Every state protects its large feature, and the uniform distribution on
+states treats colors symmetrically. Within a suitable interaction class,
+a small feature meets at most one moving block, although it may contain
+several items of that block. Its expectation is still affine in the
+categorical variable. The crucial column estimate counts the incidences
+of those items, giving mass at most $kt$ across \emph{all} functions and
+colors.
+
+Independent interaction classes and affine restricted coverage
+expectations already appear in \cite[Section~5, Lemma~23]{ARW26}. The
+multiple-choice rounding theorem used here is also known, due to Doerr
+and Srivastav~\cite{DS03}; its exact rational formulation is stated by
+Gla{\ss}er, Reitwie{\ss}ner and Witek~\cite[Theorem~2]{GRW11}. Hall
+matching, greedy graph coloring, and that rounding theorem are prior
+tools. The structural step here is the choice of disjoint rainbow
+witnesses together with categorical coverage extensions that preserve
+both requirements and need only a size-independent number of stages.
+
+\paragraph{Broader scope.}
+Hollender, Manurangsi, Meka and Suksompong~\cite{HMMS25} and Dupr{\'e}
+la Tour and Fujii~\cite{DF25} study discrepancy beyond additive functions.
+The general influence-sparse Lipschitz question in
+\cite[Definition~13 and Question~14]{HMMS25} has a broader function class
+and a different sparsity measure. The present theorem does not resolve
+it. Our hypotheses also exclude arbitrary real feature weights and a
+bound only on the number of influenced functions.
+
+\section{Multiple-choice rounding}
+\label{sec:rounding}
+
+We give the rounding argument in full to specify exactly the prior result
+on which the coverage reduction relies. For a finite matrix $A$, write
+$\|A\|_1=\max_a\sum_b|A_{b,a}|$ for its maximum absolute column sum.
+
+\begin{lemma}[Multiple-choice Beck--Fiala rounding]
+\label{lem:round}
+Partition a finite set of coordinates into nonempty groups. Suppose
+$p\ge0$ sums to one in every group, and $A$ is a real matrix with these
+coordinates as columns and $\|A\|_1\le D$. There is a vector $y$ with
+exactly one entry equal to one in each group and all other entries zero
+such that
+\begin{equation}
+ \|A(y-p)\|_\infty\le 2D.
+ \label{eq:round}
+\end{equation}
+For rational data and equally sized groups, a suitable $y$ is computable
+in polynomial time.
+\end{lemma}
+
+The rational equal-group statement and its algorithmic claim are
+\cite[Theorem~2]{GRW11}, attributed there to \cite{DS03}. The following
+floating-coordinate proof establishes the existence statement, also for
+unequal group sizes; that proof is not claimed as a contribution.
+
+\begin{proof}
+Start with $x=p$. Fix permanently every coordinate already equal to zero
+or one. Initially retain every row equation $A_bx=A_bp$. At any stage,
+let $W$ be the strictly fractional coordinates and put $V=|W|$. If
+$V=0$, the process is finished. A group meeting $W$ has at least two
+coordinates in $W$, since a nonnegative sum-one group cannot have exactly
+one fractional coordinate and all others integral. Thus the number $G$
+of such groups satisfies $G\le V/2$.
+
+Drop each retained row $b$ whose residual mass
+$\sum_{a\in W}|A_{b,a}|$ is at most $2D$. If $D>0$, the number $R$ of
+rows still retained satisfies
+\[
+ 2DR < \sum_{\text{retained }b}\sum_{a\in W}|A_{b,a}|
+       \le DV,
+\]
+and hence $R<V/2$. If $D=0$, all matrix entries vanish and all rows have
+been dropped, so again $R+G<V$. There is therefore a nonzero direction
+supported on $W$ preserving the retained row equations and the $G$
+group-sum equations. Move in that direction until the first coordinate
+reaches zero or one, and fix all new boundary coordinates. A positive
+finite move is possible because every coordinate of $W$ starts strictly
+inside $(0,1)$. Repeat. At least one additional coordinate is fixed at
+each move, so there are finitely many moves and the result is an integral
+group choice $y$.
+
+A retained row is exact until it is dropped. If row $b$ is dropped at
+the point $x^*$ with fractional coordinate set $W^*$, only coordinates
+in $W^*$ can move later. Consequently
+\[
+ |A_b(y-p)|
+ =\left|\sum_{a\in W^*}A_{b,a}(y_a-x^*_a)\right|
+ \le \sum_{a\in W^*}|A_{b,a}|\le 2D.
+\]
+A row never dropped remains exact. The error bound charges a row only at
+its single deletion, rather than at every move, proving \eqref{eq:round}.
+The rational running-time claim can be obtained from the cited theorem;
+Section~\ref{sec:algorithm} also describes a rational LP implementation.
+\end{proof}
+
+\section{Protecting large features and separating small ones}
+\label{sec:blocks}
+
+Set $q=kt\ge2$. Call an occurrence \emph{large} if $|S_e|\ge q$, and
+\emph{small} otherwise.
+
+\begin{lemma}
+\label{lem:witness}
+There are pairwise disjoint sets $B_e\subseteq S_e$, each of size $k$,
+one for every large occurrence $e$.
+\end{lemma}
+\begin{proof}
+For any subfamily $Q$ of large tagged occurrences, count incidences using
+\eqref{eq:sparsity}:
+\[
+ kt|Q|\le\sum_{e\in Q}|S_e|
+         \le t\left|\bigcup_{e\in Q}S_e\right|.
+\]
+Thus $|\bigcup_{e\in Q}S_e|\ge k|Q|$. Form a bipartite graph with $k$
+demand copies of every large occurrence on the left and the items on the
+right; each copy of $e$ is adjacent to $S_e$. For any subset $X$ of
+copies, let $Q$ be the occurrences represented in $X$. Then
+$|N(X)|=|\bigcup_{e\in Q}S_e|\ge k|Q|\ge|X|$. Hall's theorem gives a
+matching saturating all copies. Their matched items are the desired
+witness sets. The argument counts tags even when incidence sets coincide.
+\end{proof}
+
+Add one singleton block for each unmatched item. The witnesses and these
+singletons form a partition $\calB$ of $[n]$, with block sizes $k$ or one.
+Assign distinct base colors $a(j)\in\Zk$ to the $k$ items of each witness,
+and base color zero to each singleton. Block $B$ has $k$ allowed states:
+in state $r\in\Zk$, its items receive colors
+\begin{equation}
+ \chi(j)=a(j)+r\pmod k \qquad(j\in B).
+ \label{eq:states}
+\end{equation}
+In every state each witness contains every color. Every large occurrence
+therefore contributes exactly one to each color's coverage, for every
+choice of states of all blocks. It will remain a color-independent
+constant throughout the proof.
+
+Define a simple graph on $\calB$, joining distinct blocks whenever a small
+occurrence meets both.
+
+\begin{lemma}
+\label{lem:classes}
+The block graph has a proper coloring with
+$H\le(q-1)^2$ classes $\calC_1,\ldots,\calC_H$. Each small occurrence
+meets at most one block in any one class.
+\end{lemma}
+\begin{proof}
+A block $B$ meets at most $|B|t\le q$ tagged occurrences. A small
+occurrence has at most $q-1$ items, so if it meets $B$ it meets at most
+$q-2$ other blocks. Hence the degree of $B$ is at most $q(q-2)$,
+where counting neighbors more than once only increases the estimate.
+Greedy coloring uses at most $q(q-2)+1=(q-1)^2$ classes. Blocks in one
+class cannot both meet a small occurrence, by definition of adjacency.
+When $q=2$, every small occurrence is a singleton and the graph is
+edgeless, as the formula requires.
+\end{proof}
+
+\section{Affine coverage on a class of blocks}
+\label{sec:affine}
+
+Give every block $B$ a probability vector
+$p_B=(p_{B,r})_{r\in\Zk}$ on its allowed states. Choose states
+independently \emph{between blocks}, retaining all dependencies between
+items of the same block. For the resulting product law define
+\[
+ \Phiic(p)=\mathbb{E}[f_i(T_c)].
+\]
+Initially let every $p_{B,r}=1/k$. Adding the same shift to every block
+rotates all colors and preserves this product law. Thus there is a common
+value $\mu_i$ with
+\begin{equation}
+ \Phiic(p^{(0)})=\mu_i \qquad(c\in\Zk).
+ \label{eq:symmetry}
+\end{equation}
+This symmetry does not require independent colors within a block.
+
+Fix a class $\calC$ and hold all probabilities outside $\calC$ fixed.
+For a small occurrence $e$ meeting $B\in\calC$, define
+\begin{align*}
+ z_{e,c}(r)&=\ind[\text{some }j\in S_e\cap B
+                         \text{ has }a(j)+r=c\pmod k],\\
+ v_{e,c}&=\Pr[\text{no block outside }\calC
+                         \text{ gives color }c\text{ to }S_e].
+\end{align*}
+The occurrence meets at most one block of $\calC$, by
+Lemma~\ref{lem:classes}. Independence of that block and the outside
+blocks therefore gives the exact hit probability
+\begin{equation}
+ \Pr[S_e\cap T_c\ne\varnothing]
+    =1-v_{e,c}+v_{e,c}\sum_{r\in\Zk}p_{B,r}z_{e,c}(r).
+ \label{eq:feature-affine}
+\end{equation}
+If $e$ meets no class block, its contribution is constant. Summing
+\eqref{eq:feature-affine} over small occurrences and adding the constant
+large-feature contributions gives an affine map
+\begin{equation}
+ (\Phiic(p))_{i,c}=b+A p_{\calC},\qquad
+ A_{(i,c),(B,r)}=
+ \sum_{\substack{e=(i,u)\text{ small}\\S_e\cap B\ne\varnothing}}
+                    v_{e,c}z_{e,c}(r).
+ \label{eq:matrix}
+\end{equation}
+The vector $b$ and matrix $A$ depend on the fixed outside laws.
+
+\begin{lemma}
+\label{lem:column}
+The matrix in \eqref{eq:matrix} has nonnegative entries and
+$\|A\|_1\le q$.
+\end{lemma}
+\begin{proof}
+For fixed $B,r$, all items of $B$ receive distinct colors. Consequently
+$\sum_{c\in\Zk}z_{e,c}(r)=|S_e\cap B|$, including when $e$ contains
+several items of $B$. Since $0\le v_{e,c}\le1$,
+\begin{align}
+ \sum_{i,c} A_{(i,c),(B,r)}
+ &\le\sum_{\substack{e\text{ small}\\S_e\cap B\ne\varnothing}}
+                       |S_e\cap B| \notag\\
+ &=\sum_{j\in B}d_{\rm small}(j)
+ \le |B|t\le q,
+ \label{eq:column}
+\end{align}
+where $d_{\rm small}(j)$ counts small tagged occurrences containing $j$.
+All terms in \eqref{eq:matrix} are nonnegative. This proves the claimed
+absolute column bound. In particular, multiplicities are included and no
+extra factor equal to the number of colors or functions is introduced.
+\end{proof}
+
+\section{Rounding the classes}
+\label{sec:finish}
+
+\begin{proof}[Proof of the existence assertion in Theorem~\ref{thm:main}]
+Starting from $p^{(0)}$, process the classes in order. In class
+$\calC_h$, hold all outside laws fixed and apply Lemma~\ref{lem:round}
+to \eqref{eq:matrix}, with one $k$-coordinate group per block and $D=q$.
+Make the states in this class deterministic using the integral group
+choices returned by the lemma. If $p^{(h)}$ is the full collection of
+block laws after this step, then for every $i,c$,
+\begin{equation}
+ |\Phiic(p^{(h)})-\Phiic(p^{(h-1)})|\le2q.
+ \label{eq:stage}
+\end{equation}
+At each step the matrix is recomputed using the actual outside laws.
+Earlier classes are point masses, and later classes are still uniform.
+Both are legitimate marginals of the same product-law definition of
+$\Phi$. Thus \eqref{eq:stage} compares consecutive evaluations of one
+functional; it does not require the matrices of different classes to
+coincide.
+
+After $H$ stages every block law is a point mass. The final $\Phiic$ is
+the actual coverage $f_i(T_c)$ of the selected coloring. Telescoping
+\eqref{eq:stage} and using \eqref{eq:symmetry} gives
+$|f_i(T_c)-\mu_i|\le2qH$. Subtracting the same $\mu_i$ for two colors
+and using Lemma~\ref{lem:classes} yields
+\[
+ |f_i(T_c)-f_i(T_{c'})|\le4qH\le4kt(kt-1)^2.
+\]
+This holds simultaneously for all functions and pairs of colors.
+\end{proof}
+
+\section{Deterministic construction and encoding length}
+\label{sec:algorithm}
+
+We justify the time claim in the explicit input model of
+Theorem~\ref{thm:main}. In particular, a large binary value of $k$ must not
+force an exponentially expanded state space.
+
+If $k\ge n$, assign distinct colors to the items. A nonempty color class
+is a singleton, whose value for any $f_i$ is at most $d(j)\le t$; empty
+classes have value zero. The discrepancy is therefore at most $t$, which
+implies \eqref{eq:bound}. The output labels have polynomial length.
+Hence assume $k<n$. Replace the supplied $t$, for implementation purposes,
+by $d=\max(1,\max_j d(j))\le t$. The function
+$x\mapsto4kx(kx-1)^2$ is increasing for $x\ge1$ and $k\ge2$, so the
+resulting guarantee implies \eqref{eq:bound}. Both $k$ and $d$ are now
+polynomially bounded by the explicit input length. Features and functions
+with no incidence can be discarded.
+
+Use the threshold $kd$ in Lemma~\ref{lem:witness}. The matching graph has
+at most $n$ demand copies: the proof's counting inequality, applied to
+all large occurrences, gives this directly. Its edge list is polynomial
+in the incidence input because $k<n$. Finite bipartite matching, block
+graph construction, and greedy coloring are polynomial time. The actual
+number of nonempty classes is at most the number of blocks, hence at
+most $n$, regardless of the numerical upper bound $(kd-1)^2$.
+
+It remains to control the rational matrices used for rounding. At the
+start of a class, every outside block is either uniform or deterministic.
+For a uniform outside block $B$, the probability of missing a fixed
+color on $S_e\cap B$ equals
+\[
+ \frac{k-|S_e\cap B|}{k},
+\]
+because its base colors are distinct. A deterministic outside block has
+miss probability zero or one. Therefore $v_{e,c}$ is a product of at most
+$n$ rational factors with denominator $k$. If $M=|\calE|$, every
+coefficient of \eqref{eq:matrix} has a representation with denominator
+dividing $k^n$ and bit length $O(n\log k+\log(M+1))$. The initial target
+for the current uniform class has denominator dividing $k^{n+1}$.
+There are at most $mk$ rows and $nk$ columns. The rational matrix and
+target thus have polynomial encoding length and can be computed exactly.
+The polynomial-time equal-group version of Lemma~\ref{lem:round} applies.
+
+For completeness, one may implement the displayed rounding proof without
+assuming a bit bound for arbitrary repeated nullspace moves. After
+dropping light rows, consider the bounded rational polytope defined by
+the remaining row equations, group sums, bounds $0\le x_a\le1$, and all
+previously fixed coordinates. It is nonempty. Since $R+G<V$, a point
+strictly inside the bounds of all $V$ remaining coordinates cannot be a
+vertex: a nonzero homogeneous direction would permit movement in both
+directions. Thus any vertex fixes at least one further coordinate.
+Obtain a vertex by sequentially optimizing coordinates and restricting
+to the corresponding optimal faces. Polynomial-time rational linear
+programming suffices. Each retained row has its original target $A_bp$
+for this class, adjusted only by original coefficients of coordinates
+fixed at zero or one. The constraint coefficients and right sides
+therefore keep polynomial bit length, and determinant bounds give the
+same property for vertex coordinates. There are at most $nk$ coordinate
+fixings per class. This yields a deterministic polynomial-time
+implementation and completes Theorem~\ref{thm:main}.
+
+\section{Limits and verification}
+
+The result gives existence and an explicit-input algorithm for all
+parameters in \eqref{eq:sparsity}--\eqref{eq:coverage}. It does not optimize
+the $t,k$ exponents. A single item covering $t$ distinct features has
+discrepancy $t$ for every $k\ge2$, the lower-bound example also discussed
+in \cite[Section~1.3]{ARW26}; a substantial parameter gap remains. The
+categorical construction does not by itself address arbitrary weighted
+coverage or arbitrary influence-sparse Lipschitz functions.
+
+The proof uses no computational search. Supplementary exact-rational
+diagnostics tested the categorical identities, witness conditions, and
+grouped rounding on finite instances. A separate model context also
+reconstructed the argument and checked finite instances using a separately
+written exact-arithmetic program. These checks do not establish the
+infinite theorem, replace the proof, certify priority, or constitute
+external peer review. The comparison with the cited primary results is
+limited to the literature inspected.
+
+\paragraph{AI methodology.}
+OpenAI Codex provided substantial assistance with the proof development,
+counterexample checks, exact-arithmetic code, literature comparison, and
+the writing of this manuscript; this assistance materially affected all
+sections. A separate model context assisted with proof and source checks.
+No claim of human verification or formal proof certification is made.
+
+\clearpage
+\bibliographystyle{alpha}
+\bibliography{references}
+\end{document}

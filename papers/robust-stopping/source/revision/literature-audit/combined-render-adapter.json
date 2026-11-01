@@ -1,0 +1,43 @@
+{
+  "source_candidate": "combined-build-candidate.bib",
+  "source_candidate_sha256": "86c0aaad509eaf55a0cee349df4c081e10dd503d4c8eec846dd2cf61f92055ff",
+  "source_candidate_unchanged": true,
+  "adapter_file": "combined-render-adapter.bib",
+  "adapter_sha256": "ce69fbd7332ac2a3c783fe0c17994cb8b87fbdbc6699c36052ec24d72d7c681d",
+  "entry_count": 12,
+  "official_keys_unchanged": true,
+  "abstract_fields_remaining": 0,
+  "changes": [
+    {
+      "key": "Dinitz_2024",
+      "changed_component": "entry_type",
+      "before": "inbook",
+      "after": "inproceedings",
+      "field_changes": [],
+      "reason": "alpha.bst formats conference venue from booktitle for inproceedings; official Crossref inbook omits it."
+    },
+    {
+      "key": "kang2025learningaugmentedskirentaldiscrete",
+      "changed_component": "added_field",
+      "field": "howpublished",
+      "before": null,
+      "after": "{arXiv:2512.07313, \\url{https://arxiv.org/abs/2512.07313}}",
+      "derived_from_existing_official_fields": {
+        "eprint": "2512.07313",
+        "url": "https://arxiv.org/abs/2512.07313"
+      },
+      "reason": "alpha.bst ignores eprint/archivePrefix/url for misc; howpublished renders the verified preprint identifier and clickable URL."
+    }
+  ],
+  "all_other_fields_and_values_preserved": true,
+  "validation": {
+    "command": "bibtex -terse combined-render-validation",
+    "exit_code": 0,
+    "bbl_entry_count": 12,
+    "warnings_or_errors": [],
+    "soda_venue_renders": true,
+    "kang_arxiv_identifier_and_url_render": true,
+    "manuscript_compile_run": false
+  },
+  "scope": "Style adaptation only, not new metadata, mathematical acceptance or manuscript editing."
+}

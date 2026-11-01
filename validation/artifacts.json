@@ -1,0 +1,55 @@
+{
+  "verified": true,
+  "papers": [
+    {
+      "id": "coverage-sparse",
+      "files": 83,
+      "hashes_and_expansion_verified": true
+    },
+    {
+      "id": "privacy-interpolation",
+      "files": 83,
+      "hashes_and_expansion_verified": true
+    },
+    {
+      "id": "robust-stopping",
+      "files": 141,
+      "hashes_and_expansion_verified": true
+    },
+    {
+      "id": "curvature-noise",
+      "files": 68,
+      "hashes_and_expansion_verified": true
+    },
+    {
+      "id": "advice-matching",
+      "files": 78,
+      "hashes_and_expansion_verified": true
+    },
+    {
+      "id": "c002-coverage",
+      "files": 66,
+      "hashes_and_expansion_verified": true
+    },
+    {
+      "id": "c009-cycle2",
+      "files": 89,
+      "hashes_and_expansion_verified": true
+    },
+    {
+      "id": "c012-upcycles",
+      "files": 221,
+      "hashes_and_expansion_verified": true
+    },
+    {
+      "id": "c015-imagebound",
+      "files": 69,
+      "hashes_and_expansion_verified": true
+    },
+    {
+      "id": "c017-wheeler",
+      "files": 101,
+      "hashes_and_expansion_verified": true
+    }
+  ]
+}

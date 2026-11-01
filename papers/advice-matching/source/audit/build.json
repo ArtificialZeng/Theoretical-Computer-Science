@@ -1,0 +1,11 @@
+{
+  "verdict": "accept",
+  "job_id": "advice-matching-release-01731cae3c13",
+  "snapshot_digest": "9e5ce19e70bcedf07302fd469630c6922133d2418685a0789184566a1578f92c",
+  "manuscript_digest": "190ac5d740b6eba350826842752400ef3de5381f01b0c88aaf1f9350a2472763",
+  "pdf_digest": "97f90509d1413691ce7cb13e0c7dc8bc0ee2a2b1f133131cc43a2ed9cea6ffa2",
+  "report": "audit/build.md",
+  "build_log": "manuscript/main.log",
+  "build_log_digest": "8f828024ac2e268889bd5a4d5928a8a0d90bc7f9f71d6504a769005be780b9e0",
+  "clean_build": true
+}

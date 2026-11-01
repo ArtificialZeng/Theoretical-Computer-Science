@@ -1,0 +1,30 @@
+{
+  "job_id": "c012-upcycles-research-cfe911474960",
+  "label": "bad_zero_n4",
+  "status": "UNSAT",
+  "returncode": 20,
+  "hard_timeout": false,
+  "elapsed_seconds": 0.006625166977755725,
+  "cap_seconds": 60,
+  "child_cpu_seconds": 0.0044219999999999884,
+  "command": [
+    "/opt/homebrew/bin/cadical",
+    "--check",
+    "--lrat",
+    "--no-binary",
+    "-t",
+    "60",
+    "evidence/research1-sat/bad_zero_n4.cnf",
+    "evidence/research1-sat/bad_zero_n4.lrat"
+  ],
+  "completed_utc": "2026-11-01T04:34:16.489187+00:00",
+  "cnf": "evidence/research1-sat/bad_zero_n4.cnf",
+  "encoding": "evidence/research1-sat/bad_zero_n4.encoding.json",
+  "log": "evidence/research1-sat/bad_zero_n4.log",
+  "proof": "evidence/research1-sat/bad_zero_n4.lrat",
+  "cnf_sha256": "49402b41217a83693ef25430b9428d1b212887b59ecd1f505dac867612654108",
+  "proof_sha256": "d0d6e9f2c3d2133b22b24a5a8d0d3b969bc93adacb1cd5847a5ef3ee7f3f2d2a",
+  "source_sha256": "773f9e28946e0ee6f8def64bd988a0e6ae6f1a095968d275914978caa6ce2eac",
+  "variables": 21,
+  "clauses": 94
+}

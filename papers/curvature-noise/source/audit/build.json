@@ -1,0 +1,12 @@
+{
+  "verdict": "accept",
+  "job_id": "curvature-noise-release-132a90b124b3",
+  "snapshot_digest": "52edefc6f6361e426065ff407f44843ddc5a208b768db3f0cb7b916dd62ef407",
+  "manuscript_digest": "461b304d23fe9953c8530bace0f1fd06480deecffd645e16b5608b67b7f21d47",
+  "pdf_digest": "2a3b071bfdd103f2e2bbbde6f590ea75ee26229a96b46b0c79b3e02d754cf012",
+  "report": "audit/build.md",
+  "build_log": "audit/release-build.log",
+  "build_log_digest": "b4ac62345e6d4f5dcf62d3d347765819b07df2f88eebde1b4afd05763b8fc495",
+  "clean_build": true,
+  "scope": "Fresh inspection of existing final clean compiler log and current frozen PDF; no recompilation/source edit claimed. Actual final log has no fatal/undefined/overfull/missing-glyph diagnostics. One visually harmless underfull vbox disclosed. Fresh exact reproduction and metadata/fonts/source-archive checks passed."
+}

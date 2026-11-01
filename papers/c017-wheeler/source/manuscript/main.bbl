@@ -1,0 +1,135 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{6}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter does
+%%% not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+\makeatletter
+\@ifundefined{NAT@parse@date}{}{\let\NAT@parse@date@orig\NAT@parse@date}
+\@ifundefined{NAT@parse@date}{}{\def\NAT@parse@date#1#2#3#4#5#6@@{\NAT@parse@date@orig#1#2#3#4#5#6@@\def\NAT@tempyear{0000}\def\NAT@tempexlab{{?}}\ifx\NAT@year\NAT@tempyear\ifx\NAT@exlab\NAT@tempexlab\def\NAT@date{[n.\,d.]}\else\edef\NAT@date{[n.\,d.]\NAT@exlab}\fi\fi}}
+\makeatother
+
+\bibitem[B{\'e}al and Carton(2000)]%
+        {BC00}
+\bibfield{author}{\bibinfo{person}{Marie-Pierre B{\'e}al} {and}
+  \bibinfo{person}{Olivier Carton}.} \bibinfo{year}{2000}\natexlab{}.
+\newblock \showarticletitle{Computing the prefix of an automaton}.
+\newblock \bibinfo{journal}{\emph{RAIRO. Theoretical Informatics and
+  Applications}} \bibinfo{volume}{34}, \bibinfo{number}{6}
+  (\bibinfo{year}{2000}), \bibinfo{pages}{503--514}.
+\newblock
+\urldef\tempurl%
+\url{https://www.numdam.org/item/ITA_2000__34_6_503_0/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Becker et~al\mbox{.}(2023)]%
+        {Becker23}
+\bibfield{author}{\bibinfo{person}{Ruben Becker}, \bibinfo{person}{Davide
+  Cenzato}, \bibinfo{person}{Sung-Hwan Kim}, \bibinfo{person}{Bojana Kodric},
+  \bibinfo{person}{Alberto Policriti}, {and} \bibinfo{person}{Nicola Prezza}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{Optimal {Wheeler} Language Recognition}.
+\newblock
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2306.04737}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{arXiv:2306.04737v2, 18 December 2023}.
+
+
+\bibitem[Blumensath(1999)]%
+        {Blum99}
+\bibfield{author}{\bibinfo{person}{Achim Blumensath}.}
+  \bibinfo{year}{1999}\natexlab{}.
+\newblock \emph{\bibinfo{title}{Automatic Structures}}.
+\newblock Diploma thesis. \bibinfo{school}{RWTH Aachen}.
+\newblock
+\urldef\tempurl%
+\url{https://www.fi.muni.cz/~blumens/Publications/AutStr.pdf}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Blumensath and Gr{\"a}del(2000)]%
+        {BG00}
+\bibfield{author}{\bibinfo{person}{Achim Blumensath} {and}
+  \bibinfo{person}{Erich Gr{\"a}del}.} \bibinfo{year}{2000}\natexlab{}.
+\newblock \showarticletitle{Automatic Structures}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the Fifteenth Annual IEEE Symposium
+  on Logic in Computer Science (LICS 2000)}}. \bibinfo{publisher}{IEEE Computer
+  Society Press}, \bibinfo{address}{Santa Barbara, CA, USA},
+  \bibinfo{pages}{51--62}.
+\newblock
+\urldef\tempurl%
+\url{https://lics.siglog.org/archive/2000/BlumensathGradel-AutomaticStructures.html}
+\showURL{%
+\tempurl}
+
+
+\bibitem[D'Agostino and Paradiso(2026a)]%
+        {DP26}
+\bibfield{author}{\bibinfo{person}{Giovanna D'Agostino} {and}
+  \bibinfo{person}{Andrea Paradiso}.} \bibinfo{year}{2026}\natexlab{a}.
+\newblock \bibinfo{title}{Finite-State Transducers in the {Wheeler} Setting}.
+\newblock
+\urldef\tempurl%
+\url{https://arxiv.org/html/2606.29405v3}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{arXiv:2606.29405v3, 13 August 2026}.
+
+
+\bibitem[D'Agostino and Paradiso(2026b)]%
+        {DP26short}
+\bibfield{author}{\bibinfo{person}{Giovanna D'Agostino} {and}
+  \bibinfo{person}{Andrea Paradiso}.} \bibinfo{year}{2026}\natexlab{b}.
+\newblock \showarticletitle{Finite-State Transducers in the {Wheeler} Setting}.
+  In \bibinfo{booktitle}{\emph{Proceedings of the 27th Italian Conference on
+  Theoretical Computer Science (ICTCS 2026)}} \emph{(\bibinfo{series}{CEUR
+  Workshop Proceedings}, Vol.~\bibinfo{volume}{4269})},
+  \bibfield{editor}{\bibinfo{person}{Luca Geatti} {and} \bibinfo{person}{Carla
+  Piazza}} (Eds.). \bibinfo{publisher}{CEUR-WS.org}, \bibinfo{address}{Udine,
+  Italy}, \bibinfo{pages}{66--70}.
+\newblock
+\urldef\tempurl%
+\url{https://ceur-ws.org/Vol-4269/paper46.pdf}
+\showURL{%
+\tempurl}
+
+
+\end{thebibliography}

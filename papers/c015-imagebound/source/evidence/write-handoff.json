@@ -1,0 +1,11 @@
+{
+  "job_id": "c015-imagebound-write-9f5b77760f77",
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "pdf": "manuscript/main.pdf",
+  "pages": 6,
+  "manuscript_snapshot": "audit/manuscript-snapshot.json",
+  "release_pending": true,
+  "next_test": "Fresh release-phase citation, build and visual review of the frozen manuscript; then actual release gate if checks pass."
+}

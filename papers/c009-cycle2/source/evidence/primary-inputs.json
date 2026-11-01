@@ -1,0 +1,37 @@
+[
+  {
+    "file": "evidence/primary/2512.11222-paper.txt",
+    "sha256": "ea1801e41294c1fcb680b0ec786fc661ed740e87743ac977a626d7b4600254e2",
+    "url": "https://arxiv.org/abs/2512.11222v1",
+    "copied_utc": "2026-11-01T02:25:40.324234+00:00",
+    "provenance": "Existing primary PDF text extraction; relevant passages independently inspected during triage."
+  },
+  {
+    "file": "evidence/primary/2212.09343-paper.txt",
+    "sha256": "0758444f8a88b8c2c789731973d48d3f549649c1b7d70d1f5d59f988b5b92224",
+    "url": "https://arxiv.org/abs/2212.09343v3",
+    "copied_utc": "2026-11-01T02:25:40.324641+00:00",
+    "provenance": "Existing primary PDF text extraction; relevant passages independently inspected during triage."
+  },
+  {
+    "file": "evidence/primary/2210.16971-paper.txt",
+    "sha256": "608b0f432e2cf526a90f7ef5d48f0d87bb72eb92f00986c24f39f75b3482da1e",
+    "url": "https://arxiv.org/abs/2210.16971v1",
+    "copied_utc": "2026-11-01T02:25:40.324861+00:00",
+    "provenance": "Existing primary PDF text extraction; relevant passages independently inspected during triage."
+  },
+  {
+    "file": "evidence/primary/2402.08418-paper.txt",
+    "sha256": "d4e8bd0f2a2d02b8267e002c68d799c9222894507e50722d6f2d21ac7c661f2f",
+    "url": "https://arxiv.org/abs/2402.08418v1",
+    "copied_utc": "2026-11-01T02:25:40.325083+00:00",
+    "provenance": "Existing primary PDF text extraction; relevant passages independently inspected during triage."
+  },
+  {
+    "file": "evidence/primary/2605.14138-paper.txt",
+    "sha256": "6e1b804b5c42457d7796093dc605d86613a83a48779a201466c3dd17b14043f7",
+    "url": "https://arxiv.org/abs/2605.14138",
+    "copied_utc": "2026-11-01T02:25:40.325627+00:00",
+    "provenance": "Existing primary PDF text extraction; relevant passages independently inspected during triage."
+  }
+]

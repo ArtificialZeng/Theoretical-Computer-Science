@@ -1,0 +1,236 @@
+\section{Introduction}
+A mechanism on an interval assigns a probability vector to each input. For a finite output alphabet, bounding every coordinate log derivative by $L$ guarantees both directions of metric differential privacy between every pair of inputs. Normalization couples the coordinates: keeping an output probability between its endpoint values can require a larger budget than allowing it to rise temporarily. We quantify this effect exactly for a three-output family and identify the sharp worst cost of preserving coordinate shape in any dimension.
+
+For $n\ge2$, let $\simplex=\{x\in(0,1)^n:\sum_i x_i=1\}$. All logarithms are natural. For positive endpoints $p,q\in\simplex$, write
+\begin{equation}\label{eq:model}
+ \dDP(p,q)=\max_i\left|\log\frac{p_i}{q_i}\right|,
+ \qquad \cost(r)=\esssup_{t\in[0,1]}\max_i\frac{|r_i'(t)|}{r_i(t)}.
+\end{equation}
+Paths $r:[0,1]\to\simplex$ are absolutely continuous, with $r(0)=p$ and $r(1)=q$. Define $\Lambda(p,q)=\inf_r\cost(r)$. A finite budget $\cost(r)\le L$ implies $\dDP(r(s),r(t))\le L|s-t|$ by integration, so it controls the whole interval, including its endpoints.
+
+Let $\Lmon(p,q)$ restrict the infimum to paths whose coordinates are monotone in their endpoint directions, with equal endpoints forcing a constant coordinate. Let $\Lbox(p,q)$ instead require
+\begin{equation}\label{eq:box}
+ \min\{p_i,q_i\}\le r_i(t)\le\max\{p_i,q_i\}\qquad\text{for all }i,t.
+\end{equation}
+The affine path belongs to both classes, and
+$\Lambda\le\Lbox\le\Lmon$. Our main result determines the entire tradeoff between budget and peak probability for swapped triplets. It then yields the exact worst ratios $\Lmon/\Lambda$ and $\Lbox/\Lambda$. A final theorem evaluates general necessary peak certificates in exact arithmetic.
+
+\paragraph{Relation to existing results.}
+Borgs, Chayes, Smith and Zadik~\cite{BCSZ18}, Proposition~2.1, prove that a private algorithm on a subset of an arbitrary metric input space admits an extension with twice the privacy parameter. This is the relevant general extension baseline. Dong, Roth and Su~\cite{DRS19}, Theorem~2.10 and Proposition~2.15, provide Blackwell comparison and the continuous-group Laplace limit; these are background for unrestricted reachability. Our proofs use elementary scalar speed bounds to study additional constraints on the entire normalized path.
+
+Qiu~\cite{Qiu26}, Definitions~5--6 and Proposition~3, explicitly normalizes log-convex interpolation and accounts for its privacy cost. Liu and Qiu~\cite{LQ26}, Section~5.2 and Appendix~E, calibrate pre-normalization budgets and use endpoint envelopes in their graph-based extension framework. The optimization here minimizes an individual output's peak over \emph{all} admissible normalized paths. Normalization can move coordinates outside their endpoint ranges, so the restriction in~\eqref{eq:box} must be checked on the normalized probabilities themselves.
+
+The endpoint metric in~\eqref{eq:model} is the restriction of the positive-orthant Thompson metric. Lemmens and Roelands~\cite{LR15}, Theorems~4.3 and~5.1, study uniqueness for cone Thompson geodesics; their Theorem~5.2 concerns Hilbert geodesics on a section. We prove the stated normalized-path uniqueness directly by saturation. Fern\'andez de Bobadilla, Hontarenko, M\"uller-Rigat and \.{Z}yczkowski~\cite{FHMZ26}, Proposition~6 and Theorem~8, study a one-sided instantaneous cost
+$F_\infty(p,v)=\max_{v_i<0}|v_i|/p_i$ (with value zero at $v=0$) and its optimized endpoint quasi-distance. Our instantaneous cost is $\max\{F_\infty(p,v),F_\infty(p,-v)\}$ before optimizing paths. The two optimizations differ. The contribution here is the all-budget excursion frontier and the sharp cost of coordinate restrictions; the scalar binary calculation, affine length argument and endpoint-envelope principle are standard ingredients.
+
+\section{An exact budget--peak frontier}
+Index the coordinates of a triplet by $0,1,2$. Coordinate $0$, whose endpoints agree, will be called the reservoir. For fixed endpoints define
+\[
+ P_0(L)=\inf_{r:\,\cost(r)\le L}\ \max_{t\in[0,1]}r_0(t).
+\]
+The next theorem includes an attaining path, so the feasible infima are minima.
+
+\begin{theorem}[Swapped-triplet frontier]\label{thm:frontier}
+Let $0<a<b$, $a+b<1$, $c=1-a-b$, $p=(c,a,b)$ and $q=(c,b,a)$. Put
+\begin{equation}\label{eq:thresholds}
+ T_* =\begin{cases}
+ \log(b/a),& b\le\tfrac12,\\
+ \log\!\bigl(1/[4a(1-b)]\bigr),& b>\tfrac12,
+ \end{cases}
+ \qquad T_0=2\log\frac{a+b}{2a}.
+\end{equation}
+A path of budget at most $L$ exists exactly when $L\ge T_*$. For every such $L$,
+\begin{equation}\label{eq:frontier}
+ P_0(L)=\max\{c,\,1-2a e^{L/2}\}.
+\end{equation}
+In particular $\Lambda(p,q)=T_*<T_0$. The unit-interval path with budget at most $T_*$ is unique. Its reservoir peak is $1-2\sqrt{ab}$ when $b\le1/2$, and $1-\sqrt{a/(1-b)}$ when $b>1/2$; both exceed $c$.
+\end{theorem}
+
+Thus the optimal budget forces an excursion of an output with identical endpoint probabilities. Increasing the budget reduces its minimum peak continuously, until the reservoir can remain constant at $L=T_0$. Table~\ref{tab:frontier} summarizes the two parameter regimes.
+
+\begin{table}[ht]
+\caption{Swapped-triplet thresholds and the peak at minimum budget. In both regimes $P_0(L)=1-2ae^{L/2}$ for $T_*\le L\le T_0$ and $P_0(L)=c$ for $L\ge T_0$.}
+\label{tab:frontier}
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+Regime & Minimum budget $T_*$ & Peak $P_0(T_*)$\\
+\midrule
+$b\le1/2$ & $\log(b/a)$ & $1-2\sqrt{ab}$\\[3pt]
+$b>1/2$ & $\log(1/[4a(1-b)])$ & $1-\sqrt{a/(1-b)}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Scalar speed bounds}
+If $\cost(r)\le L$, integrating each log derivative from both endpoints gives
+\begin{equation}\label{eq:envelope}
+ r_i(t)\le\min\{p_i e^{Lt},q_i e^{L(1-t)}\}.
+\end{equation}
+Each positive coordinate is bounded away from zero on the compact interval, so its logarithm is absolutely continuous and this integration is valid. Differentiating normalization almost everywhere also gives
+\begin{equation}\label{eq:binaryspeed}
+ |r_i'|\le Lr_i,\qquad
+ |r_i'|=\left|\sum_{k\ne i}r_k'\right|\le L(1-r_i).
+\end{equation}
+Define the increasing scalar transform
+\begin{equation}\label{eq:phi}
+ \Phi(x)=\begin{cases}
+ \log(2x),&0<x\le1/2,\\
+ -\log(2(1-x)),&1/2\le x<1.
+ \end{cases}
+\end{equation}
+It has derivative $1/\min\{x,1-x\}$, including at $1/2$. Hence
+$|(\Phi(r_i))'|\le L$ almost everywhere. For binary distributions $(x,1-x)$ and $(y,1-y)$ the minimum budget is therefore
+\begin{equation}\label{eq:binarydistance}
+ |\Phi(y)-\Phi(x)|.
+\end{equation}
+The path $x(t)=\Phi^{-1}((1-t)\Phi(x)+t\Phi(y))$ attains this value and is monotone. This elementary calculation will also determine the restricted optima.
+
+\subsection{Proof of Theorem~\ref{thm:frontier}}
+\begin{proof}
+The changing coordinate from $a$ to $b$ and~\eqref{eq:binarydistance} force $L\ge T_*$. At $t=1/2$, equation~\eqref{eq:envelope} bounds each changing coordinate by $ae^{L/2}$. Normalization gives $r_0(1/2)\ge1-2ae^{L/2}$, while the endpoints force a peak at least $c$. These prove the lower bounds.
+
+First observe that $T_*<T_0$. Indeed,
+\[
+ T_*=\int_a^b\frac{dx}{\min\{x,1-x\}},\qquad
+ T_0=\int_a^b\frac{dx}{\min\{x,a+b-x\}}.
+\]
+The first denominator is at least the second throughout, and strictly greater on $((a+b)/2,b)$, since $a+b<1$.
+
+For $T_*\le L\le T_0$, put $B=e^{L/2}$ and $H=1-2aB$. Then $H\ge c>0$ and $aB\le(a+b)/2<1/2$. On the first half of the interval use physical time $s=Lt$ and $u=e^s$, so $1\le u\le B$. Let $g$ be the fastest binary decrease from $b$ at unit physical-time budget:
+\begin{equation}\label{eq:g}
+ g(u)=\begin{cases}
+ b/u,& b\le1/2,\\
+ 1-(1-b)u,&b>1/2,\ 1\le u\le\kappa,\\
+ K/u,&b>1/2,\ u\ge\kappa,
+ \end{cases}
+ \quad
+ \kappa=\frac1{2(1-b)},\quad K=\frac1{4(1-b)}
+\end{equation}
+in the last two cases. When $b\le1/2$, set $K=b$. Define $h(u)=1-au-g(u)$ and
+\begin{equation}\label{eq:path}
+ r_1=au,\qquad r_0=\min\{H,h(u)\},\qquad
+ r_2=\max\{g(u),2aB-au\}.
+\end{equation}
+We verify that this is an admissible half-path with reservoir peak $H$.
+
+Let $u_*=\sqrt{K/a}$. The budget condition implies $B\ge u_*$. For $b>1/2$ we also have $u_*>\kappa$, since $a<1-b$. In this case $h(u)=cu$ on $[1,\kappa]$; on its later piece, and throughout when $b\le1/2$, it equals $1-au-K/u$. Thus $h$ increases from $c$ to its maximum at $u_*$, and decreases thereafter. At the last point,
+\[
+ h(B)-H=aB-K/B\ge0.
+\]
+It follows that $h\ge c$ on $[1,B]$ and that $h$ first reaches the cap $H$ at some $u_0$, remaining at least $H$ through $B$. When $H=c$ take $u_0=1$. Formula~\eqref{eq:path} consequently consists of an initial uncapped part followed by a constant-reservoir part. Its coordinates are positive and sum to one. At $u=B$ their values are $(H,aB,aB)$.
+
+A dot in the next checks denotes differentiation in $s$. In the initial uncapped binary phase when $b>1/2$, the vector is
+\[
+ (r_0,r_1,r_2)=(cu,au,1-(1-b)u).
+\]
+The first two derivatives equal their coordinates, and $|\dot r_2|=1-r_2\le r_2$ because $r_2\ge1/2$. In any later uncapped phase,
+$\dot r_1=r_1$, $\dot r_2=-r_2$ and $\dot r_0=r_2-r_1$. Both changing coordinates are then at most $1/2$, so
+\[
+ r_0+\dot r_0=1-2r_1\ge0,\qquad
+ r_0-\dot r_0=1-2r_2\ge0.
+\]
+On a capped part, $\dot r_0=0$ and $\dot r_2=-r_1$. Here
+$r_2=2aB-au\ge au=r_1$, because $u\le B$. These relations give $|\dot r_i|\le r_i$ on every piece. The formulas agree at their finitely many joins and are absolutely continuous. Reflect the half-path in time and exchange coordinates $1,2$ to define the second half. Its midpoint matches, its terminal value is $q$, and scaling $s=Lt$ proves $\cost(r)\le L$. The peak of $r_0$ is exactly $H$.
+
+At $L=T_0$ the cap is $c$, yielding the constant-reservoir binary path. For $L>T_0$ reuse this unit-interval path, of cost $T_0$. Its peak $c$ attains the lower bound. This proves feasibility and~\eqref{eq:frontier} at every budget.
+
+Finally suppose $\cost(r)\le T_*$. Then
+$\Phi(r_1(1))-\Phi(r_1(0))=T_*$ and $|(\Phi(r_1))'|\le T_*$ almost everywhere. The nonnegative deficit has integral zero, forcing $(\Phi(r_1))'=T_*$ almost everywhere. Similarly $(\Phi(r_2))'=-T_*$. Consequently
+\[
+ r_1(t)=\Phi^{-1}(\Phi(a)+T_*t),\qquad
+ r_2(t)=\Phi^{-1}(\Phi(b)-T_*t),
+\]
+and normalization fixes $r_0$. The construction proves this forced path exists. Substitution in~\eqref{eq:frontier} gives the stated peaks, each strictly above $c$ because $T_*<T_0$.
+\end{proof}
+
+For example, $a=1/16$, $b=3/4$ and $c=3/16$ give endpoint distance $\log12$ and minimum budget $\log16$. Every minimum-budget path reaches reservoir probability $1/2$, while a constant reservoir requires $T_0=2\log(13/2)$. This illustrates why the two endpoint privacy inequalities alone do not determine a feasible budget for the whole interval.
+
+\Needspace{12\baselineskip}
+\section{The sharp cost of coordinate restrictions}
+\begin{theorem}[Shape penalty and dimension threshold]\label{thm:shape}
+For every $\eta>0$ and every $n\ge3$,
+\begin{equation}\label{eq:penalty}
+ \sup_{\substack{p,q\in\simplex\\\dDP(p,q)=\eta}}
+ \frac{\Lmon(p,q)}{\Lambda(p,q)}
+ =\sup_{\substack{p,q\in\simplex\\\dDP(p,q)=\eta}}
+ \frac{\Lbox(p,q)}{\Lambda(p,q)}
+ =\frac{2\log((e^\eta+1)/2)}{\eta}.
+\end{equation}
+Each supremum is attained by strictly positive endpoints in every such dimension. For $n=2$ both ratios equal one for all distinct endpoints. The factor in~\eqref{eq:penalty} tends to two as $\eta\to\infty$.
+\end{theorem}
+\begin{proof}
+Put $E=e^\eta$ and $B_\eta=2\log((E+1)/2)$. The affine curve $\ell_i(t)=p_i+t(q_i-p_i)$ has speed
+\[
+ D(t)=\max_i\frac{|q_i-p_i|}{\ell_i(t)}.
+\]
+For a ratio $\rho=q_i/p_i\ge1$ the corresponding term is
+$(\rho-1)/(1+t(\rho-1))$, increasing in $\rho$, so it is at most
+$f(t)=(E-1)/(1+t(E-1))$. For $\rho\le1$ the term is at most
+$g(t)=(1-E^{-1})/(1-t(1-E^{-1}))$, by the same monotonicity in $1-\rho$.
+These envelopes cross at $1/2$, with $f$ larger on the first half. Hence the affine length satisfies
+\begin{equation}\label{eq:affinelength}
+ A:=\int_0^1D(t)\,dt
+ \le\int_0^{1/2}f(t)\,dt+\int_{1/2}^1g(t)\,dt
+ =B_\eta.
+\end{equation}
+Since $p\ne q$, the continuous function $D$ is positive and bounded away from zero. The map $s(t)=A^{-1}\int_0^tD(u)\,du$ therefore has a continuously differentiable inverse. Reparameterizing $\ell$ by $s$ gives cost exactly $A$ and preserves coordinate monotonicity and endpoint ranges. Because $\Lambda\ge\dDP(p,q)=\eta$, both ratios are at most $B_\eta/\eta$.
+
+For equality choose $0<a\le1/(2E)$, $b=aE$ and $c=1-a-b>0$. Theorem~\ref{thm:frontier} gives $\Lambda=\eta$, since $b\le1/2$. Both restricted classes force the reservoir to stay at $c$. The remaining coordinates have constant sum $m=a+b$; dividing them by $m$ preserves their log derivatives. Their normalized endpoints are $(1/(E+1),E/(E+1))$ and its swap. Equation~\eqref{eq:binarydistance} gives restricted optimum $B_\eta$, attained by a monotone binary path. Thus both upper bounds are attained in dimension three.
+
+For $n>3$, split $c$ into $n-2$ positive masses. Split the reservoir of the unrestricted path in these fixed proportions; its log speeds are preserved. Conversely, aggregating these coordinates preserves the derivative bound, so the unrestricted optimum remains $\eta$. Every restricted path fixes each split coordinate, giving the same binary restricted optimum. For $n=2$, the unrestricted binary optimum in~\eqref{eq:binarydistance} already satisfies both restrictions. Finally $B_\eta/\eta\to2$ follows directly from its formula.
+\end{proof}
+
+The comparison is with the actual unrestricted optimum. In particular, in the attaining triplets the endpoint distance itself is achievable, while preserving endpoint ranges requires the larger budget $B_\eta$. A coordinate with equal endpoints is enough to create the obstruction once three outputs are available.
+
+\section{Exact necessary certificates for general endpoints}
+The same endpoint envelopes give a certificate for the peak of any selected coordinate, without constructing a path. Write $Z=e^L$; rational input to the algorithm means rational $p,q,Z$, even when $L$ is not rational.
+
+\begin{theorem}[Excursion-certificate sweep]\label{thm:sweep}
+Let $n\ge2$, $p,q\in\simplex$ and
+$Z=e^L\ge\max_i\{p_i/q_i,q_i/p_i\}$. For each coordinate $j$, define
+\begin{equation}\label{eq:cert}
+ S_j(z)=\sum_{i\ne j}\min\{p_i z,Zq_i/z\},\quad 1\le z\le Z,
+ \qquad C_j=1-\min_{1\le z\le Z}S_j(z).
+\end{equation}
+Every path of budget at most $L$ satisfies
+\[
+ \max_t r_j(t)\ge C_j\ge\max\{p_j,q_j\}.
+\]
+For rational $p,q,Z$, one can compute $C_j=1-\sqrt{R_j}$ with $R_j$ rational in $O(n\log n)$ rational arithmetic operations and comparisons, plus one square root. All coordinates take $O(n^2+n\log n)$ such operations and at most $n$ square roots. These are arithmetic-operation bounds. For the reservoir of Theorem~\ref{thm:frontier}, the certificate equals the true minimum peak at every feasible budget.
+\end{theorem}
+\begin{proof}
+Normalization and~\eqref{eq:envelope} give $r_j(t)\ge1-S_j(e^{Lt})$. Taking the maximum proves the certificate for $L>0$. If $L=0$, the endpoint hypothesis forces $p=q$ and every admissible path is constant, giving the same formula directly. At $z=1$ every minimum selects $p_i$, and at $z=Z$ it selects $q_i$, proving endpoint inclusion. If the endpoint hypothesis fails, the endpoint distance already rules out the budget.
+
+Put $v=z^2$. Coordinate $i$ changes branch at the rational breakpoint $v_i=Zq_i/p_i\in[1,Z^2]$. Sort $q_i/p_i$ and group equal values. On any cell the envelope sum is $Az+B/z$, where $A,B\ge0$ are rational. Initially $A=1-p_j$, $B=0$. At each event, transfer every $i\ne j$ in the group by
+\[
+ A\leftarrow A-p_i,\qquad B\leftarrow B+Zq_i.
+\]
+For a closed cell $v\in[\ell,h]$, its minimum squared value is the smallest of
+\begin{equation}\label{eq:cell}
+ \frac{(A\ell+B)^2}{\ell},\qquad
+ \frac{(Ah+B)^2}{h},\qquad
+ 4AB\ \text{ if }A,B>0\text{ and }\ell\le B/A\le h.
+\end{equation}
+Indeed $Az+B/z$ has its only possible interior minimum at $z^2=B/A$; if either coefficient vanishes it is monotone. It is nonnegative, so squaring preserves order. The minimum $R_j$ of these rational candidates gives exactly $C_j=1-\sqrt{R_j}$.
+
+There are $O(n)$ grouped events after sorting, with constant work per transferred index and cell. Reuse the common sorted order for every $j$, allowing the harmless event of $j$ itself and skipping its transfer. A linear scan per coordinate proves the all-coordinate bound. At $Z=1$ the sole interval is degenerate and $R_j=(1-p_j)^2$. The operation count does not bound bit complexity.
+
+For the swapped reservoir the two events are $Za/b$ and $Zb/a$, inside $[1,Z^2]$ because $Z\ge e^{T_*}\ge b/a$. On the first, middle and last cells, respectively, the sum is
+\[
+ (a+b)z,\qquad az+Za/z,\qquad Z(a+b)/z.
+\]
+The middle stationary point $z=\sqrt Z$ lies in its cell. The exterior minima equal $a+b$, so
+$\min S_0=\min\{a+b,2a\sqrt Z\}$. Therefore $C_0=\max\{c,1-2a\sqrt Z\}$, attained by Theorem~\ref{thm:frontier}.
+\end{proof}
+
+The certificate supplies a necessary lower bound for arbitrary endpoints. Its exact evaluation does not establish general cap sufficiency or solve general path feasibility.
+
+\paragraph{Reproducible checks.}
+A standard-library Python implementation accompanies the sweep, together with serialized piecewise paths for 657 small-$b$ and 210 large-$b$ instances. A separate verifier checks positivity, normalization, joins, derivative bounds and caps on complete continuous cells by quadratic inequalities. Across the 867 paths it checks 1,824 half-cells and 5,472 coordinate cells; reflection certifies the second halves. A further comparison reconstructs envelope cells directly for 233 endpoint pairs in dimensions two through eight and three budgets per pair, giving 3,483 coordinate comparisons. These finite checks support the implementations; the quantified results follow from the proofs above.
+
+\paragraph{Remaining questions.}
+The original general interpolation question, including a complete comparison of normalized geometric and transform-linear families, remains unresolved by these subsidiary results. In particular, a monotone scalar construction before normalization need not satisfy~\eqref{eq:box} afterward. General cap-feasibility criteria, a formula for the shape-restricted optimum at arbitrary endpoints, and sharper bit-complexity bounds for excursion certificates are natural further questions.
+
+\paragraph{AI assistance.}
+Codex was used for proof development, exact computations, source comparison and drafting. A separate model-context pass checked the proofs and certificates.

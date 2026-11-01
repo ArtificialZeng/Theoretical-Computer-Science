@@ -1,0 +1,71 @@
+{
+  "job_id": "c002-coverage-write-64c05c6e47b4",
+  "pages": 7,
+  "page_size": "Letter",
+  "log_issues": [],
+  "source_sha256": "b79ed29f77420ec62a957e727b934deb6b9435b41ed86deaa2c8d77c01b66f9d",
+  "official_acmart_class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "official_class_unmodified": true,
+  "long_line_font_samples": [
+    {
+      "page": 1,
+      "long_line_font_sizes": [
+        "11"
+      ]
+    },
+    {
+      "page": 2,
+      "long_line_font_sizes": [
+        "11"
+      ]
+    },
+    {
+      "page": 3,
+      "long_line_font_sizes": [
+        "11"
+      ]
+    },
+    {
+      "page": 4,
+      "long_line_font_sizes": [
+        "11"
+      ]
+    },
+    {
+      "page": 5,
+      "long_line_font_sizes": [
+        "11"
+      ]
+    },
+    {
+      "page": 6,
+      "long_line_font_sizes": [
+        "11"
+      ]
+    },
+    {
+      "page": 7,
+      "long_line_font_sizes": [
+        "11"
+      ]
+    }
+  ],
+  "rendered_and_viewed_pages": [
+    "tmp/pdfs/final-page-1.png",
+    "tmp/pdfs/final-page-2.png",
+    "tmp/pdfs/final-page-3.png",
+    "tmp/pdfs/final-page-4.png",
+    "tmp/pdfs/final-page-5.png",
+    "tmp/pdfs/final-page-6.png",
+    "tmp/pdfs/final-page-7.png"
+  ],
+  "citation_keys": [
+    "ARW26",
+    "DF25",
+    "DS03",
+    "GRW11",
+    "HMMS25"
+  ],
+  "all_publication_inputs_exist": true,
+  "mathematical_or_release_certification": false
+}

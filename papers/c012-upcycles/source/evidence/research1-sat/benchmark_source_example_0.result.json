@@ -1,0 +1,31 @@
+{
+  "job_id": "c012-upcycles-research-cfe911474960",
+  "label": "benchmark_source_example_0",
+  "status": "SAT",
+  "returncode": 10,
+  "hard_timeout": false,
+  "elapsed_seconds": 0.009797749924473464,
+  "cap_seconds": 60,
+  "child_cpu_seconds": 0.003688,
+  "command": [
+    "/opt/homebrew/bin/cadical",
+    "--check",
+    "--lrat",
+    "--no-binary",
+    "-t",
+    "60",
+    "evidence/research1-sat/benchmark_source_example_0.cnf",
+    "evidence/research1-sat/benchmark_source_example_0.lrat"
+  ],
+  "completed_utc": "2026-11-01T04:34:16.241688+00:00",
+  "cnf": "evidence/research1-sat/benchmark_source_example_0.cnf",
+  "encoding": "evidence/research1-sat/benchmark_source_example_0.encoding.json",
+  "log": "evidence/research1-sat/benchmark_source_example_0.log",
+  "proof": "evidence/research1-sat/benchmark_source_example_0.lrat",
+  "cnf_sha256": "c377196977b00b374a32a98e16fbb470444dd8241b098b95e9cf7b1bc445a523",
+  "proof_sha256": "c93d84d7e61658bec8a4a9047b50ec3e4d31b3b33ef36b1c57a99e9c0328bd52",
+  "source_sha256": "773f9e28946e0ee6f8def64bd988a0e6ae6f1a095968d275914978caa6ce2eac",
+  "variables": 21,
+  "clauses": 94,
+  "model_verification": "evidence/research1-sat/benchmark_source_example_0.model-verification.json"
+}

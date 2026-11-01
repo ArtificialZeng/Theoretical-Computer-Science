@@ -1,0 +1,79 @@
+{
+  "project": "c002-coverage",
+  "actual_archive_sha256": "6a3806ba431e96816ec34b1c99fb27bca833bd81b4f287ac29bd4835e8b458dd",
+  "actual_pdf_sha256": "b2dac13ca628fb6c3b7495516ee0acbdd390a90b0942127ada2935401ba873db",
+  "build_inputs_rehashed": 9,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c002-coverage-j5aajs38/c002-coverage_source",
+  "pages": 7,
+  "text_matches": true,
+  "all_page_renders_match": true,
+  "finite_reproduction": [
+    {
+      "entry": "evidence/research_rounding_check.py",
+      "summary": {
+        "job_id": "c002-coverage-research-8e44b8ae65fb",
+        "all_assertions_passed": true,
+        "arithmetic": "exact fractions.Fraction; homogeneous rational RREF",
+        "source_sha256": "b79ed29f77420ec62a957e727b934deb6b9435b41ed86deaa2c8d77c01b66f9d",
+        "counts": {
+          "generic_cases": 385,
+          "coverage_cases": 7571,
+          "rounding_calls": 18268,
+          "floating_moves": 48507,
+          "row_drops": 94208,
+          "constrained_moves": 1888,
+          "class_stages": 17883,
+          "affine_row_checks": 186772,
+          "large_occurrences": 956,
+          "same_block_intersections": 180,
+          "repeated_occurrence_cases": 1263,
+          "exhaustive_product_expectations": 7424
+        },
+        "maxima": {
+          "classes": 12,
+          "discrepancy": 24,
+          "floating_coordinates": 72,
+          "rounding_error": "8"
+        },
+        "coverage": [
+          "All 3^4 single-row matrices over {-1,0,1}, two nonuniform/uniform two-choice group laws each.",
+          "Three equality/zero/fixed-coordinate fixtures and 220 seeded signed-rational generic matrices, groups of size 1..5.",
+          "All multisets of <=3 nonempty subsets on n=1..4, t=1,2, k=2,3, all two-function assignments to the occurrences.",
+          "Seven explicitly serialized hold-out coverage fixtures.",
+          "180 seeded degree-capped families: n=6,8,12,18,24; t=1..4; k=2..4; three repetitions, three functions."
+        ],
+        "seeds": [
+          734901,
+          184631
+        ],
+        "limitations": "Finite diagnostic checks only. Infinite theorem rests on research/proof.md. No priority, audit acceptance, or Python polynomial-runtime certification.",
+        "elapsed_seconds": 15.617
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c002-coverage-j5aajs38/reproduction-0.stdout.log"
+    },
+    {
+      "entry": "audit/referee_verify.py",
+      "summary": {
+        "job_id": "c002-coverage-referee-3e90f78a9294",
+        "all_assertions_passed": true,
+        "method": "Fresh exact Fraction enumeration; no submitted code imported or executed.",
+        "seed": 391057,
+        "counts": {
+          "serialized_certificates": 7,
+          "hall_subfamilies": 4111,
+          "affine_laws": 24,
+          "class_matrices": 45,
+          "direct_states": 6900,
+          "column_checks": 291,
+          "generic_exhaustive_rounding_cases": 160,
+          "multi_item_block_features": 5,
+          "repeated_tagged_cases": 2
+        },
+        "source_sha256": "b79ed29f77420ec62a957e727b934deb6b9435b41ed86deaa2c8d77c01b66f9d",
+        "limitations": "Finite diagnostics only; the all-parameter conclusion rests on the written proof audit. No exhaustive full-product enumeration for the two largest serialized fixtures."
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c002-coverage-j5aajs38/reproduction-1.stdout.log"
+    }
+  ],
+  "scope": "Actual delivered archive clean build/render/reproduction; not a new math or novelty verdict."
+}

@@ -1,0 +1,13 @@
+{
+  "job_id": "privacy-interpolation-research-294f008bff48",
+  "research_pass": 2,
+  "status": "exact finite computations passed; no referee verdict",
+  "endpoint_pairs": 733,
+  "budget_instances": 2199,
+  "designated_coordinate_comparisons": 8337,
+  "pairs_with_tied_ratios": 335,
+  "identical_pairs": 41,
+  "domain": "all denominator-7 positive endpoint pairs in dimensions 2..4, plus 24 seeded pairs each in dimensions 5..7; three exact budgets per pair",
+  "family_certificates": 657,
+  "coverage_limits": "New rational inputs relative to the supplied denominator-8 tests. Continuous-cell proofs are separately checked; finite inputs alone prove no universal theorem. Feasibility is not decided by the excursion certificate."
+}

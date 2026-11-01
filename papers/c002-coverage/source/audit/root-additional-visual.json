@@ -1,0 +1,26 @@
+{
+  "pdf_sha256": "b2dac13ca628fb6c3b7495516ee0acbdd390a90b0942127ada2935401ba873db",
+  "pdf": "/Users/mac/Documents/ChatGPT/STOC理论计算机/research/queue/projects/c002-coverage/output/pdf/sparse-coverage-discrepancy.pdf",
+  "render_directory": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/root-coverage-b2dac13ca628",
+  "pages_rendered": [
+    "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/root-coverage-b2dac13ca628/page-1.png",
+    "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/root-coverage-b2dac13ca628/page-2.png",
+    "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/root-coverage-b2dac13ca628/page-3.png",
+    "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/root-coverage-b2dac13ca628/page-4.png",
+    "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/root-coverage-b2dac13ca628/page-5.png",
+    "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/root-coverage-b2dac13ca628/page-6.png",
+    "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/root-coverage-b2dac13ca628/page-7.png"
+  ],
+  "parent_visually_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "inspected_at_utc": "2026-10-31T22:00:15.413663+00:00",
+  "findings": "All seven images opened and inspected; readable sole author/contact, equations, theorem/section transitions and references; no clipping, overlap, missing glyphs or crowded equation numbers. Title and reference pages naturally shorter.",
+  "scope": "Additional parent read-only visual inspection, not the injected fresh RELEASE context and not an audit verdict."
+}

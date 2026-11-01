@@ -1,0 +1,82 @@
+{
+  "package_schema": 2,
+  "project": "c002-coverage",
+  "title": "A Size-Independent Discrepancy Bound for Sparse Coverage Functions",
+  "pages": 7,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "original_status": "proved",
+  "kind": "resolution-paper",
+  "pdf": "c002-coverage_submission.pdf",
+  "pdf_sha256": "b2dac13ca628fb6c3b7495516ee0acbdd390a90b0942127ada2935401ba873db",
+  "source_archive": "c002-coverage_source_and_reproducibility.zip",
+  "source_archive_sha256": "6a3806ba431e96816ec34b1c99fb27bca833bd81b4f287ac29bd4835e8b458dd",
+  "class_file": "manuscript/vendor/acmart.cls",
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "reproduce_scripts": [
+    "evidence/research_rounding_check.py",
+    "audit/referee_verify.py"
+  ],
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "b2dac13ca628fb6c3b7495516ee0acbdd390a90b0942127ada2935401ba873db"
+    },
+    "citation_verdict": "accept_with_citation_limitations",
+    "kind": "resolution-paper",
+    "manuscript_digest": "cbd9e040f4147d3e60fc3daafd59dcd1d2dfe965798be52063afe7345dcd085f",
+    "original_status": "proved",
+    "pages": 7,
+    "pdf_digest": "b2dac13ca628fb6c3b7495516ee0acbdd390a90b0942127ada2935401ba873db",
+    "provenance": {
+      "audit/build.json": "11e263b7f5934f95ac92b50a19eb2de545e0f18e8a31e6bf3cbfd2b0ad269508",
+      "audit/build.md": "f544c35da2a47c1ea3f220bd26fe8adade5e4460ac4be3fb06ba7a83d1cea654",
+      "audit/citations.json": "45fa214d45de056dc9a5a3e921eb8e6e677974f8c6e933d642bf20545cadaea7",
+      "audit/citations.md": "f0163de99ed069338f659ef9f0173699d6267f39dd4b521604501bfa003c0cc2",
+      "audit/math.json": "7d1ae2e326992f3c04ce352099f6d99e63388eda098690cf34b59f2ee8a3bf62",
+      "audit/math.md": "3326632f705f787114b454247109e7f18865472624b177599143bf9bf604adca",
+      "audit/visual.json": "f3b25b0310476208f7448d4a5691234b699e7fc2a087fbabc1f64290135f56c0",
+      "audit/visual.md": "fa74ec204918d7d2ac5fd13c92f23edb6943eb1040cced1fb9ff8fe83fabb36d",
+      "jobs/c002-coverage-referee-3e90f78a9294/role.json": "32f32966c8fab4863101f8ef580400d9d2b90bf10c6a8a89e97be1d10d776081",
+      "jobs/c002-coverage-release-c84ac066553a/role.json": "7e86ceeead949aab4ba325085347a858db0b8c63df58532d4efecaded98390d5",
+      "jobs/c002-coverage-research-8e44b8ae65fb/role.json": "27d8258ed5757029ff380f46d58f7af9ad9c0c147a032afe47e1c109fa5e1466",
+      "manuscript/main.log": "a4576867b017c71ca6c58563a59101da92e601860f10d51a553b33af9169247a"
+    },
+    "schema": 1,
+    "snapshot_digest": "26d2a64f317984b35b49212bdc46529ccb7f19bc1be1b5e471d28d308d18456e",
+    "unverified_citations": [
+      {
+        "citation": "Benjamin Doerr and Anand Srivastav, Multicolour Discrepancies (2003), DOI 10.1017/S0963548303005662",
+        "claim_support_basis": "GRW11 primary full text and self-contained manuscript proof",
+        "key": "DS03",
+        "limitation": "Original full text not directly inspected; Cambridge metadata/abstract verified. Exact rational theorem and historical attribution verified in the primary GRW11 Theorem 2, p.58; manuscript includes full proof and identifies that formulation source.",
+        "metadata_basis": "primary_publisher_record"
+      }
+    ]
+  },
+  "citation_verdict": "accept_with_citation_limitations",
+  "citation_limitations": [
+    {
+      "citation": "Benjamin Doerr and Anand Srivastav, Multicolour Discrepancies (2003), DOI 10.1017/S0963548303005662",
+      "claim_support_basis": "GRW11 primary full text and self-contained manuscript proof",
+      "key": "DS03",
+      "limitation": "Original full text not directly inspected; Cambridge metadata/abstract verified. Exact rational theorem and historical attribution verified in the primary GRW11 Theorem 2, p.58; manuscript includes full proof and identifies that formulation source.",
+      "metadata_basis": "primary_publisher_record"
+    }
+  ],
+  "external_submission_performed": false
+}

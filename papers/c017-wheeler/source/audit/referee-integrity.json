@@ -1,0 +1,8 @@
+{
+  "job_id": "c017-wheeler-referee-dd13950aae3a",
+  "snapshot_digest": "aaa91b59e8425f6cb4943fc3132e3ef9680e93dbb77aad8bca7bfce55d898516",
+  "checked_files": 13,
+  "mismatches": [],
+  "source_sha256": "40fc8e967aeefd233cb62ffd0f70d77e772fafbdeb6086724c4c2ab5f591106d",
+  "scope": "Frozen packet integrity only; no mathematical conclusion."
+}

@@ -1,0 +1,43 @@
+\begin{thebibliography}{FLWZ25}
+
+\bibitem[BCH25]{BCH25}
+Amey Bhangale, Arghya Chakraborty, and Prahladh Harsha.
+\newblock Optimal online bipartite matching in degree-2 graphs.
+\newblock In {\em 36th International Symposium on Algorithms and Computation
+  (ISAAC 2025)}, volume 359 of {\em Leibniz International Proceedings in
+  Informatics}, pages 13:1--13:19. Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r
+  Informatik, 2025.
+\newblock \url{https://doi.org/10.4230/LIPIcs.ISAAC.2025.13}.
+
+\bibitem[CGLB24]{CGLB24}
+Davin Choo, Themis Gouleakis, Chun~Kai Ling, and Arnab Bhattacharyya.
+\newblock Online bipartite matching with imperfect advice.
+\newblock \href{https://arxiv.org/abs/2405.09784}{arXiv:2405.09784}, 2024.
+
+\bibitem[FLWZ25]{FLWZ25}
+Yilong Feng, Haolong Li, Xiaowei Wu, and Shengwei Zhou.
+\newblock Degree-bounded online bipartite matching: {OCS} vs. {Ranking}.
+\newblock \href{https://arxiv.org/abs/2510.00965}{arXiv:2510.00965}, 2025.
+
+\bibitem[FM18]{FM18}
+Josep F{\`a}brega and Xavier Mu{\~n}oz.
+\newblock Online matching in regular bipartite graphs with randomized
+  adversary.
+\newblock In {\em Adventures Between Lower Bounds and Higher Altitudes}, volume
+  11011 of {\em Lecture Notes in Computer Science}, pages 297--310. Springer,
+  2018.
+\newblock \url{https://doi.org/10.1007/978-3-319-98355-4_17}.
+
+\bibitem[JM24]{JM24}
+Billy Jin and Will Ma.
+\newblock Online bipartite matching with advice: Tight robustness-consistency
+  tradeoffs for the two-stage model.
+\newblock \href{https://arxiv.org/abs/2206.11397v3}{arXiv:2206.11397v3}, 2024.
+
+\bibitem[LMP26]{LMP26}
+Alexander Lindermayr, Nicole Megow, and Lauren Paul.
+\newblock Consistency-robustness tradeoffs for online bipartite allocation with
+  multiple stages.
+\newblock \href{https://arxiv.org/abs/2609.15837}{arXiv:2609.15837}, 2026.
+
+\end{thebibliography}

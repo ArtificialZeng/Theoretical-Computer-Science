@@ -1,0 +1,47 @@
+{
+  "job_id": "privacy-interpolation-referee-4ed762972744",
+  "snapshot_digest": "932c1ba086d51ef9c99afb17ae2046a2a43a19517b9778f2a2a06e751683f641",
+  "frozen_hashes_match": true,
+  "source_sha256": "9488f12633da72d763b0ad127ff791f002ff7451ea26826a68d35a832f0bad15",
+  "paths": [
+    {
+      "input": "evidence/research-excursion-path-certificates.json",
+      "sha256": "a662b27ea5b75eb867fb028f255a8c01d0ab17da60b738d32b57f943885b1d90",
+      "records": 657,
+      "half_cells": 1314,
+      "coordinate_cells": 3942,
+      "degenerate_cells": 45,
+      "large_b_records": 0,
+      "minimum_budget_records": 12,
+      "constant_reservoir_records": 33
+    },
+    {
+      "input": "evidence/research-swapped-path-certificates.json",
+      "sha256": "75b3497906f79867b7520632c4a1b00bf2beb59cfa5246a70f07dbd806f8c160",
+      "records": 210,
+      "half_cells": 510,
+      "coordinate_cells": 1530,
+      "degenerate_cells": 34,
+      "large_b_records": 210,
+      "minimum_budget_records": 4,
+      "constant_reservoir_records": 30
+    }
+  ],
+  "sweep": {
+    "held_out_endpoint_pairs": 233,
+    "budget_instances": 699,
+    "designated_coordinate_comparisons": 3483,
+    "dimensions": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "seed": 4776272744,
+    "method": "Rebuild each interval from its midpoint and directly evaluate branches; compare frozen grouped sweep."
+  },
+  "scope": "Exact finite implementation and serialized continuous-cell checks; universal claims assessed analytically in audit/math.md."
+}

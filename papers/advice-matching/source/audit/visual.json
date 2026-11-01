@@ -1,0 +1,24 @@
+{
+  "verdict": "accept",
+  "job_id": "advice-matching-release-01731cae3c13",
+  "snapshot_digest": "9e5ce19e70bcedf07302fd469630c6922133d2418685a0789184566a1578f92c",
+  "manuscript_digest": "190ac5d740b6eba350826842752400ef3de5381f01b0c88aaf1f9350a2472763",
+  "pdf_digest": "97f90509d1413691ce7cb13e0c7dc8bc0ee2a2b1f133131cc43a2ed9cea6ffa2",
+  "report": "audit/visual.md",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "rendered_pages": [
+    "audit/release-pages/page-1.png",
+    "audit/release-pages/page-2.png",
+    "audit/release-pages/page-3.png",
+    "audit/release-pages/page-4.png",
+    "audit/release-pages/page-5.png",
+    "audit/release-pages/page-6.png"
+  ]
+}

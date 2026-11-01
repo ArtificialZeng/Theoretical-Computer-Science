@@ -1,0 +1,30 @@
+{
+  "job_id": "c012-upcycles-release-0294a4f8ea65",
+  "source_and_frozen_evidence_unchanged": true,
+  "manuscript_snapshot_current": true,
+  "official_class_identical": true,
+  "bibtex_regeneration_identical": true,
+  "citation_keys": [
+    "CKKP25",
+    "CKMS17",
+    "FGKMM26"
+  ],
+  "bibliography_keys": [
+    "CKKP25",
+    "CKMS17",
+    "FGKMM26"
+  ],
+  "displayed_octal_rows_equal_code": true,
+  "decoded_word_equal_frozen_witness": true,
+  "literal_completion_count": {
+    "total_words": 4096,
+    "windows": 512,
+    "completions_per_window": 8,
+    "min_count": 1,
+    "max_count": 1
+  },
+  "pair_check_rerun": "evidence/release-verifier.log",
+  "pdf_code_AST_identical": true,
+  "PDF_unchanged": "eade3f9df07bd82943ef54b3e0c9c1b95d1510ab9e779dc9ff26a9cdf71cedef",
+  "build_log_sha256": "9d67fa0835bb430c653f8fa5e7587d950a9c9766e4fa8d9ea5a0ab2b4ef63a61"
+}

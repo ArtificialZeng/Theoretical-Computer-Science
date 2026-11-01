@@ -1,0 +1,17 @@
+{
+  "paper_number": 4,
+  "title": "A Sparse-Cardinality Curvature Bound under Persistent Adversarial Noise",
+  "archive_sha256": "18ee55050ceb21213f3c8376efab377d5103dc95bbb83ec718a0b370737d79fd",
+  "delivered_pdf_sha256": "2a3b071bfdd103f2e2bbbde6f590ea75ee26229a96b46b0c79b3e02d754cf012",
+  "supplied_publication_inputs_rehashed": 12,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/tmp/delivery-check/paper4-45h3m4fx/paper4_source",
+  "rebuilt_pages": 6,
+  "rebuilt_pdf_text_matches_delivery": true,
+  "rebuilt_page_renders_match_delivery": true,
+  "finite_reproduction": {
+    "entry_point": "python3 manuscript/reproduce.py",
+    "scope": "See supplied script and output",
+    "output": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/tmp/delivery-check/paper4-45h3m4fx/finite-reproduced.json"
+  },
+  "scope": "Archive/build/finite reproducibility, not a new mathematical or novelty review."
+}

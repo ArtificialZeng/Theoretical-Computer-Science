@@ -1,0 +1,8 @@
+{
+  "job_id": "advice-matching-triage-5cc2f73291d9",
+  "source_sha256": "3ec230456a31ba9b004000be9e79c74a77636a28a31e9b4eec31918f5ab305ed",
+  "source_bytes": 2618,
+  "candidate_argument_present": false,
+  "status": "triage complete: park; known degree-two obstruction; full frontier unresolved",
+  "final_source_sha256": "3ec230456a31ba9b004000be9e79c74a77636a28a31e9b4eec31918f5ab305ed"
+}
