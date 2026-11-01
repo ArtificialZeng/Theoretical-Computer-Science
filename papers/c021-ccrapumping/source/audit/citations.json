@@ -1,0 +1,26 @@
+{
+  "verdict": "accept",
+  "job_id": "c021-ccrapumping-release-92d7dacdae19",
+  "snapshot_digest": "fb196911906a12d3f006a58d590694062481bf6aa44e05c6691883c3e220d3cf",
+  "manuscript_digest": "99eb0bd7c1fdc78cfa6c6d2b1e58391d7bde1db59600709934d6a48a747cdfff",
+  "pdf_digest": "a9c5a9244838f61a7c8fcd01a8ef0902229b629de8e3ba55d917e0c639c5f27b",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/BUILD.md",
+    "manuscript/build/main.bbl",
+    "manuscript/latexmkrc",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/vendor/ACM-Reference-Format.bst",
+    "manuscript/vendor/README",
+    "manuscript/vendor/acmart.cls",
+    "manuscript/vendor/acmart.dtx",
+    "manuscript/vendor/acmart.ins"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "Fresh advisory citation-check-skill two-pass audit, primary publisher/arXiv records and actual theorem bodies; all four bibliography records and all 32 fixed claim groups checked. No user-designated Excel or authoritative bibliography was supplied. Reviewed all sorted publication.json inputs and recorder/BibTeX dependencies; undefined citations absent. Original contributions are traced to the accepted frozen proof, not attributed to prior literature. Current searches are bounded and do not establish exhaustive priority.",
+  "citation_audit_method": "citation-check-skill; primary-source-manual",
+  "search_date": "2026-11-01 UTC / 2026-11-02 Asia/Shanghai",
+  "unverified_citations": []
+}

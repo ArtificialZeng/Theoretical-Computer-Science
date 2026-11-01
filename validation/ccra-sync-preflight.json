@@ -1,0 +1,17 @@
+{
+  "utc": "2026-11-01T17:39:51.777689+00:00",
+  "passed": true,
+  "manuscripts": 16,
+  "conversation_folders": 8,
+  "template_only_folders": 3,
+  "new_package": "c021-ccrapumping v1, 9 pages",
+  "pdf_and_zip_match_unchanged_released_delivery": true,
+  "expanded_source_archive_verified": true,
+  "new_finite_reproduction_passed": true,
+  "prior_actual_clean_build_and_all_9_page_render_equality": "papers/c021-ccrapumping/provenance/package_verification.json",
+  "new_build_not_rerun": "Unchanged delivered PDF/ZIP rehashed; earlier actual clean-build and all-page rendering evidence retained. Both finite checkers rerun for synchronization.",
+  "relative_readme_links_checked": 608,
+  "credential_pattern_findings": [],
+  "v2_unreleased_revision_excluded": true,
+  "previous_15_manuscript_ranking_preserved_and_snapshot_labelled": true
+}

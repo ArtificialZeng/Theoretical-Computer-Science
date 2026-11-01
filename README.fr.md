@@ -2,9 +2,9 @@
 
 [English](README.md) · [中文](README.zh-CN.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [日本語](README.ja.md)
 
-Manuscrits de recherche, code reproductible et certificats exacts en informatique théorique. Ce dépôt contient **15 ensembles de documents** : dix de cette recherche continue et cinq d’autres conversations ; trois autres dossiers contiennent seulement des modèles. Chaque sujet dispose d’un résumé, d’un PDF, d’une archive source inchangée et de sources consultables directement.
+Manuscrits de recherche, code reproductible et certificats exacts en informatique théorique. Ce dépôt contient **16 ensembles de documents** : onze de cette recherche continue et cinq d’autres conversations ; trois autres dossiers contiennent seulement des modèles. Chaque sujet dispose d’un résumé, d’un PDF, d’une archive source inchangée et de sources consultables directement.
 
-**Bien lire la portée des résultats :** sept manuscrits sont enregistrés localement comme des résolutions complètes de leurs objectifs précis ; trois anciens manuscrits présentent des résultats partiels dont les questions générales restent ouvertes. Ces dossiers locaux ne constituent ni une évaluation externe par les pairs ni une acceptation à STOC. Les listes d’auteurs d’origine sont conservées ; les cinq manuscrits ultérieurs ont Zijian Zeng pour seul auteur.
+**Bien lire la portée des résultats :** parmi les onze manuscrits de cette série, huit sont enregistrés localement comme des résolutions complètes de leurs objectifs précis ; trois anciens manuscrits présentent des résultats partiels dont les questions générales restent ouvertes. Ces dossiers locaux ne constituent ni une évaluation externe par les pairs ni une acceptation à STOC. Les listes d’auteurs d’origine sont conservées ; les six manuscrits ultérieurs ont Zijian Zeng pour seul auteur.
 
 ## Index des manuscrits
 
@@ -20,6 +20,7 @@ Manuscrits de recherche, code reproductible et certificats exacts en informatiqu
 | `c012-upcycles` | 5 | Objectif précis résolu | [PDF](papers/c012-upcycles/paper.pdf) · [ZIP](papers/c012-upcycles/source.zip) · [Code](papers/c012-upcycles/source/) · [Reproduce](papers/c012-upcycles/README.md) |
 | `c015-imagebound` | 6 | Objectif précis résolu | [PDF](papers/c015-imagebound/paper.pdf) · [ZIP](papers/c015-imagebound/source.zip) · [Code](papers/c015-imagebound/source/) · [Reproduce](papers/c015-imagebound/README.md) |
 | `c017-wheeler` | 10 | Objectif précis résolu | [PDF](papers/c017-wheeler/paper.pdf) · [ZIP](papers/c017-wheeler/source.zip) · [Code](papers/c017-wheeler/source/) · [Reproduce](papers/c017-wheeler/README.md) |
+| `c021-ccrapumping` | 9 | Objectif précis résolu | [PDF](papers/c021-ccrapumping/paper.pdf) · [ZIP](papers/c021-ccrapumping/source.zip) · [Code](papers/c021-ccrapumping/source/) · [Reproduce](papers/c021-ccrapumping/README.md) |
 
 ## Questions étudiées et résultats
 
@@ -82,6 +83,12 @@ Manuscrits de recherche, code reproductible et certificats exacts en informatiqu
 **Résumé.** Peut-on décider l’appartenance à la classe de Wheeler lorsque le nombre de morceaux monotones de sortie n’est pas fixé ? Le manuscrit donne un algorithme polynomial pour les transducteurs sous-séquentiels déterministes finis émondés, avec transitions partielles et sorties effaçantes ; une borne binaire prudente est O(S^13). Les composantes fortement connexes ramifiées et les cycles simples exigent des critères distincts. La réalisabilité équivalente est aussi décidable et constructive, sans garantie polynomiale ni de minimalité pour cette construction.
 
 [PDF](papers/c017-wheeler/paper.pdf) · [ZIP](papers/c017-wheeler/source.zip) · [Code](papers/c017-wheeler/source/) · [Reproduce](papers/c017-wheeler/README.md)
+
+### Uniform Pumping Does Not Characterize Copyless Cost Register Automata
+
+**Résumé.** La condition uniforme de pompage caractérise-t-elle les fonctions calculées par les automates à registres de coût polynomiaux sans copie ? Le manuscrit donne une réponse négative, même pour les fonctions rationnelles reconnues par des automates pondérés : la somme des positions des 1 dans un mot binaire satisfait la condition avec un seul exposant et un sous-semi-anneau de type fini, mais aucun automate sans copie à contrôle fini ne la calcule. Une rétraction sur une image minimale et une projection spectrale polynomiale donnent une obstruction de commutation ; des mots de retour traitent le contrôle fini. Il s’agit de la version publiée de neuf pages, sans l’extension ultérieure.
+
+[PDF](papers/c021-ccrapumping/paper.pdf) · [ZIP](papers/c021-ccrapumping/source.zip) · [Code](papers/c021-ccrapumping/source/) · [Reproduce](papers/c021-ccrapumping/README.md)
 
 ## Notes vérifiées : les questions initiales restent ouvertes
 
@@ -147,6 +154,8 @@ Les huit dossiers stoc1–stoc8 sont recensés : cinq manuscrits existants et tr
 [PDF](conversations/stoc5/paper.pdf) · [ZIP](conversations/stoc5/source.zip) · [Code](conversations/stoc5/source/) · [Reproduce](conversations/stoc5/README.md)
 
 ## Classement comparatif
+
+Le classement lié ci-dessous porte sur l’ancien ensemble de quinze manuscrits. Le nouvel ajout CCRA v1 n’y est pas encore classé ; sa version étendue attend la vérification finale de publication.
 
 [中文：按 STOC 相对竞争力和新增解决问题大小排序](RANKING.zh-CN.md) · [English assessment](RANKING.md) · [Data](ranking.json)
 

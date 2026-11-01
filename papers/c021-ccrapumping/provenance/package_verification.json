@@ -1,0 +1,163 @@
+{
+  "project": "c021-ccrapumping",
+  "actual_archive_sha256": "957895b52d94ddb190cddf51db23bdcb75d7c2fc9256060c39e55c9fa661187a",
+  "actual_pdf_sha256": "a9c5a9244838f61a7c8fcd01a8ef0902229b629de8e3ba55d917e0c639c5f27b",
+  "build_inputs_rehashed": 11,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c021-ccrapumping-p756k2j7/c021-ccrapumping_source",
+  "pages": 9,
+  "text_matches": true,
+  "all_page_renders_match": true,
+  "finite_reproduction": [
+    {
+      "entry": "evidence/research_checks.py",
+      "summary": {
+        "job_id": "c021-ccrapumping-research-44e54bf7c116",
+        "arithmetic": "exact integers and fractions; no numerical tolerance",
+        "source_sha256": "688e017d0cb9e92733e81d94a4b79b563f2c44592795597818c63e616df13c0c",
+        "singular_family": {
+          "registers": 4,
+          "generators": 3,
+          "word_length_bound": 3,
+          "word_cases": 40,
+          "nonempty_physical_pullback_rank": 4,
+          "ambient_dimension": 16,
+          "minimum_active_count": 2,
+          "global_minimum_justification": "Each letter maps onto the same L, and restricts to an affine coordinate permutation on L; every nonempty product maps onto L.",
+          "normalized_Q": [
+            "x+z/2",
+            "y*t",
+            "0",
+            "1"
+          ],
+          "spectral_polynomial": "1-(T-1)(T-2)(T-3)(T-6)/36",
+          "W_dimension": 7,
+          "observable_row_dimension": 4,
+          "minimal_quotient_dimension": 3,
+          "checks": [
+            "E squared = E",
+            "E=p(B_e)",
+            "image and kernel rank stability",
+            "restriction-extension identity",
+            "E B_a E intertwines R_a pullback",
+            "E acts as identity on actual observable subquotient",
+            "compressed and original letters agree on that quotient"
+          ]
+        },
+        "jordan_check": {
+          "affine_permutations": 288,
+          "coordinates": 2,
+          "power": 2,
+          "translation_pair_cases": 82944,
+          "checks": [
+            "explicit semisimple conjugacy to diagonal",
+            "unipotent translation factor",
+            "all translation factors commute"
+          ]
+        },
+        "held_out_singular_checks": {
+          "nonzero_nonsemisimple_factor": "(T-1)^3",
+          "projection_polynomial": "1+(T-1)^3",
+          "unipotent_minimal_quotient_dimension": 4,
+          "unipotent_quotient_letters_commute": true,
+          "irreducible_spectral_factor": "(T-1)(T-2)(T^2-2)",
+          "second_projection_polynomial": "1+(T-1)(T-2)(T^2-2)/4",
+          "physical_ambient_dimension": 16,
+          "physical_rank": 4
+        },
+        "finite_control_check": {
+          "complete_binary_DFAs": 746,
+          "state_range": [
+            1,
+            3
+          ],
+          "checks": [
+            "reachable bottom SCC",
+            "return words of opposite densities",
+            "3D reachability and observability"
+          ]
+        },
+        "status": "passed",
+        "limitations": [
+          "Finite tests do not prove the arbitrary-register theorem.",
+          "General proofs and scope are in evidence/resolution-proof.md.",
+          "No independent referee acceptance is represented by these checks."
+        ]
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c021-ccrapumping-p756k2j7/reproduction-0.stdout.log"
+    },
+    {
+      "entry": "audit/referee-check.py",
+      "summary": {
+        "job_id": "c021-ccrapumping-referee-d846876ce849",
+        "status": "passed",
+        "arithmetic": "exact integers and fractions",
+        "method": "Independent Boolean-grid interpolation of multiaffine pullbacks; no proposer code imported or executed.",
+        "source_sha256": "688e017d0cb9e92733e81d94a4b79b563f2c44592795597818c63e616df13c0c",
+        "singular_subquotient": {
+          "maps": [
+            "((x+z)t+2,3y-1,0,1)",
+            "(2y+1,(x+z)t+3,0,1)",
+            "(3(x+z)t-4,y+2,0,1)"
+          ],
+          "Q": "((x+z)t,y,0,1)",
+          "initial": [
+            "1",
+            "2",
+            "1",
+            "1/2"
+          ],
+          "output": "(x+1)(y+1)",
+          "global_minimum": "All nonempty products map onto L={z=0,t=1}; restrictions to L are affine coordinate permutations.",
+          "ambient_dimension": 16,
+          "physical_pullback_rank": 4,
+          "reachable_polynomial_dimension": 5,
+          "observable_row_dimension": 5,
+          "minimal_quotient_dimension": 4,
+          "projection_polynomial": "1-(T-1)^2(T-3)^2/9",
+          "checked": [
+            "E^2=E",
+            "E=p(B_e)",
+            "E acts identically on W/N",
+            "all minimal letters invertible",
+            "compressed letters agree on W/N"
+          ]
+        },
+        "pumping": {
+          "word_length_bound_each": 4,
+          "n_values": [
+            0,
+            1,
+            2,
+            5,
+            8
+          ],
+          "cases": 148955
+        },
+        "weighted_realization": {
+          "word_length_bound": 8,
+          "cases": 511
+        },
+        "finite_control": {
+          "states": 4,
+          "complete_binary_DFAs": 65536
+        },
+        "unipotent_root": {
+          "dimension_range": [
+            1,
+            6
+          ],
+          "powers": [
+            1,
+            2,
+            6,
+            24
+          ],
+          "cases": 192
+        },
+        "limitations": "Finite checks are diagnostics. Acceptance, if any, rests on the universal mathematical reconstruction in math.md."
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c021-ccrapumping-p756k2j7/reproduction-1.stdout.log"
+    }
+  ],
+  "scope": "Actual delivered archive clean build/render/reproduction; not a new math or novelty verdict."
+}

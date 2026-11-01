@@ -1,0 +1,47 @@
+{
+  "local_inputs": [
+    "manuscript/build/main.aux",
+    "manuscript/build/main.bbl",
+    "manuscript/build/main.out",
+    "manuscript/main.tex",
+    "manuscript/vendor/acmart.cls"
+  ],
+  "unlisted_nonaux_inputs": [],
+  "official_vendor_matches": {
+    "acmart.cls": {
+      "matches_official": true,
+      "sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+      "comparison_candidates": [
+        "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/templates/acm-official/distribution/acmart/acmart.cls"
+      ]
+    },
+    "ACM-Reference-Format.bst": {
+      "matches_official": true,
+      "sha256": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04",
+      "comparison_candidates": [
+        "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/templates/acm-official/distribution/acmart/ACM-Reference-Format.bst"
+      ]
+    },
+    "acmart.dtx": {
+      "matches_official": true,
+      "sha256": "e29efd327f5c759f3d1f2e99dc8588c6a05b734c142f89c3e348161b893e44ff",
+      "comparison_candidates": [
+        "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/templates/acm-official/distribution/acmart/acmart.dtx"
+      ]
+    },
+    "acmart.ins": {
+      "matches_official": true,
+      "sha256": "fa7daaa9375775ce699f33f909667bdb83c0408fd8d67606926df86c346c4044",
+      "comparison_candidates": [
+        "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/templates/acm-official/distribution/acmart/acmart.ins"
+      ]
+    },
+    "README": {
+      "matches_official": true,
+      "sha256": "5f4b13963e839e1df1783d70495d1ea485e58facf936cfea27841fad6bdda863",
+      "comparison_candidates": [
+        "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/templates/acm-official/distribution/acmart/README"
+      ]
+    }
+  }
+}

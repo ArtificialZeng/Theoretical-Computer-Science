@@ -1,0 +1,19 @@
+{
+  "verdict": "accept",
+  "job_id": "c021-ccrapumping-release-92d7dacdae19",
+  "snapshot_digest": "fb196911906a12d3f006a58d590694062481bf6aa44e05c6691883c3e220d3cf",
+  "manuscript_digest": "99eb0bd7c1fdc78cfa6c6d2b1e58391d7bde1db59600709934d6a48a747cdfff",
+  "pdf_digest": "a9c5a9244838f61a7c8fcd01a8ef0902229b629de8e3ba55d917e0c639c5f27b",
+  "report": "audit/visual.md",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}

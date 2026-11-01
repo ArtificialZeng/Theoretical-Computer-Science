@@ -1,0 +1,97 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{4}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter does
+%%% not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+\makeatletter
+\@ifundefined{NAT@parse@date}{}{\let\NAT@parse@date@orig\NAT@parse@date}
+\@ifundefined{NAT@parse@date}{}{\def\NAT@parse@date#1#2#3#4#5#6@@{\NAT@parse@date@orig#1#2#3#4#5#6@@\def\NAT@tempyear{0000}\def\NAT@tempexlab{{?}}\ifx\NAT@year\NAT@tempyear\ifx\NAT@exlab\NAT@tempexlab\def\NAT@date{[n.\,d.]}\else\edef\NAT@date{[n.\,d.]\NAT@exlab}\fi\fi}}
+\makeatother
+
+\bibitem[Mazowiecki et~al\mbox{.}(2026a)]%
+        {MPS26}
+\bibfield{author}{\bibinfo{person}{Filip Mazowiecki}, \bibinfo{person}{Antoni
+  Puch}, {and} \bibinfo{person}{Daniel Smertnig}.}
+  \bibinfo{year}{2026}\natexlab{a}.
+\newblock \showarticletitle{Pumping-Like Results for Copyless Cost Register
+  Automata and Polynomially Ambiguous Weighted Automata}. In
+  \bibinfo{booktitle}{\emph{43rd International Symposium on Theoretical Aspects
+  of Computer Science (STACS 2026)}} \emph{(\bibinfo{series}{Leibniz
+  International Proceedings in Informatics (LIPIcs)},
+  Vol.~\bibinfo{volume}{364})}. \bibinfo{publisher}{Schloss Dagstuhl --
+  Leibniz-Zentrum f{\"u}r Informatik}, \bibinfo{address}{Dagstuhl, Germany},
+  \bibinfo{pages}{67:1--67:21}.
+\newblock
+\href{https://doi.org/10.4230/LIPIcs.STACS.2026.67}{doi:\nolinkurl{10.4230/LIPIcs.STACS.2026.67}}
+
+
+\bibitem[Mazowiecki et~al\mbox{.}(2026b)]%
+        {MPSfull}
+\bibfield{author}{\bibinfo{person}{Filip Mazowiecki}, \bibinfo{person}{Antoni
+  Puch}, {and} \bibinfo{person}{Daniel Smertnig}.}
+  \bibinfo{year}{2026}\natexlab{b}.
+\newblock \bibinfo{title}{Pumping-Like Results for Copyless Cost Register
+  Automata and Polynomially Ambiguous Weighted Automata}.
+\newblock
+\href{https://doi.org/10.48550/arXiv.2502.07356}{doi:\nolinkurl{10.48550/arXiv.2502.07356}}
+\newblock
+\shownote{Full version, arXiv:2502.07356v2, revised 12 January 2026}.
+
+
+\bibitem[Mazowiecki and Riveros(2019)]%
+        {MR19}
+\bibfield{author}{\bibinfo{person}{Filip Mazowiecki} {and}
+  \bibinfo{person}{Cristian Riveros}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Copyless Cost-Register Automata: Structure,
+  Expressiveness, and Closure Properties}.
+\newblock \bibinfo{journal}{\emph{J. Comput. System Sci.}}
+  \bibinfo{volume}{100} (\bibinfo{year}{2019}), \bibinfo{pages}{1--29}.
+\newblock
+\href{https://doi.org/10.1016/j.jcss.2018.07.002}{doi:\nolinkurl{10.1016/j.jcss.2018.07.002}}
+
+
+\bibitem[Puch and Smertnig(2024)]%
+        {PS24}
+\bibfield{author}{\bibinfo{person}{Antoni Puch} {and} \bibinfo{person}{Daniel
+  Smertnig}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{Factoring through Monomial Representations:
+  Arithmetic Characterizations and Ambiguity of Weighted Automata}.
+\newblock
+\href{https://doi.org/10.48550/arXiv.2410.03444}{doi:\nolinkurl{10.48550/arXiv.2410.03444}}
+\newblock
+\shownote{arXiv:2410.03444v2, revised 29 October 2024}.
+
+
+\end{thebibliography}

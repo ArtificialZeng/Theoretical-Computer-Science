@@ -1,0 +1,19 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "disproved",
+  "summary": "Fresh citation, independent clean-build and visual audits passed for all nine final pages; release_gate.py check succeeded. Only EPS exposition and the AI disclosure were edited; frozen mathematics is unchanged.",
+  "next_test": "Supervisor: run release_gate.py publish and verify the released PDF digest.",
+  "evidence": [
+    "audit/citations.json",
+    "audit/citations.md",
+    "audit/build.json",
+    "audit/build.md",
+    "audit/visual.json",
+    "audit/visual.md",
+    "evidence/release/gate-check.json",
+    "audit/manuscript-snapshot.json",
+    "manuscript/build/main.pdf",
+    "checkpoint.md"
+  ]
+}

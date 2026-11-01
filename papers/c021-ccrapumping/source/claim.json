@@ -1,0 +1,25 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "disproved",
+  "statement": "The uniform necessary condition in immutable source.md is not sufficient for CCRA recognizability, even over Q and among weighted-automaton recognizable functions. Specifically, for f:{0,1}* -> Q equal to the sum of the positions of the 1 symbols (positions starting at 1), one finitely generated subsemiring R=Z[1/2] and m=1 work for every u,w,v: (f(uw^{n+1}v))_{n>=0} is R-generable in Definition 11 and has all characteristic-zero degree-coefficient sums in R. Nevertheless f is not recognizable by any deterministic finite-state copyless polynomial CRA over Q, allowing arbitrary finite register count, rational constants, singular resets/merges and polynomial copyless updates. Thus the sufficiency implication is disproved, and the source's insufficiency conjecture is confirmed by its exact Example 26. The subsidiary structural theorem is that unipotent letter matrices of the minimal weighted representation of any one-state Q-CCRA commute; arbitrary finite control for f is removed by return words of different densities. No rectangular polyregular or compression question is included.",
+  "contribution": "The pumping calculation and squarefree-monomial translation are prior work. The proposed substantive contribution is a complete minimum-active-output retraction and invariant-observable-subquotient compression argument for arbitrary singular copyless polynomial maps, followed by an elementary Jordan-factor commuting obstruction and a finite-control return-word argument. This supplies the previously missing nonrecognizability proof for the exact source Example 26 and resolves the original sufficiency question in its full scope. The prospective minimum-rank route was supplied in intake; this research job completed its justification and replaced the unverified algebraic-group-image step. Current primary-source screening found no equivalent resolution in the explicitly recorded search scope; correctness, novelty and significance remain for the fresh referee to assess. No acceptance or publication is claimed.",
+  "proposer_job_id": "c021-ccrapumping-research-44e54bf7c116",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "AGENTS.md",
+    "publication-policy.json",
+    "evidence/resolution-proof.md",
+    "evidence/research_checks.py",
+    "evidence/research-checks.json",
+    "evidence/literature-research.md",
+    "evidence/literature-triage.md",
+    "evidence/triage_checks.py",
+    "evidence/triage-checks.json",
+    "evidence/official-p08.png",
+    "evidence/official-p13.png",
+    "intake/ccra-official-STACS2026-67.pdf",
+    "intake/ccra-2502.07356v2.pdf",
+    "intake/monomial-2410.03444v2.pdf"
+  ]
+}

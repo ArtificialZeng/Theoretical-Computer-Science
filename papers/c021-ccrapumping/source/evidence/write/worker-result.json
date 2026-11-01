@@ -1,0 +1,21 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "disproved",
+  "summary": "Prepared and froze the accepted full-scope resolution as a nine-page ACM-based manuscript with complete proof, relevant primary references, the required sole author and substantial AI disclosure. Clean build and all-page writer inspection completed; fresh release review remains.",
+  "next_test": "Fresh release reviewer: audit citations, independently clean-build the listed sources, inspect all nine pages, and run the release gates.",
+  "evidence": [
+    "checkpoint.md",
+    "publication.json",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/build/main.pdf",
+    "manuscript/build/main.log",
+    "audit/manuscript-snapshot.json",
+    "evidence/write/freeze-manuscript.json",
+    "evidence/write/writer-check.json",
+    "evidence/write/citation-map.md",
+    "evidence/write/stoc-format.md",
+    "literature/user_bibliography_check.md"
+  ]
+}

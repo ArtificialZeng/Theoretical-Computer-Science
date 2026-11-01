@@ -2,9 +2,9 @@
 
 [English](README.md) · [中文](README.zh-CN.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [日本語](README.ja.md)
 
-本仓库整理理论计算机科学研究稿件、可复现代码与精确证书。本仓库包含 **15 套稿件材料**：本持续研究对话的十篇，以及其他对话的五篇；另有三个对话目录只有模板。下文逐项提供研究摘要、PDF、保持原样的源码归档及可直接浏览的源码。
+本仓库整理理论计算机科学研究稿件、可复现代码与精确证书。本仓库包含 **16 套稿件材料**：本持续研究对话的十一篇，以及其他对话的五篇；另有三个对话目录只有模板。下文逐项提供研究摘要、PDF、保持原样的源码归档及可直接浏览的源码。
 
-**请按范围标记阅读：**七篇稿件在本地记录中完整解决了各自明确的目标；三篇早期稿件属于部分结果，原始更广泛问题仍未解决。这些是本地研究与交付记录，不代表外部同行评审或 STOC 录用。原作者名单保持不变，后五篇稿件仅署名 Zijian Zeng。
+**请按范围标记阅读：**本对话的十一篇中，八篇稿件在本地记录中完整解决了各自明确的目标；三篇早期稿件属于部分结果，原始更广泛问题仍未解决。这些是本地研究与交付记录，不代表外部同行评审或 STOC 录用。原作者名单保持不变，后六篇稿件仅署名 Zijian Zeng。
 
 ## 稿件索引
 
@@ -20,6 +20,7 @@
 | `c012-upcycles` | 5 | 明确目标的完整解答 | [PDF](papers/c012-upcycles/paper.pdf) · [ZIP](papers/c012-upcycles/source.zip) · [Code](papers/c012-upcycles/source/) · [Reproduce](papers/c012-upcycles/README.md) |
 | `c015-imagebound` | 6 | 明确目标的完整解答 | [PDF](papers/c015-imagebound/paper.pdf) · [ZIP](papers/c015-imagebound/source.zip) · [Code](papers/c015-imagebound/source/) · [Reproduce](papers/c015-imagebound/README.md) |
 | `c017-wheeler` | 10 | 明确目标的完整解答 | [PDF](papers/c017-wheeler/paper.pdf) · [ZIP](papers/c017-wheeler/source.zip) · [Code](papers/c017-wheeler/source/) · [Reproduce](papers/c017-wheeler/README.md) |
+| `c021-ccrapumping` | 9 | 明确目标的完整解答 | [PDF](papers/c021-ccrapumping/paper.pdf) · [ZIP](papers/c021-ccrapumping/source.zip) · [Code](papers/c021-ccrapumping/source/) · [Reproduce](papers/c021-ccrapumping/README.md) |
 
 ## 各课题研究了什么
 
@@ -82,6 +83,12 @@
 **摘要.** 输出单调区间数量未预先给定时，能否判定 Wheeler 转导器成员资格？本文对允许部分转移、擦除输出的有限精简确定性 subsequential 转导器给出多项式时间算法，保守位复杂度为 O(S^13)。分支强连通分量和简单环分别采用不同结构判据，并进一步得到等价 Wheeler 实现的可判定性与构造方法；实现构造不主张多项式时间或最小性。
 
 [PDF](papers/c017-wheeler/paper.pdf) · [ZIP](papers/c017-wheeler/source.zip) · [Code](papers/c017-wheeler/source/) · [Reproduce](papers/c017-wheeler/README.md)
+
+### Uniform Pumping Does Not Characterize Copyless Cost Register Automata
+
+**摘要.** 统一抽引条件能否刻画 copyless 多项式代价寄存器自动机可计算的函数？本文给出否定答案，即使限制在有理数加权自动机函数中也成立：二元词中所有 1 的位置之和，使用一个抽引指数和一个有限生成子半环即可满足条件，却无法由任何有限状态 copyless 多项式代价寄存器自动机计算。证明通过最小像集上的收缩映射与多项式谱投影建立交换性障碍，再用返回词处理有限控制。这里收录的是已交付的九页分离结果，后续扩展版尚未纳入。
+
+[PDF](papers/c021-ccrapumping/paper.pdf) · [ZIP](papers/c021-ccrapumping/source.zip) · [Code](papers/c021-ccrapumping/source/) · [Reproduce](papers/c021-ccrapumping/README.md)
 
 ## 已验证研究笔记：原题仍未解决
 
@@ -147,6 +154,8 @@ python3 scripts/build_pdfs.py --all
 [PDF](conversations/stoc5/paper.pdf) · [ZIP](conversations/stoc5/source.zip) · [Code](conversations/stoc5/source/) · [Reproduce](conversations/stoc5/README.md)
 
 ## 综合排名
+
+下方排名对应之前十五篇稿件的快照。新补入的 CCRA 九页版尚未纳入该次排名；其扩展版仍待最终交付检查。
 
 [中文：按 STOC 相对竞争力和新增解决问题大小排序](RANKING.zh-CN.md) · [English assessment](RANKING.md) · [Data](ranking.json)
 

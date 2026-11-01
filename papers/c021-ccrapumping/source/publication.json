@@ -1,0 +1,24 @@
+{
+  "title": "Uniform Pumping Does Not Characterize Copyless Cost Register Automata",
+  "kind": "resolution-paper",
+  "original_status": "disproved",
+  "writer_job_id": "c021-ccrapumping-write-e0235d117feb",
+  "source_files": [
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/latexmkrc",
+    "manuscript/BUILD.md",
+    "manuscript/vendor/acmart.cls",
+    "manuscript/vendor/ACM-Reference-Format.bst",
+    "manuscript/vendor/acmart.dtx",
+    "manuscript/vendor/acmart.ins",
+    "manuscript/vendor/README",
+    "manuscript/build/main.bbl"
+  ],
+  "pdf": "manuscript/build/main.pdf",
+  "build_command": "cd manuscript && latexmk -C -r latexmkrc main.tex && latexmk -r latexmkrc main.tex",
+  "build_log": "manuscript/build/main.log",
+  "max_total_pages": 12,
+  "external_submission_authorized": false,
+  "build_transcript": "manuscript/build/build.log"
+}

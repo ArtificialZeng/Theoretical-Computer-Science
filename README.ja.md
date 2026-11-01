@@ -2,9 +2,9 @@
 
 [English](README.md) · [中文](README.zh-CN.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [日本語](README.ja.md)
 
-理論計算機科学の研究稿、再現可能なコード、厳密な証明書をまとめたリポジトリ。本リポジトリには、この継続研究の十編と他の会話の五編、計 **15 セットの論文資料**を収録する。他に三つの会話フォルダーはテンプレートのみである。各課題について、概要、PDF、変更していないソースアーカイブ、閲覧可能なコードを用意している。
+理論計算機科学の研究稿、再現可能なコード、厳密な証明書をまとめたリポジトリ。本リポジトリには、この継続研究の十一編と他の会話の五編、計 **16 セットの論文資料**を収録する。他に三つの会話フォルダーはテンプレートのみである。各課題について、概要、PDF、変更していないソースアーカイブ、閲覧可能なコードを用意している。
 
-**結果の範囲に注意：**研究記録上、七編は明示した研究目標の完全な解答に位置付けられている。初期の三編は部分結果であり、元のより一般的な問いは未解決である。これらはローカルの研究・公開確認記録で、外部査読や STOC 採択を意味しない。元の著者一覧を維持し、後の五編は Zijian Zeng の単著である。
+**結果の範囲に注意：**本研究系列の十一編のうち、研究記録上は八編が明示した研究目標の完全な解答に位置付けられている。初期の三編は部分結果であり、元のより一般的な問いは未解決である。これらはローカルの研究・公開確認記録で、外部査読や STOC 採択を意味しない。元の著者一覧を維持し、後の六編は Zijian Zeng の単著である。
 
 ## 論文原稿一覧
 
@@ -20,6 +20,7 @@
 | `c012-upcycles` | 5 | 明示した目標の完全解答 | [PDF](papers/c012-upcycles/paper.pdf) · [ZIP](papers/c012-upcycles/source.zip) · [Code](papers/c012-upcycles/source/) · [Reproduce](papers/c012-upcycles/README.md) |
 | `c015-imagebound` | 6 | 明示した目標の完全解答 | [PDF](papers/c015-imagebound/paper.pdf) · [ZIP](papers/c015-imagebound/source.zip) · [Code](papers/c015-imagebound/source/) · [Reproduce](papers/c015-imagebound/README.md) |
 | `c017-wheeler` | 10 | 明示した目標の完全解答 | [PDF](papers/c017-wheeler/paper.pdf) · [ZIP](papers/c017-wheeler/source.zip) · [Code](papers/c017-wheeler/source/) · [Reproduce](papers/c017-wheeler/README.md) |
+| `c021-ccrapumping` | 9 | 明示した目標の完全解答 | [PDF](papers/c021-ccrapumping/paper.pdf) · [ZIP](papers/c021-ccrapumping/source.zip) · [Code](papers/c021-ccrapumping/source/) · [Reproduce](papers/c021-ccrapumping/README.md) |
 
 ## 各課題の研究内容
 
@@ -82,6 +83,12 @@
 **概要.** 出力の単調区間数が未指定でも Wheeler 性を判定できるかを研究する。部分遷移と空出力を許す有限の trim な決定性 subsequential 変換器に対して、多項式時間の判定法を与え、保守的なビット計算量上界は O(S^13) となる。分岐を持つ強連結成分と単純サイクルを別々に扱う。等価な Wheeler 実現も判定・構成できるが、その構成の多項式時間性や最小性は主張しない。
 
 [PDF](papers/c017-wheeler/paper.pdf) · [ZIP](papers/c017-wheeler/source.zip) · [Code](papers/c017-wheeler/source/) · [Reproduce](papers/c017-wheeler/README.md)
+
+### Uniform Pumping Does Not Characterize Copyless Cost Register Automata
+
+**概要.** 一様ポンピング条件は、copyless な多項式コストレジスタオートマトンが計算する関数を特徴付けるか。本稿は、有理数重み付きオートマトンで認識できる関数に限っても否定する。二進語中の 1 の位置の総和は、単一の指数と有限生成部分半環で条件を満たすが、有限状態の copyless 多項式コストレジスタオートマトンでは計算できない。最小像へのレトラクションと多項式スペクトル射影から可換性の障害を導き、帰還語で有限制御を扱う。収録するのは公開確認済みの九ページ版であり、その後の拡張版は含まない。
+
+[PDF](papers/c021-ccrapumping/paper.pdf) · [ZIP](papers/c021-ccrapumping/source.zip) · [Code](papers/c021-ccrapumping/source/) · [Reproduce](papers/c021-ccrapumping/README.md)
 
 ## 検証済み研究ノート：元の問いは未解決
 
@@ -147,6 +154,8 @@ stoc1–stoc8 の全八フォルダーを整理した。既存の論文原稿は
 [PDF](conversations/stoc5/paper.pdf) · [ZIP](conversations/stoc5/source.zip) · [Code](conversations/stoc5/source/) · [Reproduce](conversations/stoc5/README.md)
 
 ## 比較順位
+
+下記の比較順位は従来の十五編を対象とする。今回追加した CCRA 九ページ版は未評価であり、拡張版は最終公開確認を待っている。
 
 [中文：按 STOC 相对竞争力和新增解决问题大小排序](RANKING.zh-CN.md) · [English assessment](RANKING.md) · [Data](ranking.json)
 

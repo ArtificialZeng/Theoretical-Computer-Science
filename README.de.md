@@ -2,9 +2,9 @@
 
 [English](README.md) · [中文](README.zh-CN.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [日本語](README.ja.md)
 
-Forschungsmanuskripte, reproduzierbarer Code und exakte Zertifikate aus der theoretischen Informatik. Dieser Stand enthält **15 Manuskriptpakete**: zehn aus dieser Forschungsreihe und fünf aus anderen Gesprächen; drei weitere Ordner enthalten nur Vorlagen. Zu jedem Thema gibt es eine Zusammenfassung, das PDF, ein unverändertes Quellarchiv und direkt einsehbaren Quellcode.
+Forschungsmanuskripte, reproduzierbarer Code und exakte Zertifikate aus der theoretischen Informatik. Dieser Stand enthält **16 Manuskriptpakete**: elf aus dieser Forschungsreihe und fünf aus anderen Gesprächen; drei weitere Ordner enthalten nur Vorlagen. Zu jedem Thema gibt es eine Zusammenfassung, das PDF, ein unverändertes Quellarchiv und direkt einsehbaren Quellcode.
 
-**Bitte den Geltungsbereich beachten:** Sieben Manuskripte werden lokal als vollständige Lösungen ihrer präzisen Ziele geführt; drei ältere Manuskripte enthalten Teilresultate, während die allgemeineren Ausgangsfragen offenbleiben. Dies sind lokale Forschungs- und Freigabeprotokolle, keine externe Begutachtung oder STOC-Annahme. Die ursprünglichen Autorenlisten bleiben erhalten; die fünf späteren Manuskripte nennen nur Zijian Zeng.
+**Bitte den Geltungsbereich beachten:** Von den elf Manuskripten dieser Reihe werden acht lokal als vollständige Lösungen ihrer präzisen Ziele geführt; drei ältere Manuskripte enthalten Teilresultate, während die allgemeineren Ausgangsfragen offenbleiben. Dies sind lokale Forschungs- und Freigabeprotokolle, keine externe Begutachtung oder STOC-Annahme. Die ursprünglichen Autorenlisten bleiben erhalten; die sechs späteren Manuskripte nennen nur Zijian Zeng.
 
 ## Manuskriptübersicht
 
@@ -20,6 +20,7 @@ Forschungsmanuskripte, reproduzierbarer Code und exakte Zertifikate aus der theo
 | `c012-upcycles` | 5 | Präzises Ziel vollständig gelöst | [PDF](papers/c012-upcycles/paper.pdf) · [ZIP](papers/c012-upcycles/source.zip) · [Code](papers/c012-upcycles/source/) · [Reproduce](papers/c012-upcycles/README.md) |
 | `c015-imagebound` | 6 | Präzises Ziel vollständig gelöst | [PDF](papers/c015-imagebound/paper.pdf) · [ZIP](papers/c015-imagebound/source.zip) · [Code](papers/c015-imagebound/source/) · [Reproduce](papers/c015-imagebound/README.md) |
 | `c017-wheeler` | 10 | Präzises Ziel vollständig gelöst | [PDF](papers/c017-wheeler/paper.pdf) · [ZIP](papers/c017-wheeler/source.zip) · [Code](papers/c017-wheeler/source/) · [Reproduce](papers/c017-wheeler/README.md) |
+| `c021-ccrapumping` | 9 | Präzises Ziel vollständig gelöst | [PDF](papers/c021-ccrapumping/paper.pdf) · [ZIP](papers/c021-ccrapumping/source.zip) · [Code](papers/c021-ccrapumping/source/) · [Reproduce](papers/c021-ccrapumping/README.md) |
 
 ## Fragestellungen und Ergebnisse
 
@@ -82,6 +83,12 @@ Forschungsmanuskripte, reproduzierbarer Code und exakte Zertifikate aus der theo
 **Zusammenfassung.** Ist Wheeler-Zugehörigkeit entscheidbar, wenn die Anzahl monotoner Ausgabestücke nicht vorgegeben ist? Für endliche getrimmte deterministische subsequenzielle Transduktoren mit partiellen Übergängen und löschenden Ausgaben wird ein Polynomialzeitalgorithmus mit konservativer Bitschranke O(S^13) angegeben. Verzweigte starke Zusammenhangskomponenten und einfache Zyklen benötigen unterschiedliche Kriterien. Auch äquivalente Wheeler-Realisierbarkeit ist entscheidbar und konstruktiv; für diese Konstruktion wird keine polynomiale Laufzeit oder Minimalität behauptet.
 
 [PDF](papers/c017-wheeler/paper.pdf) · [ZIP](papers/c017-wheeler/source.zip) · [Code](papers/c017-wheeler/source/) · [Reproduce](papers/c017-wheeler/README.md)
+
+### Uniform Pumping Does Not Characterize Copyless Cost Register Automata
+
+**Zusammenfassung.** Charakterisiert die uniforme Pumping-Bedingung die von copyless polynomialen Kostenregisterautomaten berechneten Funktionen? Das Manuskript widerlegt dies selbst für rationale, durch gewichtete Automaten erkennbare Funktionen: Die Summe der Positionen aller Einsen eines Binärworts erfüllt die Bedingung mit einem einzigen Exponenten und einem endlich erzeugten Unterhalbring, ist aber durch keinen solchen endlichen Kostenregisterautomaten berechenbar. Eine Retraktion auf ein minimales Bild und eine polynomiale Spektralprojektion liefern ein Kommutationshindernis; Rückkehrwörter behandeln endliche Steuerung. Enthalten ist die freigegebene neunseitige Trennung, nicht die spätere Erweiterung.
+
+[PDF](papers/c021-ccrapumping/paper.pdf) · [ZIP](papers/c021-ccrapumping/source.zip) · [Code](papers/c021-ccrapumping/source/) · [Reproduce](papers/c021-ccrapumping/README.md)
 
 ## Geprüfte Forschungsnotizen: Ausgangsfragen weiterhin offen
 
@@ -147,6 +154,8 @@ Alle acht Ordner stoc1–stoc8 sind erfasst: fünf vorhandene Manuskripte und dr
 [PDF](conversations/stoc5/paper.pdf) · [ZIP](conversations/stoc5/source.zip) · [Code](conversations/stoc5/source/) · [Reproduce](conversations/stoc5/README.md)
 
 ## Vergleichende Rangfolge
+
+Die verlinkte Rangfolge bezieht sich auf den früheren Stand mit fünfzehn Manuskripten. Das neu ergänzte CCRA-v1-Paket ist darin noch nicht bewertet; die erweiterte Fassung wartet auf die abschließende Freigabeprüfung.
 
 [中文：按 STOC 相对竞争力和新增解决问题大小排序](RANKING.zh-CN.md) · [English assessment](RANKING.md) · [Data](ranking.json)
 

@@ -196,6 +196,28 @@
           "evidence/research-2-check-realizability.py"
         ]
       ]
+    },
+    {
+      "id": "c021-ccrapumping",
+      "series": "continuous",
+      "title": "Uniform Pumping Does Not Characterize Copyless Cost Register Automata",
+      "status": "disproved",
+      "kind": "resolution-paper",
+      "pages": 9,
+      "pdf": "papers/c021-ccrapumping/paper.pdf",
+      "source_archive": "papers/c021-ccrapumping/source.zip",
+      "source_directory": "papers/c021-ccrapumping/source",
+      "pdf_sha256": "a9c5a9244838f61a7c8fcd01a8ef0902229b629de8e3ba55d917e0c639c5f27b",
+      "source_archive_sha256": "957895b52d94ddb190cddf51db23bdcb75d7c2fc9256060c39e55c9fa661187a",
+      "reproduction_commands": [
+        [
+          "evidence/research_checks.py"
+        ],
+        [
+          "audit/referee-check.py"
+        ]
+      ],
+      "version": "v1: nine-page released separation; later extension pending release review"
     }
   ],
   "status_convention": "Manuscript scope/local release status; no external peer-review or conference-acceptance claim"

@@ -1,0 +1,43 @@
+{
+  "job_id": "c021-ccrapumping-write-e0235d117feb",
+  "checked_utc": "2026-11-01T16:19:24.204143+00:00",
+  "math_gate": {
+    "ok": true,
+    "snapshot_digest": "fb196911906a12d3f006a58d590694062481bf6aa44e05c6691883c3e220d3cf",
+    "referee_job_id": "c021-ccrapumping-referee-d846876ce849"
+  },
+  "pdf_marker": {
+    "script": "/Users/mac/.codex/plugins/cache/openai-primary-runtime/pdf/26.1017.22136/skills/pdf/container_tools/mark_artifact_operation_started.mjs",
+    "operation_kind": "create",
+    "expected_output_count": 1,
+    "output_format": "pdf",
+    "exit_code": 0
+  },
+  "official_inputs": {
+    "acmart.cls": {
+      "original_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+      "local_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+      "identical": true
+    },
+    "ACM-Reference-Format.bst": {
+      "original_sha256": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04",
+      "local_sha256": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04",
+      "identical": true
+    },
+    "acmart.dtx": {
+      "original_sha256": "e29efd327f5c759f3d1f2e99dc8588c6a05b734c142f89c3e348161b893e44ff",
+      "local_sha256": "e29efd327f5c759f3d1f2e99dc8588c6a05b734c142f89c3e348161b893e44ff",
+      "identical": true
+    },
+    "acmart.ins": {
+      "original_sha256": "fa7daaa9375775ce699f33f909667bdb83c0408fd8d67606926df86c346c4044",
+      "local_sha256": "fa7daaa9375775ce699f33f909667bdb83c0408fd8d67606926df86c346c4044",
+      "identical": true
+    },
+    "README": {
+      "original_sha256": "5f4b13963e839e1df1783d70495d1ea485e58facf936cfea27841fad6bdda863",
+      "local_sha256": "5f4b13963e839e1df1783d70495d1ea485e58facf936cfea27841fad6bdda863",
+      "identical": true
+    }
+  }
+}

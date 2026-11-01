@@ -2,9 +2,9 @@
 
 [English](README.md) · [中文](README.zh-CN.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [日本語](README.ja.md)
 
-Research manuscripts, reproducible code and exact certificates in theoretical computer science. This repository contains **15 manuscript packages**: ten from this continuous-research collection and five from other conversations. Three additional conversation folders contain templates only. Each topic below has an abstract, a PDF, an unchanged source archive, and browseable source code.
+Research manuscripts, reproducible code and exact certificates in theoretical computer science. This repository contains **16 manuscript packages**: eleven from this continuous-research collection and five from other conversations. Three additional conversation folders contain templates only. Each topic below has an abstract, a PDF, an unchanged source archive, and browseable source code.
 
-**Read the scope labels:** seven manuscripts are recorded as complete resolutions of their stated targets; three early manuscripts are partial-result notes whose broader original questions remain unresolved. These are local research/release records, not external peer review or STOC acceptance. The original author lists are preserved; the five later releases list Zijian Zeng as sole author.
+**Read the scope labels:** Among the eleven packages in papers/, eight manuscripts are recorded as complete resolutions of their stated targets; three early manuscripts are partial-result notes whose broader original questions remain unresolved. These are local research/release records, not external peer review or STOC acceptance. The original author lists are preserved; the six later releases list Zijian Zeng as sole author.
 
 ## Manuscript index
 
@@ -20,6 +20,7 @@ Research manuscripts, reproducible code and exact certificates in theoretical co
 | `c012-upcycles` | 5 | Target resolution | [PDF](papers/c012-upcycles/paper.pdf) · [ZIP](papers/c012-upcycles/source.zip) · [Code](papers/c012-upcycles/source/) · [Reproduce](papers/c012-upcycles/README.md) |
 | `c015-imagebound` | 6 | Target resolution | [PDF](papers/c015-imagebound/paper.pdf) · [ZIP](papers/c015-imagebound/source.zip) · [Code](papers/c015-imagebound/source/) · [Reproduce](papers/c015-imagebound/README.md) |
 | `c017-wheeler` | 10 | Target resolution | [PDF](papers/c017-wheeler/paper.pdf) · [ZIP](papers/c017-wheeler/source.zip) · [Code](papers/c017-wheeler/source/) · [Reproduce](papers/c017-wheeler/README.md) |
+| `c021-ccrapumping` | 9 | Target resolution | [PDF](papers/c021-ccrapumping/paper.pdf) · [ZIP](papers/c021-ccrapumping/source.zip) · [Code](papers/c021-ccrapumping/source/) · [Reproduce](papers/c021-ccrapumping/README.md) |
 
 ## What each project studies
 
@@ -82,6 +83,12 @@ Research manuscripts, reproducible code and exact certificates in theoretical co
 **Abstract.** Can one decide Wheeler membership when the number of output-monotonicity pieces is unspecified? The manuscript gives a polynomial-time algorithm for finite trimmed deterministic subsequential transducers, allowing partial transitions and erasing outputs; a conservative bit bound is O(S^13). Branching recurrence and simple cycles require different structural tests. Equivalent Wheeler realizability is also decidable and constructive, with no polynomial-time or minimality claim for that construction.
 
 [PDF](papers/c017-wheeler/paper.pdf) · [ZIP](papers/c017-wheeler/source.zip) · [Code](papers/c017-wheeler/source/) · [Reproduce](papers/c017-wheeler/README.md)
+
+### Uniform Pumping Does Not Characterize Copyless Cost Register Automata
+
+**Abstract.** Does the uniform pumping condition characterize functions computed by copyless polynomial cost register automata? This manuscript proves that it does not, even among rational weighted-automaton functions: summing the positions of the 1s in a binary word satisfies the condition with one pumping exponent and one finitely generated subsemiring, but no finite-state copyless polynomial cost register automaton computes it. A minimum-image retraction and a polynomial spectral projection yield a commutation obstruction; return words remove finite control. This is the released nine-page separation, not the later extended revision.
+
+[PDF](papers/c021-ccrapumping/paper.pdf) · [ZIP](papers/c021-ccrapumping/source.zip) · [Code](papers/c021-ccrapumping/source/) · [Reproduce](papers/c021-ccrapumping/README.md)
 
 ## Verified research notes: original questions still unresolved
 
@@ -147,6 +154,8 @@ Eight folders stoc1–stoc8 are indexed: five existing manuscripts and three tem
 [PDF](conversations/stoc5/paper.pdf) · [ZIP](conversations/stoc5/source.zip) · [Code](conversations/stoc5/source/) · [Reproduce](conversations/stoc5/README.md)
 
 ## Comparative ranking
+
+The comparative ranking below covers the earlier fifteen-manuscript snapshot. The newly added CCRA v1 package has not been ranked in that assessment; its extended revision is still awaiting final release review.
 
 [中文：按 STOC 相对竞争力和新增解决问题大小排序](RANKING.zh-CN.md) · [English assessment](RANKING.md) · [Data](ranking.json)
 

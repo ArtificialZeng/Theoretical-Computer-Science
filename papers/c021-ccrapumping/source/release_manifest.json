@@ -1,0 +1,26 @@
+{
+  "artifacts": {
+    "main.pdf": "a9c5a9244838f61a7c8fcd01a8ef0902229b629de8e3ba55d917e0c639c5f27b"
+  },
+  "kind": "resolution-paper",
+  "manuscript_digest": "99eb0bd7c1fdc78cfa6c6d2b1e58391d7bde1db59600709934d6a48a747cdfff",
+  "original_status": "disproved",
+  "pages": 9,
+  "pdf_digest": "a9c5a9244838f61a7c8fcd01a8ef0902229b629de8e3ba55d917e0c639c5f27b",
+  "provenance": {
+    "audit/build.json": "0dbc4b106ae601968b9109b5a10499de87bdb30aeef95090def67581cb151540",
+    "audit/build.md": "665ff200ea464a04f1b7d653fef05f8ec19254ec0019be4612067df0bd932111",
+    "audit/citations.json": "309686fb5080abe307ce09c64f034bec30155db110522d4ca1b67e0e847dda11",
+    "audit/citations.md": "d778639644ce01ea38c3f1a8acf9f5887e9531743d3653d46de89b6243dacdee",
+    "audit/math.json": "4cbfa8a8706c26e7e170a5a227dd4318f4939d72468b6be04b780280436c8dc6",
+    "audit/math.md": "02de1aa85b7ec30300e5906c241106b2994141b96e3084741c0e31485e98f112",
+    "audit/visual.json": "b1038bd45e009481391232f84752de6ebde47bd3617eca7589366a28b7d56957",
+    "audit/visual.md": "88f3b01fa47316a445c8a92fb209f106748e23fae6098a36a21f39996e9f4f42",
+    "jobs/c021-ccrapumping-referee-d846876ce849/role.json": "f821e817c5b78dad5ea18a19c94071fa46b68fe75359f244d3c35e248297cc9a",
+    "jobs/c021-ccrapumping-release-92d7dacdae19/role.json": "65fc6705d8ec332f36abae6aef47492d0d0ee65463966ae1f46ddb891f57656a",
+    "jobs/c021-ccrapumping-research-44e54bf7c116/role.json": "15d9fdb499372e027b999a077226efbb426e6ff1b7fc1a0959da9aa343a5ca37",
+    "manuscript/build/main.log": "6d35997144f313f720b38d40f3493ca1ef1725f1d84f90d7b54629c76eeddb2b"
+  },
+  "schema": 1,
+  "snapshot_digest": "fb196911906a12d3f006a58d590694062481bf6aa44e05c6691883c3e220d3cf"
+}

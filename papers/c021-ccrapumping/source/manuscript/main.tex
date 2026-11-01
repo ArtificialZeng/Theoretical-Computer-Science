@@ -1,0 +1,278 @@
+\documentclass[acmlarge,screen,11pt,nonacm]{acmart}
+\geometry{letterpaper,margin=1in}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\setcopyright{none}
+\acmDOI{}
+\acmISBN{}
+\usepackage{mathtools}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\spn}{\operatorname{span}}
+\newcommand{\eps}{\varepsilon}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\title{Uniform Pumping Does Not Characterize Copyless Cost Register Automata}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\renewcommand{\shortauthors}{Zijian Zeng}
+\begin{document}
+\begin{abstract}
+\normalsize
+Mazowiecki, Puch and Smertnig established a uniform pumping condition for copyless polynomial cost register automata over fields and conjectured that it is insufficient even among weighted-automaton recognizable functions. We prove their proposed counterexample: the rational-valued function on binary words that sums the positions occupied by $1$ is not recognizable by any finite-state copyless polynomial cost register automaton. Nevertheless, one finitely generated subsemiring, $\Z[1/2]$, and the single pumping exponent $m=1$ satisfy the condition for every choice of prefix, repeated word and suffix, including the characteristic-zero coefficient-sum requirements.
+
+The separation follows from a structural obstruction: unipotent letter matrices in the minimal weighted representation of a one-state rational copyless automaton must commute. To prove this, we choose a register transformation with a minimum number of nonconstant outputs. Its image admits a copyless retraction whose pullback is a polynomial spectral projection. This projection preserves the observable quotient and simultaneously compresses all letters to affine coordinate permutations. Their translation factors give the commutation obstruction. Return words with different densities remove arbitrary finite control. The proof allows singular register transformations, arbitrary rational constants, polynomial updates and any finite number of registers.
+\end{abstract}
+\maketitle
+\thispagestyle{plain}
+\clearpage
+
+\section{The separation and its significance}
+A cost register automaton reads a word from left to right, updating finitely many registers and finally evaluating an output expression. The copyless restriction allows each old register to occur at most once across an update. Registers may be added or multiplied, merged or reset, but their contents cannot be duplicated. Finite-state control can select different updates for the same input letter. Understanding which weighted-automaton functions admit such computations requires distinguishing constraints on individual repeated words from constraints on the interaction of different words.
+
+Mazowiecki, Puch and Smertnig~\cite{MPS26} proved a necessary condition in terms of all sequences $f(uw^n v)$. A single pumping exponent and a single finitely generated coefficient semiring must work uniformly for all triples $(u,w,v)$. Their Section~3.2 asks whether this condition could characterize copyless computations among weighted-automaton recognizable functions, and conjectures a negative answer. Their Example~26 proposes the function
+\begin{equation}\label{eq:witness}
+ f(b_1\cdots b_j)=\sum_{i=1}^{j}i b_i,\qquad b_i\in\{0,1\}.
+\end{equation}
+The pumping calculation for this function is already in that work; the missing assertion is nonrecognizability in the full copyless model.
+
+\begin{theorem}\label{thm:main}
+The function $f:\{0,1\}^*\to\Q$ in~\eqref{eq:witness} is weighted-automaton recognizable. There is one finitely generated subsemiring $R=\Z[1/2]\subseteq\Q$ such that, for every $u,w,v\in\{0,1\}^*$, the sequence
+\[
+ \bigl(f(uw^{n+1}v)\bigr)_{n\geq0}
+\]
+is an $R$-generable exponential polynomial sequence. Every degree-coefficient sum in its exponential polynomial representation belongs to $R$. However, no deterministic finite-state copyless polynomial cost register automaton over $\Q$ recognizes $f$, regardless of its finite register count or rational constants.
+\end{theorem}
+
+Thus the uniform condition of~\cite[Theorem~15]{MPS26}, even with its coefficient-sum requirement and weighted recognizability, is not sufficient. A rational counterexample answers the question over fields; no assertion about positive characteristic is required.
+
+The main structural assertion underlying the proof is the following.
+\begin{theorem}\label{thm:obstruction}
+Let $g$ be recognized by a one-state copyless polynomial cost register automaton over $\Q$. If all letter matrices in its minimal weighted representation are unipotent, then they commute pairwise.
+\end{theorem}
+A matrix is unipotent when its difference from the identity is nilpotent. Theorem~\ref{thm:obstruction} constrains the simultaneous minimal action of distinct letters. It does not assume that the register transformations themselves are invertible.
+
+\paragraph{Proof idea.}
+Squarefree monomials turn copyless register updates into a finite-dimensional weighted representation. Minimization gives an invariant subquotient, rather than a subset of physical registers. We choose an actual word with the fewest nonconstant register outputs. Its image is a coordinate affine space, and its restriction to that image is an affine coordinate permutation. Normalizing this restriction yields a retraction whose pullback is a polynomial in the chosen word's pullback. Polynomiality ensures that the retraction preserves the spaces defining the minimal representation. When the minimal action is invertible, the retraction acts as the identity on it. Every letter can then be compressed to an affine coordinate permutation on one common space. After a common power, the unipotent factors are translations, which commute. Finally, two return words in a bottom strongly connected component produce noncommuting minimal unipotent matrices for a restriction of~\eqref{eq:witness}.
+
+\paragraph{Relation to prior work.}
+The squarefree-monomial translation is known; a self-contained version appears in~\cite[Lemma~50, Appendix~B.1]{MPSfull}. The same full version gives the pumping calculation for Example~26 in Appendix~B.4. We reprove both ingredients to make the separation self-contained. The contribution is the minimum-output retraction and its transfer through the observable subquotient, followed by the simultaneous unipotent obstruction and the return-word argument.
+
+Mazowiecki and Riveros~\cite{MR19} establish structural normal forms and expressiveness separations for copyless automata. Their Proposition~3 uses a non-zero-semiring hypothesis; the separations in their Theorems~1 and~2 concern the natural and max-plus semirings. Those results do not supply the rational-field obstruction needed here, where cancellation is allowed. Puch and Smertnig~\cite[Theorem~3.4, Corollary~3.5, Proposition~9.4]{PS24} characterize monomial covers and ambiguity of invertible weighted representations. The pertinent block-triangular conditions permit noncommuting upper-unitriangular matrices. Our argument instead uses copylessness to constrain a common invariant subquotient. It requires no monomial-cover theorem. The result separates uniform unary pumping information from expressibility in the full streaming model; it is not a characterization of all copyless functions.
+
+\section{Models, pumping, and minimal representations}\label{sec:prelim}
+A polynomial expression is \emph{copyless} if each variable occurs at most once in it. A tuple of expressions is copyless if each variable occurs at most once across the entire tuple. Consequently, its coordinate polynomials are multiaffine, meaning degree at most one in each variable, and distinct coordinates have disjoint variable supports. Cancellation can remove variables; it does not invalidate these conclusions. Composition of copyless tuples is copyless: each substituted coordinate is used at most once, and their old-variable supports are disjoint.
+
+A deterministic copyless polynomial cost register automaton (CCRA) over $\Q$ has a finite complete deterministic control graph, an initial state, an initial valuation in $\Q^r$, a copyless polynomial update $\Q^r\to\Q^r$ on each transition, and a copyless output expression at each state. All constants are rational. The output after reading a word is the expression at the resulting state, evaluated at the resulting valuation. There is no register bound fixed across automata. Completeness is part of the standard model; a partial automaton can also be completed with a zero-output sink.
+
+For a subsemiring $R$ of a field $K$, an \emph{$R$-generable exponential polynomial sequence} is obtained by pointwise sums and products from constant sequences with values in $R$, the sequence $(n1_K)_{n\geq0}$, sequences $(\alpha^n)_{n\geq0}$ for $\alpha\in R$, and geometric partial sums $\bigl(\sum_{i=0}^{n-1}\alpha^i\bigr)_{n\geq0}$ for $\alpha\in R\setminus\{1\}$. This is~\cite[Definition~11]{MPS26}. As in the source, an EPS is represented eventually by an exponential polynomial; zero characteristic roots can affect a finite initial segment. In characteristic zero, write this eventual exponential polynomial in its normal form $\sum_{\lambda,j}a_{\lambda,j}n^j\lambda^n$, with distinct nonzero bases $\lambda$. Its degree-$j$ coefficient sum is $\sum_\lambda a_{\lambda,j}$. The target condition asks for one $R$ and one integer $m\geq1$ valid for every $u,w,v$ after replacing the repetition count by $m(n+1)$.
+
+A weighted representation over $\Q$ consists of a row $\lambda$, a column $o$, and matrices $B_a$ such that $g(w)=\lambda B_w o$, where $B_{uv}=B_uB_v$ and $B_\eps=I$. It is reachable if the columns $B_w o$ span its space, observable if the rows $\lambda B_w$ span its dual, and minimal if both conditions hold.
+
+For $r$ registers, let
+\[
+ V_r=\spn_\Q\{x_{i_1}\cdots x_{i_j}:\{i_1,\ldots,i_j\}\subseteq\{1,\ldots,r\}\}.
+\]
+The empty monomial is $1$, so $\dim V_r=2^r$. For a copyless polynomial map $P$, its pullback $B_P(h)=h\circ P$ preserves $V_r$: substituting into a squarefree monomial multiplies coordinates with disjoint supports, so the result is again multiaffine. This linearization allows multiplication updates and singular maps.
+
+For a one-state CCRA, write $P_a$ for the update on $a$, $x_0$ for the initial valuation, and $o\in V_r$ for the output. Reading $uv$ gives $P_{uv}=P_v\circ P_u$, and hence $B_{uv}=B_uB_v$. Evaluation $\lambda(h)=h(x_0)$ gives $g(w)=\lambda B_w o$. Define the invariant spaces
+\begin{equation}\label{eq:WN}
+ W=\spn\{B_w o:w\in\Sigma^*\},\qquad
+ N=\{h\in W:\lambda B_vh=0\text{ for every }v\in\Sigma^*\}.
+\end{equation}
+Invariance follows from $B_aB_w=B_{aw}$ and $\lambda B_vB_a=\lambda B_{va}$. The induced representation on $D=W/N$ is reachable and observable.
+
+For clarity, its canonical nature follows by sending $h\in W$ to the function $t\mapsto\lambda B_t h$. The kernel is $N$, and $B_w o$ maps to the residual $t\mapsto g(tw)$. Every reachable, observable representation therefore identifies with this same residual space and has the same letter action up to simultaneous similarity. Equivalently, the Hankel matrix $(g(tw))_{t,w}$ has rank equal to the dimension of any such representation. This justifies using an explicit minimal realization below, without identifying the minimal space with physical registers.
+
+\section{A retraction from a minimum-output word}\label{sec:retraction}
+For a copyless map $P:\Q^r\to\Q^r$, let $k(P)$ be its number of nonconstant coordinate polynomials. Let $L_P$ be the coordinate affine subspace defined by fixing each constant output coordinate to that constant. Its other $k(P)$ coordinates are free. Let $V(L_P)$ be the multiaffine polynomial space on those free coordinates.
+
+\begin{lemma}\label{lem:image}
+The image of $P$ on rational points is all of $L_P(\Q)$. Moreover,
+\[
+ \operatorname{rank}B_P=2^{k(P)},\qquad
+ \ker B_P=\{h\in V_r:h|_{L_P}=0\}.
+\]
+\end{lemma}
+\begin{proof}
+Every nonconstant multiaffine polynomial $q$ over $\Q$ is surjective onto $\Q$. Choose an occurring variable and write $q=x_i a+b$ with $a\ne0$ independent of $x_i$. Specialize the other variables to rational values where $a\ne0$, then solve for $x_i$ to attain any prescribed value. Such a specialization exists: by induction on the number of variables, a nonzero polynomial over an infinite field cannot vanish at every rational point. Distinct nonconstant coordinates of $P$ have disjoint supports, so these choices can be made independently. This proves surjectivity onto $L_P(\Q)$.
+
+Restriction from $V_r$ onto $V(L_P)$ is surjective. Pullback from $V(L_P)$ through $P$ is injective, since $P$ is onto on rational points and a polynomial vanishing at all rational points is zero. Factoring $B_P$ into these two maps proves both assertions.
+\end{proof}
+
+Choose a word $e$, including the possibility $e=\eps$, minimizing $k(P_e)$ among all words. This minimum is attained because the values are integers in $\{0,\ldots,r\}$. Write $P=P_e$, $k=k(P)$ and $L=L_P$. The restriction $A=P|_L$ maps $L$ into $L$. The word $ee$ has at most $k$ nonconstant outputs, and minimality forces exactly $k$. Since $P$ is onto $L$, every free output coordinate of $A$ is therefore nonconstant.
+
+Restriction by constants preserves the disjoint-support property. Thus $A$ has $k$ nonconstant outputs on $k$ free input coordinates. Each output uses at least one variable, so each uses exactly one and all variables are used. Multiaffinity now gives
+\begin{equation}\label{eq:affineperm}
+ A_i(t)=\alpha_i t_{\pi(i)}+\beta_i,\qquad \alpha_i\in\Q^\times,
+\end{equation}
+for a permutation $\pi$. We call such a map an \emph{affine coordinate permutation}. In particular $A$ is invertible on $L$, even when $P$ is singular on $\Q^r$. If $k=0$, $L$ is a point and $A$ is its unique automorphism.
+
+Define the copyless map
+\[
+ Q=A^{-1}\circ P:\Q^r\longrightarrow L,
+\]
+restoring the fixed coordinates when viewing it as a full tuple. It is onto $L$ and satisfies $Q|_L=\id_L$. Consequently $Q\circ Q=Q$ and $E=B_Q$ is idempotent.
+
+\begin{lemma}\label{lem:projection}
+The operator $E$ is the projection onto $\im B_e$ along $\ker B_e$ and is a polynomial in $B_e$ with rational coefficients.
+\end{lemma}
+\begin{proof}
+Both $B_P$ and $B_Q$ have images consisting of pullbacks of $V(L)$. Composition with $A^{-1}$ is an automorphism of $V(L)$, because~\eqref{eq:affineperm} and its inverse preserve multiaffine polynomials. Thus $\im B_Q=\im B_P$. Both physical maps are onto $L$, so Lemma~\ref{lem:image} gives $\ker B_Q=\ker B_P$. As $E$ is idempotent, it is the stated projection.
+
+Explicitly, $k(P_{ee})=k(P_e)$ implies $\operatorname{rank}B_e^2=\operatorname{rank}B_e$. Hence $\ker B_e\cap\im B_e=0$ and $V_r=\ker B_e\oplus\im B_e$; the restriction of $B_e$ to its image is invertible. If $q(T)$ is its minimal polynomial, then $q(0)\ne0$. The polynomial Chinese remainder theorem supplies $p\in\Q[T]$ with
+\[
+ p(T)\equiv0\pmod T,\qquad p(T)\equiv1\pmod{q(T)}.
+\]
+Then $p(B_e)$ is zero on the kernel and identity on the image, so $p(B_e)=E$. This argument also applies when $B_e$ is invertible or $k=0$.
+\end{proof}
+
+Suppose now that the minimal letter matrices $M_a$ on $D=W/N$ are invertible. Polynomiality of $E$ ensures that $W$ and $N$ are $E$-invariant. Let $\bar E$ denote its induced action on $D$. Since $(I-E)B_e=0$, on $D$ we have
+\begin{equation}\label{eq:identityquotient}
+ (I-\bar E)M_e=0,\qquad\text{and therefore}\qquad\bar E=I.
+\end{equation}
+Only $M_e$ is required to be invertible here. The physical map $P_e$ need not be invertible.
+
+\section{Simultaneous compression of the letters}\label{sec:compression}
+On $\im E$, consider $C_a=EB_aE$. The isomorphism
+\[
+ J:V(L)\longrightarrow\im E,\quad J(h)=h\circ Q,
+ \qquad J^{-1}(g)=g|_L
+\]
+identifies $C_a$ with pullback by
+\begin{equation}\label{eq:Ra}
+ R_a=Q\circ P_a|_L:L\longrightarrow L.
+\end{equation}
+Indeed, direct substitution gives
+\[
+ C_aJ(h)=h\circ Q\circ P_a\circ Q=J(B_{R_a}h).
+\]
+This equality fixes the order of the pullbacks.
+
+Every $R_a$ is copyless by restriction and composition. To see that all its $k$ free outputs are nonconstant, use $P_e=A\circ Q$. The actual word $eae$ has register map
+\[
+ P_e\circ P_a\circ P_e=A\circ R_a\circ A\circ Q.
+\]
+The inner $A\circ Q=P_e$ is onto $L$. The outer $A$ only permutes, rescales and translates its free coordinates. Thus the number of nonconstant outputs of $P_{eae}$ equals the number of nonconstant free outputs of $R_a$. Minimality of $e$ forces this number to be $k$. The same count of disjoint nonempty variable supports used for~\eqref{eq:affineperm} shows that each $R_a$ is an invertible affine coordinate permutation of $L$.
+
+Set $W'=EW$ and $N'=W'\cap N$. These are invariant under every $C_a$: all factors preserve $W,N$, and $E$ projects onto $\im E$. Equation~\eqref{eq:identityquotient} shows that
+\begin{equation}\label{eq:isomorphism}
+ W'/N'\longrightarrow W/N,\qquad h+N'\longmapsto h+N
+\end{equation}
+is an isomorphism. It is surjective because $h-Eh\in N$ for every $h\in W$, and injective by the definition of $N'$. Since both $E$ factors induce the identity on $W/N$, it intertwines the induced $C_a$ with $M_a$.
+
+We have proved that whenever a one-state CCRA has invertible minimal letter matrices, those matrices occur on \emph{one common invariant subquotient} of the pullbacks of affine coordinate permutations. A separate quotient for each letter would not suffice. The polynomial projection is what gives the simultaneous statement despite singular register updates.
+
+\section{Unipotent subquotients of affine coordinate permutations}\label{sec:jordan}
+\begin{lemma}\label{lem:unipotent}
+Let $(R_a)_a$ be a finite family of invertible affine coordinate permutations of $\Q^k$. On $V_k$ let $T_a=B_{R_a}$. If a common invariant subquotient has induced matrices $M_a$ that are all unipotent, then the $M_a$ commute pairwise.
+\end{lemma}
+\begin{proof}
+If $k=0$, $V_k$ has dimension one and the assertion is immediate. Otherwise set $t=k!$. The coordinate permutation of each $R_a$ disappears after this power, so
+\[
+ (R_a^t)_i(x)=\alpha_{a,i}x_i+\beta_{a,i},\qquad \alpha_{a,i}\ne0.
+\]
+Write $R_a^t=S_a\circ U_a=U_a\circ S_a$ as follows. On coordinates with $\alpha_{a,i}=1$, $U_a$ is translation by $\beta_{a,i}$ and $S_a$ is identity. On the remaining coordinates $U_a$ is identity and $S_a$ is the indicated affine map. All $U_a$ are translations in the same coordinate system, so they commute with each other.
+
+The pullback $B_{S_a}$ is semisimple. For $\alpha_{a,i}\ne1$, the shifted variable $y_i=x_i+\beta_{a,i}/(\alpha_{a,i}-1)$ is scaled by $\alpha_{a,i}$. Together with unshifted variables on the other coordinates, the squarefree monomials in the $y_i$ form an eigenbasis of $V_k$. In contrast, $B_{U_a}$ is unipotent: translation sends each monomial to itself plus terms of lower total degree. These two pullbacks commute and their product is $T_a^t$, so they are its multiplicative Jordan factors.
+
+We spell out why these factors descend to the given subquotient. For an invertible matrix $T$ with rational spectrum, polynomial interpolation on its generalized eigenspaces gives a polynomial in $T$ acting as $\lambda I$ on the generalized $\lambda$-eigenspace. This is its semisimple factor $S$; then $U=S^{-1}T$ is also a polynomial in $T$, is unipotent, and commutes with $S$. Uniqueness follows on the same generalized eigenspaces. The spectra here are products of the rational nonzero $\alpha_{a,i}$, so interpolation takes place over $\Q$. Both factors preserve any $T$-invariant subspace. Their induced factors on an invariant subquotient remain semisimple and unipotent: their minimal polynomials divide the corresponding original minimal polynomials. They therefore give its Jordan factors as well.
+
+Apply this observation to $T_a^t$. Its induced operator $M_a^t$ is unipotent, so its induced semisimple factor is identity and the factor induced by $B_{U_a}$ is $M_a^t$. As the translations $U_a$ commute, their pullbacks commute, giving
+\[
+ M_a^tM_b^t=M_b^tM_a^t.
+\]
+If $M$ is a unipotent $d\times d$ rational matrix, the finite binomial identity gives
+\begin{equation}\label{eq:root}
+ M=\sum_{j=0}^{d-1}\binom{1/t}{j}(M^t-I)^j.
+\end{equation}
+Indeed, in $\Q[X]/(X^d)$, substitute $Y=(1+X)^t-1$ into the truncated series $(1+Y)^{1/t}=1+X$, and then put $X=M-I$. Thus $M_a$ and $M_b$ are polynomials in their commuting $t$-th powers, and commute themselves.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:obstruction}]
+Unipotent minimal letter matrices are invertible. Sections~\ref{sec:retraction} and~\ref{sec:compression} place their simultaneous action on a common invariant subquotient of affine-coordinate pullbacks. Lemma~\ref{lem:unipotent} applies. When $k=0$, the compressed space has dimension one, so the same conclusion holds. No invertibility hypothesis has been imposed on the original register maps.
+\end{proof}
+
+\section{The uniform pumping property of the witness}\label{sec:pumping}
+Write $\ell(w)=|w|$, $c(w)=\sum_i w_i$, and let $f$ be~\eqref{eq:witness}. Concatenation gives
+\begin{equation}\label{eq:concat}
+ f(uv)=f(u)+f(v)+\ell(u)c(v).
+\end{equation}
+On column coordinates $(f,\ell,1)^\mathsf{T}$, appending a bit $b$ acts by
+\[
+ A_b=\begin{pmatrix}1&b&b\\0&1&1\\0&0&1\end{pmatrix}.
+\]
+More generally, appending $w$ acts by
+\begin{equation}\label{eq:Aw}
+ A_w=\begin{pmatrix}1&c(w)&f(w)\\0&1&\ell(w)\\0&0&1\end{pmatrix},
+ \qquad A_{uv}=A_vA_u.
+\end{equation}
+Thus the row-convention weighted representation with initial row $(0,0,1)$, matrices $A_b^\mathsf{T}$ and final column $(1,0,0)^\mathsf{T}$ recognizes $f$.
+
+For arbitrary $u,w,v$ and $n\geq0$, summing the contributions from the $n$ copies of $w$ yields
+\begin{align*}
+ f(uw^n v)&=C+An+B\frac{n(n-1)}2,\\
+ C&=f(u)+f(v)+\ell(u)c(v),\\
+ A&=f(w)+\ell(u)c(w)+\ell(w)c(v),\qquad B=\ell(w)c(w).
+\end{align*}
+The copy of $w$ indexed by $j=0,\ldots,n-1$ contributes $f(w)+(\ell(u)+j\ell(w))c(w)$, while the final $v$ contributes $f(v)+(\ell(u)+n\ell(w))c(v)$. This also proves the formula when any word is empty. Replacing $n$ by $n+1$ gives
+\begin{equation}\label{eq:quadratic}
+ f(uw^{n+1}v)=(C+A)+(A+B/2)n+(B/2)n^2.
+\end{equation}
+The ring $R=\Z[1/2]$ is a finitely generated subsemiring of $\Q$: the generators $-1$ and $1/2$, together with the semiring identities, suffice. All coefficients in~\eqref{eq:quadratic} lie in $R$. Constants and the sequence $n$ generate the displayed polynomial by pointwise sums and products, so it is $R$-generable with $m=1$, uniformly for every triple. Its only possible nonzero exponential base is $1$, and the degree-coefficient sums are exactly these coefficients (zero in higher degrees). This establishes every pumping assertion in Theorem~\ref{thm:main}. This calculation is the acknowledged baseline from~\cite[Example~26]{MPS26} and~\cite[Appendix~B.4]{MPSfull}.
+
+\section{Return words remove arbitrary finite control}\label{sec:control}
+Suppose a finite-state rational CCRA recognizes $f$. Choose a reachable bottom strongly connected component $S$ of its complete control graph. Let $s=|S|\geq1$, choose a state $q\in S$, and let $p$ be a word taking the initial state to $q$.
+
+Starting at $q$, read $0^s$. The run stays in $S$, and a shortest path from its endpoint back to $q$ has length at most $s-1$. Let $u$ consist of $0^s$ followed by a word labeling such a path. Similarly let $v$ consist of $1^s$ followed by a return path of length at most $s-1$. These are nonempty return words at $q$, and
+\begin{equation}\label{eq:density}
+ \frac{c(u)}{\ell(u)}<\frac12<\frac{c(v)}{\ell(v)},\qquad
+ \delta=c(v)\ell(u)-c(u)\ell(v)\ne0.
+\end{equation}
+For the first inequality, all $1$ symbols of $u$ occur in its return path, of length $j<s$, and $j/(s+j)<1/2$. For the second, $v$ has at least $s$ ones and total length at most $2s-1$.
+
+Let $h:\{U,V\}^*\to\{0,1\}^*$ be the substitution $h(U)=u$, $h(V)=v$. The register valuation after $p$, the composed update along each return word, and the output at $q$ define a one-state rational CCRA for
+\[
+ g(z)=f(p h(z)).
+\]
+Every block returns to $q$, and composition preserves copylessness. This passage handles arbitrary original finite control without assuming that either original letter is a loop.
+
+The column realization of $g$ uses $A_u,A_v$ from~\eqref{eq:Aw}, initial column $z_p=(f(p),\ell(p),1)^\mathsf{T}$ and observation row $e_1^\mathsf{T}$. Both matrices are unipotent. Direct multiplication gives
+\begin{equation}\label{eq:commutator}
+ D_0=A_vA_u-A_uA_v=\delta E_{13}\ne0,
+\end{equation}
+where $E_{13}$ has its only nonzero entry, equal to $1$, in position $(1,3)$. We verify that the realization is minimal, so this noncommutation cannot disappear in an unobservable part.
+
+The reachable column span contains
+\[
+ z_p,\qquad D_0z_p=\delta e_1,\qquad
+ (A_u-I)z_p=\begin{pmatrix}c(u)\ell(p)+f(u)\\\ell(u)\\0\end{pmatrix}.
+\]
+They are linearly independent: $z_p$ has last coordinate $1$, the second vector is a nonzero multiple of $e_1$, and the third has nonzero second coordinate $\ell(u)$. These vectors are linear combinations of genuine word actions, including the two products associated with $UV$ and $VU$.
+
+The observable row span contains
+\[
+ e_1^\mathsf{T},\qquad e_1^\mathsf{T}D_0=\delta e_3^\mathsf{T},\qquad
+ e_1^\mathsf{T}(A_v-I)=(0,c(v),f(v)).
+\]
+They are independent since $\delta\ne0$ and $c(v)\geq s>0$. The realization is therefore reachable and observable. Transposing gives the standard row convention with minimal matrices $A_u^\mathsf{T},A_v^\mathsf{T}$. Transposition preserves unipotence and failure to commute. By the residual-space construction in Section~\ref{sec:prelim}, this representation is simultaneously similar to the minimal representation of any one-state CCRA for $g$.
+
+Theorem~\ref{thm:obstruction} requires these two minimal unipotent matrices to commute, contradicting~\eqref{eq:commutator}. Thus no proposed finite-state CCRA for $f$ exists. Together with Section~\ref{sec:pumping}, this proves Theorem~\ref{thm:main}.
+
+\paragraph{Scope and verification.}
+The argument uses neither an algebraic-group image assertion nor a register bound. The key projection is established on the full squarefree polynomial space before passing to the observable quotient. Characteristic zero is used for the unipotent root polynomial; only the rational-field separation is asserted here. Exact rational computations tested singular nonlinear examples, minimal quotients, pumping formulas and return-word constructions on finite automata. These checks are supplementary diagnostics; none of the universal conclusions depends on finite enumeration or numerical fitting.
+
+\paragraph{AI methodology.}
+OpenAI Codex materially assisted proof development, primary-literature comparison, exact-arithmetic diagnostics, and the writing and typesetting of all sections; the minimum-output route originated in the supplied research material. Separate Codex contexts checked the arguments and ran additional exact diagnostics.
+
+\clearpage
+\renewcommand{\bibfont}{\normalfont\normalsize}
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\end{document}

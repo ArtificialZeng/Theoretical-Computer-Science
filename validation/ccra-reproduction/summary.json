@@ -1,0 +1,35 @@
+{
+  "utc": "2026-11-01T17:39:08.066665+00:00",
+  "passed": true,
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "python_executable": "python3.14",
+  "scope": "Finite checks accompanying the manuscripts; not an independent proof of all general theorems",
+  "papers": [
+    {
+      "id": "c021-ccrapumping",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/research_checks.py"
+          ],
+          "exit_code": 0,
+          "seconds": 9.688,
+          "log": "validation/ccra-reproduction/c021-ccrapumping-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "audit/referee-check.py"
+          ],
+          "exit_code": 0,
+          "seconds": 2.199,
+          "log": "validation/ccra-reproduction/c021-ccrapumping-2.log"
+        }
+      ]
+    }
+  ]
+}
