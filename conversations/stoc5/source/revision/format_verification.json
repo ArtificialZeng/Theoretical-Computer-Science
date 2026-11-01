@@ -1,0 +1,62 @@
+{
+  "pdf_pages": 19,
+  "paper_size_points": [
+    612,
+    792
+  ],
+  "nominal_body_font_pt": 11,
+  "geometry": "single-column Letter, 1in margins, single spacing",
+  "labels": {
+    "thm:A": {
+      "number": "2.1",
+      "body_page": 2,
+      "pdf_page": 3
+    },
+    "thm:B": {
+      "number": "2.3",
+      "body_page": 2,
+      "pdf_page": 3
+    },
+    "thm:C": {
+      "number": "2.4",
+      "body_page": 3,
+      "pdf_page": 4
+    },
+    "thm:D": {
+      "number": "2.5",
+      "body_page": 3,
+      "pdf_page": 4
+    },
+    "cor:2026": {
+      "number": "2.2",
+      "body_page": 2,
+      "pdf_page": 3
+    },
+    "fig:framework": {
+      "number": "1",
+      "body_page": 6,
+      "pdf_page": 7
+    },
+    "fig:incremental": {
+      "number": "2",
+      "body_page": 13,
+      "pdf_page": 14
+    },
+    "tab:parameters": {
+      "number": "3",
+      "body_page": 15,
+      "pdf_page": 16
+    }
+  },
+  "D_full_proof_pdf_page": 11,
+  "references_pdf_pages": [
+    18,
+    19
+  ],
+  "undefined_references_or_overfull_boxes": false,
+  "citations": 19,
+  "bibliography_style": "alphaurl",
+  "figure_placement": "all H between complete paragraphs",
+  "old_cubic_hypothesis_lower_bounds_removed": true,
+  "pdf_sha256": "cfd986c64c49ca77ab979c0d0ffd49d6d8c2f3b82489364adb842eef1b486a67"
+}

@@ -1,0 +1,19 @@
+{
+  "revision": "treeflow-v2",
+  "all_record_ids_unique_and_sequential": true,
+  "matrix_vector_instances": 4164,
+  "replayed_record_counts": {
+    "lower_row": 12420,
+    "selector": 12420,
+    "bag_init": 3,
+    "bag_edit": 108,
+    "bag_answer": 24696,
+    "circuit_init": 3,
+    "circuit_edit": 300,
+    "circuit_answer": 9600,
+    "recursion": 3,
+    "sharing": 24
+  },
+  "status": "all checks passed",
+  "method": "reconstructed graph BFS, direct Boolean evaluation, independent circuit operations"
+}

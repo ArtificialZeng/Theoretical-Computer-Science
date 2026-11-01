@@ -1,0 +1,20 @@
+{
+  "status": "Template files only; no original paper, proof, result or reproduction artifact found",
+  "original_directory": "stoc6",
+  "files": {
+    "acmart.cls": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+    "ACM-Reference-Format.bst": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04",
+    "LICENSE": "ca3227f672053cb608959d7e1d476c7a13efea11be3f6e53758a68b650c918e8",
+    "README": "9fe9e645dc0d5ee741cad629de35bd3166fa7cce57b3ff5eefdb919dadf5b289",
+    "acmart.dtx": "e29efd327f5c759f3d1f2e99dc8588c6a05b734c142f89c3e348161b893e44ff",
+    "acmart.ins": "fa7daaa9375775ce699f33f909667bdb83c0408fd8d67606926df86c346c4044",
+    "acmart.bib": "da283243f63178da207da639cc94652407a0fe218d3cd12b852d21de9d01c8da",
+    "acm-jdslogo.png": "807d24f7910ee351277a68f5530d7bbc5112119345dd5f0129338824ee977f17",
+    "acmauthoryear.bbx": "267dc31eb08af3524b12ac76d4e95fa6604022c2ae171eaa13b3af2220749f34",
+    "acmauthoryear.cbx": "cb22394f982fcaf8ed7f0df34234696f45fc130afcf9ee3cd1260805ad2170d1",
+    "acmdatamodel.dbx": "a5bab6fed4585780632607ef2790ee8797864244a4b80bc0c4e3bfcb76b0c2bc",
+    "acmnumeric.bbx": "4b7deca9371b6a9349750767b14309451b54486ebee578f96a8909a2ba202beb",
+    "acmnumeric.cbx": "22db9dd1bcb095d8af106e6a834f0ce1f182c73eee656589043c0153f226d911"
+  },
+  "omitted": "Duplicate upstream sample documents, generated files and .DS_Store"
+}

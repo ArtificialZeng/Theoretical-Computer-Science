@@ -1,0 +1,36 @@
+{
+  "old_key": "svejdar",
+  "new_key": "Švejdar2003",
+  "official_url": "https://link.springer.com/article/10.1007/s00153-003-0179-x",
+  "official_export_url": "https://citation-needed.springer.com/v2/references/10.1007/s00153-003-0179-x?format=bibtex&flavour=citation",
+  "bibtex_path": "audit/references/svejdar.official.bib",
+  "metadata_status": "verified_against_native_Springer_export",
+  "current_title": "On the Polynomial-Space Completeness of Intuitionistic Propositional Logic",
+  "official_title": "On the polynomial-space completeness of intuitionistic propositional logic",
+  "title_consistent": true,
+  "authors_consistent": true,
+  "year_consistent": true,
+  "venue_consistent": true,
+  "differences": [
+    "Native official key is literal Unicode Švejdar2003.",
+    "Title uses sentence case; author uses explicit TeX accents.",
+    "Native export adds issue number 7, October 1 issue date, abstract, online ISSN, and DOI URL.",
+    "Publisher web page gives online publication May 16, 2003; issue date is October 2003. This date distinction does not change publication year."
+  ],
+  "uncertainties": [],
+  "compilation_notes": [
+    "Native export contains a literal Unicode key. Keep original raw export unchanged; use a Unicode-capable engine or verify current toolchain key handling. Alternate Crossref export with ASCII key _vejdar_2003 preserved separately at audit/references/svejdar.crossref.bib."
+  ],
+  "access_limitations": [
+    "Publisher full text is subscription-only; author-hosted full PDF was downloaded for later audit, with no claim-support verdict yet."
+  ],
+  "additional_primary_source": "https://www1.cuni.cz/~svejdar/papers/sv_pspin.pdf",
+  "cite_locations": [
+    {
+      "line": 327,
+      "context": "\\begin{proof}[Proof of Theorem~\\ref{thm:types}]\nSimple arrow-type inhabitation with context is in PSPACE, and already the closed case is PSPACE-hard, by the classical implicational intuitionistic-logic classification~\\cite{statman,svejdar} and Curry--Howard. Every inhabited simple type has an $\\eta$-long $\\beta$-normal inhabitant. Apply Lemma~\\ref{lem:frontier}, then invoke a polynomial-space inhabitation procedure on each frontier obligation sequentially, reusing its workspace. Enumerate the polynomially many potential completions of a partial head index, again sequentially. Polynomial space is closed under these finite conjunctions and disjunctions. This proves membership."
+    }
+  ],
+  "action": "replace with native Springer export and update complete key; verify Unicode key in chosen build",
+  "prose_claim_support_status": "not_evaluated_pending_citation_check_pass_2"
+}

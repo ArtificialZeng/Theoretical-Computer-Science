@@ -1,0 +1,23 @@
+{
+  "old_key": "gallaire",
+  "new_key": "Gallaire_1969",
+  "official_url": "https://api.crossref.org/works/10.1016%2FS0019-9958%2869%2990463-X/transform/application/x-bibtex",
+  "official_record_url": "https://www.sciencedirect.com/science/article/pii/S001999586990463X",
+  "bibtex_path": "audit/references/gallaire.official.bib",
+  "metadata_status": "verified_primary_crossref_export",
+  "differences": [
+    "Official Crossref key Gallaire_1969 replaces gallaire.",
+    "Title, sole author Hervé Gallaire, year 1969, volume 15, issue 3, pages 288--295 and DOI agree.",
+    "Official export adds ISSN, publisher Elsevier BV, DOI resolver URL and month Sept.",
+    "Official DOI is lowercase; DOI identity is unchanged.",
+    "Raw export represents page range with Unicode en dash and author accent as Unicode."
+  ],
+  "uncertainties": [
+    "Raw Crossref export uses month=Sept (bare macro). Preserve export verbatim; if BibTeX flags undefined Sept, add an external @string{Sept = {September}} definition without editing raw official block. Publisher page explicitly dates article September 1969."
+  ],
+  "source_accessed": "2026-10-31",
+  "tex_locations": [
+    178
+  ],
+  "claim_support_status": "not_assessed_pending_citation_check_pass_2"
+}

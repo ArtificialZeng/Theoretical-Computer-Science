@@ -1,0 +1,16 @@
+{
+  "id": "stoc2",
+  "title": "Syntax Repair in Near-Linear Time: Exact Bounds for Marked-Palindrome Grammars",
+  "kind": "existing-conversation-manuscript",
+  "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+  "pages": 9,
+  "pdf": "conversations/stoc2/paper.pdf",
+  "source_archive": "conversations/stoc2/source.zip",
+  "source_directory": "conversations/stoc2/source",
+  "archive_prefix": "",
+  "pdf_sha256": "35b701e8686499f5b01e74b948d6cd9c02012f23d3055af8ee8c5b272bfe4752",
+  "source_archive_sha256": "5f47a3066f956ab138a9674818640f7b0966faa20e81cacb35278c67f1beffd3",
+  "original_pdf": "stoc2/2.pdf",
+  "original_archive": "stoc2/2-source.zip",
+  "readme": "conversations/stoc2/README.md"
+}

@@ -1,0 +1,22 @@
+{
+  "old_key": "syncode",
+  "new_key": "ugare2025syncode",
+  "official_url": "https://jmlr.org/tmlr/papers/bib/HiUZtgAPoH.bib",
+  "official_record_url": "https://jmlr.org/tmlr/papers/",
+  "bibtex_path": "audit/references/syncode.official.bib",
+  "metadata_status": "verified_official_export",
+  "differences": [
+    "Official TMLR exported article entry replaces ad hoc misc entry.",
+    "Title, all five authors, publication year 2025 and Transactions on Machine Learning Research venue agree.",
+    "Official export adds ISSN and note field, retains OpenReview URL."
+  ],
+  "uncertainties": [
+    "TMLR listing dates this paper June 2025; an earlier PDF header says 05/2025. Existing citation specifies year only, which is consistent."
+  ],
+  "source_accessed": "2026-10-31",
+  "tex_locations": [
+    52,
+    191
+  ],
+  "claim_support_status": "not_assessed_pending_citation_check_pass_2"
+}

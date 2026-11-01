@@ -1,0 +1,632 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        30
+      ]
+    ],
+    "date-time": "2026-10-30T22:04:49Z",
+    "timestamp": 1793397889289,
+    "version": "4.5.0"
+  },
+  "reference-count": 33,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "2",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            10,
+            11
+          ]
+        ],
+        "date-time": "2022-10-11T00:00:00Z",
+        "timestamp": 1665446400000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            10,
+            11
+          ]
+        ],
+        "date-time": "2022-10-11T00:00:00Z",
+        "timestamp": 1665446400000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/100000181",
+      "name": "Air Force Office of Scientific Research",
+      "doi-asserted-by": "crossref",
+      "award": [
+        "FA9550-19-1-0177"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "FA9550-19-1-0177"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/100000181",
+          "id-type": "DOI",
+          "asserted-by": "crossref"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "link.springer.com"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Algorithmica"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2023,
+        2
+      ]
+    ]
+  },
+  "DOI": "10.1007/s00453-022-01048-1",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2022,
+        10,
+        11
+      ]
+    ],
+    "date-time": "2022-10-11T12:02:43Z",
+    "timestamp": 1665489763000
+  },
+  "page": "610-637",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 3,
+  "title": [
+    "Integer Feasibility and Refutations in UTVPI Constraints Using Bit-Scaling"
+  ],
+  "prefix": "10.1007",
+  "volume": "85",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0001-5821-5117",
+      "authenticated-orcid": false,
+      "given": "K.",
+      "family": "Subramani",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Piotr",
+      "family": "Wojciechowski",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2022,
+        10,
+        11
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "1048_CR1",
+      "volume-title": "Network Flows: Theory, Algorithms and Applications",
+      "author": "RK Ahuja",
+      "year": "1993",
+      "unstructured": "Ahuja, R.K., Magnanti, T.L., Orlin, J.B.: Network Flows: Theory, Algorithms and Applications. Prentice-Hall, Hoboken (1993)"
+    },
+    {
+      "issue": "3",
+      "key": "1048_CR2",
+      "doi-asserted-by": "publisher",
+      "first-page": "121",
+      "DOI": "10.1016/0020-0190(79)90002-4",
+      "volume": "8",
+      "author": "B Aspvall",
+      "year": "1979",
+      "unstructured": "Aspvall, B., Plass, M.F., Tarjan, R.E.: A linear time algorithm for testing the truth of certain quantified boolean formulas. Inf. Process. Lett. 8(3), 121\u2013123 (1979)",
+      "journal-title": "Inf. Process. Lett."
+    },
+    {
+      "issue": "3",
+      "key": "1048_CR3",
+      "doi-asserted-by": "publisher",
+      "first-page": "279",
+      "DOI": "10.1007/s10703-009-0073-1",
+      "volume": "35",
+      "author": "R Bagnara",
+      "year": "2009",
+      "unstructured": "Bagnara, R., Hill, P.M., Zaffanella, E.: Weakly-relational shapes for numeric abstractions: improved algorithms and proofs of correctness. Form. Methods Syst. Des. 35(3), 279\u2013323 (2009)",
+      "journal-title": "Form. Methods Syst. Des."
+    },
+    {
+      "key": "1048_CR4",
+      "doi-asserted-by": "publisher",
+      "first-page": "42",
+      "DOI": "10.1016/j.tcs.2018.02.002",
+      "volume": "729",
+      "author": "HK B\u00fcning",
+      "year": "2018",
+      "unstructured": "B\u00fcning, H.K., Wojciechowski, P.J., Subramani, K.: Finding read-once resolution refutations in systems of 2CNF clauses. Theor. Comput. Sci. 729, 42\u201356 (2018)",
+      "journal-title": "Theor. Comput. Sci."
+    },
+    {
+      "key": "1048_CR5",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Buresh-Oppenheim, J., Mitchell, D.G.: Minimum 2CNF resolution refutations in polynomial time. In: Marques-Silva, J., Sakallah, K.A. (eds.) Theory and Applications of Satisfiability Testing\u2014SAT 2007, 10th International Conference, Lisbon, Portugal, May 28-31, 2007, Proceedings, volume 4501 of Lecture Notes in Computer Science, pp. 300\u2013313. Springer (2007)",
+      "DOI": "10.1007/978-3-540-72788-0_29"
+    },
+    {
+      "issue": "3",
+      "key": "1048_CR6",
+      "doi-asserted-by": "publisher",
+      "first-page": "708",
+      "DOI": "10.2307/2275569",
+      "volume": "62",
+      "author": "ML Bonet",
+      "year": "1997",
+      "unstructured": "Bonet, M.L., Pitassi, T., Raz, R.: Lower bounds for cutting planes proofs with small coefficients. J. Symb. Log. 62(3), 708\u2013728 (1997)",
+      "journal-title": "J. Symb. Log."
+    },
+    {
+      "key": "1048_CR7",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Cook, W., Coullard, C.R., Turan, Gy.: On the complexity of cutting-plane proofs. Discrete Appl. Math. 18, 25\u201338 (1987)",
+      "DOI": "10.1016/0166-218X(87)90039-4"
+    },
+    {
+      "key": "1048_CR8",
+      "volume-title": "Introduction to Algorithms",
+      "author": "TH Cormen",
+      "year": "2001",
+      "unstructured": "Cormen, T.H., Leiserson, C.E., Rivest, R.L., Stein, C.: Introduction to Algorithms. MIT Press, Cambridge (2001)"
+    },
+    {
+      "key": "1048_CR9",
+      "doi-asserted-by": "publisher",
+      "first-page": "288",
+      "DOI": "10.1016/0097-3165(73)90004-6",
+      "volume": "14",
+      "author": "GB Dantzig",
+      "year": "1973",
+      "unstructured": "Dantzig, G.B., Eaves, B.C.: Fourier\u2013Motzkin elimination and its dual. J. Comb. Theory (A) 14, 288\u2013297 (1973)",
+      "journal-title": "J. Comb. Theory (A)"
+    },
+    {
+      "issue": "3",
+      "key": "1048_CR10",
+      "doi-asserted-by": "publisher",
+      "first-page": "494",
+      "DOI": "10.1137/S0097539792231179",
+      "volume": "24",
+      "author": "AV Goldberg",
+      "year": "1995",
+      "unstructured": "Goldberg, A.V.: Scaling algorithms for the shortest paths problem. SIAM J. Comput. 24(3), 494\u2013504 (1995)",
+      "journal-title": "SIAM J. Comput."
+    },
+    {
+      "key": "1048_CR11",
+      "doi-asserted-by": "publisher",
+      "first-page": "275",
+      "DOI": "10.1090/S0002-9904-1958-10224-4",
+      "volume": "64",
+      "author": "RE Gomory",
+      "year": "1958",
+      "unstructured": "Gomory, R.E.: Outline of an algorithm for integer solutions to linear programs. Bull. Am. Math. Soc. 64, 275\u2013278 (1958)",
+      "journal-title": "Bull. Am. Math. Soc."
+    },
+    {
+      "issue": "2\u20133",
+      "key": "1048_CR12",
+      "doi-asserted-by": "publisher",
+      "first-page": "297",
+      "DOI": "10.1016/0304-3975(85)90144-6",
+      "volume": "39",
+      "author": "A Haken",
+      "year": "1985",
+      "unstructured": "Haken, A.: The intractability of resolution. Theoret. Comput. Sci. 39(2\u20133), 297\u2013308 (1985)",
+      "journal-title": "Theoret. Comput. Sci."
+    },
+    {
+      "issue": "6",
+      "key": "1048_CR13",
+      "doi-asserted-by": "publisher",
+      "first-page": "1179",
+      "DOI": "10.1137/S0097539793251876",
+      "volume": "23",
+      "author": "DS Hochbaum",
+      "year": "1994",
+      "unstructured": "Hochbaum, D.S., Naor, J.: Simple and fast algorithms for linear and integer programs with two variables per inequality. SIAM J. Comput. 23(6), 1179\u20131192 (1994)",
+      "journal-title": "SIAM J. Comput."
+    },
+    {
+      "issue": "1\u20134",
+      "key": "1048_CR14",
+      "doi-asserted-by": "publisher",
+      "first-page": "217",
+      "DOI": "10.1007/BF02186368",
+      "volume": "12",
+      "author": "JN Hooker",
+      "year": "1988",
+      "unstructured": "Hooker, J.N.: Generalized resolution and cutting planes. Ann. Oper. Res. 12(1\u20134), 217\u2013239 (1988)",
+      "journal-title": "Ann. Oper. Res."
+    },
+    {
+      "key": "1048_CR15",
+      "unstructured": "Harvey, W., Stuckey, P.J.: A unit two variable per inequality integer constraint solver for constraint logic programming. In: Proceedings of the 20th Australasian Computer Science Conference, pp. 102\u2013111 (1997)"
+    },
+    {
+      "key": "1048_CR16",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Jaffar, J., Maher, M.J., Stuckey, P.J., Yap, H.C.: Beyond finite domains. In: Proceedings of the Second International Workshop on Principles and Practice of Constraint Programming (1994)",
+      "DOI": "10.1007/3-540-58601-6_92"
+    },
+    {
+      "key": "1048_CR17",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Lahiri, S.K., Musuvathi, M.: An efficient decision procedure for UTVPI constraints. In: Proceedings of the $$5^{th}$$ International Workshop on the Frontiers of Combining Systems, September 19\u201321, Vienna, Austria, pp. 168\u2013183. Springer, New York (2005)",
+      "DOI": "10.1007/11559306_9"
+    },
+    {
+      "issue": "1",
+      "key": "1048_CR18",
+      "doi-asserted-by": "publisher",
+      "first-page": "31",
+      "DOI": "10.1007/s10990-006-8609-1",
+      "volume": "19",
+      "author": "A Min\u00e9",
+      "year": "2006",
+      "unstructured": "Min\u00e9, A.: The octagon abstract domain. High. Order Symb. Comput. 19(1), 31\u2013100 (2006)",
+      "journal-title": "High. Order Symb. Comput."
+    },
+    {
+      "key": "1048_CR19",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Nieuwenhuis, R., Oliveras, A., Tinelli, C.: Abstract DPLL and abstract DPLL modulo theories. In: LPAR, pp. 36\u201350 (2004)",
+      "DOI": "10.1007/978-3-540-32275-7_3"
+    },
+    {
+      "key": "1048_CR20",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Pitassi, T., Urquhart, A.: The complexity of the Haj\u00f3s calculus. In: 33rd Annual Symposium on Foundations of Computer Science, Pittsburgh, Pennsylvania, USA, 24\u201327 October 1992, pp. 187\u2013196 (1992)",
+      "DOI": "10.1109/SFCS.1992.267773"
+    },
+    {
+      "issue": "3",
+      "key": "1048_CR21",
+      "doi-asserted-by": "publisher",
+      "first-page": "981",
+      "DOI": "10.2307/2275583",
+      "volume": "62",
+      "author": "P Pudl\u00e1k",
+      "year": "1997",
+      "unstructured": "Pudl\u00e1k, P.: Lower bounds for resolution and cutting plane proofs and monotone computations. J. Symb. Log. 62(3), 981\u2013998 (1997)",
+      "journal-title": "J. Symb. Log."
+    },
+    {
+      "issue": "1",
+      "key": "1048_CR22",
+      "doi-asserted-by": "publisher",
+      "first-page": "23",
+      "DOI": "10.1145/321250.321253",
+      "volume": "12",
+      "author": "JA Robinson",
+      "year": "1965",
+      "unstructured": "Robinson, J.A.: A machine-oriented logic based on the resolution principle. J. ACM 12(1), 23\u201341 (1965)",
+      "journal-title": "J. ACM"
+    },
+    {
+      "issue": "4",
+      "key": "1048_CR23",
+      "doi-asserted-by": "publisher",
+      "first-page": "514",
+      "DOI": "10.1287/ijoc.1090.0369",
+      "volume": "22",
+      "author": "A Schutt",
+      "year": "2010",
+      "unstructured": "Schutt, A., Stuckey, P.J.: Incremental satisfiability and implication for UTVPI constraints. INFORMS J. Comput. 22(4), 514\u2013527 (2010)",
+      "journal-title": "INFORMS J. Comput."
+    },
+    {
+      "issue": "1,2",
+      "key": "1048_CR24",
+      "first-page": "67",
+      "volume": "3",
+      "author": "SA Seshia",
+      "year": "2007",
+      "unstructured": "Seshia, S.A., Subramani, K., Bryant, R.E.: On solving boolean combinations of UTVPI constraints. J. Satisf. Boolean Model. Comput. 3(1,2), 67\u201390 (2007)",
+      "journal-title": "J. Satisf. Boolean Model. Comput."
+    },
+    {
+      "issue": "3",
+      "key": "1048_CR25",
+      "doi-asserted-by": "publisher",
+      "first-page": "281",
+      "DOI": "10.1002/malq.200310099",
+      "volume": "50",
+      "author": "K Subramani",
+      "year": "2004",
+      "unstructured": "Subramani, K.: On deciding the non-emptiness of 2SAT polytopes with respect to first order queries. Math. Log. Q. 50(3), 281\u2013292 (2004)",
+      "journal-title": "Math. Log. Q."
+    },
+    {
+      "issue": "2",
+      "key": "1048_CR26",
+      "doi-asserted-by": "publisher",
+      "first-page": "316",
+      "DOI": "10.1145/976706.976711",
+      "volume": "5",
+      "author": "K Subramani",
+      "year": "2004",
+      "unstructured": "Subramani, K.: Optimal length tree-like resolution refutations for 2sat formulas. ACM Trans. Comput. Log. 5(2), 316\u2013320 (2004)",
+      "journal-title": "ACM Trans. Comput. Log."
+    },
+    {
+      "issue": "2",
+      "key": "1048_CR27",
+      "doi-asserted-by": "publisher",
+      "first-page": "121",
+      "DOI": "10.1007/s10817-009-9139-4",
+      "volume": "43",
+      "author": "K Subramani",
+      "year": "2009",
+      "unstructured": "Subramani, K.: Optimal length resolution refutations of difference constraint systems. J. Autom. Reason.: JAR 43(2), 121\u2013137 (2009)",
+      "journal-title": "J. Autom. Reason.: JAR"
+    },
+    {
+      "key": "1048_CR28",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.1016/j.tcs.2014.12.016",
+      "volume": "576",
+      "author": "K Subramani",
+      "year": "2015",
+      "unstructured": "Subramani, K., Worthington, J.: Feasibility checking in Horn constraint systems through a reduction based approach. Theor. Comput. Sci. 576, 1\u201317 (2015)",
+      "journal-title": "Theor. Comput. Sci."
+    },
+    {
+      "issue": "1",
+      "key": "1048_CR29",
+      "doi-asserted-by": "publisher",
+      "first-page": "166",
+      "DOI": "10.1007/s00453-016-0131-1",
+      "volume": "78",
+      "author": "K Subramani",
+      "year": "2017",
+      "unstructured": "Subramani, K., Wojciechowski, P.J.: A combinatorial certifying algorithm for linear feasibility in UTVPI constraints. Algorithmica 78(1), 166\u2013208 (2017)",
+      "journal-title": "Algorithmica"
+    },
+    {
+      "issue": "2",
+      "key": "1048_CR30",
+      "doi-asserted-by": "publisher",
+      "first-page": "389",
+      "DOI": "10.1007/s10878-017-0176-3",
+      "volume": "35",
+      "author": "K Subramani",
+      "year": "2018",
+      "unstructured": "Subramani, K., Wojciechowski, P.J.: A certifying algorithm for lattice point feasibility in a system of UTVPI constraints. J. Comb. Optim. 35(2), 389\u2013408 (2018)",
+      "journal-title": "J. Comb. Optim."
+    },
+    {
+      "issue": "7",
+      "key": "1048_CR31",
+      "doi-asserted-by": "publisher",
+      "first-page": "2765",
+      "DOI": "10.1007/s00453-019-00554-z",
+      "volume": "81",
+      "author": "K Subramani",
+      "year": "2019",
+      "unstructured": "Subramani, K., Wojciechowki, P.: A polynomial time algorithm for read-once certification of linear infeasibility in UTVPI constraints. Algorithmica 81(7), 2765\u20132794 (2019)",
+      "journal-title": "Algorithmica"
+    },
+    {
+      "issue": "10",
+      "key": "1048_CR32",
+      "doi-asserted-by": "publisher",
+      "first-page": "1101",
+      "DOI": "10.1007/s10472-020-09703-5",
+      "volume": "88",
+      "author": "K Subramani",
+      "year": "2020",
+      "unstructured": "Subramani, K., Wojciechowski, P.J.: On integer closure in a system of unit two variable per inequality constraints. Ann. Math. Artif. Intell. 88(10), 1101\u20131118 (2020)",
+      "journal-title": "Ann. Math. Artif. Intell."
+    },
+    {
+      "key": "1048_CR33",
+      "doi-asserted-by": "publisher",
+      "first-page": "239",
+      "DOI": "10.1007/s10817-022-09618-2",
+      "volume": "66",
+      "author": "P Wojciechowski",
+      "year": "2022",
+      "unstructured": "Wojciechowski, P., Subramani, K., Chandrasekaran, R.: Analyzing read-once cutting plane proofs in Horn systems. J. Autom. Reason.: JAR 66, 239\u2013274 (2022)",
+      "journal-title": "J. Autom. Reason.: JAR"
+    }
+  ],
+  "container-title": [
+    "Algorithmica"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://link.springer.com/content/pdf/10.1007/s00453-022-01048-1.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://link.springer.com/article/10.1007/s00453-022-01048-1/fulltext.html",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://link.springer.com/content/pdf/10.1007/s00453-022-01048-1.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2023,
+        1,
+        27
+      ]
+    ],
+    "date-time": "2023-01-27T09:19:03Z",
+    "timestamp": 1674811143000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://link.springer.com/10.1007/s00453-022-01048-1"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2022,
+        10,
+        11
+      ]
+    ]
+  },
+  "references-count": 33,
+  "journal-issue": {
+    "issue": "2",
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          2
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "1048"
+  ],
+  "URL": "https://doi.org/10.1007/s00453-022-01048-1",
+  "relation": {},
+  "ISSN": [
+    "0178-4617",
+    "1432-0541"
+  ],
+  "issn-type": [
+    {
+      "value": "0178-4617",
+      "type": "print"
+    },
+    {
+      "value": "1432-0541",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2022,
+        10,
+        11
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "13 April 2020",
+      "order": 1,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "18 June 2022",
+      "order": 2,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "value": "11 October 2022",
+      "order": 3,
+      "name": "first_online",
+      "label": "First Online",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    },
+    {
+      "order": 1,
+      "name": "Ethics",
+      "group": {
+        "name": "EthicsHeading",
+        "label": "Declaration"
+      }
+    },
+    {
+      "value": "We have no conflict of interest with respect to this work.",
+      "order": 2,
+      "name": "Ethics",
+      "group": {
+        "name": "EthicsHeading",
+        "label": "Conflict of interest"
+      }
+    }
+  ]
+}

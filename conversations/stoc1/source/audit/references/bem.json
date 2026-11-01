@@ -1,0 +1,21 @@
+{
+  "old_key": "bem",
+  "new_key": "10.1007/3-540-63141-0_10",
+  "official_url": "https://citation-needed.springer.com/v2/references/10.1007/3-540-63141-0_10?format=bibtex&flavour=citation",
+  "official_record_url": "https://link.springer.com/chapter/10.1007/3-540-63141-0_10",
+  "bibtex_path": "audit/references/bem.official.bib",
+  "metadata_status": "verified_official_export",
+  "differences": [
+    "Official Springer export key replaces bem with 10.1007/3-540-63141-0_10.",
+    "Title, three authors in order, year 1997, CONCUR 97 venue and pages 135--150 agree.",
+    "Official export adds editors Antoni Mazurkiewicz and Józef Winkowski, full abstract and ebook ISBN 978-3-540-69188-4.",
+    "Official publisher/address is Springer Berlin Heidelberg / Berlin, Heidelberg.",
+    "Official publisher export omits DOI, LNCS volume 1243 and series fields; preserve export rather than merge non-export fields. Crossref independently confirms DOI."
+  ],
+  "uncertainties": [],
+  "source_accessed": "2026-10-31",
+  "tex_locations": [
+    139
+  ],
+  "claim_support_status": "not_assessed_pending_citation_check_pass_2"
+}

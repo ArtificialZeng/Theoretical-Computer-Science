@@ -1,0 +1,28 @@
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\foreach \i/\y in {1/0.8,2/-0.8} {
+ \node at (-0.9,\y) {$P_{\i}:$};
+ \node[point] (e\i) at (0,\y) {$e_{\i}$};
+ \node[point] (c\i) at (1.5,\y) {$c_{\i}$};
+ \node[point] (r\i) at (3.0,\y) {$r_{\i}$};
+ \node[point] (x\i) at (4.5,\y) {$x_{\i}$};
+ \draw[arr] (e\i)--(c\i);\draw[arr] (r\i)--(x\i);
+ \draw[dotted,thick] (c\i)--(r\i);
+}
+\node[point] (a) at (8,0) {$a_j$};
+\node[point] (b) at (10.5,0) {$b_j$};
+\node at (9.2,-0.8) {$Q_j$ (one column)};
+\draw[arr,draw=tforange] (a)--node[above] {selector $v_j$}(b);
+\draw[arr] (c1) to[out=50,in=160] node[pos=0.58,above] {call $(1,j)$} (a);
+\draw[arr] (c2) to[out=-40,in=200] node[pos=0.58,below] {call $(2,j)$} (a);
+\draw[arr,dashed,draw=tfgreen] (b) to[out=80,in=90] node[pos=0.45,above] {return $(1,j)$} (r1);
+\draw[arr,dashed,draw=tfgreen] (b) to[out=-80,in=-90] node[pos=0.45,below] {return $(2,j)$} (r2);
+\end{tikzpicture}
+\caption{The path-procedure barrier (Theorem~\ref{thm:calls}). Two of the
+$k$ row procedures and one shared column procedure are shown. A target
+exists iff $M_{ij}=1$; returns match the labeled call choice. Dotted local
+interfaces have no executable bypass. Toggling one orange leaf edge changes
+many caller summaries while each local skeleton remains a path.}
+\label{fig:calls}
+\end{figure}

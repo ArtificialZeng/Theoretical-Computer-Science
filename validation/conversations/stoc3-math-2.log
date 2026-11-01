@@ -1,0 +1,7 @@
+
+> musub-artifact@0.2.0 test
+> node validate.mjs && node validate-splitter.mjs && node extra-validation.mjs && node frontend-validation.mjs && node node_modules/typescript/bin/tsc --noEmit --strict --skipLibCheck example.ts
+
+{ exhaustive_ov: 225, random_cyclic: 2000 }
+Splitter validated on 3000 random graphs
+Arrow cases: 225 cycle product: 323

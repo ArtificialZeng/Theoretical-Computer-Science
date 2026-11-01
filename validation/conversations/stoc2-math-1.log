@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "interval_vs_language": 1093,
+    "frontier_thresholds": 177086,
+    "guarded_reduction": 961,
+    "random_frontier_thresholds": 2500
+  },
+  "counterexample": {
+    "u": "aaabbb",
+    "v": "bbbaaa",
+    "input": "aaabbb#aaabbb",
+    "ed": 6,
+    "led": 5,
+    "repair": "aaab#baaa"
+  },
+  "seed": 20261031,
+  "wall_seconds": 6.807917250087485
+}

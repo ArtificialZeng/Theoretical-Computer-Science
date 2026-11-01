@@ -1,0 +1,167 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        4,
+        29
+      ]
+    ],
+    "date-time": "2026-04-29T08:03:30Z",
+    "timestamp": 1777449810878,
+    "version": "3.51.4"
+  },
+  "reference-count": 0,
+  "publisher": "AI Access Foundation",
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "jair"
+  ],
+  "abstract": "<jats:p>We present two new and efficient algorithms for computing all-pairs shortest paths.  The algorithms operate on directed graphs with real (possibly negative) weights.  They make use of directed path consistency along a vertex ordering d. Both algorithms run in O(n^2 w_d) time, where w_d is the graph width induced by this vertex ordering.  For graphs of constant treewidth, this yields O(n^2) time, which is optimal.  On chordal graphs, the algorithms run in O(nm) time. In addition, we present a variant that exploits graph separators to arrive at a run time of  O(n w_d^2 + n^2 s_d) on general graphs, where s_d </jats:p>",
+  "DOI": "10.1613/jair.3509",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2018,
+        7,
+        18
+      ]
+    ],
+    "date-time": "2018-07-18T08:54:27Z",
+    "timestamp": 1531904067000
+  },
+  "page": "353-388",
+  "source": "Crossref",
+  "is-referenced-by-count": 29,
+  "title": [
+    "Computing All-Pairs Shortest Paths by Leveraging Low Treewidth"
+  ],
+  "prefix": "10.1613",
+  "volume": "43",
+  "author": [
+    {
+      "given": "L. R.",
+      "family": "Planken",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "M. M.",
+      "family": "De Weerdt",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "given": "R. P.J.",
+      "family": "Van der Krogt",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "16860",
+  "published-online": {
+    "date-parts": [
+      [
+        2012,
+        3,
+        19
+      ]
+    ]
+  },
+  "container-title": [
+    "Journal of Artificial Intelligence Research"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "https://jair.org/index.php/jair/article/download/10753/25682",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://jair.org/index.php/jair/article/download/10753/25683",
+      "content-type": "application/postscript",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://jair.org/index.php/jair/article/download/10753/25682",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2019,
+        10,
+        18
+      ]
+    ],
+    "date-time": "2019-10-18T18:26:19Z",
+    "timestamp": 1571423179000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://jair.org/index.php/jair/article/view/10753"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2012,
+        3,
+        19
+      ]
+    ]
+  },
+  "references-count": 0,
+  "URL": "https://doi.org/10.1613/jair.3509",
+  "relation": {},
+  "ISSN": [
+    "1076-9757"
+  ],
+  "issn-type": [
+    {
+      "value": "1076-9757",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2012,
+        3,
+        19
+      ]
+    ]
+  }
+}

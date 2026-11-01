@@ -1,0 +1,663 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        7,
+        17
+      ]
+    ],
+    "date-time": "2026-07-17T16:59:18Z",
+    "timestamp": 1784307558326,
+    "version": "3.55.0"
+  },
+  "reference-count": 76,
+  "publisher": "Association for Computing Machinery (ACM)",
+  "issue": "5",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2018,
+            8,
+            29
+          ]
+        ],
+        "date-time": "2018-08-29T00:00:00Z",
+        "timestamp": 1535500800000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+    }
+  ],
+  "funder": [
+    {
+      "name": "CRA Computing Innovations Fellowship",
+      "award": [
+        "NSF CCF-0830797 and CCF-1118083"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "NSF CCF-0830797 and CCF-1118083"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AFOSR MURI"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "dl.acm.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "J. ACM"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2018,
+        10,
+        31
+      ]
+    ]
+  },
+  "abstract": "<jats:p>\n            We say an algorithm on\n            <jats:italic>n</jats:italic>\n            \u00d7\n            <jats:italic>n</jats:italic>\n            matrices with integer entries in [\u2212\n            <jats:italic>M</jats:italic>\n            ,\n            <jats:italic>M</jats:italic>\n            ] (or\n            <jats:italic>n</jats:italic>\n            -node graphs with edge weights from [\u2212\n            <jats:italic>M</jats:italic>\n            ,\n            <jats:italic>M</jats:italic>\n            ]) is\n            <jats:italic>truly subcubic</jats:italic>\n            if it runs in\n            <jats:italic>O</jats:italic>\n            (\n            <jats:italic>n</jats:italic>\n            <jats:sup>3 \u2212 \u03b4</jats:sup>\n            \u010b poly(log\n            <jats:italic>M</jats:italic>\n            )) time for some \u03b4 &gt; 0. We define a notion of\n            <jats:italic>subcubic reducibility</jats:italic>\n            and show that many important problems on graphs and matrices solvable in\n            <jats:italic>O</jats:italic>\n            (\n            <jats:italic>n</jats:italic>\n            <jats:sup>3</jats:sup>\n            ) time are\n            <jats:italic>equivalent</jats:italic>\n            under subcubic reductions. Namely, the following weighted problems either\n            <jats:italic>all</jats:italic>\n            have truly subcubic algorithms, or none of them do:\n          </jats:p>\n          <jats:p>\u2022The all-pairs shortest paths problem on weighted digraphs (APSP).</jats:p>\n          <jats:p>\u2022Detecting if a weighted graph has a triangle of negative total edge weight.</jats:p>\n          <jats:p>\n            \u2022Listing up to\n            <jats:italic>n</jats:italic>\n            <jats:sup>2.99</jats:sup>\n            negative triangles in an edge-weighted graph.\n          </jats:p>\n          <jats:p>\u2022Finding a minimum weight cycle in a graph of non-negative edge weights.</jats:p>\n          <jats:p>\u2022The replacement paths problem on weighted digraphs.</jats:p>\n          <jats:p>\u2022Finding the second shortest simple path between two nodes in a weighted digraph.</jats:p>\n          <jats:p>\u2022Checking whether a given matrix defines a metric.</jats:p>\n          <jats:p>\u2022Verifying the correctness of a matrix product over the (min, +)-semiring.</jats:p>\n          <jats:p>\u2022Finding a maximum subarray in a given matrix.</jats:p>\n          <jats:p>\n            Therefore, if APSP cannot be solved in\n            <jats:italic>n</jats:italic>\n            <jats:sup>3\u2212\u03b5</jats:sup>\n            time for any \u03b5 &gt; 0, then many other problems also need essentially cubic time. In fact, we show generic equivalences between matrix products over a large class of algebraic structures used in optimization, verifying a matrix product over the same structure, and corresponding triangle detection problems over the structure. These equivalences simplify prior work on subcubic algorithms for all-pairs path problems, since it now suffices to give appropriate subcubic triangle detection algorithms.\n          </jats:p>\n          <jats:p>Other consequences of our work are new combinatorial approaches to Boolean matrix multiplication over the (OR,AND)-semiring (abbreviated as BMM). We show that practical advances in triangle detection would imply practical BMM algorithms, among other results. Building on our techniques, we give two improved BMM algorithms: a derandomization of the combinatorial BMM algorithm of Bansal and Williams (FOCS\u201909), and an improved quantum algorithm for BMM.</jats:p>",
+  "DOI": "10.1145/3186893",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2018,
+        8,
+        30
+      ]
+    ],
+    "date-time": "2018-08-30T13:45:11Z",
+    "timestamp": 1535636711000
+  },
+  "page": "1-38",
+  "update-policy": "https://doi.org/10.1145/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 89,
+  "title": [
+    "Subcubic Equivalences Between Path, Matrix, and Triangle Problems"
+  ],
+  "prefix": "10.1145",
+  "volume": "65",
+  "author": [
+    {
+      "given": "Virginia Vassilevska",
+      "family": "Williams",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Massachusetts Institute of Technology, Cambridge, MA, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "R. Ryan",
+      "family": "Williams",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Massachusetts Institute of Technology, Cambridge, MA, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "320",
+  "published-online": {
+    "date-parts": [
+      [
+        2018,
+        8,
+        29
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "e_1_2_1_1_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/2722129.2722241"
+    },
+    {
+      "key": "e_1_2_1_2_1",
+      "unstructured": "N. Alon. 2009. Personal communication.  N. Alon. 2009. Personal communication."
+    },
+    {
+      "key": "e_1_2_1_3_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1006/jcss.1997.1388"
+    },
+    {
+      "key": "e_1_2_1_4_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1137/S0097539704441629"
+    },
+    {
+      "key": "e_1_2_1_5_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1236457.1236460"
+    },
+    {
+      "key": "e_1_2_1_6_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/FOCS.2009.76"
+    },
+    {
+      "key": "e_1_2_1_7_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.4086/toc.2012.v008a004"
+    },
+    {
+      "key": "e_1_2_1_8_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/3118772.3119148"
+    },
+    {
+      "key": "e_1_2_1_9_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/358234.381162"
+    },
+    {
+      "key": "e_1_2_1_10_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/1873601.1873662"
+    },
+    {
+      "key": "e_1_2_1_11_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/200836.200880"
+    },
+    {
+      "key": "e_1_2_1_12_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1137/060653391"
+    },
+    {
+      "key": "e_1_2_1_13_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/1109557.1109654"
+    },
+    {
+      "key": "e_1_2_1_14_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/PL00009478"
+    },
+    {
+      "key": "e_1_2_1_15_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1250790.1250877"
+    },
+    {
+      "key": "e_1_2_1_16_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1137/08071990X"
+    },
+    {
+      "key": "e_1_2_1_17_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/2722129.2722145"
+    },
+    {
+      "key": "e_1_2_1_18_1",
+      "volume-title": "Chan and Ryan Williams",
+      "author": "Timothy",
+      "year": "2016",
+      "unstructured": "Timothy M. Chan and Ryan Williams . 2016 . Deterministic APSP, orthogonal vectors, and more: Quickly derandomizing razborov-smolensky. In Proceedings of the Annual ACM-SIAM Symposium on Discrete Algorithms (SODA\u201916). 1246--1255. Timothy M. Chan and Ryan Williams. 2016. Deterministic APSP, orthogonal vectors, and more: Quickly derandomizing razborov-smolensky. In Proceedings of the Annual ACM-SIAM Symposium on Discrete Algorithms (SODA\u201916). 1246--1255."
+    },
+    {
+      "key": "e_1_2_1_19_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0747-7171(08)80013-2"
+    },
+    {
+      "key": "e_1_2_1_20_1",
+      "volume-title": "Proceedings of the Annual ACM-SIAM Symposium on Discrete Algorithms (SODA\u201907)",
+      "author": "Czumaj A.",
+      "unstructured": "A. Czumaj and A. Lingas . 2007. Finding a heaviest triangle is not harder than matrix multiplication . In Proceedings of the Annual ACM-SIAM Symposium on Discrete Algorithms (SODA\u201907) . 986--994. A. Czumaj and A. Lingas. 2007. Finding a heaviest triangle is not harder than matrix multiplication. In Proceedings of the Annual ACM-SIAM Symposium on Discrete Algorithms (SODA\u201907). 986--994."
+    },
+    {
+      "key": "e_1_2_1_21_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1137/070695149"
+    },
+    {
+      "key": "e_1_2_1_22_1",
+      "volume-title": "Proc. Roy. Soc",
+      "author": "Davie A.M.",
+      "year": "2013",
+      "unstructured": "A.M. Davie and A. J. Stothers . 2013. Improved bound for complexity of matrix multiplication . Proc. Roy. Soc . Edinburgh, Sec. A Math. 143 (4 2013 ), 351--369. Issue 02. A.M. Davie and A. J. Stothers. 2013. Improved bound for complexity of matrix multiplication. Proc. Roy. Soc. Edinburgh, Sec. A Math. 143 (4 2013), 351--369. Issue 02."
+    },
+    {
+      "key": "e_1_2_1_23_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/646511.695324"
+    },
+    {
+      "key": "e_1_2_1_24_1",
+      "volume-title": "Proceedings of the Annual ACM-SIAM Symposium on Discrete Algorithms (SODA\u201909)",
+      "author": "Duan R.",
+      "unstructured": "R. Duan and S. Pettie . 2009. Fast algorithms for (max, min)-matrix multiplication and bottleneck shortest paths . In Proceedings of the Annual ACM-SIAM Symposium on Discrete Algorithms (SODA\u201909) . 384--391. R. Duan and S. Pettie. 2009. Fast algorithms for (max, min)-matrix multiplication and bottleneck shortest paths. In Proceedings of the Annual ACM-SIAM Symposium on Discrete Algorithms (SODA\u201909). 384--391."
+    },
+    {
+      "key": "e_1_2_1_25_1",
+      "doi-asserted-by": "crossref",
+      "unstructured": "D. P. Dubhashi and A. Panconesi. 2009. Concentration of Measure for the Analysis of Randomized Algorithms. Cambridge University Press.   D. P. Dubhashi and A. Panconesi. 2009. Concentration of Measure for the Analysis of Randomized Algorithms. Cambridge University Press.",
+      "DOI": "10.1017/CBO9780511581274"
+    },
+    {
+      "key": "e_1_2_1_26_1",
+      "unstructured": "D. Dubois and H. Prade. 1980. Fuzzy Sets and Systems: Theory and Applications. Academic Press.  D. Dubois and H. Prade. 1980. Fuzzy Sets and Systems: Theory and Applications. Academic Press."
+    },
+    {
+      "key": "e_1_2_1_27_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1137/S0097539795290477"
+    },
+    {
+      "key": "e_1_2_1_28_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/SWAT.1971.4"
+    },
+    {
+      "key": "e_1_2_1_29_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/367766.368168"
+    },
+    {
+      "key": "e_1_2_1_30_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/28869.28874"
+    },
+    {
+      "key": "e_1_2_1_31_1",
+      "volume-title": "Proceedings of the IFIP Congress. 839--842",
+      "author": "Freivalds R.",
+      "year": "1977",
+      "unstructured": "R. Freivalds . 1977 . Probabilistic machines can use less running time . Proceedings of the IFIP Congress. 839--842 . R. Freivalds. 1977. Probabilistic machines can use less running time. Proceedings of the IFIP Congress. 839--842."
+    },
+    {
+      "key": "e_1_2_1_32_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s004930050052"
+    },
+    {
+      "key": "e_1_2_1_33_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/0925-7721(95)00022-2"
+    },
+    {
+      "key": "e_1_2_1_34_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2608628.2608664"
+    },
+    {
+      "key": "e_1_2_1_35_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1186810.1186815"
+    },
+    {
+      "key": "e_1_2_1_36_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1137/0207033"
+    },
+    {
+      "key": "e_1_2_1_37_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-31594-7_44"
+    },
+    {
+      "key": "e_1_2_1_38_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1137/0222071"
+    },
+    {
+      "key": "e_1_2_1_39_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1002/net.3230120406"
+    },
+    {
+      "key": "e_1_2_1_40_1",
+      "doi-asserted-by": "crossref",
+      "unstructured": "E. L. Lawler. 1971/72. A procedure for computing the K best solutions to discrete optimization problems and its application to the shortest path problem. Manage. Sci. 18 (1971/72) 401--405.  E. L. Lawler. 1971/72. A procedure for computing the K best solutions to discrete optimization problems and its application to the shortest path problem. Manage. Sci. 18 (1971/72) 401--405.",
+      "DOI": "10.1287/mnsc.18.7.401"
+    },
+    {
+      "key": "e_1_2_1_41_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/2095116.2095232"
+    },
+    {
+      "key": "e_1_2_1_42_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/505241.505242"
+    },
+    {
+      "key": "e_1_2_1_43_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-04128-0_37"
+    },
+    {
+      "key": "e_1_2_1_44_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/2616915.2616941"
+    },
+    {
+      "key": "e_1_2_1_45_1",
+      "volume-title": "Proceedings of the Symposium on Discrete Algorithms (SODA\u201905)",
+      "author": "Magniez F.",
+      "unstructured": "F. Magniez , M. Santha , and M. Szegedy . 2005. Quantum algorithms for the triangle problem . In Proceedings of the Symposium on Discrete Algorithms (SODA\u201905) . 1109--1117. F. Magniez, M. Santha, and M. Szegedy. 2005. Quantum algorithms for the triangle problem. In Proceedings of the Symposium on Discrete Algorithms (SODA\u201905). 1109--1117."
+    },
+    {
+      "key": "e_1_2_1_46_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/0020-0190(91)90071-O"
+    },
+    {
+      "key": "e_1_2_1_47_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/0020-0190(71)90006-8"
+    },
+    {
+      "key": "e_1_2_1_48_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/SFCS.1978.34"
+    },
+    {
+      "key": "e_1_2_1_49_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1137/0209027"
+    },
+    {
+      "key": "e_1_2_1_50_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1806689.1806772"
+    },
+    {
+      "key": "e_1_2_1_51_1",
+      "volume-title": "Proceedings of the Symposium on Discrete Algorithms (SODA\u201907)",
+      "author": "Roditty L.",
+      "year": "2007",
+      "unstructured": "L. Roditty . 2007 . On the -simple shortest paths problem in weighted directed graphs . In Proceedings of the Symposium on Discrete Algorithms (SODA\u201907) . 920--928. L. Roditty. 2007. On the -simple shortest paths problem in weighted directed graphs. In Proceedings of the Symposium on Discrete Algorithms (SODA\u201907). 920--928."
+    },
+    {
+      "key": "e_1_2_1_52_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/1958033.1958044"
+    },
+    {
+      "key": "e_1_2_1_53_1",
+      "volume-title": "Proceedings of the European Symposium on Algorithms (ESA\u201904)",
+      "author": "Roditty L.",
+      "unstructured": "L. Roditty and U. Zwick . 2004. On dynamic shortest paths problems . In Proceedings of the European Symposium on Algorithms (ESA\u201904) . 580--591. L. Roditty and U. Zwick. 2004. On dynamic shortest paths problems. In Proceedings of the European Symposium on Algorithms (ESA\u201904). 580--591."
+    },
+    {
+      "key": "e_1_2_1_54_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11523468_21"
+    },
+    {
+      "key": "e_1_2_1_55_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2344422.2344423"
+    },
+    {
+      "key": "e_1_2_1_56_1",
+      "volume-title": "Proceedings of the Symposium on Foundations of Computer Science (FOCS\u201999)",
+      "author": "Shoshan A.",
+      "unstructured": "A. Shoshan and U. Zwick . 1999. All-pairs shortest paths in undirected graphs with integer weights . In Proceedings of the Symposium on Foundations of Computer Science (FOCS\u201999) . 605--614. A. Shoshan and U. Zwick. 1999. All-pairs shortest paths in undirected graphs with integer weights. In Proceedings of the Symposium on Foundations of Computer Science (FOCS\u201999). 605--614."
+    },
+    {
+      "key": "e_1_2_1_57_1",
+      "volume-title": "Efficient graph representations. Fields Inst. Monogr. 19",
+      "author": "Spinrad J. P.",
+      "year": "2003",
+      "unstructured": "J. P. Spinrad . 2003. Efficient graph representations. Fields Inst. Monogr. 19 ( 2003 ). J. P. Spinrad. 2003. Efficient graph representations. Fields Inst. Monogr. 19 (2003)."
+    },
+    {
+      "key": "e_1_2_1_59_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/BF02165411"
+    },
+    {
+      "key": "e_1_2_1_60_1",
+      "volume-title": "Proceedings of the 9th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA\u201998)",
+      "author": "Tamaki Hisao",
+      "year": "1998",
+      "unstructured": "Hisao Tamaki and Takeshi Tokuyama . 1998 . Algorithms for the maximum subarray problem based on matrix multiplication . In Proceedings of the 9th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA\u201998) . 446--452. Hisao Tamaki and Takeshi Tokuyama. 1998. Algorithms for the maximum subarray problem based on matrix multiplication. In Proceedings of the 9th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA\u201998). 446--452."
+    },
+    {
+      "key": "e_1_2_1_61_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/S0022-0000(75)80046-8"
+    },
+    {
+      "key": "e_1_2_1_62_1",
+      "volume-title": "Proceedings of the Symposium on Discrete Algorithms (SODA\u201908)",
+      "author": "Vassilevska V.",
+      "year": "2008",
+      "unstructured": "V. Vassilevska . 2008 . Nondecreasing paths in weighted graphs, or: How to optimally read a train schedule . In Proceedings of the Symposium on Discrete Algorithms (SODA\u201908) . 465--472. V. Vassilevska. 2008. Nondecreasing paths in weighted graphs, or: How to optimally read a train schedule. In Proceedings of the Symposium on Discrete Algorithms (SODA\u201908). 465--472."
+    },
+    {
+      "key": "e_1_2_1_63_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1132516.1132550"
+    },
+    {
+      "key": "e_1_2_1_64_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11786986_24"
+    },
+    {
+      "key": "e_1_2_1_65_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1250790.1250876"
+    },
+    {
+      "key": "e_1_2_1_66_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.4086/toc.2009.v005a009"
+    },
+    {
+      "key": "e_1_2_1_67_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1798596.1798597"
+    },
+    {
+      "key": "e_1_2_1_68_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1824777.1824790"
+    },
+    {
+      "key": "e_1_2_1_69_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/321105.321107"
+    },
+    {
+      "key": "e_1_2_1_70_1",
+      "volume-title": "Proceedings of the Symposium on Discrete Algorithms (SODA\u201907)",
+      "author": "Williams R.",
+      "year": "2007",
+      "unstructured": "R. Williams . 2007 . Matrix-vector multiplication in sub-quadratic time (some preprocessing required) . In Proceedings of the Symposium on Discrete Algorithms (SODA\u201907) . 995--1001. R. Williams. 2007. Matrix-vector multiplication in sub-quadratic time (some preprocessing required). In Proceedings of the Symposium on Discrete Algorithms (SODA\u201907). 995--1001."
+    },
+    {
+      "key": "e_1_2_1_71_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2591796.2591811"
+    },
+    {
+      "key": "e_1_2_1_72_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2213977.2214056"
+    },
+    {
+      "key": "e_1_2_1_73_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.dam.2007.03.023"
+    },
+    {
+      "key": "e_1_2_1_74_1",
+      "doi-asserted-by": "crossref",
+      "unstructured": "J. Y. Yen. 1970/71. Finding the K shortest loopless paths in a network. Manage. Sci. 17 (1970/71) 712--716.  J. Y. Yen. 1970/71. Finding the K shortest loopless paths in a network. Manage. Sci. 17 (1970/71) 712--716.",
+      "DOI": "10.1287/mnsc.17.11.712"
+    },
+    {
+      "key": "e_1_2_1_75_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-662-47672-7_89"
+    },
+    {
+      "key": "e_1_2_1_76_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/0020-0190(76)90085-5"
+    },
+    {
+      "key": "e_1_2_1_77_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/567112.567114"
+    }
+  ],
+  "container-title": [
+    "Journal of the ACM"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://dl.acm.org/doi/10.1145/3186893",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://dl.acm.org/doi/pdf/10.1145/3186893",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        6,
+        18
+      ]
+    ],
+    "date-time": "2025-06-18T19:07:32Z",
+    "timestamp": 1750273652000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://dl.acm.org/doi/10.1145/3186893"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2018,
+        8,
+        29
+      ]
+    ]
+  },
+  "references-count": 76,
+  "journal-issue": {
+    "issue": "5",
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          31
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1145/3186893"
+  ],
+  "URL": "https://doi.org/10.1145/3186893",
+  "relation": {},
+  "ISSN": [
+    "0004-5411",
+    "1557-735X"
+  ],
+  "issn-type": [
+    {
+      "value": "0004-5411",
+      "type": "print"
+    },
+    {
+      "value": "1557-735X",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2018,
+        8,
+        29
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2017-02-01",
+      "order": 0,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2018-02-01",
+      "order": 1,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2018-08-29",
+      "order": 2,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}

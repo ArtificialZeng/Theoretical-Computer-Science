@@ -1,0 +1,32 @@
+{
+  "old_key": "statman",
+  "new_key": "Statman_1979",
+  "official_url": "https://doi.org/10.1016/0304-3975(79)90006-9",
+  "official_export_url": "https://api.crossref.org/works/10.1016%2F0304-3975%2879%2990006-9/transform/application/x-bibtex",
+  "bibtex_path": "audit/references/statman.official.bib",
+  "metadata_status": "verified_against_Crossref_registered_export",
+  "current_title": "Intuitionistic Propositional Logic Is Polynomial-Space Complete",
+  "official_title": "Intuitionistic propositional logic is polynomial-space complete",
+  "title_consistent": true,
+  "authors_consistent": true,
+  "year_consistent": true,
+  "venue_consistent": true,
+  "differences": [
+    "Official Crossref key is Statman_1979.",
+    "Official title uses sentence case.",
+    "Export adds ISSN, registered URL, publisher, and July publication month.",
+    "Official export pages contain literal Unicode en dash 67–72 rather than TeX double hyphen; kept unchanged."
+  ],
+  "uncertainties": [],
+  "access_limitations": [
+    "Publisher DOI/HTML did not load through web tool; metadata and BibTeX obtained from Crossref DOI registration transform endpoint."
+  ],
+  "cite_locations": [
+    {
+      "line": 327,
+      "context": "\\begin{proof}[Proof of Theorem~\\ref{thm:types}]\nSimple arrow-type inhabitation with context is in PSPACE, and already the closed case is PSPACE-hard, by the classical implicational intuitionistic-logic classification~\\cite{statman,svejdar} and Curry--Howard. Every inhabited simple type has an $\\eta$-long $\\beta$-normal inhabitant. Apply Lemma~\\ref{lem:frontier}, then invoke a polynomial-space inhabitation procedure on each frontier obligation sequentially, reusing its workspace. Enumerate the polynomially many potential completions of a partial head index, again sequentially. Polynomial space is closed under these finite conjunctions and disjunctions. This proves membership."
+    }
+  ],
+  "action": "replace with verbatim Crossref DOI export; update full key",
+  "prose_claim_support_status": "not_evaluated_pending_citation_check_pass_2"
+}

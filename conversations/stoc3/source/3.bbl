@@ -1,0 +1,131 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{DDF{\etalchar{+}}25}
+
+\bibitem[AC93]{AC93}
+Roberto~M. Amadio and Luca Cardelli.
+\newblock Subtyping recursive types.
+\newblock {\em ACM Transactions on Programming Languages and Systems},
+  15(4):575--631, 1993.
+\newblock \href {https://doi.org/10.1145/155183.155231}
+  {\path{doi:10.1145/155183.155231}}.
+
+\bibitem[{CJ }24]{TS57915}
+{CJ Quines}.
+\newblock Regression in 5.4: Excessive stack depth when comparing recursive
+  type.
+\newblock {TypeScript} issue 57915, 2024.
+\newblock URL: \url{https://github.com/microsoft/TypeScript/issues/57915}.
+
+\bibitem[DDF{\etalchar{+}}25]{DDFMW25}
+Karolina Drabik, Anita D{\"u}rr, Fabian Frei, Filip Mazowiecki, and Karol W{\k
+  e}grzycki.
+\newblock Fine-grained complexity of ambiguity problems on automata and
+  directed graphs, 2025.
+\newblock Version 3, 21 July 2025; Lemma 6.4 and Claims 6.1--6.2.
+\newblock URL: \url{https://arxiv.org/abs/2501.14725v3}, \href
+  {https://arxiv.org/abs/2501.14725} {\path{arXiv:2501.14725}}, \href
+  {https://doi.org/10.48550/arXiv.2501.14725}
+  {\path{doi:10.48550/arXiv.2501.14725}}.
+
+\bibitem[{Def}26]{DT}
+{DefinitelyTyped Contributors}.
+\newblock {DefinitelyTyped}: Community type declarations, 2026.
+\newblock Snapshot 72e15dbdd808; full commit in the linked URL.
+\newblock URL:
+  \url{https://github.com/DefinitelyTyped/DefinitelyTyped/tree/72e15dbdd8088284d3f0387a05539e7c2e6c743b}.
+
+\bibitem[dW18]{OW18}
+Mateus {de Oliveira Oliveira} and Michael Wehar.
+\newblock Intersection non-emptiness and hardness within polynomial time.
+\newblock In {\em Developments in Language Theory}, volume 11088 of {\em LNCS},
+  pages 282--290, 2018.
+\newblock \href {https://doi.org/10.1007/978-3-319-98654-8_23}
+  {\path{doi:10.1007/978-3-319-98654-8_23}}.
+
+\bibitem[dW20]{OW20}
+Mateus {de Oliveira Oliveira} and Michael Wehar.
+\newblock On the fine grained complexity of finite automata non-emptiness of
+  intersection.
+\newblock In {\em Developments in Language Theory}, volume 12086 of {\em LNCS},
+  pages 69--82, 2020.
+\newblock \href {https://doi.org/10.1007/978-3-030-48516-0_6}
+  {\path{doi:10.1007/978-3-030-48516-0_6}}.
+
+\bibitem[FCB08]{FCB08}
+Alain Frisch, Giuseppe Castagna, and V\'eronique Benzaken.
+\newblock Semantic subtyping.
+\newblock {\em Journal of the ACM}, 55(4):19:1--19:64, 2008.
+\newblock \href {https://doi.org/10.1145/1391289.1391293}
+  {\path{doi:10.1145/1391289.1391293}}.
+
+\bibitem[GLP02]{GLP02}
+Vladimir Gapeyev, Michael~Y. Levin, and Benjamin~C. Pierce.
+\newblock Recursive subtyping revealed.
+\newblock {\em Journal of Functional Programming}, 12(6):511--548, 2002.
+\newblock \href {https://doi.org/10.1017/S0956796802004318}
+  {\path{doi:10.1017/S0956796802004318}}.
+
+\bibitem[HK71]{HK71}
+John~E. Hopcroft and Richard~M. Karp.
+\newblock A linear algorithm for testing equivalence of finite automata.
+\newblock Technical Report TR 71-114, Cornell University, 1971.
+\newblock URL:
+  \url{https://ecommons.cornell.edu/entities/publication/aa8cfe15-dcea-4be5-ae03-359120f548ea}.
+
+\bibitem[IP01]{IP01}
+Russell Impagliazzo and Ramamohan Paturi.
+\newblock On the complexity of {$k$}-{SAT}.
+\newblock {\em Journal of Computer and System Sciences}, 62(2):367--375, 2001.
+\newblock \href {https://doi.org/10.1006/jcss.2000.1727}
+  {\path{doi:10.1006/jcss.2000.1727}}.
+
+\bibitem[KPS93]{KPS93}
+Dexter Kozen, Jens Palsberg, and Michael~I. Schwartzbach.
+\newblock Efficient recursive subtyping.
+\newblock In {\em Proceedings of POPL}, pages 419--428, 1993.
+\newblock \href {https://doi.org/10.1145/158511.158700}
+  {\path{doi:10.1145/158511.158700}}.
+
+\bibitem[KPS95]{KPS95}
+Dexter Kozen, Jens Palsberg, and Michael~I. Schwartzbach.
+\newblock Efficient recursive subtyping.
+\newblock {\em Mathematical Structures in Computer Science}, 5(1):113--125,
+  1995.
+\newblock \href {https://doi.org/10.1017/S0960129500000657}
+  {\path{doi:10.1017/S0960129500000657}}.
+
+\bibitem[{Mic}22]{TS46}
+{Microsoft}.
+\newblock {TypeScript} 4.6: Improved recursion depth checks, 2022.
+\newblock URL:
+  \url{https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-6.html}.
+
+\bibitem[PT87]{PT87}
+Robert Paige and Robert~E. Tarjan.
+\newblock Three partition refinement algorithms.
+\newblock {\em SIAM Journal on Computing}, 16(6):973--989, 1987.
+\newblock \href {https://doi.org/10.1137/0216062} {\path{doi:10.1137/0216062}}.
+
+\bibitem[PZ01]{PZ01}
+Jens Palsberg and Tian Zhao.
+\newblock Efficient and flexible matching of recursive types.
+\newblock {\em Information and Computation}, 171(2):364--387, 2001.
+\newblock \href {https://doi.org/10.1006/inco.2001.3090}
+  {\path{doi:10.1006/inco.2001.3090}}.
+
+\bibitem[Wil05]{Williams05}
+Ryan Williams.
+\newblock A new algorithm for optimal 2-constraint satisfaction and its
+  implications.
+\newblock {\em Theoretical Computer Science}, 348(2--3):357--365, 2005.
+\newblock \href {https://doi.org/10.1016/j.tcs.2005.09.023}
+  {\path{doi:10.1016/j.tcs.2005.09.023}}.
+
+\bibitem[ZdSO25]{QuickSub25}
+Litao Zhou and Bruno~C. d.~S.~Oliveira.
+\newblock {QuickSub}: Efficient iso-recursive subtyping.
+\newblock {\em Proceedings of the ACM on Programming Languages},
+  9(POPL):954--985, 2025.
+\newblock \href {https://doi.org/10.1145/3704869} {\path{doi:10.1145/3704869}}.
+
+\end{thebibliography}

@@ -1,0 +1,29 @@
+{
+  "old_key": "llguidance",
+  "new_key": "llguidance",
+  "official_url": "https://github.com/guidance-ai/llguidance",
+  "bibtex_path": null,
+  "metadata_status": "primary_software_record_exists_official_bibtex_unavailable_preserve_existing",
+  "title": "Low-level Guidance (llguidance)",
+  "authors": "No formal citation author field provided by primary repository; current collective-author field is an editorial software citation.",
+  "year": "2026 is current access year; no formal publication year is specified by the repository.",
+  "venue": "Software repository/documentation",
+  "differences": [
+    "Primary README title order is Low-level Guidance (llguidance).",
+    "Repository provides no CITATION.cff, CITATION.bib, BibTeX or citation block at checked revision.",
+    "No replacement exported BibTeX is available; preserve existing record under skill instruction."
+  ],
+  "uncertainties": [
+    "No official exported BibTeX; software authors and bibliographic publication year are not formally specified. Existing access date is accurate to audit date."
+  ],
+  "source_snapshot": "audit/references/llguidance.README.source.md",
+  "checked_commit": null,
+  "citation_files_in_tree": [
+    "tree request failed: HTTP Error 403: rate limit exceeded"
+  ],
+  "cite_locations": [
+    52,
+    191
+  ],
+  "claim_support_status": "not_assessed_pending_pass_1_confirmation"
+}

@@ -2,7 +2,7 @@
 
 [English](README.md) · [中文](README.zh-CN.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [日本語](README.ja.md)
 
-Research manuscripts, reproducible code and exact certificates in theoretical computer science. This snapshot contains **10 manuscript packages**: the initial five-paper collection and five later continuous-research releases. Each topic below has an abstract, a PDF, an unchanged source archive, and browseable source code.
+Research manuscripts, reproducible code and exact certificates in theoretical computer science. This repository contains **15 manuscript packages**: ten from this continuous-research collection and five from other conversations. Three additional conversation folders contain templates only. Each topic below has an abstract, a PDF, an unchanged source archive, and browseable source code.
 
 **Read the scope labels:** seven manuscripts are recorded as complete resolutions of their stated targets; three early manuscripts are partial-result notes whose broader original questions remain unresolved. These are local research/release records, not external peer review or STOC acceptance. The original author lists are preserved; the five later releases list Zijian Zeng as sole author.
 
@@ -109,3 +109,47 @@ python3 scripts/build_pdfs.py --all
 ## Authorship and assistance
 
 Maintainer: **Zijian Zeng, UCSI University** · 1002266693@ucsiuniversity.edu.my. Research, code, proof development and manuscript preparation used substantial AI assistance, disclosed in the manuscripts. Existing third-party license notices are retained; see [RIGHTS.md](RIGHTS.md).
+
+## Other conversation manuscripts
+
+Eight folders stoc1–stoc8 are indexed: five existing manuscripts and three template-only folders. These scoped manuscripts retain their originality limitations and do not count as new accepted continuous-research resolutions.
+
+[stoc1–stoc8](conversations/README.md)
+
+### Representation and Preprocessing in Grammar-Constrained Decoding: Stack Indexes and Online Completion Lower Bounds
+
+**Abstract.** Online grammar-constrained token completion with separate grammar, vocabulary, and stream parameters. The manuscript gives an OMv-based square-root single-stream barrier and a stronger independently initialized multi-stream barrier, plus regular-stack indexes with explicit exponential compilation and charged parser work. General LR(1) worst-case acceleration and STOC-level novelty remain unestablished.
+
+[PDF](conversations/stoc1/paper.pdf) · [ZIP](conversations/stoc1/source.zip) · [Code](conversations/stoc1/source/) · [Reproduce](conversations/stoc1/README.md)
+
+### Syntax Repair in Near-Linear Time: Exact Bounds for Marked-Palindrome Grammars
+
+**Abstract.** Exact language edit distance for fixed marked-palindrome grammars: a theoretical O(n+k²) threshold algorithm with witness recovery, a guarded SETH lower bound, and enumeration results. The supplied indexed implementation uses O(n log²(n+2)+(k+1)²) time. The general LR(1) problem remains unresolved; the current PDF is anonymous and two-column and needs STOC review-format correction.
+
+[PDF](conversations/stoc2/paper.pdf) · [ZIP](conversations/stoc2/source.zip) · [Code](conversations/stoc2/source/) · [Reproduce](conversations/stoc2/README.md)
+
+### Is Quadratic Subtyping Optimal? Conditional Hardness on Shared Acyclic Type Graphs
+
+**Abstract.** Transfers known OV-based automata-intersection hardness to structural subtyping on shared acyclic type graphs: a conditional quadratic barrier even for three fixed record fields or arrow-only types. Equality is almost linear; quotient-size and finite-access upper bounds explain tractable representations. The main novelty question is whether this semantic transfer is substantial beyond the known automata reduction. The current full PDF has 18 pages.
+
+[PDF](conversations/stoc3/paper.pdf) · [ZIP](conversations/stoc3/source.zip) · [Code](conversations/stoc3/source/) · [Reproduce](conversations/stoc3/README.md)
+
+### Fully Dynamic Interprocedural Dataflow Analysis: OMv Barriers and Summary-Local TreeFlow Updates
+
+**Abstract.** Fully dynamic interprocedural dataflow with explicit global dependency costs. OMv barriers persist even for path-shaped procedures and shallow acyclic calls. A relation-circuit algorithm gives bounds parameterized by affected gates and ancestor call-target incidence, using fixed decompositions and acyclic candidate calls. The broader original characterization and production integrations remain unresolved; novelty relative to earlier RSM update machinery needs expert assessment.
+
+[PDF](conversations/stoc4/paper.pdf) · [ZIP](conversations/stoc4/source.zip) · [Code](conversations/stoc4/source/) · [Reproduce](conversations/stoc4/README.md)
+
+### Octagons Are APSP-Complete: Fine-Grained Complexity of Weakly Relational Abstract Domains
+
+**Abstract.** Classifies octagon and zone operations through exponent-preserving reductions to APSP, an incremental min-plus update/query tradeoff, feasibility, and width-sensitive reconstruction. October 2026 APSP bounds are imported reported results rather than a new shortest-path algorithm. A pinned ELINA scalar-kernel replay accompanies the proof-oriented artifact. Independent novelty assessment and whole-analyzer studies remain outstanding. The current PDF has 19 pages.
+
+[PDF](conversations/stoc5/paper.pdf) · [ZIP](conversations/stoc5/source.zip) · [Code](conversations/stoc5/source/) · [Reproduce](conversations/stoc5/README.md)
+
+## Comparative ranking
+
+[中文：按 STOC 相对竞争力和新增解决问题大小排序](RANKING.zh-CN.md) · [English assessment](RANKING.md) · [Data](ranking.json)
+
+```sh
+python3 scripts/check_conversations.py --all
+```

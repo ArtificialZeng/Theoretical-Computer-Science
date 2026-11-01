@@ -1,0 +1,16 @@
+{
+  "id": "stoc1",
+  "title": "Representation and Preprocessing in Grammar-Constrained Decoding: Stack Indexes and Online Completion Lower Bounds",
+  "kind": "existing-conversation-manuscript",
+  "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+  "pages": 12,
+  "pdf": "conversations/stoc1/paper.pdf",
+  "source_archive": "conversations/stoc1/source.zip",
+  "source_directory": "conversations/stoc1/source",
+  "archive_prefix": "",
+  "pdf_sha256": "5df559f9b2579911d4640104af77713d414e17d04f334959bc00eeb55bad5b6f",
+  "source_archive_sha256": "2f662a998b3136188af62bf73a03d5b3437c084c2f9ff3aa3d7576109826920b",
+  "original_pdf": "stoc1/1.pdf",
+  "original_archive": "stoc1/1_source.zip",
+  "readme": "conversations/stoc1/README.md"
+}

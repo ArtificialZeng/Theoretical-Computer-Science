@@ -1,0 +1,570 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        30
+      ]
+    ],
+    "date-time": "2026-10-30T22:04:48Z",
+    "timestamp": 1793397888536,
+    "version": "4.5.0"
+  },
+  "reference-count": 36,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "2",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2018,
+            1,
+            24
+          ]
+        ],
+        "date-time": "2018-01-24T00:00:00Z",
+        "timestamp": 1516752000000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://creativecommons.org/licenses/by/4.0"
+    }
+  ],
+  "funder": [
+    {
+      "DOI": "10.13039/501100000266",
+      "name": "Engineering and Physical Sciences Research Council",
+      "doi-asserted-by": "publisher",
+      "award": [
+        "EP/K031929/1"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "EP/K031929/1"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/501100000266",
+          "id-type": "DOI",
+          "asserted-by": "publisher"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "link.springer.com"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Form Methods Syst Des"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2019,
+        11
+      ]
+    ]
+  },
+  "DOI": "10.1007/s10703-017-0314-7",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2018,
+        1,
+        24
+      ]
+    ],
+    "date-time": "2018-01-24T01:55:05Z",
+    "timestamp": 1516758905000
+  },
+  "page": "232-277",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 8,
+  "title": [
+    "Incrementally closing octagons"
+  ],
+  "prefix": "10.1007",
+  "volume": "54",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0003-4624-9648",
+      "authenticated-orcid": false,
+      "given": "Aziem",
+      "family": "Chawdhary",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Ed",
+      "family": "Robbins",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Andy",
+      "family": "King",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2018,
+        1,
+        24
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "314_CR1",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Bagnara R, Hill PM, Zaffanella E (2008) An improved tight closure algorithm for integer octagonal constraints. In: International conference on verification, model checking, and abstract interpretation. volume 4905 of LNCS. Springer, pp 8\u201321",
+      "DOI": "10.1007/978-3-540-78163-9_6"
+    },
+    {
+      "issue": "3",
+      "key": "314_CR2",
+      "doi-asserted-by": "publisher",
+      "first-page": "279",
+      "DOI": "10.1007/s10703-009-0073-1",
+      "volume": "35",
+      "author": "R Bagnara",
+      "year": "2009",
+      "unstructured": "Bagnara R, Hill PM, Zaffanella E (2009) Weakly-relational shapes for numeric abstractions: improved algorithms and proofs of correctness. Form Methods Syst Des 35(3):279\u2013323",
+      "journal-title": "Form Methods Syst Des"
+    },
+    {
+      "key": "314_CR3",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Banterle F, Giacobazzi R (2007) A fast implementation of the octagon abstract domain on graphics hardware. In: Static analysis symposium, volume 4634 of LNCS. Springer, pp 315\u2013335",
+      "DOI": "10.1007/978-3-540-74061-2_20"
+    },
+    {
+      "issue": "4",
+      "key": "314_CR4",
+      "doi-asserted-by": "publisher",
+      "first-page": "245",
+      "DOI": "10.1017/S0890060400003206",
+      "volume": "11",
+      "author": "A Baykan Can",
+      "year": "1997",
+      "unstructured": "Baykan Can A, Fox Mark S (1997) Spatial synthesis by disjunctive constraint satisfaction. Artif Intell Eng Des Anal Manuf 11(4):245\u2013262",
+      "journal-title": "Artif Intell Eng Des Anal Manuf"
+    },
+    {
+      "key": "314_CR5",
+      "doi-asserted-by": "publisher",
+      "first-page": "29",
+      "DOI": "10.1016/j.entcs.2012.09.004",
+      "volume": "287",
+      "author": "E Beckschulze",
+      "year": "2012",
+      "unstructured": "Beckschulze E, Kowalewski S, Brauer J (2012) Access-based localization for octagons. Electron Notes Theor Comput Sci 287:29\u201340",
+      "journal-title": "Electron Notes Theor Comput Sci"
+    },
+    {
+      "key": "314_CR6",
+      "doi-asserted-by": "publisher",
+      "first-page": "87",
+      "DOI": "10.1090/qam/102435",
+      "volume": "16",
+      "author": "R Bellman",
+      "year": "1958",
+      "unstructured": "Bellman R (1958) On a routing problem. Q Appl Math 16:87\u201390",
+      "journal-title": "Q Appl Math"
+    },
+    {
+      "key": "314_CR7",
+      "first-page": "39",
+      "volume-title": "Handbook of constraint programming",
+      "author": "C Bessiere",
+      "year": "2006",
+      "unstructured": "Bessiere C (2006) Constraint propagation. In: Rossi F, van Beek P, Walsh T (eds) Handbook of constraint programming. Elsevier, Amsterdam, pp 39\u201381"
+    },
+    {
+      "issue": "5",
+      "key": "314_CR8",
+      "doi-asserted-by": "publisher",
+      "first-page": "196",
+      "DOI": "10.1145/780822.781153",
+      "volume": "38",
+      "author": "Bruno Blanchet",
+      "year": "2003",
+      "unstructured": "Blanchet B, Cousot P, Cousot R, Feret J, Mauborgne L, Min\u00e9 A, Monniaux D, Rival X (2003) A static analyzer for large safety-critical software. In: Programming language design and implementation, pp 196\u2013207",
+      "journal-title": "ACM SIGPLAN Notices"
+    },
+    {
+      "key": "314_CR9",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Chawdhary A, King A (2017) Compact difference bound matrices. In: Asian symposium on programming languages and systems, volume 10695 of LNCS. Springer, pp 471\u2013490",
+      "DOI": "10.1007/978-3-319-71237-6_23"
+    },
+    {
+      "key": "314_CR10",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Chawdhary A, Robbins E, King A (2014) Simple and efficient algorithms for octagons. In: Asian symposium on programming languages and systems, volume 8858 of LNCS. Springer, pp 296\u2013313",
+      "DOI": "10.1007/978-3-319-12736-1_16"
+    },
+    {
+      "key": "314_CR11",
+      "volume-title": "Introduction to algorithms",
+      "author": "TH Cormen",
+      "year": "1990",
+      "unstructured": "Cormen TH, Leiserson CE, Rivest RL (1990) Introduction to algorithms. The MIT Press, Cambridge"
+    },
+    {
+      "key": "314_CR12",
+      "doi-asserted-by": "publisher",
+      "first-page": "61",
+      "DOI": "10.1016/0004-3702(91)90006-6",
+      "volume": "49",
+      "author": "R Dechter",
+      "year": "1991",
+      "unstructured": "Dechter R, Meiri I, Pearl J (1991) Temporal constraint networks. Artif Intell 49:61\u201395",
+      "journal-title": "Artif Intell"
+    },
+    {
+      "issue": "6",
+      "key": "314_CR13",
+      "doi-asserted-by": "publisher",
+      "first-page": "345",
+      "DOI": "10.1145/367766.368168",
+      "volume": "5",
+      "author": "RW Floyd",
+      "year": "1962",
+      "unstructured": "Floyd RW (1962) Algorithm 97: shortest path. Commun ACM 5(6):345\u2013345",
+      "journal-title": "Commun ACM"
+    },
+    {
+      "key": "314_CR14",
+      "doi-asserted-by": "publisher",
+      "first-page": "189",
+      "DOI": "10.1007/978-3-662-53413-7_10",
+      "volume-title": "Static Analysis",
+      "author": "Graeme Gange",
+      "year": "2016",
+      "unstructured": "Gange G, Navas JA, Schachte P, S\u00f8ndergaard H, Stuckey PJ (2016) Exploiting sparsity in difference-bound matrices. In: Static analysis symposium, volume 9837 of LNCS, pp 189\u2013211"
+    },
+    {
+      "key": "314_CR15",
+      "doi-asserted-by": "publisher",
+      "first-page": "79",
+      "DOI": "10.1007/s10703-006-0013-2",
+      "volume": "29",
+      "author": "N Halbwachs",
+      "year": "2006",
+      "unstructured": "Halbwachs N, Merchat D, Gonnord L (2006) Some ways to reduce the space dimension in polyhedra computations. Form Methods Syst Des 29:79\u201395",
+      "journal-title": "Form Methods Syst Des"
+    },
+    {
+      "key": "314_CR16",
+      "doi-asserted-by": "publisher",
+      "first-page": "237",
+      "DOI": "10.1007/978-3-662-53413-7_12",
+      "volume-title": "Static Analysis",
+      "author": "Kihong Heo",
+      "year": "2016",
+      "unstructured": "Heo K, Oh H, Yang H (2016) Learning a variable-clustering strategy for octagon from labeled data generated by a static analysis. In: Static analysis symposium, volume 9837 of LNCS, pp 237\u2013256"
+    },
+    {
+      "key": "314_CR17",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Jeannet B, Min\u00e9 A (2009) Apron: a library of numerical abstract domains for static analysis. In: Computer aided verification, volume 5643 of LNCS. Springer, pp 661\u2013667",
+      "DOI": "10.1007/978-3-642-02658-4_52"
+    },
+    {
+      "key": "314_CR18",
+      "unstructured": "Jourdan J-H (2016) Verasco: a formally verified C static analyzer. PhD thesis, Universit\u00e9 Paris Diderot (Paris 7) Sorbonne Paris Cit\u00e9, May 2016. \nhttps://jhjourdan.mketjh.fr/thesis_jhjourdan.pdf"
+    },
+    {
+      "issue": "1",
+      "key": "314_CR19",
+      "doi-asserted-by": "publisher",
+      "first-page": "196",
+      "DOI": "10.1137/0214016",
+      "volume": "14",
+      "author": "JC Lagarias",
+      "year": "1985",
+      "unstructured": "Lagarias JC (1985) The computational complexity of simultaneous diophantine approximation problems. SIAM J Comput 14(1):196\u2013209",
+      "journal-title": "SIAM J Comput"
+    },
+    {
+      "key": "314_CR20",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Lahiri S, Musuvathi M (2005) An efficient decision procedure for UTVPI constraints. In: Frontiers of combining systems, volume 3717 of LNAI. Springer, pp 168\u2013183",
+      "DOI": "10.1007/11559306_9"
+    },
+    {
+      "key": "314_CR21",
+      "unstructured": "Min\u00e9 A (2004) Weakly relational numerical abstract domains. PhD thesis, \u00c9cole Polytechnique En Informatique. \nhttps://www-apr.lip6.fr/~mine/these/these-color.pdf"
+    },
+    {
+      "issue": "1",
+      "key": "314_CR22",
+      "doi-asserted-by": "publisher",
+      "first-page": "31",
+      "DOI": "10.1007/s10990-006-8609-1",
+      "volume": "19",
+      "author": "A Min\u00e9",
+      "year": "2006",
+      "unstructured": "Min\u00e9 A (2006) The octagon abstract domain. High Order Symb Program 19(1):31\u2013100",
+      "journal-title": "High Order Symb Program"
+    },
+    {
+      "key": "314_CR23",
+      "unstructured": "Nethercote N (2004) Dynamic binary analysis and instrumentation. PhD thesis, Trinity College, University of Cambridge"
+    },
+    {
+      "key": "314_CR24",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Nieuwenhuis R, Oliveras A (2005) DPLL(T) with exhaustive theory propagation and its application to difference logic. In: Computer aided verification, volume 3576 of LNCS. Springer, pp 321\u2013334",
+      "DOI": "10.1007/11513988_33"
+    },
+    {
+      "key": "314_CR25",
+      "first-page": "356",
+      "volume-title": "Lecture Notes in Computer Science",
+      "author": "Hakjoo Oh",
+      "year": "2011",
+      "unstructured": "Oh H, Brutschy L, Yi K (2011) Access analysis-based tight localization of abstract memories. In: International conference on verification, model checking, and abstract interpretation, volume 6538 of LNCS, pp 356\u2013370"
+    },
+    {
+      "key": "314_CR26",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Pelleau M, Min\u00e9 A, Truchet C, Benhamou F (2013) A constraint solver based on abstract domains. In: International conference on verification, model checking, and abstract interpretation, volume 7737 of LNCS. Springer, pp 434\u2013454",
+      "DOI": "10.1007/978-3-642-35873-9_26"
+    },
+    {
+      "issue": "3",
+      "key": "314_CR27",
+      "doi-asserted-by": "publisher",
+      "first-page": "309",
+      "DOI": "10.1007/s10601-014-9162-x",
+      "volume": "19",
+      "author": "M Pelleau",
+      "year": "2014",
+      "unstructured": "Pelleau M, Truchet C, Benhamou F (2014) The octagon abstract domain for continuous constraints. Constraints 19(3):309\u2013337",
+      "journal-title": "Constraints"
+    },
+    {
+      "issue": "1",
+      "key": "314_CR28",
+      "doi-asserted-by": "publisher",
+      "first-page": "3",
+      "DOI": "10.1016/j.scico.2014.05.013",
+      "volume": "111",
+      "author": "E Robbins",
+      "year": "2015",
+      "unstructured": "Robbins E, Howe JM, King A (2015) Theory propagation and reification. Sci Comput Program 111(1):3\u201322",
+      "journal-title": "Sci Comput Program"
+    },
+    {
+      "key": "314_CR29",
+      "first-page": "786",
+      "volume-title": "Lecture Notes in Computer Science",
+      "author": "Pierre Roy",
+      "year": "2016",
+      "unstructured": "Roy P, Perez G, R\u00e9gin J-C, Papadopoulos A, Pachet F, Marchini M (2016) Enforcing structure on temporal sequences: the Allen constraint. In: Principles and practice of constraint programming, volume 9892 of LNCS, pp 786\u2013801"
+    },
+    {
+      "issue": "4",
+      "key": "314_CR30",
+      "doi-asserted-by": "publisher",
+      "first-page": "514",
+      "DOI": "10.1287/ijoc.1090.0369",
+      "volume": "22",
+      "author": "A Schutt",
+      "year": "2010",
+      "unstructured": "Schutt A, Stuckey PJ (2010) Incremental satisfiability and implication for UTVPI constraints. INFORMS J Comput 22(4):514\u2013527",
+      "journal-title": "INFORMS J Comput"
+    },
+    {
+      "key": "314_CR31",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Simon A, King A (2007) Taming the wrapping of integer arithmetic. In: Static analysis symposium, volume 4634 of LNCS. Springer, pp 121\u2013136",
+      "DOI": "10.1007/978-3-540-74061-2_8"
+    },
+    {
+      "issue": "1",
+      "key": "314_CR32",
+      "doi-asserted-by": "publisher",
+      "first-page": "87",
+      "DOI": "10.1007/s10990-010-9062-8",
+      "volume": "23",
+      "author": "Axel Simon",
+      "year": "2010",
+      "unstructured": "Simon A, King A, Howe JM (2010) The two variable per inequality abstract domain. High Order Symb Program 31(1):182\u2013196. \nhttp://kar.kent.ac.uk/30678",
+      "journal-title": "Higher-Order and Symbolic Computation"
+    },
+    {
+      "key": "314_CR33",
+      "first-page": "303",
+      "volume-title": "Programming language design and implementation",
+      "author": "G Singh",
+      "year": "2015",
+      "unstructured": "Singh G, P\u00fcschel M, Vechev M (2015) Making numerical program analysis fast. Programming language design and implementation. ACM Press, New York, pp 303\u2013313"
+    },
+    {
+      "key": "314_CR34",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Subramani K, Wojciechowski P (2015) A graphical theorem of the alternative for UTVPI constraints. In: ICTAC, volume 9399 of LNCS. Springer, pp 328\u2013345",
+      "DOI": "10.1007/978-3-319-25150-9_20"
+    },
+    {
+      "key": "314_CR35",
+      "volume-title": "Hacker\u2019s delight",
+      "author": "HS Warren",
+      "year": "2002",
+      "unstructured": "Warren HS (2002) Hacker\u2019s delight. Addison-Wesley, Boston"
+    },
+    {
+      "issue": "1",
+      "key": "314_CR36",
+      "doi-asserted-by": "publisher",
+      "first-page": "11",
+      "DOI": "10.1145/321105.321107",
+      "volume": "9",
+      "author": "S Warshall",
+      "year": "1962",
+      "unstructured": "Warshall S (1962) A theorem on Boolean matrices. J ACM 9(1):11\u201312",
+      "journal-title": "J ACM"
+    }
+  ],
+  "container-title": [
+    "Formal Methods in System Design"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://link.springer.com/article/10.1007/s10703-017-0314-7/fulltext.html",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/s10703-017-0314-7.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/s10703-017-0314-7.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2019,
+        11,
+        6
+      ]
+    ],
+    "date-time": "2019-11-06T12:07:26Z",
+    "timestamp": 1573042046000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.1007/s10703-017-0314-7"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2018,
+        1,
+        24
+      ]
+    ]
+  },
+  "references-count": 36,
+  "journal-issue": {
+    "issue": "2",
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          11
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "314"
+  ],
+  "URL": "https://doi.org/10.1007/s10703-017-0314-7",
+  "relation": {},
+  "ISSN": [
+    "0925-9856",
+    "1572-8102"
+  ],
+  "issn-type": [
+    {
+      "value": "0925-9856",
+      "type": "print"
+    },
+    {
+      "value": "1572-8102",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2018,
+        1,
+        24
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "24 January 2018",
+      "order": 1,
+      "name": "first_online",
+      "label": "First Online",
+      "group": {
+        "name": "ArticleHistory",
+        "label": "Article History"
+      }
+    }
+  ]
+}

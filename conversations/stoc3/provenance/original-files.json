@@ -1,0 +1,16 @@
+{
+  "id": "stoc3",
+  "title": "Is Quadratic Subtyping Optimal? Conditional Hardness on Shared Acyclic Type Graphs",
+  "kind": "existing-conversation-manuscript",
+  "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+  "pages": 18,
+  "pdf": "conversations/stoc3/paper.pdf",
+  "source_archive": "conversations/stoc3/source.zip",
+  "source_directory": "conversations/stoc3/source",
+  "archive_prefix": "3-source/",
+  "pdf_sha256": "a6b8d9226e4149358b58f09579ccc6764971c1a46caa34a46b27d38600aaddbc",
+  "source_archive_sha256": "9179a70f3b0658c4508193b5596d2395128fba9cda7cd45c21f178ea7ba5173b",
+  "original_pdf": "stoc3/3.pdf",
+  "original_archive": "stoc3/3-source.zip",
+  "readme": "conversations/stoc3/README.md"
+}

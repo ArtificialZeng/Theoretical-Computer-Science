@@ -1,0 +1,11 @@
+{
+  "threshold_and_witness_checks": 16400,
+  "max_length": 7,
+  "budgets": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}

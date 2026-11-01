@@ -1,0 +1,32 @@
+{
+  "old_key": "outlines",
+  "new_key": "willard2023efficientguidedgenerationlarge",
+  "official_url": "https://arxiv.org/bibtex/2307.09702",
+  "record_url": "https://arxiv.org/abs/2307.09702",
+  "bibtex_path": "audit/references/outlines.official.bib",
+  "metadata_status": "verified_primary_export",
+  "title": "Efficient Guided Generation for Large Language Models",
+  "authors": [
+    "Brandon T. Willard",
+    "Rémi Louf"
+  ],
+  "year": 2023,
+  "venue": "arXiv preprint, cs.CL",
+  "differences": [
+    "Official key differs.",
+    "Official export uses Unicode Rémi, adds primaryClass and URL, omits DOI (the old DOI resolves to the arXiv record and is not contradicted)."
+  ],
+  "uncertainties": [],
+  "cite_locations": [
+    52,
+    188
+  ],
+  "claim_support_status": "not_assessed_pending_pass_1_confirmation",
+  "searches_completed": [
+    "Willard 2023 Efficient Guided Generation Large Language Models",
+    "full title arxiv/semanticscholar",
+    "Willard 2023 arXiv Efficient Guided Generation",
+    "doi:10.48550/arXiv.2307.09702",
+    "arxiv:2307.09702"
+  ]
+}

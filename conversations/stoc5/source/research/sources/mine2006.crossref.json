@@ -1,0 +1,544 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        30
+      ]
+    ],
+    "date-time": "2026-10-30T22:04:51Z",
+    "timestamp": 1793397891852,
+    "version": "4.5.0"
+  },
+  "reference-count": 54,
+  "publisher": "Springer Science and Business Media LLC",
+  "issue": "1",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2006,
+            3,
+            1
+          ]
+        ],
+        "date-time": "2006-03-01T00:00:00Z",
+        "timestamp": 1141171200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "http://www.springer.com/tdm"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [
+    "Higher-Order Symb Comput"
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2006,
+        3
+      ]
+    ]
+  },
+  "DOI": "10.1007/s10990-006-8609-1",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2006,
+        7,
+        9
+      ]
+    ],
+    "date-time": "2006-07-09T02:48:36Z",
+    "timestamp": 1152413316000
+  },
+  "page": "31-100",
+  "source": "Crossref",
+  "is-referenced-by-count": 569,
+  "title": [
+    "The octagon abstract domain"
+  ],
+  "prefix": "10.1007",
+  "volume": "19",
+  "author": [
+    {
+      "given": "Antoine",
+      "family": "Min\u00e9",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "reference": [
+    {
+      "key": "8609_CR1",
+      "unstructured": "1. ACI S\u00e9curit\u00e9 & Informatique. Analyse de PROgrammes Num\u00e9riques. http://www.cri.ensmp.fr/apron/"
+    },
+    {
+      "key": "8609_CR2",
+      "unstructured": "2. Airbus. http://www.airbus.com/"
+    },
+    {
+      "key": "8609_CR3",
+      "unstructured": "3. Astr\u00e9e. Analyse Statique de logiciels Temps-R\u00e9el embarqu\u00e9s (static analysis of critical real-time embedded software) analyzer page. http://www.astree.ens.fr/"
+    },
+    {
+      "key": "8609_CR4",
+      "unstructured": "4. Bagnara, R.: Data-Flow Analysis for Constraint Logic-Based Languages. PhD thesis, Dipartimento di Informatica, Universit\u00e1 di Pisa, Corso Italia 40, I-56125 Pisa, Italy (1997)"
+    },
+    {
+      "key": "8609_CR5",
+      "doi-asserted-by": "crossref",
+      "DOI": "10.1007/11547662_3",
+      "volume-title": "Widening operators for weakly-relational numeric abstractions",
+      "author": "R. Bagnara",
+      "year": "2005",
+      "unstructured": "5. Bagnara, R., Hill, P.M., Mazzi, E., Zaffanella, E.: Widening operators for weakly-relational numeric abstractions. Quaderno 399, Dipartimento di Matematica, Universit\u00e1 di Parma, Italy (2005)"
+    },
+    {
+      "key": "8609_CR6",
+      "doi-asserted-by": "crossref",
+      "unstructured": "6. Balasundaram, V., Kennedy, K.: A technique for summarizing data access and its use in parallelism enhancing transformations. In: ACM PLDI\u2032;89, ACM Press, pp. 41\u201353. (1989)",
+      "DOI": "10.1145/73141.74822"
+    },
+    {
+      "key": "8609_CR7",
+      "doi-asserted-by": "crossref",
+      "first-page": "87",
+      "DOI": "10.1090/qam/102435",
+      "volume": "16",
+      "author": "R. Bellman",
+      "year": "1958",
+      "unstructured": "7. Bellman, R.: On a routing problem. In: Quarterly of Applied Mathematics, vol. 16, pp. 87\u201390 (1958)",
+      "journal-title": "Quarterly of Applied Mathematics"
+    },
+    {
+      "key": "8609_CR8",
+      "doi-asserted-by": "crossref",
+      "unstructured": "8. Blanchet, B., Cousot, P., Cousot, R., Feret, J., Mauborgne, L., A., Min\u00e9, Monniaux, D., Rival, X.: Design and implementation of a special-purpose static program analyzer for safety-critical real-time embedded software, invited chapter. In: The Essence of Computation: Complexity, Analysis, Transformation. Essays Dedicated to Neil D. Jones, LNCS, Springer, pp. 85\u2013108. (2002)",
+      "DOI": "10.1007/3-540-36377-7_5"
+    },
+    {
+      "key": "8609_CR9",
+      "doi-asserted-by": "crossref",
+      "unstructured": "9. Blanchet, B., Cousot, P., Cousot, R., Feret, J., Mauborgne, L., Min\u00e9, A., Monniaux, D., Rival, X.: A static analyzer for large safety-critical software. In: ACM PLDI\u2032;03, vol. 548030, pp. 196\u2013207, ACM Press, (2003)",
+      "DOI": "10.1145/781131.781153"
+    },
+    {
+      "issue": "4",
+      "key": "8609_CR10",
+      "doi-asserted-by": "crossref",
+      "first-page": "407",
+      "DOI": "10.1017/S0956796800000496",
+      "volume": "2",
+      "author": "F. Bourdoncle",
+      "year": "1992",
+      "unstructured": "10. Bourdoncle, F.: Abstract interpretation by dynamic partitioning. Journal of Functional Programming 2(4), 407\u2013423 (1992)",
+      "journal-title": "Journal of Functional Programming"
+    },
+    {
+      "key": "8609_CR11",
+      "doi-asserted-by": "crossref",
+      "unstructured": "11. Bourdoncle, F.: Abstract debugging of higher-order imperative languages. In: ACM PLDI\u2032;93, pp. 46\u201355. ACM Press, (1993)",
+      "DOI": "10.1145/155090.155095"
+    },
+    {
+      "key": "8609_CR12",
+      "first-page": "312",
+      "volume": "3148",
+      "author": "R. Claris\u00f3",
+      "year": "2004",
+      "unstructured": "12. Claris\u00f3, R., Cortadella, J.: The octahedron abstract domain. In: SAS\u2032;04, vol. 3148 of LNCS, pp. 312\u2013327. Springer (2004)",
+      "journal-title": "SAS\u2032;04"
+    },
+    {
+      "key": "8609_CR13",
+      "first-page": "67",
+      "volume": "2031",
+      "author": "M.A. Col\u00f3n",
+      "year": "2001",
+      "unstructured": "13. Col\u00f3n, M.A., Sipma, H.B.: Synthesis of linear ranking functions. In: TACAS\u2032;01, vol. 2031 of LNCS, pp. 67\u201381 (2001)",
+      "journal-title": "TACAS\u2032;01"
+    },
+    {
+      "key": "8609_CR14",
+      "unstructured": "14. Cormen, T., Leiserson, C., Rivest, R.: Introduction to Algorithms. The MIT Press (1990)"
+    },
+    {
+      "key": "8609_CR15",
+      "unstructured": "15. Cousot, P.: The calculational design of a generic abstract interpreter. In: Calculational System Design, NATO ASI Series F. IOS Press (1999)"
+    },
+    {
+      "key": "8609_CR16",
+      "first-page": "243",
+      "volume": "2772",
+      "author": "P. Cousot",
+      "year": "2003",
+      "unstructured": "16. Cousot, P.: Verification by abstract interpretation. In: Proc. Int. Symp. on Verification\u2014Theory & Practice\u2014Honoring Zohar Manna\u2019s 64th Birthday, vol. 2772, pp. 243\u2013268. Springer (2003)",
+      "journal-title": "Proc. Int. Symp. on Verification\u2014Theory & Practice\u2014Honoring Zohar Manna\u2019s 64th Birthday"
+    },
+    {
+      "key": "8609_CR17",
+      "first-page": "106",
+      "volume-title": "ISOP\u2032;76",
+      "author": "P. Cousot",
+      "year": "1976",
+      "unstructured": "17. Cousot, P., Cousot, R.: Static determination of dynamic properties of programs. In ISOP\u2032;76, pp. 106\u2013130. Dunod, Paris, France (1976)"
+    },
+    {
+      "key": "8609_CR18",
+      "doi-asserted-by": "crossref",
+      "unstructured": "18. Cousot, P., Cousot, R.: Abstract interpretation: A unified lattice model for static analysis of programs by construction or approximation of fixpoints. In: ACM POPL\u2032;77, pp. 238\u2013252. ACM Press (1977)",
+      "DOI": "10.1145/512950.512973"
+    },
+    {
+      "issue": "2\u20133",
+      "key": "8609_CR19",
+      "doi-asserted-by": "crossref",
+      "first-page": "103",
+      "DOI": "10.1016/0743-1066(92)90030-7",
+      "volume": "13",
+      "author": "P. Cousot",
+      "year": "1992",
+      "unstructured": "19. Cousot, P., Cousot, R.: Abstract interpretation and application to logic programs. Journal of Logic Programming 13(2\u20133), 103\u2013179 (1992)",
+      "journal-title": "Journal of Logic Programming"
+    },
+    {
+      "issue": "4",
+      "key": "8609_CR20",
+      "doi-asserted-by": "crossref",
+      "first-page": "511",
+      "DOI": "10.1093/logcom/2.4.511",
+      "volume": "2",
+      "author": "P. Cousot",
+      "year": "1992",
+      "unstructured": "20. Cousot, P., Cousot, R.: Abstract interpretation frameworks. Journal of Logic and Computation 2(4), 511\u2013547 (1992)",
+      "journal-title": "Journal of Logic and Computation"
+    },
+    {
+      "key": "8609_CR21",
+      "doi-asserted-by": "crossref",
+      "unstructured": "21. Cousot, P., Cousot, R.: Comparing the Galois connection and widening/narrowing approaches to abstract interpretation, invited paper. In: PLILP\u2032;92, LNCS, pp. 269\u2013295. Springer (1992)",
+      "DOI": "10.1007/3-540-55844-6_142"
+    },
+    {
+      "key": "8609_CR22",
+      "doi-asserted-by": "crossref",
+      "unstructured": "22. Cousot, P., Halbwachs, N.: Automatic discovery of linear restraints among variables of a program. In: ACM POPL\u2032;78, pp. 84\u201397. ACM Press (1978)",
+      "DOI": "10.1145/512760.512770"
+    },
+    {
+      "key": "8609_CR23",
+      "doi-asserted-by": "crossref",
+      "unstructured": "23. Deutsch, A. Interprocedural may-alias analysis for pointers: Beyond k-limiting. In: ACM PLDI\u2032;94, pp. 230\u2013241. ACM Press (1994)",
+      "DOI": "10.1145/178243.178263"
+    },
+    {
+      "key": "8609_CR24",
+      "doi-asserted-by": "crossref",
+      "unstructured": "24. Dill, D.L.: Timing assumptions and verification of finite-state concurrent systems. In: Proc. International Workshop on Automatic verification Methods for Finite State Systems vol. 407 of LNCS, pp. 197\u2013212, Springer",
+      "DOI": "10.1007/3-540-52148-8_17"
+    },
+    {
+      "key": "8609_CR25",
+      "doi-asserted-by": "crossref",
+      "unstructured": "25. Dor, N., Rodeh, M., Sagiv, M.: Cleanness checking of string manipulations in C programs via integer analysis. In: SAS\u2032;01, vol. 2126 of LNCS. Springer (2001)",
+      "DOI": "10.1007/3-540-47764-0_12"
+    },
+    {
+      "key": "8609_CR26",
+      "unstructured": "26. Feret, J.: Abstract interpretation of mobile systems. JLAP (2004)"
+    },
+    {
+      "key": "8609_CR27",
+      "doi-asserted-by": "crossref",
+      "unstructured": "27. Feret, J.: Static analysis of digital filters. In: ESOP\u2032;04, vol. 2986 of LNCS. Springer (2004)",
+      "DOI": "10.1007/978-3-540-24725-8_4"
+    },
+    {
+      "key": "8609_CR28",
+      "doi-asserted-by": "crossref",
+      "unstructured": "28. Feret, J.: The arithmetic-geometric progression abstract domain. In: VMCAI\u2032;05, vol. 3385 of LNCS. Springer (2005)",
+      "DOI": "10.1007/978-3-540-30579-8_3"
+    },
+    {
+      "key": "8609_CR29",
+      "doi-asserted-by": "crossref",
+      "first-page": "165",
+      "DOI": "10.1080/00207168908803778",
+      "volume": "30",
+      "author": "P. Granger",
+      "year": "1989",
+      "unstructured": "29. Granger, P.: Static analysis of arithmetical congruences. International Journal of Computer Mathematics, 30, 165\u2013190 (1989)",
+      "journal-title": "International Journal of Computer Mathematics"
+    },
+    {
+      "key": "8609_CR30",
+      "unstructured": "30. Halbwachs, N.: D\u00e9termination automatique de relations lin\u00e9aires v\u00e9rifi\u00e9es par les variables d\u2019un programme. PhD thesis, Universit\u00e9 scientifique et medicale de Grenoble, France (1979)"
+    },
+    {
+      "key": "8609_CR31",
+      "first-page": "200",
+      "volume": "1503",
+      "author": "M. Handjieva",
+      "year": "1998",
+      "unstructured": "31. Handjieva, M., Tzolovski, S.: Refining static analyses by trace-based partitioning using control flow. In: SAS\u2032;98, vol. 1503 of LNCS, pp. 200\u2013214 (1998)",
+      "journal-title": "SAS\u2032;98"
+    },
+    {
+      "key": "8609_CR32",
+      "first-page": "102",
+      "volume": "19",
+      "author": "W. Harvey",
+      "year": "1997",
+      "unstructured": "32. Harvey, W., Stuckey, P.: A unit two variable per inequality integer constraint solver for constraint logic programming. In: ACSC\u2032;97, vol. 19, pp. 102\u2013111 (1997).",
+      "journal-title": "ACSC\u2032;97"
+    },
+    {
+      "key": "8609_CR33",
+      "doi-asserted-by": "crossref",
+      "unstructured": "33. Jaffar, J., Maher, M., Stuckey, P., Yap, H.: Beyond finite domains. In: PPCP\u2032;94, vol. 874 of LNCS, pp. 86\u201394. Springer (1994)",
+      "DOI": "10.1007/3-540-58601-6_92"
+    },
+    {
+      "key": "8609_CR34",
+      "unstructured": "34. Jeannet, B.: Partitionnement dynamique dans l\u2019analyse de relations Lin\u00e9aires et application \u00e1 la V\u00e9rification de programmes synchrones. PhD thesis, Institut National Polytechnique de Grenoble, France (2000)"
+    },
+    {
+      "key": "8609_CR35",
+      "doi-asserted-by": "crossref",
+      "unstructured": "35. Karr, M.: Affine relationships among variables of a program. Acta Informatica, pp. 133\u2013151 (1976)",
+      "DOI": "10.1007/BF00268497"
+    },
+    {
+      "issue": "3",
+      "key": "8609_CR36",
+      "first-page": "271",
+      "volume": "6",
+      "author": "K. Larsen",
+      "year": "1999",
+      "unstructured": "36. Larsen, K., Weise, C., Yi, W., Pearson, J.: Clock difference diagrams. Nordic Journal of Computing, 6(3), 271\u2013298 (1999)",
+      "journal-title": "Nordic Journal of Computing"
+    },
+    {
+      "key": "8609_CR37",
+      "unstructured": "37. Lions, J.L.: ARIANE 5, flight 501 failure, report by the Inquiry Board (1996)"
+    },
+    {
+      "key": "8609_CR38",
+      "doi-asserted-by": "crossref",
+      "first-page": "385",
+      "DOI": "10.1007/978-1-4020-8157-6_30",
+      "volume": "156",
+      "author": "L. Mauborgne",
+      "year": "2004",
+      "unstructured": "38. Mauborgne, L.: ASTR\u00c9E: Verification of absence of run-time error. In: Building the Information Society (18th IFIP World Computer Congress), vol. 156, pp. 385\u2013392. Springer (2004)",
+      "journal-title": "Building the Information Society (18th IFIP World Computer Congress)"
+    },
+    {
+      "key": "8609_CR39",
+      "doi-asserted-by": "crossref",
+      "unstructured": "39. Mauborgne, L., Rival, X.: Trace partitioning in abstract interpretation based static analyzers. In ESOP\u2032;05, vol. 3444 of LNCS, pp. 5\u201320. Springer (2005)",
+      "DOI": "10.1007/978-3-540-31987-0_2"
+    },
+    {
+      "key": "8609_CR40",
+      "unstructured": "40. Measche, M., Berthomieu, B.: Time Petri-nets for analyzing and verifying time dependent communication protocols. Protocol Specification, Testing and Verification III, pp. 161\u2013172 (1983)"
+    },
+    {
+      "key": "8609_CR41",
+      "unstructured": "41. Min\u00e9, A.: The octagon abstract domain library. http://www.di.ens.fr/mine/oct/"
+    },
+    {
+      "key": "8609_CR42",
+      "unstructured": "42. Min\u00e9, A.: On-line octagon abstract domain sample analyzer. http://cgi.di.ens.fr/cgi-bin/mine/octanalhtml/octanalweb/"
+    },
+    {
+      "key": "8609_CR43",
+      "doi-asserted-by": "crossref",
+      "unstructured": "43. Min\u00e9, A.: A new numerical abstract domain based on difference-bound matrices. In: PADO II, vol. 2053 of LNCS, pp. 155\u2013172. Springer (2001)",
+      "DOI": "10.1007/3-540-44978-7_10"
+    },
+    {
+      "key": "8609_CR44",
+      "doi-asserted-by": "crossref",
+      "unstructured": "44. Min\u00e9, A.: The octagon abstract domain. In: AST 2001 in WCRE 2001, IEEE, pp. 310\u2013319. IEEE CS Press (2001)",
+      "DOI": "10.1109/WCRE.2001.957836"
+    },
+    {
+      "key": "8609_CR45",
+      "first-page": "3",
+      "volume": "2986",
+      "author": "A. Min\u00e9",
+      "year": "2004",
+      "unstructured": "45. Min\u00e9, A.: Relational abstract domains for the detection of floating-point run-time errors. In: ESOP\u2032;04, vol. 2986 of LNCS, pp. 3\u201317. Springer (2004)",
+      "journal-title": "ESOP\u2032;04"
+    },
+    {
+      "key": "8609_CR46",
+      "unstructured": "46. Min\u00e9, A.: Weakly Relational Numerical Abstract Domains. PhD thesis, \u00c9cole Polytechnique, Palaiseau, France (2004). http://www.di.ens.fr/mine/these/"
+    },
+    {
+      "key": "8609_CR47",
+      "first-page": "111",
+      "volume": "1683",
+      "author": "J. M\u00f8ller",
+      "year": "1999",
+      "unstructured": "47. M\u00f8ller, J., Lichtenberg, J., Andersen, H.R., Hulgaard, H.: Difference decision diagrams. In: CSL\u2032;99, vol. 1683 of LNCS, pp. 111\u2013125. Springer (1999)",
+      "journal-title": "CSL\u2032;99"
+    },
+    {
+      "key": "8609_CR48",
+      "unstructured": "48. Moore, R.E.: Interval Analysis. Prentice Hall (1966)"
+    },
+    {
+      "key": "8609_CR49",
+      "unstructured": "49. OCaml.: The objective Caml system. http://paulliac.inria.fr/ocaml"
+    },
+    {
+      "key": "8609_CR50",
+      "first-page": "228",
+      "volume": "3148",
+      "author": "R. Rugina",
+      "year": "2004",
+      "unstructured": "50. Rugina, R.: Quantitative shape analysis. In: SAS\u2032;04, vol. 3148 of LNCS, pp. 228\u2013245. Springer (2004)",
+      "journal-title": "SAS\u2032;04"
+    },
+    {
+      "key": "8609_CR51",
+      "doi-asserted-by": "crossref",
+      "unstructured": "51. Shaham, R., Kolodner, E.K., Sagiv, M.: Automatic removal of array memory leaks in java. In: CC\u2032;00, LNCS, pp. 50\u201366. Springer (2000)",
+      "DOI": "10.1007/3-540-46423-9_4"
+    },
+    {
+      "key": "8609_CR52",
+      "first-page": "71",
+      "volume": "2664",
+      "author": "A. Simon",
+      "year": "2002",
+      "unstructured": "52. Simon, A., King, A., Howe, J.: Two variables per linear inequality as an abstract domain. In: LOPSTR\u2032;02, vol. 2664 of LNCS, pp. 71\u201389. Springer (2002)",
+      "journal-title": "LOPSTR\u2032;02"
+    },
+    {
+      "key": "8609_CR53",
+      "first-page": "36",
+      "volume": "2477",
+      "author": "A. Venet",
+      "year": "2002",
+      "unstructured": "53. Venet, A.: Nonuniform alias analysis of recursive data structures and arrays. In: SAS\u2032;02, vol. 2477 of LNCS, pp. 36\u201351. Springer (2002)",
+      "journal-title": "SAS\u2032;02"
+    },
+    {
+      "key": "8609_CR54",
+      "doi-asserted-by": "crossref",
+      "unstructured": "54. Yovine, S.: Model-checking timed automata. In: Embedded Systems, vol. 1494 of LNCS. Springer (1998)",
+      "DOI": "10.1007/3-540-65193-4_20"
+    }
+  ],
+  "container-title": [
+    "Higher-Order and Symbolic Computation"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/s10990-006-8609-1.pdf",
+      "content-type": "application/pdf",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/article/10.1007/s10990-006-8609-1/fulltext.html",
+      "content-type": "text/html",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/s10990-006-8609-1",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2019,
+        6,
+        1
+      ]
+    ],
+    "date-time": "2019-06-01T01:29:40Z",
+    "timestamp": 1559352580000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.1007/s10990-006-8609-1"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2006,
+        3
+      ]
+    ]
+  },
+  "references-count": 54,
+  "journal-issue": {
+    "issue": "1",
+    "published-print": {
+      "date-parts": [
+        [
+          2006,
+          3
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "8609"
+  ],
+  "URL": "https://doi.org/10.1007/s10990-006-8609-1",
+  "relation": {},
+  "ISSN": [
+    "1388-3690",
+    "1573-0557"
+  ],
+  "issn-type": [
+    {
+      "value": "1388-3690",
+      "type": "print"
+    },
+    {
+      "value": "1573-0557",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2006,
+        3
+      ]
+    ]
+  }
+}

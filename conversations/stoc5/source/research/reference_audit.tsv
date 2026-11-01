@@ -1,0 +1,20 @@
+key	primary_record	local_evidence	claim
+mine2006	https://doi.org/10.1007/s10990-006-8609-1	research/sources/mine2006.crossref.json	Octagon domain, industrial motivation, normalization and widening
+bhz2008	https://doi.org/10.1007/978-3-540-78163-9_6	research/sources/bhz2008.crossref.json	Tight-closure formula, cubic and sparse upper bounds
+lm2005	https://doi.org/10.1007/11559306_9	research/sources/lm2005.crossref.json	Potential-or-negative-cycle interface; linear SCC parity postprocessing
+crk2019	https://doi.org/10.1007/s10703-017-0314-7	research/sources/crk2019.crossref.json	Quadratic incremental closure algorithms
+spv2015	https://doi.org/10.1145/2737924.2738000	research/sources/spv2015.crossref.json	PLDI 2015, not POPL; optimized and decomposed octagons
+gange2016	https://doi.org/10.1007/978-3-662-53413-7_10	research/sources/gange2016.crossref.json	Split normal forms and sparse DBMs
+gange2021	https://doi.org/10.1145/3457885	research/sources/gange2021.crossref.json	Zones/octagons in Crab and sparse representations
+flow2022	https://doi.org/10.1109/FOCS54457.2022.00064	research/sources/flow2022.crossref.json	Almost-linear exact minimum-cost flow, bounded integer data
+bnw2022	https://doi.org/10.1109/FOCS54457.2022.00063	research/sources/bnw2022.crossref.json	Las Vegas negative-weight SSSP with negative-cycle reporting
+vvw2018	https://doi.org/10.1145/3186893	research/sources/vvw2018.crossref.json	Definition 3.1 subcubic reductions; final version of 2010 framework
+planken2012	https://doi.org/10.1613/jair.3509	research/sources/planken2012.crossref.json	Classical O(nk^2) elimination and O(n^2k) APSP
+subramani2023	https://doi.org/10.1007/s00453-022-01048-1	research/sources/subramani2023.crossref.json	O(sqrt(n) m log C) bit-scaling feasibility
+schwarz2023	https://doi.org/10.1007/978-3-031-44245-2_21	research/sources/schwarz2023.crossref.json	Later 2-projectivity/normalization treatment
+bcf2023	https://arxiv.org/abs/2304.05279	verified arXiv abstract 2304.05279	Improved logarithmic factors in negative SSSP
+bhz2009	https://doi.org/10.1007/s10703-009-0073-1	verified author-hosted FMSD paper and Springer record	Strong-closure separation and widening caveats
+alman2026	https://arxiv.org/abs/2610.06783v1	research/2026_literature_check.md	Theorem 2; polynomial integer word-RAM APSP/min-plus O(n^2.9995)
+karingula2026	https://arxiv.org/abs/2610.15663v1	research/2026_literature_check.md	Corollary 1.2; simplified truly subcubic result, weaker saving
+majdoddin2026	https://arxiv.org/abs/2610.17420v1	research/2026_literature_check.md	Corollary D; reported deterministic n^(2.9945+o(1))
+saha2026	https://arxiv.org/abs/2610.20297v1	research/2026_literature_check.md	Theorem 1.3; deterministic soft-O(n^2.9963432), conservatively rounded

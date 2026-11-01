@@ -1,0 +1,182 @@
+{
+  "utc": "2026-11-01T15:49:02.979990+00:00",
+  "passed": false,
+  "scope": "Artifact hashes, finite code checks and PDF compilation only; not a new full mathematical/novelty review",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "papers": [
+    {
+      "id": "stoc1",
+      "passed": false,
+      "archive_files_verified": 66,
+      "seconds": 5.334,
+      "steps": [
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "rustc",
+            "--edition",
+            "2021",
+            "--crate-type",
+            "cdylib",
+            "-O",
+            "viable.rs",
+            "-o",
+            "libviable.dylib"
+          ],
+          "cwd": "artifact",
+          "exit_code": 127,
+          "log": "validation/conversations/stoc1-math-1.log"
+        },
+        {
+          "stage": "clean-build",
+          "exit_code": 0,
+          "normalized_pdf_text_matches_release": true,
+          "log": "validation/conversations/stoc1-build.log"
+        }
+      ]
+    },
+    {
+      "id": "stoc2",
+      "passed": true,
+      "archive_files_verified": 11,
+      "seconds": 13.258,
+      "steps": [
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "python3",
+            "-B",
+            "research/code/verify.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "log": "validation/conversations/stoc2-math-1.log"
+        },
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "python3",
+            "-B",
+            "research/code/check_indexed.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "log": "validation/conversations/stoc2-math-2.log"
+        },
+        {
+          "stage": "clean-build",
+          "exit_code": 0,
+          "normalized_pdf_text_matches_release": true,
+          "log": "validation/conversations/stoc2-build.log"
+        }
+      ]
+    },
+    {
+      "id": "stoc3",
+      "passed": true,
+      "archive_files_verified": 46,
+      "seconds": 7.483,
+      "steps": [
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "npm",
+            "ci",
+            "--ignore-scripts"
+          ],
+          "cwd": "artifact",
+          "exit_code": 0,
+          "log": "validation/conversations/stoc3-math-1.log"
+        },
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "npm",
+            "test"
+          ],
+          "cwd": "artifact",
+          "exit_code": 0,
+          "log": "validation/conversations/stoc3-math-2.log"
+        },
+        {
+          "stage": "clean-build",
+          "exit_code": 0,
+          "normalized_pdf_text_matches_release": true,
+          "log": "validation/conversations/stoc3-build.log"
+        }
+      ]
+    },
+    {
+      "id": "stoc4",
+      "passed": true,
+      "archive_files_verified": 39,
+      "seconds": 8.363,
+      "steps": [
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "python3",
+            "-B",
+            "artifact/validate.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "log": "validation/conversations/stoc4-math-1.log"
+        },
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "python3",
+            "-B",
+            "artifact/audit_records.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "log": "validation/conversations/stoc4-math-2.log"
+        },
+        {
+          "stage": "clean-build",
+          "exit_code": 0,
+          "normalized_pdf_text_matches_release": true,
+          "log": "validation/conversations/stoc4-build.log"
+        }
+      ]
+    },
+    {
+      "id": "stoc5",
+      "passed": true,
+      "archive_files_verified": 90,
+      "seconds": 12.852,
+      "steps": [
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "python3",
+            "-B",
+            "artifact/build_elina.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "log": "validation/conversations/stoc5-math-1.log"
+        },
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "python3",
+            "-B",
+            "artifact/replay_cases.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "log": "validation/conversations/stoc5-math-2.log"
+        },
+        {
+          "stage": "clean-build",
+          "exit_code": 0,
+          "normalized_pdf_text_matches_release": true,
+          "log": "validation/conversations/stoc5-build.log"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "old_key": "regex_indexing",
+  "new_key": "Gibney_2021",
+  "official_url": "https://api.crossref.org/works/10.3390%2Fa14050133/transform/application/x-bibtex",
+  "official_record_url": "https://www.mdpi.com/1999-4893/14/5/133",
+  "bibtex_path": "audit/references/regex_indexing.official.bib",
+  "metadata_status": "verified_primary_crossref_export",
+  "differences": [
+    "New citation: official Crossref key Gibney_2021.",
+    "Official title Text Indexing for Regular Expression Matching; authors Daniel Gibney and Sharma V. Thankachan; journal Algorithms 14(5), year 2021; DOI 10.3390/a14050133.",
+    "Crossref puts article identifier 133 into pages field; 133 is not a page count.",
+    "Raw export adds ISSN, publisher MDPI AG, resolver URL, month Apr."
+  ],
+  "uncertainties": [
+    "Direct MDPI article/export requests returned 429/403; primary Crossref export was available.",
+    "Official Crossref export records only article identifier 133, not full page range."
+  ],
+  "source_accessed": "2026-10-31",
+  "tex_locations": [
+    "planned related-work comparison"
+  ],
+  "claim_support_status": "not_assessed_pending_citation_check_pass_2"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "stoc5",
+  "title": "Octagons Are APSP-Complete: Fine-Grained Complexity of Weakly Relational Abstract Domains",
+  "kind": "existing-conversation-manuscript",
+  "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+  "pages": 19,
+  "pdf": "conversations/stoc5/paper.pdf",
+  "source_archive": "conversations/stoc5/source.zip",
+  "source_directory": "conversations/stoc5/source",
+  "archive_prefix": "",
+  "pdf_sha256": "cfd986c64c49ca77ab979c0d0ffd49d6d8c2f3b82489364adb842eef1b486a67",
+  "source_archive_sha256": "5930442b5a35fbe85b77b9fef28c808a5d659424b93a41a860398eae15870826",
+  "original_pdf": "stoc5/5.pdf",
+  "original_archive": "stoc5/5_source.zip",
+  "readme": "conversations/stoc5/README.md"
+}

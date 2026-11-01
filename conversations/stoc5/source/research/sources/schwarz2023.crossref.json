@@ -1,0 +1,641 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        4,
+        11
+      ]
+    ],
+    "date-time": "2026-04-11T00:48:13Z",
+    "timestamp": 1775868493562,
+    "version": "3.50.1"
+  },
+  "publisher-location": "Cham",
+  "reference-count": 28,
+  "publisher": "Springer Nature Switzerland",
+  "isbn-type": [
+    {
+      "value": "9783031442445",
+      "type": "print"
+    },
+    {
+      "value": "9783031442452",
+      "type": "electronic"
+    }
+  ],
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2023,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2023-01-01T00:00:00Z",
+        "timestamp": 1672531200000
+      },
+      "content-version": "tdm",
+      "delay-in-days": 0,
+      "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+    },
+    {
+      "start": {
+        "date-parts": [
+          [
+            2023,
+            1,
+            1
+          ]
+        ],
+        "date-time": "2023-01-01T00:00:00Z",
+        "timestamp": 1672531200000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "link.springer.com"
+    ],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2023
+      ]
+    ]
+  },
+  "abstract": "<jats:title>Abstract</jats:title><jats:p>Weakly relational domains have enjoyed tremendous success in the area of program analysis, since they offer a decent compromise between precision and efficiency. <jats:italic>Octagons</jats:italic>, in particular, have widely been studied to obtain efficient algorithms which, however, come with intricate correctness arguments. Here, we provide simplified cubic time algorithms for computing the closure of <jats:italic>Octagon</jats:italic> abstract relations both over the rationals and the integers which avoid introducing auxiliary variables. They are based on a more general formulation by means of 2<jats:italic>-projective</jats:italic> domains which allows for an elegant short correctness proof. The notion of 2-projectivity also lends itself to efficient algorithms for incremental normalization. For the <jats:italic>Octagon</jats:italic> domain, we also provide an improved construction for linear programming based best abstract transformers for affine assignments.</jats:p>",
+  "DOI": "10.1007/978-3-031-44245-2_21",
+  "type": "book-chapter",
+  "created": {
+    "date-parts": [
+      [
+        2023,
+        10,
+        23
+      ]
+    ],
+    "date-time": "2023-10-23T15:02:30Z",
+    "timestamp": 1698073350000
+  },
+  "page": "485-507",
+  "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 6,
+  "title": [
+    "Octagons Revisited"
+  ],
+  "prefix": "10.1007",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-9828-0308",
+      "authenticated-orcid": false,
+      "given": "Michael",
+      "family": "Schwarz",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-2135-1593",
+      "authenticated-orcid": false,
+      "given": "Helmut",
+      "family": "Seidl",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "role": "author",
+          "vocabulary": "crossref"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "published-online": {
+    "date-parts": [
+      [
+        2023,
+        10,
+        24
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "21_CR1",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "8",
+      "DOI": "10.1007/978-3-540-78163-9_6",
+      "volume-title": "Verification, Model Checking, and Abstract Interpretation",
+      "author": "R Bagnara",
+      "year": "2008",
+      "unstructured": "Bagnara, R., Hill, P.M., Zaffanella, E.: An improved tight closure algorithm for integer octagonal constraints. In: Logozzo, F., Peled, D.A., Zuck, L.D. (eds.) VMCAI 2008. LNCS, vol. 4905, pp. 8\u201321. Springer, Heidelberg (2008). https://doi.org/10.1007/978-3-540-78163-9_6 ISBN: 978-3-540-78163-9"
+    },
+    {
+      "issue": "3",
+      "key": "21_CR2",
+      "doi-asserted-by": "publisher",
+      "first-page": "279",
+      "DOI": "10.1007/s10703-009-0073-1",
+      "volume": "35",
+      "author": "R Bagnara",
+      "year": "2009",
+      "unstructured": "Bagnara, R., Hill, P.M., Zaffanella, E.: Weakly-relational shapes for numeric abstractions: improved algorithms and proofs of correctness. Formal Methods Syst. Des. 35(3), 279\u2013323 (2009). https://doi.org/10.1007/s10703-009-0073-1",
+      "journal-title": "Formal Methods Syst. Des."
+    },
+    {
+      "key": "21_CR3",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Blanchet, B., et al.: A static analyzer for large safety-critical software. In: Proceedings of the ACM SIGPLAN 2003 Conference on Programming Language Design and Implementation, PLDI 2003, pp. 196\u2013207. Association for Computing Machinery, New York (2003). https://doi.org/10.1145/781131.781153. ISBN: 1581136625",
+      "DOI": "10.1145/781131.781153"
+    },
+    {
+      "issue": "2",
+      "key": "21_CR4",
+      "doi-asserted-by": "publisher",
+      "first-page": "232",
+      "DOI": "10.1007/s10703-017-0314-7",
+      "volume": "54",
+      "author": "A Chawdhary",
+      "year": "2019",
+      "unstructured": "Chawdhary, A., Robbins, E., King, A.: Incrementally closing octagons. Formal Methods Syst. Des. 54(2), 232\u2013277 (2019). https://doi.org/10.1007/s10703-017-0314-7",
+      "journal-title": "Formal Methods Syst. Des."
+    },
+    {
+      "key": "21_CR5",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "101",
+      "DOI": "10.1007/978-3-319-10936-7_7",
+      "volume-title": "Static Analysis",
+      "author": "L Chen",
+      "year": "2014",
+      "unstructured": "Chen, L., Liu, J., Min\u00e9, A., Kapur, D., Wang, J.: An abstract domain to infer octagonal constraints with absolute value. In: M\u00fcller-Olm, M., Seidl, H. (eds.) SAS 2014. LNCS, vol. 8723, pp. 101\u2013117. Springer, Cham (2014). https://doi.org/10.1007/978-3-319-10936-7_7"
+    },
+    {
+      "key": "21_CR6",
+      "volume-title": "Introduction to Algorithms",
+      "author": "TH Cormen",
+      "year": "2009",
+      "unstructured": "Cormen, T.H., Leiserson, C.E., Rivest, R.L., Stein, C.: Introduction to Algorithms. MIT Press, Cambridge (2009)"
+    },
+    {
+      "issue": "3",
+      "key": "21_CR7",
+      "doi-asserted-by": "publisher",
+      "first-page": "229",
+      "DOI": "10.1007/s10703-009-0089-6",
+      "volume": "35",
+      "author": "P Cousot",
+      "year": "2009",
+      "unstructured": "Cousot, P., Cousot, R., Feret, J., Mauborgne, L., Min\u00e9, A., Rival, X.: Why does astr\u00e9e scale up? Form. Methods Syst. Des. 35(3), 229\u2013264 (2009). https://doi.org/10.1007/s10703-009-0089-6. ISSN: 0925-9856",
+      "journal-title": "Form. Methods Syst. Des."
+    },
+    {
+      "key": "21_CR8",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Cousot, P., Halbwachs, N.: Automatic discovery of linear restraints among variables of a program. In: Aho, A.V., Zilles, S.N., Szymanski, T.G. (eds.) Conference Record of the Fifth Annual ACM Symposium on Principles of Programming Languages, Tucson, Arizona, USA, January 1978, pp. 84\u201396, ACM Press (1978). https://doi.org/10.1145/512760.512770",
+      "DOI": "10.1145/512760.512770"
+    },
+    {
+      "key": "21_CR9",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Cousot, P., Halbwachs, N.: Automatic discovery of linear restraints among variables of a program. In: Proceedings of the 5th ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages, POPL 1978, pp. 84\u201396. Association for Computing Machinery, New York (1978). https://doi.org/10.1145/512760.512770. ISBN: 9781450373487",
+      "DOI": "10.1145/512760.512770"
+    },
+    {
+      "key": "21_CR10",
+      "unstructured": "ELINA: ELINA: ETH library for numerical analysis (2018). https://elina.ethz.ch/"
+    },
+    {
+      "issue": "1",
+      "key": "21_CR11",
+      "doi-asserted-by": "publisher",
+      "first-page": "59",
+      "DOI": "10.1016/j.entcs.2010.09.006",
+      "volume": "267",
+      "author": "J Fulara",
+      "year": "2010",
+      "unstructured": "Fulara, J., Durnoga, K., Jakubczyk, K., Schubert, A.: Relational abstract domain of weighted hexagons. Electron. Notes Theor. Comput. Sci. 267(1), 59\u201372 (2010). https://doi.org/10.1016/j.entcs.2010.09.006",
+      "journal-title": "Electron. Notes Theor. Comput. Sci."
+    },
+    {
+      "issue": "3",
+      "key": "21_CR12",
+      "doi-asserted-by": "publisher",
+      "first-page": "1",
+      "DOI": "10.1145/3457885",
+      "volume": "43",
+      "author": "G Gange",
+      "year": "2021",
+      "unstructured": "Gange, G., Ma, Z., Navas, J.A., Schachte, P., S\u00f8ndergaard, H., Stuckey, P.J.: A fresh look at zones and octagons. ACM Trans. Program. Lang. Syst. 43(3), 1\u201351 (2021). https://doi.org/10.1145/3457885. ISSN: 0164-0925",
+      "journal-title": "ACM Trans. Program. Lang. Syst."
+    },
+    {
+      "key": "21_CR13",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "306",
+      "DOI": "10.1007/978-3-642-04761-9_23",
+      "volume-title": "Automated Technology for Verification and Analysis",
+      "author": "JM Howe",
+      "year": "2009",
+      "unstructured": "Howe, J.M., King, A.: Logahedra: a new weakly relational domain. In: Liu, Z., Ravn, A.P. (eds.) ATVA 2009. LNCS, vol. 5799, pp. 306\u2013320. Springer, Heidelberg (2009). https://doi.org/10.1007/978-3-642-04761-9_23"
+    },
+    {
+      "key": "21_CR14",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "661",
+      "DOI": "10.1007/978-3-642-02658-4_52",
+      "volume-title": "Computer Aided Verification",
+      "author": "B Jeannet",
+      "year": "2009",
+      "unstructured": "Jeannet, B., Min\u00e9, A.: Apron: a library of numerical abstract domains for static analysis. In: Bouajjani, A., Maler, O. (eds.) CAV 2009. LNCS, vol. 5643, pp. 661\u2013667. Springer, Heidelberg (2009). https://doi.org/10.1007/978-3-642-02658-4_52"
+    },
+    {
+      "key": "21_CR15",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Karmarkar, N.: A new polynomial-time algorithm for linear programming. In: Proceedings of the Sixteenth Annual ACM Symposium on Theory of Computing, pp. 302\u2013311 (1984)",
+      "DOI": "10.1145/800057.808695"
+    },
+    {
+      "key": "21_CR16",
+      "doi-asserted-by": "publisher",
+      "first-page": "133",
+      "DOI": "10.1007/BF00268497",
+      "volume": "6",
+      "author": "M Karr",
+      "year": "1976",
+      "unstructured": "Karr, M.: Affine relationships among variables of a program. Acta Informatica 6, 133\u2013151 (1976). https://doi.org/10.1007/BF00268497",
+      "journal-title": "Acta Informatica"
+    },
+    {
+      "issue": "3",
+      "key": "21_CR17",
+      "first-page": "159",
+      "volume": "3",
+      "author": "V Klee",
+      "year": "1972",
+      "unstructured": "Klee, V., Minty, G.J.: How good is the simplex algorithm. Inequalities 3(3), 159\u2013175 (1972)",
+      "journal-title": "Inequalities"
+    },
+    {
+      "key": "21_CR18",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Logozzo, F., F\u00e4hndrich, M.: Pentagons: a weakly relational abstract domain for the efficient validation of array accesses. In: Proceedings of the 2008 ACM Symposium on Applied Computing, SAC 2008, pp. 184\u2013188. Association for Computing Machinery, New York (2008). https://doi.org/10.1145/1363686.1363736. ISBN: 9781595937537",
+      "DOI": "10.1145/1363686.1363736"
+    },
+    {
+      "key": "21_CR19",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "155",
+      "DOI": "10.1007/3-540-44978-7_10",
+      "volume-title": "Programs as Data Objects",
+      "author": "A Min\u00e9",
+      "year": "2001",
+      "unstructured": "Min\u00e9, A.: A new numerical abstract domain based on difference-bound matrices. In: Danvy, O., Filinski, A. (eds.) PADO 2001. LNCS, vol. 2053, pp. 155\u2013172. Springer, Heidelberg (2001). https://doi.org/10.1007/3-540-44978-7_10"
+    },
+    {
+      "key": "21_CR20",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Min\u00e9, A.: The octagon abstract domain. In: WCRE 2001, p. 310. IEEE Computer Society (2001). https://doi.org/10.1109/WCRE.2001.957836",
+      "DOI": "10.1109/WCRE.2001.957836"
+    },
+    {
+      "issue": "1",
+      "key": "21_CR21",
+      "doi-asserted-by": "publisher",
+      "first-page": "31",
+      "DOI": "10.1007/s10990-006-8609-1",
+      "volume": "19",
+      "author": "A Min\u00e9",
+      "year": "2006",
+      "unstructured": "Min\u00e9, A.: The octagon abstract domain. High. Order Symbol. Comput. 19(1), 31\u2013100 (2006). https://doi.org/10.1007/s10990-006-8609-1. ISSN: 1388-3690",
+      "journal-title": "High. Order Symbol. Comput."
+    },
+    {
+      "key": "21_CR22",
+      "doi-asserted-by": "publisher",
+      "unstructured": "M\u00fcller-Olm, M., Seidl, H.: Precise interprocedural analysis through linear algebra. In: Jones, N.D., Leroy, X. (eds.) Proceedings of the 31st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, POPL 2004, Venice, Italy, 14\u201316 January 2004, pp. 330\u2013341. ACM (2004). https://doi.org/10.1145/964001.964029",
+      "DOI": "10.1145/964001.964029"
+    },
+    {
+      "issue": "5",
+      "key": "21_CR23",
+      "doi-asserted-by": "publisher",
+      "first-page": "29",
+      "DOI": "10.1145/1275497.1275504",
+      "volume": "29",
+      "author": "M M\u00fcller-Olm",
+      "year": "2007",
+      "unstructured": "M\u00fcller-Olm, M., Seidl, H.: Analysis of modular arithmetic. ACM Trans. Program. Lang. Syst. 29(5), 29 (2007). https://doi.org/10.1145/1275497.1275504",
+      "journal-title": "ACM Trans. Program. Lang. Syst."
+    },
+    {
+      "key": "21_CR24",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "268",
+      "DOI": "10.1007/978-3-540-69738-1_20",
+      "volume-title": "Verification, Model Checking, and Abstract Interpretation",
+      "author": "M P\u00e9ron",
+      "year": "2007",
+      "unstructured": "P\u00e9ron, M., Halbwachs, N.: An abstract domain extending difference-bound matrices with disequality constraints. In: Cook, B., Podelski, A. (eds.) VMCAI 2007. LNCS, vol. 4349, pp. 268\u2013282. Springer, Heidelberg (2007). https://doi.org/10.1007/978-3-540-69738-1_20"
+    },
+    {
+      "key": "21_CR25",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "25",
+      "DOI": "10.1007/978-3-540-30579-8_2",
+      "volume-title": "Verification, Model Checking, and Abstract Interpretation",
+      "author": "S Sankaranarayanan",
+      "year": "2005",
+      "unstructured": "Sankaranarayanan, S., Sipma, H.B., Manna, Z.: Scalable analysis of linear systems using mathematical programming. In: Cousot, R. (ed.) VMCAI 2005. LNCS, vol. 3385, pp. 25\u201341. Springer, Heidelberg (2005). https://doi.org/10.1007/978-3-540-30579-8_2 ISBN: 978-3-540-30579-8"
+    },
+    {
+      "key": "21_CR26",
+      "doi-asserted-by": "publisher",
+      "first-page": "28",
+      "DOI": "10.1007/978-3-031-30044-8_2",
+      "volume-title": "Programming Languages and Systems, ESOP 2023",
+      "author": "M Schwarz",
+      "year": "2023",
+      "unstructured": "Schwarz, M., Saan, S., Seidl, H., Erhard, J., Vojdani, V.: Clustered relational thread-modular abstract interpretation with local traces. In: Wies, T. (ed.) ESOP 2023. LNCS, vol. 13990, pp. 28\u201358. Springer, Cham (2023). https://doi.org/10.1007/978-3-031-30044-8_2"
+    },
+    {
+      "key": "21_CR27",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "71",
+      "DOI": "10.1007/3-540-45013-0_7",
+      "volume-title": "Logic Based Program Synthesis and Transformation",
+      "author": "A Simon",
+      "year": "2003",
+      "unstructured": "Simon, A., King, A., Howe, J.M.: Two variables per linear inequality as an abstract domain. In: Leuschel, M. (ed.) LOPSTR 2002. LNCS, vol. 2664, pp. 71\u201389. Springer, Heidelberg (2003). https://doi.org/10.1007/3-540-45013-0_7"
+    },
+    {
+      "key": "21_CR28",
+      "doi-asserted-by": "publisher",
+      "unstructured": "Singh, G., P\u00fcschel, M., Vechev, M.: A practical construction for decomposing numerical abstract domains. Proc. ACM Program. Lang. 2(POPL), 1\u201328 (2018). https://doi.org/10.1145/3158143",
+      "DOI": "10.1145/3158143"
+    }
+  ],
+  "updated-by": [
+    {
+      "DOI": "10.1007/978-3-031-44245-2_24",
+      "type": "correction",
+      "label": "Correction",
+      "source": "publisher",
+      "updated": {
+        "date-parts": [
+          [
+            2023,
+            10,
+            24
+          ]
+        ],
+        "date-time": "2023-10-24T00:00:00Z",
+        "timestamp": 1698105600000
+      }
+    }
+  ],
+  "container-title": [
+    "Lecture Notes in Computer Science",
+    "Static Analysis"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://link.springer.com/content/pdf/10.1007/978-3-031-44245-2_21",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2024,
+        2,
+        8
+      ]
+    ],
+    "date-time": "2024-02-08T08:16:56Z",
+    "timestamp": 1707380216000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://link.springer.com/10.1007/978-3-031-44245-2_21"
+    }
+  },
+  "subtitle": [
+    "Elegant Proofs and Simplified Algorithms"
+  ],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2023
+      ]
+    ]
+  },
+  "ISBN": [
+    "9783031442445",
+    "9783031442452"
+  ],
+  "references-count": 28,
+  "URL": "https://doi.org/10.1007/978-3-031-44245-2_21",
+  "relation": {
+    "correction": [
+      {
+        "id-type": "doi",
+        "id": "10.1007/978-3-031-44245-2_24",
+        "asserted-by": "object"
+      }
+    ]
+  },
+  "ISSN": [
+    "0302-9743",
+    "1611-3349"
+  ],
+  "issn-type": [
+    {
+      "value": "0302-9743",
+      "type": "print"
+    },
+    {
+      "value": "1611-3349",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2023
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "24 October 2023",
+      "order": 1,
+      "name": "first_online",
+      "label": "First Online",
+      "group": {
+        "name": "ChapterHistory",
+        "label": "Chapter History"
+      }
+    },
+    {
+      "value": "24 October 2023",
+      "order": 2,
+      "name": "change_date",
+      "label": "Change Date",
+      "group": {
+        "name": "ChapterHistory",
+        "label": "Chapter History"
+      }
+    },
+    {
+      "value": "Correction",
+      "order": 3,
+      "name": "change_type",
+      "label": "Change Type",
+      "group": {
+        "name": "ChapterHistory",
+        "label": "Chapter History"
+      }
+    },
+    {
+      "value": "A correction has been published.",
+      "order": 4,
+      "name": "change_details",
+      "label": "Change Details",
+      "group": {
+        "name": "ChapterHistory",
+        "label": "Chapter History"
+      }
+    },
+    {
+      "value": "SAS",
+      "order": 1,
+      "name": "conference_acronym",
+      "label": "Conference Acronym",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "International Static Analysis Symposium",
+      "order": 2,
+      "name": "conference_name",
+      "label": "Conference Name",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "Lisbon",
+      "order": 3,
+      "name": "conference_city",
+      "label": "Conference City",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "Portugal",
+      "order": 4,
+      "name": "conference_country",
+      "label": "Conference Country",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "2023",
+      "order": 5,
+      "name": "conference_year",
+      "label": "Conference Year",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "22 October 2023",
+      "order": 7,
+      "name": "conference_start_date",
+      "label": "Conference Start Date",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "24 October 2023",
+      "order": 8,
+      "name": "conference_end_date",
+      "label": "Conference End Date",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "30",
+      "order": 9,
+      "name": "conference_number",
+      "label": "Conference Number",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "sas2023",
+      "order": 10,
+      "name": "conference_id",
+      "label": "Conference ID",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    },
+    {
+      "value": "https://conf.researchr.org/home/sas-2023",
+      "order": 11,
+      "name": "conference_url",
+      "label": "Conference URL",
+      "group": {
+        "name": "ConferenceInfo",
+        "label": "Conference Information"
+      }
+    }
+  ]
+}

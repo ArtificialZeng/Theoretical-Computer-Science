@@ -1,0 +1,263 @@
+\documentclass[manuscript,screen,11pt,nonacm]{acmart}
+\geometry{letterpaper,margin=1in}
+\setcopyright{none}
+\settopmatter{printacmref=false,printfolios=true}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\acmConference{}{}{}
+\acmISBN{}
+\acmDOI{}
+\usepackage{amsmath,amsthm,mathtools,booktabs,tabularx,array}
+\usepackage{algorithm,algpseudocode}
+\usepackage{attachfile2}
+\emergencystretch=1em
+\makeatletter
+\let\tpcOriginalNormalSize\normalsize
+\renewcommand\normalsize{\tpcOriginalNormalSize\fontsize{11.1pt}{13.4pt}\selectfont}
+\let\small\normalsize
+\let\footnotesize\normalsize
+\makeatother
+\AtBeginDocument{\normalsize}
+\hypersetup{pdfauthor={Zijian Zeng, Jiayin Cao, Weinan Dai, Rui Wang}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\vocab}{\mathcal V}
+\newcommand{\bits}{\{0,1\}}
+\newcommand{\mask}{\mathsf{mask}}
+\newcommand{\poly}{\operatorname{poly}}
+\newcommand{\bn}{\lceil M/w\rceil}
+\title[Representation and Preprocessing in Grammar-Constrained Decoding]{Representation and Preprocessing in Grammar-Constrained Decoding: Stack Indexes and Online Completion Lower Bounds}
+\author{Zijian Zeng}
+\authornote{Corresponding author.}
+\affiliation{\institution{UCSI University}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\author{Jiayin Cao}
+\affiliation{\institution{Ningbo University}\country{China}}
+\email{2795820153@qq.com}
+\author{Weinan Dai}
+\affiliation{\institution{Zhejiang University}\country{China}}
+\email{21725058@zju.edu.cn}
+\author{Rui Wang}
+\affiliation{\institution{Nanchang Institute of Technology}\country{China}}
+\email{2002007@nut.edu.cn}
+\renewcommand{\shortauthors}{Zeng, Cao, Dai, and Wang}
+\begin{document}
+\begin{abstract}
+Grammar-constrained decoding asks which model tokens preserve the existence of a valid completion. Tokens can cross lexical boundaries and trigger long parser reduction chains. We study this online problem with separate parameters for the language presentation, vocabulary, and streamed text.
+
+Our main lower bound already holds for right-linear grammars and six one-byte tokens. Under the Online Matrix--Vector Multiplication conjecture, polynomial preprocessing cannot provide amortized $O(n^{1/2-\epsilon})$ time per step on one stream. The constructed matrix-language family admits an $O(1+\sqrt n/w)$ algorithm. With shared preprocessing and independently initialized streams, the corresponding forbidden exponent is $1-\epsilon$ because the horizon of each stream is shorter.
+
+For deterministic pushdown presentations, we give an incremental regular-stack index and explicit compilation bounds. A classifier with $s$ NFA states yields an index of size $2^{O(s)}$ with $O(\lceil M/w\rceil)$ mask materialization time; a block-tabulation variant exposes a tunable space--query--update tradeoff. Committed parser work is charged separately. Thus the relevant complexity parameters include representation, preprocessing budget, and update work, in addition to the language class. A typed-completion corollary delineates a semantic boundary using classical inhabitation complexity. Executable finite checks accompany the proofs.
+\end{abstract}
+\maketitle
+\hypersetup{pdfauthor={Zijian Zeng, Jiayin Cao, Weinan Dai, Rui Wang}}
+\pagestyle{plain}\thispagestyle{plain}
+\clearpage
+\section{Introduction}
+Structured language-model output is often consumed immediately by a schema validator, query engine, or compiler. Before sampling each token, a grammar-constrained decoder computes a vocabulary mask that preserves the possibility of producing an accepted output. This is an existential completion question. A token may span several lexemes, end inside a lexeme, or trigger many reductions before the parser consumes its next byte. The online cost therefore combines token alignment, configuration classification, and parser updates.
+
+Our central question is how presentation and preprocessing affect exact token-completion masks. We give a conditional barrier for a succinct regular-language family and a stack-index construction for supplied deterministic pushdown presentations. These results use different preprocessing budgets, which we state explicitly. The lower bound is exponent-tight on its constructed family; it is not a tight characterization of general grammar-constrained decoding.
+
+\paragraph{A two-row example.}
+Let $A=\left(\begin{smallmatrix}1&0\\0&1\end{smallmatrix}\right)$ and $v=(1,0)^\mathsf T$. Our grammar accepts universal blocks of the form $v\#aa!$, keeping their prefixes live. A separate branch permits a terminal query byte $?$ after $v\#a^i$ exactly when $(Av)_i=1$. Thus $?$ is legal after $\mathtt{10\#a}$ and illegal after $\mathtt{10\#aa}$. The actual stream commits both $a$ bytes and then $!$, never the tested $?$; a zero answer cannot invalidate subsequent row queries. Generalizing this construction gives the lower bound.
+
+\paragraph{Results and technical ideas.}
+For an $m\times m$ matrix, a right-linear grammar of size $\Theta(m^2)$ supports $m$ online vectors using $\Theta(m^2)$ appended bytes in total. Each row answer is one bit of a six-token mask. Under OMv, polynomial preprocessing excludes amortized $O(n^{1/2-\epsilon})$ steps on this trace. For $m$ independently initialized streams, each of length $\Theta(m)$, it excludes $O(n^{1-\epsilon})$ steps. A packed-row algorithm takes $O(1+m/w)$ per step on the same family.
+
+The upper bound starts from regular languages of pushdown configurations. After reversal, one bottom-to-top NFA simultaneously classifies the current stack for all candidate tokens. A fully determinized index stores its state at every persistent stack node: push computes a transition, and pop restores the parent annotation. Mask output takes $O(\lceil M/w\rceil)$ word writes. We bound the classifier size polynomially in the explicit pushdown and vocabulary inputs, expose the exponential determinization cost, and give a block-tabulation alternative with a selectable static budget. Parser reductions performed while committing the selected token remain explicit update work.
+
+\paragraph{Relation to prior work.}
+DOMINO addresses subword alignment~\cite{pmlr-v235-beurer-kellner24a}; XGrammar uses local mask caching, context-dependent checks, and persistent stacks~\cite{MLSYS2025_5c20ca4b}. Outlines indexes vocabulary transitions~\cite{willard2023efficientguidedgenerationlarge}; SynCode develops formal syntactic guarantees~\cite{ugare2025syncode}; llguidance combines Earley parsing, lexing, and trie traversal~\cite{llguidance}. Lexer/parser products~\cite{pmlr-v267-park25l} and GPU-oriented token precompilation~\cite{pmlr-v306-hua26b} further develop this systems design space. Our bounds account for the operations represented by those techniques rather than compare model throughput.
+
+The closest upper-bound predecessor is Parser Stack Classification (PSC)~\cite{li2026efficientgrammarconstraineddecodingparser}, whose regular classifier is executed by an $O(h)$ stack scan in Algorithm~2. VIABLE maintains reverse classifier annotations incrementally. Regularity, reversal, subset construction, and block tabulation are established automata tools; the result here is their explicit query/update/compilation accounting for exact completion masks. Its significance is the separation of query latency from committed parsing, rather than a new regularity theorem.
+
+On the lower-bound side, Bringmann, Gr\o nlund, K\"unnemann, and Larsen formulate the NFA Acceptance hypothesis and show that it implies OMv~\cite{theoretics:13000}. Their fixed-word acceptance and colored-walk formulations provide important complexity context. Gibney and Thankachan study preprocessing a text for subsequent regular-expression queries~\cite{Gibney_2021}. Our static object is the grammar, the online object is appended text, and the answer is a candidate-completion bit along prefixes kept live by a universal branch. These distinctions specify the transfer that the proof must establish; regular-language OMv hardness alone is already part of the surrounding literature.
+
+Online CFL recognition has a different predicate: it reports membership of each observed prefix. Dudek and Gawrychowski give an upper bound using OMv methods~\cite{dudek_et_al:LIPIcs.CPM.2024.13}. Earlier online Turing-machine lower bounds~\cite{Gallaire_1969}, sliding-window bounds with deletion~\cite{ganardi_et_al:LIPIcs.FSTTCS.2022.38}, and offline parsing barriers~\cite{Lee:02a,Abboud_2015} concern different machines, updates, or outputs. The reduction below fixes these choices directly. Type-constrained generation~\cite{M_ndler_2025} and semantic realizability~\cite{Nagy_2026} motivate the auxiliary typed-completion result in Section~\ref{sec:types}.
+
+\section{Model and Results}\label{sec:model}
+Fix a byte alphabet $\Sigma$. The static input contains a CFG $G$, a DFA for each terminal's nonempty regular lexeme language, and a specified boundary/priority policy. Relational segmentation gives the regular substitution of these lexeme languages into $L(G)$. A deterministic implementation instead supplies a compatible finite-state streaming lexer and a normalized pushdown presentation $P$ of the resulting byte language $K$. A finite DFA collection alone need not implement maximal munch with bounded memory; the upper theorem requires the supplied streaming presentation.
+
+The nonempty vocabulary $\vocab=\{v_1,\ldots,v_M\}\subseteq\Sigma^+$ is a one-state detokenizing transducer, mapping identifier $i$ to byte string $v_i$. Put $D=\sum_i|v_i|$ and $L=\max_i|v_i|$. At a token-boundary prefix $x\in\vocab^*$, define
+\begin{equation}\label{eq:tpc}
+ \mask_x[i]=1\quad\Longleftrightarrow\quad\exists y\in\vocab^*: xv_i y\in K.
+\end{equation}
+We call this problem tokenized prefix completability (TPC). The online interface preprocesses the static input, answers $\mathsf{Mask}$, and performs $\mathsf{Commit}(i)$ by appending $v_i$. EOS is the separate bit $[x\in K]$. Failed prefixes have zero masks thereafter. Future output is constrained to $\vocab^*$: for $K=\{\mathtt{ab}\}$ and $\vocab=\{\mathtt a\}$, byte-prefix liveness and tokenized completion differ.
+
+The static size $g$ counts grammar symbols, lexer transitions, and any supplied normalized presentation in words. A compiler's cost and output size are included when a presentation is constructed from $G$. The horizon $n\ge2$ counts committed bytes; $t$ token commits satisfy $t\le n\le tL$. We use a word-RAM with $w=\Theta(\log n)$ and require all static and dynamic storage to be addressable. An explicit mask occupies $B=\bn$ words and must be written into caller-owned storage; returning a pointer to a cached row is a different interface. Sampling is external to both operations.
+
+For the deterministic upper bound, $P$ has controls $Q$, stack alphabet $\Gamma$, elementary pushes/pops/control changes, and explicit EOF processing. Acceptance is by final control or empty stack; any supplied regular acceptance automaton is included in $g$. It is boundary-terminating: each next byte is consumed or rejected after finitely many operations. The current boundary is immediately after consuming the previous byte, before any optional silent closure. Let $r_i$ be the elementary commit work, including silent transitions, and $W_t=\sum_{i\le t}r_i$. A $c_0$-bounded-work presentation has $r_i\le c_0(|v_i|+1)$; an $a$-linear-work presentation has $W_t\le a(n+1)$. These are execution hypotheses. Deterministic visibly pushdown presentations satisfy the first with a constant; an LR reduction burst is charged to $r_i$.
+
+\begin{theorem}[Regular-family lower bounds]\label{thm:omv}
+Under OMv, for every $\epsilon>0$ there is no uniform exact engine with $\poly(g+D)$ preprocessing and amortized $O(n^{1/2-\epsilon})$ time per step on all right-linear grammars. This holds with an identity lexer, $M=D=6$, and $L=1$, on a family with $g=\Theta(m^2)$ and $n=\Theta(m^2)$. The same family admits $O(1+m/w)$ worst-case steps and $O(m^2)$ preprocessing and space.
+
+With one polynomial preprocessing and $m$ independently initialized streams of horizon $n=\Theta(m)$, constant-time initialization, and $g=\Theta(n^2)$, the excluded bound is instead amortized $O(n^{1-\epsilon})$ per step.
+\end{theorem}
+
+Here and below a step includes the query and selected commit. The lower bound excludes a fixed polynomial saving, allows logarithmic improvements, and has no hidden online factor polynomial in $g$.
+
+\begin{theorem}[Explicit stack index]\label{thm:index}
+For a supplied deterministic presentation, a joint bottom-to-top configuration classifier with
+\[s=O\bigl(g(M+1)(D+L+1)\bigr)\]
+NFA states can be constructed in $\poly(g+D+L)$ time. Determinizing it yields a VIABLE index with preprocessing $\poly(g+D+L)+2^{O(s)}$ and static space
+\[O\bigl(\poly(g+D+L)+2^s(|\Gamma|+|Q|B)\bigr).
+\]
+On addressable instances, mask queries cost $O(B)$ worst-case, commits cost $O(|v_i|+r_i+1)$, and dynamic space is $O(1+W_t)$ words. Thus bounded-work presentations have $O(B+c_0L+c_0)$ worst-case steps, and linear-work presentations have total online time $O(tB+an+a+t)$.
+\end{theorem}
+
+An explicit smaller DFA classifier can replace the $2^s$ subset bound. The theorem measures the supplied pushdown representation, including its lexer; it is not a polynomial compilation theorem for arbitrary CFGs.
+
+\begin{theorem}[Block-tabulation tradeoff]\label{thm:blocks}
+Given the classifier of Theorem~\ref{thm:index}, choose $1\le b\le\min(s,w)$, let $k=\lceil s/b\rceil$ and $d=\lceil s/w\rceil$. Besides polynomial classifier construction, preprocessing time and static space are
+\begin{equation}\label{eq:tradeoff}
+ O\bigl(\poly(s+g+D)+2^b k(|\Gamma|d+|Q|B)\bigr).
+\end{equation}
+Mask queries cost $O(kB)$, a push costs $O(kd)$, and a pop costs $O(1)$. Committing token $i$ costs $O(|v_i|+(r_i+1)kd)$, with dynamic space $O((1+W_t)d)$. All bounds are worst-case for the specified operations.
+\end{theorem}
+
+Choosing $b=\Theta(\log s)$, capped by $w$, gives polynomial tabulation size; the full subset index gives output-optimal queries at exponential static cost. This is an explicit implementation tradeoff, without an assertion that it is optimal among all index structures.
+
+\begin{table}[t]
+\caption{Common-parameter comparison. $B=\lceil M/w\rceil$; $n$ counts bytes in the specified stream. The matrix-family lower bounds and its upper bound match in polynomial exponent.}
+\label{tab:bounds}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\linewidth}{@{}l l >{\raggedright\arraybackslash}X@{}}
+\toprule
+Representation & Preprocessing & Online guarantee\\\midrule
+Supplied DFA, $h$ states & $O(hD)$ & $O(B+L)$ per step\\
+PDA, subset index & $\poly(g+D+L)+2^{O(s)}$ & $O(B)$ query; $O(L+r_i)$ commit\\
+PDA, $b$-bit blocks & Equation~\eqref{eq:tradeoff} & $O(kB)$ query; $O(L+(r_i+1)kd)$ commit\\
+Matrix grammar family & $O(g)$ & $O(1+\sqrt g/w)$ per step\\
+Same family, one stream & $\poly(g+D)$ & OMv excludes $O(n^{1/2-\epsilon})$; $g=\Theta(n)$\\
+Same family, independent streams & $\poly(g+D)$ & OMv excludes $O(n^{1-\epsilon})$; $g=\Theta(n^2)$\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+For the DFA row of Table~\ref{tab:bounds}, precompute every token transition and mark states reaching acceptance through vocabulary-token edges. Both tasks take $O(hD)$ time; cached rows and token transitions give the stated online bound.
+
+\section{Configuration Compilation and Maintenance}\label{sec:index}
+The technical overview is a three-stage construction: build regular future tests, reverse them into a joint stack classifier, and maintain its annotation at persistent stack nodes. We give the construction and its size accounting together.
+
+\begin{lemma}[Regular constrained futures]\label{lem:regular}
+For a normalized pushdown machine and a regular input language $R$, the configurations that can consume a word in $R$ and accept after EOF form an effectively constructible regular set.
+\end{lemma}
+\begin{proof}
+Take the product with an automaton for $R$, updating its state on consuming transitions. Permit EOF only at an accepting $R$ state. A regular target after EOF is represented by an NFA reading stacks top to bottom, with product controls as initial states and separate internal target states. Initially no edge enters a control state. For each pushdown rule $(p,A)\longrightarrow(q,\beta)$, $|\beta|\le2$, add $p\xrightarrow A u$ whenever a current path $q\xrightarrow\beta u$ exists. This saturation adds edges but no states, and terminates in polynomial time~\cite{10.1007/3-540-63141-0_10}.
+
+For soundness, rank added edges by insertion time. If an accepting path starts with a target edge, it stays inside the original target automaton. Otherwise replace its first edge by its witnessing rule and the earlier path for $\beta$. This takes one pushdown step and replaces one rank by smaller ranks. Well-founded multiset order implies that expansion ends in an original target path. For completeness, induct on a run to the target; split the accepting path for $\beta u$ after $\beta$ and use the edge added for the first rule. Selecting controls with the initial $R$ state yields the asserted source configurations.
+\end{proof}
+
+\begin{proof}[Compilation in Theorem~\ref{thm:index}]
+For each vocabulary token $z$, use $R=z\vocab^*$ in Lemma~\ref{lem:regular}. A vocabulary trie with returns from token ends recognizes $\vocab^*$ using $O(D+1)$ NFA states; prepending $z$ uses $O(D+L+1)$ states. Eliminate input-automaton epsilon edges without adding states. Its product with the explicit presentation and regular accepting target has $O(g(D+L+1))$ saturation states. Add one analogous test for EOS. Saturation adds no states and has polynomially many possible edges. Across $M+1$ tests their total size is the stated $s$.
+
+Reverse these stack NFAs and take their disjoint union, using all reversed accepting states as initial states. Each accepting state is labeled by the original control $q$ and candidate identifier $i$. On a bottom-to-top stack $u$, its active set $S(u)$ therefore determines the exact mask: bit $i$ is set when a state labeled $(q,i)$ is active. Multiple labels are combined by OR. The additional EOS label changes the packed output size by at most one word. Vocabulary continuations are included in $R$, so the construction works without assuming byte-complete vocabularies.
+
+The subset DFA has at most $2^s$ states. Compute its transitions and, for each control and subset, its packed mask row. Naive finite-set operations give $2^{O(s)}$ time and the stated transition/row space. The separate polynomial term contains the input classifier and its construction. For a fixed alphabet, $M\le\sum_{\ell\le L}|\Sigma|^\ell$ and $D\le LM$ make the dependence on grammar size and maximum token length elementary as well.
+\end{proof}
+
+\begin{proof}[Maintenance in Theorem~\ref{thm:index}]
+Store the subset-DFA state for the complete bottom-to-node stack at each persistent node. A push computes one DFA transition and records its parent; a pop restores the parent state. Induction on operations establishes the annotation invariant. Control changes select a different output row. Addressability ensures each state identifier and pointer fits in a word. A query copies $B$ words; committing executes the deterministic parser and pays constant index overhead per elementary operation. At most one node is allocated per push. Failed commits enter a zero-row dead state. Summing gives the stated work and space bounds and the two execution corollaries.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:blocks}]
+Retain the active set of the joint reversed NFA as $d$ packed words, partitioned into $k$ groups of at most $b$ states. For each stack symbol, group, and one of its $2^b$ bit patterns, tabulate the OR of the successor-state bitsets of the selected states. Each entry has $d$ words. For each control, group, and pattern, also tabulate the OR of the selected states' output labels as a $B$-word mask. The tables contain at most the number of words in~\eqref{eq:tradeoff}. Recurrence on the least significant selected bit fills them in the same asymptotic time after polynomial setup.
+
+Because $b\le w$, extracting a group takes constant word operations even across a word boundary. A push looks up $k$ transition entries and ORs them into a new $d$-word annotation, costing $O(kd)$; correctness is distributivity of NFA transition over union. A query similarly ORs $k$ output entries in $O(kB)$. Store annotations with persistent parents; popping changes one pointer. Control changes affect only which output table is used. The allocation and commit bounds follow by charging all pushes, pops, and control changes to $r_i$, with at most $d$ words per allocated node.
+\end{proof}
+
+\begin{algorithm}[t]
+\caption{VIABLE with a determinized stack classifier}
+\begin{algorithmic}[1]
+\State Maintain parser control $q$ and stack root $u$ storing index state $H(u)$.
+\Function{Mask}{$out$}
+ \State Copy $B$ words from $Rows[q,H(u)]$ to $out$.
+\EndFunction
+\Function{Push}{$A$}
+ \State $u\gets Node(A,u,\delta_H(H(u),A))$.
+\EndFunction
+\Function{Pop}{}\State $u\gets parent(u)$.\EndFunction
+\Function{Commit}{$i$}
+ \State Run the presentation on $v_i$, maintaining annotations on every push/pop.
+ \State Charge consuming and silent work to $|v_i|+r_i$.
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+A regular stack property can depend on its whole depth, such as parity of one symbol; its finite-state annotation need not be a bounded suffix. Conversely, persistence does not remove parsing work. In $S\to Tc$, $T\to aT\mid b$, a conventional LR parser can perform $\Theta(d)$ reductions on lookahead $c$ after reading $a^db$. The index gives its mask without speculative reductions, while committing $c$ charges the cascade. This language is regular, so the example is about the parser execution rather than a language lower bound.
+
+\section{The Regular OMv Construction}\label{sec:lower}
+For an $m\times m$ Boolean matrix $A$, use six one-byte tokens $\{0,1,\#,a,!,?\}$ and define
+\begin{align}
+ B_m&=\bits^m\#a^m!,\label{eq:block}\\
+ T_A&=\{v\#a^i?:v\in\bits^m,\ 1\le i\le m,\ (Av)_i=1\},\\
+ K_A&=B_m^*(\{\eps\}\cup T_A).\label{eq:lang}
+\end{align}
+The universal branch $B_m^*$ maintains liveness independently of row answers.
+
+\begin{lemma}[Grammar size and query predicate]\label{lem:gadget}
+A right-linear grammar of size $O(m^2)$ for $K_A$ can be built in $O(m^2)$ time and padded to $\Theta(m^2)$. For $p\in B_m^*$,
+\begin{equation}\label{eq:probe}
+ \mask_{pv\#a^i}[?]=(Av)_i\qquad(1\le i\le m).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Build an NFA. A boundary state accepts, or starts a universal block, counting $m$ bits, $\#$, $m$ copies of $a$, and $!$ before returning to the boundary. This costs $O(m)$ states.
+
+The test branch counts bit positions until selecting a $1$ at position $j$. States $(j,k)$ count the remaining $m-j$ bits while retaining $j$; after $\#$, states $(j,i)$ count copies of $a$. An outgoing $?$ to a terminal accepting sink exists exactly for $1\le i\le m$ with $A_{ij}=1$. These states and edges number $O(m^2)$. Starting alternatives use same-letter edges, so no extra epsilon structure is needed. Convert each edge $q\xrightarrow c r$ to $N_q\to cN_r$ and each final state to $N_q\to\eps$.
+
+After $p$, the current block contains no $!$. The universal branch cannot read $?$; the test branch can read it exactly when some selected $j$ has both $v_j=1$ and $A_{ij}=1$. It then accepts immediately, and its sink has no outgoing edges. No suffix repairs a missing witness. This proves~\eqref{eq:probe}; redundant states give the uniform padded size.
+\end{proof}
+
+\begin{proof}[Lower bounds in Theorem~\ref{thm:omv}]
+Use the standard polynomial-preprocessing consequence of OMv~\cite{Henzinger_2015}; its precise form is Theorem~2.2 of the full version, arXiv:1511.06773. Preprocess the grammar. On each revealed vector $v$, commit $v\#$, then one $a$ per row. After the $i$th $a$, output the mask's $?$ bit as $(Av)_i$. Commit $!$ after the last row. Only then request the next vector. The stream never commits $?$ and every actual prefix can extend to a universal block, including for an all-zero matrix.
+
+For $m$ vectors, the trace has $n=m(2m+2)=\Theta(m^2)$ bytes and $O(m^2)$ calls. An amortized $O(n^{1/2-\epsilon})$ step bound gives online time $O(m^{3-2\epsilon}+m^2)$, contradicting OMv with polynomial matrix preprocessing. Grammar construction and preprocessing fit that budget. Constant $M$ absorbs any polynomial vocabulary factor.
+
+For independent streams, initialize a fresh stream for each vector after the same static preprocessing. Each horizon is $n=2m+2=\Theta(m)$; $m$ streams still use $O(m^2)$ calls. An $O(n^{1-\epsilon})$ step bound gives $O(m^{3-\epsilon}+m^2)$ online time, the same contradiction. Initialization is charged explicitly. The different exponents follow from the two different byte horizons.
+\end{proof}
+
+\begin{proof}[Family upper bound in Theorem~\ref{thm:omv}]
+Store packed matrix rows, the current vector, and counters for the block shape. Before $\#$, the universal branch determines the legal bits. After $i$ copies of $a$, it determines the ordinary next byte: $a$ for $i<m$, or $!$ for $i=m$. For $1\le i\le m$, determine the $?$ bit by ANDing packed row $i$ with the vector and testing for a nonzero word in $O(1+m/w)$ time; before the first $a$, that bit is zero. A valid committed $?$ reaches the terminal accepting state; invalid commits enter a dead state. A valid $!$ clears the vector in $O(1+m/w)$ time and returns to the boundary. The counters also determine EOS. This covers every input, with $O(m^2)$ preprocessing and space. On the lower-bound trace $m=\Theta(\sqrt n)$.
+\end{proof}
+
+\section{Sanity Checks and Reproducibility}\label{sec:artifact}
+The accompanying artifact supplies a Rust Dyck-mask specialization, Python binding, independent stack oracle, and an independently executed matrix NFA. Its deterministic checks regenerate Table~\ref{tab:validation}. For the two-bracket Dyck language, the vocabulary contains every string of lengths one through four over four bracket bytes. Exact liveness is checked by reading the entire candidate and rejecting any mismatched close or underflow; every surviving stack has a closing completion. The implementation precomputes 31 top-suffix classes with 340 mask bits each and stores six 64-bit words per row: 186 words, or 1,488 bytes of valid-row mask payload. The Rust allocation includes an unused zero row, giving 192 words and 1,536 bytes of row payload, excluding allocator and other data.
+
+Depth checks use exactly $\{0,1,4,16,64,256,1024,4096\}$. Matrix checks enumerate every matrix of orders one through three, every vector, and every row. Each liveness check examines a prefix of \emph{two consecutive identical complete universal blocks}, including the empty prefix. Counts include repeated strings across instances; they are executed checks, not distinct-language cardinalities.
+
+\input{artifact/validation_table.tex}
+
+\paragraph{Artifact access.}
+The source, commands, and raw results are provided as an \textattachfile[color=0 0.25 0.55,mimetype=application/zip,description={TPC reproducibility artifact}]{artifact/tpc-artifact.zip}{embedded artifact package}. Its README builds the shared library with \texttt{rustc} and runs \texttt{python3 verify.py}. The package also includes generic NFA block-tabulation checks and its explicit logical-payload accounting. These are finite correctness and operation-count checks. Their scope is the implemented Dyck specialization, small NFAs, and reduction instances; production lexer compilation, general LR execution, and model-serving latency are separate empirical questions.
+
+\section{Scope and Semantic Boundary}\label{sec:scope}
+The regular family gives matching polynomial exponents under a polynomial preprocessing budget. The pushdown index gives explicit compiler/query/update tradeoffs for a supplied deterministic presentation. Its exponential full-index endpoint and the lower bound's succinct grammar input are different representations and budgets. These statements support a representation-sensitive account of decoding rather than a determinism-only dichotomy. General LR(1) worst-case commit acceleration and optimal intermediate index tradeoffs remain research questions.
+
+Typed completion introduces an additional boundary. Goal-directed simply typed normal-term completion is PSPACE-complete by classical inhabitation complexity; we state and prove the precise corollary in Appendix~\ref{sec:types}. Universal divergent inhabitants fill independently typed holes when divergence is allowed, but completed ill-typed subterms remain obstructions. Semantic constraints therefore need their own completion model.
+
+\paragraph{AI methodology.}
+OpenAI Codex materially assisted the formalization, candidate proofs and tradeoff construction (Sections~\ref{sec:model}--\ref{sec:lower}), implementation and finite checks (Section~\ref{sec:artifact}), literature work, and drafting throughout. The disclosed verification consists of executable finite comparisons and the written arguments; it is not machine-checked proof or independent certification of novelty. Human authors retain responsibility for the submitted content.
+
+\appendix
+\section{Typed Completion as an Auxiliary Corollary}\label{sec:types}
+Types are atoms and arrows. The context $\Delta$ and target $A$ are supplied externally. At goal $B\to C$, the long normal syntax is $\mathtt{l(}e\mathtt{)}$, introducing a variable of type $B$ and solving $C$. At atomic goal $p$, choose an in-scope variable $x:B_1\to\cdots\to B_k\to p$ and write $\mathtt{h}\langle j\rangle\mathtt{(}e_1,\ldots,e_k\mathtt{)}$, where $j$ is its de Bruijn index in terminated binary without leading zeros. Each $e_i$ has goal $B_i$, and parentheses remain for $k=0$. This is the goal-directed serialization used below.
+
+\begin{corollary}[Normal typed-prefix completion]\label{thm:types}
+Given $\Delta,A$ and a text prefix in this serialization, extendibility is PSPACE-complete in their combined size. Empty-prefix completion in unrestricted STLC source syntax is PSPACE-hard.
+\end{corollary}
+\begin{proof}
+Let $N$ be the total input size. Scan the prefix with frames storing expected goal, scope, delimiters, and the remaining argument positions of the selected head. An arrow goal determines a lambda's domain; a completed head determines its result atom and argument types. Reject an unknown index, wrong result atom, or wrong delimiter. A partial binary index has at most $N$ in-scope completions, which can be enumerated sequentially.
+
+There are at most $N$ explicitly opened frames. Their types are pointers to subformulas of the supplied types, each of size at most $N$; at most $O(N^2)$ remaining argument obligations can be enumerated. Each context contains the original assumptions and at most $N$ explicitly introduced variables. Even materializing all contexts and goals takes polynomial space. The unobserved portion of each argument is an independent inhabitation obligation: ordinary STLC permits weakening and contraction, so filling one argument consumes no resource needed by another. A completion supplies inhabitants for all obligations; conversely inhabitants, restored delimiters, and a compatible head choice give a completion.
+
+Invoke the polynomial-space simple-type inhabitation procedure~\cite{Statman_1979,Švejdar2003} separately for each obligation, reusing its workspace, and test the finitely many partial-head alternatives sequentially. Each procedure receives polynomial-size input; the outer enumeration and contexts occupy polynomial space. This proves membership. For hardness, a closed type $A$ maps to empty context and empty prefix at target $A$. It is completable exactly when $A$ is inhabited, since every inhabited simple type has a long normal inhabitant. The same empty-prefix reduction gives unrestricted-source hardness.
+\end{proof}
+
+If every type has a permitted term $\Omega_A$, substitution fills every hole in a well-typed skeleton with independent typed holes. General recursion can supply $\mathsf{fix}\ x{:}A.x$ when divergence is allowed. In contrast, if $c:o$, a prefix fixing a fully delimited application $c\ c$ cannot be completed to a well-typed program: application requires an arrow type for the first $c$. This obstruction persists in the presence of other holes or divergent inhabitants.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\end{document}

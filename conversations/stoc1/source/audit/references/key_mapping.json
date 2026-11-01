@@ -1,0 +1,22 @@
+{
+  "xgrammar": "MLSYS2025_5c20ca4b",
+  "outlines": "willard2023efficientguidedgenerationlarge",
+  "domino": "pmlr-v235-beurer-kellner24a",
+  "syncode": "ugare2025syncode",
+  "psc": "li2026efficientgrammarconstraineddecodingparser",
+  "gram2token": "pmlr-v306-hua26b",
+  "flexible": "pmlr-v267-park25l",
+  "onlinecfg": "dudek_et_al:LIPIcs.CPM.2024.13",
+  "gallaire": "Gallaire_1969",
+  "sliding": "ganardi_et_al:LIPIcs.FSTTCS.2022.38",
+  "bem": "10.1007/3-540-63141-0_10",
+  "omv": "Henzinger_2015",
+  "lee": "Lee:02a",
+  "abboud": "Abboud_2015",
+  "statman": "Statman_1979",
+  "svejdar": "\u0160vejdar2003",
+  "types": "M_ndler_2025",
+  "chopchop": "Nagy_2026",
+  "nfa_acceptance": "theoretics:13000",
+  "regex_indexing": "Gibney_2021"
+}

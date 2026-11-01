@@ -1,0 +1,399 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        7
+      ]
+    ],
+    "date-time": "2026-10-07T18:06:30Z",
+    "timestamp": 1791396390373,
+    "version": "4.3.3"
+  },
+  "publisher-location": "New York, NY, USA",
+  "reference-count": 32,
+  "publisher": "ACM",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2015,
+            6,
+            3
+          ]
+        ],
+        "date-time": "2015-06-03T00:00:00Z",
+        "timestamp": 1433289600000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "dl.acm.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2015,
+        6,
+        3
+      ]
+    ]
+  },
+  "DOI": "10.1145/2737924.2738000",
+  "type": "proceedings-article",
+  "created": {
+    "date-parts": [
+      [
+        2015,
+        6,
+        3
+      ]
+    ],
+    "date-time": "2015-06-03T11:35:56Z",
+    "timestamp": 1433331356000
+  },
+  "page": "303-313",
+  "update-policy": "https://doi.org/10.1145/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 26,
+  "title": [
+    "Making numerical program analysis fast"
+  ],
+  "prefix": "10.1145",
+  "author": [
+    {
+      "given": "Gagandeep",
+      "family": "Singh",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "ETH Zurich, Switzerland"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Markus",
+      "family": "P\u00fcschel",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "ETH Zurich, Switzerland"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Martin",
+      "family": "Vechev",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "ETH Zurich, Switzerland"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "320",
+  "published-online": {
+    "date-parts": [
+      [
+        2015,
+        6,
+        3
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "e_1_3_2_1_1_1",
+      "unstructured": "Optoctagon. https://github.com/eth-srl/OptOctagon.  Optoctagon. https://github.com/eth-srl/OptOctagon."
+    },
+    {
+      "key": "e_1_3_2_1_2_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.scico.2007.08.001"
+    },
+    {
+      "key": "e_1_3_2_1_3_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10703-009-0073-1"
+    },
+    {
+      "key": "e_1_3_2_1_4_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/378795.378846"
+    },
+    {
+      "key": "e_1_3_2_1_5_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/2391451.2391473"
+    },
+    {
+      "key": "e_1_3_2_1_6_1",
+      "series-title": "Lecture Notes in Computer Science",
+      "first-page": "190",
+      "volume-title": "Computer Aided Verification (CAV)",
+      "author": "Beyer D.",
+      "unstructured": "D. Beyer and M. Keremoglu . CPAchecker: A tool for configurable software verification . In Computer Aided Verification (CAV) , volume 6806 of Lecture Notes in Computer Science , pages 184\u2013 190 . Springer, 2011. D. Beyer and M. Keremoglu. CPAchecker: A tool for configurable software verification. In Computer Aided Verification (CAV), volume 6806 of Lecture Notes in Computer Science, pages 184\u2013190. Springer, 2011."
+    },
+    {
+      "key": "e_1_3_2_1_7_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/781131.781153"
+    },
+    {
+      "key": "e_1_3_2_1_8_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2660193.2660219"
+    },
+    {
+      "key": "e_1_3_2_1_9_1",
+      "series-title": "Lecture Notes in Computer Science",
+      "first-page": "313",
+      "volume-title": "Programming Languages and Systems",
+      "author": "Chawdhary A.",
+      "unstructured": "A. Chawdhary , E. Robbins , and A. King . Simple and efficient algorithms for octagons . In Programming Languages and Systems , volume 8858 of Lecture Notes in Computer Science , pages 296\u2013 313 . Springer, 2014. A. Chawdhary, E. Robbins, and A. King. Simple and efficient algorithms for octagons. In Programming Languages and Systems, volume 8858 of Lecture Notes in Computer Science, pages 296\u2013313. Springer, 2014."
+    },
+    {
+      "key": "e_1_3_2_1_10_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-540-27864-1_23"
+    },
+    {
+      "key": "e_1_3_2_1_11_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/512950.512973"
+    },
+    {
+      "key": "e_1_3_2_1_12_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/512760.512770"
+    },
+    {
+      "key": "e_1_3_2_1_13_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/1949303.1949305"
+    },
+    {
+      "key": "e_1_3_2_1_14_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/3-540-44522-6"
+    },
+    {
+      "key": "e_1_3_2_1_15_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/367766.368168"
+    },
+    {
+      "key": "e_1_3_2_1_16_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1377603.1377607"
+    },
+    {
+      "key": "e_1_3_2_1_17_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10703-006-0013-2"
+    },
+    {
+      "key": "e_1_3_2_1_18_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1152154.1152189"
+    },
+    {
+      "key": "e_1_3_2_1_19_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-02658-4_52"
+    },
+    {
+      "key": "e_1_3_2_1_20_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-540-93900-9_20"
+    },
+    {
+      "key": "e_1_3_2_1_21_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.5555/647169.718161"
+    },
+    {
+      "key": "e_1_3_2_1_22_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1363686.1363736"
+    },
+    {
+      "key": "e_1_3_2_1_23_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10990-006-8609-1"
+    },
+    {
+      "key": "e_1_3_2_1_24_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-38856-9_14"
+    },
+    {
+      "key": "e_1_3_2_1_25_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-38856-9_16"
+    },
+    {
+      "key": "e_1_3_2_1_26_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/514188.514190"
+    },
+    {
+      "key": "e_1_3_2_1_27_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10990-010-9062-8"
+    },
+    {
+      "key": "e_1_3_2_1_28_1",
+      "series-title": "Lecture Notes in Computer Science",
+      "first-page": "395",
+      "volume-title": "Verification, Model Checking, and Abstract Interpretation (VMCAI)",
+      "author": "Toubhans A.",
+      "unstructured": "A. Toubhans , B. E. Chang , and X. Rival . Reduced product combination of abstract domains for shapes . In Verification, Model Checking, and Abstract Interpretation (VMCAI) , volume 7737 of Lecture Notes in Computer Science , pages 375\u2013 395 . Springer, 2013. A. Toubhans, B. E. Chang, and X. Rival. Reduced product combination of abstract domains for shapes. In Verification, Model Checking, and Abstract Interpretation (VMCAI), volume 7737 of Lecture Notes in Computer Science, pages 375\u2013395. Springer, 2013."
+    },
+    {
+      "key": "e_1_3_2_1_29_1",
+      "series-title": "Lecture Notes in Computer Science",
+      "first-page": "431",
+      "volume-title": "Programming Languages and Systems - 23rd European Symposium on Programming (ESOP)",
+      "author": "Urban C.",
+      "unstructured": "C. Urban and A. Min\u00e9 . An abstract domain to infer ordinal-valued ranking functions . In Programming Languages and Systems - 23rd European Symposium on Programming (ESOP) , volume 8410 of Lecture Notes in Computer Science , pages 412\u2013 431 . Springer, 2014. C. Urban and A. Min\u00e9. An abstract domain to infer ordinal-valued ranking functions. In Programming Languages and Systems - 23rd European Symposium on Programming (ESOP), volume 8410 of Lecture Notes in Computer Science, pages 412\u2013431. Springer, 2014."
+    },
+    {
+      "key": "e_1_3_2_1_30_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-319-10936-7_19"
+    },
+    {
+      "key": "e_1_3_2_1_31_1",
+      "first-page": "135",
+      "volume-title": "Proc. Conference of the Centre for Advanced Studies on Collaborative Research",
+      "author": "Vall\u00e9e-Rai R.",
+      "year": "1999",
+      "unstructured": "R. Vall\u00e9e-Rai , P. Co , E. Gagnon , L. Hendren , P. Lam , and V. Sundaresan . Soot - A Java bytecode optimization framework . In Proc. Conference of the Centre for Advanced Studies on Collaborative Research , pages 125\u2013 135 , 1999 . R. Vall\u00e9e-Rai, P. Co, E. Gagnon, L. Hendren, P. Lam, and V. Sundaresan. Soot - A Java bytecode optimization framework. In Proc. Conference of the Centre for Advanced Studies on Collaborative Research, pages 125\u2013135, 1999."
+    },
+    {
+      "key": "e_1_3_2_1_32_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/996841.996869"
+    }
+  ],
+  "event": {
+    "name": "PLDI '15: ACM SIGPLAN Conference on Programming Language Design and Implementation",
+    "location": "Portland OR USA",
+    "acronym": "PLDI '15",
+    "sponsor": [
+      "SIGPLAN ACM Special Interest Group on Programming Languages"
+    ]
+  },
+  "container-title": [
+    "Proceedings of the 36th ACM SIGPLAN Conference on Programming Language Design and Implementation"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "https://dl.acm.org/doi/10.1145/2737924.2738000",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://dl.acm.org/doi/pdf/10.1145/2737924.2738000",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        6,
+        18
+      ]
+    ],
+    "date-time": "2025-06-18T02:16:22Z",
+    "timestamp": 1750212982000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://dl.acm.org/doi/10.1145/2737924.2738000"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2015,
+        6,
+        3
+      ]
+    ]
+  },
+  "references-count": 32,
+  "alternative-id": [
+    "10.1145/2737924.2738000",
+    "10.1145/2737924"
+  ],
+  "URL": "https://doi.org/10.1145/2737924.2738000",
+  "relation": {
+    "is-identical-to": [
+      {
+        "id-type": "doi",
+        "id": "10.1145/2813885.2738000",
+        "asserted-by": "object"
+      }
+    ]
+  },
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2015,
+        6,
+        3
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2015-06-03",
+      "order": 2,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}

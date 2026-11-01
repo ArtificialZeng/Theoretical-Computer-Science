@@ -1,0 +1,19 @@
+{
+  "old_key": "nfa_acceptance",
+  "new_key": "theoretics:13000",
+  "official_url": "https://theoretics.episciences.org/14397/bibtex",
+  "official_record_url": "https://theoretics.episciences.org/14397",
+  "bibtex_path": "audit/references/nfa_acceptance.official.bib",
+  "metadata_status": "verified_official_export",
+  "differences": [
+    "New citation: exact journal-publisher export preserved.",
+    "Title, four authors (Karl Bringmann; Allan Grønlund; Marvin Künnemann; Kasper Green Larsen), year 2024, TheoretiCS volume3 and DOI10.46298/theoretics.24.22 match supplied metadata.",
+    "Publisher PDF first page states Article22, 1--35. Export fields retained exactly as supplied; no invented additions."
+  ],
+  "uncertainties": [],
+  "source_accessed": "2026-10-31",
+  "tex_locations": [
+    "planned related-work comparison"
+  ],
+  "claim_support_status": "not_assessed_pending_citation_check_pass_2"
+}

@@ -1,0 +1,40 @@
+{
+  "old_key": "psc",
+  "new_key": "li2026efficientgrammarconstraineddecodingparser",
+  "official_url": "https://arxiv.org/bibtex/2608.03065",
+  "record_url": "https://arxiv.org/abs/2608.03065",
+  "bibtex_path": "audit/references/psc.official.bib",
+  "metadata_status": "verified_primary_export",
+  "title": "Efficient Grammar-Constrained Decoding via Parser Stack Classification",
+  "authors": [
+    "Yongmin Li",
+    "Yihong Dong",
+    "Jia Li",
+    "Ge Li"
+  ],
+  "year": 2026,
+  "venue": "arXiv; primary abstract comment states accepted by ISSTA 2026",
+  "differences": [
+    "Official key differs.",
+    "Official arXiv export adds primaryClass=cs.SE and URL; omits editorial Version 1 note and arXiv DOI.",
+    "Publication status can be identified more precisely: arXiv comments and official ISSTA track list indicate accepted ISSTA 2026, rather than merely an unattached preprint. Official ACM venue export not yet retrieved."
+  ],
+  "uncertainties": [
+    "No ACM proceedings DOI/BibTeX retrieved; use exact arXiv export and cite that version rather than invent publication fields."
+  ],
+  "cite_locations": [
+    54,
+    192
+  ],
+  "claim_support_status": "not_assessed_pending_pass_1_confirmation",
+  "searches_completed": [
+    "Li 2026 Efficient Grammar-Constrained Decoding Parser Stack Classification",
+    "full title arxiv/semanticscholar",
+    "Li 2026 arXiv parser stack classification",
+    "doi:10.48550/arXiv.2608.03065",
+    "arxiv:2608.03065"
+  ],
+  "additional_primary_sources": [
+    "https://conf.researchr.org/track/issta-2026/issta-2026-research-papers"
+  ]
+}

@@ -1,0 +1,1102 @@
+{
+  "release": "musub-r2",
+  "date": "2026-10-31",
+  "node": "v25.5.0",
+  "cpu": "Apple M3 Pro",
+  "arch": "arm64",
+  "repetitions": 7,
+  "warmup": 2,
+  "method": "sparse smaller-half splitter",
+  "rows": [
+    {
+      "N": 16,
+      "d": 9,
+      "nv": 294,
+      "ne": 870,
+      "n": 1164,
+      "r": 16,
+      "quotient": [
+        16,
+        113
+      ],
+      "baselinePairs": 1600,
+      "quotientPairs": 128,
+      "quotientProductBound": 3616,
+      "baselineMs": 0.775042,
+      "equalityMs": 0.077125,
+      "minimizationMs": 0.474333,
+      "searchMs": 0.065542,
+      "totalMs": 0.619833,
+      "samples": [
+        {
+          "baselineMs": 0.918833,
+          "baselinePairs": 1600,
+          "ok": true,
+          "pairs": 128,
+          "equalityMs": 0.08325,
+          "minimizationMs": 0.781375,
+          "searchMs": 0.097792,
+          "totalMs": 0.964375,
+          "quotient": [
+            16,
+            113
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 345,
+              "splitterVertexVisits": 117,
+              "movedVertices": 114,
+              "splits": 13
+            },
+            {
+              "incomingEdgeVisits": 525,
+              "splitterVertexVisits": 177,
+              "movedVertices": 206,
+              "splits": 110
+            }
+          ]
+        },
+        {
+          "baselineMs": 1.267625,
+          "baselinePairs": 1600,
+          "ok": true,
+          "pairs": 128,
+          "equalityMs": 0.103417,
+          "minimizationMs": 0.738792,
+          "searchMs": 0.068959,
+          "totalMs": 0.912666,
+          "quotient": [
+            16,
+            113
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 345,
+              "splitterVertexVisits": 117,
+              "movedVertices": 114,
+              "splits": 13
+            },
+            {
+              "incomingEdgeVisits": 525,
+              "splitterVertexVisits": 177,
+              "movedVertices": 206,
+              "splits": 110
+            }
+          ]
+        },
+        {
+          "baselineMs": 0.768625,
+          "baselinePairs": 1600,
+          "ok": true,
+          "pairs": 128,
+          "equalityMs": 0.06925,
+          "minimizationMs": 0.421917,
+          "searchMs": 0.0625,
+          "totalMs": 0.554959,
+          "quotient": [
+            16,
+            113
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 345,
+              "splitterVertexVisits": 117,
+              "movedVertices": 114,
+              "splits": 13
+            },
+            {
+              "incomingEdgeVisits": 525,
+              "splitterVertexVisits": 177,
+              "movedVertices": 206,
+              "splits": 110
+            }
+          ]
+        },
+        {
+          "baselineMs": 0.775042,
+          "baselinePairs": 1600,
+          "ok": true,
+          "pairs": 128,
+          "equalityMs": 0.078458,
+          "minimizationMs": 0.474333,
+          "searchMs": 0.065542,
+          "totalMs": 0.619833,
+          "quotient": [
+            16,
+            113
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 345,
+              "splitterVertexVisits": 117,
+              "movedVertices": 114,
+              "splits": 13
+            },
+            {
+              "incomingEdgeVisits": 525,
+              "splitterVertexVisits": 177,
+              "movedVertices": 206,
+              "splits": 110
+            }
+          ]
+        },
+        {
+          "baselineMs": 0.751166,
+          "baselinePairs": 1600,
+          "ok": true,
+          "pairs": 128,
+          "equalityMs": 0.07425,
+          "minimizationMs": 0.416292,
+          "searchMs": 0.06075,
+          "totalMs": 0.552083,
+          "quotient": [
+            16,
+            113
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 345,
+              "splitterVertexVisits": 117,
+              "movedVertices": 114,
+              "splits": 13
+            },
+            {
+              "incomingEdgeVisits": 525,
+              "splitterVertexVisits": 177,
+              "movedVertices": 206,
+              "splits": 110
+            }
+          ]
+        },
+        {
+          "baselineMs": 0.756083,
+          "baselinePairs": 1600,
+          "ok": true,
+          "pairs": 128,
+          "equalityMs": 0.077125,
+          "minimizationMs": 0.584917,
+          "searchMs": 0.067042,
+          "totalMs": 0.730791,
+          "quotient": [
+            16,
+            113
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 345,
+              "splitterVertexVisits": 117,
+              "movedVertices": 114,
+              "splits": 13
+            },
+            {
+              "incomingEdgeVisits": 525,
+              "splitterVertexVisits": 177,
+              "movedVertices": 206,
+              "splits": 110
+            }
+          ]
+        },
+        {
+          "baselineMs": 0.912583,
+          "baselinePairs": 1600,
+          "ok": true,
+          "pairs": 128,
+          "equalityMs": 0.073625,
+          "minimizationMs": 0.443583,
+          "searchMs": 0.060292,
+          "totalMs": 0.578583,
+          "quotient": [
+            16,
+            113
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 345,
+              "splitterVertexVisits": 117,
+              "movedVertices": 114,
+              "splits": 13
+            },
+            {
+              "incomingEdgeVisits": 525,
+              "splitterVertexVisits": 177,
+              "movedVertices": 206,
+              "splits": 110
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "N": 32,
+      "d": 11,
+      "nv": 679,
+      "ne": 2025,
+      "n": 2704,
+      "r": 19,
+      "quotient": [
+        19,
+        257
+      ],
+      "baselinePairs": 7312,
+      "quotientPairs": 288,
+      "quotientProductBound": 9766,
+      "baselineMs": 2.613208,
+      "equalityMs": 0.175292,
+      "minimizationMs": 1.071292,
+      "searchMs": 0.095541,
+      "totalMs": 1.4095,
+      "samples": [
+        {
+          "baselineMs": 2.597333,
+          "baselinePairs": 7312,
+          "ok": true,
+          "pairs": 288,
+          "equalityMs": 0.163708,
+          "minimizationMs": 1.071292,
+          "searchMs": 0.093667,
+          "totalMs": 1.32925,
+          "quotient": [
+            19,
+            257
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 780,
+              "splitterVertexVisits": 262,
+              "movedVertices": 259,
+              "splits": 16
+            },
+            {
+              "incomingEdgeVisits": 1245,
+              "splitterVertexVisits": 417,
+              "movedVertices": 494,
+              "splits": 254
+            }
+          ]
+        },
+        {
+          "baselineMs": 2.799291,
+          "baselinePairs": 7312,
+          "ok": true,
+          "pairs": 288,
+          "equalityMs": 0.175292,
+          "minimizationMs": 1.158666,
+          "searchMs": 0.089708,
+          "totalMs": 1.424709,
+          "quotient": [
+            19,
+            257
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 780,
+              "splitterVertexVisits": 262,
+              "movedVertices": 259,
+              "splits": 16
+            },
+            {
+              "incomingEdgeVisits": 1245,
+              "splitterVertexVisits": 417,
+              "movedVertices": 494,
+              "splits": 254
+            }
+          ]
+        },
+        {
+          "baselineMs": 2.613208,
+          "baselinePairs": 7312,
+          "ok": true,
+          "pairs": 288,
+          "equalityMs": 0.322416,
+          "minimizationMs": 1.01075,
+          "searchMs": 0.117875,
+          "totalMs": 1.451667,
+          "quotient": [
+            19,
+            257
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 780,
+              "splitterVertexVisits": 262,
+              "movedVertices": 259,
+              "splits": 16
+            },
+            {
+              "incomingEdgeVisits": 1245,
+              "splitterVertexVisits": 417,
+              "movedVertices": 494,
+              "splits": 254
+            }
+          ]
+        },
+        {
+          "baselineMs": 2.9965,
+          "baselinePairs": 7312,
+          "ok": true,
+          "pairs": 288,
+          "equalityMs": 0.217292,
+          "minimizationMs": 1.337417,
+          "searchMs": 0.09575,
+          "totalMs": 1.651333,
+          "quotient": [
+            19,
+            257
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 780,
+              "splitterVertexVisits": 262,
+              "movedVertices": 259,
+              "splits": 16
+            },
+            {
+              "incomingEdgeVisits": 1245,
+              "splitterVertexVisits": 417,
+              "movedVertices": 494,
+              "splits": 254
+            }
+          ]
+        },
+        {
+          "baselineMs": 2.596833,
+          "baselinePairs": 7312,
+          "ok": true,
+          "pairs": 288,
+          "equalityMs": 0.164375,
+          "minimizationMs": 1.063417,
+          "searchMs": 0.097666,
+          "totalMs": 1.326458,
+          "quotient": [
+            19,
+            257
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 780,
+              "splitterVertexVisits": 262,
+              "movedVertices": 259,
+              "splits": 16
+            },
+            {
+              "incomingEdgeVisits": 1245,
+              "splitterVertexVisits": 417,
+              "movedVertices": 494,
+              "splits": 254
+            }
+          ]
+        },
+        {
+          "baselineMs": 2.776166,
+          "baselinePairs": 7312,
+          "ok": true,
+          "pairs": 288,
+          "equalityMs": 0.183041,
+          "minimizationMs": 1.129,
+          "searchMs": 0.095541,
+          "totalMs": 1.4095,
+          "quotient": [
+            19,
+            257
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 780,
+              "splitterVertexVisits": 262,
+              "movedVertices": 259,
+              "splits": 16
+            },
+            {
+              "incomingEdgeVisits": 1245,
+              "splitterVertexVisits": 417,
+              "movedVertices": 494,
+              "splits": 254
+            }
+          ]
+        },
+        {
+          "baselineMs": 2.565916,
+          "baselinePairs": 7312,
+          "ok": true,
+          "pairs": 288,
+          "equalityMs": 0.171958,
+          "minimizationMs": 0.958458,
+          "searchMs": 0.087417,
+          "totalMs": 1.218375,
+          "quotient": [
+            19,
+            257
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 780,
+              "splitterVertexVisits": 262,
+              "movedVertices": 259,
+              "splits": 16
+            },
+            {
+              "incomingEdgeVisits": 1245,
+              "splitterVertexVisits": 417,
+              "movedVertices": 494,
+              "splits": 254
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "N": 64,
+      "d": 13,
+      "nv": 1544,
+      "ne": 4620,
+      "n": 6164,
+      "r": 22,
+      "quotient": [
+        22,
+        577
+      ],
+      "baselinePairs": 33088,
+      "quotientPairs": 640,
+      "quotientProductBound": 25388,
+      "baselineMs": 14.077417,
+      "equalityMs": 0.581917,
+      "minimizationMs": 2.957208,
+      "searchMs": 0.214958,
+      "totalMs": 3.776375,
+      "samples": [
+        {
+          "baselineMs": 15.440083,
+          "baselinePairs": 33088,
+          "ok": true,
+          "pairs": 640,
+          "equalityMs": 0.715042,
+          "minimizationMs": 5.232958,
+          "searchMs": 0.252625,
+          "totalMs": 6.202917,
+          "quotient": [
+            22,
+            577
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 1743,
+              "splitterVertexVisits": 583,
+              "movedVertices": 580,
+              "splits": 19
+            },
+            {
+              "incomingEdgeVisits": 2877,
+              "splitterVertexVisits": 961,
+              "movedVertices": 1150,
+              "splits": 574
+            }
+          ]
+        },
+        {
+          "baselineMs": 14.077417,
+          "baselinePairs": 33088,
+          "ok": true,
+          "pairs": 640,
+          "equalityMs": 0.569084,
+          "minimizationMs": 3.147,
+          "searchMs": 0.2355,
+          "totalMs": 3.953375,
+          "quotient": [
+            22,
+            577
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 1743,
+              "splitterVertexVisits": 583,
+              "movedVertices": 580,
+              "splits": 19
+            },
+            {
+              "incomingEdgeVisits": 2877,
+              "splitterVertexVisits": 961,
+              "movedVertices": 1150,
+              "splits": 574
+            }
+          ]
+        },
+        {
+          "baselineMs": 13.9535,
+          "baselinePairs": 33088,
+          "ok": true,
+          "pairs": 640,
+          "equalityMs": 0.581917,
+          "minimizationMs": 2.994667,
+          "searchMs": 0.220541,
+          "totalMs": 3.798542,
+          "quotient": [
+            22,
+            577
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 1743,
+              "splitterVertexVisits": 583,
+              "movedVertices": 580,
+              "splits": 19
+            },
+            {
+              "incomingEdgeVisits": 2877,
+              "splitterVertexVisits": 961,
+              "movedVertices": 1150,
+              "splits": 574
+            }
+          ]
+        },
+        {
+          "baselineMs": 13.911375,
+          "baselinePairs": 33088,
+          "ok": true,
+          "pairs": 640,
+          "equalityMs": 0.606333,
+          "minimizationMs": 2.957208,
+          "searchMs": 0.211,
+          "totalMs": 3.776375,
+          "quotient": [
+            22,
+            577
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 1743,
+              "splitterVertexVisits": 583,
+              "movedVertices": 580,
+              "splits": 19
+            },
+            {
+              "incomingEdgeVisits": 2877,
+              "splitterVertexVisits": 961,
+              "movedVertices": 1150,
+              "splits": 574
+            }
+          ]
+        },
+        {
+          "baselineMs": 14.689541,
+          "baselinePairs": 33088,
+          "ok": true,
+          "pairs": 640,
+          "equalityMs": 0.596958,
+          "minimizationMs": 2.942583,
+          "searchMs": 0.2145,
+          "totalMs": 3.75575,
+          "quotient": [
+            22,
+            577
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 1743,
+              "splitterVertexVisits": 583,
+              "movedVertices": 580,
+              "splits": 19
+            },
+            {
+              "incomingEdgeVisits": 2877,
+              "splitterVertexVisits": 961,
+              "movedVertices": 1150,
+              "splits": 574
+            }
+          ]
+        },
+        {
+          "baselineMs": 13.819167,
+          "baselinePairs": 33088,
+          "ok": true,
+          "pairs": 640,
+          "equalityMs": 0.419792,
+          "minimizationMs": 2.235417,
+          "searchMs": 0.214958,
+          "totalMs": 2.871416,
+          "quotient": [
+            22,
+            577
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 1743,
+              "splitterVertexVisits": 583,
+              "movedVertices": 580,
+              "splits": 19
+            },
+            {
+              "incomingEdgeVisits": 2877,
+              "splitterVertexVisits": 961,
+              "movedVertices": 1150,
+              "splits": 574
+            }
+          ]
+        },
+        {
+          "baselineMs": 14.579875,
+          "baselinePairs": 33088,
+          "ok": true,
+          "pairs": 640,
+          "equalityMs": 0.395916,
+          "minimizationMs": 2.244875,
+          "searchMs": 0.211791,
+          "totalMs": 2.853625,
+          "quotient": [
+            22,
+            577
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 1743,
+              "splitterVertexVisits": 583,
+              "movedVertices": 580,
+              "splits": 19
+            },
+            {
+              "incomingEdgeVisits": 2877,
+              "splitterVertexVisits": 961,
+              "movedVertices": 1150,
+              "splits": 574
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "N": 128,
+      "d": 15,
+      "nv": 3465,
+      "ne": 10383,
+      "n": 13848,
+      "r": 25,
+      "quotient": [
+        25,
+        1281
+      ],
+      "baselinePairs": 148160,
+      "quotientPairs": 1408,
+      "quotientProductBound": 64050,
+      "baselineMs": 91.998584,
+      "equalityMs": 0.961333,
+      "minimizationMs": 5.340459,
+      "searchMs": 0.638833,
+      "totalMs": 6.817959,
+      "samples": [
+        {
+          "baselineMs": 93.977875,
+          "baselinePairs": 148160,
+          "ok": true,
+          "pairs": 1408,
+          "equalityMs": 0.894375,
+          "minimizationMs": 5.340459,
+          "searchMs": 0.577792,
+          "totalMs": 6.817959,
+          "quotient": [
+            25,
+            1281
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 3858,
+              "splitterVertexVisits": 1288,
+              "movedVertices": 1285,
+              "splits": 22
+            },
+            {
+              "incomingEdgeVisits": 6525,
+              "splitterVertexVisits": 2177,
+              "movedVertices": 2622,
+              "splits": 1278
+            }
+          ]
+        },
+        {
+          "baselineMs": 92.003417,
+          "baselinePairs": 148160,
+          "ok": true,
+          "pairs": 1408,
+          "equalityMs": 0.959708,
+          "minimizationMs": 8.787083,
+          "searchMs": 0.611709,
+          "totalMs": 10.364167,
+          "quotient": [
+            25,
+            1281
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 3858,
+              "splitterVertexVisits": 1288,
+              "movedVertices": 1285,
+              "splits": 22
+            },
+            {
+              "incomingEdgeVisits": 6525,
+              "splitterVertexVisits": 2177,
+              "movedVertices": 2622,
+              "splits": 1278
+            }
+          ]
+        },
+        {
+          "baselineMs": 91.768083,
+          "baselinePairs": 148160,
+          "ok": true,
+          "pairs": 1408,
+          "equalityMs": 1.600958,
+          "minimizationMs": 8.234292,
+          "searchMs": 0.758208,
+          "totalMs": 10.621125,
+          "quotient": [
+            25,
+            1281
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 3858,
+              "splitterVertexVisits": 1288,
+              "movedVertices": 1285,
+              "splits": 22
+            },
+            {
+              "incomingEdgeVisits": 6525,
+              "splitterVertexVisits": 2177,
+              "movedVertices": 2622,
+              "splits": 1278
+            }
+          ]
+        },
+        {
+          "baselineMs": 84.0995,
+          "baselinePairs": 148160,
+          "ok": true,
+          "pairs": 1408,
+          "equalityMs": 0.96925,
+          "minimizationMs": 5.110792,
+          "searchMs": 0.638833,
+          "totalMs": 6.724,
+          "quotient": [
+            25,
+            1281
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 3858,
+              "splitterVertexVisits": 1288,
+              "movedVertices": 1285,
+              "splits": 22
+            },
+            {
+              "incomingEdgeVisits": 6525,
+              "splitterVertexVisits": 2177,
+              "movedVertices": 2622,
+              "splits": 1278
+            }
+          ]
+        },
+        {
+          "baselineMs": 93.676,
+          "baselinePairs": 148160,
+          "ok": true,
+          "pairs": 1408,
+          "equalityMs": 0.961333,
+          "minimizationMs": 5.066208,
+          "searchMs": 0.678833,
+          "totalMs": 6.710667,
+          "quotient": [
+            25,
+            1281
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 3858,
+              "splitterVertexVisits": 1288,
+              "movedVertices": 1285,
+              "splits": 22
+            },
+            {
+              "incomingEdgeVisits": 6525,
+              "splitterVertexVisits": 2177,
+              "movedVertices": 2622,
+              "splits": 1278
+            }
+          ]
+        },
+        {
+          "baselineMs": 91.998584,
+          "baselinePairs": 148160,
+          "ok": true,
+          "pairs": 1408,
+          "equalityMs": 0.945333,
+          "minimizationMs": 5.44625,
+          "searchMs": 1.118625,
+          "totalMs": 7.515541,
+          "quotient": [
+            25,
+            1281
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 3858,
+              "splitterVertexVisits": 1288,
+              "movedVertices": 1285,
+              "splits": 22
+            },
+            {
+              "incomingEdgeVisits": 6525,
+              "splitterVertexVisits": 2177,
+              "movedVertices": 2622,
+              "splits": 1278
+            }
+          ]
+        },
+        {
+          "baselineMs": 90.242584,
+          "baselinePairs": 148160,
+          "ok": true,
+          "pairs": 1408,
+          "equalityMs": 0.975584,
+          "minimizationMs": 5.232375,
+          "searchMs": 0.557625,
+          "totalMs": 6.77,
+          "quotient": [
+            25,
+            1281
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 3858,
+              "splitterVertexVisits": 1288,
+              "movedVertices": 1285,
+              "splits": 22
+            },
+            {
+              "incomingEdgeVisits": 6525,
+              "splitterVertexVisits": 2177,
+              "movedVertices": 2622,
+              "splits": 1278
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "N": 256,
+      "d": 17,
+      "nv": 7690,
+      "ne": 23058,
+      "n": 30748,
+      "r": 28,
+      "quotient": [
+        28,
+        2817
+      ],
+      "baselinePairs": 656896,
+      "quotientPairs": 3072,
+      "quotientProductBound": 157752,
+      "baselineMs": 460.842,
+      "equalityMs": 2.166542,
+      "minimizationMs": 14.981708,
+      "searchMs": 1.584375,
+      "totalMs": 18.735667,
+      "samples": [
+        {
+          "baselineMs": 473.340125,
+          "baselinePairs": 656896,
+          "ok": true,
+          "pairs": 3072,
+          "equalityMs": 2.020208,
+          "minimizationMs": 15.610166,
+          "searchMs": 1.496458,
+          "totalMs": 19.132209,
+          "quotient": [
+            28,
+            2817
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 8469,
+              "splitterVertexVisits": 2825,
+              "movedVertices": 2822,
+              "splits": 25
+            },
+            {
+              "incomingEdgeVisits": 14589,
+              "splitterVertexVisits": 4865,
+              "movedVertices": 5886,
+              "splits": 2814
+            }
+          ]
+        },
+        {
+          "baselineMs": 444.600791,
+          "baselinePairs": 656896,
+          "ok": true,
+          "pairs": 3072,
+          "equalityMs": 2.538667,
+          "minimizationMs": 15.756,
+          "searchMs": 1.584375,
+          "totalMs": 19.884833,
+          "quotient": [
+            28,
+            2817
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 8469,
+              "splitterVertexVisits": 2825,
+              "movedVertices": 2822,
+              "splits": 25
+            },
+            {
+              "incomingEdgeVisits": 14589,
+              "splitterVertexVisits": 4865,
+              "movedVertices": 5886,
+              "splits": 2814
+            }
+          ]
+        },
+        {
+          "baselineMs": 460.842,
+          "baselinePairs": 656896,
+          "ok": true,
+          "pairs": 3072,
+          "equalityMs": 2.419084,
+          "minimizationMs": 14.553875,
+          "searchMs": 1.6105,
+          "totalMs": 18.588041,
+          "quotient": [
+            28,
+            2817
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 8469,
+              "splitterVertexVisits": 2825,
+              "movedVertices": 2822,
+              "splits": 25
+            },
+            {
+              "incomingEdgeVisits": 14589,
+              "splitterVertexVisits": 4865,
+              "movedVertices": 5886,
+              "splits": 2814
+            }
+          ]
+        },
+        {
+          "baselineMs": 465.879834,
+          "baselinePairs": 656896,
+          "ok": true,
+          "pairs": 3072,
+          "equalityMs": 2.056667,
+          "minimizationMs": 14.981708,
+          "searchMs": 1.485125,
+          "totalMs": 18.529875,
+          "quotient": [
+            28,
+            2817
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 8469,
+              "splitterVertexVisits": 2825,
+              "movedVertices": 2822,
+              "splits": 25
+            },
+            {
+              "incomingEdgeVisits": 14589,
+              "splitterVertexVisits": 4865,
+              "movedVertices": 5886,
+              "splits": 2814
+            }
+          ]
+        },
+        {
+          "baselineMs": 449.417667,
+          "baselinePairs": 656896,
+          "ok": true,
+          "pairs": 3072,
+          "equalityMs": 2.166542,
+          "minimizationMs": 14.847417,
+          "searchMs": 1.712292,
+          "totalMs": 18.735667,
+          "quotient": [
+            28,
+            2817
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 8469,
+              "splitterVertexVisits": 2825,
+              "movedVertices": 2822,
+              "splits": 25
+            },
+            {
+              "incomingEdgeVisits": 14589,
+              "splitterVertexVisits": 4865,
+              "movedVertices": 5886,
+              "splits": 2814
+            }
+          ]
+        },
+        {
+          "baselineMs": 446.603416,
+          "baselinePairs": 656896,
+          "ok": true,
+          "pairs": 3072,
+          "equalityMs": 1.904875,
+          "minimizationMs": 15.023459,
+          "searchMs": 1.534083,
+          "totalMs": 18.4695,
+          "quotient": [
+            28,
+            2817
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 8469,
+              "splitterVertexVisits": 2825,
+              "movedVertices": 2822,
+              "splits": 25
+            },
+            {
+              "incomingEdgeVisits": 14589,
+              "splitterVertexVisits": 4865,
+              "movedVertices": 5886,
+              "splits": 2814
+            }
+          ]
+        },
+        {
+          "baselineMs": 480.710666,
+          "baselinePairs": 656896,
+          "ok": true,
+          "pairs": 3072,
+          "equalityMs": 2.37275,
+          "minimizationMs": 13.317208,
+          "searchMs": 3.26575,
+          "totalMs": 18.9605,
+          "quotient": [
+            28,
+            2817
+          ],
+          "refinementStats": [
+            {
+              "incomingEdgeVisits": 8469,
+              "splitterVertexVisits": 2825,
+              "movedVertices": 2822,
+              "splits": 25
+            },
+            {
+              "incomingEdgeVisits": 14589,
+              "splitterVertexVisits": 4865,
+              "movedVertices": 5886,
+              "splits": 2814
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

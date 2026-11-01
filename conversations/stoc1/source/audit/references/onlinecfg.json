@@ -1,0 +1,33 @@
+{
+  "old_key": "onlinecfg",
+  "new_key": "dudek_et_al:LIPIcs.CPM.2024.13",
+  "official_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.13",
+  "official_export_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CPM.2024.13/metadata/bibtex/download",
+  "bibtex_path": "audit/references/onlinecfg.official.bib",
+  "metadata_status": "verified_against_official_Dagstuhl_export",
+  "current_title": "Online Context-Free Recognition in OMv Time",
+  "official_title": "Online Context-Free Recognition in OMv Time",
+  "title_consistent": true,
+  "authors_consistent": true,
+  "year_consistent": true,
+  "venue_consistent": true,
+  "differences": [
+    "Official key is dudek_et_al:LIPIcs.CPM.2024.13.",
+    "Official booktitle includes (CPM 2024).",
+    "Official export includes ISBN, ISSN, editor, URL, URN, and keywords annotation.",
+    "Title capitalization is protected by an extra brace pair."
+  ],
+  "uncertainties": [],
+  "cite_locations": [
+    {
+      "line": 178,
+      "context": "For general CFLs, online recognition means reporting whether each observed prefix is a complete sentence, whereas TPC asks whether it has some extension after a candidate. Dudek and Gawrychowski give an \\emph{upper} bound for the former in terms of OMv machinery~\\cite{onlinecfg}; their title is not an OMv lower bound. Gallaire's earlier lower bound uses online Turing machines~\\cite{gallaire}, not this RAM model. Sliding-window recognition can be OMv-hard even for a fixed deterministic real-time language~\\cite{sliding}, but window deletion changes the update model. We do not import that lower bound into append-only decoding. Our construction supplies its own explicit grammar, stream, and candidate predicate."
+    },
+    {
+      "line": 194,
+      "context": "\\begin{table}[t]\n\\caption{Quantitative comparison of specified operations. $h$ is stack depth, $s$ an explicit DFA size, and $B=\\lceil M/w\\rceil$. System entries do not purport to be universal lower bounds on those implementations.}\n\\label{tab:prior}\n\\small\n\\begin{tabularx}{\\columnwidth}{@{}l >{\\raggedright\\arraybackslash}X@{}}\n\\toprule\nWork / mechanism & Relevant cost or guarantee\\\\\n\\midrule\nExplicit token DFA index~\\cite{outlines} & $O(sD)$ table construction by direct simulation; $O(B+L)$ online with a supplied DFA.\\\\\nDOMINO~\\cite{domino}; lexer products~\\cite{flexible} & Subword alignment and precomputed token/lexeme relations; remaining stack work must be counted.\\\\\nXGrammar~\\cite{xgrammar} & Cached local masks plus dynamic context-dependent checks; persistence avoids copying whole stacks.\\\\\nllguidance~\\cite{llguidance}; SynCode~\\cite{syncode} & Trie/lexer/parser optimizations and formal syntactic reasoning; no depth-only constant in our comparison.\\\\\nPSC, Algorithm 2~\\cite{psc} & Regular stack classifier; $O(h)$ classifier scan plus parsing; mask row can be cached.\\\\\nVIABLE, Theorem~\\ref{thm:index} & $O(B)$ indexed query, $O(L+r_i)$ commit; unrestricted $F(g,L)D$ preprocessing.\\\\\nOnline CFL recognition~\\cite{onlinecfg} & Total $n^3/2^{\\Omega(\\sqrt{\\log n})}$, suppressing grammar factors; a different predicate.\\\\\n\\bottomrule\n\\end{tabularx}\n\\end{table}"
+    }
+  ],
+  "action": "replace current entry with verbatim official export and update complete citation key",
+  "prose_claim_support_status": "not_evaluated_pending_citation_check_pass_2"
+}

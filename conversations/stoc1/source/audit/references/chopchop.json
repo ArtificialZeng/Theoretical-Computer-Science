@@ -1,0 +1,21 @@
+{
+  "old_key": "chopchop",
+  "new_key": "Nagy_2026",
+  "official_url": "https://api.crossref.org/works/10.1145%2F3776708/transform/application/x-bibtex",
+  "official_record_url": "https://doi.org/10.1145/3776708",
+  "bibtex_path": "audit/references/chopchop.official.bib",
+  "metadata_status": "verified_primary_crossref_export",
+  "differences": [
+    "Official Crossref key Nagy_2026 replaces chopchop.",
+    "Title, four authors in order, year 2026, PACMPL volume 10 and POPL issue agree.",
+    "Official Crossref export uses printed page range 1905--1932 rather than articleno 66 / numpages 28.",
+    "Official export adds ISSN 2475-1421, publisher, resolver URL and month Jan.",
+    "D’Antoni apostrophe and page-range dash are Unicode in raw export."
+  ],
+  "uncertainties": [],
+  "source_accessed": "2026-10-31",
+  "tex_locations": [
+    332
+  ],
+  "claim_support_status": "not_assessed_pending_citation_check_pass_2"
+}

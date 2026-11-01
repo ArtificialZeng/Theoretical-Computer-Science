@@ -1,0 +1,676 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        3
+      ]
+    ],
+    "date-time": "2026-10-03T00:39:13Z",
+    "timestamp": 1790987953962,
+    "version": "4.1.0"
+  },
+  "reference-count": 60,
+  "publisher": "Association for Computing Machinery (ACM)",
+  "issue": "3",
+  "license": [
+    {
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            9,
+            3
+          ]
+        ],
+        "date-time": "2021-09-03T00:00:00Z",
+        "timestamp": 1630627200000
+      },
+      "content-version": "vor",
+      "delay-in-days": 0,
+      "URL": "https://www.acm.org/publications/policies/copyright_policy#Background"
+    }
+  ],
+  "funder": [
+    {
+      "name": "Australian Research Council under Discovery Early Career Researcher Award",
+      "award": [
+        "DE160100568"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "DE160100568"
+          ]
+        }
+      ]
+    },
+    {
+      "DOI": "10.13039/100000001",
+      "name": "U.S. National Science Foundation",
+      "doi-asserted-by": "crossref",
+      "award": [
+        "1816936"
+      ],
+      "award-info": [
+        {
+          "award-number": [
+            "1816936"
+          ]
+        }
+      ],
+      "id": [
+        {
+          "id": "10.13039/100000001",
+          "id-type": "DOI",
+          "asserted-by": "crossref"
+        }
+      ]
+    }
+  ],
+  "content-domain": {
+    "domain": [
+      "dl.acm.org"
+    ],
+    "crossmark-restriction": true
+  },
+  "short-container-title": [
+    "ACM Trans. Program. Lang. Syst."
+  ],
+  "published-print": {
+    "date-parts": [
+      [
+        2021,
+        9,
+        30
+      ]
+    ]
+  },
+  "abstract": "<jats:p>Zones and Octagons are popular abstract domains for static program analysis. They enable the automated discovery of simple numerical relations that hold between pairs of program variables. Both domains are well understood mathematically but the detailed implementation of static analyses based on these domains poses many interesting algorithmic challenges. In this article, we study the two abstract domains, their implementation and use. Utilizing improved data structures and algorithms for the manipulation of graphs that represent difference-bound constraints, we present fast implementations of both abstract domains, built around a common infrastructure. We compare the performance of these implementations against alternative approaches offering the same precision. We quantify the differences in performance by measuring their speed and precision on standard benchmarks. We also assess, in the context of software verification, the extent to which the improved precision translates to better verification outcomes. Experiments demonstrate that our new implementations improve the state of the art for both Zones and Octagons significantly.</jats:p>",
+  "DOI": "10.1145/3457885",
+  "type": "journal-article",
+  "created": {
+    "date-parts": [
+      [
+        2021,
+        9,
+        4
+      ]
+    ],
+    "date-time": "2021-09-04T03:51:15Z",
+    "timestamp": 1630727475000
+  },
+  "page": "1-51",
+  "update-policy": "https://doi.org/10.1145/crossmark-policy",
+  "source": "Crossref",
+  "is-referenced-by-count": 11,
+  "title": [
+    "A Fresh Look at Zones and Octagons"
+  ],
+  "prefix": "10.1145",
+  "volume": "43",
+  "author": [
+    {
+      "ORCID": "https://orcid.org/0000-0002-1354-431X",
+      "authenticated-orcid": false,
+      "given": "Graeme",
+      "family": "Gange",
+      "sequence": "first",
+      "affiliation": [
+        {
+          "name": "Monash University, Clayton, Australia"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Zequn",
+      "family": "Ma",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "The University of Melbourne, Parkville, Australia"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-0516-1167",
+      "authenticated-orcid": false,
+      "given": "Jorge A.",
+      "family": "Navas",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "SRI International, CA, USA"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0001-5959-3769",
+      "authenticated-orcid": false,
+      "given": "Peter",
+      "family": "Schachte",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "The University of Melbourne, Parkville, Australia"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0002-2352-1883",
+      "authenticated-orcid": false,
+      "given": "Harald",
+      "family": "S\u00f8ndergaard",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "The University of Melbourne, Parkville, Australia"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "ORCID": "https://orcid.org/0000-0003-2186-0459",
+      "authenticated-orcid": false,
+      "given": "Peter J.",
+      "family": "Stuckey",
+      "sequence": "additional",
+      "affiliation": [
+        {
+          "name": "Monash University, Clayton, Australia"
+        }
+      ],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "320",
+  "published-online": {
+    "date-parts": [
+      [
+        2021,
+        9,
+        3
+      ]
+    ]
+  },
+  "reference": [
+    {
+      "key": "e_1_2_1_1_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1137/0201008"
+    },
+    {
+      "key": "e_1_2_1_3_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11547662_3"
+    },
+    {
+      "key": "e_1_2_1_4_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.scico.2007.08.001"
+    },
+    {
+      "key": "e_1_2_1_5_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10703-009-0073-1"
+    },
+    {
+      "key": "e_1_2_1_6_1",
+      "volume-title": "Proceedings of the Conference on Static Analysis (Lecture Notes in Computer Science), H. Riis Nielson and G. Fil\u00e9 (Eds.)",
+      "volume": "4634",
+      "author": "Banterle F.",
+      "unstructured": "F. Banterle and R. Giacobazzi . 2007. A fast implementation of the octagon abstract domain on graphics hardware . In Proceedings of the Conference on Static Analysis (Lecture Notes in Computer Science), H. Riis Nielson and G. Fil\u00e9 (Eds.) , Vol. 4634 . Springer, 315\u2013332. F. Banterle and R. Giacobazzi. 2007. A fast implementation of the octagon abstract domain on graphics hardware. In Proceedings of the Conference on Static Analysis (Lecture Notes in Computer Science), H. Riis Nielson and G. Fil\u00e9 (Eds.), Vol. 4634. Springer, 315\u2013332."
+    },
+    {
+      "key": "e_1_2_1_7_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1090/qam/102435"
+    },
+    {
+      "key": "e_1_2_1_8_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/781131.781153"
+    },
+    {
+      "key": "e_1_2_1_9_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/176454.176484"
+    },
+    {
+      "key": "e_1_2_1_10_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-319-71237-6_23"
+    },
+    {
+      "key": "e_1_2_1_11_1",
+      "volume-title": "Robbins, and Andy King",
+      "author": "Chawdhary Aziem",
+      "year": "2016",
+      "unstructured": "Aziem Chawdhary , Ed Robbins, and Andy King . 2016 . Incrementally Closing Octagons. Version 1. Retrieved from https://arXiv.org/format/1610.02952. Aziem Chawdhary, Ed Robbins, and Andy King. 2016. Incrementally Closing Octagons. Version 1. Retrieved from https://arXiv.org/format/1610.02952."
+    },
+    {
+      "key": "e_1_2_1_12_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s101070050058"
+    },
+    {
+      "key": "e_1_2_1_13_1",
+      "unstructured": "Clam team [n.d.]. Clam: Crab for Llvm Abstraction Manager. Retrieved from https://github.com/seahorn/crab-llvm.  Clam team [n.d.]. Clam: Crab for Llvm Abstraction Manager. Retrieved from https://github.com/seahorn/crab-llvm."
+    },
+    {
+      "key": "e_1_2_1_14_1",
+      "volume-title": "Proceedings of the Conference on Static Analysis (Lecture Notes in Computer Science), R. Giacobazzi (Ed.)",
+      "volume": "3148",
+      "author": "Claris\u00f3 R.",
+      "unstructured": "R. Claris\u00f3 and J. Cortadella . 2004. The octahedron abstract domain . In Proceedings of the Conference on Static Analysis (Lecture Notes in Computer Science), R. Giacobazzi (Ed.) , Vol. 3148 . Springer, 312\u2013327. R. Claris\u00f3 and J. Cortadella. 2004. The octahedron abstract domain. In Proceedings of the Conference on Static Analysis (Lecture Notes in Computer Science), R. Giacobazzi (Ed.), Vol. 3148. Springer, 312\u2013327."
+    },
+    {
+      "key": "e_1_2_1_15_1",
+      "unstructured": "T. H. Cormen C. E. Leiserson R. L. Rivest and C. Stein. 2009. Introduction to Algorithms. MIT Press.  T. H. Cormen C. E. Leiserson R. L. Rivest and C. Stein. 2009. Introduction to Algorithms. MIT Press."
+    },
+    {
+      "key": "e_1_2_1_16_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11814948_19"
+    },
+    {
+      "key": "e_1_2_1_17_1",
+      "volume-title": "Proceedings of the 4th ACM Symposium on Principles of Programming Languages. ACM Press, 238\u2013252",
+      "author": "Cousot P.",
+      "unstructured": "P. Cousot and R. Cousot . 1977. Abstract interpretation: A unified lattice model for static analysis of programs by construction or approximation of fixpoints . In Proceedings of the 4th ACM Symposium on Principles of Programming Languages. ACM Press, 238\u2013252 . P. Cousot and R. Cousot. 1977. Abstract interpretation: A unified lattice model for static analysis of programs by construction or approximation of fixpoints. In Proceedings of the 4th ACM Symposium on Principles of Programming Languages. ACM Press, 238\u2013252."
+    },
+    {
+      "key": "e_1_2_1_18_1",
+      "volume-title": "Proceedings of the 6th ACM Symposium on Principles of Programming Languages. ACM Press, 269\u2013282",
+      "author": "Cousot P.",
+      "unstructured": "P. Cousot and R. Cousot . 1979. Systematic design of program analysis frameworks . In Proceedings of the 6th ACM Symposium on Principles of Programming Languages. ACM Press, 269\u2013282 . P. Cousot and R. Cousot. 1979. Systematic design of program analysis frameworks. In Proceedings of the 6th ACM Symposium on Principles of Programming Languages. ACM Press, 269\u2013282."
+    },
+    {
+      "key": "e_1_2_1_19_1",
+      "first-page": "229",
+      "article-title": "Why does Astr\u00e9e scale up?Formal Methods Syst",
+      "volume": "35",
+      "author": "Cousot Patrick",
+      "year": "2009",
+      "unstructured": "Patrick Cousot , Radhia Cousot , J\u00e9r\u00f4me Feret , Laurent Mauborgne , Antoine Min\u00e9 , and Xavier Rival . 2009 . Why does Astr\u00e9e scale up?Formal Methods Syst . Design 35 , 3 (2009), 229 \u2013 264 . Patrick Cousot, Radhia Cousot, J\u00e9r\u00f4me Feret, Laurent Mauborgne, Antoine Min\u00e9, and Xavier Rival. 2009. Why does Astr\u00e9e scale up?Formal Methods Syst. Design 35, 3 (2009), 229\u2013264.",
+      "journal-title": "Design"
+    },
+    {
+      "key": "e_1_2_1_20_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/512760.512770"
+    },
+    {
+      "key": "e_1_2_1_21_1",
+      "unstructured": "Crab [n.d.]. CoRnucopia of ABstractions: A Language-Agnostic Library for Abstract Interpretation. Retrieved from https://github.com/seahorn/crab.  Crab [n.d.]. CoRnucopia of ABstractions: A Language-Agnostic Library for Abstract Interpretation. Retrieved from https://github.com/seahorn/crab."
+    },
+    {
+      "key": "e_1_2_1_22_1",
+      "unstructured": "EBPF [n.d.]. A Set of EBPF Programs. Retrieved from https://github.com/vbpf/ebpf-samples.  EBPF [n.d.]. A Set of EBPF Programs. Retrieved from https://github.com/vbpf/ebpf-samples."
+    },
+    {
+      "key": "e_1_2_1_23_1",
+      "unstructured": "ELINA team [n.d.]. ELINA: ETH LIbrary for Numerical Analysis. Retrieved from https://github.com/eth-srl/ELINA.  ELINA team [n.d.]. ELINA: ETH LIbrary for Numerical Analysis. Retrieved from https://github.com/eth-srl/ELINA."
+    },
+    {
+      "key": "e_1_2_1_24_1",
+      "volume-title": "Stuckey",
+      "author": "Feydy Thibaut",
+      "year": "2008",
+      "unstructured": "Thibaut Feydy , Andreas Schutt , and Peter J . Stuckey . 2008 . Global difference constraint propagation for finite domain solvers. In Proceedings of the 10th International ACM SIGPLAN Conference on Principles and Practice of Declarative Programming. ACM Press , 226\u2013235. Thibaut Feydy, Andreas Schutt, and Peter J. Stuckey. 2008. Global difference constraint propagation for finite domain solvers. In Proceedings of the 10th International ACM SIGPLAN Conference on Principles and Practice of Declarative Programming. ACM Press, 226\u2013235."
+    },
+    {
+      "key": "e_1_2_1_25_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/367766.368168"
+    },
+    {
+      "key": "e_1_2_1_26_1",
+      "unstructured": "Lestor R. Ford and D. R. Fulkerson. 1962. Flows in Networks. Princeton University Press.  Lestor R. Ford and D. R. Fulkerson. 1962. Flows in Networks. Princeton University Press."
+    },
+    {
+      "key": "e_1_2_1_27_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2651360"
+    },
+    {
+      "key": "e_1_2_1_28_1",
+      "volume-title": "Proceedings of the 23rd International Symposium on Static Analysis (Lecture Notes in Computer Science), X. Rival (Ed.)",
+      "volume": "9837",
+      "author": "Gange Graeme",
+      "unstructured": "Graeme Gange , Jorge Navas , Peter Schachte , Harald S\u00f8ndergaard , and Peter J. Stuckey . 2016. Exploiting sparsity in difference-bound matrices . In Proceedings of the 23rd International Symposium on Static Analysis (Lecture Notes in Computer Science), X. Rival (Ed.) , Vol. 9837 . Springer, 189\u2013211. Graeme Gange, Jorge Navas, Peter Schachte, Harald S\u00f8ndergaard, and Peter J. Stuckey. 2016. Exploiting sparsity in difference-bound matrices. In Proceedings of the 23rd International Symposium on Static Analysis (Lecture Notes in Computer Science), X. Rival (Ed.), Vol. 9837. Springer, 189\u2013211."
+    },
+    {
+      "key": "e_1_2_1_29_1",
+      "volume-title": "Proceedings of the 17th Asian Symposium on Programming Languages and Systems (Lecture Notes in Computer Science), A. W. Lin (Ed.)",
+      "volume": "11893",
+      "author": "Gange Graeme",
+      "unstructured": "Graeme Gange , Jorge Navas , Peter Schachte , Harald S\u00f8ndergaard , and Peter J. Stuckey . 2019. Dissecting widening: Separating termination from information . In Proceedings of the 17th Asian Symposium on Programming Languages and Systems (Lecture Notes in Computer Science), A. W. Lin (Ed.) , Vol. 11893 . Springer, 95\u2013114. Graeme Gange, Jorge Navas, Peter Schachte, Harald S\u00f8ndergaard, and Peter J. Stuckey. 2019. Dissecting widening: Separating termination from information. In Proceedings of the 17th Asian Symposium on Programming Languages and Systems (Lecture Notes in Computer Science), A. W. Lin (Ed.), Vol. 11893. Springer, 95\u2013114."
+    },
+    {
+      "key": "e_1_2_1_30_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3314221.3314590"
+    },
+    {
+      "key": "e_1_2_1_31_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1152154.1152189"
+    },
+    {
+      "key": "e_1_2_1_32_1",
+      "volume-title": "Proceedings of the Australasian Computer Science Conference. 102\u2013111",
+      "author": "Harvey Warwick",
+      "unstructured": "Warwick Harvey and Peter J. Stuckey . 1997. A unit two variable per inequality integer constraint solver for constraint logic programming . In Proceedings of the Australasian Computer Science Conference. 102\u2013111 . Warwick Harvey and Peter J. Stuckey. 1997. A unit two variable per inequality integer constraint solver for constraint logic programming. In Proceedings of the Australasian Computer Science Conference. 102\u2013111."
+    },
+    {
+      "key": "e_1_2_1_33_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/3385412.3386016"
+    },
+    {
+      "key": "e_1_2_1_34_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-662-53413-7_12"
+    },
+    {
+      "key": "e_1_2_1_35_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/3-540-58601-6_92"
+    },
+    {
+      "key": "e_1_2_1_36_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-02658-4_52"
+    },
+    {
+      "key": "e_1_2_1_37_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/321992.321993"
+    },
+    {
+      "key": "e_1_2_1_38_1",
+      "unstructured": "Jacques-Henri Jourdan. 2016. Verasco: A Formally Verified C Static Analyzer. Ph.D. Dissertation. Universit\u00e9 Paris Diderot.  Jacques-Henri Jourdan. 2016. Verasco: A Formally Verified C Static Analyzer. Ph.D. Dissertation. Universit\u00e9 Paris Diderot."
+    },
+    {
+      "key": "e_1_2_1_39_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/j.entcs.2017.02.004"
+    },
+    {
+      "key": "e_1_2_1_40_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.23919/FMCAD.2019.8894275"
+    },
+    {
+      "key": "e_1_2_1_41_1",
+      "volume-title": "Lahiri and Madanlal Musuvathi",
+      "author": "Shuvendu",
+      "year": "2005",
+      "unstructured": "Shuvendu K. Lahiri and Madanlal Musuvathi . 2005 . An efficient decision procedure for UTVPI constraints. In Frontiers of Combining Systems, Bernhard Gramlich (Ed.). Springer , 168\u2013183. Shuvendu K. Lahiri and Madanlal Musuvathi. 2005. An efficient decision procedure for UTVPI constraints. In Frontiers of Combining Systems, Bernhard Gramlich (Ed.). Springer, 168\u2013183."
+    },
+    {
+      "key": "e_1_2_1_42_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/REAL.1997.641265"
+    },
+    {
+      "key": "e_1_2_1_43_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/1363686.1363736"
+    },
+    {
+      "key": "e_1_2_1_44_1",
+      "volume-title": "Repr\u00e9sentation d\u2019ensembles de contraintes de somme ou de diff\u00e9rence de deux variables et application \u00e0 l\u2019analyse automatiques de programmes. Master\u2019s Thesis. \u00c9cole Normale Sup\u00e9rieure",
+      "author": "Min\u00e9 Antoine",
+      "unstructured": "Antoine Min\u00e9 . 2000. Repr\u00e9sentation d\u2019ensembles de contraintes de somme ou de diff\u00e9rence de deux variables et application \u00e0 l\u2019analyse automatiques de programmes. Master\u2019s Thesis. \u00c9cole Normale Sup\u00e9rieure , Paris . Antoine Min\u00e9. 2000. Repr\u00e9sentation d\u2019ensembles de contraintes de somme ou de diff\u00e9rence de deux variables et application \u00e0 l\u2019analyse automatiques de programmes. Master\u2019s Thesis. \u00c9cole Normale Sup\u00e9rieure, Paris."
+    },
+    {
+      "key": "e_1_2_1_45_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/3-540-44978-7_10"
+    },
+    {
+      "key": "e_1_2_1_46_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1109/WCRE.2001.957836"
+    },
+    {
+      "key": "e_1_2_1_47_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/3-540-45789-5_11"
+    },
+    {
+      "key": "e_1_2_1_49_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/s10990-006-8609-1"
+    },
+    {
+      "key": "e_1_2_1_50_1",
+      "volume-title": "Proceedings of the Conference on Verification, Model Checking, and Abstract Interpretation (Lecture Notes in Computer Science), E. A. Emerson and K. S. Namjoshi (Eds.)",
+      "volume": "3855",
+      "author": "Min\u00e9 Antoine",
+      "year": "2006",
+      "unstructured": "Antoine Min\u00e9 . 2006 . Symbolic methods to enhance the precision of numerical abstract domains . In Proceedings of the Conference on Verification, Model Checking, and Abstract Interpretation (Lecture Notes in Computer Science), E. A. Emerson and K. S. Namjoshi (Eds.) , Vol. 3855 . Springer, 348\u2013363. Antoine Min\u00e9. 2006. Symbolic methods to enhance the precision of numerical abstract domains. In Proceedings of the Conference on Verification, Model Checking, and Abstract Interpretation (Lecture Notes in Computer Science), E. A. Emerson and K. S. Namjoshi (Eds.), Vol. 3855. Springer, 348\u2013363."
+    },
+    {
+      "key": "e_1_2_1_51_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1016/0022-247X(72)90091-1"
+    },
+    {
+      "key": "e_1_2_1_52_1",
+      "unstructured": "Prevail team [n.d.]. PREVAIL: A Polynomial-Runtime EBPF Verifier Using an Abstract Interpretation Layer. Retrieved from https://github.com/vbpf/ebpf-verifier.  Prevail team [n.d.]. PREVAIL: A Polynomial-Runtime EBPF Verifier Using an Abstract Interpretation Layer. Retrieved from https://github.com/vbpf/ebpf-verifier."
+    },
+    {
+      "key": "e_1_2_1_53_1",
+      "volume-title": "Proceedings of the Conference on Static Analysis (Lecture Notes in Computer Science), R. Giacobazzi (Ed.)",
+      "volume": "3148",
+      "author": "Sankaranarayanan S.",
+      "unstructured": "S. Sankaranarayanan , H. Sipma , and Z. Manna . 2004. Constraint-based linear relations analysis . In Proceedings of the Conference on Static Analysis (Lecture Notes in Computer Science), R. Giacobazzi (Ed.) , Vol. 3148 . Springer, 53\u201368. S. Sankaranarayanan, H. Sipma, and Z. Manna. 2004. Constraint-based linear relations analysis. In Proceedings of the Conference on Static Analysis (Lecture Notes in Computer Science), R. Giacobazzi (Ed.), Vol. 3148. Springer, 53\u201368."
+    },
+    {
+      "key": "e_1_2_1_54_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1287/ijoc.1090.0369"
+    },
+    {
+      "key": "e_1_2_1_55_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/322276.322288"
+    },
+    {
+      "key": "e_1_2_1_56_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/11547662_23"
+    },
+    {
+      "key": "e_1_2_1_57_1",
+      "volume-title": "Howe",
+      "author": "Simon Axel",
+      "year": "2003",
+      "unstructured": "Axel Simon , Andy King , and Jacob M . Howe . 2003 . Two variables per linear inequality as an abstract domain. In Proceedings of the 12th International Workshop : Logic-based Program Synthesis and Transformation (Lecture Notes in Computer Science), M. Leuschel (Ed.), Vol. 2664 . Springer , 71\u201389. Axel Simon, Andy King, and Jacob M. Howe. 2003. Two variables per linear inequality as an abstract domain. In Proceedings of the 12th International Workshop: Logic-based Program Synthesis and Transformation (Lecture Notes in Computer Science), M. Leuschel (Ed.), Vol. 2664. Springer, 71\u201389."
+    },
+    {
+      "key": "e_1_2_1_58_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/2737924.2738000"
+    },
+    {
+      "key": "e_1_2_1_59_1",
+      "volume-title": "Proceedings of the ACM on Programming Languages (POPL\u201918)",
+      "author": "Singh Gagandeep",
+      "unstructured": "Gagandeep Singh , Markus P\u00fcschel , and Martin T. Vechev . 2018. A practical construction for decomposing numerical abstract domains . Proceedings of the ACM on Programming Languages (POPL\u201918) . 55:1\u201355:28. Gagandeep Singh, Markus P\u00fcschel, and Martin T. Vechev. 2018. A practical construction for decomposing numerical abstract domains. Proceedings of the ACM on Programming Languages (POPL\u201918). 55:1\u201355:28."
+    },
+    {
+      "key": "e_1_2_1_60_1",
+      "unstructured": "SVCOMP 2019. Competition on Software Verification (SV-COMP). Retrieved from http://sv-comp.sosy-lab.org/2019/. Benchmarks available at https://github.com/sosy-lab/sv-benchmarks/c.  SVCOMP 2019. Competition on Software Verification (SV-COMP). Retrieved from http://sv-comp.sosy-lab.org/2019/. Benchmarks available at https://github.com/sosy-lab/sv-benchmarks/c."
+    },
+    {
+      "key": "e_1_2_1_61_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1145/996841.996869"
+    },
+    {
+      "key": "e_1_2_1_62_1",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/978-3-642-31424-7_15"
+    }
+  ],
+  "container-title": [
+    "ACM Transactions on Programming Languages and Systems"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "https://dl.acm.org/doi/10.1145/3457885",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "text-mining"
+    },
+    {
+      "URL": "https://dl.acm.org/doi/pdf/10.1145/3457885",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2025,
+        6,
+        17
+      ]
+    ],
+    "date-time": "2025-06-17T21:24:38Z",
+    "timestamp": 1750195478000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "https://dl.acm.org/doi/10.1145/3457885"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2021,
+        9,
+        3
+      ]
+    ]
+  },
+  "references-count": 60,
+  "journal-issue": {
+    "issue": "3",
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          9,
+          30
+        ]
+      ]
+    }
+  },
+  "alternative-id": [
+    "10.1145/3457885"
+  ],
+  "URL": "https://doi.org/10.1145/3457885",
+  "relation": {},
+  "ISSN": [
+    "0164-0925",
+    "1558-4593"
+  ],
+  "issn-type": [
+    {
+      "value": "0164-0925",
+      "type": "print"
+    },
+    {
+      "value": "1558-4593",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2021,
+        9,
+        3
+      ]
+    ]
+  },
+  "assertion": [
+    {
+      "value": "2020-04-01",
+      "order": 0,
+      "name": "received",
+      "label": "Received",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2021-03-01",
+      "order": 1,
+      "name": "accepted",
+      "label": "Accepted",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    },
+    {
+      "value": "2021-09-03",
+      "order": 2,
+      "name": "published",
+      "label": "Published",
+      "group": {
+        "name": "publication_history",
+        "label": "Publication History"
+      }
+    }
+  ]
+}

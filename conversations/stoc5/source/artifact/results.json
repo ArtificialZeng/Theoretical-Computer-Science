@@ -1,0 +1,153 @@
+{
+  "completed_utc": "2026-10-31T15:39:03.960889+00:00",
+  "command": [
+    "artifact/validate.py"
+  ],
+  "fixture_sha256": "d834d7ab1e91a3764690e6ed552e513a5558481f242a82d0128af07a4bd0d536",
+  "seed": 20271031,
+  "python": "3.9.6",
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "rows": [
+    {
+      "suite": "parity, model and LM criterion",
+      "cases": 5000,
+      "failures": 0,
+      "seconds": 2.5829262920000002,
+      "parameters": {
+        "n": {
+          "min": 1,
+          "max": 6
+        },
+        "N": {
+          "min": 2,
+          "max": 12
+        },
+        "m": {
+          "min": 0,
+          "max": 270
+        },
+        "rational_feasible": 1062,
+        "integer_feasible": 1056,
+        "input_digest": "8dbc338d2ccda24d0c79cba904f0c50715959a91c103e950b63cfb1271119df8"
+      }
+    },
+    {
+      "suite": "integer canonical entries vs enumeration",
+      "cases": 600,
+      "failures": 0,
+      "seconds": 0.16000391700000005,
+      "parameters": {
+        "n": {
+          "min": 1,
+          "max": 3
+        },
+        "N": {
+          "min": 2,
+          "max": 6
+        },
+        "m": {
+          "min": 2,
+          "max": 28
+        },
+        "rational_feasible": 223,
+        "integer_feasible": 220,
+        "input_digest": "03424f560e5f5fffa16097768cea3b819d0bfceb732ee869445cd617406bb7e5"
+      }
+    },
+    {
+      "suite": "static min-plus reduction, both closures",
+      "cases": 400,
+      "failures": 0,
+      "seconds": 0.8984148329999999,
+      "parameters": {
+        "n": {
+          "min": 3,
+          "max": 24
+        },
+        "N": {
+          "min": 6,
+          "max": 48
+        },
+        "m": {
+          "min": 4,
+          "max": 256
+        },
+        "rational_feasible": 400,
+        "integer_feasible": 400,
+        "input_digest": "317cc4f3584d70cd6bca59c159ba4fa326e7c66b7f0c87b0bd07801fd65c47c8"
+      }
+    },
+    {
+      "suite": "incremental min-plus reduction, every prefix",
+      "cases": 250,
+      "failures": 0,
+      "seconds": 1.1653357080000002,
+      "parameters": {
+        "n": {
+          "min": 4,
+          "max": 24
+        },
+        "N": {
+          "min": 8,
+          "max": 48
+        },
+        "m": {
+          "min": 6,
+          "max": 156
+        },
+        "rational_feasible": 250,
+        "integer_feasible": 250,
+        "input_digest": "7f21384b7bd356a89e1f726b8cf8cd9179ab50065e17aebc7d61bedf76ee57de"
+      }
+    },
+    {
+      "suite": "elimination and up-down reconstruction",
+      "cases": 500,
+      "failures": 0,
+      "seconds": 0.4581010000000001,
+      "parameters": {
+        "n": {
+          "min": 2,
+          "max": 23
+        },
+        "N": {
+          "min": 2,
+          "max": 23
+        },
+        "m": {
+          "min": 0,
+          "max": 88
+        },
+        "rational_feasible": 500,
+        "integer_feasible": 500,
+        "input_digest": "21dff18ca3a6b3f6db641afe59ae13deeefb17a67ebecf20a2b722242f7f10c5"
+      }
+    },
+    {
+      "suite": "direct graph embedding, both closures",
+      "cases": 500,
+      "failures": 0,
+      "seconds": 0.1063346669999996,
+      "parameters": {
+        "n": {
+          "min": 1,
+          "max": 9
+        },
+        "N": {
+          "min": 1,
+          "max": 9
+        },
+        "m": {
+          "min": 0,
+          "max": 32
+        },
+        "rational_feasible": 273,
+        "integer_feasible": 273,
+        "input_digest": "2fa18432754024f9b330940a8f664c46bdfc38d7cb4fa25ad21db651d6963f34"
+      }
+    }
+  ],
+  "total_cases": 7250,
+  "failures": 0,
+  "source_sha256": "76a964703ea51782fd767026f7c752c08aa3e8959e465df7e65bb1c40ebe0a67"
+}

@@ -1,0 +1,47 @@
+{
+  "vocabulary_size": 340,
+  "max_token_length": 4,
+  "dyck_prefixes": 5461,
+  "dyck_mask_bits": 1856740,
+  "depth_mask_bits": 2720,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "matrices": 530,
+  "matrix_probes": 12420,
+  "universal_live_prefix_checks": 70500,
+  "depth_rows": [
+    {
+      "depth": 0,
+      "copied_words": 6
+    },
+    {
+      "depth": 1,
+      "copied_words": 6
+    },
+    {
+      "depth": 4,
+      "copied_words": 6
+    },
+    {
+      "depth": 16,
+      "copied_words": 6
+    },
+    {
+      "depth": 64,
+      "copied_words": 6
+    },
+    {
+      "depth": 256,
+      "copied_words": 6
+    },
+    {
+      "depth": 1024,
+      "copied_words": 6
+    },
+    {
+      "depth": 4096,
+      "copied_words": 6
+    }
+  ],
+  "scope": "finite correctness and operation counts; no serving or model benchmarks"
+}

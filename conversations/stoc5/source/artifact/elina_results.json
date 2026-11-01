@@ -1,0 +1,39 @@
+{
+  "cases": 1000,
+  "entries_compared": 389512,
+  "failures": 0,
+  "seed": 20271032,
+  "seconds": 4.739662041,
+  "elina_revision": "f524156d292ac3a6f3cd676e2d2e7db6629e2b6f",
+  "completed_utc": "2026-10-31T15:39:08.836641+00:00",
+  "command": [
+    "artifact/elina_compare.py"
+  ],
+  "fixture_sha256": "68d0385bb99e4d18eab0119ad09b72110553f431ebe65e7dc0fbda81a29dcad0",
+  "n_distribution": {
+    "1": 77,
+    "2": 66,
+    "3": 59,
+    "4": 62,
+    "5": 42,
+    "6": 56,
+    "7": 58,
+    "8": 60,
+    "9": 54,
+    "10": 69,
+    "11": 70,
+    "12": 52,
+    "13": 69,
+    "14": 60,
+    "15": 73,
+    "16": 73
+  },
+  "m_min": 0,
+  "m_max": 439,
+  "kernel": "elina_oct/opt_oct_closure_dense_scalar.c",
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.0.123.102)",
+  "kernel_sha256": "b6b1b578f53518fd876b4421d0457538006781163577a47edc48bdcbf3df30d2",
+  "semantics": "rational strong closure, feasible generated inputs",
+  "source_sha256": "50751761a890d3f9ac34ba6dfa8d599b09298af0fa8daee17dcc991d69317124"
+}

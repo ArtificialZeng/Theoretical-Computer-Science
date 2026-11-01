@@ -1,0 +1,20 @@
+\begin{tikzpicture}[font=\normalsize,
+ vertex/.style={draw,rounded corners,minimum width=22mm,minimum height=12mm,fill=blue!5,align=center},
+ edge/.style={-{Latex[length=2mm]},thick},
+ bridge/.style={edge,dashed,draw=orange!80!black},
+ note/.style={align=center,text width=145mm}]
+\node[vertex] (l) at (0,0) {$L_i$\\$r$ variables};
+\node[vertex] (u) at (4,0) {$U_k$\\$r$ variables};
+\node[vertex] (v) at (8,0) {$V_k$\\$r$ variables};
+\node[vertex] (r) at (12,0) {$R_j$\\$r$ variables};
+\draw[edge] (l)--node[above] {$A_{ik}$}(u);
+\draw[bridge] (u)--node[above] {$0$}(v);
+\draw[edge] (v)--node[above] {$B_{kj}$}(r);
+\node[note,text=orange!80!black] at (6,-1.15) {Update $k$: insert $U_k\to V_k$ of weight zero.};
+\node[note] at (6,-2.3) {\textbf{Initially:} no two-edge paths; the supplied state is already canonical.\\
+\textbf{After all $r$ updates:} $d(L_i,R_j)=\min_k(A_{ik}+B_{kj})$.};
+\node[draw,rounded corners,fill=black!4,note,inner sep=7pt] at (6,-4) {
+\textbf{Resources charged by the reduction}\\
+$P(4r)+rU(4r)+r^2Q(4r)+O(r^2)$\\
+Preprocessing + $r$ constraint insertions + $r^2$ exact-entry queries};
+\end{tikzpicture}

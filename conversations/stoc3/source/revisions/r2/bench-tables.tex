@@ -1,0 +1,26 @@
+\begin{table}[H]
+\centering
+\begin{tabular}{rrrrrrrr}\toprule
+$N$ & $n_v$ & $n_e$ & $n$ & $r$ & $P_{\rm base}$ & $P_{\rm quot}$ & $2q_Gq_H$\\\midrule
+16 & 294 & 870 & 1,164 & 16 & 1,600 & 128 & 3,616\\
+32 & 679 & 2,025 & 2,704 & 19 & 7,312 & 288 & 9,766\\
+64 & 1,544 & 4,620 & 6,164 & 22 & 33,088 & 640 & 25,388\\
+128 & 3,465 & 10,383 & 13,848 & 25 & 148,160 & 1,408 & 64,050\\
+256 & 7,690 & 23,058 & 30,748 & 28 & 656,896 & 3,072 & 157,752\\
+\bottomrule\end{tabular}
+\caption{Input size and actual expanded normalized states on the synthetic family. The theoretical size is $n=n_v+n_e$ in every row. $P_{\rm base}$ uses the original graphs; $P_{\rm quot}$ uses the quotients. The last column is the exact quotient state-space bound.}
+\label{tab:states}
+\end{table}
+\begin{table}[H]
+\centering
+\begin{tabular}{rrrrrr}\toprule
+$N$ & Baseline & Equality & Minimization & Search & Total \musub\\\midrule
+16 & 0.775 & 0.077 & 0.474 & 0.066 & 0.620\\
+32 & 2.613 & 0.175 & 1.071 & 0.096 & 1.409\\
+64 & 14.077 & 0.582 & 2.957 & 0.215 & 3.776\\
+128 & 91.999 & 0.961 & 5.340 & 0.639 & 6.818\\
+256 & 460.842 & 2.167 & 14.982 & 1.584 & 18.736\\
+\bottomrule\end{tabular}
+\caption{Measured phase times in milliseconds, with seven-run medians. Total times the full \musub\ pipeline; separate phase medians need not add to it. These measurements use smaller-half refinement.}
+\label{tab:phases}
+\end{table}

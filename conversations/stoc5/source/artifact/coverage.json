@@ -1,0 +1,26 @@
+{
+  "reference_cases": 7250,
+  "original_five_suites": 6750,
+  "new_direct_embedding_cases": 500,
+  "elina_cases": 1000,
+  "elina_entries": 389512,
+  "elina_n_distribution": {
+    "5": 42,
+    "13": 69,
+    "11": 70,
+    "3": 59,
+    "7": 58,
+    "2": 66,
+    "15": 73,
+    "16": 73,
+    "10": 69,
+    "14": 60,
+    "6": 56,
+    "9": 54,
+    "4": 62,
+    "12": 52,
+    "1": 77,
+    "8": 60
+  },
+  "all_status_pass": true
+}

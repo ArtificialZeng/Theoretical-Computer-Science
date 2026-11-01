@@ -1,0 +1,106 @@
+{
+  "schema": 1,
+  "scope": "Every stoc1–stoc8 conversation folder in the current STOC workspace; excludes unrelated sibling math/physics/finance directories",
+  "manuscripts": 5,
+  "template_only": 3,
+  "items": [
+    {
+      "id": "stoc1",
+      "title": "Representation and Preprocessing in Grammar-Constrained Decoding: Stack Indexes and Online Completion Lower Bounds",
+      "kind": "existing-conversation-manuscript",
+      "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "pages": 12,
+      "pdf": "conversations/stoc1/paper.pdf",
+      "source_archive": "conversations/stoc1/source.zip",
+      "source_directory": "conversations/stoc1/source",
+      "archive_prefix": "",
+      "pdf_sha256": "5df559f9b2579911d4640104af77713d414e17d04f334959bc00eeb55bad5b6f",
+      "source_archive_sha256": "2f662a998b3136188af62bf73a03d5b3437c084c2f9ff3aa3d7576109826920b",
+      "original_pdf": "stoc1/1.pdf",
+      "original_archive": "stoc1/1_source.zip",
+      "readme": "conversations/stoc1/README.md"
+    },
+    {
+      "id": "stoc2",
+      "title": "Syntax Repair in Near-Linear Time: Exact Bounds for Marked-Palindrome Grammars",
+      "kind": "existing-conversation-manuscript",
+      "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "pages": 9,
+      "pdf": "conversations/stoc2/paper.pdf",
+      "source_archive": "conversations/stoc2/source.zip",
+      "source_directory": "conversations/stoc2/source",
+      "archive_prefix": "",
+      "pdf_sha256": "35b701e8686499f5b01e74b948d6cd9c02012f23d3055af8ee8c5b272bfe4752",
+      "source_archive_sha256": "5f47a3066f956ab138a9674818640f7b0966faa20e81cacb35278c67f1beffd3",
+      "original_pdf": "stoc2/2.pdf",
+      "original_archive": "stoc2/2-source.zip",
+      "readme": "conversations/stoc2/README.md"
+    },
+    {
+      "id": "stoc3",
+      "title": "Is Quadratic Subtyping Optimal? Conditional Hardness on Shared Acyclic Type Graphs",
+      "kind": "existing-conversation-manuscript",
+      "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "pages": 18,
+      "pdf": "conversations/stoc3/paper.pdf",
+      "source_archive": "conversations/stoc3/source.zip",
+      "source_directory": "conversations/stoc3/source",
+      "archive_prefix": "3-source/",
+      "pdf_sha256": "a6b8d9226e4149358b58f09579ccc6764971c1a46caa34a46b27d38600aaddbc",
+      "source_archive_sha256": "9179a70f3b0658c4508193b5596d2395128fba9cda7cd45c21f178ea7ba5173b",
+      "original_pdf": "stoc3/3.pdf",
+      "original_archive": "stoc3/3-source.zip",
+      "readme": "conversations/stoc3/README.md"
+    },
+    {
+      "id": "stoc4",
+      "title": "Fully Dynamic Interprocedural Dataflow Analysis: OMv Barriers and Summary-Local TreeFlow Updates",
+      "kind": "existing-conversation-manuscript",
+      "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "pages": 10,
+      "pdf": "conversations/stoc4/paper.pdf",
+      "source_archive": "conversations/stoc4/source.zip",
+      "source_directory": "conversations/stoc4/source",
+      "archive_prefix": "stoc4/",
+      "pdf_sha256": "db743d64d2a56de670aa03b05fff49328d304abb7dcbbadb8023a888579a95fc",
+      "source_archive_sha256": "1e3e3cf98527b6e7be6ad641c31f76db75bb4a7073f0af393a46458a9a023180",
+      "original_pdf": "stoc4/4.pdf",
+      "original_archive": "stoc4/4_source.zip",
+      "readme": "conversations/stoc4/README.md"
+    },
+    {
+      "id": "stoc5",
+      "title": "Octagons Are APSP-Complete: Fine-Grained Complexity of Weakly Relational Abstract Domains",
+      "kind": "existing-conversation-manuscript",
+      "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "pages": 19,
+      "pdf": "conversations/stoc5/paper.pdf",
+      "source_archive": "conversations/stoc5/source.zip",
+      "source_directory": "conversations/stoc5/source",
+      "archive_prefix": "",
+      "pdf_sha256": "cfd986c64c49ca77ab979c0d0ffd49d6d8c2f3b82489364adb842eef1b486a67",
+      "source_archive_sha256": "5930442b5a35fbe85b77b9fef28c808a5d659424b93a41a860398eae15870826",
+      "original_pdf": "stoc5/5.pdf",
+      "original_archive": "stoc5/5_source.zip",
+      "readme": "conversations/stoc5/README.md"
+    },
+    {
+      "id": "stoc6",
+      "kind": "template-only",
+      "readme": "conversations/stoc6/README.md",
+      "source_status": "No research result found; not ranked"
+    },
+    {
+      "id": "stoc7",
+      "kind": "template-only",
+      "readme": "conversations/stoc7/README.md",
+      "source_status": "No research result found; not ranked"
+    },
+    {
+      "id": "stoc8",
+      "kind": "template-only",
+      "readme": "conversations/stoc8/README.md",
+      "source_status": "No research result found; not ranked"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[font=\normalsize,
+ box/.style={draw,rounded corners=3pt,align=center,minimum height=14mm,inner sep=5pt,text width=42mm},
+ arr/.style={-{Latex[length=2mm]},thick},
+ dense/.style={box,draw=blue!65!black,fill=blue!5},
+ feas/.style={box,draw=teal!65!black,fill=teal!5},
+ width/.style={box,draw=orange!80!black,fill=orange!7}]
+\node[box,text width=143mm,fill=black!4] (input) at (0,0)
+ {\textbf{Exact octagonal constraints: $\pm x_i\pm x_j\leq c$}\\
+ Coherent doubled graph: $i^+,i^-$; $u\to v$ has mate $\bar v\to\bar u$};
+\node[dense] (a) at (-5,-2.2) {\textbf{Dense normalization}\\APSP: all distances $D$\\or a negative cycle};
+\node[feas] (b) at (0,-2.2) {\textbf{Feasibility + model}\\Negative-weight SSSP\\potential $h$ or a cycle};
+\node[width] (c) at (5,-2.2) {\textbf{Supplied width $k$}\\Elimination record\\$O(n(k+1)^2)$ work};
+\draw[arr] (input.south)--++(0,-.3)-|(a.north);
+\draw[arr] (input.south)--(b.north);
+\draw[arr] (input.south)--++(0,-.3)-|(c.north);
+\node[dense] (d) at (-5,-4.65) {\textbf{Canonical bounds}\\Strong: half-unary sums\\Tight: floored halves\\$O(n^2)$ postprocessing};
+\node[feas] (e) at (0,-4.65) {\textbf{Constructive rounding}\\Symmetrize $h$\\Tight-edge SCC parity\\$O(n+m)$ extra work};
+\node[width] (f) at (5,-4.65) {\textbf{Compact or explicit}\\Record: $O(n(k+1))$\\Entry: $O(n(k+1))$\\Dense: $O(n^2(k+1))$};
+\draw[arr] (a)--(d);\draw[arr] (b)--(e);\draw[arr] (c)--(f);
+\node[align=center,text width=45mm] (out1) at (-5,-6.8) {\textbf{Same APSP exponent}\\Dense answer or $\bot$};
+\node[align=center,text width=45mm] (out2) at (0,-6.8) {\textbf{Near-linear expected}\\Feasibility and exact model};
+\node[align=center,text width=45mm] (out3) at (5,-6.8) {\textbf{Output-sensitive choice}\\Compact state or dense matrix};
+\draw[arr] (d)--(out1);\draw[arr] (e)--(out2);\draw[arr] (f)--(out3);
+\end{tikzpicture}

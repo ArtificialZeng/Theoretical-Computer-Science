@@ -2,7 +2,7 @@
 
 [English](README.md) · [中文](README.zh-CN.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [日本語](README.ja.md)
 
-理論計算機科学の研究稿、再現可能なコード、厳密な証明書をまとめたリポジトリ。本スナップショットには、初期の五編と継続研究の五編、計 **10 セットの論文資料**を収録する。各課題について、概要、PDF、変更していないソースアーカイブ、閲覧可能なコードを用意している。
+理論計算機科学の研究稿、再現可能なコード、厳密な証明書をまとめたリポジトリ。本リポジトリには、この継続研究の十編と他の会話の五編、計 **15 セットの論文資料**を収録する。他に三つの会話フォルダーはテンプレートのみである。各課題について、概要、PDF、変更していないソースアーカイブ、閲覧可能なコードを用意している。
 
 **結果の範囲に注意：**研究記録上、七編は明示した研究目標の完全な解答に位置付けられている。初期の三編は部分結果であり、元のより一般的な問いは未解決である。これらはローカルの研究・公開確認記録で、外部査読や STOC 採択を意味しない。元の著者一覧を維持し、後の五編は Zijian Zeng の単著である。
 
@@ -109,3 +109,47 @@ python3 scripts/build_pdfs.py --all
 ## 著者と研究支援
 
 管理者：**Zijian Zeng, UCSI University** · 1002266693@ucsiuniversity.edu.my。研究、コード、証明の検討、執筆には実質的な AI 支援を利用しており、論文原稿で開示している。同梱ファイルの既存ライセンス表示は維持する。[RIGHTS.md](RIGHTS.md) を参照。
+
+## 他の会話の論文原稿
+
+stoc1–stoc8 の全八フォルダーを整理した。既存の論文原稿は五編で、三フォルダーはテンプレートのみである。各原稿の独創性と結果の範囲に関する制限を保持し、継続研究で新たに承認された完全解答とは扱わない。
+
+[stoc1–stoc8](conversations/README.md)
+
+### Representation and Preprocessing in Grammar-Constrained Decoding: Stack Indexes and Online Completion Lower Bounds
+
+**概要.** 文法制約付きデコードにおけるオンラインのトークン補完可能性を、文法・語彙・入力長を分けて調べる。OMv に基づく単一ストリームと複数ストリームの下界、および指数的な事前計算と解析処理を明示したスタック索引を示す。一般の LR(1) に対する高速化と STOC 水準の独創性は未確立である。
+
+[PDF](conversations/stoc1/paper.pdf) · [ZIP](conversations/stoc1/source.zip) · [Code](conversations/stoc1/source/) · [Reproduce](conversations/stoc1/README.md)
+
+### Syntax Repair in Near-Linear Time: Exact Bounds for Marked-Palindrome Grammars
+
+**概要.** 固定された区切り付き回文文法への厳密な編集距離を扱う。理論上 O(n+k²) の閾値アルゴリズム、修復例、ガード付き SETH 下界と列挙法を示す。実装の計算量は O(n log²(n+2)+(k+1)²)。一般の LR(1) 問題は未解決であり、現在の匿名二段組 PDF は投稿形式の修正が必要である。
+
+[PDF](conversations/stoc2/paper.pdf) · [ZIP](conversations/stoc2/source.zip) · [Code](conversations/stoc2/source/) · [Reproduce](conversations/stoc2/README.md)
+
+### Is Quadratic Subtyping Optimal? Conditional Hardness on Shared Acyclic Type Graphs
+
+**概要.** 既知の OV に基づく自動機の共通語問題の困難性を、共有された非巡回型グラフの構造的部分型判定へ移す。固定三フィールドや関数型だけでも条件付き二次下界を示し、等価性にはほぼ線形の判定法を与える。商の大きさとアクセス数による上界も扱う。既知の帰着に対する独立した貢献の大きさが主な課題で、PDF は18ページである。
+
+[PDF](conversations/stoc3/paper.pdf) · [ZIP](conversations/stoc3/source.zip) · [Code](conversations/stoc3/source/) · [Reproduce](conversations/stoc3/README.md)
+
+### Fully Dynamic Interprocedural Dataflow Analysis: OMv Barriers and Summary-Local TreeFlow Updates
+
+**概要.** 全動的な手続き間データフロー解析で、要約の大域的な依存伝播コストを明示する。各手続きがパスで呼出しが浅い非巡回グラフでも OMv 下界が残る。固定分解と非巡回呼出しの下で、影響を受ける回路ゲート数や呼出し関係に基づく上界を示す。一般の元の課題、実用解析器への統合、既存 RSM 手法との差分の評価は残っている。
+
+[PDF](conversations/stoc4/paper.pdf) · [ZIP](conversations/stoc4/source.zip) · [Code](conversations/stoc4/source/) · [Reproduce](conversations/stoc4/README.md)
+
+### Octagons Are APSP-Complete: Fine-Grained Complexity of Weakly Relational Abstract Domains
+
+**概要.** Octagon と zone の操作を、指数を保つ APSP 帰着、増分 min-plus の更新・問い合わせトレードオフ、実行可能性、幅に依存する再構成によって分類する。2026年10月の APSP 上界は引用した報告結果であり、新しい最短路アルゴリズムではない。固定版 ELINA カーネルの再現資料を含む。独創性の外部評価と解析器全体の実験は未完了で、PDF は19ページである。
+
+[PDF](conversations/stoc5/paper.pdf) · [ZIP](conversations/stoc5/source.zip) · [Code](conversations/stoc5/source/) · [Reproduce](conversations/stoc5/README.md)
+
+## 比較順位
+
+[中文：按 STOC 相对竞争力和新增解决问题大小排序](RANKING.zh-CN.md) · [English assessment](RANKING.md) · [Data](ranking.json)
+
+```sh
+python3 scripts/check_conversations.py --all
+```

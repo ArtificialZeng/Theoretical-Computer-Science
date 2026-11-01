@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "typescript": "5.9.3"
+  },
+  "name": "musub-artifact",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "test": "node validate.mjs && node validate-splitter.mjs && node extra-validation.mjs && node frontend-validation.mjs && node node_modules/typescript/bin/tsc --noEmit --strict --skipLibCheck example.ts",
+    "bench": "node bench.mjs"
+  }
+}

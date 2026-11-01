@@ -1,0 +1,15 @@
+@InProceedings{pmlr-v306-hua26b,
+  title = 	 {{G}ram2{T}oken: Enabling Run-time {GPU}-Native Grammar-Constrained Decoding for {LLM}s},
+  author =       {Hua, Hantao and Su, Jiming and Tang, Hao and Yao, Yiping and Zhu, Feng},
+  booktitle = 	 {Proceedings of the 43rd International Conference on Machine Learning},
+  pages = 	 {46169--46185},
+  year = 	 {2026},
+  editor = 	 {Zhang, Tong and Dudik, Miroslav and Jaggi, Martin and Agarwal, Alekh and Li, Sharon and Schuurmans, Dale and Zhu, Jerry and Berkenkamp, Felix and Dong, Hanze and Bietti, Alberto},
+  volume = 	 {306},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {06--11 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://raw.githubusercontent.com/mlresearch/v306/main/assets/hua26b/hua26b.pdf},
+  url = 	 {https://proceedings.mlr.press/v306/hua26b.html},
+  abstract = 	 {Grammar-constrained decoding enables large language models (LLMs) to reliably generate structured outputs such as JSON, SQL, and domain-specific programs. Existing systems often enforce constraints by executing byte-level parser logic inside the token-level decoding loop, introducing CPU-side control flow and CPU–GPU synchronization that become bottlenecks under continuous batching. We propose Gram2Token, a GPU-native framework that preprocesses deterministic byte-level grammar execution into token-level transitions before inference. Gram2Token aligns tokenizer byte sequences with grammar transitions through a trie and groups tokens with identical transition outcomes across preprocessed grammar states. These categories yield compact validity masks and transition tables, reducing run-time enforcement to category lookup, masking, and state update rather than parser-style byte traversal. Across four model families under schema-diverse continuous batching, Gram2Token achieves a geometric-mean throughput improvement of 1.38$\times$ over the strongest baseline, with a maximum speedup of 1.85$\times$, at the cost of additional preprocessing and time-to-first-token overhead. Break-even and grammar-complexity analyses show that this overhead is amortized by grammar reuse, longer outputs, and larger batches. These results show that token-level grammar preprocessing is an effective design point for high-throughput structured LLM serving. Code is available at https://github.com/Paradozile/Gram2Token.}
+}

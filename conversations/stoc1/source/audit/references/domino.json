@@ -1,0 +1,22 @@
+{
+  "old_key": "domino",
+  "new_key": "pmlr-v235-beurer-kellner24a",
+  "official_url": "https://proceedings.mlr.press/v235/beurer-kellner24a.html#bibtex",
+  "official_record_url": "https://proceedings.mlr.press/v235/beurer-kellner24a.html",
+  "bibtex_path": "audit/references/domino.official.bib",
+  "metadata_status": "verified_official_export",
+  "differences": [
+    "Official key replaces domino with pmlr-v235-beurer-kellner24a.",
+    "Title, author list, 2024 year, ICML venue, PMLR volume 235 and pages 3658--3673 agree.",
+    "Official title capitalization protects {LLM}s rather than {LLMs}.",
+    "Official export adds seven editors, month, pdf and full abstract fields; preserve all fields and whitespace.",
+    "Current address={Online} is absent from official export."
+  ],
+  "uncertainties": [],
+  "source_accessed": "2026-10-31",
+  "tex_locations": [
+    52,
+    189
+  ],
+  "claim_support_status": "not_assessed_pending_citation_check_pass_2"
+}

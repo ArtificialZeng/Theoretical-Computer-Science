@@ -1,0 +1,32 @@
+{
+  "old_key": "types",
+  "new_key": "M_ndler_2025",
+  "official_url": "https://doi.org/10.1145/3729274",
+  "official_export_url": "https://api.crossref.org/works/10.1145%2F3729274/transform/application/x-bibtex",
+  "bibtex_path": "audit/references/types.official.bib",
+  "metadata_status": "verified_against_Crossref_registered_export",
+  "current_title": "Type-Constrained Code Generation with Language Models",
+  "official_title": "Type-Constrained Code Generation with Language Models",
+  "title_consistent": true,
+  "authors_consistent": true,
+  "year_consistent": true,
+  "venue_consistent": true,
+  "differences": [
+    "Official Crossref key is M_ndler_2025.",
+    "Export supplies continuous PACMPL pages 601–626 instead of current article number 171 plus numpages=26. These describe the same 26-page article.",
+    "Export adds ISSN, URL, ACM publisher, and June month.",
+    "Author Mündler and page dash are literal Unicode in the exact export; kept unchanged."
+  ],
+  "uncertainties": [],
+  "access_limitations": [
+    "ACM HTML returned HTTP403. Exact BibTeX obtained through Crossref DOI registration transform; metadata corroborated by UC Berkeley author-institution repository https://escholarship.org/uc/item/8xw132rt."
+  ],
+  "cite_locations": [
+    {
+      "line": 332,
+      "context": "This theorem is a completion corollary of established inhabitation complexity; it is not a new PSPACE result for STLC. Its role is to make the semantic boundary precise. M\\\"undler, He, Wang, Sen, Song, and Vechev already connect type-constrained generation to inhabitation and use a sound search with an explicit incompleteness tradeoff~\\cite{types}. ChopChop treats semantic decoding via realizability~\\cite{chopchop}. Neither reference licenses a claim that all typed prefixes have the complexity of context-free syntax."
+    }
+  ],
+  "action": "replace with verbatim Crossref DOI export and update complete key",
+  "prose_claim_support_status": "not_evaluated_pending_citation_check_pass_2"
+}

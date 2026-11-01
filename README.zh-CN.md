@@ -2,7 +2,7 @@
 
 [English](README.md) · [中文](README.zh-CN.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [日本語](README.ja.md)
 
-本仓库整理理论计算机科学研究稿件、可复现代码与精确证书。本次快照包含 **10 套稿件材料**：最初五篇与之后持续研究产生的五篇。下文逐项提供研究摘要、PDF、保持原样的源码归档及可直接浏览的源码。
+本仓库整理理论计算机科学研究稿件、可复现代码与精确证书。本仓库包含 **15 套稿件材料**：本持续研究对话的十篇，以及其他对话的五篇；另有三个对话目录只有模板。下文逐项提供研究摘要、PDF、保持原样的源码归档及可直接浏览的源码。
 
 **请按范围标记阅读：**七篇稿件在本地记录中完整解决了各自明确的目标；三篇早期稿件属于部分结果，原始更广泛问题仍未解决。这些是本地研究与交付记录，不代表外部同行评审或 STOC 录用。原作者名单保持不变，后五篇稿件仅署名 Zijian Zeng。
 
@@ -109,3 +109,47 @@ python3 scripts/build_pdfs.py --all
 ## 作者与研究辅助
 
 维护者：**Zijian Zeng，UCSI University** · 1002266693@ucsiuniversity.edu.my。研究、代码、证明推导与写作使用了实质性 AI 辅助，稿件中已披露。所含第三方文件保留原许可说明，见 [RIGHTS.md](RIGHTS.md)。
+
+## 其他对话的稿件
+
+已整理 stoc1–stoc8 全部八个文件夹：五篇已有论文、三个纯模板目录。五篇稿件保留各自的范围与新颖性限制，不作为持续研究新通过的原题解答。
+
+[stoc1–stoc8](conversations/README.md)
+
+### Representation and Preprocessing in Grammar-Constrained Decoding: Stack Indexes and Online Completion Lower Bounds
+
+**摘要.** 研究语法约束解码中的在线 token 可完成性，并分开计算文法、词表和流长度。稿件给出基于 OMv 的单流平方根屏障与独立多流屏障，以及显式计入指数编译成本和解析提交工作的栈索引。一般 LR(1) 最坏情况加速与 STOC 级独立创新仍未建立。
+
+[PDF](conversations/stoc1/paper.pdf) · [ZIP](conversations/stoc1/source.zip) · [Code](conversations/stoc1/source/) · [Reproduce](conversations/stoc1/README.md)
+
+### Syntax Repair in Near-Linear Time: Exact Bounds for Marked-Palindrome Grammars
+
+**摘要.** 研究固定带标记回文文法的精确语言编辑距离，给出理论 O(n+k²) 阈值算法、修复见证、带守卫的 SETH 下界和枚举结果。所附索引实现为 O(n log²(n+2)+(k+1)²)。一般 LR(1) 原题仍未解决；当前 PDF 为匿名双栏，投稿前还需修正版式。
+
+[PDF](conversations/stoc2/paper.pdf) · [ZIP](conversations/stoc2/source.zip) · [Code](conversations/stoc2/source/) · [Reproduce](conversations/stoc2/README.md)
+
+### Is Quadratic Subtyping Optimal? Conditional Hardness on Shared Acyclic Type Graphs
+
+**摘要.** 把已有基于 OV 的自动机交非空困难性转移到共享无环类型图上的结构子类型判定：即使只有三个固定 record 字段或仅使用函数箭头，也有条件二次下界；等价判定近线性，并给出商图规模与有限访问参数上界。主要风险是语义转移相对已有自动机归约的独立增量。当前完整 PDF 为 18 页。
+
+[PDF](conversations/stoc3/paper.pdf) · [ZIP](conversations/stoc3/source.zip) · [Code](conversations/stoc3/source/) · [Reproduce](conversations/stoc3/README.md)
+
+### Fully Dynamic Interprocedural Dataflow Analysis: OMv Barriers and Summary-Local TreeFlow Updates
+
+**摘要.** 研究全动态过程间数据流，并显式计入全局摘要依赖传播。即使各过程是路径、调用图无环且很浅，仍存在 OMv 屏障；关系电路算法用受影响门数和祖先调用关联量给出上界，但依赖固定分解及无环候选调用。更广泛原始刻画和真实分析器集成尚未完成，与已有 RSM 更新机制的增量需要专家复核。
+
+[PDF](conversations/stoc4/paper.pdf) · [ZIP](conversations/stoc4/source.zip) · [Code](conversations/stoc4/source/) · [Reproduce](conversations/stoc4/README.md)
+
+### Octagons Are APSP-Complete: Fine-Grained Complexity of Weakly Relational Abstract Domains
+
+**摘要.** 通过保持指数的 APSP 归约，研究 octagon/zone 闭包、增量 min-plus 更新查询权衡、可行性和按宽度重建的复杂度。2026 年 10 月 APSP 界是引用的已有报告结果，本文没有新最短路算法；附带固定版本 ELINA 标量内核复现。独立新颖性评估与完整分析器实验仍待完成。当前 PDF 为 19 页。
+
+[PDF](conversations/stoc5/paper.pdf) · [ZIP](conversations/stoc5/source.zip) · [Code](conversations/stoc5/source/) · [Reproduce](conversations/stoc5/README.md)
+
+## 综合排名
+
+[中文：按 STOC 相对竞争力和新增解决问题大小排序](RANKING.zh-CN.md) · [English assessment](RANKING.md) · [Data](ranking.json)
+
+```sh
+python3 scripts/check_conversations.py --all
+```

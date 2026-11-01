@@ -1,0 +1,2 @@
+type A = { val next: A; val payload: Nothing };
+type B = { val next: B; val payload: Any };

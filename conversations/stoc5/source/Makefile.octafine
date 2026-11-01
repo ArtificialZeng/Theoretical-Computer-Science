@@ -1,0 +1,18 @@
+.PHONY: pdf validate elina replay clean
+pdf:
+	latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build 5.tex
+	cp build/5.pdf 5.pdf
+	cp build/5.bbl 5.bbl
+validate:
+	python3 artifact/validate.py
+	python3 artifact/make_parameter_table.py
+elina:
+	python3 artifact/build_elina.py
+	python3 artifact/elina_compare.py
+	python3 artifact/make_parameter_table.py
+replay:
+	python3 artifact/build_elina.py
+	python3 artifact/replay_cases.py
+	python3 artifact/make_parameter_table.py
+clean:
+	latexmk -C -outdir=build 5.tex

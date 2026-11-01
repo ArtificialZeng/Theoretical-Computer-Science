@@ -1,0 +1,35 @@
+{
+  "old_key": "abboud",
+  "new_key": "Abboud_2015",
+  "official_url": "https://api.crossref.org/works/10.1109/FOCS.2015.16/transform/application/x-bibtex",
+  "record_url": "https://doi.org/10.1109/FOCS.2015.16",
+  "bibtex_path": "audit/references/abboud.official.bib",
+  "metadata_status": "verified_primary_doi_export",
+  "title": "If the Current Clique Algorithms are Optimal, So is Valiant’s Parser",
+  "authors": [
+    "Amir Abboud",
+    "Arturs Backurs",
+    "Virginia Vassilevska Williams"
+  ],
+  "year": 2015,
+  "venue": "2015 IEEE 56th Annual Symposium on Foundations of Computer Science",
+  "pages": "98–117",
+  "differences": [
+    "Official key differs; title casing and curly apostrophe follow DOI registry.",
+    "Registry serializes third author as Williams, Virginia Vassilevska; person name agrees with current entry.",
+    "Official export adds October month and DOI URL and omits the current publisher address.",
+    "DOI is case-normalized in official export (10.1109/focs.2015.16); identifiers are equivalent."
+  ],
+  "uncertainties": [],
+  "cite_locations": [
+    308
+  ],
+  "claim_support_status": "not_assessed_pending_pass_1_confirmation",
+  "additional_primary_source": "https://theory.stanford.edu/~virgi/CFG.pdf",
+  "searches_completed": [
+    "Abboud 2015 If Current Clique Algorithms Optimal Valiant Parser",
+    "full title arxiv/semanticscholar",
+    "Abboud Backurs Vassilevska Williams FOCS 2015 Valiant Parser pages 98 117",
+    "doi:10.1109/FOCS.2015.16"
+  ]
+}

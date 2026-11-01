@@ -1,0 +1,25 @@
+{
+  "old_key": "xgrammar",
+  "new_key": "MLSYS2025_5c20ca4b",
+  "official_url": "https://proceedings.mlsys.org/paper_files/paper/619-/bibtex",
+  "official_record_url": "https://proceedings.mlsys.org/paper_files/paper/2025/hash/5c20ca4b0b20b0bd2f1d839dc605e70f-Abstract-Conference.html",
+  "bibtex_path": "audit/references/xgrammar.official.bib",
+  "metadata_status": "verified_official_export",
+  "differences": [
+    "Official key replaces xgrammar with MLSYS2025_5c20ca4b.",
+    "Official author ordering, title, year 2025, venue and volume 7 agree with current entry.",
+    "Official export adds editors M. Zaharia, G. Joshi and Y. Lin.",
+    "Official URL links directly to the paper PDF rather than abstract page.",
+    "Official export has pages = {} and no address field; preserve unpaginated official record rather than invent page numbers."
+  ],
+  "uncertainties": [
+    "No page range is supplied by the official export.",
+    "Official MLSys abstract-page/export author order places Ruihang Lai sixth; the official PDF and arXiv place him fourth. Preserve publisher export as requested, but source ordering conflict remains disclosed."
+  ],
+  "source_accessed": "2026-10-31",
+  "tex_locations": [
+    52,
+    190
+  ],
+  "claim_support_status": "not_assessed_pending_citation_check_pass_2"
+}

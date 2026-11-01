@@ -2,7 +2,7 @@
 
 [English](README.md) · [中文](README.zh-CN.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [日本語](README.ja.md)
 
-Manuscrits de recherche, code reproductible et certificats exacts en informatique théorique. Cet instantané contient **10 ensembles de documents** : les cinq manuscrits initiaux et cinq résultats ultérieurs de la recherche continue. Chaque sujet dispose d’un résumé, d’un PDF, d’une archive source inchangée et de sources consultables directement.
+Manuscrits de recherche, code reproductible et certificats exacts en informatique théorique. Ce dépôt contient **15 ensembles de documents** : dix de cette recherche continue et cinq d’autres conversations ; trois autres dossiers contiennent seulement des modèles. Chaque sujet dispose d’un résumé, d’un PDF, d’une archive source inchangée et de sources consultables directement.
 
 **Bien lire la portée des résultats :** sept manuscrits sont enregistrés localement comme des résolutions complètes de leurs objectifs précis ; trois anciens manuscrits présentent des résultats partiels dont les questions générales restent ouvertes. Ces dossiers locaux ne constituent ni une évaluation externe par les pairs ni une acceptation à STOC. Les listes d’auteurs d’origine sont conservées ; les cinq manuscrits ultérieurs ont Zijian Zeng pour seul auteur.
 
@@ -109,3 +109,47 @@ python3 scripts/build_pdfs.py --all
 ## Auteurs et assistance
 
 Responsable : **Zijian Zeng, UCSI University** · 1002266693@ucsiuniversity.edu.my. La recherche, le code, les preuves et la rédaction ont utilisé une assistance substantielle de l’IA, déclarée dans les manuscrits. Les mentions de licence existantes sont conservées ; voir [RIGHTS.md](RIGHTS.md).
+
+## Manuscrits des autres conversations
+
+Les huit dossiers stoc1–stoc8 sont recensés : cinq manuscrits existants et trois dossiers de modèles. Les limites de portée et de nouveauté sont conservées ; il ne s’agit pas de nouvelles résolutions validées par la recherche continue.
+
+[stoc1–stoc8](conversations/README.md)
+
+### Representation and Preprocessing in Grammar-Constrained Decoding: Stack Indexes and Online Completion Lower Bounds
+
+**Résumé.** Étudie la complétabilité en ligne des tokens sous contraintes grammaticales, en séparant grammaire, vocabulaire et longueur du flux. Le texte donne des obstacles fondés sur OMv et des index de pile avec coût de compilation exponentiel explicite. Une accélération générale pour LR(1) et une originalité suffisante pour STOC restent à établir.
+
+[PDF](conversations/stoc1/paper.pdf) · [ZIP](conversations/stoc1/source.zip) · [Code](conversations/stoc1/source/) · [Reproduce](conversations/stoc1/README.md)
+
+### Syntax Repair in Near-Linear Time: Exact Bounds for Marked-Palindrome Grammars
+
+**Résumé.** Distance d’édition exacte vers des grammaires fixes de palindromes marqués : algorithme théorique O(n+k²), témoin de réparation, borne SETH avec symboles de garde et énumération. L’implémentation coûte O(n log²(n+2)+(k+1)²). Le problème LR(1) général reste ouvert ; le PDF anonyme à deux colonnes doit être remis au format de soumission STOC.
+
+[PDF](conversations/stoc2/paper.pdf) · [ZIP](conversations/stoc2/source.zip) · [Code](conversations/stoc2/source/) · [Reproduce](conversations/stoc2/README.md)
+
+### Is Quadratic Subtyping Optimal? Conditional Hardness on Shared Acyclic Type Graphs
+
+**Résumé.** Transfère une difficulté OV connue pour l’intersection d’automates au sous-typage structurel de graphes de types acycliques partagés. La borne quadratique conditionnelle vaut pour trois champs fixes ou les seuls types flèches ; l’égalité reste presque linéaire. Des bornes par quotient et accès fini complètent le résultat. L’apport autonome du transfert sémantique reste la question principale. Le PDF compte 18 pages.
+
+[PDF](conversations/stoc3/paper.pdf) · [ZIP](conversations/stoc3/source.zip) · [Code](conversations/stoc3/source/) · [Reproduce](conversations/stoc3/README.md)
+
+### Fully Dynamic Interprocedural Dataflow Analysis: OMv Barriers and Summary-Local TreeFlow Updates
+
+**Résumé.** Analyse de flot interprocédurale entièrement dynamique avec coût explicite des dépendances globales. Les obstacles OMv subsistent pour des procédures en chemin et des appels acycliques peu profonds. Un circuit de relations donne des bornes en nombre de portes affectées et incidences d’appels, avec décompositions fixes. La caractérisation générale et l’intégration industrielle restent ouvertes ; la nouveauté face aux méthodes RSM demande une expertise.
+
+[PDF](conversations/stoc4/paper.pdf) · [ZIP](conversations/stoc4/source.zip) · [Code](conversations/stoc4/source/) · [Reproduce](conversations/stoc4/README.md)
+
+### Octagons Are APSP-Complete: Fine-Grained Complexity of Weakly Relational Abstract Domains
+
+**Résumé.** Classe les opérations sur octogones et zones par des réductions à APSP préservant les exposants, un compromis incrémental min-plus, la faisabilité et la reconstruction paramétrée par la largeur. Les bornes APSP d’octobre 2026 sont des résultats rapportés et repris, non un nouvel algorithme de plus courts chemins. Un noyau ELINA figé est reproductible. L’évaluation indépendante de la nouveauté et les études d’analyseurs complets restent à faire. Le PDF compte 19 pages.
+
+[PDF](conversations/stoc5/paper.pdf) · [ZIP](conversations/stoc5/source.zip) · [Code](conversations/stoc5/source/) · [Reproduce](conversations/stoc5/README.md)
+
+## Classement comparatif
+
+[中文：按 STOC 相对竞争力和新增解决问题大小排序](RANKING.zh-CN.md) · [English assessment](RANKING.md) · [Data](ranking.json)
+
+```sh
+python3 scripts/check_conversations.py --all
+```

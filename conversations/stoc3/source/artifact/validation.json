@@ -1,0 +1,8 @@
+{
+  "seed": 1701,
+  "counts": {
+    "exhaustive_ov": 225,
+    "random_cyclic": 2000
+  },
+  "passed": true
+}

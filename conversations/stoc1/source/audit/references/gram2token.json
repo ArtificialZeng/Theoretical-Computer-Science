@@ -1,0 +1,28 @@
+{
+  "old_key": "gram2token",
+  "new_key": "pmlr-v306-hua26b",
+  "official_url": "https://proceedings.mlr.press/v306/hua26b.html",
+  "bibtex_path": "audit/references/gram2token.official.bib",
+  "metadata_status": "verified_against_official_PMLR_export",
+  "current_title": "Gram2Token: Enabling Run-time GPU-Native Grammar-Constrained Decoding for LLMs",
+  "official_title": "Gram2Token: Enabling Run-time GPU-Native Grammar-Constrained Decoding for LLMs",
+  "title_consistent": true,
+  "authors_consistent": true,
+  "year_consistent": true,
+  "venue_consistent": true,
+  "differences": [
+    "Official key is pmlr-v306-hua26b.",
+    "Official export includes editors, month, PDF URL, and abstract.",
+    "Official capitalization protection differs only in TeX presentation.",
+    "Current address={Online} is absent from official export; replacing with exact export removes it."
+  ],
+  "uncertainties": [],
+  "cite_locations": [
+    {
+      "line": 176,
+      "context": "\\paragraph{Quantitative context.}\nTable~\\ref{tab:prior} separates the operation analyzed here from previous guarantees. The $O(h)$ PSC scan is removed by incrementally maintained reverse annotations; regularity itself is prior art. The shared trie, persistent stack, and lexer products are also established design choices. Gram2Token further studies token-level precomputation for GPU execution~\\cite{gram2token}. These results make a claim that all existing systems merely simulate every candidate unjustified."
+    }
+  ],
+  "action": "replace current entry with verbatim official export and update complete citation key",
+  "prose_claim_support_status": "not_evaluated_pending_citation_check_pass_2"
+}

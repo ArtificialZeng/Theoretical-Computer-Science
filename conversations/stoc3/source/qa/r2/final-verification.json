@@ -1,0 +1,19 @@
+{
+  "pdfPages": 18,
+  "normalTextFont": "11pt article; XML normal roman text size 11",
+  "declaredMarginsInches": 1.05,
+  "minimumContentLeftBp": 74.0,
+  "maximumContentRightBp": 539.0,
+  "authorOrder": [
+    "Zijian Zeng",
+    "Jiayin Cao",
+    "Weinan Dai",
+    "Rui Wang",
+    "Fei Ding"
+  ],
+  "correspondingAuthor": "Zijian Zeng",
+  "noOverfullBoxes": true,
+  "noUndefinedReferences": true,
+  "measuredSizesChecked": 5,
+  "githubCommit": "87ad1b7f6e5c603a94bdbe2e1fb6a71cc70c8f2c"
+}

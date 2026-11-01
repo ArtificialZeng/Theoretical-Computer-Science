@@ -11,7 +11,7 @@ NAV = "[English](README.md) · [中文](README.zh-CN.md) · [Deutsch](README.de.
 
 COPY = {
 "en": {
-"intro": "Research manuscripts, reproducible code and exact certificates in theoretical computer science. This snapshot contains **10 manuscript packages**: the initial five-paper collection and five later continuous-research releases. Each topic below has an abstract, a PDF, an unchanged source archive, and browseable source code.",
+"intro": "Research manuscripts, reproducible code and exact certificates in theoretical computer science. This repository contains **15 manuscript packages**: ten from this continuous-research collection and five from other conversations. Three additional conversation folders contain templates only. Each topic below has an abstract, a PDF, an unchanged source archive, and browseable source code.",
 "status": "**Read the scope labels:** seven manuscripts are recorded as complete resolutions of their stated targets; three early manuscripts are partial-result notes whose broader original questions remain unresolved. These are local research/release records, not external peer review or STOC acceptance. The original author lists are preserved; the five later releases list Zijian Zeng as sole author.",
 "overview": "Manuscript index", "topic": "Topic", "pages": "Pages", "scope": "Scope", "artifacts": "Files", "resolved": "Target resolution", "partial": "Legacy partial result", "abstract": "Abstract", "subjects": "What each project studies",
 "notes_title": "Verified research notes: original questions still unresolved",
@@ -22,7 +22,7 @@ COPY = {
 "assistance": "Authorship and assistance", "assistance_text": "Maintainer: **Zijian Zeng, UCSI University** · 1002266693@ucsiuniversity.edu.my. Research, code, proof development and manuscript preparation used substantial AI assistance, disclosed in the manuscripts. Existing third-party license notices are retained; see [RIGHTS.md](RIGHTS.md)."
 },
 "zh": {
-"intro": "本仓库整理理论计算机科学研究稿件、可复现代码与精确证书。本次快照包含 **10 套稿件材料**：最初五篇与之后持续研究产生的五篇。下文逐项提供研究摘要、PDF、保持原样的源码归档及可直接浏览的源码。",
+"intro": "本仓库整理理论计算机科学研究稿件、可复现代码与精确证书。本仓库包含 **15 套稿件材料**：本持续研究对话的十篇，以及其他对话的五篇；另有三个对话目录只有模板。下文逐项提供研究摘要、PDF、保持原样的源码归档及可直接浏览的源码。",
 "status": "**请按范围标记阅读：**七篇稿件在本地记录中完整解决了各自明确的目标；三篇早期稿件属于部分结果，原始更广泛问题仍未解决。这些是本地研究与交付记录，不代表外部同行评审或 STOC 录用。原作者名单保持不变，后五篇稿件仅署名 Zijian Zeng。",
 "overview": "稿件索引", "topic": "课题", "pages": "页数", "scope": "结果范围", "artifacts": "文件", "resolved": "明确目标的完整解答", "partial": "早期部分结果", "abstract": "摘要", "subjects": "各课题研究了什么",
 "notes_title": "已验证研究笔记：原题仍未解决",
@@ -33,7 +33,7 @@ COPY = {
 "assistance": "作者与研究辅助", "assistance_text": "维护者：**Zijian Zeng，UCSI University** · 1002266693@ucsiuniversity.edu.my。研究、代码、证明推导与写作使用了实质性 AI 辅助，稿件中已披露。所含第三方文件保留原许可说明，见 [RIGHTS.md](RIGHTS.md)。"
 },
 "de": {
-"intro": "Forschungsmanuskripte, reproduzierbarer Code und exakte Zertifikate aus der theoretischen Informatik. Dieser Stand enthält **10 Manuskriptpakete**: die ursprüngliche Fünfergruppe und fünf spätere Ergebnisse der fortlaufenden Forschung. Zu jedem Thema gibt es eine Zusammenfassung, das PDF, ein unverändertes Quellarchiv und direkt einsehbaren Quellcode.",
+"intro": "Forschungsmanuskripte, reproduzierbarer Code und exakte Zertifikate aus der theoretischen Informatik. Dieser Stand enthält **15 Manuskriptpakete**: zehn aus dieser Forschungsreihe und fünf aus anderen Gesprächen; drei weitere Ordner enthalten nur Vorlagen. Zu jedem Thema gibt es eine Zusammenfassung, das PDF, ein unverändertes Quellarchiv und direkt einsehbaren Quellcode.",
 "status": "**Bitte den Geltungsbereich beachten:** Sieben Manuskripte werden lokal als vollständige Lösungen ihrer präzisen Ziele geführt; drei ältere Manuskripte enthalten Teilresultate, während die allgemeineren Ausgangsfragen offenbleiben. Dies sind lokale Forschungs- und Freigabeprotokolle, keine externe Begutachtung oder STOC-Annahme. Die ursprünglichen Autorenlisten bleiben erhalten; die fünf späteren Manuskripte nennen nur Zijian Zeng.",
 "overview": "Manuskriptübersicht", "topic": "Thema", "pages": "Seiten", "scope": "Geltungsbereich", "artifacts": "Dateien", "resolved": "Präzises Ziel vollständig gelöst", "partial": "Älteres Teilresultat", "abstract": "Zusammenfassung", "subjects": "Fragestellungen und Ergebnisse",
 "notes_title": "Geprüfte Forschungsnotizen: Ausgangsfragen weiterhin offen",
@@ -44,7 +44,7 @@ COPY = {
 "assistance": "Autoren und Unterstützung", "assistance_text": "Verantwortlicher: **Zijian Zeng, UCSI University** · 1002266693@ucsiuniversity.edu.my. Forschung, Code, Beweisentwicklung und Manuskripte nutzten wesentliche KI-Unterstützung, die in den Texten offengelegt wird. Vorhandene Lizenzhinweise Dritter bleiben erhalten; siehe [RIGHTS.md](RIGHTS.md)."
 },
 "fr": {
-"intro": "Manuscrits de recherche, code reproductible et certificats exacts en informatique théorique. Cet instantané contient **10 ensembles de documents** : les cinq manuscrits initiaux et cinq résultats ultérieurs de la recherche continue. Chaque sujet dispose d’un résumé, d’un PDF, d’une archive source inchangée et de sources consultables directement.",
+"intro": "Manuscrits de recherche, code reproductible et certificats exacts en informatique théorique. Ce dépôt contient **15 ensembles de documents** : dix de cette recherche continue et cinq d’autres conversations ; trois autres dossiers contiennent seulement des modèles. Chaque sujet dispose d’un résumé, d’un PDF, d’une archive source inchangée et de sources consultables directement.",
 "status": "**Bien lire la portée des résultats :** sept manuscrits sont enregistrés localement comme des résolutions complètes de leurs objectifs précis ; trois anciens manuscrits présentent des résultats partiels dont les questions générales restent ouvertes. Ces dossiers locaux ne constituent ni une évaluation externe par les pairs ni une acceptation à STOC. Les listes d’auteurs d’origine sont conservées ; les cinq manuscrits ultérieurs ont Zijian Zeng pour seul auteur.",
 "overview": "Index des manuscrits", "topic": "Sujet", "pages": "Pages", "scope": "Portée", "artifacts": "Fichiers", "resolved": "Objectif précis résolu", "partial": "Ancien résultat partiel", "abstract": "Résumé", "subjects": "Questions étudiées et résultats",
 "notes_title": "Notes vérifiées : les questions initiales restent ouvertes",
@@ -55,7 +55,7 @@ COPY = {
 "assistance": "Auteurs et assistance", "assistance_text": "Responsable : **Zijian Zeng, UCSI University** · 1002266693@ucsiuniversity.edu.my. La recherche, le code, les preuves et la rédaction ont utilisé une assistance substantielle de l’IA, déclarée dans les manuscrits. Les mentions de licence existantes sont conservées ; voir [RIGHTS.md](RIGHTS.md)."
 },
 "ja": {
-"intro": "理論計算機科学の研究稿、再現可能なコード、厳密な証明書をまとめたリポジトリ。本スナップショットには、初期の五編と継続研究の五編、計 **10 セットの論文資料**を収録する。各課題について、概要、PDF、変更していないソースアーカイブ、閲覧可能なコードを用意している。",
+"intro": "理論計算機科学の研究稿、再現可能なコード、厳密な証明書をまとめたリポジトリ。本リポジトリには、この継続研究の十編と他の会話の五編、計 **15 セットの論文資料**を収録する。他に三つの会話フォルダーはテンプレートのみである。各課題について、概要、PDF、変更していないソースアーカイブ、閲覧可能なコードを用意している。",
 "status": "**結果の範囲に注意：**研究記録上、七編は明示した研究目標の完全な解答に位置付けられている。初期の三編は部分結果であり、元のより一般的な問いは未解決である。これらはローカルの研究・公開確認記録で、外部査読や STOC 採択を意味しない。元の著者一覧を維持し、後の五編は Zijian Zeng の単著である。",
 "overview": "論文原稿一覧", "topic": "課題", "pages": "ページ数", "scope": "結果の範囲", "artifacts": "ファイル", "resolved": "明示した目標の完全解答", "partial": "初期の部分結果", "abstract": "概要", "subjects": "各課題の研究内容",
 "notes_title": "検証済み研究ノート：元の問いは未解決",
@@ -86,6 +86,19 @@ def main():
                   "```sh", "git clone https://github.com/ArtificialZeng/Theoretical-Computer-Science.git", "cd Theoretical-Computer-Science",
                   "python3 scripts/verify_artifacts.py", "python3 scripts/reproduce.py --all", "# Optional: rebuild every PDF", "python3 scripts/build_pdfs.py --all", "```", "",
                   f'## {t["layout"]}', "", t["layout_text"], "", f'## {t["assistance"]}', "", t["assistance_text"], ""]
+        extra = {
+            "en": ("Other conversation manuscripts", "Eight folders stoc1–stoc8 are indexed: five existing manuscripts and three template-only folders. These scoped manuscripts retain their originality limitations and do not count as new accepted continuous-research resolutions.", "Comparative ranking"),
+            "zh": ("其他对话的稿件", "已整理 stoc1–stoc8 全部八个文件夹：五篇已有论文、三个纯模板目录。五篇稿件保留各自的范围与新颖性限制，不作为持续研究新通过的原题解答。", "综合排名"),
+            "de": ("Manuskripte aus anderen Gesprächen", "Alle acht Ordner stoc1–stoc8 sind erfasst: fünf vorhandene Manuskripte und drei reine Vorlagenordner. Die Manuskripte behalten ihre Einschränkungen zur Neuheit und gelten nicht als neu akzeptierte vollständige Lösungen.", "Vergleichende Rangfolge"),
+            "fr": ("Manuscrits des autres conversations", "Les huit dossiers stoc1–stoc8 sont recensés : cinq manuscrits existants et trois dossiers de modèles. Les limites de portée et de nouveauté sont conservées ; il ne s’agit pas de nouvelles résolutions validées par la recherche continue.", "Classement comparatif"),
+            "ja": ("他の会話の論文原稿", "stoc1–stoc8 の全八フォルダーを整理した。既存の論文原稿は五編で、三フォルダーはテンプレートのみである。各原稿の独創性と結果の範囲に関する制限を保持し、継続研究で新たに承認された完全解答とは扱わない。", "比較順位")
+        }[lang]
+        lines += [f"## {extra[0]}", "", extra[1], "", "[stoc1–stoc8](conversations/README.md)", ""]
+        for p in json.loads((ROOT / "conversation-catalog.json").read_text())["items"]:
+            if p["kind"] != "existing-conversation-manuscript":
+                continue
+            lines += [f"### {p['title']}", "", f"**{t['abstract']}.** {ABSTRACTS[p['id']][lang]}", "", f"[PDF]({p['pdf']}) · [ZIP]({p['source_archive']}) · [Code]({p['source_directory']}/) · [Reproduce]({p['readme']})", ""]
+        lines += [f"## {extra[2]}", "", "[中文：按 STOC 相对竞争力和新增解决问题大小排序](RANKING.zh-CN.md) · [English assessment](RANKING.md) · [Data](ranking.json)", "", "```sh", "python3 scripts/check_conversations.py --all", "```", ""]
         (ROOT / filename).write_text("\n".join(lines))
     for p in PAPERS:
         commands = "\n".join("python3 " + " ".join(c) for c in p["reproduction_commands"])

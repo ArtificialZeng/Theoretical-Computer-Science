@@ -1,0 +1,345 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        1
+      ]
+    ],
+    "date-time": "2026-10-01T14:35:17Z",
+    "timestamp": 1790865317674,
+    "version": "4.1.0"
+  },
+  "publisher-location": "Berlin, Heidelberg",
+  "reference-count": 23,
+  "publisher": "Springer Berlin Heidelberg",
+  "isbn-type": [
+    {
+      "value": "9783540781622",
+      "type": "print"
+    },
+    {
+      "value": "9783540781639",
+      "type": "electronic"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "DOI": "10.1007/978-3-540-78163-9_6",
+  "type": "book-chapter",
+  "created": {
+    "date-parts": [
+      [
+        2008,
+        2,
+        29
+      ]
+    ],
+    "date-time": "2008-02-29T10:30:06Z",
+    "timestamp": 1204281006000
+  },
+  "page": "8-21",
+  "source": "Crossref",
+  "is-referenced-by-count": 17,
+  "title": [
+    "An Improved Tight Closure Algorithm for Integer Octagonal Constraints"
+  ],
+  "prefix": "10.1007",
+  "author": [
+    {
+      "given": "Roberto",
+      "family": "Bagnara",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Patricia M.",
+      "family": "Hill",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Enea",
+      "family": "Zaffanella",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "reference": [
+    {
+      "key": "6_CR1",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "219",
+      "DOI": "10.1007/978-3-540-71410-1_16",
+      "volume-title": "Logic-Based Program Synthesis and Transformation",
+      "author": "R. Bagnara",
+      "year": "2007",
+      "unstructured": "Bagnara, R., et al.: Grids: A Domain for Analyzing the Distribution of Numerical Values. In: Puebla, G. (ed.) LOPSTR 2006. LNCS, vol.\u00a04407, pp. 219\u2013235. Springer, Heidelberg (2007)"
+    },
+    {
+      "key": "6_CR2",
+      "series-title": "Lecture Notes in Computer Science",
+      "first-page": "3",
+      "volume-title": "Static Analysis",
+      "author": "P.M. Hill",
+      "year": "2005",
+      "unstructured": "Hill, P.M., et al.: Widening Operators for Weakly-Relational Numeric Abstractions. In: Hankin, C., Siveroni, I. (eds.) SAS 2005. LNCS, vol.\u00a03672, pp. 3\u201318. Springer, Heidelberg (2005)"
+    },
+    {
+      "key": "6_CR3",
+      "unstructured": "Bagnara, R., et al.: Widening operators for weakly-relational numeric abstractions. Quaderno 399, Dipartimento di Matematica, Universit\u00e0 di Parma, Italy (2005), \n                  \n                    http://www.cs.unipr.it/Publications/"
+    },
+    {
+      "key": "6_CR4",
+      "unstructured": "Bagnara, R., Hill, P.M., Zaffanella, E.: The Parma Polyhedra Library: Toward a complete set of numerical abstractions for the analysis and verification of hardware and software systems. Quaderno 457, Dipartimento di Matematica, Universit\u00e0 di Parma, Italy (2006), \n                  \n                    http://www.cs.unipr.it/Publications/\n                  \n                  \n                , also pulished as arXiv:cs.MS/0612085, \n                  \n                    http://arxiv.org/"
+    },
+    {
+      "key": "6_CR5",
+      "series-title": "ACM SIGPLAN Notices",
+      "doi-asserted-by": "publisher",
+      "first-page": "41",
+      "DOI": "10.1145/73141.74822",
+      "volume-title": "Proceedings of the ACM SIGPLAN 1989 Conference on Programming Language Design and Implementation (PLDI)",
+      "author": "V. Balasundaram",
+      "year": "1989",
+      "unstructured": "Balasundaram, V., Kennedy, K.: A technique for summarizing data access and its use in parallelism enhancing transformations. In: Knobe, B. (ed.) Proceedings of the ACM SIGPLAN 1989 Conference on Programming Language Design and Implementation (PLDI), Portland, Oregon, USA. ACM SIGPLAN Notices, vol.\u00a024(7), pp. 41\u201353. ACM Press, New York (1989)"
+    },
+    {
+      "key": "6_CR6",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "crossref",
+      "first-page": "457",
+      "DOI": "10.1007/978-3-540-27813-9_36",
+      "volume-title": "Computer Aided Verification",
+      "author": "T. Ball",
+      "year": "2004",
+      "unstructured": "Ball, T., et al.: Zapato: Automatic theorem proving for predicate abstraction refinement. In: Alur, R., Peled, D.A. (eds.) CAV 2004. LNCS, vol.\u00a03114, pp. 457\u2013461. Springer, Heidelberg (2004)"
+    },
+    {
+      "key": "6_CR7",
+      "volume-title": "Introduction to Algorithms",
+      "author": "T.H. Cormen",
+      "year": "1990",
+      "unstructured": "Cormen, T.H., Leiserson, T.E., Rivest, R.L.: Introduction to Algorithms. The MIT Press, Cambridge (1990)"
+    },
+    {
+      "key": "6_CR8",
+      "first-page": "238",
+      "volume-title": "Proceedings of the Fourth Annual ACM Symposium on Principles of Programming Languages",
+      "author": "P. Cousot",
+      "year": "1977",
+      "unstructured": "Cousot, P., Cousot, R.: Abstract interpretation: A unified lattice model for static analysis of programs by construction or approximation of fixpoints. In: Proceedings of the Fourth Annual ACM Symposium on Principles of Programming Languages, pp. 238\u2013252. ACM Press, New York (1977)"
+    },
+    {
+      "key": "6_CR9",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "crossref",
+      "first-page": "21",
+      "DOI": "10.1007/978-3-540-31987-0_3",
+      "volume-title": "Programming Languages and Systems",
+      "author": "P. Cousot",
+      "year": "2005",
+      "unstructured": "Cousot, P., et al.: The ASTRE\u00c9 Analyzer. In: Sagiv, M. (ed.) ESOP 2005. LNCS, vol.\u00a03444, pp. 21\u201330. Springer, Heidelberg (2005)"
+    },
+    {
+      "key": "6_CR10",
+      "doi-asserted-by": "publisher",
+      "first-page": "165",
+      "DOI": "10.1080/00207168908803778",
+      "volume": "30",
+      "author": "P. Granger",
+      "year": "1989",
+      "unstructured": "Granger, P.: Static analysis of arithmetical congruences. International Journal of Computer Mathematics\u00a030, 165\u2013190 (1989)",
+      "journal-title": "International Journal of Computer Mathematics"
+    },
+    {
+      "key": "6_CR11",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "crossref",
+      "first-page": "169",
+      "DOI": "10.1007/3-540-53982-4_10",
+      "volume-title": "TAPSOFT \u201991. Proceedings of the International Joint Conference on Theory and Practice of Software Development",
+      "author": "P. Granger",
+      "year": "1991",
+      "unstructured": "Granger, P.: Static analysis of linear congruence equalities among variables of a program. In: Abramsky, S. (ed.) CAAP 1991 and TAPSOFT 1991. LNCS, vol.\u00a0493, pp. 169\u2013192. Springer, Heidelberg (1991)"
+    },
+    {
+      "key": "6_CR12",
+      "unstructured": "Harvey, W., Stuckey, P.J.: A unit two variable per inequality integer constraint solver for constraint logic programming. In: Patel, M. (ed.) ACSC 1997: Proceedings of the 20th Australasian Computer Science Conference. Australian Computer Science Communications, vol.\u00a019, pp. 102\u2013111 (1997)"
+    },
+    {
+      "key": "6_CR13",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "crossref",
+      "first-page": "86",
+      "DOI": "10.1007/3-540-58601-6_92",
+      "volume-title": "Principles and Practice of Constraint Programming",
+      "author": "J. Jaffar",
+      "year": "1994",
+      "unstructured": "Jaffar, J., et al.: Beyond finite domains. In: Borning, A. (ed.) PPCP 1994. LNCS, vol.\u00a0874, pp. 86\u201394. Springer, Heidelberg (1994)"
+    },
+    {
+      "issue": "1",
+      "key": "6_CR14",
+      "doi-asserted-by": "publisher",
+      "first-page": "196",
+      "DOI": "10.1137/0214016",
+      "volume": "14",
+      "author": "J.C. Lagarias",
+      "year": "1985",
+      "unstructured": "Lagarias, J.C.: The computational complexity of simultaneous Diophantine approximation problems. SIAM Journal on Computing\u00a014(1), 196\u2013209 (1985)",
+      "journal-title": "SIAM Journal on Computing"
+    },
+    {
+      "key": "6_CR15",
+      "series-title": "Lecture Notes in Artificial Intelligence",
+      "doi-asserted-by": "publisher",
+      "first-page": "168",
+      "DOI": "10.1007/11559306_9",
+      "volume-title": "Frontiers of Combining Systems",
+      "author": "S.K. Lahiri",
+      "year": "2005",
+      "unstructured": "Lahiri, S.K., Musuvathi, M.: An Efficient Decision Procedure for UTVPI Constraints. In: Gramlich, B. (ed.) FroCos 2005. LNCS (LNAI), vol.\u00a03717, pp. 168\u2013183. Springer, Heidelberg (2005)"
+    },
+    {
+      "key": "6_CR16",
+      "doi-asserted-by": "publisher",
+      "first-page": "310",
+      "DOI": "10.1109/WCRE.2001.957836",
+      "volume-title": "Proceedings of the Eighth Working Conference on Reverse Engineering (WCRE 2001)",
+      "author": "A. Min\u00e9",
+      "year": "2001",
+      "unstructured": "Min\u00e9, A.: The octagon abstract domain. In: Proceedings of the Eighth Working Conference on Reverse Engineering (WCRE 2001), Stuttgart, Germany, 2001, pp. 310\u2013319. IEEE Computer Society Press, Los Alamitos (2001)"
+    },
+    {
+      "key": "6_CR17",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "DOI": "10.1007/3-540-45789-5_11",
+      "volume-title": "Static Analysis",
+      "author": "A. Min\u00e9",
+      "year": "2002",
+      "unstructured": "Min\u00e9, A.: A Few Graph-Based Relational Numerical Abstract Domains. In: Hermenegildo, M.V., Puebla, G. (eds.) SAS 2002. LNCS, vol.\u00a02477, Springer, Heidelberg (2002)"
+    },
+    {
+      "key": "6_CR18",
+      "unstructured": "Min\u00e9, A.: Weakly Relational Numerical Abstract Domains. PhD thesis, \u00c9cole Polytechnique, Paris, France (March 2005)"
+    },
+    {
+      "issue": "1",
+      "key": "6_CR19",
+      "doi-asserted-by": "publisher",
+      "first-page": "31",
+      "DOI": "10.1007/s10990-006-8609-1",
+      "volume": "19",
+      "author": "A. Min\u00e9",
+      "year": "2006",
+      "unstructured": "Min\u00e9, A.: The octagon abstract domain. Higher-Order and Symbolic Computation\u00a019(1), 31\u2013100 (2006)",
+      "journal-title": "Higher-Order and Symbolic Computation"
+    },
+    {
+      "key": "6_CR20",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Nelson, G., Oppen, D.C.: Fast decision algorithms based on Union and Find. In: Proceedings of the 18th Annual Symposium on Foundations of Computer Science (FOCS 1977), Providence, RI, USA, pp. 114\u2013119. IEEE Computer Society Press, Los Alamitos (1977), The journal version of this paper is [21]",
+      "DOI": "10.1109/SFCS.1977.12"
+    },
+    {
+      "issue": "2",
+      "key": "6_CR21",
+      "doi-asserted-by": "crossref",
+      "first-page": "356",
+      "DOI": "10.1145/322186.322198",
+      "volume": "27",
+      "author": "G. Nelson",
+      "year": "1980",
+      "unstructured": "Nelson, G., Oppen, D.C.: Fast decision procedures based on congruence closure. Journal of the ACM\u00a027(2), 356\u2013364 (1980), An earlier version of this paper is [20]",
+      "journal-title": "Journal of the ACM"
+    },
+    {
+      "key": "6_CR22",
+      "unstructured": "V.\u00a0R. Pratt. Two easy theories whose combination is hard. Memo sent to Nelson and Oppen concerning a preprint of their paper [20] (September 1977)"
+    },
+    {
+      "key": "6_CR23",
+      "doi-asserted-by": "publisher",
+      "first-page": "231",
+      "DOI": "10.1145/996841.996869",
+      "volume-title": "Proceedings of the ACM SIGPLAN 2004 Conference on Programming Language Design and Implementation (PLDI 2004)",
+      "author": "A. Venet",
+      "year": "2004",
+      "unstructured": "Venet, A., Brat, G.: Precise and efficient static array bound checking for large embedded C programs. In: Proceedings of the ACM SIGPLAN 2004 Conference on Programming Language Design and Implementation (PLDI 2004), Washington, DC, USA, 2004, pp. 231\u2013242. ACM Press, New York (2004)"
+    }
+  ],
+  "container-title": [
+    "Lecture Notes in Computer Science",
+    "Verification, Model Checking, and Abstract Interpretation"
+  ],
+  "original-title": [],
+  "language": "en",
+  "link": [
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/978-3-540-78163-9_6.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2021,
+        4,
+        27
+      ]
+    ],
+    "date-time": "2021-04-27T11:00:38Z",
+    "timestamp": 1619521238000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.1007/978-3-540-78163-9_6"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        null
+      ]
+    ]
+  },
+  "ISBN": [
+    "9783540781622",
+    "9783540781639"
+  ],
+  "references-count": 23,
+  "URL": "https://doi.org/10.1007/978-3-540-78163-9_6",
+  "relation": {},
+  "subject": []
+}

@@ -1,0 +1,15 @@
+{
+  "artifact_id": "tpc-completion-r2-20261031",
+  "files": {
+    "README.md": "179ddb4806e8ced721476c0b7047b71a831aa93526199fadecd56bda01f715cf",
+    "viable.rs": "a2c9abd1ce6e5b8ecfd4dc81167daa8960765f62a07e08290b2ec054e2894517",
+    "viable.py": "234779de9b0b8dcf048b8f47bee1b273cad6085a7c79bf8a6b164c613baca5aa",
+    "verify.py": "86177af149ad25a45b39bc1f054dcdb6fcb4d7701dfda78e246185d887871d30",
+    "block_index.py": "3f63b64b178938eb61eddccc527a95059745e11d077fd6d25e9c8888105b7a97",
+    "verify_blocks.py": "189e1e39eb41d60a3a74d684fce1df136664cb212a2f028aa57ed300c0175ea8",
+    "results.json": "ab6ff044e6ccc66b3a13392569887389c6d6063e87ce0116b2ac5cbb1e6adb2f",
+    "block_results.json": "048331010b7429d16f5e2db87b4c512040644391492c34a9f093a30c8018c703",
+    "validation_table.tex": "7b39309759928874286953d799852dedd5dac4383280f5fa03027054b9901591"
+  },
+  "scope": "finite correctness and logical table payloads; no full pushdown compiler or serving benchmark"
+}

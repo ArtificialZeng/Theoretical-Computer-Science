@@ -1,0 +1,9 @@
+{
+  "arrowReductionCases": 225,
+  "coprimeCycles": {
+    "p": 17,
+    "q": 19,
+    "pairs": 323
+  },
+  "passed": true
+}

@@ -1,6 +1,9 @@
 {
   "passed": true,
-  "manuscripts": 10,
+  "scope": "Synchronization integrity and truthful documentation, not a claim that every new mathematical suite ran",
+  "manuscripts": 15,
+  "conversation_folders": 8,
+  "template_only_folders": 3,
   "languages": [
     "en",
     "zh-CN",
@@ -8,11 +11,18 @@
     "fr",
     "ja"
   ],
-  "readme_files_checked": 17,
-  "broken_readme_links": [],
-  "artifact_hashes_and_expanded_source": true,
-  "mathematical_reproductions": true,
-  "clean_builds_and_normalized_text_equality": true,
-  "method_note_checks": true,
-  "released_artifacts_unchanged": true
+  "legacy10_artifact_hashes_and_expansion_verified": true,
+  "new5_archive_hashes_and_expansion_verified": true,
+  "new5_clean_builds_and_normalized_text_equality": true,
+  "new5_math_reproduction": {
+    "stoc2": "passed",
+    "stoc3": "passed",
+    "stoc4": "passed",
+    "stoc5": "passed",
+    "stoc1": "not rerun: rustc unavailable; exit127 retained"
+  },
+  "readme_links_checked": 26,
+  "credential_pattern_findings": [],
+  "original_manuscripts_and_sourceZIPs_unchanged": true,
+  "rankings": "15manuscripts,2ordinalorders,no calibrated numerical probabilities"
 }

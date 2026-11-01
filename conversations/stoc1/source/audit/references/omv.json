@@ -1,0 +1,39 @@
+{
+  "old_key": "omv",
+  "new_key": "Henzinger_2015",
+  "official_url": "https://api.crossref.org/works/10.1145/2746539.2746609/transform/application/x-bibtex",
+  "record_url": "https://doi.org/10.1145/2746539.2746609",
+  "bibtex_path": "audit/references/omv.official.bib",
+  "metadata_status": "verified_primary_doi_export",
+  "title": "Unifying and Strengthening Hardness for Dynamic Problems via the Online Matrix-Vector Multiplication Conjecture",
+  "authors": [
+    "Monika Henzinger",
+    "Sebastian Krinninger",
+    "Danupon Nanongkai",
+    "Thatchaphol Saranurak"
+  ],
+  "year": 2015,
+  "venue": "Proceedings of the forty-seventh annual ACM symposium on Theory of Computing",
+  "pages": "21–30",
+  "differences": [
+    "Official key differs.",
+    "Official export uses exact proceedings capitalization, adds series, collection and June month, omits editorial full-version note and publisher address.",
+    "Authors and page range in current record are correct."
+  ],
+  "uncertainties": [
+    "Crossref exports month=June as a bare macro; preserve raw export and define @string{June = \"June\"} outside entry to avoid BibTeX undefined-string warning.",
+    "Manuscript pinpoints Theorem 2.2 of the full arXiv version; official proceedings entry has no full-version note. Add a companion arXiv source citation or explicit full-version locator in surrounding text if the proceedings numbering differs. No semantic-support verdict issued."
+  ],
+  "cite_locations": [
+    287
+  ],
+  "claim_support_status": "not_assessed_pending_pass_1_confirmation",
+  "corroborating_primary_url": "https://research-explorer.ista.ac.at/record/11868",
+  "searches_completed": [
+    "Henzinger 2015 Unifying Strengthening Hardness Dynamic Problems Online Matrix Vector",
+    "full title arxiv/semanticscholar",
+    "Henzinger Krinninger Nanongkai Saranurak 2015 STOC 21 30",
+    "doi:10.1145/2746539.2746609",
+    "arxiv:1511.06773"
+  ]
+}

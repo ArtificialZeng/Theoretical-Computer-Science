@@ -1,0 +1,22 @@
+{
+  "files": 23098,
+  "topLevelCandidates": 59949,
+  "accepted": 4072,
+  "corpusDigest": "a2e28632e9fd2a9d838ac94f0c7afaee8bbd3acd2249cb77978390a85e0b4ce4",
+  "backedgeHistogram": {
+    "0": 4069,
+    "1": 3
+  },
+  "quotientHistogram": {
+    "1-4": 4007,
+    "5-16": 64,
+    "17-64": 1
+  },
+  "queries": 2510,
+  "queryNs": {
+    "p50": 458,
+    "p90": 3416,
+    "p99": 19542
+  },
+  "node": "v25.5.0"
+}

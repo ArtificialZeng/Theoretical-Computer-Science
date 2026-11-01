@@ -1,0 +1,33 @@
+{
+  "old_key": "lee",
+  "new_key": "Lee:02a",
+  "official_url": "https://www.cs.cornell.edu/home/llee/papers/bmmcfl-jacm.home.html",
+  "bibtex_path": "audit/references/lee.official.bib",
+  "metadata_status": "verified_author_official_bibtex",
+  "title": "Fast context-free grammar parsing requires fast Boolean matrix multiplication",
+  "authors": [
+    "Lillian Lee"
+  ],
+  "year": 2002,
+  "venue": "Journal of the ACM",
+  "volume": "49",
+  "number": "1",
+  "pages": "1--15",
+  "differences": [
+    "Official author-supplied key is Lee:02a.",
+    "Title case follows author export, Boolean remains protected.",
+    "Author official BibTeX omits the URL field; all bibliographic values otherwise match."
+  ],
+  "uncertainties": [],
+  "source_snapshot": "audit/references/lee.source.html",
+  "cite_locations": [
+    308
+  ],
+  "claim_support_status": "not_assessed_pending_pass_1_confirmation",
+  "searches_completed": [
+    "Lee 2002 Fast Context Free Grammar Parsing Requires Boolean Matrix Multiplication",
+    "full title arxiv/semanticscholar",
+    "Lillian Lee 2002 Journal ACM 49 1 1 15",
+    "doi:10.1145/505241.505242"
+  ]
+}

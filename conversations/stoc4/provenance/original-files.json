@@ -1,0 +1,16 @@
+{
+  "id": "stoc4",
+  "title": "Fully Dynamic Interprocedural Dataflow Analysis: OMv Barriers and Summary-Local TreeFlow Updates",
+  "kind": "existing-conversation-manuscript",
+  "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+  "pages": 10,
+  "pdf": "conversations/stoc4/paper.pdf",
+  "source_archive": "conversations/stoc4/source.zip",
+  "source_directory": "conversations/stoc4/source",
+  "archive_prefix": "stoc4/",
+  "pdf_sha256": "db743d64d2a56de670aa03b05fff49328d304abb7dcbbadb8023a888579a95fc",
+  "source_archive_sha256": "1e3e3cf98527b6e7be6ad641c31f76db75bb4a7073f0af393a46458a9a023180",
+  "original_pdf": "stoc4/4.pdf",
+  "original_archive": "stoc4/4_source.zip",
+  "readme": "conversations/stoc4/README.md"
+}

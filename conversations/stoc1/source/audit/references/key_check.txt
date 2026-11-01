@@ -1,0 +1,12 @@
+tex: 1.tex
+bibliography_files: 1
+  references.bib
+cited_keys: 21
+bib_keys: 21
+missing_bib_files: 0
+cited_keys_missing_from_bib: 0
+bib_keys_not_cited: 0
+aux: build/1.aux
+aux_bibcite_keys: 21
+cited_keys_missing_from_aux: 0
+aux_keys_not_cited: 0

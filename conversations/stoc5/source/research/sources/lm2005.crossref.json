@@ -1,0 +1,331 @@
+{
+  "indexed": {
+    "date-parts": [
+      [
+        2026,
+        10,
+        30
+      ]
+    ],
+    "date-time": "2026-10-30T22:04:49Z",
+    "timestamp": 1793397889944,
+    "version": "4.5.0"
+  },
+  "publisher-location": "Berlin, Heidelberg",
+  "reference-count": 21,
+  "publisher": "Springer Berlin Heidelberg",
+  "isbn-type": [
+    {
+      "value": "9783540290513",
+      "type": "print"
+    },
+    {
+      "value": "9783540317302",
+      "type": "electronic"
+    }
+  ],
+  "content-domain": {
+    "domain": [],
+    "crossmark-restriction": false
+  },
+  "short-container-title": [],
+  "published-print": {
+    "date-parts": [
+      [
+        2005
+      ]
+    ]
+  },
+  "DOI": "10.1007/11559306_9",
+  "type": "book-chapter",
+  "created": {
+    "date-parts": [
+      [
+        2005,
+        9,
+        27
+      ]
+    ],
+    "date-time": "2005-09-27T12:50:36Z",
+    "timestamp": 1127825436000
+  },
+  "page": "168-183",
+  "source": "Crossref",
+  "is-referenced-by-count": 52,
+  "title": [
+    "An Efficient Decision Procedure for UTVPI Constraints"
+  ],
+  "prefix": "10.1007",
+  "author": [
+    {
+      "given": "Shuvendu K.",
+      "family": "Lahiri",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    },
+    {
+      "given": "Madanlal",
+      "family": "Musuvathi",
+      "sequence": "additional",
+      "affiliation": [],
+      "role": [
+        {
+          "vocabulary": "crossref",
+          "role": "author"
+        }
+      ]
+    }
+  ],
+  "member": "297",
+  "reference": [
+    {
+      "key": "9_CR1",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "457",
+      "DOI": "10.1007/978-3-540-27813-9_36",
+      "volume-title": "Computer Aided Verification",
+      "author": "T. Ball",
+      "year": "2004",
+      "unstructured": "Ball, T., Cook, B., Lahiri, S.K., Zhang, L.: Zapato: Automatic Theorem Proving for Software Predicate Abstraction Refinement. In: Alur, R., Peled, D.A. (eds.) CAV 2004. LNCS, vol.\u00a03114, pp. 457\u2013461. Springer, Heidelberg (2004)"
+    },
+    {
+      "key": "#cr-split#-9_CR2.1",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Ball, T., Majumdar, R., Millstein, T., Rajamani, S.K.: Automatic predicate abstraction of C programs. In: Programming Language Design and Implementation (PLDI 2001), Snowbird, Utah (June 2001);",
+      "DOI": "10.1145/378795.378846"
+    },
+    {
+      "key": "#cr-split#-9_CR2.2",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Ball, T., Majumdar, R., Millstein, T., Rajamani, S.K.: Automatic predicate abstraction of C programs. In: Programming Language Design and Implementation (PLDI 2001), Snowbird, Utah (June 2001); SIGPLAN Notices, 36(5) (May 2001)",
+      "DOI": "10.1145/378795.378846"
+    },
+    {
+      "issue": "1",
+      "key": "9_CR3",
+      "doi-asserted-by": "crossref",
+      "first-page": "87",
+      "DOI": "10.1090/qam/102435",
+      "volume": "16",
+      "author": "R. Bellman",
+      "year": "1958",
+      "unstructured": "Bellman, R.: On a routing problem. Quarterly of Applied Mathematics\u00a016(1), 87\u201390 (1958)",
+      "journal-title": "Quarterly of Applied Mathematics"
+    },
+    {
+      "key": "9_CR4",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Cherkassky, B.V., Goldberg, A.V.: Negative-cycle detection algorithms. In: European Symposium on Algorithms, pp. 349\u2013363 (1996)",
+      "DOI": "10.1007/3-540-61680-2_67"
+    },
+    {
+      "key": "9_CR5",
+      "volume-title": "Introduction to Algorithms",
+      "author": "T.H. Cormen",
+      "year": "1990",
+      "unstructured": "Cormen, T.H., Leiserson, C.E., Rivest, R.L.: Introduction to Algorithms. MIT Press, Cambridge (1990)"
+    },
+    {
+      "key": "9_CR6",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "355",
+      "DOI": "10.1007/978-3-540-45069-6_34",
+      "volume-title": "Computer Aided Verification",
+      "author": "C. Flanagan",
+      "year": "2003",
+      "unstructured": "Flanagan, C., Joshi, R., Ou, X., Saxe, J.: Theorem Proving usign Lazy Proof Explication. In: Hunt Jr., W.A., Somenzi, F. (eds.) CAV 2003. LNCS, vol.\u00a02725, pp. 355\u2013367. Springer, Heidelberg (2003)"
+    },
+    {
+      "key": "9_CR7",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Flanagan, C., Leino, K.R.M., Lillibridge, M., Nelson, G., Saxe, J.B., Stata, R.: Extended static checking for java. In: ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI 2002), pp. 234\u2013245 (2002)",
+      "DOI": "10.1145/512529.512558"
+    },
+    {
+      "key": "9_CR8",
+      "volume-title": "Flows in Networks",
+      "author": "L.R. Ford Jr.",
+      "year": "1962",
+      "unstructured": "Ford Jr., L.R., Fulkerson, D.R.: Flows in Networks. Princeton University Press, Princeton (1962)"
+    },
+    {
+      "key": "9_CR9",
+      "unstructured": "Harvey, W., Stuckey, P.J.: A unit two variable per inequality integer constraint solver for constraint logic programming. In: Proceedings of the 20th Australasian Computer Science Conference (ACSC 1997), pp. 102\u2013111 (1997)"
+    },
+    {
+      "issue": "3",
+      "key": "9_CR10",
+      "doi-asserted-by": "publisher",
+      "first-page": "422",
+      "DOI": "10.1145/2166.357217",
+      "volume": "5",
+      "author": "J.L. Hennessy",
+      "year": "1983",
+      "unstructured": "Hennessy, J.L., Gross, T.R.: Postpass code optimization of pipeline constraints. ACM Trans. Program. Lang. Syst.\u00a05(3), 422\u2013448 (1983)",
+      "journal-title": "ACM Trans. Program. Lang. Syst."
+    },
+    {
+      "key": "9_CR11",
+      "doi-asserted-by": "crossref",
+      "unstructured": "Jaffar, J., Maher, M.J., Stuckey, P.J., Yap, H.C.: Beyond Finite Domains. In: Proceedings of the Second International Workshop on Principles and Practice of Constraint Programming, PPCP 1994 (1994)",
+      "DOI": "10.1007/3-540-58601-6_92"
+    },
+    {
+      "issue": "1",
+      "key": "9_CR12",
+      "doi-asserted-by": "publisher",
+      "first-page": "196",
+      "DOI": "10.1137/0214016",
+      "volume": "14",
+      "author": "J.C. Lagarias",
+      "year": "1985",
+      "unstructured": "Lagarias, J.C.: The computational complexity of simultaneous diophantine approximation problems. SIAM Journal of Computing\u00a014(1), 196\u2013209 (1985)",
+      "journal-title": "SIAM Journal of Computing"
+    },
+    {
+      "key": "9_CR13",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "341",
+      "DOI": "10.1007/978-3-540-45069-6_33",
+      "volume-title": "Computer Aided Verification",
+      "author": "S.K. Lahiri",
+      "year": "2003",
+      "unstructured": "Lahiri, S.K., Bryant, R.E.: Deductive verification of advanced out-of-order microprocessors. In: Hunt Jr., W.A., Somenzi, F. (eds.) CAV 2003. LNCS, vol.\u00a02725, pp. 341\u2013354. Springer, Heidelberg (2003)"
+    },
+    {
+      "key": "9_CR14",
+      "unstructured": "Lahiri, S.K., Musuvathi, M.: An efficient nelson-oppen decision procedure for difference constraints over rationals. Technical Report MSR-TR-2005-61, Microsoft Research (2005)"
+    },
+    {
+      "key": "9_CR15",
+      "first-page": "310",
+      "volume-title": "AST 2001 in WCRE 2001",
+      "author": "A. Min\u00e9",
+      "year": "2001",
+      "unstructured": "Min\u00e9, A.: The octagon abstract domain. In: AST 2001 in WCRE 2001, October 2001, pp. 310\u2013319. IEEE CS Press, IEEE (2001)"
+    },
+    {
+      "key": "9_CR16",
+      "series-title": "Lecture Notes in Computer Science",
+      "doi-asserted-by": "publisher",
+      "first-page": "25",
+      "DOI": "10.1007/10721959_3",
+      "volume-title": "Automated Deduction - CADE-17",
+      "author": "G.C. Necula",
+      "year": "2000",
+      "unstructured": "Necula, G.C., Lee, P.: Proof generation in the touchstone theorem prover. In: McAllester, D. (ed.) CADE 2000. LNCS, vol.\u00a01831, pp. 25\u201344. Springer, Heidelberg (2000)"
+    },
+    {
+      "issue": "1",
+      "key": "9_CR17",
+      "doi-asserted-by": "publisher",
+      "first-page": "245",
+      "DOI": "10.1145/357073.357079",
+      "volume": "2",
+      "author": "G. Nelson",
+      "year": "1979",
+      "unstructured": "Nelson, G., Oppen, D.C.: Simplification by cooperating decision procedures. ACM Transactions on Programming Languages and Systems (TOPLAS)\u00a02(1), 245\u2013257 (1979)",
+      "journal-title": "ACM Transactions on Programming Languages and Systems (TOPLAS)"
+    },
+    {
+      "key": "9_CR18",
+      "unstructured": "Pratt, V.: Two easy theories whose combination is hard. Technical report, Massachusetts Institute of Technology, Cambridge, Mass. (September 1977)"
+    },
+    {
+      "key": "9_CR19",
+      "volume-title": "19th IEEE Symposium of Logic in Computer Science (LICS 2004)",
+      "author": "S.A. Seshia",
+      "year": "2004",
+      "unstructured": "Seshia, S.A., Bryant, R.E.: Deciding quantifier-free presburger formulas using parameterized solution bounds. In: 19th IEEE Symposium of Logic in Computer Science (LICS 2004), July 2004. IEEE Computer Society, Los Alamitos (2004)"
+    },
+    {
+      "issue": "2",
+      "key": "9_CR20",
+      "doi-asserted-by": "publisher",
+      "first-page": "146",
+      "DOI": "10.1137/0201010",
+      "volume": "1",
+      "author": "R.E. Tarjan",
+      "year": "1972",
+      "unstructured": "Tarjan, R.E.: Depth first search and linear graph algorithms. SIAM Journal of Computing\u00a01(2), 146\u2013160 (1972)",
+      "journal-title": "SIAM Journal of Computing"
+    }
+  ],
+  "container-title": [
+    "Lecture Notes in Computer Science",
+    "Frontiers of Combining Systems"
+  ],
+  "original-title": [],
+  "link": [
+    {
+      "URL": "http://link.springer.com/content/pdf/10.1007/11559306_9.pdf",
+      "content-type": "unspecified",
+      "content-version": "vor",
+      "intended-application": "similarity-checking"
+    }
+  ],
+  "deposited": {
+    "date-parts": [
+      [
+        2021,
+        4,
+        27
+      ]
+    ],
+    "date-time": "2021-04-27T07:11:54Z",
+    "timestamp": 1619507514000
+  },
+  "score": 1,
+  "resource": {
+    "primary": {
+      "URL": "http://link.springer.com/10.1007/11559306_9"
+    }
+  },
+  "subtitle": [],
+  "short-title": [],
+  "issued": {
+    "date-parts": [
+      [
+        2005
+      ]
+    ]
+  },
+  "ISBN": [
+    "9783540290513",
+    "9783540317302"
+  ],
+  "references-count": 21,
+  "URL": "https://doi.org/10.1007/11559306_9",
+  "relation": {},
+  "ISSN": [
+    "0302-9743",
+    "1611-3349"
+  ],
+  "issn-type": [
+    {
+      "value": "0302-9743",
+      "type": "print"
+    },
+    {
+      "value": "1611-3349",
+      "type": "electronic"
+    }
+  ],
+  "subject": [],
+  "published": {
+    "date-parts": [
+      [
+        2005
+      ]
+    ]
+  }
+}

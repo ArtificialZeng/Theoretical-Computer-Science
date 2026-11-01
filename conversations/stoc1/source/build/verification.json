@@ -1,0 +1,36 @@
+{
+  "revision": 2,
+  "pages": 12,
+  "single_column": true,
+  "letter_paper": true,
+  "margins_inches": 1,
+  "base_and_bibliography_pdf_font_pt": 11.06,
+  "undefined_citations": false,
+  "overfull_boxes": false,
+  "embedded_artifact_bytes_verified": true,
+  "embedded_artifact_sha256": "18a6bb5df11fde99c682d193292a64c1f505def79f5639e0d07cbcb4606f76e0",
+  "pdf_sha256": "5df559f9b2579911d4640104af77713d414e17d04f334959bc00eeb55bad5b6f",
+  "visual_pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "metadata_records": 21,
+  "official_exports_replaced": 20,
+  "metadata_limitations": [
+    "llguidance has no official BibTeX export located",
+    "XGrammar official export and PDF author order differ"
+  ],
+  "claim_support_pass2": "pending_confirmation",
+  "new_framework_figure": "bootstrap_pending_user_stage_choice",
+  "novelty_certification": "not_established"
+}

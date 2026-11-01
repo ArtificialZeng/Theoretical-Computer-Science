@@ -1,0 +1,28 @@
+{
+  "old_key": "flexible",
+  "new_key": "pmlr-v267-park25l",
+  "official_url": "https://proceedings.mlr.press/v267/park25l.html",
+  "bibtex_path": "audit/references/flexible.official.bib",
+  "metadata_status": "verified_against_official_PMLR_export",
+  "current_title": "Flexible and Efficient Grammar-Constrained Decoding",
+  "official_title": "Flexible and Efficient Grammar-Constrained Decoding",
+  "title_consistent": true,
+  "authors_consistent": true,
+  "year_consistent": true,
+  "venue_consistent": true,
+  "differences": [
+    "Official key is pmlr-v267-park25l.",
+    "Official export includes editors, month, PDF URL, and abstract.",
+    "Official author names use inverted surname/given-name formatting.",
+    "Current address={Online} is absent from official export; replacing with exact export removes it."
+  ],
+  "uncertainties": [],
+  "cite_locations": [
+    {
+      "line": 189,
+      "context": "\\begin{table}[t]\n\\caption{Quantitative comparison of specified operations. $h$ is stack depth, $s$ an explicit DFA size, and $B=\\lceil M/w\\rceil$. System entries do not purport to be universal lower bounds on those implementations.}\n\\label{tab:prior}\n\\small\n\\begin{tabularx}{\\columnwidth}{@{}l >{\\raggedright\\arraybackslash}X@{}}\n\\toprule\nWork / mechanism & Relevant cost or guarantee\\\\\n\\midrule\nExplicit token DFA index~\\cite{outlines} & $O(sD)$ table construction by direct simulation; $O(B+L)$ online with a supplied DFA.\\\\\nDOMINO~\\cite{domino}; lexer products~\\cite{flexible} & Subword alignment and precomputed token/lexeme relations; remaining stack work must be counted.\\\\\nXGrammar~\\cite{xgrammar} & Cached local masks plus dynamic context-dependent checks; persistence avoids copying whole stacks.\\\\\nllguidance~\\cite{llguidance}; SynCode~\\cite{syncode} & Trie/lexer/parser optimizations and formal syntactic reasoning; no depth-only constant in our comparison.\\\\\nPSC, Algorithm 2~\\cite{psc} & Regular stack classifier; $O(h)$ classifier scan plus parsing; mask row can be cached.\\\\\nVIABLE, Theorem~\\ref{thm:index} & $O(B)$ indexed query, $O(L+r_i)$ commit; unrestricted $F(g,L)D$ preprocessing.\\\\\nOnline CFL recognition~\\cite{onlinecfg} & Total $n^3/2^{\\Omega(\\sqrt{\\log n})}$, suppressing grammar factors; a different predicate.\\\\\n\\bottomrule\n\\end{tabularx}\n\\end{table}"
+    }
+  ],
+  "action": "replace current entry with verbatim official export and update complete citation key",
+  "prose_claim_support_status": "not_evaluated_pending_citation_check_pass_2"
+}

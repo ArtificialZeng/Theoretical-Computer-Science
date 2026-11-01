@@ -1,0 +1,17 @@
+\begin{table}[t]
+\caption{Actual deterministic validation coverage. Depth tests use eight specified depths; the interval does not denote exhaustive depth coverage. No timing values are inferred.}\label{tab:validation}
+\small
+\begin{tabularx}{\columnwidth}{@{}Xr@{}}\toprule
+Check & Count\\\midrule
+Dyck vocabulary / maximum length & 340 / 4\\
+All byte prefixes of length at most 6 & 5,461\\
+Exhaustively compared mask bits & 1,856,740\\
+Additional depth-test mask bits & 2,720\\
+Matrices of orders 1 through 3 & 530\\
+Exact matrix-row probes & 12,420\\
+Universal-prefix liveness checks & 70,500\\
+False-positive / false-negative bits & 0 / 0\\
+Stack depths in operation test & 0--4,096\\
+64-bit row words copied at each depth & 6\\
+\bottomrule\end{tabularx}
+\end{table}

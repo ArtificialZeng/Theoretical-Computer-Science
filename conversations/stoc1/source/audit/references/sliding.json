@@ -1,0 +1,19 @@
+{
+  "old_key": "sliding",
+  "new_key": "ganardi_et_al:LIPIcs.FSTTCS.2022.38",
+  "official_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSTTCS.2022.38/metadata/bibtex/download",
+  "official_record_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FSTTCS.2022.38",
+  "bibtex_path": "audit/references/sliding.official.bib",
+  "metadata_status": "verified_official_export",
+  "differences": [
+    "Official key ganardi_et_al:LIPIcs.FSTTCS.2022.38 replaces sliding.",
+    "Title, all four authors in order, 2022 year, venue, LIPIcs volume 250, pages 38:1--38:23 and DOI agree.",
+    "Official export adds venue suffix (FSTTCS 2022), editors, ISBN, ISSN, URL, URN and keyword annotation."
+  ],
+  "uncertainties": [],
+  "source_accessed": "2026-10-31",
+  "tex_locations": [
+    178
+  ],
+  "claim_support_status": "not_assessed_pending_citation_check_pass_2"
+}
