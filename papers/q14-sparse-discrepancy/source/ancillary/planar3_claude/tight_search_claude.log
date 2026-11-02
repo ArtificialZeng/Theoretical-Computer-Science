@@ -1,0 +1,5 @@
+C_8^2 minus 2 far edges: m=14 (2n-2=14), arboricity<=2: True, level-2 schedule: True
+C_9^2 minus 2 far edges: m=16 (2n-2=16), arboricity<=2: True, level-2 schedule: True
+C_10^2 minus 2 far edges: m=18 (2n-2=18), arboricity<=2: True, level-2 schedule: True
+C_11^2 minus 2 far edges: m=20 (2n-2=20), arboricity<=2: True, level-2 schedule: True
+C_12^2 minus 2 far edges: m=22 (2n-2=22), arboricity<=2: True, level-2 schedule: False

@@ -1,0 +1,482 @@
+\documentclass[acmlarge,11pt,screen,nonacm,natbib=false]{acmart}
+\geometry{letterpaper,margin=1in,headheight=14pt,headsep=18pt,footskip=24pt}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\setcopyright{none}
+\usepackage{xurl}
+\AtBeginEnvironment{thebibliography}{\raggedright}
+\acmDOI{}
+\acmISBN{}
+\acmYear{}
+\renewcommand{\bibliofont}{\normalfont\normalsize}
+\newcommand{\own}{\operatorname{own}}
+\newcommand{\Succ}{\operatorname{Succ}}
+\newcommand{\last}{\operatorname{last}}
+\newcommand{\up}{\operatorname{up}}
+\newcommand{\nxt}{\operatorname{next}}
+\newcommand{\pay}{\operatorname{pay}}
+\newcommand{\Hist}{\mathcal H}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\title[Arena-Independent Memory for Reachability SPEs]{Arena-Independent Memory for Pure Subgame-Perfect Equilibria in Reachability Games}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\renewcommand{\shortauthors}{Zijian Zeng}
+\hypersetup{pdfauthor={Zijian Zeng},pdftitle={Arena-Independent Memory for Pure Subgame-Perfect Equilibria in Reachability Games}}
+\begin{document}
+\begin{abstract}
+\normalsize
+In a turn-based game with $n$ players and Boolean reachability objectives,
+every pure subgame-perfect equilibrium can be replaced by one with exactly
+the same winner set using at most $n3^n$ memory states per player. The bound
+holds on every set-sized directed arena without dead ends, with arbitrary
+branching, and uses vertex updates without storing a previous vertex.
+Subgame perfection holds after every legal history, including histories
+inconsistent with the profile, with earlier target visits retained.
+This answers the arena-independent constrained-memory question posed by Main.
+
+The construction associates finitely many credible payoff labels with each
+vertex and visited-target set. It retains a compatible payoff promise and
+otherwise resets it by minimizing the previous owner's payoff bit. A
+vertex-dependent progress selector fulfills a retained promise without
+storing a path position or rank. A losing-bit invariant rules out arbitrary
+unilateral deviations. Combining this compression with the existing
+lower-semicontinuous-payoff existence theorem yields unconditional pure
+finite-memory SPE existence on the same arena class. A finite degree-two
+family with $n=k+2$ players forces at least
+$\binom{k}{\lfloor k/2\rfloor}\geq 2^k/(k+1)$ states in every SPE satisfying
+a single required winner. The bounds determine exponential-order memory
+dependence on the player count, without determining the optimal base.
+\end{abstract}
+\maketitle
+\hypersetup{pdfauthor={Zijian Zeng}}
+\thispagestyle{plain}
+\clearpage
+
+\section{The memory question and the contribution}
+
+In a multiplayer graph game, a player chooses the next vertex at each vertex
+it controls. Its reachability objective asks that a target set be visited
+at least once. A Nash equilibrium excludes profitable unilateral deviations
+from the initial history. A subgame-perfect equilibrium (SPE) must do so
+after every legal history, including histories its prescribed strategies
+never produce. Thus a succinct equilibrium outcome is insufficient:
+the strategies also need credible continuations after deviations and after
+different histories merge at the same vertex.
+
+Main's Automata Exchange question asks whether an SPE satisfying a required
+subset of reachability objectives, whenever one exists, can be implemented
+with memory bounded independently of the arena size~\cite{MainQuestion25}.
+We prove a uniform bound, preserving the entire payoff rather than only the
+required winners. No finiteness or branching assumption is imposed on the arena.
+
+\begin{theorem}[Payoff-preserving compression]\label{thm:main}
+Let $n\geq1$. In every set-sized $n$-player turn-based directed arena without
+dead ends, with an initial vertex and Boolean reachability targets, every
+pure SPE has a pure SPE with exactly the same winner set and at most $n3^n$
+vertex-update memory states per player. The players may share their memory
+set, initial state and update function.
+\end{theorem}
+
+If an SPE wins for every player in a specified set $S$, Theorem~\ref{thm:main}
+gives such an SPE with the stated bound, for every $S$, allowing additional
+winners. In particular it resolves the full constrained-memory question.
+The theorem separates internal memory from the size of the graph even when
+the latter is infinite. Its vertex-dependent strategy tables need not have
+a finite effective description on an infinite arena.
+
+\begin{corollary}[Unconditional existence]\label{cor:existence}
+Every game in Theorem~\ref{thm:main} admits a pure SPE with at most $n3^n$
+vertex-update states per player.
+\end{corollary}
+
+This corollary combines the compression with an old unrestricted existence
+theorem of Flesch, Kuipers, Mashiah-Yaakovi, Schoenmakers, Solan and
+Vrieze~\cite{FKMSSV10}; it is not a separate existence technique.
+
+\begin{theorem}[Supporting lower bound]\label{thm:lower}
+For every $k\geq1$, a finite $(k+2)$-player reachability game with $O(k^2)$
+vertices, outdegree at most two, and no cycles except terminal loops admits
+an SPE winning for a designated player $E$, but every such SPE requires at
+least $\binom{k}{\lfloor k/2\rfloor}\geq2^k/(k+1)$ vertex-update states for
+$E$, irrespective of the other players' memory.
+\end{theorem}
+
+Consequently the worst-case memory for constrained pure SPEs is
+$2^{\Theta(n)}$. Exponential SPE memory necessity and its checking mechanisms
+already have antecedents~\cite{BGMR23,FH12}. The lower bound is included to
+make the quantitative limitation self-contained; no priority claim for
+exponential necessity or the precise lower-bound constants is made.
+
+\subsection{Prior work and the precise advance}
+
+The finite-arena results of Brihaye, Bruy\`ere, Goeminne and
+Raskin~\cite{BBGR18,BBGR21} provide the closest reconstruction baseline.
+In their full version~\cite{BBGR18}, Proposition~9 identifies weak
+SPEs with SPEs for reachability, and Proposition~19 and Corollary~21 give
+arena-dependent payoff-preserving reconstruction through finite symbolic
+witnesses. Their Theorem~34 already establishes fixed-parameter tractability
+of constrained existence. We claim no new FPT classification.
+
+A close antecedent is Bruy\`ere, Le Roux, Pauly and
+Raskin~\cite{BLPR21}. Theorem~7 of their author postprint uses finitely many
+leaf outcomes and outcome-indexed positional paths to construct finite-memory
+weak SPEs under reachable absorbing-leaf hypotheses. Theorem~16 gives
+finite-range weak-SPE existence. General reachability arenas do not satisfy
+the absorbing-leaf hypotheses: completing all targets in a promised payoff
+does not eliminate legal future deviations by the remaining players.
+We credit outcome memory and positional path selection to this antecedent.
+
+Main~\cite{Main26}, Theorem~23 of the author version, gives quadratic
+player-dependent memory bounds for Nash equilibria in reachability games.
+Its Remark~1 distinguishes vertex from edge memory. Nash stability alone
+does not provide credible continuations after every history. Flesch,
+Kuipers, Mashiah-Yaakovi, Schoenmakers, Solan and Vrieze~\cite{FKMSSV10},
+Section~3.3, already use payoff-minimizing continuations after deviations.
+Alluwaym, Main and Schewe~\cite{AMS26} give stationary randomized SPEs on
+finite graphs and a pure positional special case for absorbing targets;
+this does not supply prescribed-payoff pure compression on arbitrary arenas.
+
+The advance here is a compatibility and previous-owner normalization rule
+for all-history SPE payoff labels on continuing arenas. A fixed label is
+realized by a progress table depending on the current vertex and visited
+set. A promise is retained whenever it remains available. If it disappears,
+the previous owner's payoff bit determines a credible reset. Storing that
+owner requires $n$ states rather than a register ranging over arena vertices.
+An invariant for every unilateral deviation proves subgame perfection.
+The inspected primary literature supports this precise distinction;
+the comparison is bounded and is not an exhaustive priority certificate.
+
+\section{Model and memory convention}\label{sec:model}
+
+Let $N=\{1,\ldots,n\}$ and let $V$ be a set. An arena consists of a relation
+$\mathcal E\subseteq V\times V$, an owner map $\own:V\to N$, and an initial
+vertex $v_0$. Every $v$ has a nonempty set $\Succ(v)$ of successors.
+Player $i$ has a target $T_i\subseteq V$. Put $t(v)=\{i:v\in T_i\}$.
+A legal history is a finite nonempty path from $v_0$; the set of these
+histories is $\Hist$. A play is an infinite path. Its payoff set consists
+of the players whose targets occur at some finite position. We identify a
+payoff set $p\subseteq N$ with its Boolean vector, writing $p_i=1$ iff $i\in p$.
+
+A pure strategy chooses a successor after each history ending at a vertex
+owned by its player. A profile $\sigma$ fixes a unique continuation after
+each $h\in\Hist$. Write $p_\sigma(h)$ for the payoff set of the whole
+history followed by this continuation, counting their boundary vertex once.
+In particular target visits before a subgame remain satisfied. A profile is
+an SPE if, after every $h\in\Hist$, no player can improve its Boolean payoff
+by any unilateral strategy change. Deviating strategies can use arbitrary
+memory and change their moves infinitely often.
+
+The memory convention is
+\[
+ M,\quad m_0\in M,\quad \up:M\times V\to M,
+ \quad \nxt_i:M\times V_i\to V,
+\]
+where $V_i=\own^{-1}(i)$ and $\nxt_i(m,v)\in\Succ(v)$. At a history $hv$,
+where $h$ may be empty, the strategy plays
+\[
+                    \nxt_i(\up^*(m_0,h),v).
+\]
+Thus the incoming memory has processed the prefix strictly before $v$.
+The next-move and update functions both receive this incoming state and
+the current vertex. No previous vertex is available unless explicitly
+stored. On an infinite arena these functions may be arbitrary tables;
+only $|M|$ is counted. We work with ordinary set-theoretic choice.
+
+\section{Credible labels and uniform progress}\label{sec:labels}
+
+Fix the SPE $\sigma$ to be compressed. For a history $h$, put
+$W(h)=\bigcup_{v\text{ in }h}t(v)$ and $x(h)=(\last(h),W(h))$.
+Let $X=\{x(h):h\in\Hist\}$. An augmented state $x=(v,W)$ has, for every
+$w\in\Succ(v)$, augmented successor $y=(w,W\cup t(w))\in X$.
+Define
+\[
+ P(x)=\{p_\sigma(h):h\in\Hist,\ x(h)=x\}.
+\]
+The label set $P(v,W)$ is a nonempty finite subset of $2^N$, and each
+of its labels contains $W$. It aggregates all legal histories, not just
+the histories consistent with $\sigma$. Neither a witnessing history nor
+the original strategy's memory will be stored.
+
+\begin{lemma}[Local credibility]\label{lem:local}
+For $x=(v,W)\in X$, $p\in P(x)$, $i=\own(v)$, and every augmented
+successor $y$ of $x$, some $q\in P(y)$ satisfies $q_i\leq p_i$.
+\end{lemma}
+\begin{proof}
+Choose a history $h$ witnessing $p\in P(x)$ and let $w$ be the vertex
+component of $y$. The original continuation after $hw$ gives a label
+$q=p_\sigma(hw)\in P(y)$. Moving to $w$ at $h$ and thereafter following
+$\sigma_i$ is an admissible unilateral change after $h$. Since $\sigma$
+is subgame perfect, its payoff $q_i$ cannot exceed $p_i$.
+This also covers the prescribed successor, for which $q=p$.
+\end{proof}
+
+\begin{lemma}[Progress without a rank register]\label{lem:progress}
+For every $p\subseteq N$, there is a successor table $f_p$ on
+$X_p=\{x\in X:p\in P(x)\}$ such that, from every $x=(v,W)\in X_p$,
+following $f_p$ stays in $X_p$ and realizes exactly payoff $p$, including $W$.
+\end{lemma}
+\begin{proof}
+Choose a history witnessing $p$ at $x$ and follow $\sigma$. Every augmented
+state on that continuation is in $X_p$. Each player in $p\setminus W$
+visits its target after finitely many edges. Since there are finitely many
+players, the maximum of these finitely many visit times is finite (use zero
+if $p\setminus W$ is empty).
+Thus some finite path in $X_p$ reaches
+\[
+                  C_p=\{(u,B)\in X_p:B=p\}.
+\]
+For $x\in X_p$, let $d_p(x)$ be the minimum length of such a path.
+It is a finite natural number, with no uniform bound asserted. If
+$d_p(x)>0$, choose $f_p(x)$ to give a successor $y\in X_p$ with
+$d_p(y)=d_p(x)-1$. If $d_p(x)=0$, choose any successor in $X_p$, which
+the witnessing continuation supplies. At rank zero $W=p$, and a successor
+in $X_p$ has visited set containing $W$ and contained in $p$, hence equal
+to $p$. The selected path therefore reaches rank zero in finitely many
+steps and thereafter visits no target outside $p$. Its full payoff is $p$.
+The choices are fixed in the vertex-dependent table, not in a memory
+register. Taking a minimum over natural numbers requires no finite branching.
+\end{proof}
+
+\section{The vertex-update construction}\label{sec:machine}
+
+Let $p_0=p_\sigma(v_0)$. Use the common memory set
+\[
+ M=\{(A,p,j): A\subseteq p\subseteq N,\ j\in N\},
+ \qquad m_0=(\varnothing,p_0,1).
+\]
+For each player there are three possibilities in the pair $(A,p)$:
+outside $p$, inside $p\setminus A$, or inside $A$. Thus $|M|=n3^n$.
+The set $A$ records visits strictly before the current vertex, $p$ is an
+incoming promise, and $j$ is the owner of the previous processed vertex.
+
+Fix a total order on $2^N$. For $x\in X$ let $b_j(x)$ be the first label
+in $P(x)$ minimizing its $j$th bit. Given $m=(A,p,j)$ and a vertex $v$,
+form $B=A\cup t(v)$ and $x=(v,B)$. If $x\in X$, define
+\[
+ R(m,v)=\begin{cases}
+ p,&p\in P(x),\\
+ b_j(x),&p\notin P(x).
+ \end{cases}
+\]
+Writing $r=R(m,v)$, set
+\begin{equation}\label{eq:machine}
+ \up(m,v)=(B,r,\own(v)),\qquad
+ \nxt_i(m,v)=f_r(x)\quad(v\in V_i).
+\end{equation}
+Both functions use the same incoming $m$: the update does not process a
+successor, and the next-move function does not receive already updated
+memory. Since $r\in P(x)$, we have $B\subseteq r$, so the updated state
+belongs to $M$. If $x\notin X$, complete both functions arbitrarily with
+a state in $M$ and a legal successor. These arguments are unreachable from
+the initialized machine on a legal history. Call the profile $\tau$.
+Every player uses the same update, so their memories agree on
+every history, even when some players have deviated.
+
+\begin{lemma}[All-history realization]\label{lem:realization}
+At every legal history $hv$, the incoming $A$ is precisely the visited set
+of $h$, and the normalized promise $r=R(m,v)$ belongs to $P(v,A\cup t(v))$.
+Following $\tau$ after $hv$ gives full payoff exactly $r$.
+\end{lemma}
+\begin{proof}
+Initially $A=\varnothing$. The update in~\eqref{eq:machine} stores exactly
+$A\cup t(v)$, independently of the successor taken. Induction over every
+legal history gives the first assertion and ensures $x\in X$ at each
+normalization. By definition the normalized label is in $P(x)$.
+
+If the prescribed move $f_r(x)$ is taken, its augmented successor $y$
+belongs to $X_r$ by Lemma~\ref{lem:progress}. The incoming promise there
+is $r\in P(y)$, so normalization retains it. Continuing to follow $\tau$
+retains $r$ forever and follows $f_r$. Lemma~\ref{lem:progress} gives full
+payoff $r$, including all visits in the prefix.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Fix any legal history $H$ and player $i$, and let $r$ be the current
+normalized promise. By Lemma~\ref{lem:realization}, $r_i$ is the actual
+payoff under $\tau$ after $H$. If $r_i=1$, no Boolean improvement is possible.
+Suppose $r_i=0$ and allow any unilateral deviating strategy for $i$.
+We show that every normalized promise along its continuation still excludes $i$.
+
+At another player's vertex the prescribed move is taken, retaining the
+promise at the next vertex. At a vertex owned by $i$, let $y$ be the
+augmented state of the successor chosen by the deviation. The update at
+the current vertex stores previous owner $i$. If the old promise is in
+$P(y)$, it is retained. Otherwise the new promise is $b_i(y)$.
+Lemma~\ref{lem:local} supplies some $q\in P(y)$ with $q_i\leq r_i=0$,
+so the minimizing label also has bit zero. This proves the invariant by
+induction at every finite position, even with infinitely many deviations.
+
+Every normalized label contains every target visited so far. Hence $T_i$
+is never visited on the deviating play, and its payoff is zero. No player
+can profitably deviate after $H$. As $H$ was any legal history, $\tau$ is
+an SPE. Finally $p_0\in P(v_0,t(v_0))$, so the initial normalization retains
+$p_0$ and Lemma~\ref{lem:realization} proves exact initial payoff preservation.
+The machine has $n3^n$ states, as required.
+\end{proof}
+
+\section{Unconditional existence from an earlier theorem}\label{sec:existence}
+
+\begin{proof}[Proof of Corollary~\ref{cor:existence}]
+Theorem~2.3 of~\cite{FKMSSV10} gives a pure subgame-perfect
+$\varepsilon$-equilibrium for every $\varepsilon>0$ in finite-player
+perfect-information games with bounded lower-semicontinuous payoffs.
+Its model allows arbitrary action sets (Definition~2.1 and footnote~2),
+history-dependent feasible actions (Remark~2.1), and pure strategies without
+measurability constraints (Definition~2.2). Its subgame payoffs retain the
+prefix (Definition~2.4).
+
+Unfold our arena into its legal-history tree. At a history ending in $v$,
+the active player is $\own(v)$ and the available actions are $\Succ(v)$.
+This is a nonempty set, without a cardinality restriction. One may use $V$
+as the common action alphabet and restrict feasible actions by history.
+The Boolean payoff for visiting $T_i$ is bounded and lower semicontinuous:
+its one-set is open in the topology generated by finite-history cylinders,
+because a finite target visit witnesses victory. This holds also for an
+uncountable discrete alphabet and includes initial target visits.
+Apply the old theorem with $\varepsilon=1/2$. A profitable Boolean deviation
+would improve payoff by one, contradicting its inequality in that subgame.
+Thus the obtained profile is an exact pure SPE. Theorem~\ref{thm:main}
+compresses it with the claimed memory bound.
+\end{proof}
+
+The existence input is essential to this particular deduction and is fully
+credited to~\cite{FKMSSV10}. The compression proof itself begins with any
+given SPE and does not require an algorithm for finding one or computing $P(x)$.
+
+\section{A constrained exponential lower bound}\label{sec:lower}
+
+We give the complete family for Theorem~\ref{thm:lower}. Its ingredients
+are related to generalized-reachability subset memory~\cite{FH12} and to
+the credible checking constructions surveyed in~\cite[Section~3.1.3]{BGMR23}.
+The argument applies to every SPE satisfying a required winner, not just
+to profiles carrying a particular prescribed payoff.
+
+Fix $k\geq1$ and put $r=\lfloor k/2\rfloor$. The players are
+$A,E,C_1,\ldots,C_k$. First $A$ selects exactly $r$ indices from $[k]$,
+giving a set $W$. Then $E$ selects exactly $k-r$ indices, giving a set $U$.
+Each phase examines indices in order and merges all its histories at its
+end. In particular every $r$-subset $W$ reaches the same first $E$ vertex.
+
+Here is an explicit implementation. A quota-$b$ phase has decision vertices
+$q(i,c)$, with $0\leq i<k$, $0\leq c\leq i$ and $c\leq b\leq c+k-i$.
+The two phases use disjoint copies. At $q(i,c)$ the selecting player may
+choose $d\in\{0,1\}$ exactly when
+\[
+                         c+d\leq b\leq c+d+k-i-1.
+\]
+The edge goes to a forced marker $z(i,c,d)$ and then to $q(i+1,c+d)$,
+or to the next phase when $i+1=k$. A marker with $d=1$ is an inclusion
+of index $i+1$. Every decision has one or two legal choices. The count is
+an arena vertex component, not a memory state. There are $O(k^2)$ vertices.
+
+After both phases, play visits checking vertices $c_1,\ldots,c_k$.
+At $c_i$, player $C_i$ may go to terminal $a$ or continue to $c_{i+1}$
+(to terminal $e$ when $i=k$). Both terminals have only self-loops.
+The targets of $A$ and $E$ are $\{a\}$ and $\{e\}$, respectively.
+The target of $C_i$ consists of $a$ and all inclusion markers of index $i$
+in either phase. There are no other target memberships. The initial
+vertex is the first $A$ decision. Ownership at forced vertices is immaterial.
+The arena is finite, has no dead ends, and has outdegree at most two.
+
+\begin{lemma}[Credible terminal outcome]\label{lem:checker}
+In any pure SPE, after any legal history reaching the checking phase with
+$W\cup U\ne[k]$, the continuation ends at $a$.
+\end{lemma}
+\begin{proof}
+Otherwise it ends at $e$, passing every checking vertex. A checker $C_i$
+with $i\notin W\cup U$ then receives zero, but can move from $c_i$ to $a$
+and receive one. This contradicts subgame perfection at that history.
+The finite checking chain has no other outcome.
+\end{proof}
+
+This lemma does not require the first unsatisfied checker to exit
+immediately; a later exit could also give it payoff one.
+
+\begin{proof}[Proof of Theorem~\ref{thm:lower}]
+An $E$-winning SPE exists as follows. Player $A$ uses any fixed legal
+selection. Player $E$ remembers $W$ and, at index $i$, tries to include
+$i$ exactly when $i\notin W$; if previous off-profile choices make this
+choice illegal, it takes any legal choice. At $c_i$, player $C_i$ continues
+if its target has already been visited and otherwise goes to $a$.
+
+After any history in $A$'s phase, all its possible completed choices produce
+an $r$-subset, to which $E$ responds with its complement. All checkers
+then win and continue to $e$. Player $A$ loses regardless of any unilateral
+change; all other players win. After a history in $E$'s phase, if its past
+choices agree with the complement, the unique complementary completion
+is legal and leads to $e$. If a past choice disagreed, covering all indices
+is impossible: an omitted complement index cannot be revisited, while an
+included index of $W$ consumes one of the exactly $k-r$ response slots.
+A missing index then causes a checker to exit, so $E$ cannot improve from
+that subgame. Player $A$ has no further choices. In the checking phase,
+a satisfied checker already wins, and an unsatisfied checker wins by exiting.
+A checker whose decision is past cannot affect its continuation. These
+observations cover arbitrary earlier checking deviations and terminal
+histories too. Thus the profile is an SPE after every legal history.
+Its initial outcome is $e$. It has finite vertex-update memory: $E$ stores
+$W$, each checker stores its own visited-target bit, and $A$ is positional.
+
+Now fix any SPE winning initially for $E$, with no memory restrictions
+on any player. Its initial outcome is $e$, so $A$ gets zero. Player $A$
+can unilaterally select any $r$-subset $W$. Holding all other strategies
+fixed, the resulting outcome must still give $A$ zero. If the prescribed
+response $U$ failed to cover $[k]$, Lemma~\ref{lem:checker}, applied to
+that legal off-profile history, would force $a$ and yield a profitable
+initial deviation for $A$. Therefore the single fixed strategy of $E$
+must respond to every $W$ by $U=[k]\setminus W$.
+
+Suppose a vertex-update machine represents this strategy of $E$. Let $m(W)$
+be its incoming memory at the common first $E$ vertex after $A$ selects $W$.
+If $m(W)=m(W')$ for distinct $W,W'$, determinism forces the same response
+vertex sequence: the current vertex and incoming state agree, all other
+moves during this phase are forced, and the update sees the same successive
+vertices. Hence the response sets coincide. They cannot equal both distinct
+complements. Thus $W\mapsto m(W)$ is injective, giving at least
+$\binom{k}{r}$ states. Other players cannot signal through their memories
+during the response phase. The central binomial coefficient is the largest
+of $k+1$ coefficients summing to $2^k$, giving the stated inequality.
+The case $k=1$ is included; its first quota is zero and its bound is one.
+\end{proof}
+
+\section{Verification and limits}
+
+The proofs establish the arbitrary-arena upper bound and the all-$k$
+lower bound; finite computations are supplementary checks. Exact Python
+best-response checks were applied after every legal-history product state,
+allowing all edges to generate histories and arbitrary unilateral
+deviations against fixed opponents. A separate implementation checked
+2,827 verified finite SPE inputs and their recompressions, preserving exact
+initial payoffs; it also checked the lower family for $k=1,\ldots,6$.
+Deliberately omitting the previous-owner register or the progress condition
+produced failing controls. These tests are neither an exhaustive enumeration
+of arbitrary games nor formal proof-assistant certification.
+
+Empty targets, initially visited targets, and empty or full payoff sets
+are included. Finitely many players is used to fulfill a promise after
+finitely many target visits. No bound on the selector's distance is needed.
+The result supplies no effective algorithm for the arbitrary infinite
+tables, no new finite-arena constrained-existence FPT result, and no extension
+to quantitative arrival-time, B\"uchi, or arbitrary omega-regular objectives.
+The gap between the exponential bases of the upper and lower bounds remains.
+
+\section*{AI methodology}
+OpenAI Codex was used substantially in the research and preparation of this
+article, including proof construction and adversarial checking, the explicit
+memory machine, the existence-theorem application, the lower-bound family,
+literature comparison, exact Python verification, and LaTeX drafting.
+These uses materially affected all technical sections. Additional fresh
+model contexts checked the mathematical arguments and primary-source
+comparisons and produced a separate finite checker. Such model checks are
+not external peer review or formal certification. This disclosure does not
+assert that the listed author has already performed a separate human
+verification of every generated argument or reference. Human verification
+and responsibility are required before any external submission.
+
+\clearpage
+\bibliographystyle{alpha}
+\bibliography{references}
+\end{document}

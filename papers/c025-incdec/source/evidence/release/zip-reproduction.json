@@ -1,0 +1,16 @@
+{
+  "job_id": "c025-incdec-release-4b3b2544efe9",
+  "snapshot_digest": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4",
+  "manuscript_digest": "d4717112b7a2b8ec108123ef8efb3e63f3f6ed5f1f6caf1810a2969f35593c6a",
+  "pdf_digest": "407ec869e3c74ed3fea9001fc3e1afb187d4b3175fabfd78c52d40408afeb186",
+  "archive": "evidence/release/optimal-incdec-working_paper-source.zip",
+  "archive_sha256": "11df862b898792d19c8e8b0ccf84f93032b914d928169bf9a7b9fb85df7a4f58",
+  "command": "python3 evidence/release/reproduction/manuscript/build.py",
+  "archive_member_count": 11,
+  "member_mismatches_after_rebuild": [],
+  "rebuilt_pdf": "evidence/release/reproduction/manuscript/optimal-incdec-working_paper.pdf",
+  "rebuilt_pdf_digest": "407ec869e3c74ed3fea9001fc3e1afb187d4b3175fabfd78c52d40408afeb186",
+  "byte_identical": true,
+  "bibtex_identical": true,
+  "result": "pass"
+}

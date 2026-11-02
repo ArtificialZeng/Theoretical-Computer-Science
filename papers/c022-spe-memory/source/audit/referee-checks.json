@@ -1,0 +1,83 @@
+{
+  "job_id": "c022-spe-memory-referee-af2ba8807d2f",
+  "arithmetic": "exact finite integer/graph operations",
+  "method": "fresh implementation; independent forward deviation searches; no imports of proposer code",
+  "upper": {
+    "exhaustive_two_vertex_positional_inputs": {
+      "original_profiles": 1024,
+      "original_SPEs": 960,
+      "compressed_profiles": 960,
+      "original_positions": 2780,
+      "compressed_positions": 3258,
+      "max_rank": 1,
+      "cases_with_multiple_labels": 0
+    },
+    "additional_seeded_arbitrary_machine_inputs": 2000,
+    "seed": 22112026,
+    "total": {
+      "original_profiles": 3024,
+      "original_SPEs": 2827,
+      "compressed_profiles": 2827,
+      "original_positions": 11199,
+      "compressed_positions": 10532,
+      "max_rank": 4,
+      "cases_with_multiple_labels": 7
+    }
+  },
+  "lower": [
+    {
+      "k": 1,
+      "vertices": 7,
+      "all_history_positions": 9,
+      "canonical_profile_is_SPE": true,
+      "distinct_required_responses": 1
+    },
+    {
+      "k": 2,
+      "vertices": 18,
+      "all_history_positions": 43,
+      "canonical_profile_is_SPE": true,
+      "distinct_required_responses": 2
+    },
+    {
+      "k": 3,
+      "vertices": 29,
+      "all_history_positions": 113,
+      "canonical_profile_is_SPE": true,
+      "distinct_required_responses": 3
+    },
+    {
+      "k": 4,
+      "vertices": 46,
+      "all_history_positions": 376,
+      "canonical_profile_is_SPE": true,
+      "distinct_required_responses": 6
+    },
+    {
+      "k": 5,
+      "vertices": 63,
+      "all_history_positions": 1143,
+      "canonical_profile_is_SPE": true,
+      "distinct_required_responses": 10
+    },
+    {
+      "k": 6,
+      "vertices": 86,
+      "all_history_positions": 3279,
+      "canonical_profile_is_SPE": true,
+      "distinct_required_responses": 20
+    }
+  ],
+  "negative_controls": {
+    "previous_owner_omission_rejected": {
+      "profitable_deviation_positions": 1,
+      "unfulfilled_promise_positions": 0
+    },
+    "progress_omission_rejected": {
+      "profitable_deviation_positions": 1,
+      "unfulfilled_promise_positions": 1
+    }
+  },
+  "limitations": "Finite falsification checks only; infinite-arena upper bound and all-k lower bound are verified by the separate mathematical argument.",
+  "checker_sha256": "e86f790fdd6b0b7cb57628621f5667fa497eb5c385a40063efc250039078ae16"
+}

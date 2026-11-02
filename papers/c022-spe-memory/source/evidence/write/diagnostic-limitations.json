@@ -1,0 +1,8 @@
+{
+  "job_id": "c022-spe-memory-write-ec7adf27a885",
+  "operation": "pdftotext -bbox output/pdf/spe-memory-working_paper.pdf evidence/write/pdf-text-boxes.html",
+  "result": "Optional bounding-box extraction terminated with libc++abi std::out_of_range basic_string.",
+  "mathematical_implication": "none",
+  "fallback": "Ordinary pdftotext succeeded; pdfinfo, font checks and all-page PNG rendering succeeded. Visual page inspection is used for layout.",
+  "status_preserved": "accepted original-scope result; working_paper; fresh release review pending"
+}

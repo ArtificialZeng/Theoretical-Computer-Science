@@ -1,0 +1,53 @@
+{
+  "coverage": {
+    "exhaustive_row_marginals": {
+      "moduli": [
+        2,
+        3,
+        4,
+        6,
+        8,
+        12,
+        18
+      ],
+      "dimension": 2,
+      "identities_checked": 1698
+    },
+    "profile_bucketing": {
+      "moduli": [
+        4,
+        6,
+        8,
+        12
+      ],
+      "dimension": 2,
+      "original_list_size": 12,
+      "input_triples": 16,
+      "profile_subinstances": 1749,
+      "fragmented_cosets_checked": 352,
+      "support_probe_semantics_checked": 746,
+      "note": "R=8,sigma=2 diagnostic parameters; not asymptotic parameter regime."
+    },
+    "parameter_profiles": {
+      "moduli": [
+        2,
+        4,
+        6,
+        8,
+        12,
+        18,
+        30,
+        60
+      ],
+      "n_binary_exponents": [
+        256,
+        1024,
+        4096
+      ],
+      "profiles_checked": 1150,
+      "note": "Adversarial arbitrary divisor sizes, not necessarily realizable; sigma diagnostic <=sqrt(R)."
+    }
+  },
+  "failures": [],
+  "status": "all_assertions_passed"
+}

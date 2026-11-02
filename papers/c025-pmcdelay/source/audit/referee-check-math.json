@@ -1,0 +1,12 @@
+{
+  "job_id": "c025-pmcdelay-referee-6970e98c3a2b",
+  "command": "python3 /Users/mac/.codex/skills/4prove-or-disprove-math/scripts/release_gate.py check-math PROJECT_DIR",
+  "recorded_at_utc": "2026-11-01T23:33:55Z",
+  "exit_code": 0,
+  "stdout": {
+    "ok": true,
+    "snapshot_digest": "9e18afcb85b19f266e11aab420e78596f90e785921128737257fbdd42a21cfbc",
+    "referee_job_id": "c025-pmcdelay-referee-6970e98c3a2b"
+  },
+  "scope": "Actual structural/provenance gate result; it does not establish mathematical correctness or venue competitiveness. The fresh audit/math.json uses the required job_id key."
+}

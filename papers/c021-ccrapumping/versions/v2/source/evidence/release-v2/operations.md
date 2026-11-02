@@ -1,0 +1,3 @@
+# Release operations
+
+The PDF skill marker completed once before the clean rebuild. A preservation snippet mistakenly used project-relative paths while its working directory was manuscript/ and failed before copying anything. The following latexmk -C still ran successfully. The preservation paths were corrected from the project root. The old snapshot and earlier rendered pages remain, and the manuscript is rebuilt from its unchanged accepted sources. This is an operational path error, with no mathematical significance. No source.md, accepted evidence, counters, prior failures, scheduling state or mathematical audit was edited.

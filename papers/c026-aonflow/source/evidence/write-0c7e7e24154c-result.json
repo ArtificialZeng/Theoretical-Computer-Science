@@ -1,0 +1,20 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Prepared, clean-built and froze the seven-page accepted full-resolution manuscript. Every page was inspected; the actual working_paper assessment is retained. Fresh release review remains pending.",
+  "next_test": "Fresh RELEASE citation, build, every-page visual and portable-source reproduction checks against audit/manuscript-snapshot.json, retaining working_paper.",
+  "evidence": [
+    "manuscript/main.tex",
+    "manuscript/build/aonflow-working_paper.pdf",
+    "publication.json",
+    "audit/manuscript-snapshot.json",
+    "evidence/write-0c7e7e24154c-preflight.json",
+    "evidence/write-0c7e7e24154c-build-precheck.json",
+    "evidence/write-0c7e7e24154c-freeze.json",
+    "literature/write-format-and-references.md",
+    "literature/user_bibliography_check.md",
+    "audit/stoc-assessment.json",
+    "checkpoint.md"
+  ]
+}

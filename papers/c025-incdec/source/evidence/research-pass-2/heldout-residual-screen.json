@@ -1,0 +1,18 @@
+{
+  "seconds": 45.316922958008945,
+  "limit_seconds": 45,
+  "lp_calls": 239,
+  "solver_failures": 0,
+  "exact_witnesses": {},
+  "trace_words": [
+    {
+      "n": 8,
+      "word": "LLRRRLLL"
+    },
+    {
+      "n": 8,
+      "word": "LLRRLRLR"
+    }
+  ],
+  "scope": "Templates only, not original problem; nonfindings numerical and bounded."
+}

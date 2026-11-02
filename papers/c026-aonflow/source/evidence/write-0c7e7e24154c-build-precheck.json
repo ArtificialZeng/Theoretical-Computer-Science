@@ -1,0 +1,41 @@
+{
+  "job_id": "c026-aonflow-write-0c7e7e24154c",
+  "at_utc": "2026-11-02T00:51:26.191446+00:00",
+  "clean_build_exit_code": 0,
+  "pdf_sha256": "2f20675951dad88fc8816bde05065978c667483658297fbb055987b44090e19e",
+  "total_pages": 7,
+  "max_total_pages": 12,
+  "latex_bibtex_warnings_or_errors": [],
+  "official_acmart_version": "2.20",
+  "obsolete_unfrozen_initial_pdf_removed": true,
+  "artifact_marker_succeeded_before_authoring": true,
+  "all_frozen_mathematical_files_unchanged": true,
+  "stoc_assessment_preserved": true,
+  "publication_source_files": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/BUILD.md",
+    "manuscript/Makefile",
+    "manuscript/acmart.cls",
+    "manuscript/build/aonflow-working_paper.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "operational_diagnostics": [
+    {
+      "operation": "initial official-template copy",
+      "result": "relative destination path error; corrected before final clean build",
+      "mathematical_evidence": false
+    },
+    {
+      "operation": "pdftotext -bbox",
+      "result": "native basic_string out_of_range; partial XML retained as failed diagnostic only",
+      "fallback": "plain pdftotext, pdfinfo, embedded-font check, and every-page PNG inspection",
+      "mathematical_evidence": false
+    },
+    {
+      "operation": "first log diagnostic filter",
+      "result": "overbroad regex matched package description and zero-warning counter; refined to actual warning/error syntax",
+      "mathematical_evidence": false
+    }
+  ]
+}

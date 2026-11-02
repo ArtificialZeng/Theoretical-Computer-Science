@@ -1,0 +1,18 @@
+{
+  "pdf_sha256": "eda5b06b35b0ffe14b99d31a0397a0e6d5668a624820594da580ab97ebe02afc",
+  "pages_actually_seen_by_root": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "render_directory": "/Users/mac/Documents/ChatGPT/STOC理论计算机/research/continuous/batches/20261102-031/root-visual-eda5b06b35b0",
+  "observations": "All nine actual pages inspected across the root context: identified author cover, theorem/prior positioning, canonical path and source tree lemmas, rounded probability and signed-score proof, interval invariant, complete reporting and cost proof, AI methodology, resolved references. No clipped equations, overlaps or unreadable text observed. Final extracted ZIP rebuild is byte-identical and every 150dpi page hash matches these inspected images.",
+  "publication_label": "working_paper",
+  "author_metadata": "Visible cover correct; PDFInfo omits Author field."
+}

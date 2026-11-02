@@ -1,0 +1,33 @@
+{
+  "build_command": "python3 manuscript/build.py",
+  "pdf": "output/pdf/dspdag-working_paper.pdf",
+  "sha256": "04e5cdc5235be2a9327b7f80616afcc3d5854ecbab67d4f9fe5c12c23aca20f2",
+  "source_date_epoch": "1793620800",
+  "commands": [
+    [
+      "pdflatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "main.tex"
+    ],
+    [
+      "bibtex",
+      "main"
+    ],
+    [
+      "pdflatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "main.tex"
+    ],
+    [
+      "pdflatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-file-line-error",
+      "main.tex"
+    ]
+  ]
+}

@@ -1,0 +1,3 @@
+checker: /Users/mac/Documents/ChatGPT/STOC理论计算机/claude_stoc2027_claude/q14paper_claude/ancillary/small_n_check/cover_bnb.py
+NOT PROVED [(0, 1), (0, 1)] FAIL
+lead_n6_j2.txt: 7 patterns, 91 boxes, not proved 1, 0.0s

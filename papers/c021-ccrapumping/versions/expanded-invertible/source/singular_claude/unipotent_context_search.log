@@ -1,0 +1,4 @@
+control E                        dim 4  unipotent context: ('', '', '0', '1', [Fraction(1, 1), Fraction(1, 2), Fraction(1, 3), Fraction(1, 4), Fraction(1, 5)])
+control E^r                      dim 4  unipotent context: ('', '', '0', '1', [Fraction(1, 1), Fraction(1, 2), Fraction(1, 3), Fraction(1, 4), Fraction(1, 5)])
+control E_2 (2^n blocks, CCRA)   dim 3  unipotent context: None
+{'tested': 25}

@@ -1,0 +1,30 @@
+{
+  "job_id": "c032-dspdag-research-2c4a21894757",
+  "phase": "research",
+  "pass": 1,
+  "entry_clock_utc": "2026-11-02T11:12:19Z",
+  "source_sha256": "bd9f92784c80f57bb9d38b0d1ec47a1127cfe421e2d2ca69776e28d431657a90",
+  "observed_research_passes": 1,
+  "research_cap": 3,
+  "state_json_modified": false,
+  "status": "candidate_prepared",
+  "route": "CDQ on minimum frontier coordinate, with output-minimum masks and square Boolean-product blocking",
+  "scientific_checks_completed_by_utc": "2026-11-02T11:26:08Z",
+  "proof_gap_list": [],
+  "review_status": "not_independently_reviewed",
+  "test_instances": 764,
+  "failed_routes": [
+    {
+      "label": "proved-obstruction",
+      "scope": "Unrestricted per-node contraction writing all higher minimum ranks",
+      "finding": "At half-size b=1, processing all unchanged contexts and all higher changed coordinates can have Theta(N^3) outputs per node, Theta(N^4) in total. This is a cost obstruction to that specified schedule, not a lower bound for the original problem.",
+      "repair": "Write only target minima in the right half; partition changed/unchanged coordinates into the three classes proved in proof.md."
+    }
+  ],
+  "operational_limits": [
+    "No other agents, Codex processes or research workers spawned.",
+    "No endpoint-sharing normalization implementation test; the reduction is proved in the packet.",
+    "Current literature search is bounded and does not certify priority. TCS2026 full-text access limit from triage remains."
+  ],
+  "next_test": "Fresh referee: independently reconstruct the unique-LCA minimum-rank dependency invariant and square-product packing/scattering count, adversarially check terminal normalization and source-model arithmetic, and compare generic tensor/triangular-DP prior work before assessing full-scope correctness, novelty and significance."
+}

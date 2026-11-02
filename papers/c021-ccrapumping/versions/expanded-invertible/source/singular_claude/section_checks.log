@@ -1,0 +1,25 @@
+g: representation correct (|w|<=11): True  minimal: True
+h: representation correct (|w|<=11): True  minimal: True
+bases in the minimality claim (g): det rows -1  det cols 1
+bases in the minimality claim (h): det rows -1  det cols 1
+g: r1 M_{a^l#} = [1, 0, 0]  r2 M_{a^l#} = [l, 0, l]
+h: r1 M_{a^l#} = [1, 0, 0]  r2 M_{a^l#} = [l + 1, 0, l + 1]
+h: ranks of word matrices containing #, |w|<=9: {2}  rank M_#^2 = 2
+g: ranks of word matrices containing #, |w|<=9: {1, 2}
+r1 fixed by all letters (g,h): True
+g^r machine (|w|<=12): True
+h^r machine (|w|<=12): True
+sum_i prod_{j<i} 2^|u_j| machine (|w|<=12): True
+F^r: hand representation correct (|w|<=11): True  minimal: True
+F^r: r1 M_{0^l 1} = [1, 0, 0, 0]  r2 M_{0^l 1} = [0**l + l, 0**l + l, 0, 0**l + l]
+F^r: context blocks 0^{l+1}1:  r1 M = [1, 0, 0, 0]  r2 M = [l + 1, l + 1, 0, l + 1]
+F^r: ranks M_0, M_1: 3 2
+F machine (|w|<=12): True
+
+E: representation correct (|w|<=10): True  minimal: True
+E: E(w) == E(reverse w) on |w|<=10: True
+E: ranks of word matrices containing #, |w|<=8: {2}
+E: r1 M_{a^l#} = [l + 1, 0, 0, 0]   r2 M_{a^l#} = [1, l + 1, 0, 0]   lambda = r2
+h : T(n) = [[1, 0], [l + 1, l + 1]]  det = l + 1
+E : T(n) = [[l + 1, 0], [1, l + 1]]  det = (l + 1)**2
+h^r : T(n) = [[1, 1], [0, l + 1]]  det = l + 1

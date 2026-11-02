@@ -1,0 +1,19 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Wrote and froze the accepted full-scope resolution as a clean nine-page acmart PDF; retained the actual working_paper assessment. Separate release review remains pending.",
+  "next_test": "Run the separate RELEASE citation, clean-build, every-page visual and delivered-ZIP reproduction checks on the frozen manuscript, preserving working_paper.",
+  "evidence": [
+    "checkpoint.md",
+    "publication.json",
+    "manuscript/main.tex",
+    "manuscript/main.pdf",
+    "audit/manuscript-snapshot.json",
+    "audit/stoc-assessment.json",
+    "evidence/write-record.json",
+    "evidence/write-clean-build.json",
+    "evidence/write-visual-check.json",
+    "literature/user_bibliography_check.md"
+  ]
+}

@@ -1,0 +1,7 @@
+../logs_claude/aug_n7_j1.txt: 2 patterns, all distinct, Burnside 2: COMPLETE
+../logs_claude/aug_n7_j2.txt: 7 patterns, all distinct, Burnside 7: COMPLETE
+../logs_claude/aug_n7_j3.txt: 23 patterns, all distinct, Burnside 23: COMPLETE
+../logs_claude/aug_n7_j4.txt: 78 patterns, all distinct, Burnside 78: COMPLETE
+../logs_claude/aug_n7_j5.txt: 264 patterns, all distinct, Burnside 264: COMPLETE
+../logs_claude/aug_n7_j6.txt: 915 patterns, all distinct, Burnside 915: COMPLETE
+../logs_claude/aug_n7_j7.txt: 3111 patterns, all distinct, Burnside 3111: COMPLETE

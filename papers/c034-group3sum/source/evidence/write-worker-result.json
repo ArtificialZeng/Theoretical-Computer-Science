@@ -1,0 +1,16 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Prepared and froze a seven-page full-resolution manuscript and clean PDF. Preserved the accepted mathematical scope, immutable source, sole supplied author and actual working_paper classification. All seven pages were inspected; fresh release audits remain.",
+  "next_test": "Fresh RELEASE citation audit, clean source/ZIP reproduction, all-page visual review and release gates; retain working_paper.",
+  "evidence": [
+    "publication.json",
+    "audit/manuscript-snapshot.json",
+    "manuscript/bounded-exponent-3sum-working_paper.pdf",
+    "evidence/write-report.md",
+    "evidence/write-final-checks.json",
+    "literature/user_bibliography_check.md",
+    "checkpoint.md"
+  ]
+}

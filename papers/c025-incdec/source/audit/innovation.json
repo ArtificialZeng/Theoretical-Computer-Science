@@ -1,0 +1,16 @@
+{
+  "job_id": "c025-incdec-referee-2ab23be91f58",
+  "snapshot_digest": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4",
+  "verdict": "accept",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    "Disser, Klimm, Lutz and Strubberg, Incremental–decremental maximization, Acta Informatica 63:31 (2026), DOI 10.1007/s00236-026-00546-x: Corollary 2/Table 1 give deterministic upper 1+e/(e-1); Proposition 11 at curvature 1 gives structural lower 2; Section 5 explicitly leaves that gap open. Verified frozen journal text and current publisher record.",
+    "Same source, Proposition 17: factor 2 for equal endpoint totals only. Proposition 19 and Corollary 20: the source double-greedy algorithm has exact worst-case ratio 1+e/(e-1), even with modular g. Verified actual statements and algorithm in the frozen journal text.",
+    "Bienkowski, Blikstad, Byrka, Costa, Disser and Lutz, ESA 2026:134, DOI 10.4230/LIPIcs.ESA.2026.134, Theorems 1.1–1.2: inefficient monotone incremental upper 1.373 and structural lower 1.25; not the arbitrary h/g pair model. Verified frozen primary introduction and official record.",
+    "Chen and Kuhnle, arXiv:2605.07902v1, Section 2/Definition 2/Theorem 1: curvature-dependent greedy-with-pruning guarantee for a fixed at-most-k cardinality constraint; active sets need not be nested. Inspected current primary full-text statements, not merely abstract."
+  ],
+  "substantive_delta": "A deterministic endpoint-oriented greedy algorithm using actual objective marginals constructs one permutation with simultaneous factor 2 at every cardinality for arbitrary unequal-total monotone submodular pairs. Its O(n^2) exact-oracle upper bound matches the existing structural lower bound and settles both unrestricted and polynomial-oracle constants at 2. Neither the lower bound nor equal-total factor 2 is claimed as new.",
+  "why_nonroutine": "The result does not follow by applying monotone greedy to F, since F may decrease, or by reanalyzing the source double-greedy algorithm, whose larger ratio is tight. The independent step keeps the initial budget G=F(empty) in F(O)<=F(O union P)+G and cancels it against accumulated greedy gains; endpoint orientation then handles every negative-gain suffix. This yields a genuinely different full-class algorithmic theorem rather than an elementary corollary of the checked prior results. The proof remains elementary; technical simplicity is disclosed in the separate venue assessment.",
+  "significance": "It removes the entire deterministic competitive-ratio gap identified in the direct 2026 primary source, determines the exact uniform price of maintaining one ordering through every renewal stage on the whole monotone submodular pair class, and supplies an efficient implementation. That is substantive standalone mathematical value; broad STOC-level importance or depth is not inferred from it.",
+  "remaining_gaps": []
+}

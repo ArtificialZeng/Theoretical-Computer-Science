@@ -1,0 +1,108 @@
+{
+  "package_schema": 5,
+  "project": "c025-incdec",
+  "title": "Optimal Deterministic Incremental--Decremental Submodular Maximization",
+  "readiness_label": "working_paper",
+  "stoc_assessment": {
+    "job_id": "c025-incdec-referee-2ab23be91f58",
+    "snapshot_digest": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4",
+    "review_type": "fresh_internal_stoc_assessment",
+    "verdict": "working_paper",
+    "strongest_result": "For every finite E and normalized nonnegative monotone submodular h,g, endpoint-oriented actual-objective greedy deterministically returns one permutation with 2[h(S_k)+g(E\\S_k)]>=OPT_k simultaneously at every k, using O(n^2) exact value-oracle queries and polynomial arithmetic/comparisons. Nonnegative unnormalized baselines transfer explicitly. Together with the reproduced prior structural lower bound, C_struct=C_poly=2 in the full immutable original scope.",
+    "nearest_comparisons": [
+      "Disser–Klimm–Lutz–Strubberg, Acta Informatica 63:31 (2026), DOI 10.1007/s00236-026-00546-x, Corollary 2, Proposition 11, Proposition 17, Corollary 20, Section 5: upper 1+e/(e-1), lower 2, and factor 2 only at equal totals; the old algorithm itself cannot improve. The new actual-objective greedy algorithm settles the full unequal-total gap at 2.",
+      "Bienkowski et al., ESA 2026:134, DOI 10.4230/LIPIcs.ESA.2026.134, Theorems 1.1–1.2: the 1.373 upper/1.25 lower are for a monotone single objective, with optimum-set access for the improved upper. The candidate instead settles the two-function nonmonotone combined model efficiently; it does not improve their monotone bound.",
+      "Chen–Kuhnle, arXiv:2605.07902v1, Definition 2/Theorem 1: trajectory-curvature greedy with pruning for one at-most-k constraint, not a permutation nested at every exact cardinality. The candidate uses an unconditional decomposition budget and endpoint orientation, not a curvature estimate or pruning."
+    ],
+    "criteria": {
+      "importance": {
+        "judgment": "uncertain",
+        "reason": "The precise competitive-ratio gap in the direct 2026 source is fully resolved on its entire function class. This is meaningful within incremental–decremental optimization, but the packet and current primary comparisons do not establish a longstanding central barrier or a broad consequence of comparable importance across TCS."
+      },
+      "novelty": {
+        "judgment": "strong",
+        "reason": "Relative to the verified primary theorems, this is a full sharp upper bound unavailable from the equal-total result or the tight analysis of the old algorithm. The budget cancellation plus endpoint orientation gives a distinct construction. Fresh bounded searches found no equivalent full theorem; this is not a proof of universal priority."
+      },
+      "technical_depth": {
+        "judgment": "weak",
+        "reason": "The decisive new step is the interaction of a bounded union loss with the positive initial objective and the choice of orientation for the decreasing tail. Once formulated, the argument uses elementary diminishing returns and telescoping only. No deeper obstacle, new general machinery, or difficult extension has been established that would support a strong STOC-depth case."
+      },
+      "breadth_or_consequence": {
+        "judgment": "uncertain",
+        "reason": "The theorem covers arbitrary pairs and all cardinalities and settles structural and efficient constants simultaneously. The evidence does not yet establish new consequences for other central optimization models, general reconfiguration problems, randomization, or constrained variants; the adjacent monotone and pruning results are comparisons rather than consequences."
+      },
+      "exposition_and_verifiability": {
+        "judgment": "strong",
+        "reason": "The frozen proof is short and self-contained, explicitly includes reversal, arbitrary unequal totals, signs, zero objectives and normalization, and reproduces the known lower family without claiming it as new. This review reconstructed every universal step and added an independent exact verifier covering 625 instances, all ties in 148 selected instances, and all lower-family permutations through n=8. No numerical search is used as proof."
+      }
+    },
+    "case_for_stoc": "The best case is an unexpectedly simple optimal polynomial-oracle solution of the entire new incremental–decremental submodular model, reducing the published deterministic upper 2.582... to the structural optimum 2. The useful insight preserves the endpoint budget in the greedy comparison and orients the order to control the nonmonotone tail, overcoming the old algorithm’s actual tight barrier. However the demonstrated payoff remains focused on one recent model, the proof is elementary, and no broad downstream consequence is established. Those limits prevent an all-strong assessment and do not justify calling this competitively submission_ready.",
+    "remaining_weaknesses": [
+      "The record does not establish broad STOC-level importance beyond a sharp solution to one recent model.",
+      "Technical novelty is a compact conceptual correction to a greedy proof strategy; substantial depth or a reusable general theory has not been shown.",
+      "No demonstrated substantial consequence outside the original arbitrary-pair ordering problem.",
+      "The literature search is bounded; no universal priority or unpublished-work claim is made."
+    ],
+    "label_is_not_a_venue_decision": true
+  },
+  "pages": 6,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "original_status": "proved",
+  "kind": "resolution-paper",
+  "pdf": "c025-incdec_working_paper.pdf",
+  "pdf_sha256": "407ec869e3c74ed3fea9001fc3e1afb187d4b3175fabfd78c52d40408afeb186",
+  "source_archive": "c025-incdec_source_and_reproducibility.zip",
+  "source_archive_sha256": "214088df673bb274698c3c32958c33c6f2b6a7dec3063fc39bef7097c3de95f7",
+  "class_file": "manuscript/acmart.cls",
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "reproduce_scripts": [
+    "code/verify_pass3.py",
+    "code/pass3_oriented_greedy.py"
+  ],
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "407ec869e3c74ed3fea9001fc3e1afb187d4b3175fabfd78c52d40408afeb186"
+    },
+    "kind": "resolution-paper",
+    "manuscript_digest": "d4717112b7a2b8ec108123ef8efb3e63f3f6ed5f1f6caf1810a2969f35593c6a",
+    "original_status": "proved",
+    "pages": 6,
+    "pdf_digest": "407ec869e3c74ed3fea9001fc3e1afb187d4b3175fabfd78c52d40408afeb186",
+    "provenance": {
+      "audit/build.json": "4616b4373f285cd7fdd17a3d5f9fd0afbb0e55c483d591b5d0b4dc4611cf56f9",
+      "audit/build.md": "6851db030e4aef546fece0f212351fc1f9a1767ac1920d4f31854505cb430b43",
+      "audit/citations.json": "85fc1088cbd549f3fc47dd7578c196186463b69864793a02bf13d286b7d1f758",
+      "audit/citations.md": "1abe1c0d206da89b402d3809b76bb960ca177f2cea195a4a486cd79cb42557e4",
+      "audit/math.json": "453da0758bc6403d81ca0543ac89a4d081a5a2a33880cf5fcb5030e5c882d742",
+      "audit/math.md": "9e639ce610b3a17b832991fa8680114ab28dac983cf93ac9899faea10cee9a19",
+      "audit/visual.json": "e84aea5991be2f7b0da1f6def2a9abe134e5e5b2b8b3b98dab18275053d654fe",
+      "audit/visual.md": "44b61dd79ad3b34de25295a8e82ab04f75801ecde8815e5ba44f608ada6973af",
+      "jobs/c025-incdec-referee-2ab23be91f58/role.json": "ade4cf5567d76a060fafde41151b9d22241dff2a45653291434b08614d929aa2",
+      "jobs/c025-incdec-release-4b3b2544efe9/role.json": "b9d0f85404643f96289a27d3f384b19e654e3c681f98e36ef7a29abeff1b3f76",
+      "jobs/c025-incdec-research-76b5f4e5209a/role.json": "0e77bce619feb1c2bdc24e9f54f0a6091ddca0e706ce831fe0964083f06e48d4",
+      "manuscript/main.log": "23a0961cac02d4a658fc3307717042980b8e67407d78b998a731bb210a76ed16"
+    },
+    "schema": 1,
+    "snapshot_digest": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4"
+  },
+  "citation_verdict": "accept",
+  "citation_limitations": [],
+  "excluded_third_party_text_caches": [],
+  "external_submission_performed": false
+}

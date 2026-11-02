@@ -1,0 +1,20 @@
+{
+  "job_id": "c022-spe-memory-write-31916ce50190",
+  "completed_at_utc": "2026-11-01T19:30:41.502156+00:00",
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "classification": "working_paper",
+  "mathematical_snapshot_digest": "8167ae363386355fe869e8109b82155be5da309379f81a3f7216041bf9acf52f",
+  "manuscript_digest": "fda8041cddf4c1a9b3b39b3e7e551e135f79bf4f894525e547ac174a11bbfaa2",
+  "pdf": "output/pdf/spe-memory-working_paper.pdf",
+  "pdf_sha256": "1c714b9216ce3cf89b26123c6beebf3c7a38d14b31e0b5a727dcaa214978306f",
+  "all_mathematical_inputs_unchanged": true,
+  "all_frozen_manuscript_inputs_match": true,
+  "math_gate_passed": true,
+  "freeze_manuscript_passed": true,
+  "fresh_release_review_pending": true,
+  "released": false,
+  "external_actions_performed": false,
+  "next_test": "Separate fresh citation/build/every-page/source-archive reproduction review of the frozen manuscript, followed by normal release gates without upgrading working_paper."
+}

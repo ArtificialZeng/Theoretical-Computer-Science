@@ -1,0 +1,12 @@
+{
+  "job_id": "c032-dspdag-research-5f16f6951448",
+  "at_utc": "2026-11-02T12:03:28.606695+00:00",
+  "new_snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+  "all_frozen_files_match": true,
+  "frozen_file_count": 21,
+  "source_unchanged": true,
+  "current_math_acceptance_exists": false,
+  "research_pass": 2,
+  "accumulated_pass_cap": 3,
+  "scope": "Structural/integrity handoff check only; no mathematical certification."
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "For every undirected unit-edge-capacity graph with k indexed terminal pairs, one randomized algorithm runs in polynomial time with a polynomial bound on random bits, always returns a congestion-1 splittable unit routing of a subset of distinct original pairs, and with probability at least 3/4 selects at least OPT/[C log(k+2) exp(C sqrt(log log(k+4)))] pairs for an absolute constant C. Thus the full immutable source.md Conjecture 5.1 has a log^(1+o(1)) k approximation, with no congestion augmentation, fractional admission credit, restricted graph class, or n-for-k substitution. This is the proposer’s full-resolution claim pending fresh review.",
+  "contribution": "A protected uniform-path-copy reduction composes one fixed integral-node-weight BJS2026 flow-expander decomposition with the prior corrected CKS congestion-1 matching rounding. Old unit terminal occurrence bridges prohibit duplicate-copy admission; a fixed-flow cut charge retains a constant fraction of copy paths; a small-k exact branch makes the remaining endpoint weight O(k^2). This avoids the unproved nonuniform rounding and changing-throughput interface and improves the current primary-source O(log^2 k) general-graph baseline to log^(1+o(1)) k. Uniformization, decomposition, and CKS clustering themselves are credited as prior work. The proposed nonroutine value is the full admission-preserving reduction and its original-target consequence; fresh novelty, significance and STOC-level assessment remain required.",
+  "proposer_job_id": "c026-aonflow-research-02dec8252283",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "evidence/research-2-uniform-copy-resolution.md",
+    "evidence/research-2-literature.md",
+    "evidence/research-2-check.py",
+    "evidence/research-2-check-results.json",
+    "intake/source-inputs.json",
+    "intake/primary/2602.15015-expanders.pdf",
+    "intake/primary/2602.15015-expanders.txt",
+    "intake/primary/CKS2005-welllinked.pdf",
+    "intake/primary/CKS2005-welllinked.txt",
+    "intake/primary/CKS2013-AON.pdf",
+    "intake/primary/CKS2013-AON.txt"
+  ]
+}

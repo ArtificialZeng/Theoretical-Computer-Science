@@ -1,0 +1,81 @@
+[
+  {
+    "page": 1,
+    "ordinary_prose_sizes": [
+      "11",
+      "17"
+    ],
+    "below_11": []
+  },
+  {
+    "page": 2,
+    "ordinary_prose_sizes": [
+      "11",
+      "12"
+    ],
+    "below_11": []
+  },
+  {
+    "page": 3,
+    "ordinary_prose_sizes": [
+      "11",
+      "12",
+      "9"
+    ],
+    "below_11": [
+      {
+        "size": "9",
+        "text": "Rectangular Batching for Disjoint Shortest Paths on DAGs \u2022 3"
+      }
+    ]
+  },
+  {
+    "page": 4,
+    "ordinary_prose_sizes": [
+      "11",
+      "12"
+    ],
+    "below_11": []
+  },
+  {
+    "page": 5,
+    "ordinary_prose_sizes": [
+      "11",
+      "9"
+    ],
+    "below_11": [
+      {
+        "size": "9",
+        "text": "Rectangular Batching for Disjoint Shortest Paths on DAGs \u2022 5"
+      }
+    ]
+  },
+  {
+    "page": 6,
+    "ordinary_prose_sizes": [
+      "11",
+      "12"
+    ],
+    "below_11": []
+  },
+  {
+    "page": 7,
+    "ordinary_prose_sizes": [
+      "11",
+      "9"
+    ],
+    "below_11": [
+      {
+        "size": "9",
+        "text": "Rectangular Batching for Disjoint Shortest Paths on DAGs \u2022 7"
+      }
+    ]
+  },
+  {
+    "page": 8,
+    "ordinary_prose_sizes": [
+      "11"
+    ],
+    "below_11": []
+  }
+]

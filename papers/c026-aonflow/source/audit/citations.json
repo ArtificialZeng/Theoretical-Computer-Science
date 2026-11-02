@@ -1,0 +1,32 @@
+{
+  "job_id": "c026-aonflow-release-7db9e6fea069",
+  "snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd",
+  "manuscript_digest": "d852233f598ab85f715ccb8d53630a2f2d61b1da067c66cb20deb30f9503838c",
+  "pdf_digest": "50c157c4b7b471f5d2778b669efa55fde604245ebe40372a6c3cd79988c48fe4",
+  "checked_at_utc": "2026-11-02T01:01:23.276353+00:00",
+  "verdict": "accept_with_citation_limitations",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/BUILD.md",
+    "manuscript/Makefile",
+    "manuscript/acmart.cls",
+    "manuscript/build/aonflow-working_paper.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "citation_audit_method": "citation-check-skill-advisory-plus-primary-source-manual",
+  "scope": "All four substantive citations, source hypotheses and theorem passages, bounded nearest-result comparison, final bibliography, all publication source_files and actual local recorder/BibTeX dependencies checked. Complete local primary texts support every mathematical attribution. No user Excel/BibTeX authority was designated. CKS05 publisher refresh and CKS13 external PDF/DOI refresh unavailable, explicitly disclosed; source existence is not denied. Accepted full-scope theorem and working_paper classification retained.",
+  "unverified_citations": [
+    {
+      "key": "CKS05",
+      "limitation": "Live ACM publisher endpoint HTTP 403; full author PDF and author-institution DOI/pages record checked. Only the publisher refresh remains unverified."
+    },
+    {
+      "key": "CKS13",
+      "limitation": "Live author PDF timeout and DOI endpoint HTTP 403; complete frozen published PDF/text and printed DOI checked. Only the external refresh remains unverified."
+    }
+  ]
+}

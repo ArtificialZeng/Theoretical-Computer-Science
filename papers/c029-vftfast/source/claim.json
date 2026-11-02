@@ -1,0 +1,25 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "For every fixed rational delta in (0,1), a deterministic algorithm polynomial in the explicit input length, with exponent depending only on delta, constructs on every undirected unweighted simple n-vertex graph and all integers f>=0,k>=1 an f-vertex-fault-tolerant (C_delta*sqrt(k),C_delta*k)-spanner H subset G with at most C_delta*(f+1)^(1+delta)*n^(1+1/k)*log(n+2)^b_delta edges, simultaneously for every fault set of size at most f and every surviving pair with finite G-F distance. This resolves the complete immutable source.md question under problem.md; the proposed proof, including uniform runtime, is evidence/research3-resolution.md.",
+  "contribution": "A proposed full uniform polynomial-time realization of the Parter--Popova--Tzalik almost-linear-fault mixed-stretch tradeoff. An f-dependent exact representative-path DP is polynomial in the small-fault regime; the complementary large-fault regime already meets the target via the Dinitz--Robelle multiplicative constructor. The proof verifies insertion-witness packing transfer and all pendant scales. Standard representative-family algebra, protected gap cuts, source packing and multiplicative constructions are credited. No better size/stretch theorem or new representative-family primitive is claimed. Current bounded searches found no equivalent combined method; fresh correctness, novelty, substantive-value and separate STOC review remain required.",
+  "proposer_job_id": "c029-vftfast-research-9df2f29ab673",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "evidence/research3-resolution.md",
+    "evidence/research3-sources.md",
+    "evidence/research3_full_checks.py",
+    "evidence/research3-full-checks.json",
+    "evidence/research3_parameter_checks.py",
+    "evidence/research3-parameter-checks.json",
+    "evidence/research2_representative_checks.py",
+    "intake/source-inputs.json",
+    "intake/primary/VFTAlphaBeta.pdf",
+    "intake/primary/VFTAlphaBeta.txt",
+    "intake/primary/GreedyVFT2020v2.pdf",
+    "intake/primary/GreedyVFT2020v2.txt",
+    "intake/primary/OptimalVFT2021v3.pdf",
+    "intake/primary/OptimalVFT2021v3.txt"
+  ]
+}

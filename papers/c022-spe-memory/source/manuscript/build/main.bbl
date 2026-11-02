@@ -1,0 +1,76 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{FKMY{\etalchar{+}}10}
+
+\bibitem[AMS26]{AMS26}
+Mona Alluwaym, James C.~A. Main, and Sven Schewe.
+\newblock Simple {Nash} equilibria for qualitative multiplayer games.
+\newblock In {\em 51st International Symposium on Mathematical Foundations of
+  Computer Science (MFCS 2026)}, volume 386 of {\em Leibniz International
+  Proceedings in Informatics}, pages 85:1--85:17. Schloss Dagstuhl --
+  Leibniz-Zentrum f{\"u}r Informatik, 2026.
+\newblock \url{https://doi.org/10.4230/LIPIcs.MFCS.2026.85}.
+
+\bibitem[BBGR18]{BBGR18}
+Thomas Brihaye, V{\'e}ronique Bruy{\`e}re, Aline Goeminne, and Jean-Fran{\c
+  c}ois Raskin.
+\newblock Constrained existence problem for weak subgame perfect equilibria
+  with {$\omega$}-regular {Boolean} objectives (full version).
+\newblock arXiv:1806.05544v2, 2018.
+\newblock Version of August 15, 2018. \url{https://arxiv.org/abs/1806.05544v2}.
+
+\bibitem[BBGR21]{BBGR21}
+Thomas Brihaye, V{\'e}ronique Bruy{\`e}re, Aline Goeminne, and Jean-Fran{\c
+  c}ois Raskin.
+\newblock Constrained existence problem for weak subgame perfect equilibria
+  with {$\omega$}-regular {Boolean} objectives.
+\newblock {\em Information and Computation}, 278:104594, 2021.
+\newblock \url{https://doi.org/10.1016/j.ic.2020.104594}.
+
+\bibitem[BGMR23]{BGMR23}
+Thomas Brihaye, Aline Goeminne, James C.~A. Main, and Mickael Randour.
+\newblock Reachability games and friends: A journey through the lens of memory
+  and complexity (invited talk).
+\newblock In {\em 43rd IARCS Annual Conference on Foundations of Software
+  Technology and Theoretical Computer Science (FSTTCS 2023)}, volume 284 of
+  {\em Leibniz International Proceedings in Informatics}, pages 1:1--1:26.
+  Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik, 2023.
+\newblock \url{https://doi.org/10.4230/LIPIcs.FSTTCS.2023.1}.
+
+\bibitem[BLRPR21]{BLPR21}
+V{\'e}ronique Bruy{\`e}re, St{\'e}phane Le~Roux, Arno Pauly, and Jean-Fran{\c
+  c}ois Raskin.
+\newblock On the existence of weak subgame perfect equilibria.
+\newblock {\em Information and Computation}, 276:104553, 2021.
+\newblock Author postprint:
+  \url{https://orbi.umons.ac.be/handle/20.500.12907/2750}.
+
+\bibitem[FH12]{FH12}
+Nathana{\"e}l Fijalkow and Florian Horn.
+\newblock The surprizing complexity of generalized reachability games.
+\newblock arXiv:1010.2420v2, 2012.
+\newblock Version of February 3, 2012. \url{https://arxiv.org/abs/1010.2420v2}.
+
+\bibitem[FKMY{\etalchar{+}}10]{FKMSSV10}
+J{\'a}nos Flesch, Jeroen Kuipers, Ayala Mashiah-Yaakovi, Gijs Schoenmakers,
+  Eilon Solan, and Koos Vrieze.
+\newblock Perfect-information games with lower-semicontinuous payoffs.
+\newblock {\em Mathematics of Operations Research}, 35(4):742--755, 2010.
+\newblock \url{https://doi.org/10.1287/moor.1100.0469}.
+
+\bibitem[Mai25]{MainQuestion25}
+James C.~A. Main.
+\newblock 25.26 memory requirements of subgame perfect equilibria in
+  reachability games.
+\newblock Automata Exchange, July 2025.
+\newblock Question 3; posted July 1, 2025.
+  \url{https://automata.exchange/25.26-memory-requirements-of-subgame-perfect-equilibria-in-reachability-games/}.
+
+\bibitem[Mai26]{Main26}
+James C.~A. Main.
+\newblock Arena-independent memory bounds for {Nash} equilibria in reachability
+  games.
+\newblock {\em Information and Computation}, 309:105425, 2026.
+\newblock \url{https://doi.org/10.1016/j.ic.2026.105425}. Author version:
+  \url{https://orbi.umons.ac.be/handle/20.500.12907/55655}.
+
+\end{thebibliography}

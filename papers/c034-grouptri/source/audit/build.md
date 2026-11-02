@@ -1,0 +1,11 @@
+# Clean build and source-package reproduction
+
+Job: c034-grouptri-release-98d1e823492f. Manuscript: a40f8840ae0d14f65c4af83e804cb282ac08f663f3e89dfedb04cd0efadea7ba; PDF: e9b3d5055ad93f76865143de8acab7b3c4dc6c1f3cd1fe3b20482eb99d68cfa4.
+
+Accept. A new clean output directory tmp/release-build was used with latexmk -pdf -interaction=nonstopmode -halt-on-error, running TeX/BibTeX to convergence. The final real compiler log is evidence/release-build.log, SHA256 11abf27ed8844aaadbac10d5641695126abef373959c188c0cd11dcd7f7db369; full command output is evidence/release-build-transcript.log. No fatal errors, unresolved citations/cross-references, missing glyphs, overfull or underfull boxes are present. The sole acmart warning is missing affiliation city. The user provided no city, so none was invented.
+
+The generated main.bbl equals the packaged bibliography byte-for-byte. All fonts are embedded; PDF metadata has the correct title; letter pages are 612 by 792 points, unencrypted, with eight total pages. The identified author/contact are correct in rendered/extracted text. Official acmart v2.20 class and ACM-Reference-Format.bst match the designated original distribution hashes exactly. Source geometry sets one-inch margins and 11pt single-column review format.
+
+The nine-source working_paper ZIP was extracted to isolated tmp/release-reproduction and compiled using only those sources and system TeX packages. The reproduction log has the same sole city warning and no errors. Reproduced text and main.bbl exactly equal the main build; all eight 120-dpi rendered PNGs are byte-identical. ZIP files equal the listed source bytes. audit/reproduction.json records the ZIP hash, input checks and all image hashes. PDF byte identity is not claimed because build timestamps and IDs may differ. No network input is needed to rebuild.
+
+Only publication prose/compliance and descriptive publication metadata changed in this release context; earlier source/PDF/snapshot bytes are preserved in evidence/release-before-edit/. The accepted mathematical snapshot, all prior reviews and working_paper venue assessment remain unchanged. Clean compilation and finite records do not constitute mathematical proof or a STOC acceptance judgment.

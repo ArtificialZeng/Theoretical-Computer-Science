@@ -1,0 +1,15 @@
+{
+  "job_id": "c032-dspdag-release-5fe4e38b60c7",
+  "snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+  "manuscript_digest": "c2916fd05375010d302349b16227c74c3b9034412b631d619036c3087052fe3f",
+  "pdf_digest": "04e5cdc5235be2a9327b7f80616afcc3d5854ecbab67d4f9fe5c12c23aca20f2",
+  "reviewed_at": "2026-11-02T12:51:51.063385+00:00",
+  "verdict": "accept",
+  "report": "audit/build.md",
+  "build_log": "evidence/release/final-build.log",
+  "build_log_digest": "c2a594a2e3f9808dcb02c0d8916ced30a5ca39f455e6c4563c2d800d4e31395a",
+  "clean_build": true,
+  "source_archive": "output/source/dspdag-working_paper-source.zip",
+  "source_archive_digest": "8747ef7056fa81e8a3523adfa454fb3dd4426e9a1f9ebe2366bb728e5d6b7d9f",
+  "archive_rebuild_byte_identical": true
+}

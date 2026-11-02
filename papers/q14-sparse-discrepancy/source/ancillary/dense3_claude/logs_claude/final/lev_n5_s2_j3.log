@@ -1,0 +1,87 @@
+# 2026-11-02 23:05:43 CST  src: corner_bnb_v7_claude.c sha1 3f0894555f2f
+# cmd: LEVELS=1,1,2,2,2 corner_bnb_final_claude (= v7 source) 5 299 100 27 < pat_n5_s2_j3.txt
+function 0: c = 199/100, dmix 2
+function 1: c = 199/100, dmix 2
+function 2: c = 299/100, dmix 3
+function 3: c = 299/100, dmix 3
+function 4: c = 299/100, dmix 3
+P 1 boxes 1 fails 0
+P 2 boxes 1 fails 0
+P 3 boxes 1 fails 0
+P 4 boxes 1 fails 0
+P 5 boxes 1 fails 0
+P 6 boxes 1 fails 0
+P 7 boxes 1 fails 0
+P 8 boxes 1 fails 0
+P 9 boxes 1 fails 0
+P 10 boxes 1 fails 0
+P 11 boxes 1 fails 0
+P 12 boxes 1 fails 0
+P 13 boxes 1 fails 0
+P 14 boxes 1 fails 0
+P 15 boxes 1 fails 0
+P 16 boxes 1 fails 0
+P 17 boxes 1 fails 0
+P 18 boxes 1 fails 0
+P 19 boxes 1 fails 0
+P 20 boxes 1 fails 0
+P 21 boxes 1 fails 0
+P 22 boxes 1 fails 0
+P 23 boxes 1 fails 0
+P 24 boxes 1 fails 0
+P 25 boxes 3 fails 0
+P 26 boxes 1 fails 0
+P 27 boxes 1 fails 0
+P 28 boxes 1 fails 0
+P 29 boxes 1 fails 0
+P 30 boxes 1 fails 0
+P 31 boxes 1 fails 0
+P 32 boxes 1 fails 0
+P 33 boxes 1 fails 0
+P 34 boxes 1 fails 0
+P 35 boxes 3 fails 0
+P 36 boxes 1 fails 0
+P 37 boxes 1 fails 0
+P 38 boxes 1 fails 0
+P 39 boxes 1 fails 0
+P 40 boxes 1 fails 0
+P 41 boxes 1 fails 0
+P 42 boxes 1 fails 0
+P 43 boxes 1 fails 0
+P 44 boxes 1 fails 0
+P 45 boxes 1 fails 0
+P 46 boxes 1 fails 0
+P 47 boxes 1 fails 0
+P 48 boxes 1 fails 0
+P 49 boxes 1 fails 0
+P 50 boxes 1 fails 0
+P 51 boxes 1 fails 0
+P 52 boxes 1 fails 0
+P 53 boxes 1 fails 0
+P 54 boxes 1 fails 0
+P 55 boxes 1 fails 0
+P 56 boxes 1 fails 0
+P 57 boxes 1 fails 0
+P 58 boxes 1 fails 0
+P 59 boxes 1 fails 0
+P 60 boxes 1 fails 0
+P 61 boxes 1 fails 0
+P 62 boxes 1 fails 0
+P 63 boxes 1 fails 0
+P 64 boxes 1 fails 0
+P 65 boxes 1 fails 0
+P 66 boxes 1 fails 0
+P 67 boxes 1 fails 0
+P 68 boxes 1 fails 0
+P 69 boxes 1 fails 0
+P 70 boxes 1 fails 0
+P 71 boxes 1 fails 0
+P 72 boxes 1 fails 0
+P 73 boxes 1 fails 0
+P 74 boxes 1 fails 0
+P 75 boxes 1 fails 0
+P 76 boxes 1 fails 0
+P 77 boxes 1 fails 0
+P 78 boxes 1 fails 0
+P 79 boxes 1 fails 0
+TOTAL patterns 79 boxes 83 uncleared 0 dfsnodes 178 skipped 0

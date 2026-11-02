@@ -1,0 +1,46 @@
+{
+  "job_id": "c029-vftfast-triage-c8f458fcdb95",
+  "checked_at_utc": "2026-11-02T04:51:53.248768+00:00",
+  "source_sha256": "45828a099cc88bde52aee6450b298c8b73397e4367d3911585521595f94657b8",
+  "source_matches_runner_record": true,
+  "primary_inputs": [
+    {
+      "file": "intake/primary/VFTAlphaBeta.pdf",
+      "expected_sha256": "7ae464335fa6573bb5390e1b8e9c43bd8274935773ca98bc361128c46b0cdbb4",
+      "actual_sha256": "7ae464335fa6573bb5390e1b8e9c43bd8274935773ca98bc361128c46b0cdbb4",
+      "matches": true
+    },
+    {
+      "file": "intake/primary/VFTAlphaBeta.txt",
+      "expected_sha256": "11b443f1bd7b35bd93fced6a4cb3f0e4e6a1ed262b225fa624b8d799c44833a7",
+      "actual_sha256": "11b443f1bd7b35bd93fced6a4cb3f0e4e6a1ed262b225fa624b8d799c44833a7",
+      "matches": true
+    },
+    {
+      "file": "intake/primary/GreedyVFT2020v2.pdf",
+      "expected_sha256": "bc0611954fd100f93a56de327a7a806bf223b7c8f3cf4b89ee2df1866506d249",
+      "actual_sha256": "bc0611954fd100f93a56de327a7a806bf223b7c8f3cf4b89ee2df1866506d249",
+      "matches": true
+    },
+    {
+      "file": "intake/primary/GreedyVFT2020v2.txt",
+      "expected_sha256": "68909dc4718f24a6c58b423093c24efd578ad605d974499d429bd8318707544a",
+      "actual_sha256": "68909dc4718f24a6c58b423093c24efd578ad605d974499d429bd8318707544a",
+      "matches": true
+    },
+    {
+      "file": "intake/primary/OptimalVFT2021v3.pdf",
+      "expected_sha256": "b3cb28463c48d327089b5b17da80dae7e142b499fc48a2a358117b0d51d42732",
+      "actual_sha256": "b3cb28463c48d327089b5b17da80dae7e142b499fc48a2a358117b0d51d42732",
+      "matches": true
+    },
+    {
+      "file": "intake/primary/OptimalVFT2021v3.txt",
+      "expected_sha256": "fc36c72f8be4499f102aad9971d895ca2cdf2d5043eabc9a127f771a2ecce4c2",
+      "actual_sha256": "fc36c72f8be4499f102aad9971d895ca2cdf2d5043eabc9a127f771a2ecce4c2",
+      "matches": true
+    }
+  ],
+  "research_passes_observed": 0,
+  "runner_state_modified": false
+}

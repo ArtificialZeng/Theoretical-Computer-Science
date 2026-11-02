@@ -1,0 +1,42 @@
+{
+  "job_id": "c026-aonflow-write-0c7e7e24154c",
+  "role": "write",
+  "review_type": "writer_preflight_not_fresh_release_audit",
+  "at_utc": "2026-11-02T00:52:00.233871+00:00",
+  "pdf": "manuscript/build/aonflow-working_paper.pdf",
+  "pdf_sha256": "2f20675951dad88fc8816bde05065978c667483658297fbb055987b44090e19e",
+  "total_pages": 7,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "render_command": "pdftoppm -r 115 -png manuscript/build/aonflow-working_paper.pdf evidence/write-0c7e7e24154c-render/page",
+  "page_findings": {
+    "1": "Separate title/author/abstract page; full formula readable; author contact at bottom.",
+    "2": "Main theorem, context and first cited ingredient legible; no clipping or overlaps.",
+    "3": "Matching ingredient, normalization, LP and copy preparation legible.",
+    "4": "Sampling, fixed-path charge and component product demand legible.",
+    "5": "Unit admission bridge proof, k-sensitive bound and corrected dependency start legible.",
+    "6": "Ownership, corrected tagging, exact-congestion explanation legible.",
+    "7": "Computational limitations, substantial AI disclosure and all four references legible."
+  },
+  "clipping_overlap_or_missing_glyphs_observed": false,
+  "all_fonts_embedded": true,
+  "all_citations_resolved": true,
+  "citation_keys": [
+    "Anand26",
+    "BJS26",
+    "CKS05",
+    "CKS13"
+  ],
+  "author_count": 1,
+  "source_job_or_hash_metadata_in_manuscript": false,
+  "readiness_label": "working_paper",
+  "fresh_release_audit_still_required": true,
+  "mathematical_claim_unchanged": true
+}

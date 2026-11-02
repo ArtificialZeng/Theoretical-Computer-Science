@@ -1,0 +1,13 @@
+{
+  "job_id": "c026-aonflow-write-0c7e7e24154c",
+  "role": "write",
+  "at_utc": "2026-11-02T00:52:38.066366+00:00",
+  "command": "release_gate.py freeze-manuscript .",
+  "exit_code": 0,
+  "mathematical_snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd",
+  "manuscript_digest": "6c71c5ce985ec03b19e7a42e206758a85f8d27f234c88eb5b355a1b79aff179a",
+  "pdf_digest": "2f20675951dad88fc8816bde05065978c667483658297fbb055987b44090e19e",
+  "pdf": "manuscript/build/aonflow-working_paper.pdf",
+  "classification": "working_paper",
+  "release_review_pending": true
+}

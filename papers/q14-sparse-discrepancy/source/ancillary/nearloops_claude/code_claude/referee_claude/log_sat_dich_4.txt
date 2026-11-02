@@ -1,0 +1,1 @@
+near-dichotomy n=4 solver=kissat: vars=912 clauses=4260 result=UNSATISFIABLE time=0.3s

@@ -1,0 +1,17 @@
+{
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "New full-resolution candidate: deterministic O_k(m+n+n^(k+0.3)) detection for every fixed k>=3, including an exact bounded-word Boolean bridge. Finite checks passed; source and prior frozen evidence remain unchanged. Fresh review is required.",
+  "next_test": "Fresh referee must independently verify the rational-border-rank Boolean bridge, k-way partition and complete dyadic costs, then assess current novelty, significance and STOC classification.",
+  "evidence": [
+    "claim.json",
+    "audit/snapshot.json",
+    "evidence/research-2/proof.md",
+    "evidence/research-2/validation.json",
+    "evidence/research-2/literature.md",
+    "evidence/research-2/preservation.json",
+    "evidence/research-2/handoff-check.json",
+    "checkpoint.md"
+  ]
+}

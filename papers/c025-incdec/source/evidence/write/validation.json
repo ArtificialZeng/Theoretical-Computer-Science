@@ -1,0 +1,30 @@
+{
+  "job_id": "c025-incdec-write-571412ddfbdf",
+  "at_utc": "2026-11-02T00:02:17.585173+00:00",
+  "kind": "writer_artifact_validation_not_mathematical_acceptance_or_release",
+  "pages": 6,
+  "max_total_pages": 12,
+  "source_sha256": "12956c470e37f8a548f510c7eb1781eda7b961999c5fa1163df43b56513b45a4",
+  "frozen_mathematical_files_unchanged": 24,
+  "accepted_snapshot_digest": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4",
+  "readiness_label": "working_paper",
+  "pdf": "manuscript/optimal-incdec-working_paper.pdf",
+  "pdf_sha256": "1bccbffd17b02d6383c460ebaae75935efe66a529d78e922980dbe941d4ed51b",
+  "official_class_byte_identical": true,
+  "official_dtx_byte_identical": true,
+  "clean_build_command": "python3 manuscript/build.py",
+  "unresolved_references": false,
+  "text_overflows": false,
+  "bibtex_warnings": false,
+  "benign_class_warnings": [
+    "The official class reports unused global natbib=false although the mode is deselected; standard alphanumeric citations compile and resolve.",
+    "No city present for affiliation: no city was supplied, so none was invented."
+  ],
+  "pdf_skill_marker": {
+    "command": "node /Users/mac/.codex/plugins/cache/openai-primary-runtime/pdf/26.1017.22136/skills/pdf/container_tools/mark_artifact_operation_started.mjs --operation-kind create --expected-output-count 1 --output-format pdf",
+    "exit_code": 0,
+    "runs": 1,
+    "before_first_authoring": true
+  },
+  "remaining_required_phase": "Separate fresh release citation/build/every-page and actual delivered ZIP reproduction gates."
+}

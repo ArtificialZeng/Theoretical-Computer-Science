@@ -1,0 +1,18 @@
+{
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Proposed a full original-scope log^(1+o(1)) k AON approximation via protected uniform path copies, one fixed integral-weight decomposition and corrected prior congestion-1 rounding. Exact finite diagnostics passed; fresh correctness, novelty and significance review remains required.",
+  "next_test": "Freeze claim.json and conduct fresh original-scope correctness, current-novelty and significance review, focusing on corrected CKS rounding transfer, duplicate-copy exclusion and k-sensitive polynomial-time bookkeeping.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "claim.json",
+    "evidence/research-2-uniform-copy-resolution.md",
+    "evidence/research-2-literature.md",
+    "evidence/research-2-check.py",
+    "evidence/research-2-check-results.json",
+    "evidence/research-2-run.json"
+  ]
+}

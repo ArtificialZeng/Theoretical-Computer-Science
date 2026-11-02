@@ -1,0 +1,19 @@
+{
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Proposed a full all-M deterministic quotient/kernel algorithm with a charged positive exponent saving independent of c. Exact finite tests passed; correctness, novelty and substantive value await fresh review. No manuscript/PDF created.",
+  "next_test": "Fresh referee: audit the frozen full-scope lifting proof and cost induction, then independently assess current novelty, nonroutine value and theoretical significance.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "claim.json",
+    "evidence/capped-listing-proof.md",
+    "evidence/quotient-kernel-proof.md",
+    "evidence/test_quotient_kernel.py",
+    "evidence/quotient-kernel-tests.json",
+    "evidence/quotient-kernel-literature.md",
+    "evidence/research-d92d3d43a90d.json"
+  ]
+}

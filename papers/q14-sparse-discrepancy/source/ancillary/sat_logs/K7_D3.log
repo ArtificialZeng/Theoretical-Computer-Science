@@ -1,0 +1,2 @@
+complete [7, 1] m= 21 degs [6, 6, 6, 6, 6, 6, 6]
+# NOTE (2026-11-03): this run (K_7, simple, D=3) did not finish; it is not used in the paper.

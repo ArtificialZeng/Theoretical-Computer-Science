@@ -1,0 +1,332 @@
+{
+  "job_id": "c031-detlis-research-bf90b0105355",
+  "started_utc": "2026-11-02T09:50:09.633736+00:00",
+  "finished_utc": "2026-11-02T09:50:09.757933+00:00",
+  "status": "passed",
+  "counts": {
+    "local_fixtures": 24,
+    "source_paths": 816,
+    "trace_memberships": 10495,
+    "candidate_scores": 2816,
+    "growth_steps": 176,
+    "table_states": 16830,
+    "negative_deltas": 187,
+    "certified": 19,
+    "uncertified": 3,
+    "merge_nodes": 14,
+    "invariant_checks": 10542,
+    "all_dummy": 2
+  },
+  "records": [
+    {
+      "lo": 1500,
+      "hi": 1516,
+      "background_size": 16,
+      "k": 8,
+      "M": 27,
+      "initial_exact_potential": "6729043/4294967296",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 16,
+      "D_bits": 18
+    },
+    {
+      "lo": 2032,
+      "hi": 2064,
+      "background_size": 16,
+      "k": 8,
+      "M": 27,
+      "initial_exact_potential": "6780575/4294967296",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 16,
+      "D_bits": 18
+    },
+    {
+      "lo": 500,
+      "hi": 524,
+      "background_size": 24,
+      "k": 8,
+      "M": 34,
+      "initial_exact_potential": "7981645/4294967296",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 24,
+      "D_bits": 19
+    },
+    {
+      "lo": 0,
+      "hi": 16,
+      "background_size": 16,
+      "k": 8,
+      "M": 55,
+      "initial_exact_potential": "65402895421/4294967296",
+      "terminal_bad_count": "0",
+      "certified": false,
+      "max_local_array": 16,
+      "D_bits": 19
+    },
+    {
+      "lo": 0,
+      "hi": 16,
+      "background_size": 16,
+      "k": 8,
+      "M": 45,
+      "initial_exact_potential": "2802855/2147483648",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 16,
+      "D_bits": 19
+    },
+    {
+      "lo": 0,
+      "hi": 16,
+      "background_size": 16,
+      "k": 8,
+      "M": 11,
+      "initial_exact_potential": "2427740713/1073741824",
+      "terminal_bad_count": "0",
+      "certified": false,
+      "max_local_array": 16,
+      "D_bits": 17
+    },
+    {
+      "lo": 0,
+      "hi": 16,
+      "background_size": 16,
+      "k": 8,
+      "M": 9,
+      "initial_exact_potential": "2099595/4294967296",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 16,
+      "D_bits": 17
+    },
+    {
+      "lo": 0,
+      "hi": 16,
+      "background_size": 16,
+      "k": 8,
+      "M": 23,
+      "initial_exact_potential": "34868694303/4294967296",
+      "terminal_bad_count": "0",
+      "certified": false,
+      "max_local_array": 16,
+      "D_bits": 18
+    },
+    {
+      "lo": 0,
+      "hi": 16,
+      "background_size": 16,
+      "k": 8,
+      "M": 27,
+      "initial_exact_potential": "6705329/4294967296",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 16,
+      "D_bits": 18
+    },
+    {
+      "lo": 0,
+      "hi": 16,
+      "background_size": 16,
+      "k": 8,
+      "M": 53,
+      "initial_exact_potential": "15175601/4294967296",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 16,
+      "D_bits": 19
+    },
+    {
+      "lo": 16,
+      "hi": 32,
+      "background_size": 16,
+      "k": 8,
+      "M": 67,
+      "initial_exact_potential": "18605383/4294967296",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 16,
+      "D_bits": 20
+    },
+    {
+      "lo": 32,
+      "hi": 48,
+      "background_size": 13,
+      "k": 8,
+      "M": 46,
+      "initial_exact_potential": "12093363/4294967296",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 13,
+      "D_bits": 19
+    },
+    {
+      "lo": 0,
+      "hi": 32,
+      "background_size": 32,
+      "k": 8,
+      "M": 27,
+      "initial_exact_potential": "7248393/4294967296",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 32,
+      "D_bits": 18
+    },
+    {
+      "lo": 32,
+      "hi": 64,
+      "background_size": 13,
+      "k": 8,
+      "M": 1,
+      "initial_exact_potential": "1/65536",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 13,
+      "D_bits": 13
+    },
+    {
+      "lo": 0,
+      "hi": 64,
+      "background_size": 45,
+      "k": 8,
+      "M": 7,
+      "initial_exact_potential": "1422035/4294967296",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 45,
+      "D_bits": 16
+    },
+    {
+      "lo": 0,
+      "hi": 16,
+      "background_size": 16,
+      "k": 8,
+      "M": 92,
+      "initial_exact_potential": "11594067/2147483648",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 16,
+      "D_bits": 20
+    },
+    {
+      "lo": 16,
+      "hi": 32,
+      "background_size": 16,
+      "k": 8,
+      "M": 60,
+      "initial_exact_potential": "16007957/4294967296",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 16,
+      "D_bits": 19
+    },
+    {
+      "lo": 32,
+      "hi": 48,
+      "background_size": 16,
+      "k": 8,
+      "M": 66,
+      "initial_exact_potential": "17602325/4294967296",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 16,
+      "D_bits": 20
+    },
+    {
+      "lo": 48,
+      "hi": 64,
+      "background_size": 16,
+      "k": 8,
+      "M": 75,
+      "initial_exact_potential": "5143153/1073741824",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 16,
+      "D_bits": 20
+    },
+    {
+      "lo": 0,
+      "hi": 32,
+      "background_size": 32,
+      "k": 8,
+      "M": 34,
+      "initial_exact_potential": "3874511/2147483648",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 32,
+      "D_bits": 19
+    },
+    {
+      "lo": 32,
+      "hi": 64,
+      "background_size": 32,
+      "k": 8,
+      "M": 15,
+      "initial_exact_potential": "3597963/4294967296",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 32,
+      "D_bits": 17
+    },
+    {
+      "lo": 0,
+      "hi": 64,
+      "background_size": 64,
+      "k": 8,
+      "M": 15,
+      "initial_exact_potential": "951127/2147483648",
+      "terminal_bad_count": "0",
+      "certified": true,
+      "max_local_array": 64,
+      "D_bits": 17
+    }
+  ],
+  "uniform_parameters": [
+    {
+      "n": "1",
+      "t": "1",
+      "k_bits": 23,
+      "fallback": true
+    },
+    {
+      "n": "2",
+      "t": "2",
+      "k_bits": 23,
+      "fallback": true
+    },
+    {
+      "n": "3",
+      "t": "3",
+      "k_bits": 24,
+      "fallback": true
+    },
+    {
+      "n": "17",
+      "t": "7",
+      "k_bits": 29,
+      "fallback": true
+    },
+    {
+      "n": "1073741831",
+      "t": "1048577",
+      "k_bits": 45,
+      "fallback": true
+    },
+    {
+      "n": "1237940039285380274899124225",
+      "t": "1152921504606846977",
+      "k_bits": 69,
+      "fallback": false
+    },
+    {
+      "n": "1532495540865888858358347027150309183618739122183602189",
+      "t": "1329227995784915872903807060280344577",
+      "k_bits": 102,
+      "fallback": false
+    }
+  ],
+  "limits": "Finite manually parameterized diagnostics; exact/direct oracles are verification only. Not an asymptotic benchmark, infinite proof, novelty verdict, or fresh referee review.",
+  "source_sha256": "685487ac92011a4ea2c24d5d587ca6e7a328c5ce2545532de026ad1dd947c6b3"
+}

@@ -1,0 +1,24 @@
+{
+  "checked_at_utc": "2026-11-01T16:48:19.356214+00:00",
+  "records": [
+    {
+      "url": "https://arxiv.org/abs/2502.07356",
+      "current_version": "v2",
+      "last_revised": "2026-01-12",
+      "scope": "Unversioned primary record inspected; no later version listed."
+    },
+    {
+      "url": "https://arxiv.org/abs/2410.03444",
+      "current_version": "v2",
+      "last_revised": "2024-10-29",
+      "scope": "Unversioned primary record inspected; no later version listed."
+    },
+    {
+      "url": "https://arxiv.org/abs/2307.13505",
+      "current_version": "v2",
+      "last_revised": "2024-06-28",
+      "scope": "Unversioned primary record inspected; algorithm concerns unrestricted linear/affine CRA register minimization."
+    }
+  ],
+  "limitation": "Version status alone is not a novelty proof; full source comparisons retained separately."
+}

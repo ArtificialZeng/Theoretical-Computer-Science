@@ -1,0 +1,32 @@
+{
+  "job_id": "c022-spe-memory-write-ec7adf27a885",
+  "snapshot_digest": "584a7fb098fe85033ce2ffdf4ed2efe808d7dde6097b69a23cab1d6c9f6df4e9",
+  "writer_check_only": true,
+  "pages": 7,
+  "within_user_12_total_page_cap": true,
+  "pdf": "output/pdf/spe-memory-working_paper.pdf",
+  "pdf_sha256": "c6f0eef23829878b3d7b75daa7093c6e90063748459b352dbf74dc2737371b31",
+  "frozen_math_files_unchanged": true,
+  "official_class_unmodified": true,
+  "official_class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "clean_build": true,
+  "build_command": "sh manuscript/build.sh",
+  "build_sequence": [
+    "pdflatex -interaction=nonstopmode -halt-on-error -file-line-error -recorder -output-directory=build main.tex",
+    "bibtex build/main",
+    "pdflatex (twice more)"
+  ],
+  "undefined_citations": false,
+  "undefined_references": false,
+  "overfull_boxes": false,
+  "underfull_boxes": false,
+  "bibtex_warnings": false,
+  "rendered_bibitems": 5,
+  "all_fonts_embedded": true,
+  "remaining_nonfatal_notices": [
+    "Official class reports unused global option natbib=false, while its own log confirms natbib was disabled. Alphanumeric references render correctly.",
+    "No city was supplied in the authorized author metadata; acmart warns that the affiliation has no city. The required university, country and email render correctly."
+  ],
+  "classification_retained": "working_paper",
+  "fresh_release_review_pending": true
+}

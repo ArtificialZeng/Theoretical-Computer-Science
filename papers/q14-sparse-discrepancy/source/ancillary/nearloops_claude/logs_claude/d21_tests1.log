@@ -1,0 +1,24 @@
+nS=4 nT=2 ell=2 delta=0 lam=0 path=jump a=2 -> SAT
+  verify: VERIFIED  |P|= 8
+  P = [56, 57, 58, 59, 60, 61, 62, 63]
+  path = [3, 0]
+nS=4 nT=3 ell=3 delta=1 lam=0 path=jump a=2 -> UNSAT
+nS=5 nT=3 ell=3 delta=1 lam=0 path=jump a=2 -> UNSAT
+nS=6 nT=3 ell=3 delta=1 lam=0 path=jump a=2 -> UNSAT
+nS=7 nT=2 ell=2 delta=1 lam=0 path=jump a=2 -> UNSAT
+nS=5 nT=4 ell=2 delta=1 lam=0 path=walk a=2 -> UNSAT
+nS=6 nT=4 ell=3 delta=1 lam=0 path=walk a=2 -> UNSAT
+nS=4 nT=3 ell=3 delta=0 lam=0 path=jump a=3 -> SAT
+  verify: VERIFIED  |P|= 8
+  P = [120, 121, 122, 123, 124, 125, 126, 127]
+  path = [7, 0]
+Traceback (most recent call last):
+  File "/Users/mac/Documents/ChatGPT/STOC理论计算机/claude_stoc2027_claude/dense2_claude/code_claude/d1_sat_claude.py", line 161, in <module>
+    res, data = solve(nS, nT, ell, delta, lam, kind, a=a)
+                ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mac/Documents/ChatGPT/STOC理论计算机/claude_stoc2027_claude/dense2_claude/code_claude/d1_sat_claude.py", line 54, in solve
+    path = build_path(nT, step, kind)
+  File "/Users/mac/Documents/ChatGPT/STOC理论计算机/claude_stoc2027_claude/dense2_claude/code_claude/d1_sat_claude.py", line 32, in build_path
+    assert nT <= step
+           ^^^^^^^^^^
+AssertionError

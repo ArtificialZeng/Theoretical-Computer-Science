@@ -1,0 +1,7 @@
+OK  rotation (3+4i)/5, one letter: (a)=False expected=False
+OK  rotation and diag(2,2): (a)=False expected=False
+OK  diag(2,1), I+E12, I+E21: (a)=False expected=False
+OK  MPS Example 17: (a)=True expected=True R_u nonabelian
+OK  Example ex:heis: (a)=True expected=True R_u nonabelian
+OK  weighted swap and diag(2,3): (a)=True expected=True R_u abelian
+ALL OK

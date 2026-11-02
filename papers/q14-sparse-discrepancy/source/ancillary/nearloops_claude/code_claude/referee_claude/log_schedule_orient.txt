@@ -1,0 +1,5 @@
+(1) lem:schedule: 20000 random (G, ordering, marks, levels) with the hypothesis: proof-simulation failures 0 (must be 0)
+    sanity: one level lowered below the bound: hypothesis check fails in 16106/16900 (the lemma's hypothesis is sufficient, not necessary; failures show the checker is live)
+(2) prop:orient: 1500 random graphs (n<=8, <=16 edges): min max-indegree != p(H): 0; violations of dgn/2 <= p <= dgn: 0; Euler bound violations: 0; conversion violations: 0; cases with p+2 < max(2,dgn): 0
+(2b) Euler-tour orientation, exact: 3000 random graphs (n<=14): in-degree > ceil(Delta/2) in 0 (must be 0)
+time 21.7s

@@ -1,0 +1,62 @@
+{
+  "job_id": "c029-vftfast-research-6281f7685c7a",
+  "arithmetic": "exact integer graph and subset operations",
+  "protected_gap": {
+    "domain": "all labeled simple H, n=2..5; every distinct unordered terminal pair; every protected superset; r=1..4; f=0..2",
+    "totals": {
+      "cut": 323652,
+      "cases": 1002072,
+      "graphs": 1098,
+      "protected_path": 627939,
+      "packing": 50481
+    },
+    "per_n": {
+      "2": {
+        "cut": 12,
+        "cases": 24,
+        "graphs": 2,
+        "protected_path": 12
+      },
+      "3": {
+        "cut": 252,
+        "cases": 576,
+        "graphs": 8,
+        "protected_path": 315,
+        "packing": 9
+      },
+      "4": {
+        "cut": 6948,
+        "cases": 18432,
+        "graphs": 64,
+        "protected_path": 10872,
+        "packing": 612
+      },
+      "5": {
+        "cut": 316440,
+        "cases": 983040,
+        "graphs": 1024,
+        "protected_path": 616740,
+        "packing": 49860
+      }
+    },
+    "failures": 0
+  },
+  "path_list_obstruction": {
+    "domain": "p,f=1..4, every A and T support",
+    "totals": {
+      "support_pairs": 8540,
+      "H_A_graphs": 242,
+      "parameter_pairs": 16
+    },
+    "failures": 0
+  },
+  "source_sha256": "45828a099cc88bde52aee6450b298c8b73397e4367d3911585521595f94657b8",
+  "source_matches_preserved_triage_digest": true,
+  "elapsed_seconds": 2.105,
+  "limitations": [
+    "finite checks supplement, not replace, the written arguments",
+    "no joint separator implemented or proved",
+    "no computational verification of the source packing proof",
+    "no full original-scope resolution"
+  ]
+}

@@ -1,0 +1,613 @@
+{
+  "n": 6,
+  "word": "RLLRRL",
+  "k": 2,
+  "comparison_set": 33,
+  "prefix_set": 6,
+  "dual_exactly_verified": true,
+  "inequality": "f(comparison_set) <= 2*f(prefix_set)",
+  "normalized_upper_bound": "-1/3",
+  "support": [
+    {
+      "weight": "3/4",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 0,
+        "items": [
+          0,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "7/24",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 0,
+        "items": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "weight": "1/12",
+      "constraint": {
+        "kind": "monotone",
+        "function": "h",
+        "set": 1,
+        "item": 3
+      }
+    },
+    {
+      "weight": "1/4",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 2,
+        "items": [
+          0,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "5/48",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 2,
+        "items": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "weight": "7/12",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 2,
+        "items": [
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "1/4",
+      "constraint": {
+        "kind": "monotone",
+        "function": "h",
+        "set": 3,
+        "item": 3
+      }
+    },
+    {
+      "weight": "3/16",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 8,
+        "items": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "weight": "5/48",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 8,
+        "items": [
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "1/12",
+      "constraint": {
+        "kind": "monotone",
+        "function": "h",
+        "set": 9,
+        "item": 2
+      }
+    },
+    {
+      "weight": "1/4",
+      "constraint": {
+        "kind": "monotone",
+        "function": "h",
+        "set": 11,
+        "item": 2
+      }
+    },
+    {
+      "weight": "3/16",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 12,
+        "items": [
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "1/12",
+      "constraint": {
+        "kind": "monotone",
+        "function": "h",
+        "set": 13,
+        "item": 1
+      }
+    },
+    {
+      "weight": "1/3",
+      "constraint": {
+        "kind": "monotone",
+        "function": "h",
+        "set": 15,
+        "item": 4
+      }
+    },
+    {
+      "weight": "7/24",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 16,
+        "items": [
+          2,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "7/24",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 20,
+        "items": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "weight": "3/16",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 22,
+        "items": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "5/48",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 28,
+        "items": [
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "1/3",
+      "constraint": {
+        "kind": "monotone",
+        "function": "h",
+        "set": 31,
+        "item": 5
+      }
+    },
+    {
+      "weight": "1/4",
+      "constraint": {
+        "kind": "monotone",
+        "function": "h",
+        "set": 33,
+        "item": 1
+      }
+    },
+    {
+      "weight": "7/24",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 34,
+        "items": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "weight": "5/48",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 40,
+        "items": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "weight": "7/24",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 44,
+        "items": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "weight": "7/24",
+      "constraint": {
+        "kind": "submodular",
+        "function": "h",
+        "set": 48,
+        "items": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "weight": "7/24",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 1,
+        "items": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "weight": "7/24",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 1,
+        "items": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "weight": "1/4",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 5,
+        "items": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "weight": "1/24",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 5,
+        "items": [
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "5/48",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 5,
+        "items": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "weight": "3/16",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 5,
+        "items": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "7/24",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 9,
+        "items": [
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "weight": "5/48",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 9,
+        "items": [
+          2,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "1/4",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 11,
+        "items": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "weight": "1/24",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 11,
+        "items": [
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "31/48",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 13,
+        "items": [
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "3/16",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 17,
+        "items": [
+          2,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "1",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 30,
+        "items": [
+          0,
+          5
+        ]
+      }
+    },
+    {
+      "weight": "1/24",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 37,
+        "items": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "weight": "3/16",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 37,
+        "items": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "weight": "5/48",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 41,
+        "items": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "weight": "1/24",
+      "constraint": {
+        "kind": "submodular",
+        "function": "g",
+        "set": 43,
+        "items": [
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "weight": "1/3",
+      "constraint": {
+        "kind": "monotone",
+        "function": "g",
+        "set": 62,
+        "item": 0
+      }
+    },
+    {
+      "weight": "2/3",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 0,
+        "chosen": "R",
+        "competitor_side": "L",
+        "competitor_item": 0,
+        "S": 0,
+        "T": 63
+      }
+    },
+    {
+      "weight": "7/24",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 1,
+        "chosen": "L",
+        "competitor_side": "R",
+        "competitor_item": 1,
+        "S": 0,
+        "T": 62
+      }
+    },
+    {
+      "weight": "3/4",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 1,
+        "chosen": "L",
+        "competitor_side": "L",
+        "competitor_item": 5,
+        "S": 0,
+        "T": 62
+      }
+    },
+    {
+      "weight": "11/16",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 2,
+        "chosen": "L",
+        "competitor_side": "L",
+        "competitor_item": 4,
+        "S": 2,
+        "T": 62
+      }
+    },
+    {
+      "weight": "5/48",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 2,
+        "chosen": "L",
+        "competitor_side": "R",
+        "competitor_item": 4,
+        "S": 2,
+        "T": 62
+      }
+    },
+    {
+      "weight": "13/24",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 2,
+        "chosen": "L",
+        "competitor_side": "L",
+        "competitor_item": 5,
+        "S": 2,
+        "T": 62
+      }
+    },
+    {
+      "weight": "3/16",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 3,
+        "chosen": "R",
+        "competitor_side": "L",
+        "competitor_item": 3,
+        "S": 6,
+        "T": 62
+      }
+    },
+    {
+      "weight": "7/24",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 3,
+        "chosen": "R",
+        "competitor_side": "L",
+        "competitor_item": 5,
+        "S": 6,
+        "T": 62
+      }
+    },
+    {
+      "weight": "1/12",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 4,
+        "chosen": "R",
+        "competitor_side": "L",
+        "competitor_item": 5,
+        "S": 6,
+        "T": 54
+      }
+    }
+  ],
+  "equality_weights": [
+    "0",
+    "0",
+    "-1/3"
+  ],
+  "nonnegative_value_slack": [
+    {
+      "variable": 0,
+      "weight": "2/3"
+    },
+    {
+      "variable": 64,
+      "weight": "2/3"
+    }
+  ],
+  "scope": "One prescribed trace and comparator only; no general template or original-scope theorem."
+}

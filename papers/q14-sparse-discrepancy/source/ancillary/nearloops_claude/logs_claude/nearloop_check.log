@@ -1,0 +1,15 @@
+dichotomy n=3 exhaustive: 50 admissible failing labellings, 0 violations
+dichotomy n=4 random: 36 failing labellings tested, 0 violations
+dichotomy n=5 random: 0 failing labellings tested, 0 violations
+cover n=3 exhaustive: 6561 covers, 0 violations
+cover n=4 random: 20000 covers, 0 violations
+cover n=5 random: 20000 covers, 0 violations
+cover n=6 random: 3000 covers, 0 violations
+transfer nS=3 nT=2 l=2: 1500 (psi,path) pairs, 0 violations
+transfer nS=4 nT=2 l=2: 1500 (psi,path) pairs, 0 violations
+transfer nS=4 nT=3 l=2: 1500 (psi,path) pairs, 0 violations
+transfer nS=5 nT=3 l=2: 1500 (psi,path) pairs, 0 violations
+transfer nS=4 nT=3 l=3: 1500 (psi,path) pairs, 0 violations
+transfer nS=5 nT=4 l=3: 1500 (psi,path) pairs, 0 violations
+transfer nS=5 nT=4 l=2: 1500 (psi,path) pairs, 0 violations
+python3 -I nearloop_check_claude.py  7.21s user 0.07s system 97% cpu 7.459 total

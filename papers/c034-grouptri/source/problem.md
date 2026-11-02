@@ -1,0 +1,19 @@
+# Precise original problem — triage
+
+The immutable statement is source.md (SHA256 5e49e9583e24af889c0aa15a1b6dcadb797e1d85f3f467028441af101a677b0e), interpreting Majdoddin arXiv:2610.17420v1, Section 19 Model, Definition 21.1 and Open Problem 21.12. No replacement scope is proposed.
+
+For every fixed integer M >= 2, does there exist a uniform classical algorithm A_M and a constant delta_M > 0 with the following property? For every fixed real c > 0, every positive integer n, and every complete tripartite edge-labelled graph with parts A,B,C each of size at most n, A_M decides whether some (a,b,z) in A x B x C satisfies
+
+    w(a,b) + w(b,z) + w(a,z) = 0 in G,
+
+in O_{M,c}(n^(3-delta_M) polylog(n+2)) charged operations. Here G is supplied compactly as a product of Z_(m_i), where m_i >= 2 and m_i divides M, and |G| <= n^c. Each label is a residue vector. The algorithm must have a legitimate bit-model or Theta(log n)-bit word-RAM implementation. The saving is independent of c; constants may depend on c and M. Input reading, arithmetic, all preprocessing, actual construction of every queried instance, and termination count. Randomization is allowed only with bounded error on each input and a charged time cap. Empty parts and the trivial group must be handled, including small n. Polylogarithmic losses can be absorbed by reducing the positive saving.
+
+The exponent of a group is the least positive integer annihilating all its elements. The cyclic-factor presentation has r <= log_2|G| = O_c(log n); enumerating the entire group is not permitted free preprocessing. The empty product represents the trivial group. The decision target does not require all-edge answers or witnesses; a proof using stronger intermediate oracles must implement them and charge their cost.
+
+Coordinate embeddings x_i -> (M/m_i)x_i give an injective homomorphism into Z_M^r; the new order remains polynomial in n with a constant depending on M,c. This is an elementary input reduction, not proposed novelty. All r=O_c(log n) are included. A proof only for Z_4^r, restricted residue degree, sparse quotient-zero triangles, fixed dimension, or preprocessed universes does not resolve the original. In a disproof, invalidating one proposed algorithm is insufficient: the quantified algorithm-existence claim itself must be refuted.
+
+The source also gives a conditional matrix-primitive formulation H(epsilon,gamma). The unconditional target above requires an inspected legitimate instantiation, rather than an assumed oracle. Corollary 9.1(b) and Theorem 21.3 provide the source's stated elementary-group backend; their complete correctness and runtime remain proof dependencies to audit during research.
+
+Nearest prior: Theorem 21.3 and Corollary 21.7 supply elementary-group algorithms; Propositions 21.9 and 21.10 handle two restricted exponent-p^2 regimes. CVX23 Theorem 5.1 provides a decomposition with cubic initial preprocessing, despite a subcubic update bound. Proposed delta: a fully charged quotient/kernel lifting theorem for every fixed M, independent of the polynomial group-order constant. Verification route: first reconstruct legal capped witness listing, then prove the decomposition's edgewise potential identities, kernel encoding and a uniform cost induction. This is a proposed research route, not a theorem.
+
+Source status: open-supported as of this bounded 2026-11-02 check; no equivalent full resolution found in the inspected sources and searches, not a global priority certificate. Research suitability: advance. A full theorem could supply a reusable extension principle for group-labelled triangle algorithms and resolve associated representable coordinatewise cases. Actual novelty, depth and STOC significance remain unassessed until there is a completed result. No manuscript/PDF is authorized.

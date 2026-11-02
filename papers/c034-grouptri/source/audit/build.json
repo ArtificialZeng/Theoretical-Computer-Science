@@ -1,0 +1,15 @@
+{
+  "job_id": "c034-grouptri-release-98d1e823492f",
+  "snapshot_digest": "05aa22d3dd75b43826bffb43bc7976a87898d16ab67f0597c8e4a686ca39b771",
+  "manuscript_digest": "a40f8840ae0d14f65c4af83e804cb282ac08f663f3e89dfedb04cd0efadea7ba",
+  "pdf_digest": "e9b3d5055ad93f76865143de8acab7b3c4dc6c1f3cd1fe3b20482eb99d68cfa4",
+  "verdict": "accept",
+  "report": "audit/build.md",
+  "build_log": "evidence/release-build.log",
+  "build_log_digest": "11abf27ed8844aaadbac10d5641695126abef373959c188c0cd11dcd7f7db369",
+  "clean_build": true,
+  "source_package": "output/source/bounded-exponent-exact-triangle_working_paper.zip",
+  "source_package_digest": "4b815498ca6e140176c98c300ecdeeadd69bdcb3b6e20e86d1c8c6755c7b64cf",
+  "reproduction_report": "audit/reproduction.json",
+  "readiness_label": "working_paper"
+}

@@ -1,0 +1,28 @@
+{
+  "outcome": "continue",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Exact tests find 2-good chains on all 255 instances and refute local extension. Actual-gain bidirectional greedy survives broader numerical screening; one exact trace dual is certified. No general ratio-2 proof or original resolution exists.",
+  "next_test": "Derive a general-n telescoping certificate for actual-gain bidirectional greedy using O_i=(O union L_i) intersection T_i and cardinality excess; synthesize and exactly verify a nonnegative inequality template, including future choices, against compact-dual.json.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "evidence/research-pass-1/chain-summary.json",
+    "evidence/research-pass-1/chain-tables.json",
+    "evidence/research-pass-1/independent-verification.json",
+    "evidence/research-pass-1/local-obstruction.md",
+    "evidence/research-pass-1/route-status.md",
+    "evidence/research-pass-1/net-greedy-lp-summary.json",
+    "evidence/research-pass-1/net-greedy-lp-n7-summary.json",
+    "evidence/research-pass-1/compact-dual.json",
+    "evidence/research-pass-1/literature.md",
+    "evidence/research-pass-1/validation.json",
+    "code/chain_dp.py",
+    "code/net_greedy.py",
+    "code/net_greedy_lp.py",
+    "code/verify_chain_evidence.py",
+    "code/trace_dual.py",
+    "code/compact_dual.py"
+  ]
+}

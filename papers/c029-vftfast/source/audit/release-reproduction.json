@@ -1,0 +1,19 @@
+{
+  "job_id": "c029-vftfast-release-bdd37c945f4e",
+  "zip": "tmp/pdfs/release-source-working_paper.zip",
+  "zip_sha256": "1667aa60e10ae44f1e76bddcb54574b36bf838c8e63b02b2248c49d18b914cea",
+  "command": "sh manuscript/build.sh",
+  "source_only_clean": true,
+  "deleted_generated_bbl_before_first_build": true,
+  "pdf_byte_identical": true,
+  "bbl_byte_identical": true,
+  "pdf_digest": "8f61902bb7427aec09254cd8ac7566c87a76748f4dc9eb4d9bbed9828af7a7a8",
+  "build_log": "audit/release-clean-build.log",
+  "build_log_digest": "53a38780f0d217a4d49c9e38712cad24926438eefb7695cc040a95ff69929d58",
+  "official_class_matches": true,
+  "official_bst_matches": true,
+  "recorder": "tmp/pdfs/release-reproduce/manuscript/vftfast-working_paper.fls",
+  "notes": "The source ZIP was extracted into an isolated directory and generated bbl/aux/out/log/PDF were absent before the first build. A recorder pass inventoried dependencies; the timestamp-controlled supplied build was run afterward and reproduced final PDF and bbl bytes.",
+  "snapshot_digest": "b1495a4cbeb794181b64a2bc9a00b637d90f0a7a7fdf654844a24036b4029e66",
+  "manuscript_digest": "8013342c36141de01d96e75509498833a97008d1df48c6153524aefa6caa4daa"
+}

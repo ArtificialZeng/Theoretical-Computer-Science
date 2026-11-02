@@ -1,0 +1,33 @@
+{
+  "artifacts": {
+    "main.pdf": "ff0b8c2710e0e8655e39aaaaeef6df945a006e772ebc9559845b12d5f145a80f"
+  },
+  "citation_verdict": "accept_with_citation_limitations",
+  "kind": "resolution-paper",
+  "manuscript_digest": "8502854365556ca110be34d374a6e54b8133c7e747267dea571dd218f829c685",
+  "original_status": "proved",
+  "pages": 9,
+  "pdf_digest": "ff0b8c2710e0e8655e39aaaaeef6df945a006e772ebc9559845b12d5f145a80f",
+  "provenance": {
+    "audit/build.json": "e0eae1f9a4d15e04fcc177989aff1bacdeef85122b96be94910ab42031426699",
+    "audit/build.md": "d4af8af508f0893a295a52e40c869ad21e76120650d5c11465098cafde5387ef",
+    "audit/citations.json": "8bd494e401090ef16bc3e43254040bce7a06d2c3155bf2462e33bf70f85530d3",
+    "audit/citations.md": "91a8b8c624f0f3e2f4b2e302db4075184b7bb8b8f6aed6758d57791a3d340325",
+    "audit/math.json": "ed32024ae507984b2cf73132b6bb69eae1595809f622879ba752ea0ca8ce4fd7",
+    "audit/math.md": "6e872da3ddfed1f117c47c86d38bb765171ec53a2d86d26ad858805c67e7918e",
+    "audit/visual.json": "6865afbbf4471d9f9cb30344a319bae8f526f373042658f5dc579ed06a2ddf5c",
+    "audit/visual.md": "2093d7062ba266e4e121e08c95b1355f185e863f79c5871afe9d1a88353a10de",
+    "evidence/release-reproduction/manuscript/main.log": "d738c5a40d64fff0f117021fd06faa6ca2b62dc70463c8dd10ae47ce143f23f0",
+    "jobs/c025-pmcdelay-referee-6970e98c3a2b/role.json": "9ecee4d9f08ee9b39884d851661d64be564d75d2c3a9f225f5af0ddd9ae1aeba",
+    "jobs/c025-pmcdelay-release-dfedec0715d6/role.json": "01a63c492acb0119cf59695261cc752b481444a85121e12ba6e0d25798434fe2",
+    "jobs/c025-pmcdelay-research-338d67d18097/role.json": "1155603ffefa585a8cf0c8203f4af03cad39378aec96a3bca907e8333abee388"
+  },
+  "schema": 1,
+  "snapshot_digest": "9e18afcb85b19f266e11aab420e78596f90e785921128737257fbdd42a21cfbc",
+  "unverified_citations": [
+    {
+      "key": "BBC99",
+      "limitation": "Complete WG 1999 chapter text was not obtained. Publisher metadata and abstract verified; exact polynomial-delay primitive inspected in BLS v3 Lemma 1. Official queue code only corroborates the recipe. No unsupported attribution remains."
+    }
+  ]
+}

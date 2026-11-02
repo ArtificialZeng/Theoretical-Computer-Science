@@ -1,0 +1,24 @@
+{
+  "job_id": "c032-dspdag-research-2c4a21894757",
+  "phase": "research",
+  "purpose": "proposer evidence index, not a freeze or acceptance",
+  "source_sha256": "bd9f92784c80f57bb9d38b0d1ec47a1127cfe421e2d2ca69776e28d431657a90",
+  "claim_evidence_sha256": {
+    "source.md": "bd9f92784c80f57bb9d38b0d1ec47a1127cfe421e2d2ca69776e28d431657a90",
+    "problem.md": "97252deddbffd6a6c5891ca5dafb07a484f752f9e1f7e380160c1f17ad5adf6e",
+    "evidence/research-1/proof.md": "6f86f081cc98e282cc46ace913525dff2b6bd02f6f6b83447472488968118931",
+    "evidence/research-1/frontier_check.py": "534fbaafd2c9b4f6b7467f1f2e8e5887864d4b79a4e819eeb8fb08f6ac6bb1c4",
+    "evidence/research-1/frontier-check.json": "88ef2103a5f815b3ac95b4776be502096bad827ef5db28ec04e3a44bfe73a820",
+    "evidence/research-1/heldout-check.json": "29af0f57c90892fe34ea8c33a632455eadd721dcd37f2ccb404eff16dfa50e76",
+    "evidence/research-1/literature.md": "f4eb60c37b4a2a0377407115bf0e12d10d74bd94958ce41a2b718335f3949959",
+    "evidence/literature-triage.md": "ea45901d49a7f895e6ea11ff01da2bbad0f8cc7a64c156e744002f0316933608",
+    "evidence/triage-validation.json": "0367588b855273869aea97a23520c7eb59f09d10bdec319a2a8b049208a9989c"
+  },
+  "claim_sha256": "0f913d1b9bb637d633fa4413c152cd85f6a86e57fce3892d83bd6afacd5ef62a",
+  "state_json_modified": false,
+  "research_passes_observed": 1,
+  "cap": 3,
+  "no_manuscript_or_pdf_created": true,
+  "independent_review_performed": false,
+  "scientific_work_ended_by_utc": "2026-11-02T11:27:04Z"
+}

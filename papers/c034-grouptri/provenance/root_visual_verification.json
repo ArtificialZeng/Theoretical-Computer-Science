@@ -1,0 +1,66 @@
+{
+  "at_utc": "2026-11-02T16:47:16.196527+00:00",
+  "reviewer": "root supervisor, actual visual inspection; not external peer review",
+  "verdict": "accept",
+  "actual_final_pdf": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027_continuous/c034-grouptri/c034-grouptri_working_paper.pdf",
+  "pdf_sha256": "e9b3d5055ad93f76865143de8acab7b3c4dc6c1f3cd1fe3b20482eb99d68cfa4",
+  "actual_delivered_source_zip_sha256": "5883187d35b4c27ccb791da9d5b87149077abf63ffa00a3d88dbb109d3fddd1a",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "render_dpi": 120,
+  "page_images": [
+    {
+      "page": 1,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/research/continuous/batches/20261102-034/root-final-grouptri-e9b3d5055ad9/page-1.png",
+      "sha256": "a0f817e48c9170e97d442b8e303086cd81262ebee0e04d796c26b6a8a660e61a"
+    },
+    {
+      "page": 2,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/research/continuous/batches/20261102-034/root-final-grouptri-e9b3d5055ad9/page-2.png",
+      "sha256": "e272c4bd6520fd974a179d60d451bfd1c40450e1a89b2223c66a4bc4fa8e6ffe"
+    },
+    {
+      "page": 3,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/research/continuous/batches/20261102-034/root-final-grouptri-e9b3d5055ad9/page-3.png",
+      "sha256": "9f8830ab967550bffe823ee7c75a825dcb574ecec6d94ad8f3e0a9d6df8d64a3"
+    },
+    {
+      "page": 4,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/research/continuous/batches/20261102-034/root-final-grouptri-e9b3d5055ad9/page-4.png",
+      "sha256": "9874207ffe5d7468939591bd426cd353ea3ac7be70dd793a04f3cbfeb47ce0cb"
+    },
+    {
+      "page": 5,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/research/continuous/batches/20261102-034/root-final-grouptri-e9b3d5055ad9/page-5.png",
+      "sha256": "cfd6bde89a6721e5b57676ab367021b46014342ec90720d95583a7a07f8b6498"
+    },
+    {
+      "page": 6,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/research/continuous/batches/20261102-034/root-final-grouptri-e9b3d5055ad9/page-6.png",
+      "sha256": "fe50bf7b083736f73f6ecff2a8a17ff0b407061c9d821789ef1ab661c33d6f72"
+    },
+    {
+      "page": 7,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/research/continuous/batches/20261102-034/root-final-grouptri-e9b3d5055ad9/page-7.png",
+      "sha256": "00a5c69f65bb47ad3f4e9b92fa4f766b97263e57b64db979bb2befb1d846a075"
+    },
+    {
+      "page": 8,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/research/continuous/batches/20261102-034/root-final-grouptri-e9b3d5055ad9/page-8.png",
+      "sha256": "f6c904558a3046a76e184b11e44afb15ee621e658bb9991ef515f29f26666e54"
+    }
+  ],
+  "observations": "All eight final delivered pages actually viewed. Title/sole author/contact, letter single-column layout, equations, proof continuations, charged-cost table, body/end AI roles and all references are readable. No clipping, overlap or missing symbols observed. Title page is intentionally separate as the submission title page. Normal proof/paragraph page continuations remain.",
+  "actual_final_zip_clean_build_verified": true,
+  "all_final_rebuilt_page_renders_match": true,
+  "readiness_label": "working_paper",
+  "scope": "Final-artifact visual/integrity check only; actual mathematical/innovation and venue judgments are separately recorded."
+}

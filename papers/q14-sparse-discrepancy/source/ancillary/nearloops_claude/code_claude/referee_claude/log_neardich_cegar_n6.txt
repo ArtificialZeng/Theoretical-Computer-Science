@@ -1,0 +1,1 @@
+near-dichotomy CEGAR n=6 solver=cadical: result=UNSATISFIABLE after 5 iterations, 64 blocked sets, time 1s

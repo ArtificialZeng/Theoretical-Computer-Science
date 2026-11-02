@@ -1,0 +1,62 @@
+{
+  "job_id": "c022-spe-memory-release-fb6f51f9715a",
+  "method": "pdftoppm 110dpi PNG; all individual images directly inspected with view_image",
+  "pages": [
+    {
+      "page": 1,
+      "render": "evidence/release-fb6f51f9715a/pages/page-1.png",
+      "sha256": "1cf670e864b95e5149bb7babbed6cecdb08240760e661ef32c5fbc4624bbfc3b",
+      "observation": "Title and sole author/contact correct; binomial and n3^n expressions legible; separate title page.",
+      "defects": []
+    },
+    {
+      "page": 2,
+      "render": "evidence/release-fb6f51f9715a/pages/page-2.png",
+      "sha256": "30aeaa10011ca76a8e17c0c7872d34345843389c963cc2867da0f566b13ba14d",
+      "observation": "Theorem/corollary/lower-bound statements and prior-work citations resolve; no overlap.",
+      "defects": []
+    },
+    {
+      "page": 3,
+      "render": "evidence/release-fb6f51f9715a/pages/page-3.png",
+      "sha256": "4bb581e2e687770493d0d7b73882a922d27fb6b2ad8cf5b910415109d5e0b860",
+      "observation": "Model and pre-current-vertex update formula legible; label definition contained in margins.",
+      "defects": []
+    },
+    {
+      "page": 4,
+      "render": "evidence/release-fb6f51f9715a/pages/page-4.png",
+      "sha256": "fd66157130a7db77e50571fe41c438a1e8e8ba6ea022f2fec3833c4c92b0b038",
+      "observation": "Local-credibility/progress proofs and piecewise reset/machine equation intact.",
+      "defects": []
+    },
+    {
+      "page": 5,
+      "render": "evidence/release-fb6f51f9715a/pages/page-5.png",
+      "sha256": "acb991e1c153cb116992eecdac2c9393a30b76a4b66733d193a4edfef0a34015",
+      "observation": "All-history argument and existence application fit; epsilon and prefix formulas legible.",
+      "defects": []
+    },
+    {
+      "page": 6,
+      "render": "evidence/release-fb6f51f9715a/pages/page-6.png",
+      "sha256": "9c59218ccd02d4bcfd24cda4bf64e280a4431c0cfed59c6e1ba99679365f6586",
+      "observation": "Quota inequalities, checker lemma and lower-bound proof legible; no clipping.",
+      "defects": []
+    },
+    {
+      "page": 7,
+      "render": "evidence/release-fb6f51f9715a/pages/page-7.png",
+      "sha256": "7b9ba9740ec42c3a5eb2a9738ab0be55b902a9fcad71363098bcf013fadcc5c1",
+      "observation": "Collision argument, finite-check numbers and substantial-AI disclosure readable.",
+      "defects": []
+    },
+    {
+      "page": 8,
+      "render": "evidence/release-fb6f51f9715a/pages/page-8.png",
+      "sha256": "1f1542bb2a603de6168b588d39f030568ff7972fac73df48e4dd959aca866872",
+      "observation": "All nine references and DOI/URL strings legible; long question URL wraps within margins.",
+      "defects": []
+    }
+  ]
+}

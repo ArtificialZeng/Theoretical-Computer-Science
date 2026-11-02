@@ -1,0 +1,16 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Wrote and froze a seven-page working_paper at the accepted full scope. Every page was inspected; a clean build reproduces identical PDF bytes. Separate release review remains pending.",
+  "next_test": "Fresh release review of citations, build, every page and source-archive reproduction against audit/manuscript-snapshot.json.",
+  "evidence": [
+    "manuscript/vftfast-working_paper.pdf",
+    "manuscript/main.tex",
+    "publication.json",
+    "audit/manuscript-snapshot.json",
+    "evidence/write-validation.json",
+    "literature/user_bibliography_check.md",
+    "checkpoint.md"
+  ]
+}

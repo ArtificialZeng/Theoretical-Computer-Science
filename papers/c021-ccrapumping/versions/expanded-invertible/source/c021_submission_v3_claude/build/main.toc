@@ -1,0 +1,47 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {paragraph}{Copyless registers.}{1}{section*.2}%
+\contentsline {paragraph}{Main result.}{1}{section*.3}%
+\contentsline {paragraph}{Scope and significance.}{2}{section*.4}%
+\contentsline {paragraph}{Running example and a forbidden pattern.}{3}{section*.5}%
+\contentsline {paragraph}{Sectors and consequences.}{3}{section*.6}%
+\contentsline {paragraph}{Proof ideas.}{4}{section*.7}%
+\contentsline {paragraph}{Related work.}{5}{section*.8}%
+\contentsline {paragraph}{Organization.}{6}{section*.9}%
+\contentsline {section}{\numberline {2}Models, representations and algebraic groups}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Copyless machines and their linearization}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Weighted representations}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Algebraic-group tools}{8}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Compression of a monoid of copyless maps}{9}{section.3}%
+\contentsline {section}{\numberline {4}Finite control: proof of (C1)$\Rightarrow $(C3)}{11}{section.4}%
+\contentsline {section}{\numberline {5}The normal form: proof of (C3)$\Rightarrow $(C2)}{12}{section.5}%
+\smallskip 
+\contentsline {section}{\numberline {A}The elementary reformulation and the two sectors}{14}{appendix.A}%
+\contentsline {section}{\numberline {B}Consequences and examples}{15}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}The uniform pumping property of the position sum}{16}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Polynomial ambiguity in the invertible sector}{17}{subsection.B.2}%
+\contentsline {section}{\numberline {C}Algorithms}{21}{appendix.C}%
+\contentsline {subsection}{\numberline {C.1}Deciding the invertible sector}{21}{subsection.C.1}%
+\contentsline {subsection}{\numberline {C.2}The unipotent sector in polynomial time}{21}{subsection.C.2}%
+\contentsline {subsection}{\numberline {C.3}Explicit pattern sums}{22}{subsection.C.3}%
+\contentsline {section}{\numberline {D}Polynomial-time decision procedures}{22}{appendix.D}%
+\contentsline {subsection}{\numberline {D.1}Block form and the reductive quotient}{23}{subsection.D.1}%
+\contentsline {subsection}{\numberline {D.2}Testing condition (a)}{24}{subsection.D.2}%
+\contentsline {subsection}{\numberline {D.3}The unipotent radical, layer by layer}{26}{subsection.D.3}%
+\contentsline {paragraph}{The algorithm.}{28}{section*.10}%
+\contentsline {subsection}{\numberline {D.4}Bit complexity}{28}{subsection.D.4}%
+\contentsline {subsection}{\numberline {D.5}Polynomial heights: a deterministic polynomial-time algorithm}{31}{subsection.D.5}%
+\contentsline {paragraph}{Conventions.}{32}{section*.11}%
+\contentsline {paragraph}{Weight basis.}{32}{section*.12}%
+\contentsline {paragraph}{The torus from short words.}{34}{section*.13}%
+\contentsline {section}{\numberline {E}Beyond the invertible sector}{38}{appendix.E}%
+\contentsline {subsection}{\numberline {E.1}A local necessary condition}{38}{subsection.E.1}%
+\contentsline {subsection}{\numberline {E.2}Rank-one resets}{39}{subsection.E.2}%
+\contentsline {subsection}{\numberline {E.3}Inverse weights and translations}{40}{subsection.E.3}%
+\contentsline {subsection}{\numberline {E.4}Affine contexts and non-closure under reversal}{42}{subsection.E.4}%
+\contentsline {subsection}{\numberline {E.5}One invertible letter and one rank-two reset}{47}{subsection.E.5}%
+\contentsline {subsection}{\numberline {E.6}Registers must interact}{50}{subsection.E.6}%
+\contentsline {subsection}{\numberline {E.7}Discussion}{51}{subsection.E.7}%
+\contentsline {section}{\numberline {F}Limits and open problems}{51}{appendix.F}%
+\contentsline {paragraph}{Open problems.}{51}{section*.14}%
+\contentsline {section}{AI methodology}{52}{section*.15}%
+\contentsline {section}{References}{52}{section*.16}%

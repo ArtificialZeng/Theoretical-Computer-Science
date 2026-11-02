@@ -1,0 +1,46 @@
+{
+  "source_sha256": "ff0b8c2710e0e8655e39aaaaeef6df945a006e772ebc9559845b12d5f145a80f",
+  "accepted_math_snapshot": "9e18afcb85b19f266e11aab420e78596f90e785921128737257fbdd42a21cfbc",
+  "manuscript_snapshot": "8502854365556ca110be34d374a6e54b8133c7e747267dea571dd218f829c685",
+  "pages": 9,
+  "rendered_images": [
+    "page-1.png",
+    "page-2.png",
+    "page-3.png",
+    "page-4.png",
+    "page-5.png",
+    "page-6.png",
+    "page-7.png",
+    "page-8.png",
+    "page-9.png"
+  ],
+  "checked_at_utc": "2026-11-01T23:52:21.596807+00:00",
+  "reviewer": "root context, internal AI visual review",
+  "pages_actually_viewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "image_sha256": {
+    "page-1.png": "8139ed2d09c141cd8e4919579aad74237fc2b03aac4fcb0c1a1d635d7f9b49a5",
+    "page-2.png": "3efc203e6a21f5e3cbd67160e333520b128566664d0944d736258ee3afd3f107",
+    "page-3.png": "3aa35cee307d0d32debcd9e8646915641832856c6a364119bb47dbc9ba313cf6",
+    "page-4.png": "d153fad3b9add7c83463ea9808278220a9df980f04ae65ef2e64092824e6b1b8",
+    "page-5.png": "3603c1b1f29b674bb84516fb5a3d4fde40dcb29c17a7547ce98f7bfde6507203",
+    "page-6.png": "123f50933e6cd71496437ddb42c83c6465510c68106f7cb6b4cedc0451ef5549",
+    "page-7.png": "9f87d8d7353568dd7514687b8bf08e4bb9e6c214e99aae528b15b43b5942b128",
+    "page-8.png": "f639509098e6cb20f52883ea887fdb6bb6cb2e7d8c0e08c6dc482f4e19821c48",
+    "page-9.png": "c0c81f648fb0bfbce490bde1f9d105bd54207f20e827e8783d07f25aea1f390c"
+  },
+  "findings": "All nine rendered pages viewed. No visible clipping, overlap, missing glyphs or out-of-margin equations. Title page whitespace is deliberate; page8 ends before references, and references plus AI methodology statement fit page9. This is visual/layout inspection only, not external human verification or an upgraded STOC assessment.",
+  "release_status": "Actual fresh release and final source ZIP clean reproduction passed; label working_paper retained.",
+  "actual_delivered_pdf_sha256": "ff0b8c2710e0e8655e39aaaaeef6df945a006e772ebc9559845b12d5f145a80f",
+  "actual_delivered_archive_sha256": "d8cdf77a3004b949f81c73e223ad3bce6c25594c60b035e3f4f788862cee6f9a",
+  "delivered_pdf_identical_to_all9_inspected_pages": true
+}

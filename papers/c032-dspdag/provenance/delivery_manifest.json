@@ -1,0 +1,129 @@
+{
+  "package_schema": 5,
+  "project": "c032-dspdag",
+  "title": "Rectangular Batching for Disjoint Shortest Paths on DAGs",
+  "readiness_label": "working_paper",
+  "stoc_assessment": {
+    "job_id": "c032-dspdag-referee-56b0105494de",
+    "snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+    "review_type": "fresh_internal_stoc_assessment",
+    "verdict": "working_paper",
+    "strongest_result": "Deterministic O_k(m+n+n^(k+0.3)) prescribed vertex-disjoint shortest-path detection for every fixed k>=3 on every positive-weight DAG in the immutable source addition/comparison model, with all new algebraic operands O_k(log(n+2)) bits and their elementary arithmetic charged. The k=3, delta=0.7 consequence fully and positively resolves AVW Open Problem 3. The original-weight bit-cost and arbitrary parallel-arc input-scan qualifications are explicit and unchanged.",
+    "nearest_comparisons": [
+      "Akmal--Vassilevska Williams--Wein, arXiv:2404.15916v2, p.2 and Open Problem 3 p.41, ICALP 2024 DOI 10.4230/LIPIcs.ICALP.2024.9: the inspected dense baseline is n^(k+1), while the candidate gives n^(k+0.3) for all fixed k>=3; their linear shortest-path theorem is for k=2.",
+      "Berczi--Kobayashi, ESA 2017 Proposition 10, DOI 10.4230/LIPIcs.ESA.2017.13, and Eppstein TR 95-52 Sections 2--4, Lemma 2 and Theorem 2: label-specific shortest-path filtering, ordered tuple graphs and terminal handling are established tools. The new contribution is their correctly charged rectangular transition schedule, not these definitions.",
+      "Valiant, JCSS 10(2):308--315 (1975), DOI 10.1016/S0022-0000(75)80046-8, inspected 1974 report: chronological closure with Boolean multiplication is prior work. Its generic use on N^k states does not give the candidate's exact output partition, dimensions or dyadic sum.",
+      "Le Gall--Urrutia, arXiv:1708.05622v2 Section 2.2/Table 3, SODA 2018 DOI 10.1137/1.9781611975031.67, gives the sufficient aspect-2 exponent 3.251640; Vassilevska Williams--Xu--Xu--Zhou, arXiv:2307.07970v2 Table 1, improves it to <3.250385. Both are prior multiplication results. The candidate proves their source-model applicability but does not improve their tensor bounds.",
+      "Choudhary--Kumar--Saggi, ITCS 2026 Theorem 1.1, DOI 10.4230/LIPIcs.ITCS.2026.39, concerns two pairs in more general digraphs and does not imply the new all-fixed-k DAG bound."
+    ],
+    "criteria": {
+      "importance": {
+        "judgment": "strong",
+        "reason": "The theorem gives a polynomial dense exponent saving for the full unrestricted original and for every fixed k>=3. AVW explicitly identifies the same baseline as persisting from the 1980 tuple-graph approach and asks this exact improvement. Prescribed routing and individually shortest paths are central algorithmic graph problems, so the result has value beyond an arbitrary special-case exercise."
+      },
+      "novelty": {
+        "judgment": "strong",
+        "reason": "Against the precise inspected tuple-graph, shortest-path and closure theorems, the first-context-in-R output partition and charged rectangular schedule supply a new algorithmic bound. The fresh current primary search found no equivalent full theorem. Established recursion and multiplication tools are explicitly excluded from the novelty claim; the bounded search is not asserted to prove global priority."
+      },
+      "technical_depth": {
+        "judgment": "uncertain",
+        "reason": "The dependency-safe output partition and complete packing charge are substantive and sufficient for mathematical innovation. Their core is nevertheless a compact adaptation of chronological divide and conquer to a known tuple recurrence. The stronger numerical exponent then follows from existing rectangular multiplication and standard rational interpolation. The packet does not yet demonstrate a broader new algebraic or structural mechanism, and I cannot confidently assess this level of new technique alone as strong for STOC."
+      },
+      "breadth_or_consequence": {
+        "judgment": "uncertain",
+        "reason": "The theorem covers all fixed k and arbitrary label-specific common-order edge graphs, including ordinary prescribed disjoint paths and weighted shortest paths. That is a meaningful consequence. The proved improvement is dense-instance detection on DAGs, with O_k(n^k) state storage; there is no established extension to cyclic digraphs, matching lower bound, optimal exponent, or further independent TCS application in this packet. Whether the demonstrated consequences alone support a broad STOC case remains uncertain."
+      },
+      "exposition_and_verifiability": {
+        "judgment": "strong",
+        "reason": "The frozen proof explicitly states the original model, repeated-terminal and completion reductions, scalar recurrence, dyadic invariant, disjoint output classes, all matrix dimensions, repeated data movement, bit bounds and prior dependencies. This referee reconstructed those steps and independently passed 4,718 full-state and 360 original weighted-path comparisons. The unimplemented fast rectangular primitive is honestly a cited-theorem dependency with a proved exact bridge, not an alleged benchmark. The packet is sufficient for mathematical verification; manuscript layout and citation/build checks remain future gates."
+      }
+    },
+    "case_for_stoc": "The concrete case is a deterministic polynomial exponent improvement over the longstanding dense frontier-transition baseline for all fixed k>=3, resolving the exact AVW question already at k=3. The obstacle is that chronological tuple states cannot be updated by an unrestricted matrix contraction without violating dependencies or paying for too many outputs. The candidate addresses it with a disjoint output-minimum partition and a global rectangular cost analysis, which is a real new scheduling insight. This supports mathematical acceptance and serious algorithms interest. The current evidence leaves the venue-level technical-depth and broader-consequence case uncertain because the remaining machinery is established and no additional application or optimality phenomenon is proved. Under the user's all-strong standard this is working_paper, not submission_ready.",
+    "remaining_weaknesses": [
+      "The new technical core is compact; its depth relative to known generic closure acceleration needs a stronger venue-level case before submission_ready is justified.",
+      "Consequences beyond prescribed common-order DAG routing have not been established; neither an optimal exponent nor a matching lower bound is proved.",
+      "The numerical primitive may have enormous fixed constants and has no supplied fast implementation. This does not invalidate the uniform asymptotic theorem but limits practical evidence.",
+      "The priority screen is bounded and cannot exclude unindexed equivalent work; all inspected primary comparisons and access limits are recorded separately.",
+      "No manuscript, clean build, citation audit or every-page visual audit has yet been performed by this referee job."
+    ],
+    "label_is_not_a_venue_decision": true
+  },
+  "pages": 8,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "original_status": "proved",
+  "kind": "resolution-paper",
+  "pdf": "c032-dspdag_working_paper.pdf",
+  "pdf_sha256": "04e5cdc5235be2a9327b7f80616afcc3d5854ecbab67d4f9fe5c12c23aca20f2",
+  "source_archive": "c032-dspdag_source_and_reproducibility.zip",
+  "source_archive_sha256": "15f869e60bc374c3903ce18ecebcf32cd129a7e438e63f5e1e0773e955dcc4ce",
+  "class_file": "manuscript/acmart.cls",
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "reproduce_scripts": [
+    "evidence/research-2/verify.py",
+    "audit/fresh-56b0105494de/independent_verify.py"
+  ],
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "04e5cdc5235be2a9327b7f80616afcc3d5854ecbab67d4f9fe5c12c23aca20f2"
+    },
+    "citation_verdict": "accept_with_citation_limitations",
+    "kind": "resolution-paper",
+    "manuscript_digest": "c2916fd05375010d302349b16227c74c3b9034412b631d619036c3087052fe3f",
+    "original_status": "proved",
+    "pages": 8,
+    "pdf_digest": "04e5cdc5235be2a9327b7f80616afcc3d5854ecbab67d4f9fe5c12c23aca20f2",
+    "provenance": {
+      "audit/build.json": "9ab5d09be5d3a1fb1fb6e9fd2d52dc0e4896309cc0ec869066ce032943f82ee0",
+      "audit/build.md": "164b5753fbc9d982e3628a775cb3ce9139bad08c3d181303bf4663ca309e5078",
+      "audit/citations.json": "d5059020ac285f608c1b648fd9fc00954dcec852f8f26886b4321b865f1b3138",
+      "audit/citations.md": "05588e64e79aff3bd064156bb916b4d639584cb218fe5d2800c96206084931fe",
+      "audit/math.json": "dfc3c6934a68ecb1c5db4dd7cfb1c85819692a83eeb847eed594aac4fdc5c2c4",
+      "audit/math.md": "48ed39de0b77ff3058f04c89c0de79eff42f371e6cac5e7b139f0a9f9d01aebe",
+      "audit/visual.json": "09fa2f95c0ca6d58bfe6a2194b9dcf714345897dc73584cb6068c2c4e8fba7de",
+      "audit/visual.md": "19d745a088111a966f43f9b5a75f2e71287befddb7bc6625fa0f4a4ff09bdae7",
+      "evidence/release/final-build.log": "c2a594a2e3f9808dcb02c0d8916ced30a5ca39f455e6c4563c2d800d4e31395a",
+      "jobs/c032-dspdag-referee-56b0105494de/role.json": "dc59b57be6cf7cf7ab72f1d77df1107e8c51597f888095ba9bd49b9c9e99b4c7",
+      "jobs/c032-dspdag-release-5fe4e38b60c7/role.json": "b26018f4d6ad5849c75ce8e332111a696de1b889a96ac7e102bcecc3654df131",
+      "jobs/c032-dspdag-research-5f16f6951448/role.json": "7d57be4bc55f0691d2a49b5317ea78f844ba3cf4e890d869134df4bedeee7700"
+    },
+    "schema": 1,
+    "snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+    "unverified_citations": [
+      {
+        "key": "Val75",
+        "limitation": "Exact 1975 typeset journal full text not refreshed; publisher direct page returned 403. Original 1974 CMU report inspected and supports the nearby claim; official indexed metadata confirms the journal record."
+      }
+    ]
+  },
+  "citation_verdict": "accept_with_citation_limitations",
+  "citation_limitations": [
+    {
+      "key": "Val75",
+      "limitation": "Exact 1975 typeset journal full text not refreshed; publisher direct page returned 403. Original 1974 CMU report inspected and supports the nearby claim; official indexed metadata confirms the journal record."
+    }
+  ],
+  "excluded_third_party_text_caches": [
+    {
+      "path": "evidence/release/web-search.json",
+      "sha256": "9cf8a586f5b249b331a05162acaf80e8ff5a717a4c8b74ead352d342418f5aec",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    }
+  ],
+  "external_submission_performed": false
+}

@@ -1,0 +1,30 @@
+{
+  "source_files": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/build.py",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "pdf": "output/pdf/dspdag-working_paper.pdf",
+  "readiness_label": "working_paper",
+  "venue_assessment": "audit/stoc-assessment.json",
+  "accepted_snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+  "writer_job_id": "c032-dspdag-write-4528226e5001",
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "build_command": "python3 manuscript/build.py",
+  "format": "Unmodified official acmart v2.20; acmlarge, 11pt, single column, single spacing, letter paper, one-inch margins; initial submission layout, not proceedings sigconf",
+  "max_total_pages": 12,
+  "external_submission_authorized": false,
+  "release_status": "pending_separate_release_review"
+}

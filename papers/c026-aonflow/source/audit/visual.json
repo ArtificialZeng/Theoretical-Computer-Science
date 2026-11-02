@@ -1,0 +1,37 @@
+{
+  "job_id": "c026-aonflow-release-7db9e6fea069",
+  "snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd",
+  "manuscript_digest": "d852233f598ab85f715ccb8d53630a2f2d61b1da067c66cb20deb30f9503838c",
+  "pdf_digest": "50c157c4b7b471f5d2778b669efa55fde604245ebe40372a6c3cd79988c48fe4",
+  "checked_at_utc": "2026-11-02T01:01:23.276353+00:00",
+  "verdict": "accept",
+  "report": "audit/visual.md",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "render_dpi": 105,
+  "rendered_pages": [
+    "evidence/release-7db9e6fea069-render/page-1.png",
+    "evidence/release-7db9e6fea069-render/page-2.png",
+    "evidence/release-7db9e6fea069-render/page-3.png",
+    "evidence/release-7db9e6fea069-render/page-4.png",
+    "evidence/release-7db9e6fea069-render/page-5.png",
+    "evidence/release-7db9e6fea069-render/page-6.png",
+    "evidence/release-7db9e6fea069-render/page-7.png"
+  ],
+  "page_observations": {
+    "1": "Distinct title/author/abstract page; full abstract math readable; institutional contact footer visible; deliberate title-page whitespace.",
+    "2": "Introduction, Theorem 1, approximation denominator, contribution/AI body disclosure and Proposition 2 readable; long lines fit margins.",
+    "3": "Precise source correction note and uniform-copy construction; equations (2)\u2013(5), LP and floor/ceiling symbols clear; polynomial encoding wording visible.",
+    "4": "Chernoff/sampler and event (7), phi/cut equations, Lemma 4 and induced-component argument readable; proof box and cross-references resolved.",
+    "5": "Yield equation (10), distinct-admission lemma, computable overhead formula and start of CKS explanation fit without clipping.",
+    "6": "Residual coverage, center/tagging proof and bridge-integrality discussion legible; AI-methodology heading has text below it before the page break.",
+    "7": "Complete computational/AI disclosure and all four references readable; DOI/arXiv links and page/volume details fit; no unresolved markers."
+  }
+}

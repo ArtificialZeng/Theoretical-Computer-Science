@@ -1,0 +1,289 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{EvdPSW03}
+
+\bibitem[A{\v{C}}10]{AC10}
+Rajeev Alur and Pavol {\v{C}}ern{\'y}.
+\newblock Expressiveness of streaming string transducers.
+\newblock In {\em IARCS Annual Conference on Foundations of Software Technology
+  and Theoretical Computer Science (FSTTCS 2010)}, volume~8 of {\em Leibniz
+  International Proceedings in Informatics (LIPIcs)}, pages 1--12, 2010.
+\newblock \href {https://doi.org/10.4230/LIPIcs.FSTTCS.2010.1}
+  {\path{doi:10.4230/LIPIcs.FSTTCS.2010.1}}.
+
+\bibitem[A{\v{C}}11]{AC11}
+Rajeev Alur and Pavol {\v{C}}ern{\'y}.
+\newblock Streaming transducers for algorithmic verification of single-pass
+  list-processing programs.
+\newblock In {\em 38th ACM SIGPLAN-SIGACT Symposium on Principles of
+  Programming Languages (POPL 2011)}, pages 599--610, 2011.
+\newblock \href {https://doi.org/10.1145/1926385.1926454}
+  {\path{doi:10.1145/1926385.1926454}}.
+
+\bibitem[ADD{\etalchar{+}}13]{ADDRY13}
+Rajeev Alur, Loris D'Antoni, Jyotirmoy~V. Deshmukh, Mukund Raghothaman, and
+  Yifei Yuan.
+\newblock Regular functions and cost register automata.
+\newblock In {\em 28th Annual ACM/IEEE Symposium on Logic in Computer Science
+  (LICS 2013)}, pages 13--22. IEEE Computer Society, 2013.
+\newblock \href {https://doi.org/10.1109/LICS.2013.65}
+  {\path{doi:10.1109/LICS.2013.65}}.
+
+\bibitem[BBR93]{BBR93}
+L{\'a}szl{\'o} Babai, Robert Beals, and Daniel~N. Rockmore.
+\newblock Deciding finiteness of matrix groups in deterministic polynomial
+  time.
+\newblock In {\em Proceedings of the 1993 International Symposium on Symbolic
+  and Algebraic Computation (ISSAC)}, pages 117--126, 1993.
+
+\bibitem[Bea99]{Bea99}
+Robert Beals.
+\newblock Algorithms for matrix groups and the {T}its alternative.
+\newblock {\em Journal of Computer and System Sciences}, 58(2):260--279, 1999.
+\newblock Preliminary version in Proc.\ 36th IEEE FOCS, 1995.
+
+\bibitem[BFLM22]{BFLM22}
+Corentin Barloy, Nathana{\"e}l Fijalkow, Nathan Lhote, and Filip Mazowiecki.
+\newblock A robust class of linear recurrence sequences.
+\newblock {\em Information and Computation}, 289:104964, 2022.
+\newblock \href {https://doi.org/10.1016/j.ic.2022.104964}
+  {\path{doi:10.1016/j.ic.2022.104964}}.
+
+\bibitem[BLR24]{benalioua_et_al:LIPIcs.MFCS.2024.23}
+Yahia~Idriss Benalioua, Nathan Lhote, and Pierre-Alain Reynier.
+\newblock {Minimizing Cost Register Automata over a Field}.
+\newblock In Rastislav Kr\'{a}lovi\v{c} and Anton{\'\i}n Ku\v{c}era, editors,
+  {\em 49th International Symposium on Mathematical Foundations of Computer
+  Science (MFCS 2024)}, volume 306 of {\em Leibniz International Proceedings in
+  Informatics (LIPIcs)}, pages 23:1--23:15, Dagstuhl, Germany, 2024. Schloss
+  Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik.
+\newblock URL:
+  \url{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.MFCS.2024.23},
+  \href {https://doi.org/10.4230/LIPIcs.MFCS.2024.23}
+  {\path{doi:10.4230/LIPIcs.MFCS.2024.23}}.
+
+\bibitem[Bor91]{Bor91}
+Armand Borel.
+\newblock {\em Linear Algebraic Groups}, volume 126 of {\em Graduate Texts in
+  Mathematics}.
+\newblock Springer-Verlag, New York, second edition, 1991.
+\newblock \href {https://doi.org/10.1007/978-1-4612-0941-6}
+  {\path{doi:10.1007/978-1-4612-0941-6}}.
+
+\bibitem[BR11]{BR11}
+Jean Berstel and Christophe Reutenauer.
+\newblock {\em Noncommutative Rational Series with Applications}, volume 137 of
+  {\em Encyclopedia of Mathematics and its Applications}.
+\newblock Cambridge University Press, 2011.
+\newblock \href {https://doi.org/10.1017/CBO9780511760860}
+  {\path{doi:10.1017/CBO9780511760860}}.
+
+\bibitem[BS21]{BS21}
+Jason Bell and Daniel Smertnig.
+\newblock Noncommutative rational {P}{\'o}lya series.
+\newblock {\em Selecta Mathematica (N.S.)}, 27(3):Paper No. 34, 2021.
+\newblock \href {https://doi.org/10.1007/s00029-021-00629-2}
+  {\path{doi:10.1007/s00029-021-00629-2}}.
+
+\bibitem[BS23]{BS23}
+Jason Bell and Daniel Smertnig.
+\newblock Computing the linear hull: Deciding {Deterministic?} and
+  {Unambiguous?} for weighted automata over fields.
+\newblock In {\em 38th Annual ACM/IEEE Symposium on Logic in Computer Science
+  (LICS 2023)}, pages 1--13, 2023.
+\newblock \href {https://doi.org/10.1109/LICS56636.2023.10175691}
+  {\path{doi:10.1109/LICS56636.2023.10175691}}.
+
+\bibitem[Cle25]{C25}
+Lorenzo Clemente.
+\newblock The commutativity problem for effective varieties of formal series,
+  and applications.
+\newblock In {\em 2025 40th Annual ACM/IEEE Symposium on Logic in Computer
+  Science (LICS)}, pages 804--817. IEEE, 2025.
+\newblock Full version arXiv:2503.21697v2.
+\newblock URL: \url{https://arxiv.org/abs/2503.21697v2}, \href
+  {https://doi.org/10.1109/LICS65433.2025.00066}
+  {\path{doi:10.1109/LICS65433.2025.00066}}.
+
+\bibitem[Cle26]{clemente:LIPIcs.LICS.2026.29}
+Lorenzo Clemente.
+\newblock {Commutative Algebras of Series}.
+\newblock In Claudia Faggian and Joost-Pieter Katoen, editors, {\em 41st Annual
+  Symposium on Logic in Computer Science (LICS 2026)}, volume 380 of {\em
+  Leibniz International Proceedings in Informatics (LIPIcs)}, pages
+  29:1--29:23, Dagstuhl, Germany, 2026. Schloss Dagstuhl -- Leibniz-Zentrum
+  f{\"u}r Informatik.
+\newblock URL:
+  \url{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.LICS.2026.29},
+  \href {https://doi.org/10.4230/LIPIcs.LICS.2026.29}
+  {\path{doi:10.4230/LIPIcs.LICS.2026.29}}.
+
+\bibitem[CMMR21]{CMMR21}
+Agnishom Chattopadhyay, Filip Mazowiecki, Anca Muscholl, and Cristian Riveros.
+\newblock Pumping lemmas for weighted automata.
+\newblock {\em Logical Methods in Computer Science}, 17(3), 2021.
+\newblock \href {https://doi.org/10.46298/lmcs-17(3:7)2021}
+  {\path{doi:10.46298/lmcs-17(3:7)2021}}.
+
+\bibitem[DJK05]{DJK05}
+Harm Derksen, Emmanuel Jeandel, and Pascal Koiran.
+\newblock Quantum automata and algebraic groups.
+\newblock {\em Journal of Symbolic Computation}, 39(3--4):357--371, 2005.
+\newblock \href {https://doi.org/10.1016/j.jsc.2004.11.008}
+  {\path{doi:10.1016/j.jsc.2004.11.008}}.
+
+\bibitem[DRT16]{DRT16}
+Laure Daviaud, Pierre-Alain Reynier, and Jean-Marc Talbot.
+\newblock A generalised twinning property for minimisation of cost register
+  automata.
+\newblock In {\em 31st Annual ACM/IEEE Symposium on Logic in Computer Science
+  (LICS 2016)}, pages 857--866, 2016.
+\newblock \href {https://doi.org/10.1145/2933575.2934549}
+  {\path{doi:10.1145/2933575.2934549}}.
+
+\bibitem[DT22]{doueneautabot:LIPIcs.ICALP.2022.120}
+Ga\"{e}tan Dou\'{e}neau-Tabot.
+\newblock {Hiding Pebbles When the Output Alphabet Is Unary}.
+\newblock In Miko{\l}aj Boja\'{n}czyk, Emanuela Merelli, and David~P. Woodruff,
+  editors, {\em 49th International Colloquium on Automata, Languages, and
+  Programming (ICALP 2022)}, volume 229 of {\em Leibniz International
+  Proceedings in Informatics (LIPIcs)}, pages 120:1--120:17, Dagstuhl, Germany,
+  2022. Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik.
+\newblock URL:
+  \url{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2022.120},
+  \href {https://doi.org/10.4230/LIPIcs.ICALP.2022.120}
+  {\path{doi:10.4230/LIPIcs.ICALP.2022.120}}.
+
+\bibitem[EvdPSW03]{EPSW03}
+Graham Everest, Alf van~der Poorten, Igor Shparlinski, and Thomas Ward.
+\newblock {\em Recurrence Sequences}, volume 104 of {\em Mathematical Surveys
+  and Monographs}.
+\newblock American Mathematical Society, 2003.
+
+\bibitem[FR85]{FR85}
+Katalin Friedl and Lajos R{\'o}nyai.
+\newblock Polynomial time solutions of some problems in computational algebra.
+\newblock In {\em Proceedings of the 17th Annual ACM Symposium on Theory of
+  Computing (STOC)}, pages 153--162, 1985.
+
+\bibitem[HOPW18]{HOPW18}
+Ehud Hrushovski, Jo{\"e}l Ouaknine, Amaury Pouly, and James Worrell.
+\newblock Polynomial invariants for affine programs.
+\newblock In {\em 33rd Annual ACM/IEEE Symposium on Logic in Computer Science
+  (LICS 2018)}, pages 530--539, 2018.
+\newblock \href {https://doi.org/10.1145/3209108.3209142}
+  {\path{doi:10.1145/3209108.3209142}}.
+
+\bibitem[Hum75]{Hum75}
+James~E. Humphreys.
+\newblock {\em Linear Algebraic Groups}, volume~21 of {\em Graduate Texts in
+  Mathematics}.
+\newblock Springer-Verlag, New York, 1975.
+\newblock \href {https://doi.org/10.1007/978-1-4684-9443-3}
+  {\path{doi:10.1007/978-1-4684-9443-3}}.
+
+\bibitem[JMP24]{JMP24}
+Isma{\"e}l Jecker, Filip Mazowiecki, and David Purser.
+\newblock Determinisation and unambiguisation of polynomially-ambiguous
+  rational weighted automata.
+\newblock In {\em 39th Annual ACM/IEEE Symposium on Logic in Computer Science
+  (LICS 2024)}, pages 1--13, 2024.
+\newblock \href {https://doi.org/10.1145/3661814.3662073}
+  {\path{doi:10.1145/3661814.3662073}}.
+
+\bibitem[KB79]{KB79}
+Ravindran Kannan and Achim Bachem.
+\newblock Polynomial algorithms for computing the {S}mith and {H}ermite normal
+  forms of an integer matrix.
+\newblock {\em SIAM Journal on Computing}, 8(4):499--507, 1979.
+
+\bibitem[KMO{\etalchar{+}}13]{KMOWW13}
+Stefan Kiefer, Andrzej~S. Murawski, Jo{\"e}l Ouaknine, Bj{\"o}rn Wachter, and
+  James Worrell.
+\newblock On the complexity of equivalence and minimisation for
+  {$\mathbb{Q}$}-weighted automata.
+\newblock {\em Logical Methods in Computer Science}, 9(1), 2013.
+\newblock \href {https://doi.org/10.2168/LMCS-9(1:8)2013}
+  {\path{doi:10.2168/LMCS-9(1:8)2013}}.
+
+\bibitem[MPS26a]{MPS26}
+Filip Mazowiecki, Antoni Puch, and Daniel Smertnig.
+\newblock Pumping-like results for copyless cost register automata and
+  polynomially ambiguous weighted automata.
+\newblock In {\em 43rd International Symposium on Theoretical Aspects of
+  Computer Science (STACS 2026)}, volume 364 of {\em Leibniz International
+  Proceedings in Informatics (LIPIcs)}, pages 67:1--67:21, Dagstuhl, Germany,
+  2026. Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik.
+\newblock URL:
+  \url{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.STACS.2026.67},
+  \href {https://doi.org/10.4230/LIPIcs.STACS.2026.67}
+  {\path{doi:10.4230/LIPIcs.STACS.2026.67}}.
+
+\bibitem[MPS26b]{MPSfull}
+Filip Mazowiecki, Antoni Puch, and Daniel Smertnig.
+\newblock Pumping-like results for copyless cost register automata and
+  polynomially ambiguous weighted automata, 2026.
+\newblock Full version, arXiv:2502.07356v2, revised 12 January 2026.
+\newblock URL: \url{https://arxiv.org/abs/2502.07356v2}, \href
+  {https://doi.org/10.48550/arXiv.2502.07356}
+  {\path{doi:10.48550/arXiv.2502.07356}}.
+
+\bibitem[MR16]{MR16}
+Filip Mazowiecki and Cristian Riveros.
+\newblock Copyless cost-register automata: Structure, expressiveness, and
+  closure properties.
+\newblock In {\em 33rd Symposium on Theoretical Aspects of Computer Science
+  (STACS 2016)}, volume~47 of {\em Leibniz International Proceedings in
+  Informatics (LIPIcs)}, pages 53:1--53:13, 2016.
+\newblock \href {https://doi.org/10.4230/LIPIcs.STACS.2016.53}
+  {\path{doi:10.4230/LIPIcs.STACS.2016.53}}.
+
+\bibitem[MR19]{MR19}
+Filip Mazowiecki and Cristian Riveros.
+\newblock Copyless cost-register automata: Structure, expressiveness, and
+  closure properties.
+\newblock {\em Journal of Computer and System Sciences}, 100:1--29, 2019.
+\newblock URL: \url{https://criveros.ing.uc.cl/papers/jcss19.pdf}, \href
+  {https://doi.org/10.1016/j.jcss.2018.07.002}
+  {\path{doi:10.1016/j.jcss.2018.07.002}}.
+
+\bibitem[NPS{\etalchar{+}}22]{NPSSW22}
+Klara Nosan, Amaury Pouly, Sylvain Schmitz, Mahsa Shirmohammadi, and James
+  Worrell.
+\newblock On the computation of the {Z}ariski closure of finitely generated
+  groups of matrices.
+\newblock In {\em International Symposium on Symbolic and Algebraic Computation
+  (ISSAC 2022)}, pages 129--138. ACM, 2022.
+\newblock \href {https://doi.org/10.1145/3476446.3536172}
+  {\path{doi:10.1145/3476446.3536172}}.
+
+\bibitem[PS24]{PS24}
+Antoni Puch and Daniel Smertnig.
+\newblock Factoring through monomial representations: Arithmetic
+  characterizations and ambiguity of weighted automata, 2024.
+\newblock arXiv:2410.03444v2, revised 29 October 2024.
+\newblock URL: \url{https://arxiv.org/abs/2410.03444v2}, \href
+  {https://doi.org/10.48550/arXiv.2410.03444}
+  {\path{doi:10.48550/arXiv.2410.03444}}.
+
+\bibitem[Sch61]{Sch61}
+Marcel-Paul Sch{\"u}tzenberger.
+\newblock On the definition of a family of automata.
+\newblock {\em Information and Control}, 4(2--3):245--270, 1961.
+\newblock \href {https://doi.org/10.1016/S0019-9958(61)80020-X}
+  {\path{doi:10.1016/S0019-9958(61)80020-X}}.
+
+\bibitem[Tze92]{Tze92}
+Wen-Guey Tzeng.
+\newblock A polynomial-time algorithm for the equivalence of probabilistic
+  automata.
+\newblock {\em SIAM Journal on Computing}, 21(2):216--227, 1992.
+\newblock \href {https://doi.org/10.1137/0221017} {\path{doi:10.1137/0221017}}.
+
+\bibitem[WS91]{WS91}
+Andreas Weber and Helmut Seidl.
+\newblock On the degree of ambiguity of finite automata.
+\newblock {\em Theoretical Computer Science}, 88(2):325--349, 1991.
+\newblock \href {https://doi.org/10.1016/0304-3975(91)90381-B}
+  {\path{doi:10.1016/0304-3975(91)90381-B}}.
+
+\end{thebibliography}

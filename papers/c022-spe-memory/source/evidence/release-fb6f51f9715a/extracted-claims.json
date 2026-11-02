@@ -1,0 +1,98 @@
+{
+  "job_id": "c022-spe-memory-release-fb6f51f9715a",
+  "pass": 1,
+  "verification_performed": false,
+  "claims": [
+    {
+      "id": "C01",
+      "text": "Every given pure SPE has an exact-payoff-equivalent pure SPE with n*3^n vertex-update states on all set-sized arbitrary-branching arenas; after all legal histories.",
+      "type": "Existence",
+      "location": "Abstract; Theorem 1; Sections 2-4",
+      "basis": "accepted frozen proof"
+    },
+    {
+      "id": "C02",
+      "text": "Unconditional pure finite-memory SPE existence follows from the old lower-semicontinuous-payoff theorem.",
+      "type": "Existence + Attribution",
+      "location": "Corollary 2; Section 5",
+      "basis": "FKMSSV10"
+    },
+    {
+      "id": "C03",
+      "text": "For every k>=1 every E-winning SPE in the constructed degree-two O(k^2) family requires binomial(k,floor(k/2)) states, at least 2^k/(k+1).",
+      "type": "Statistic + Existence",
+      "location": "Theorem 3; Section 6",
+      "basis": "accepted frozen lower-bound proof"
+    },
+    {
+      "id": "C04",
+      "text": "Main posed the arena-independent constrained-SPE memory question.",
+      "type": "Attribution",
+      "location": "Section 1",
+      "basis": "MainQuestion25"
+    },
+    {
+      "id": "C05",
+      "text": "Full-version Proposition 9 equates Reach weak SPE and SPE; Proposition 19/Corollary 21 give finite-arena reconstruction; Theorem 34 already gives FPT.",
+      "type": "Attribution",
+      "location": "Section 1.1",
+      "basis": "BBGR18;BBGR21"
+    },
+    {
+      "id": "C06",
+      "text": "Author-postprint Theorem 7 uses leaf outcomes and outcome-indexed positional paths under absorbing-leaf hypotheses; Theorem 16 gives finite-range weak-SPE existence.",
+      "type": "Attribution",
+      "location": "Section 1.1",
+      "basis": "BLPR21"
+    },
+    {
+      "id": "C07",
+      "text": "Author-version Theorem 23 gives quadratic player-dependent NE memory; Remark 1 distinguishes vertex and edge memory.",
+      "type": "Attribution",
+      "location": "Section 1.1",
+      "basis": "Main26"
+    },
+    {
+      "id": "C08",
+      "text": "Flesch et al. Section 3.3 uses payoff-minimizing continuations after deviations.",
+      "type": "Attribution",
+      "location": "Section 1.1",
+      "basis": "FKMSSV10"
+    },
+    {
+      "id": "C09",
+      "text": "Alluwaym et al. gives stationary randomized SPEs on finite graphs and a pure absorbing-target special case.",
+      "type": "Attribution",
+      "location": "Section 1.1",
+      "basis": "AMS26"
+    },
+    {
+      "id": "C10",
+      "text": "Exponential SPE memory and checking constructions have prior antecedents; generalized reachability uses subset memory.",
+      "type": "Attribution",
+      "location": "Sections 1 and 6",
+      "basis": "BGMR23;FH12"
+    },
+    {
+      "id": "C11",
+      "text": "Flesch Theorem 2.3 permits arbitrary action sets, history-dependent actions, pure strategies and prefix-retaining subgame payoffs.",
+      "type": "Attribution",
+      "location": "Section 5",
+      "basis": "FKMSSV10"
+    },
+    {
+      "id": "C12",
+      "text": "Exact finite checks verified 2827 SPE inputs and recompressions and k=1,...,6 lower families; omission controls failed.",
+      "type": "Statistic",
+      "location": "Section 7",
+      "basis": "audit/referee-checks.json"
+    },
+    {
+      "id": "C13",
+      "text": "The comparison is bounded; no effective arbitrary-infinite-arena algorithm, new FPT result, broad-objective extension or optimal base is proved.",
+      "type": "Existence",
+      "location": "Sections 1.1 and 7",
+      "basis": "accepted claim and scope"
+    }
+  ]
+}

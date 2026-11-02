@@ -1,0 +1,19 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Wrote, clean-built, visually checked and froze the six-page full-resolution manuscript. Preserved the accepted mathematical snapshot and actual working_paper assessment; separate release review remains pending.",
+  "next_test": "Fresh release review of citation support, clean build, every PDF page and actual delivered ZIP reproduction, followed by the normal release gate; retain working_paper.",
+  "evidence": [
+    "checkpoint.md",
+    "publication.json",
+    "manuscript/main.tex",
+    "manuscript/optimal-incdec-working_paper.pdf",
+    "audit/manuscript-snapshot.json",
+    "audit/stoc-assessment.json",
+    "evidence/write/validation.json",
+    "evidence/write/visual-check.json",
+    "evidence/write/freeze-manuscript.json",
+    "literature/user_bibliography_check.md"
+  ]
+}

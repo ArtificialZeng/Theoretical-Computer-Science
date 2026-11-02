@@ -1,0 +1,1 @@
+Horner block normal form agrees with the representation on all words of length <= 8: True

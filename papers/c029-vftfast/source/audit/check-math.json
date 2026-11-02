@@ -1,0 +1,11 @@
+{
+  "job_id": "c029-vftfast-referee-95ddbe77df2f",
+  "command": "python3 /Users/mac/.codex/skills/4prove-or-disprove-math/scripts/release_gate.py check-math PROJECT_DIR",
+  "exit_code": 0,
+  "observed_result": {
+    "ok": true,
+    "snapshot_digest": "b1495a4cbeb794181b64a2bc9a00b637d90f0a7a7fdf654844a24036b4029e66",
+    "referee_job_id": "c029-vftfast-referee-95ddbe77df2f"
+  },
+  "scope": "Actual observed structural/provenance check after writing this fresh audit. It is not mathematical evidence by itself."
+}

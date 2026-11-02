@@ -1,0 +1,30 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "For every n>=1 and every set-sized n-player turn-based directed arena without dead ends, with arbitrary branching, initial vertex and Boolean reachability targets, every given pure subgame-perfect equilibrium has a pure subgame-perfect equilibrium with exactly the same full payoff set and at most n*3^n VERTEX-update memory states per player. The convention is up:M x V->M and next_i:M x V_i->V, using next_i(up*(m0,h),v) at history hv. Subgame perfection holds after EVERY legal history from the initial vertex, including off-profile histories, and target visits in the prefix remain won. Thus F(n)=n*3^n proves the complete required-winner implication for EVERY subset S in immutable source.md, allowing extra winners. Moreover, Flesch et al. (2010), Theorem 2.3, applies in this exact arbitrary-action/history-dependent-action model: Boolean Reach payoffs are bounded lower semicontinuous and epsilon=1/2 yields an exact pure SPE. Consequently every such arena unconditionally admits a pure SPE with the same n*3^n bound. Finally, for each k>=1 a finite (k+2)-player arena of O(k^2) vertices and outdegree at most two admits an E-winning pure SPE but EVERY E-winning pure SPE requires at least binomial(k,floor(k/2))>=2^k/(k+1) memory states for E, irrespective of other players' memory. This excludes polynomial player-dependent bounds and shows exponential dependence is necessary. No exact optimal exponential base or infinite-arena effective algorithm is claimed.",
+  "contribution": "Same-paper revised full positive resolution. The proposed substantive innovation is the explicit payoff-compatibility reset compression: retain a credible payoff promise whenever available, otherwise minimize the previous owner's bit; uniform finite-target progress is selected in vertex-dependent tables, without storing a continuation vertex, expected edge or rank. The complete original quantifiers and vertex-update model are retained. The unconditional finite-memory consequence is a routine application of OLD Flesch et al. existence to this compression, credited as such. The self-contained binomial lower-bound family answers the proposed polynomial strengthening negatively using an all-SPE required-winner lower bound; exponential necessity and its generalized-reachability/credible-checking ingredients already appear in prior work and are not asserted as an independent qualitative novelty. The new combined scope requires genuinely fresh correctness, novelty, significance and STOC assessment; no prior review is reused to accept it, and no venue-label upgrade is asserted.",
+  "proposer_job_id": "c022-spe-memory-research-776ae007899c",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "evidence/promise-reset-proof.md",
+    "evidence/research-pass1-adversarial.md",
+    "evidence/research-pass1-literature.md",
+    "code/check_promise_reset.py",
+    "evidence/promise-reset-finite-checks.json",
+    "evidence/research-pass2/combined-theorem.md",
+    "evidence/research-pass2/exponential-lower-bound.md",
+    "evidence/research-pass2/adversarial.md",
+    "evidence/research-pass2/literature.md",
+    "code/check_subset_memory.py",
+    "evidence/research-pass2/subset-memory-checks.json",
+    "intake/flesch-existence/Flesch-et-al-2010.pdf",
+    "intake/flesch-existence/Flesch-et-al-2010.txt",
+    "intake/flesch-existence/source.json",
+    "intake/weak-spe-full.txt",
+    "intake/weak-spe-full.pdf",
+    "intake/main-NE-2026.txt",
+    "intake/main-NE-2026.pdf",
+    "intake/research-pass2/sources.json"
+  ]
+}

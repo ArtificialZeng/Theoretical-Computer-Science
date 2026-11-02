@@ -1,0 +1,54 @@
+{
+  "job_id": "c021-ccrapumping-referee-a7ba97c08c76",
+  "arithmetic": "exact rational, Python standard library",
+  "status": "passed",
+  "limitations": [
+    "Finite diagnostics are not a universal proof."
+  ],
+  "singular_compression": {
+    "registers": 5,
+    "physical_dimension": 32,
+    "physical_rank": 8,
+    "minimal_dimension": 8,
+    "projection": "1-(T-1)^3(T-2)^3/8",
+    "checks": [
+      "Boolean-grid pullbacks",
+      "rank stability",
+      "polynomial retraction",
+      "observable subquotient identity",
+      "compressed letters preserve observable behavior"
+    ]
+  },
+  "finite_control_transfer": {
+    "complete_binary_controls": 746,
+    "states": "1 through 3",
+    "control_minimum_ranks": {
+      "1": 607,
+      "2": 113,
+      "3": 26
+    },
+    "checks": [
+      "idempotent image",
+      "common return blocks",
+      "polynomial roots recover both original letters",
+      "actual prefix retains full reachability/observability"
+    ]
+  },
+  "explicit_patterns": {
+    "cases": 163,
+    "alphabet": 3,
+    "maximum_pattern_length": 4,
+    "evaluated_words_per_case": 121,
+    "yes": 60,
+    "no": 103,
+    "exact_evaluations": 19723,
+    "checks": [
+      "coefficient-class criterion",
+      "direct subsequence counting",
+      "sorted falling-factorial synthesis",
+      "cancellation and empty terms"
+    ]
+  },
+  "all_word_hypothesis_trap": "I+E12 and I+E21: trace(AB)=3, dimension=2",
+  "script_sha256": "2f72634ce37c1696c522bc7d677da139177189a93cb2364da45fbbb7d07b5230"
+}

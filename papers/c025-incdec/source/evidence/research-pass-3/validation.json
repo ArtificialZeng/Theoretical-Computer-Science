@@ -1,0 +1,73 @@
+{
+  "job_id": "c025-incdec-research-76b5f4e5209a",
+  "role": "research",
+  "assigned_pass": 3,
+  "configured_pass_cap": 3,
+  "dispatch_at_utc": "2026-11-01T23:32:47+00:00",
+  "entry_clock_utc": "2026-11-01T23:34:49+00:00",
+  "main_scientific_work_complete_by_utc": "2026-11-01T23:42:58+00:00",
+  "recorded_at_utc": "2026-11-01T23:44:29.795052+00:00",
+  "source_sha256": "12956c470e37f8a548f510c7eb1781eda7b961999c5fa1163df43b56513b45a4",
+  "source_unchanged": true,
+  "source_manifest_checks": [
+    {
+      "path": "intake/primary/incremental-decremental-2026.pdf",
+      "manifest_match": true
+    },
+    {
+      "path": "intake/primary/incremental-decremental-2026.txt",
+      "manifest_match": true
+    }
+  ],
+  "candidate_scope": "Entire immutable original question: C_struct=C_poly=2; polynomial upper algorithm plus reproduced prior structural lower bound.",
+  "known_mathematical_gaps_identified_by_proposer": [],
+  "fresh_referee_review_performed": false,
+  "fresh_innovation_or_stoc_assessment_performed": false,
+  "acceptance_or_readiness_asserted": false,
+  "new_evidence": {
+    "old_kernel_exactly_refuted": true,
+    "diagnostic_n": 8,
+    "diagnostic_gap": "1/29",
+    "new_algorithm_finite_exact_cases": 261,
+    "universal_proof": "oriented-greedy-proof.md",
+    "exact_coefficient_identity_checks": 1004,
+    "new_algorithm_numerical_lp_calls": 492,
+    "numerical_nonfindings_are_not_proofs": true,
+    "prefix_screen_calls": 522
+  },
+  "claim_contract_checked": true,
+  "claim_sha256": "e8f3eee1afc64ab352dac1d3a2bda0254050ce894dfbe33d9dd50246cb822a20",
+  "evidence_sha256": {
+    "source.md": "12956c470e37f8a548f510c7eb1781eda7b961999c5fa1163df43b56513b45a4",
+    "problem.md": "f55ae35e3e2238bd3c05326f0669c69fe1d5b25bb5d6edeec6d111e14fe7ef9d",
+    "evidence/research-pass-3/oriented-greedy-proof.md": "fcd698e7af3972d517da7eea1d7fac5403a06cb699023ed327cc2dd4c5c33b00",
+    "evidence/research-pass-3/literature.md": "67e37058f89bb6aef39ac9b785e6e8b2056f7dde0d1f40f01a2510ef9a2a50a4",
+    "evidence/research-pass-3/research-progress.md": "f8599934562141b4a15eb42908dff32af962b4d85c5b56bd62c504c7ad2341ee",
+    "evidence/research-pass-3/oriented-greedy-exact.json": "db0e5cdf2b6d37635aba25d4b58ca7c7054559c18a744697d47481f591e22f51",
+    "evidence/research-pass-3/oriented-greedy-lp.json": "96ce20a73310073b9951387b202ada3006c25d425f031b0dd5da4acae685dc7a",
+    "evidence/research-pass-3/exact-verification.json": "92dd190be497606b99f9fce1de12a74da589c261cf408d92c21abb4c843063b6",
+    "evidence/research-pass-3/prefix-kernel-screen.json": "dd274a5865f68909388aa41420700a2085576875bc81b7bc3cffc5ca2a647043",
+    "code/pass3_oriented_greedy.py": "b9b8cfd8a38b0e4eaaf2c4f3c3253a73fec6049c46c36d93eb585fe58d6b186b",
+    "code/pass3_oriented_lp.py": "d6b330f872fb1c900c008bbe98d65a8d784aeb2cfa2f6698b15ef0487a262b14",
+    "code/pass3_prefix_kernel.py": "0192bb5824ebfe453b0a232ad68fbf87f4f505d6841b91fbeddff6e41a3208ef",
+    "code/verify_pass3.py": "7aee0815dc84559817e407f1bba68e33f9e81f885ab1d86f6e1b07fdb6eb3113",
+    "code/pass2_residual.py": "505ed36fdb9993fa0fc379750e3b847d75df61219d2ee09fbc9040a3cf26f91a",
+    "code/chain_dp.py": "348e56b242d57927b1739490822042047b9c8134750c0f1e8107f5577612814f",
+    "evidence/research-pass-2/template-screen.json": "b4f9d834b3e849df1171809f5ef91f02f50ff90858a6d8dbeaf4b20856927812",
+    "evidence/research-pass-2/comparator-screen.json": "6b036e828b74bc2500d16518eef7b8c393fcb778d4b896abb0c8d9848312b8b6",
+    "intake/source-inputs.json": "1fee69b468e714280c6b2161367915ce9ab7d9e9ae41bdb2b1608f1d83b55fdc",
+    "intake/primary/incremental-decremental-2026.pdf": "63304ebd20c7401f394f4e54035fc8b47223a6fcfecb823b7d7422c0d1545913",
+    "intake/primary/incremental-decremental-2026.txt": "01c5de094ec3d6fe17ed0edbfca37f9d4944765e2dbf6d4c782ce443b8d3cc82",
+    "intake/ESA2026-scope-update.json": "f2744c9a5a976a2347616a71392c597161f60ca03ca9abfd2c448c6321660baf",
+    "intake/primary/ESA2026-134-incremental.pdf": "fb9e4a8de3d5a43a03c964d964fd07404756447e2803ec85ce2a4473eb2743be",
+    "intake/primary/ESA2026-134-incremental.txt": "998babaa360c51149184d0fe2277e0fb8b81a420e54f3b0bdc2cfd139d2b90d5"
+  },
+  "runner_counters_modified": false,
+  "agents_or_other_model_processes_spawned": false,
+  "background_workers_spawned": false,
+  "manuscript_or_pdf_created": false,
+  "source_download_pdfs_are_inputs": true,
+  "prior_evidence_and_verdicts_preserved": true,
+  "worker_result_schema_checked": true,
+  "operational_limits": "All experiments were explicitly bounded and completed before the main-test deadline. No numerical nonfinding, resource limit, or certificate record is treated as a universal proof. The universal result depends on the written analytic argument and awaits fresh review."
+}

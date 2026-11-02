@@ -1,0 +1,48 @@
+{
+  "artifact": "4.pdf",
+  "physical_pages": 10,
+  "title_pages": 1,
+  "body_pages": 8,
+  "reference_pages": 1,
+  "total_page_limit": null,
+  "total_page_limit_policy": "No total-page limit for the review submission",
+  "merits_presentation_window_pages": 12,
+  "policy_source": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html",
+  "policy_verified_on": "2026-11-02",
+  "paper_size": "Letter, 612 x 792 PDF points",
+  "main_font": "11pt class setting; captions/tables/figure text use normalsize",
+  "columns": 1,
+  "spacing": "single (article default)",
+  "margins": "1 inch (geometry setting)",
+  "authors_in_supplied_order": [
+    "Zijian Zeng",
+    "Jiayin Cao",
+    "Weinan Dai",
+    "Rui Wang",
+    "Fei Ding"
+  ],
+  "affiliations_present": [
+    "UCSI University",
+    "Ningbo University",
+    "Zhejiang University",
+    "Nanchang Institute of Technology",
+    "Alibaba Group"
+  ],
+  "main_results_and_overview_within_initial_12_body_pages": true,
+  "references_at_very_end": true,
+  "cited_entries": 11,
+  "missing_bibliography_keys": [],
+  "citation_style": "alphaurl (alphabetic year labels)",
+  "embedded_artifact": "1 embedded files\n1: treeflow-artifact-v2.zip",
+  "latex_warnings_and_overfull_boxes": [],
+  "visual_checks": [
+    "title page",
+    "comparison table",
+    "architecture figure",
+    "shared-callee reduction",
+    "two selector panels",
+    "validation table",
+    "reference page"
+  ],
+  "scope": "Format and reference-key audit; not a novelty or scientific-readiness certificate."
+}

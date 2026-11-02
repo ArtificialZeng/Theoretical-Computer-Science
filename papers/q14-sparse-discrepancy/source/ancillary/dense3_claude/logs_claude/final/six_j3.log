@@ -1,0 +1,26 @@
+# 2026-11-02 23:05:41 CST  src: corner_bnb_v7_claude.c sha1 3f0894555f2f
+# cmd: X=1 corner_bnb_final_claude (= v7 source) 6 299 100 60 < pat_n6_j3.txt
+P 1 boxes 1 fails 0
+P 2 boxes 1 fails 0
+P 3 boxes 1 fails 0
+P 4 boxes 1 fails 0
+P 5 boxes 1 fails 0
+P 6 boxes 1 fails 0
+P 7 boxes 1 fails 0
+P 8 boxes 1 fails 0
+P 9 boxes 1 fails 0
+P 10 boxes 1 fails 0
+P 11 boxes 1 fails 0
+P 12 boxes 1 fails 0
+P 13 boxes 1 fails 0
+P 14 boxes 1 fails 0
+P 15 boxes 1 fails 0
+P 16 boxes 1 fails 0
+P 17 boxes 1 fails 0
+P 18 boxes 1 fails 0
+P 19 boxes 1 fails 0
+P 20 boxes 1 fails 0
+P 21 boxes 1 fails 0
+P 22 boxes 1 fails 0
+P 23 boxes 1 fails 0
+TOTAL patterns 23 boxes 23 uncleared 0 dfsnodes 32 skipped 0

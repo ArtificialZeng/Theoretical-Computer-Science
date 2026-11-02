@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "title": "Arena-Independent Memory for Pure Subgame-Perfect Equilibria in Reachability Games",
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "source_files": [
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/acmart.dtx",
+    "manuscript/alpha.bst",
+    "manuscript/build.sh",
+    "manuscript/build/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "pdf": "output/pdf/spe-memory-working_paper.pdf",
+  "build_command": "sh manuscript/build.sh",
+  "tex_engine": "pdflatex (TeX Live 2026)",
+  "max_total_pdf_pages": 12,
+  "classification": "working_paper",
+  "classification_basis": "audit/stoc-assessment.json",
+  "classification_review_job_id": "c022-spe-memory-referee-af2ba8807d2f",
+  "snapshot_digest": "8167ae363386355fe869e8109b82155be5da309379f81a3f7216041bf9acf52f",
+  "write_job_id": "c022-spe-memory-write-31916ce50190",
+  "official_class": "Unmodified official ACM acmart v2.20, 2026-08-16",
+  "format": "Named single-column 11pt body/abstract/references, letter, one-inch margins, separate title page",
+  "bibliography_check": "literature/user_bibliography_check.md",
+  "external_submission_authorized": false,
+  "release_status": "pending separate fresh release review"
+}

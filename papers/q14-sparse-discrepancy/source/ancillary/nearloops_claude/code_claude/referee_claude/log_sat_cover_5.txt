@@ -1,0 +1,2 @@
+cover n=5 solver=kissat: vars=2080 clauses=31168 result=UNSATISFIABLE time=0.5s
+cover n=5 solver=cadical: vars=2080 clauses=31168 result=UNSATISFIABLE time=0.0s

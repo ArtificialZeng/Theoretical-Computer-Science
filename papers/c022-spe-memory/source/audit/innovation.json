@@ -1,0 +1,19 @@
+{
+  "job_id": "c022-spe-memory-referee-af2ba8807d2f",
+  "snapshot_digest": "8167ae363386355fe869e8109b82155be5da309379f81a3f7216041bf9acf52f",
+  "verdict": "accept",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    "Brihaye, Bruyere, Goeminne and Raskin, arXiv:1806.05544v2 (2018), Proposition 19 and Corollary 21: finite-arena payoff-preserving weak-SPE reconstruction; Proposition 9: Reach weak SPE=SPE; Theorem 34: constrained-existence FPT. Related I&C 278 (2021),104594, DOI 10.1016/j.ic.2020.104594.",
+    "Bruyere, Le Roux, Pauly and Raskin, On the existence of weak subgame perfect equilibria, I&C 276 (2021),104553, DOI 10.1016/j.ic.2020.104553: author-postprint Theorem 7 and its proof, outcome-memory construction under reachable absorbing-leaf hypotheses; Theorem 16, finite-range weak-SPE existence.",
+    "Flesch et al., Perfect-Information Games with Lower-Semicontinuous Payoffs, MOR 35(4) (2010),742-755, DOI 10.1287/moor.1100.0469, Theorem 2.3 and Section 3.3: pure epsilon-SPE existence and minimizing-deviator-payoff continuation construction.",
+    "Main, Arena-independent memory bounds for Nash equilibria in reachability games, I&C 309 (2026),105425, DOI 10.1016/j.ic.2026.105425: inspected author-version Theorem 23 and Remark 1, quadratic Reach NE memory and vertex/edge memory distinction.",
+    "Brihaye, Goeminne, Main and Randour, Reachability Games and Friends, FSTTCS 2023, paper 1, Section 3.1.3, DOI 10.4230/LIPIcs.FSTTCS.2023.1: exponential SPE branching memory and clause-checking antecedents.",
+    "Fijalkow and Horn, The surprising complexity of generalized reachability games, arXiv:1010.2420v2, Section 3.4, Lemmas 1-2: exponential upper/lower memory bounds in the zero-sum generalized-reachability model.",
+    "Alluwaym, Main and Schewe, Simple Nash Equilibria for Qualitative Multiplayer Games, arXiv:2607.07151v1 (2026), Theorem 7: finite-graph randomized stationary SPE existence; Theorem 10: pure positional special case with absorbing targets."
+  ],
+  "substantive_delta": "The exact frozen upper theorem gives n*3^n vertex-update memory per player, preserves the entire payoff of any given pure SPE, and covers every set-sized arbitrarily branching arena and every legal history. This removes arena dependence from the finite-arena baseline and applies beyond absorbing-leaf uniformization. The Flesch existence application is routine, and the lower-bound family is supporting evidence rather than independent qualitative novelty.",
+  "why_nonroutine": "The old lasso and play-following constructions do not themselves yield a finite memory bound independent of the graph. Nor can a completed payoff promise be replaced by an absorbing leaf: unsatisfied players retain legal future deviations. The audited compatibility-retention and previous-owner reset rule, coupled to finite-target progress, resolves both obligations with an explicit vertex-update machine and an invariant for arbitrary unilateral deviations. Labels, positional path selection and minimizing punishments are credited as antecedents; the accepted innovation is their full-scope continuing-arena uniformization.",
+  "significance": "This settles the stated arena-independent constrained-SPE question, and additionally proves unconditional pure finite-memory existence on arbitrary arenas using an old existence theorem. Together with the verified all-SPE singleton-required-winner lower bound it determines exponential-order dependence on player count. This is substantive specialized mathematical value; broad STOC impact and technical depth remain uncertain, as the separate working_paper assessment explains.",
+  "remaining_gaps": []
+}

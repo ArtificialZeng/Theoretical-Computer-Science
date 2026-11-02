@@ -1,0 +1,29 @@
+{
+  "job_id": "c021-ccrapumping-release-e862e3a691c8",
+  "snapshot_digest": "c56f3440ebba4e41358a93f526e776e26091d3e07c234d06ecd41eb565a274b0",
+  "manuscript_digest": "89cdee1cc05804ee0c05f8fa38374b76576021cce0f05ea93b9a7cdc0edd9fc2",
+  "pdf_digest": "a995aec21cc9daffd8f604e82c00be5cd08162aeafbc36af0feb17052d4076c1",
+  "verdict": "accept_with_citation_limitations",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/BUILD.md",
+    "manuscript/latexmkrc",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/vendor/ACM-Reference-Format.bst",
+    "manuscript/vendor/README",
+    "manuscript/vendor/acmart.cls",
+    "manuscript/vendor/acmart.dtx",
+    "manuscript/vendor/acmart.ins"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "citation_audit_method": "citation-check-skill-advisory-plus-primary-source-manual",
+  "scope": "Complete publication dependency list, all seven references, original cited statements/hypotheses, accepted-scope manuscript comparison, bounded current primary novelty search, and extracted/rendered references checked. No user-designated Excel bibliography exists. C25 existence and mathematical support verified; optional publisher-label metadata refresh remains unavailable/conflicting, as disclosed in report.",
+  "unverified_citations": [
+    {
+      "key": "C25",
+      "limitation": "Optional publisher-label metadata: official author LICS 2026 reference says IEEE and gives the retained DOI; conference archive export says ACM. Direct DOI and Crossref refresh unavailable. Existence, identifying record and cited mathematical support verified from primary full text."
+    }
+  ]
+}

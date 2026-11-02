@@ -1,0 +1,21 @@
+{
+  "outcome": "continue",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Pass 2 establishes a fault-representative path separator with f^O(d) cost and a large-f/small-f parameter switch that could yield the full uniform polynomial construction. Exact DP and history tests pass; source packing transfer and complete end-to-end validation remain open.",
+  "next_test": "In the final permitted pass, validate the complete two-branch construction: close the source Theorem 5.4 witness-sequence and all-scale transfer, test the full spanner against exact fault enumeration, and recheck novelty of the parameter-switch algorithm.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "evidence/research2-entry-checkpoint.md",
+    "evidence/research2-history.md",
+    "evidence/research2-positive-kernel.md",
+    "evidence/research2-history-checks.json",
+    "evidence/research2_history_checks.py",
+    "evidence/research2-representative-checks.json",
+    "evidence/research2_representative_checks.py",
+    "evidence/research2-sources.md",
+    "evidence/research2-run-record.json"
+  ]
+}

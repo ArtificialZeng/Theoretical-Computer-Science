@@ -1,0 +1,13 @@
+{
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Full bounded-exponent Exact Triangle is precisely stated and open-supported by the inspected primary source. Existing restricted algorithms and cubic-preprocessing decomposition do not immediately settle it. A uniform quotient/kernel algorithm has plausible substantive payoff; no resolution or publication candidate is claimed.",
+  "next_test": "Reconstruct and verify fully charged capped witness listing over the elementary quotient, including legal complete-input masks, a subproblem-dimension cutoff, and a positive saving independent of c; then assess whether it supports the full all-M induction.",
+  "evidence": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/triage-9f8a9008e4e4.json",
+    "evidence/first-test.md"
+  ]
+}

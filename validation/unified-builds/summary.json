@@ -1,0 +1,245 @@
+{
+  "at_utc": "2026-11-02T17:26:12.461269+00:00",
+  "passed": true,
+  "scope": "Clean builds and normalized PDF text comparison for the primary indexed versions; no new manuscript editing or mathematical acceptance.",
+  "papers": [
+    {
+      "id": "c034-group3sum",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 8.05,
+      "log": "validation/unified-builds/c034-group3sum.log"
+    },
+    {
+      "id": "c034-grouptri",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 8.035,
+      "log": "validation/unified-builds/c034-grouptri.log"
+    },
+    {
+      "id": "c032-dspdag",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 8.047,
+      "log": "validation/unified-builds/c032-dspdag.log"
+    },
+    {
+      "id": "c031-detlis",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.252,
+      "log": "validation/unified-builds/c031-detlis.log"
+    },
+    {
+      "id": "c029-vftfast",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.187,
+      "log": "validation/unified-builds/c029-vftfast.log"
+    },
+    {
+      "id": "c026-aonflow",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.387,
+      "log": "validation/unified-builds/c026-aonflow.log"
+    },
+    {
+      "id": "c025-pmcdelay",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 9.878,
+      "log": "validation/unified-builds/c025-pmcdelay.log"
+    },
+    {
+      "id": "c025-incdec",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.317,
+      "log": "validation/unified-builds/c025-incdec.log"
+    },
+    {
+      "id": "c022-spe-memory",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.657,
+      "log": "validation/unified-builds/c022-spe-memory.log"
+    },
+    {
+      "id": "c021-ccrapumping",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.733,
+      "log": "validation/unified-builds/c021-ccrapumping.log"
+    },
+    {
+      "id": "advice-matching",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.29,
+      "log": "validation/unified-builds/advice-matching.log"
+    },
+    {
+      "id": "c002-coverage",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.048,
+      "log": "validation/unified-builds/c002-coverage.log"
+    },
+    {
+      "id": "c009-cycle2",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 9.503,
+      "log": "validation/unified-builds/c009-cycle2.log"
+    },
+    {
+      "id": "c012-upcycles",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 6.965,
+      "log": "validation/unified-builds/c012-upcycles.log"
+    },
+    {
+      "id": "c015-imagebound",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.246,
+      "log": "validation/unified-builds/c015-imagebound.log"
+    },
+    {
+      "id": "c017-wheeler",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.29,
+      "log": "validation/unified-builds/c017-wheeler.log"
+    },
+    {
+      "id": "coverage-sparse",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 8.478,
+      "log": "validation/unified-builds/coverage-sparse.log"
+    },
+    {
+      "id": "curvature-noise",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.485,
+      "log": "validation/unified-builds/curvature-noise.log"
+    },
+    {
+      "id": "privacy-interpolation",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 7.915,
+      "log": "validation/unified-builds/privacy-interpolation.log"
+    },
+    {
+      "id": "q14-sparse-discrepancy",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 15.983,
+      "log": "validation/unified-builds/q14-sparse-discrepancy.log"
+    },
+    {
+      "id": "robust-stopping",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 9.638,
+      "log": "validation/unified-builds/robust-stopping.log"
+    },
+    {
+      "id": "stoc1",
+      "passed": true,
+      "archive_files_verified": 66,
+      "seconds": 8.959,
+      "steps": [
+        {
+          "stage": "clean-build",
+          "exit_code": 0,
+          "normalized_pdf_text_matches_release": true,
+          "log": "validation/unified-builds/stoc1-build.log"
+        }
+      ]
+    },
+    {
+      "id": "stoc2",
+      "passed": true,
+      "archive_files_verified": 11,
+      "seconds": 9.923,
+      "steps": [
+        {
+          "stage": "clean-build",
+          "exit_code": 0,
+          "normalized_pdf_text_matches_release": true,
+          "log": "validation/unified-builds/stoc2-build.log"
+        }
+      ]
+    },
+    {
+      "id": "stoc3",
+      "passed": true,
+      "archive_files_verified": 46,
+      "seconds": 9.822,
+      "steps": [
+        {
+          "stage": "clean-build",
+          "exit_code": 0,
+          "normalized_pdf_text_matches_release": true,
+          "log": "validation/unified-builds/stoc3-build.log"
+        }
+      ]
+    },
+    {
+      "id": "stoc4",
+      "passed": true,
+      "archive_files_verified": 39,
+      "seconds": 11.696,
+      "steps": [
+        {
+          "stage": "clean-build",
+          "exit_code": 0,
+          "normalized_pdf_text_matches_release": true,
+          "log": "validation/unified-builds/stoc4-build.log"
+        }
+      ]
+    },
+    {
+      "id": "stoc5",
+      "passed": true,
+      "archive_files_verified": 90,
+      "seconds": 12.446,
+      "steps": [
+        {
+          "stage": "clean-build",
+          "exit_code": 0,
+          "normalized_pdf_text_matches_release": true,
+          "log": "validation/unified-builds/stoc5-build.log"
+        }
+      ]
+    }
+  ]
+}

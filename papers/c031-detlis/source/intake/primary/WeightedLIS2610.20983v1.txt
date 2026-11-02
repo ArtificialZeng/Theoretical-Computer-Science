@@ -1,0 +1,424 @@
+                                               Near-Linear Preprocessing for Range Weighted Longest
+                                                          Increasing Subsequence Queries
+                                                                                  Keisuke Korogi
+                                                                        Yokohama National University, Japan
+                                                                          keisuke.korogi.52@gmail.com
+
+
+
+
+arXiv:2610.20983v1 [cs.DS] 14 Oct 2026
+                                                                                      Abstract
+                                                  We give a deterministic data structure for range weighted longest increasing subse-
+                                               quence (LIS) queries on n values with positive weights. Preprocessing takes O(n log2 n)
+                                               time and space. Value queries take O(log n) time, and an optimal subsequence of k
+                                               elements can be reported in O(k + log n) time. This resolves an open question on truly
+                                               subquadratic preprocessing with polylogarithmic query time. The key is a single-crossing
+                                               property of envelopes for value-separated endpoint sets, enabling O(log n)-time persistent
+                                               merges. The bounds assume constant-time exact addition and comparison of weights.
+
+
+                                         1     Introduction
+                                         Let a0 , . . . , an−1 be a sequence with positive real weights w0 , . . . , wn−1 . A range weighted
+                                         longest increasing subsequence query asks for the maximum total weight of a strictly increasing
+                                         subsequence in an index interval [l, r). A reporting query also returns an optimal subsequence.
+                                             For unweighted range LIS, Tiskin’s semi-local comparison techniques give O(n log2 n)
+                                         preprocessing and O(log n) time to return the length [Tis15]; see also the formulation
+                                         in [GGK25, Lemma B.14]. Gawrychowski, Gorbachev, and Kociumaka [GGK25, Theorem 1.3]
+                                         support reporting in O(k logα n) time after O(n log3−α n) preprocessing, for every α ∈ [0, 1].
+                                         Here k is the output length. Their construction uses core-sparse Monge matrix multiplication,
+                                         where the core records nonzero mixed second differences. The theorem and appendix numbers
+                                         cited from [GGK25] refer to its full version.
+                                             For arbitrary positive weights, Gawrychowski et al. [GGK25, Appendix B.1] ask whether
+                                         truly subquadratic preprocessing and polylogarithmic query time are possible. Their
+                                         alignment-matrix construction remains correct, but the unweighted core-size guarantee
+                                         no longer follows from their analysis. Karthik C. S. and Rahul [KR26, Section 7 of the full
+                                         version] also ask for a truly subquadratic algorithm for weighted one-dimensional range LIS.
+
+                                         1.1    Our result
+                                         We answer these questions without bounding the core size.
+
+                                         Theorem 1.1. There is a deterministic data structure for range weighted LIS with O(n log2 n)
+                                         preprocessing time and space, O(log n) value-query time, and O(k + log n) reporting time.
+
+                                              The query intervals need not be known during preprocessing. The algorithm is exact, and
+                                         its time and space bounds are independent of the weight magnitudes. We count exact additions
+                                         and comparisons of weights, comparisons of input values, and operations on O(log n)-bit
+                                         indices and pointers at unit cost. Space counts real-weight cells and integer words.
+
+
+
+                                                                                           1
+Table 1: Selected time bounds for static range LIS. The value and reporting structures
+of [GGK25] can be combined within the stated preprocessing bounds. A dash indicates that
+no reporting bound is stated in the cited publication.
+
+            Result            Weights            Preprocessing    Value query     Reporting
+            Tiskin [Tis15]    Unit                O(n log2 n)       O(log n)         —
+            [GGK25], α = 1    Unit                O(n log2 n)       O(log n)      O(k log n)
+            [GGK25], α = 0    Unit                O(n log3 n)       O(log n)        O(k)
+            Theorem 1.1       Positive real       O(n log2 n)       O(log n)     O(k + log n)
+
+
+Unweighted specialization.           Setting all weights to one gives ordinary range LIS. At
+                  2
+the same O(n log n) preprocessing time, our reporting bound is O(k + log n), compared
+with O(k log n) in [GGK25]. Their O(k)-time reporting bound uses O(n log3 n) preprocessing.
+Tiskin [Tis13, Section 8.1] also states that retaining intermediate data permits output-linear
+traceback for semi-local LCS queries on permutations.
+
+1.2   Overview
+For each endpoint p, let Dp (l) be the maximum weight of an increasing subsequence ending
+at p with all indices at least l, or zero if l > p. For an endpoint set E, let HE be the pointwise
+maximum of zero and its endpoint functions. The optimum for [l, r) is H[0,r) (l).
+    The key is a single-crossing property. If all endpoint values in L are smaller than those in
+R, then HR (l) > HL (l) holds exactly on a prefix of left boundaries. We derive this from a
+pairwise property using a planar path-exchange argument [Sch98, GGK25]. Consequently,
+HL∪R consists of a prefix of HR and a suffix of HL .
+    We represent each envelope by a persistent segment tree indexed by l. Single crossing
+permits O(log n)-time merges with O(log n) new nodes. A mutable segment tree over input
+values stores these roots. A value-prefix query obtains the predecessor envelope, and a
+persistent prefix update constructs the new endpoint function. Updating the outer tree takes
+O(log n) further merges. Thus each element costs O(log2 n) time and space. Saving the
+envelope root stored at the outer root after each input prefix reduces a range query to one
+point evaluation.
+    For reporting, persistent nodes store shared suffix witnesses represented by binary con-
+catenations. Their weights serve as additive lazy tags. A query collects these suffixes along
+one tree path in O(log n) time. Expanding them takes O(k) time. The construction requires
+no bound on Monge core size.
+
+
+2     Endpoint functions
+We use [b, e] and [b, e) for closed and half-open integer intervals. All logarithms are to base
+two. We may assume that a0 , . . . , an−1 is a permutation of [0, n): sort the pairs (ai , −i)
+lexicographically and replace each ai by its zero-based rank, keeping the notation ai . This
+takes O(n log n) time and preserves every strictly increasing subsequence, including when
+input values coincide.
+    For 0 ≤ l ≤ r ≤ n, let
+                                                                                            
+                              Xk                                                            
+            F (l, r) := max             wij   l ≤ i1 < · · · < ik < r,   ai1 < · · · < aik       .   (1)
+                                                                                            
+                                  j=1
+
+
+
+
+                                                     2
+The maximum ranges over all lengths k, including the empty subsequence of weight zero.
+Thus F (l, l) = 0, and every nonempty interval has a positive optimum value.
+     For an endpoint p, define Dp (l) to be the maximum weight of an increasing subsequence
+in [l, p] ending at p when l ≤ p, and set Dp (l) = 0 when l > p. Each Dp is nonincreasing on
+[0, n) and positive exactly on [0, p].
+     For an endpoint set E ⊆ [0, n), define its envelope by
+                                                                      
+                           HE (l) := max {0} ∪ {Dp (l) | p ∈ E} .                          (2)
+
+In particular, H∅ = 0. The set E restricts only the endpoint of a subsequence. Thus,
+
+                                      F (l, r) = H[0,r) (l),                               (3)
+
+since every nonempty feasible subsequence has an endpoint before r, whereas endpoints before
+l contribute zero.
+    The predecessor envelope for position i is Pi := H{j<i | aj <ai } . The usual last-element
+recurrence becomes                       (
+                                           Pi (l) + wi , l ≤ i,
+                                Di (l) =                                                   (4)
+                                           0,            l > i.
+
+3    Single-crossing property
+We show that, when two endpoint sets are separated by value, the higher-value envelope
+exceeds the lower-value envelope exactly on a prefix of left boundaries. Ties favour the
+lower-value set. The proof uses the standard planar path-exchange argument underlying
+Monge inequalities [GGK25, Fact B.7].
+Lemma 3.1. Let p, q ∈ [0, n) satisfy ap < aq . Then there exists c ∈ [0, n] such that
+
+                            {l ∈ [0, n) | Dp (l) < Dq (l)} = [0, c).
+
+Proof. If p < q, any increasing subsequence ending at p can be extended by q. For l ≤ p,
+
+                                Dq (l) ≥ Dp (l) + wq > Dp (l).
+
+For p < l ≤ q,
+                                  Dq (l) ≥ wq > 0 = Dp (l),
+while both functions vanish for l > q. Thus the set is [0, q + 1).
+   Suppose instead that q < p. We first show, for 0 ≤ l < l′ ≤ q, that
+
+                              Dp (l) + Dq (l′ ) ≤ Dq (l) + Dp (l′ ).                       (5)
+
+Use the standard alignment-grid representation [Sch98, GGK25], with positive weights on
+the diagonal edges. Consider the directed grid on [0, n]2 with east and north edges of weight
+zero. For every input position i, add the diagonal edge
+
+                          (i, ai ) −→ (i + 1, ai + 1)    of weight wi .
+
+The resulting graph is planar: diagonals lie inside distinct unit squares and intersect grid
+edges only at their endpoints.
+   Put sl = (l, 0) and ti = (i + 1, ai + 1). For l ≤ i, the diagonal edges of any sl –ti path
+correspond to an increasing subsequence in [l, i] whose values are at most ai . Conversely,
+every such subsequence determines a path of the same weight by joining its diagonal edges
+
+                                                3
+with zero-weight grid paths. If such a subsequence omits i, its indices and values are smaller
+than those of i. Appending i increases its weight. Hence the maximum path weight from sl
+to ti is exactly Di (l).
+    Choose maximum-weight paths from sl to tp and from sl′ to tq . Both lie in [l, p + 1] ×
+[0, aq + 1]. The four terminals sl , sl′ , tp , tq are distinct and occur in this cyclic order on
+the boundary of the rectangle. Thus the two paths have a common vertex by planarity; see
+Figure 1. Swapping their suffixes at that vertex gives paths from sl to tq and from sl′ to tp .
+The sum of their weights is unchanged. Since their weights are at most Dq (l) and Dp (l′ ),
+respectively, (5) follows.
+    By (5), Dq (l) − Dp (l) is nonincreasing on [0, q]. For l > q, Dq (l) = 0 ≤ Dp (l). Hence the
+set in the lemma is a prefix of [0, n).
+
+    The pairwise property extends to value-separated endpoint sets.
+
+Lemma 3.2. Let L, R ⊆ [0, n) satisfy ap < aq for all p ∈ L and q ∈ R. Then there exists
+c ∈ [0, n] such that HL (l) < HR (l) if and only if l < c, for every l ∈ [0, n). Consequently,
+                                                (
+                                                    HR (l),   l < c,
+                                  HL∪R (l) =                                                   (6)
+                                                    HL (l),   l ≥ c.
+
+Proof. Suppose HL (l0 ) ≥ HR (l0 ). If HL (l0 ) = 0, both envelopes remain zero for l ≥ l0 .
+   Otherwise, choose p ∈ L attaining HL (l0 ). For every q ∈ R,
+
+                                  Dq (l0 ) ≤ HR (l0 ) ≤ Dp (l0 ).
+
+By Lemma 3.1, Dq (l) ≤ Dp (l) for all l ≥ l0 . Taking the maximum over q and zero gives
+
+                             HR (l) ≤ Dp (l) ≤ HL (l)           (l ≥ l0 ).
+
+Hence the strict comparison holds on a prefix. Choosing HL at equality gives (6).
+
+
+4     Persistent envelope representations
+We represent envelopes and their witnesses in persistent segment trees. All nodes are
+immutable; updates use path copying [DSST89]. Beyond persistent range updates, we only
+need to merge envelope pairs satisfying the single-crossing property.
+
+4.1   Witnesses and suffix tags
+A witness is an index sequence represented by an immutable handle: the empty sequence
+ε, a singleton Leaf(i), or a binary concatenation Cat(U, V ). We set Cat(ε, V ) = V and
+Cat(U, ε) = U ; otherwise, concatenation creates one node pointing to the two nonempty
+handles. Each handle stores its total weight W , where
+
+           W (ε) = 0,      W (Leaf(i)) = wi ,           W (Cat(U, V )) = W (U ) + W (V ).
+
+Thus concatenation takes O(1) time and space, without copying or balancing the represented
+sequences. Binary reconstruction witnesses of this form also appear in [GGK25, Appendix B,
+proof of Theorem 1.3]. These operations apply to arbitrary index sequences. The feasibility
+of the constructed witnesses is proved in Section 5.
+    All function trees use the same balanced binary subdivision of [0, n). An interval [b, e) of
+length at least two splits at m = ⌊(b + e)/2⌋. There is one leaf per coordinate, and the height
+
+
+                                                    4
+                                                            tq
+
+
+
+
+                             value                                   tp
+
+                                               v
+
+                                     sl      sl′
+                                                   index
+
+Figure 1: Two maximum-weight paths for the sequence (0, 2, 3, 1) with unit weights. Here
+l = 0, l′ = 1, q = 2, and p = 3. Horizontal and vertical edges have weight zero; diagonal
+edges represent selected elements.
+
+
+is at most ⌈log n⌉. Intervals are carried by recursive calls rather than stored in nodes. We
+identify a root with its represented function when no confusion arises.
+    A function node stores two child pointers, a suffix handle S, and the score last at its
+rightmost coordinate. At a leaf, it represents the pair (W (S), S). At an internal node, a
+selected child pair (x, U ) gives the pair
+                                                                 
+                                          x + W (S), Cat(U, S) .                               (7)
+
+The concatenation is conceptual. Reading a node does not allocate a witness. The cache
+satisfies              (
+                         W (S),                     at a leaf,
+                last =
+                         last(right child) + W (S), at an internal node.
+Thus the weight of the suffix is also the additive lazy tag. Initially, we build one full tree for
+H∅ with empty suffixes and zero caches, in O(n) time and space. Every version retains this
+subdivision, including on constant intervals.
+
+Basic operations. The operation Append(T, V ) appends V at every coordinate of T . It
+copies the root, replaces its suffix by Cat(S, V ), and increases its cache by W (V ). It takes
+O(1) time and creates at most one function node and one witness node.
+    For a nonleaf root, Children(T ) returns its two restrictions by applying Append to each
+child with the parent’s suffix. The order is child suffix followed by parent suffix, as in (7).
+Conversely, Join(f, g) creates a parent with children f, g, empty suffix, and cache last(g). Both
+operations take O(1) time and create O(1) nodes. They leave all existing nodes unchanged.
+
+4.2   Prefix updates
+For c ∈ [0, n], let PrefixAppend(T, c, V ) append V at coordinates below c and leave all other
+coordinates unchanged. This is an ordinary persistent prefix update, given in Algorithm 1.
+On a fully covered interval it calls Append; on an uncovered interval it returns the original
+root. Only the interval containing the boundary is partially covered at any level. Each level
+performs O(1) operations, so the update takes O(log n) time and creates O(log n) function
+and witness nodes.
+    Since Pi (l) = 0 with an empty witness for l > i, the recurrence in (4) is realized by a
+single prefix update:
+                             Di = PrefixAppend(Pi , i + 1, Leaf(i)).                       (8)
+
+                                                   5
+Algorithm 1 PrefixAppend(T, c, V ) on [b, e).
+ 1: if c ≤ b then return T
+ 2: if e ≤ c then return Append(T, V )
+ 3: (f, g) ← Children(T )
+           b+e
+                  
+ 4: if c ≤        then
+            2
+ 5:    return Join(PrefixAppend(f, c, V ), g)
+ 6: else
+ 7:    return Join(Append(f, V ), PrefixAppend(g, c, V ))
+
+
+4.3    Merging envelopes
+Lemma 4.1. Let f and g be represented on the same interval [b, e). Suppose g(l) > f (l)
+holds exactly on a prefix of this interval. Their pointwise maximum can be represented in
+O(log n) time using O(log n) new function and witness nodes. At equality, the witness of f is
+chosen. Both input trees remain unchanged.
+
+Proof. Consider Algorithm 2. At a leaf, the strict comparison selects the larger score,
+preferring f at equality. Otherwise, Children incorporates the parent suffixes into the child
+roots. If last(gL ) > last(fL ), the prefix property implies that g exceeds f throughout the left
+half. Otherwise, g does not exceed f anywhere in the right half. Thus one half is selected
+directly, and only the other requires recursion. Restriction preserves the prefix property,
+proving correctness by induction.
+    Each call makes at most one recursive call and otherwise takes O(1) time and creates
+O(1) new function and witness nodes. The tree height gives the claimed bounds.
+
+    Cached scores allow Merge to construct the pointwise maximum in a single descent. By
+Lemma 3.2, Merge(HL , HR ) is applicable whenever the endpoint sets are separated in this
+value order.
+
+4.4    Evaluation and reporting
+Lemma 4.2. A represented score at a given coordinate can be returned in O(log n) time,
+and its witness of length k can be reported in O(k + log n) time. Neither query changes the
+stored structure.
+
+Proof. Descend to the coordinate’s leaf, collecting the suffixes S0 , . . . , Sh in root-to-leaf order.
+By (7), the score is hj=0 W (Sj ), which is computed in O(log n) time. The witness is the
+                       P
+
+concatenation Sh Sh−1 · · · S0 . Discard empty handles and expand the remaining forest in this
+order, visiting the left child of each concatenation before the right child. Every concatenation
+has two nonempty children. The unfolded forest with k leaf occurrences therefore has at most
+2k node occurrences, regardless of sharing. Expansion takes O(k) time. The traversal uses
+O(k + log n) workspace including the output and allocates no persistent nodes.
+
+
+5     Preprocessing and queries
+We now prove Theorem 1.1. Maintain an ordinary mutable segment tree, denoted outer, on
+the value domain [0, n). Its entries are roots of the persistent trees from Section 4, which
+are indexed by the left boundary. For an outer node v with value interval Iv , maintain,
+
+
+
+                                                  6
+Algorithm 2 Merge(f, g) for functions satisfying the prefix property.
+ 1: if the interval is a singleton then
+ 2:    if last(g) > last(f ) then
+ 3:        return g
+ 4:    else
+ 5:        return f
+ 6: (fL , fR ) ← Children(f )
+ 7: (gL , gR ) ← Children(g)
+ 8: if last(gL ) > last(fL ) then
+ 9:    return Join(gL , Merge(fR , gR ))
+10: else
+11:    return Join(Merge(fL , gL ), fR )
+
+
+immediately before processing position i,
+                                      Tv = H{j<i | aj ∈Iv } .                                (9)
+For positive scores, the stored witness is an optimum subsequence ending in this set. For
+zero scores, it is empty. Initially every entry points to the all-zero tree for H∅ .
+    The outer tree uses Merge as its combine operation. For scores, this operation is pointwise
+maximum, with identity H∅ . Its O(log n) implementation requires the ordered endpoint
+sets of Lemma 3.2. Accordingly, outer.prod(0, ai ) folds the canonical intervals in increasing
+value order, placing the accumulated lower-value envelope first in each merge. A point
+assignment outer.set(ai , Di ) recomputes ancestors by merging the left child’s root with the
+right child’s root. Both operations use O(log n) merges, all on value-separated endpoint sets.
+The operation outer.prod() returns the outer root’s stored envelope. The outer subdivision is
+the usual balanced recursive subdivision, so no padding is needed.
+Lemma 5.1. Algorithm 3 constructs root[r] = H[0,r) for every r ∈ [0, n], with optimum
+witnesses for positive values and empty witnesses for zero values. Its time and total allocated
+space are O(n log2 n).
+Proof. We prove (9) and its witness assertion by induction on i. They hold initially. The
+canonical intervals partition [0, ai ). Their ordered merges yield Pi by Lemmas 3.2 and 4.1.
+For l ≤ i, a predecessor witness of positive weight ends at an earlier position of smaller value,
+and appending i gives a feasible subsequence of weight Pi (l) + wi . A predecessor witness of
+weight zero is empty and gives the singleton i. For l > i, the update leaves the zero value
+and empty witness unchanged. Thus (4) proves that the new root represents Di with the
+required witnesses.
+    Since the ranks are distinct, the leaf for ai was previously empty. At each updated
+ancestor, the child endpoint sets are separated by value. They partition the set in (9) with i
+replaced by i + 1. Their merge preserves the invariant and selects an optimum witness. All
+other outer nodes are unchanged. The outer root consequently represents H[0,i+1) . Persistence
+preserves each saved root and its witnesses.
+    Each iteration uses O(log n) merges and one prefix append. By Lemma 4.1 and the
+prefix-update bound, it takes O(log2 n) time and allocates O(log2 n) function and witness
+nodes. Relabeling takes O(n log n) time, and building the initial trees takes O(n) time and
+space. The input, mutable outer tree, and saved roots occupy O(n) space. Every allocated
+node has constant size, so even retaining all temporary nodes uses O(n log2 n) space. The
+recursion stack uses O(log n) additional space.
+
+                                                7
+Algorithm 3 Preprocessing the relabeled sequence.
+ 1: Build the full persistent tree for H∅
+ 2: Initialize all entries of outer to H∅
+ 3: root[0] ← H∅
+ 4: for i = 0, . . . , n − 1 do
+ 5:       Pi ← outer.prod(0, ai )
+ 6:       Di ← PrefixAppend(Pi , i + 1, Leaf(i))
+ 7:       outer.set(ai , Di )
+ 8:       root[i + 1] ← outer.prod()
+
+
+Queries. For a nonempty interval [l, r), evaluate root[r] at l. By (3) and Lemma 5.1, its
+score is F (l, r), and its witness is an optimum increasing subsequence in the query interval.
+Lemma 4.2 gives O(log n) value-query time and O(k + log n) reporting time. An empty
+interval returns zero and an empty list directly. This proves Theorem 1.1.
+
+
+AI Assistance Disclosure
+ChatGPT (OpenAI) assisted with literature searches, algorithm design, proof development
+and checking, counterexample searches, implementation, and manuscript preparation. The
+author is responsible for the statements and proofs in this paper.
+
+
+References
+[DSST89] James R. Driscoll, Neil Sarnak, Daniel D. Sleator, and Robert E. Tarjan. Making
+         data structures persistent. Journal of Computer and System Sciences, 38(1):86–124,
+         1989. doi:10.1016/0022-0000(89)90034-2.
+[GGK25] Paweł Gawrychowski, Egor Gorbachev, and Tomasz Kociumaka. Core-sparse
+        Monge matrix multiplication: Improved algorithm and applications. In 33rd
+        Annual European Symposium on Algorithms (ESA 2025), volume 351 of LIPIcs,
+        pages 74:1–74:17. Schloss Dagstuhl–Leibniz-Zentrum für Informatik, 2025. Full
+        version: arXiv:2408.04613v2. URL: https://arxiv.org/abs/2408.04613v2,
+        doi:10.4230/LIPIcs.ESA.2025.74.
+[KR26]       Karthik C. S. and Saladi Rahul. Range longest increasing subsequence and
+             its relatives. In 17th Innovations in Theoretical Computer Science Conference
+             (ITCS 2026), volume 362 of LIPIcs, pages 87:1–87:20. Schloss Dagstuhl–Leibniz-
+             Zentrum für Informatik, 2026. Full version: arXiv:2404.04795v2. URL: https:
+             //arxiv.org/abs/2404.04795v2, doi:10.4230/LIPIcs.ITCS.2026.87.
+[Sch98]      Jeanette P. Schmidt. All highest scoring paths in weighted grid graphs and
+             their application to finding all approximate repeats in strings. SIAM Journal on
+             Computing, 27(4):972–992, 1998. doi:10.1137/S0097539795288489.
+[Tis13]      Alexander Tiskin. Semi-local string comparison: algorithmic techniques and
+             applications, 2013. arXiv:0707.3619v21. URL: https://arxiv.org/abs/0707.3
+             619v21.
+[Tis15]      Alexander Tiskin. Fast distance multiplication of unit-Monge matrices. Algorith-
+             mica, 71(4):859–888, 2015. doi:10.1007/s00453-013-9830-z.
+
+                                                   8
+

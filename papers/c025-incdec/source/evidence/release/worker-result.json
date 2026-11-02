@@ -1,0 +1,21 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Citation, clean-build, all-six-page visual and byte-identical source-ZIP reproduction audits passed. Qualified the approximate ESA bound and refroze the manuscript. Release gate passed; working_paper label retained. Supervisor owns publish.",
+  "next_test": "Supervisor: run release_gate.py publish, then verify the activated manifest/PDF against the checked digests while retaining working_paper.",
+  "evidence": [
+    "checkpoint.md",
+    "audit/citations.json",
+    "audit/citations.md",
+    "audit/build.json",
+    "audit/build.md",
+    "audit/visual.json",
+    "audit/visual.md",
+    "audit/stoc-assessment.json",
+    "evidence/release/gate-check.json",
+    "evidence/release/zip-reproduction.json",
+    "evidence/release/optimal-incdec-working_paper-source.zip",
+    "manuscript/optimal-incdec-working_paper.pdf"
+  ]
+}

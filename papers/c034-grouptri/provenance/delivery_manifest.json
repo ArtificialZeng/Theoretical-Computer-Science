@@ -1,0 +1,131 @@
+{
+  "package_schema": 5,
+  "project": "c034-grouptri",
+  "title": "Truly Subcubic Exact Triangle over Bounded-Exponent Abelian Groups",
+  "readiness_label": "working_paper",
+  "stoc_assessment": {
+    "job_id": "c034-grouptri-referee-e6a7f319b8fe",
+    "snapshot_digest": "05aa22d3dd75b43826bffb43bc7976a87898d16ab67f0597c8e4a686ca39b771",
+    "review_type": "fresh_internal_stoc_assessment",
+    "verdict": "working_paper",
+    "strongest_result": "For every fixed M>=2, a deterministic uniform word-RAM algorithm decides the full compact bounded-exponent abelian-group Exact Triangle problem of source.md in O_{M,c}(n^(3-delta_M) polylog(n+2)) time for every fixed c>0, with delta_M=(1/1000)*(1/144000)^(Omega(M)-1) independent of c; the cited elementary backend is instantiated by an existing H(1/14,0.077) algorithm.",
+    "nearest_comparisons": [
+      "Majdoddin, arXiv:2610.17420v1, Theorem 21.3, Corollary 21.7, Propositions 21.9--21.10 and Open Problem 21.12: elementary-group and two promised non-elementary regimes versus the candidate's unrestricted all-fixed-exponent algorithm. The source's Remark 21.8 identifies the obstacle of a quotient split invariant under re-gauging; the candidate supplies such pieces with charged construction.",
+      "Chan--Vassilevska Williams--Xu, arXiv:2303.14572v1, Theorem 5.1: the core frequency decomposition and potential equations are known, but its initial construction is cubic. The candidate computes enough witnesses subcubically and uses the equations for a complete kernel lifting induction; it does not improve the decomposition theorem itself.",
+      "Sheffield--Vassilevska Williams--Xi, arXiv:2608.19092v1, introduction and Section 2.3: detection/all-edge/listing relationships are established, so the capped octree routine is supporting machinery and supplies no independent novelty or depth claim.",
+      "Pant--Williams, arXiv:2606.27727v1, Definition 24 and Theorem 4 in Section 5.2: expected logarithmic speedup for integer Exact Triangle with logarithmic word size, rather than a fixed power saving for arbitrary compact bounded-exponent group labels."
+    ],
+    "criteria": {
+      "importance": {
+        "judgment": "uncertain",
+        "reason": "The full bounded-exponent class is a natural algebraic extension and the result settles the precise unrestricted question, rather than a toy promise. However the open question is newly posed in the inspected October 2026 source, and the record does not establish that its resolution alone has the broad theoretical impact expected of a competitive STOC submission. Integer Exact Triangle and APSP speedups were already achieved by the prior matrix work; this theorem must not be credited with those breakthroughs."
+      },
+      "novelty": {
+        "judgment": "strong",
+        "reason": "The inspected primary source still separates elementary algorithms from the unrestricted non-elementary question, and the bounded fresh primary comparison located no equivalent full closure theorem. The charged non-split quotient/kernel extension is a concrete substantive delta. All listing, hitting, frequency decomposition and elementary group identities are credited to their prior roles; this judgment concerns the combined full theorem, with ordinary bounded-search priority limits."
+      },
+      "technical_depth": {
+        "judgment": "uncertain",
+        "reason": "The genuinely new step is arranging a known frequency decomposition, constructed using capped detection, so that explicit vertex gauges allow recursive kernel calls without cubic initialization or uncharged materialization. This is a useful conceptual bridge, but the algebraic cancellation, masks and final induction are elementary once that arrangement is recognized. The packet supplies no new difficult combinatorial lemma, matrix primitive, sharp exponent, or evidence that the resulting depth meets STOC's competitive bar."
+      },
+      "breadth_or_consequence": {
+        "judgment": "uncertain",
+        "reason": "The theorem covers every fixed exponent and arbitrary logarithmic dimension and c, so it has meaningful breadth within its group-labelled triangle class. The accepted frozen packet proves no additional major lower-bound consequence, new complexity equivalence, or separately important algorithm outside this class. Potential coordinatewise applications and broader extension frameworks are motivations, not additional theorems established by this review."
+      },
+      "exposition_and_verifiability": {
+        "judgment": "strong",
+        "reason": "The exact scope, prime backend, complete-input masks, edgewise gauges, all graph-construction costs and exponent recurrence are explicit and reconstructible. A separately written exact verifier checked local carries, markers, graph partitions and rational ledgers, with finite coverage disclosed. The proof relies on a precise stated prior backend rather than pretending to formalize all its dependencies. This judgment concerns the mathematical packet; no manuscript layout, build or publication audit has occurred."
+      }
+    },
+    "case_for_stoc": "There is a credible conceptual paper: the elementary-group boundary is crossed by an explicit quotient/kernel closure mechanism that defeats dense quotient-zero obstructions and treats all fixed exponents with fully charged construction. That case is stronger than a single restricted Z_4 example and passes the project's substantive full-resolution gate. It does not yet establish a competitive STOC case: most machinery is known, technical depth beyond its synthesis is modest or uncertain, no broad independently important consequence is proved, and the conservative saving already falls to 1/144000000 at M=4. A full correct result with those limitations should remain working_paper rather than receiving an automatic venue upgrade.",
+    "remaining_weaknesses": [
+      "The broad TCS importance of this particular newly posed group-labelled extension is not established by the packet's exact theorem alone.",
+      "Known decomposition and listing machinery carries much of the proof; whether the new conceptual synthesis meets STOC's depth threshold is uncertain.",
+      "No independent major application or sharper useful quantitative bound is proved in the frozen candidate.",
+      "The exponent savings and constants give no practical performance claim, and no complete fast implementation is benchmarked.",
+      "Novelty checking is bounded; this assessment is an internal judgment, not exhaustive priority verification or external peer review."
+    ],
+    "label_is_not_a_venue_decision": true
+  },
+  "pages": 8,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "original_status": "proved",
+  "kind": "resolution-paper",
+  "pdf": "c034-grouptri_working_paper.pdf",
+  "pdf_sha256": "e9b3d5055ad93f76865143de8acab7b3c4dc6c1f3cd1fe3b20482eb99d68cfa4",
+  "source_archive": "c034-grouptri_source_and_reproducibility.zip",
+  "source_archive_sha256": "5883187d35b4c27ccb791da9d5b87149077abf63ffa00a3d88dbb109d3fddd1a",
+  "class_file": "manuscript/acmart.cls",
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "reproduce_scripts": [
+    "evidence/test_capped_listing.py",
+    "evidence/test_quotient_kernel.py",
+    "manuscript/verification/independent_verifier.py"
+  ],
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "e9b3d5055ad93f76865143de8acab7b3c4dc6c1f3cd1fe3b20482eb99d68cfa4"
+    },
+    "citation_verdict": "accept_with_citation_limitations",
+    "kind": "resolution-paper",
+    "manuscript_digest": "a40f8840ae0d14f65c4af83e804cb282ac08f663f3e89dfedb04cd0efadea7ba",
+    "original_status": "proved",
+    "pages": 8,
+    "pdf_digest": "e9b3d5055ad93f76865143de8acab7b3c4dc6c1f3cd1fe3b20482eb99d68cfa4",
+    "provenance": {
+      "audit/build.json": "410cddbf6f75bec1c5dee21002cb99bf0926ae07ee61bda249f074e7c1f9ed75",
+      "audit/build.md": "32b436e18952dcf7379a5926f0e6f9044c47a160ca124200d687593dc94b8d60",
+      "audit/citations.json": "6218f49b81b94f89b05d27009a1a23f6d4ef184d4cf857fb7a5c54aee1923d9c",
+      "audit/citations.md": "17e58389e47b8c8c06562c26454a034f45a7b4167528005ed8e9444e0aaadbf2",
+      "audit/math.json": "7fbf3de714f0fcf47cae1f485ce4e35cec151f65be9116d7274a130f2deaf05d",
+      "audit/math.md": "5dfe457941d7859160b2d38ff48949b5a9f2d081d73605ee7440fb5973a89e8f",
+      "audit/visual.json": "85d7ae3e4c1b9625cd4dbfb2f83d1720bc5779962fc9b7858579270430479a2b",
+      "audit/visual.md": "f99afe8934be619fc9482239554a38812eb55d092ff32bbf737c43ed5803b3e3",
+      "evidence/release-build.log": "11abf27ed8844aaadbac10d5641695126abef373959c188c0cd11dcd7f7db369",
+      "jobs/c034-grouptri-referee-e6a7f319b8fe/role.json": "e5a569c749f479c63d1d37b62d36f82d036f03e1d76c582d81cd0d7c9b162cff",
+      "jobs/c034-grouptri-release-98d1e823492f/role.json": "fbd180072e8611a472f47a2072b13811bfa8bcf31ee734247a37db38892df668",
+      "jobs/c034-grouptri-research-d92d3d43a90d/role.json": "a0946d4692dbe6042a674d22885479a16926fab83622d9276722c62e50bdd5d4"
+    },
+    "schema": 1,
+    "snapshot_digest": "05aa22d3dd75b43826bffb43bc7976a87898d16ab67f0597c8e4a686ca39b771",
+    "unverified_citations": [
+      {
+        "citation": "Ruhollah Majdoddin, arXiv:2610.17420v1 (2026)",
+        "key": "Maj26",
+        "limitation": "Only optional DOI registry completion is uncertified. Versioned arXiv displayed pending registration, current record omitted that note; the advertised DOI is retained. Existence, author/title/date/version and full cited passages verified."
+      }
+    ]
+  },
+  "citation_verdict": "accept_with_citation_limitations",
+  "citation_limitations": [
+    {
+      "citation": "Ruhollah Majdoddin, arXiv:2610.17420v1 (2026)",
+      "key": "Maj26",
+      "limitation": "Only optional DOI registry completion is uncertified. Versioned arXiv displayed pending registration, current record omitted that note; the advertised DOI is retained. Existence, author/title/date/version and full cited passages verified."
+    }
+  ],
+  "excluded_third_party_text_caches": [
+    {
+      "path": "audit/release-web-searches.json",
+      "sha256": "dc4a6af40d4b4cc332461dec56ae1ba11ce6e5cb5b03d2afc63b118f4912f898",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    }
+  ],
+  "external_submission_performed": false
+}

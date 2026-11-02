@@ -1,0 +1,51 @@
+{
+  "job_id": "c025-incdec-write-571412ddfbdf",
+  "review_role": "writer_visual_QA_not_fresh_release_audit",
+  "pdf": "manuscript/optimal-incdec-working_paper.pdf",
+  "pdf_sha256": "1bccbffd17b02d6383c460ebaae75935efe66a529d78e922980dbe941d4ed51b",
+  "dpi": 110,
+  "pages": [
+    {
+      "page": 1,
+      "render": "tmp/pdfs/final-1.png",
+      "sha256": "e92908b0b67a7f1edbef04bc3ed3af7b4f78dfb2c2d1c871f0981861380f713c",
+      "inspection": "Inspected visually: readable text/equations, no clipping, overlap, missing glyphs or misleading page breaks.",
+      "unchanged_from_earlier_inspected_render": false
+    },
+    {
+      "page": 2,
+      "render": "tmp/pdfs/final-2.png",
+      "sha256": "e647ae22543aab582f647365baa8754201765dcff0111a6024f8259401ea1f51",
+      "inspection": "Inspected visually: readable text/equations, no clipping, overlap, missing glyphs or misleading page breaks.",
+      "unchanged_from_earlier_inspected_render": true
+    },
+    {
+      "page": 3,
+      "render": "tmp/pdfs/final-3.png",
+      "sha256": "848720fb18b35cb5a3adc57edf1255af888dccd216b91f4d8e0d821b934ff704",
+      "inspection": "Inspected visually: readable text/equations, no clipping, overlap, missing glyphs or misleading page breaks.",
+      "unchanged_from_earlier_inspected_render": true
+    },
+    {
+      "page": 4,
+      "render": "tmp/pdfs/final-4.png",
+      "sha256": "8deb6b655f1dbfe1135d7fc3c60b9b916cbe83025b63c31ac781cbf6c3bdcb6d",
+      "inspection": "Inspected visually: readable text/equations, no clipping, overlap, missing glyphs or misleading page breaks.",
+      "unchanged_from_earlier_inspected_render": true
+    },
+    {
+      "page": 5,
+      "render": "tmp/pdfs/final-5.png",
+      "sha256": "87263038f5b571b4d0ba7a76efb6f015f0ed6e60c082bed18ddd80c09a2ff9bd",
+      "inspection": "Inspected visually: readable text/equations, no clipping, overlap, missing glyphs or misleading page breaks.",
+      "unchanged_from_earlier_inspected_render": true
+    },
+    {
+      "page": 6,
+      "render": "tmp/pdfs/final-6.png",
+      "sha256": "d1dbd558dd99ce9814ab4af550e9cdede6556f8b21069f033d96cc0c79d35957",
+      "inspection": "Inspected visually: readable text/equations, no clipping, overlap, missing glyphs or misleading page breaks.",
+      "unchanged_from_earlier_inspected_render": false
+    }
+  ]
+}

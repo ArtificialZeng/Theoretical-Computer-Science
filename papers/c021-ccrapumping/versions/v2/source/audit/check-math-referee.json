@@ -1,0 +1,8 @@
+{
+  "job_id": "c021-ccrapumping-referee-a7ba97c08c76",
+  "command": "release_gate.py check-math PROJECT_DIR",
+  "exit_code": 0,
+  "stdout": "{\"ok\":true,\"snapshot_digest\":\"c56f3440ebba4e41358a93f526e776e26091d3e07c234d06ecd41eb565a274b0\",\"referee_job_id\":\"c021-ccrapumping-referee-a7ba97c08c76\"}",
+  "stderr": "",
+  "scope": "Structural evidence-integrity and role-provenance check; not a mathematical proof."
+}

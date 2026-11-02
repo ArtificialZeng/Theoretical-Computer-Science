@@ -1,0 +1,44 @@
+{
+  "job_id": "c034-grouptri-referee-e6a7f319b8fe",
+  "snapshot_digest": "05aa22d3dd75b43826bffb43bc7976a87898d16ab67f0597c8e4a686ca39b771",
+  "review_type": "fresh_internal_stoc_assessment",
+  "verdict": "working_paper",
+  "strongest_result": "For every fixed M>=2, a deterministic uniform word-RAM algorithm decides the full compact bounded-exponent abelian-group Exact Triangle problem of source.md in O_{M,c}(n^(3-delta_M) polylog(n+2)) time for every fixed c>0, with delta_M=(1/1000)*(1/144000)^(Omega(M)-1) independent of c; the cited elementary backend is instantiated by an existing H(1/14,0.077) algorithm.",
+  "nearest_comparisons": [
+    "Majdoddin, arXiv:2610.17420v1, Theorem 21.3, Corollary 21.7, Propositions 21.9--21.10 and Open Problem 21.12: elementary-group and two promised non-elementary regimes versus the candidate's unrestricted all-fixed-exponent algorithm. The source's Remark 21.8 identifies the obstacle of a quotient split invariant under re-gauging; the candidate supplies such pieces with charged construction.",
+    "Chan--Vassilevska Williams--Xu, arXiv:2303.14572v1, Theorem 5.1: the core frequency decomposition and potential equations are known, but its initial construction is cubic. The candidate computes enough witnesses subcubically and uses the equations for a complete kernel lifting induction; it does not improve the decomposition theorem itself.",
+    "Sheffield--Vassilevska Williams--Xi, arXiv:2608.19092v1, introduction and Section 2.3: detection/all-edge/listing relationships are established, so the capped octree routine is supporting machinery and supplies no independent novelty or depth claim.",
+    "Pant--Williams, arXiv:2606.27727v1, Definition 24 and Theorem 4 in Section 5.2: expected logarithmic speedup for integer Exact Triangle with logarithmic word size, rather than a fixed power saving for arbitrary compact bounded-exponent group labels."
+  ],
+  "criteria": {
+    "importance": {
+      "judgment": "uncertain",
+      "reason": "The full bounded-exponent class is a natural algebraic extension and the result settles the precise unrestricted question, rather than a toy promise. However the open question is newly posed in the inspected October 2026 source, and the record does not establish that its resolution alone has the broad theoretical impact expected of a competitive STOC submission. Integer Exact Triangle and APSP speedups were already achieved by the prior matrix work; this theorem must not be credited with those breakthroughs."
+    },
+    "novelty": {
+      "judgment": "strong",
+      "reason": "The inspected primary source still separates elementary algorithms from the unrestricted non-elementary question, and the bounded fresh primary comparison located no equivalent full closure theorem. The charged non-split quotient/kernel extension is a concrete substantive delta. All listing, hitting, frequency decomposition and elementary group identities are credited to their prior roles; this judgment concerns the combined full theorem, with ordinary bounded-search priority limits."
+    },
+    "technical_depth": {
+      "judgment": "uncertain",
+      "reason": "The genuinely new step is arranging a known frequency decomposition, constructed using capped detection, so that explicit vertex gauges allow recursive kernel calls without cubic initialization or uncharged materialization. This is a useful conceptual bridge, but the algebraic cancellation, masks and final induction are elementary once that arrangement is recognized. The packet supplies no new difficult combinatorial lemma, matrix primitive, sharp exponent, or evidence that the resulting depth meets STOC's competitive bar."
+    },
+    "breadth_or_consequence": {
+      "judgment": "uncertain",
+      "reason": "The theorem covers every fixed exponent and arbitrary logarithmic dimension and c, so it has meaningful breadth within its group-labelled triangle class. The accepted frozen packet proves no additional major lower-bound consequence, new complexity equivalence, or separately important algorithm outside this class. Potential coordinatewise applications and broader extension frameworks are motivations, not additional theorems established by this review."
+    },
+    "exposition_and_verifiability": {
+      "judgment": "strong",
+      "reason": "The exact scope, prime backend, complete-input masks, edgewise gauges, all graph-construction costs and exponent recurrence are explicit and reconstructible. A separately written exact verifier checked local carries, markers, graph partitions and rational ledgers, with finite coverage disclosed. The proof relies on a precise stated prior backend rather than pretending to formalize all its dependencies. This judgment concerns the mathematical packet; no manuscript layout, build or publication audit has occurred."
+    }
+  },
+  "case_for_stoc": "There is a credible conceptual paper: the elementary-group boundary is crossed by an explicit quotient/kernel closure mechanism that defeats dense quotient-zero obstructions and treats all fixed exponents with fully charged construction. That case is stronger than a single restricted Z_4 example and passes the project's substantive full-resolution gate. It does not yet establish a competitive STOC case: most machinery is known, technical depth beyond its synthesis is modest or uncertain, no broad independently important consequence is proved, and the conservative saving already falls to 1/144000000 at M=4. A full correct result with those limitations should remain working_paper rather than receiving an automatic venue upgrade.",
+  "remaining_weaknesses": [
+    "The broad TCS importance of this particular newly posed group-labelled extension is not established by the packet's exact theorem alone.",
+    "Known decomposition and listing machinery carries much of the proof; whether the new conceptual synthesis meets STOC's depth threshold is uncertain.",
+    "No independent major application or sharper useful quantitative bound is proved in the frozen candidate.",
+    "The exponent savings and constants give no practical performance claim, and no complete fast implementation is benchmarked.",
+    "Novelty checking is bounded; this assessment is an internal judgment, not exhaustive priority verification or external peer review."
+  ],
+  "label_is_not_a_venue_decision": true
+}

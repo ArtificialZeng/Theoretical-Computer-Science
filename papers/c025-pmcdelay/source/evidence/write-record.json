@@ -1,0 +1,28 @@
+{
+  "job_id": "c025-pmcdelay-write-7714292f197a",
+  "phase": "write",
+  "finished_at_utc": "2026-11-01T23:46:05.347141+00:00",
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "readiness_label": "working_paper",
+  "snapshot_digest": "9e18afcb85b19f266e11aab420e78596f90e785921128737257fbdd42a21cfbc",
+  "manuscript_digest": "8502854365556ca110be34d374a6e54b8133c7e747267dea571dd218f829c685",
+  "pdf_digest": "ff0b8c2710e0e8655e39aaaaeef6df945a006e772ebc9559845b12d5f145a80f",
+  "pdf": "manuscript/main.pdf",
+  "pages": 9,
+  "max_total_pages": 12,
+  "math_gate": "passed at entry and again before freeze",
+  "freeze_manuscript": "passed",
+  "clean_build": "evidence/write-clean-build.json",
+  "same_context_visual_check": "evidence/write-visual-check.json",
+  "format": "evidence/write-format-check.json",
+  "bibliography": "literature/user_bibliography_check.md",
+  "preserved": "All 18 frozen mathematical files and previous math/innovation/STOC reviews; no scheduling counters edited.",
+  "limitations": [
+    "The actual fresh venue assessment remains working_paper; technical depth and breadth for STOC remain uncertain.",
+    "Historical BBC chapter full text not obtained; its theorem is also stated in the inspected BLS source.",
+    "Separate RELEASE citation/build/every-page and delivered-ZIP reproduction reviews are pending."
+  ],
+  "next_test": "A separate authorized RELEASE job reviews this exact frozen manuscript/PDF and all citations, checks the actual delivered source ZIP by clean reproduction, and retains working_paper. No external submission or contact."
+}

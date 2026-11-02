@@ -1,0 +1,2 @@
+k2n [4, 2] m= 16 degs [8, 8, 4, 4, 4, 4]
+RESULT k2n [4, 2] 3 NOCOVER 3.1s

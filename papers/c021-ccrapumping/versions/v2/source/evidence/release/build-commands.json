@@ -1,0 +1,23 @@
+[
+  {
+    "command": [
+      "latexmk",
+      "-C",
+      "-r",
+      "latexmkrc",
+      "main.tex"
+    ],
+    "returncode": 0,
+    "transcript": "evidence/release/clean.log"
+  },
+  {
+    "command": [
+      "latexmk",
+      "-r",
+      "latexmkrc",
+      "main.tex"
+    ],
+    "returncode": 0,
+    "transcript": "evidence/release/build.log"
+  }
+]

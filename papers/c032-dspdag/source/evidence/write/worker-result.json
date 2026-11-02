@@ -1,0 +1,19 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Prepared and froze the clean eight-page full-resolution manuscript and PDF. Preserved the accepted mathematical snapshot and working_paper assessment; separate release review remains pending.",
+  "next_test": "Fresh RELEASE audit of citations, clean build, every PDF page and final delivered-source ZIP reproduction, retaining working_paper.",
+  "evidence": [
+    "output/pdf/dspdag-working_paper.pdf",
+    "manuscript/main.tex",
+    "publication.json",
+    "audit/manuscript-snapshot.json",
+    "audit/math.json",
+    "audit/stoc-assessment.json",
+    "evidence/write/preflight.json",
+    "evidence/write/freeze-manuscript.json",
+    "literature/user_bibliography_check.md",
+    "checkpoint.md"
+  ]
+}

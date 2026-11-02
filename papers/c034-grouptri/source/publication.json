@@ -1,0 +1,48 @@
+{
+  "source_files": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/Makefile",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/verification/independent_verifier.py",
+    "manuscript/verification/recorded-checks.json"
+  ],
+  "pdf": "output/pdf/bounded-exponent-exact-triangle_working_paper.pdf",
+  "title": "Truly Subcubic Exact Triangle over Bounded-Exponent Abelian Groups",
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "readiness_label": "working_paper",
+  "quality_assessment": "audit/stoc-assessment.json",
+  "mathematical_snapshot_digest": "05aa22d3dd75b43826bffb43bc7976a87898d16ab67f0597c8e4a686ca39b771",
+  "writing_job_id": "c034-grouptri-write-67970b989199",
+  "max_total_pages": 12,
+  "external_submission_authorized": false,
+  "format": "Official unmodified acmart, manuscript, screen, nonacm, 11pt; letter, one-inch margins; identified sole author",
+  "build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=../tmp/release-build main.tex (cwd manuscript); copy tmp/release-build/main.pdf to output/pdf/bounded-exponent-exact-triangle_working_paper.pdf",
+  "dependencies": [
+    "TeX Live with acmart dependencies",
+    "latexmk",
+    "BibTeX"
+  ],
+  "template_inputs": {
+    "acmart.cls": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+    "ACM-Reference-Format.bst": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04"
+  },
+  "total_pdf_pages": 8,
+  "citation_limitations": [
+    "The versioned Maj26 arXiv record displayed a pending-registration note, while the current unversioned record lists the DOI without that note. DOI registry completion was not independently certified; the paper, metadata and full cited text are verified.",
+    "Current-primary comparison is bounded; no exhaustive priority claim is made."
+  ],
+  "build_warnings": [
+    "Official acmart reports no city for the supplied affiliation; no author campus is assumed."
+  ],
+  "release_job_id": "c034-grouptri-release-98d1e823492f"
+}

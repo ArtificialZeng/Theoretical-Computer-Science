@@ -1,0 +1,7 @@
+trial 9 registers 2 states 2 minimal dim 5
+machine (transitions, outputs, initial valuation): ({(0, '0'): (1, [('c', Fraction(3, 1)), ('mul', ('v', 0, Fraction(2, 1)), ('v', 1, Fraction(-1, 1)))]), (0, '1'): (1, [('add', ('add', ('v', 1, Fraction(-2, 1)), ('v', 0, Fraction(2, 1))), ('c', Fraction(-1, 1))), ('c', Fraction(0, 1))]), (1, '0'): (1, [('mul', ('v', 1, Fraction(-2, 1)), ('v', 0, Fraction(2, 1))), ('c', Fraction(2, 1))]), (1, '1'): (1, [('add', ('v', 1, Fraction(1, 1)), ('c', Fraction(-2, 1))), ('add', ('v', 0, Fraction(1, 1)), ('c', Fraction(1, 2)))])}, [('v', 0, Fraction(-1, 3)), ('add', ('add', ('v', 0, Fraction(-2, 1)), ('v', 1, Fraction(-1, 3))), ('c', Fraction(1, 1)))], [Fraction(2, 1), Fraction(2, 1)])
+  context words u,x,y,z = ('00', '', '11', '00')
+  r1 fixed symbolically: True
+  alpha(l) = -16*(3*l - 4)    beta(l) = -(144*l**2 - 208*l + 21)/43
+  beta/(alpha-1) = (144*l**2 - 208*l + 21)/(129*(16*l - 21))
+  check v0*B(l) == beta r1 + alpha v0 symbolically: True

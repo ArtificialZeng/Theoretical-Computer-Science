@@ -1,0 +1,15 @@
+(1) n=1: R_S has 1 edges, 0 triangles; triangle-collapse makes all edges trivial: True (0.0s)
+(1) n=2: R_S has 6 edges, 4 triangles; triangle-collapse makes all edges trivial: True (0.0s)
+(1) n=3: R_S has 24 edges, 32 triangles; triangle-collapse makes all edges trivial: True (0.0s)
+(1) n=4: R_S has 80 edges, 160 triangles; triangle-collapse makes all edges trivial: True (0.0s)
+(1) n=5: R_S has 240 edges, 640 triangles; triangle-collapse makes all edges trivial: True (0.0s)
+(1) n=6: R_S has 672 edges, 2240 triangles; triangle-collapse makes all edges trivial: True (0.0s)
+(2) n=3: admissible labellings 519 (exhaustive), Gamma not a tree: 0
+(2) n=4: random admissible labellings 40000, max #nodes 3, Gamma not a tree: 0
+(2) n=5: random admissible labellings 10000, max #nodes 5, Gamma not a tree: 0
+(2) n=6: random admissible labellings 2000, max #nodes 6, Gamma not a tree: 0
+(3) n=1: admissible D (connected, no near pair) 0 (exhaustive), violations 0
+(3) n=2: admissible D (connected, no near pair) 4 (exhaustive), violations 0
+(3) n=3: admissible D (connected, no near pair) 20 (exhaustive), violations 0
+(3) n=4: admissible D (connected, no near pair) 392 (exhaustive), violations 0
+(3) n=5: random admissible D 56685, violations 0

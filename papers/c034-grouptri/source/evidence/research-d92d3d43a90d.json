@@ -1,0 +1,103 @@
+{
+  "job_id": "c034-grouptri-research-d92d3d43a90d",
+  "role": "research",
+  "research_pass": 2,
+  "dispatch_utc": "2026-11-02T15:45:18Z",
+  "first_clock_utc": "2026-11-02T15:47:24Z",
+  "last_experiment_start_clock_utc": "2026-11-02T15:54:20Z",
+  "record_clock_utc": "2026-11-02T15:57:07Z",
+  "main_test_deadline_utc": "2026-11-02T16:02:17.999954Z",
+  "finalization_deadline_utc": "2026-11-02T16:05:17.999946Z",
+  "source_sha256": "5e49e9583e24af889c0aa15a1b6dcadb797e1d85f3f467028441af101a677b0e",
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "status_meaning": "Proposer full-scope proof claim requesting fresh referee review; no acceptance or publication authorization.",
+  "new_substantive_evidence": [
+    "evidence/quotient-kernel-proof.md",
+    "evidence/quotient-kernel-tests.json",
+    "evidence/quotient-kernel-literature.md"
+  ],
+  "proof_obligations_addressed": [
+    "Deterministic capped-list incidence hitting without cubic preprocessing",
+    "Exact quotient decomposition and assigned-pivot duplicate prevention",
+    "Present-edge potential identities for every piece",
+    "Nonhomomorphic lift carry cancellation and division into Z_(M/p)",
+    "Three distinct edge-kind markers for all missing edges",
+    "Actual construction of every complete kernel instance",
+    "All exceptions, frequency lookups, table construction and induction calls",
+    "Rational positive all-M exponent independent of c",
+    "Uniform implementation, coordinate arithmetic, unequal/empty/small and trivial-group cases"
+  ],
+  "test_summary": {
+    "job_id": "c034-grouptri-research-d92d3d43a90d",
+    "status": "passed",
+    "counts": {
+      "decompositions": 9784,
+      "few_exception_triangles": 95404,
+      "low_exception_triangles": 140,
+      "nonempty_high_pieces": 5013,
+      "all_materialized_pieces": 17467,
+      "exhaustive_binary_quotient_tests": 8192,
+      "kernel_instances_checked": 17467,
+      "kernel_triangle_checks": 1434118,
+      "empty_part_tests": 288,
+      "selected_structured_tests": 1632,
+      "full_recursive_tests": 40,
+      "prime_brute_leaves": 56,
+      "exact_exponent_checks": 255
+    },
+    "exhaustive_scope": "All 4096 F_2 assignments to the 12 edges of side-2 complete tripartite graphs, at s=1 and s=2; selected deterministic Z_4 kernel digits, not all Z_4 labels.",
+    "selected_scope": "Listed moduli 4,6,8,9,10,12,16,18,24,25,27,36; six listed unequal/empty/padded size triples through side 8; dimensions 1/2; seeded random, dense quotient, exact gauge, dense negative kernel patterns; s=1/2/3 as listed.",
+    "recursive_scope": "40 complete recursive semantic runs, dimension 2, side 3, moduli 8,12,16,18,24,27,32,36,48,72, four modes each.",
+    "seed": 340034,
+    "limits": "The capped detector and prime solver are brute force. These are exact finite semantic/cost-ledger checks, not fast implementation benchmarks, exhaustive arbitrary-group tests, or independent proof audits.",
+    "delta_4": "1/144000000",
+    "delta_8": "1/20736000000000",
+    "source_sha256": "5e49e9583e24af889c0aa15a1b6dcadb797e1d85f3f467028441af101a677b0e",
+    "script_sha256": "d72f1f8b4e573b993df5968e3d711ef1655df49c8206c63de2b11c8582e3e504"
+  },
+  "prior_work": "See evidence/quotient-kernel-literature.md. Current primary arXiv histories display v1. No equivalent full closure found in bounded searches; no exhaustive priority certificate.",
+  "known_internal_proof_gaps": [],
+  "dependencies_and_review_limits": [
+    "Relies on the actual stated prior elementary-group theorem and inspected H instantiation; not a fresh formal verification of all source matrix dependencies.",
+    "Fresh independent correctness, current novelty, nonroutine value and STOC significance review remain required.",
+    "Tests use brute-force detection/prime backends and finite domains, not fast runtime measurements or proof of the infinite theorem."
+  ],
+  "preserved_failed_routes": [
+    "CVX23 update time is not its cubic initial construction time.",
+    "A shared missing-edge sentinel is unsound; three coordinates are used.",
+    "Large label dimension precludes recursive quotient oracle calls below the dimension cutoff."
+  ],
+  "next_test": "Fresh referee should audit the frozen full-scope lifting proof, especially the capped-list replacement of cubic preprocessing, exact assigned-pivot decomposition, all materialization costs and all-M exponent recurrence; independently compare the resulting closure theorem with current primary work and reject if routine or value-insufficient.",
+  "publication": "No manuscript/PDF, acceptance record, innovation audit, STOC assessment or external action created. Runner owns freeze/referee scheduling.",
+  "scheduling": "state.json read with research_passes=2; not edited. No counter/usage reset, agents, other Codex processes or background workers.",
+  "evidence_hashes": {
+    "source.md": "5e49e9583e24af889c0aa15a1b6dcadb797e1d85f3f467028441af101a677b0e",
+    "problem.md": "1c2a877f3892c8d6d0ea1bd76b924d68f93909bcf9bd1b0329a0150f5e9e0166",
+    "evidence/capped-listing-proof.md": "16bbbcc07297044bae9edb84e23507ca580000242eab447eb2abdd6e0d7e062d",
+    "evidence/test_capped_listing.py": "5e60f0864015a62917bcea48083bb4041ab10fbccb794dc4cfa5c6489ad9f829",
+    "evidence/capped-listing-tests.json": "f23d469ab47f2d259a716eb5ff8cd0481af557c3202b719ea4181dcd9f9bc17a",
+    "evidence/quotient-kernel-proof.md": "91872cf17be9625bfe9f27a6fa3c8b52b23e2d39e59808a662b73401286b8c93",
+    "evidence/test_quotient_kernel.py": "d72f1f8b4e573b993df5968e3d711ef1655df49c8206c63de2b11c8582e3e504",
+    "evidence/quotient-kernel-tests.json": "cbf0001c6298138cc4ccf5371ac4f736133197b8fe10e2c824a53356b2166388",
+    "evidence/quotient-kernel-literature.md": "3dfd380a040f83ce4c6adf42353ae73e99ad2919d481f000f030adfb3291c51e",
+    "intake/primary/2610.17420v1.pdf": "a536921aea8fe16830262db76c624593c5815094ae495ef5afce8c761d1c3d2e",
+    "intake/primary/2610.17420v1-pdf.txt": "a15ad1705932e5e06d5edad4b7792328a357569df4b306ec98da145c8b0fca34",
+    "intake/primary/2303.14572-primary.pdf": "3c9412f3fa5a9fef3b395036531b25c224ede86163b3c07fa05daa9fefd7c6c4",
+    "intake/primary/2303.14572-primary.txt": "374bb6ba88ea8eb6c0403eeed3d011d99acef9db2967648f677737871b4733a6",
+    "intake/primary/2608.19092v1.pdf": "39d38ea8a74702539b7bbc9174ff24f694f767934fc7f2a3322a0da65550fc9b",
+    "intake/primary/2608.19092v1.txt": "a6d2f9ba1d173caba68671c768190f7aa8a820c630db3492b778b30ff96bf290"
+  },
+  "closing_record_clock_utc": "2026-11-02T15:58:56Z",
+  "validation": {
+    "source_unchanged": true,
+    "primary_pdf_hash_matches_frozen_source": true,
+    "claim_schema_and_all_evidence_paths_checked": true,
+    "worker_result_schema_checked": true,
+    "exact_tests_passed": true,
+    "prior_test_script_unchanged": true,
+    "checkpoint_words": 556,
+    "claim_sha256": "b393d03899268ce24a6a51fd2cb7142b62bb03530b1fa431d160f13677c0df25"
+  }
+}

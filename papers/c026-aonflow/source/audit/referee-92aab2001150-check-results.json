@@ -1,0 +1,38 @@
+{
+  "job_id": "c026-aonflow-referee-92aab2001150",
+  "snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd",
+  "snapshot_integrity": true,
+  "pdf_text_matches": {
+    "2602.15015-expanders": true,
+    "CKS2005-welllinked": true,
+    "CKS2013-AON": true
+  },
+  "independent_sampling_outcomes": 18,
+  "independent_cut_charge_checks": 1422,
+  "graph_traversal_bridge_memberships": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      2
+    ]
+  ],
+  "admission_subsets_checked": 512,
+  "bridge_feasible_subsets": 64,
+  "nonzero_cut_budget_cases": 4,
+  "product_distribution_checks": 12,
+  "all_checks_passed": true,
+  "limitations": [
+    "Finite exact diagnostics only; no BJS or CKS implementation.",
+    "The general theorem is assessed by proof and primary sources."
+  ]
+}

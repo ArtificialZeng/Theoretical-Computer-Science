@@ -1,0 +1,5 @@
+n=5 j=1: 3 patterns; orbit sum 9 vs labelled 9: True
+n=5 j=2: 9 patterns; orbit sum 45 vs labelled 45: True
+n=5 j=3: 23 patterns; orbit sum 165 vs labelled 165: True
+n=5 j=4: 56 patterns; orbit sum 495 vs labelled 495: True
+n=5 j=5: 120 patterns; orbit sum 1287 vs labelled 1287: True

@@ -1,0 +1,39 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "title": "A Near-Logarithmic Approximation for All-or-Nothing Flow",
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "source_files": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/BUILD.md",
+    "manuscript/Makefile",
+    "manuscript/acmart.cls",
+    "manuscript/build/aonflow-working_paper.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "pdf": "manuscript/build/aonflow-working_paper.pdf",
+  "build_command": "cd manuscript && make clean && make all",
+  "classification": "working_paper",
+  "classification_source": "audit/stoc-assessment.json",
+  "classification_sha256": "4946623a0030b2f2dccd8c7a7de86e686783d2f86c57653f7b67cbf84cdbaf3a",
+  "mathematical_snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd",
+  "writer_job_id": "c026-aonflow-write-0c7e7e24154c",
+  "max_total_pdf_pages": 12,
+  "total_pdf_pages": 7,
+  "status": "manuscript_pending_fresh_release_review",
+  "external_submission_authorized": false,
+  "ancillary_files": [
+    "manuscript/acmart.dtx",
+    "manuscript/acmart.ins",
+    "manuscript/README"
+  ],
+  "bibliography_record": "literature/write-format-and-references.md",
+  "user_bibliography_check": "literature/user_bibliography_check.md"
+}

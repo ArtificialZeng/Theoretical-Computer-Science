@@ -1,0 +1,15 @@
+nS=5 nT=4 ell=2 delta=1 lam=0 path=rand1 a=2 -> UNSAT
+nS=5 nT=4 ell=2 delta=1 lam=0 path=rand2 a=2 -> UNSAT
+nS=5 nT=4 ell=2 delta=1 lam=0 path=rand3 a=2 -> UNSAT
+nS=5 nT=4 ell=2 delta=1 lam=0 path=rand4 a=2 -> UNSAT
+nS=5 nT=4 ell=2 delta=1 lam=0 path=rand5 a=2 -> UNSAT
+nS=5 nT=4 ell=2 delta=1 lam=0 path=rand6 a=2 -> UNSAT
+nS=5 nT=4 ell=2 delta=1 lam=0 path=rand7 a=2 -> UNSAT
+nS=5 nT=4 ell=2 delta=1 lam=0 path=rand8 a=2 -> UNSAT
+nS=6 nT=5 ell=2 delta=1 lam=0 path=rand1 a=2 -> UNSAT
+nS=6 nT=5 ell=2 delta=1 lam=0 path=rand2 a=2 -> UNSAT
+nS=6 nT=5 ell=2 delta=1 lam=0 path=rand3 a=2 -> UNSAT
+nS=6 nT=5 ell=2 delta=1 lam=0 path=rand4 a=2 -> UNSAT
+nS=5 nT=5 ell=3 delta=1 lam=0 path=rand1 a=2 -> UNSAT
+nS=5 nT=5 ell=3 delta=1 lam=0 path=rand2 a=2 -> UNSAT
+nS=5 nT=5 ell=3 delta=1 lam=0 path=rand3 a=2 -> UNSAT

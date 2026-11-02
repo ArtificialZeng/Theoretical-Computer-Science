@@ -1,0 +1,47 @@
+{
+  "job_id": "c031-detlis-referee-f280f716946c",
+  "snapshot_digest": "76aff8cb1dceada574829e417470dcca336a544f9c08e579f9c49cff43896135",
+  "review_type": "fresh_internal_stoc_assessment",
+  "verdict": "working_paper",
+  "strongest_result": "For every n>=1 real sequence (including ties) and m>=0 index/value rectangles, a uniform deterministic algorithm reports an optimal strict LIS for each rectangle in O((n+m)n^(2/3)log^30(n+m+2))+O(K) comparison/word operations. This resolves the full immutable deterministic-subquadratic 2D reporting question with epsilon=1/3.",
+  "nearest_comparisons": [
+    "Karthik C. S. and Saladi Rahul, Range Longest Increasing Subsequence and its Relatives, arXiv:2404.04795v2 (2025-12-01), Theorems 1 and 5, Section 3, Section 7; ITCS 2026 article 87, DOI 10.4230/LIPIcs.ITCS.2026.87: randomized square-root-overhead 2D reporting, deterministic truncated routine, and explicit deterministic-subquadratic question.",
+    "Har-Peled and Sharir, Relative (p,epsilon)-Approximations in Geometry, arXiv:0909.0717v2, Theorem 2.11 and Lemma 2.15: established inverse-p sample size and deterministic relative approximation construction, including the dimension-two n*p^(-2) polynomial scale.",
+    "Bagchi, Chaudhary, Eppstein and Goodrich, Deterministic Sampling and Range Counting in Geometric Data Streams, SCG 2004 frozen version, Section 2, Lemma 2.2, Observations 2.3-2.4; arXiv:cs/0307027 and later TALG DOI 10.1145/1240233.1240239: subset-oracle deterministic sampling and merge/reduce.",
+    "Tao, Sheng and Pei, On k-skip Shortest Paths, SIGMOD 2011, Section 4.1, Theorem 1 and Lemmas 1-2; Section 4.2: consistent-path small covers and randomized bounded-degree construction.",
+    "Alon, Chechik and Cohen, Deterministic Combinatorial Replacement Paths and Distance Sensitivity Oracles, ICALP 2019, Lemma 2 and Section 1.3, DOI 10.4230/LIPIcs.ICALP.2019.12: standard explicit-family path hitting with critical-family construction charged separately.",
+    "Gawrychowski, Gorbachev and Kociumaka, Core-Sparse Monge Matrix Multiplication, ESA 2025, Theorem 1.3 and Section 5, DOI 10.4230/LIPIcs.ESA.2025.74: near-linear preprocessing and output-linear index-interval LIS reporting; Korogi, arXiv:2610.20983v1, Theorem 1.1: weighted index-interval reporting.",
+    "Ben-Eliezer and Even, Range Queries for Permutation Pattern Matching, arXiv:2610.25467v1, Claim 6.7 and Appendix A.2: monotone-pattern detection has 2^(O(h^2))*O(n log^(3h)n) preprocessing and (O(log n))^(3h^2) query time; this is not the unrestricted reporting bound."
+  ],
+  "criteria": {
+    "importance": {
+      "judgment": "uncertain",
+      "reason": "The full deterministic gap in Karthik-Rahul Theorem 1/Section 7 is resolved, which matters for exact range dynamic programming. However, an explicitly asked recent problem is not itself evidence of broad STOC importance; no reduction or application establishes a wider consequence."
+    },
+    "novelty": {
+      "judgment": "strong",
+      "reason": "Against the verified relative-sampling, path-cover and Range-LIS statements, the substantive delta is a correctly charged original-background-dependent path oracle localized to disjoint index intervals. Generic relative rates are already known, while the full deterministic 2D reporting bound was not identified in the bounded primary-source check. New weighted 1D and fixed-length monotone-pattern statements do not supply this theorem."
+    },
+    "technical_depth": {
+      "judgment": "uncertain",
+      "reason": "The key nontrivial step is representing traces computed through unselected original vertices and paying for them only over disjoint backgrounds, with rounded conditional scores charged explicitly. Much of the remaining proof adapts established sampling, Fenwick/LCA and tree-sum machinery. The record does not show a comparably broad new principle or a tight barrier, and n^(2/3) remains above the randomized n^(1/2) exponent."
+    },
+    "breadth_or_consequence": {
+      "judgment": "uncertain",
+      "reason": "Every instance of the original uncolored 2D reporting problem is covered, rather than a toy restriction. Nevertheless no second application, colored/weighted extension, matching lower bound, or general background-oracle theorem with demonstrated external use is proved in this snapshot."
+    },
+    "exposition_and_verifiability": {
+      "judgment": "strong",
+      "reason": "The frozen proof specifies canonical ties, exact local backgrounds, error induction, integer rounding, word costs, fallback, all-length integration and final-winner expansion. Fresh enumeration/binomial checks pass, with their finite scope and uncertified fixtures disclosed. This supports verification of the theorem, but is not a final manuscript or completed artifact review."
+    }
+  },
+  "case_for_stoc": "A potential case starts from removing randomness from the full 2D reporting problem with a fixed one-third exponent saving. The actual obstacle addressed is that sampling traces depend on unselected original points: an ordinary subset oracle is unavailable for free. Interval-local source trees and an explicit global cost ledger resolve that obstacle. However, the generic sample rate and most machinery are established, the bound does not match the randomized square-root exponent, and broader consequences are not demonstrated. The current record supports a substantive working paper but not an all-criteria-strong STOC assessment.",
+  "remaining_weaknesses": [
+    "The broad importance of this specific derandomization beyond the range-LIS subproblem remains unestablished.",
+    "Technical depth is uncertain relative to a competitive STOC contribution because the main mechanism specializes standard sampling and data-structure tools.",
+    "The deterministic exponent remains n^(2/3), above the randomized n^(1/2) benchmark.",
+    "No additional substantive application, general transfer theorem, or matching deterministic lower bound is proved.",
+    "Literature screening is bounded and cannot certify exhaustive priority; statement-level leads were not all fully proof-audited."
+  ],
+  "label_is_not_a_venue_decision": true
+}

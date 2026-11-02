@@ -1,0 +1,26 @@
+{
+  "job_id": "c022-spe-memory-triage-3c055ee6378d",
+  "role": "triage",
+  "checked_at_utc": "2026-11-01T17:47:45.668292+00:00",
+  "source_sha256": "9dd4ff19af8a2996db2a11e18b2a4caa65426f62647822995c446c31dd0899fe",
+  "source_unchanged": true,
+  "entry_checkpoint_sha256": "66719400128bee09b7dc59d8f3dd2c1aa68eae6fe9a640c4ea7dd311b525971e",
+  "entry_problem_file_exists": false,
+  "recovery_note_reports_completed_triage": false,
+  "repair": "Completed missing precise scope and bounded source/suitability assessment; preserved prior operational failure.",
+  "research_passes_observed": 0,
+  "state_file_modified_by_worker": false,
+  "usage_reset": false,
+  "previous_failed_job": "c022-spe-memory-triage-7aa11f697acb",
+  "previous_usage_status": "unknown, not zero; prior ledger retained",
+  "artifact_sha256": {
+    "problem.md": "c022b60abfddb1618734af8fd8de778bceaa9191cb075c9bcde56a37e2c9e7e2",
+    "checkpoint.md": "1fbc99501b69c850fa66c18b127fab16577118ffc3bdfd738d32c550ff73cf5b",
+    "evidence/triage-assessment.md": "90cfcbd53e516a3d990f87deca9357b7e1807ade473d85bf580421be4fc163c8",
+    "state.json": "eee2d113e553afdaeae98520fa334c7f86a87cdec1e7182fe3e7840d82f0033f",
+    "triage-recovery.md": "efb4c0ec474d7594ed747a18b6b3a796030595f26075752afb69b719c2f62708"
+  },
+  "decision": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved"
+}

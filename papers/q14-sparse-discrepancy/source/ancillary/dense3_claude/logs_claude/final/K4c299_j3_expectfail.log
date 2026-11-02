@@ -1,0 +1,5 @@
+# 2026-11-02 23:15:59 CST  src: corner_bnb_v7_claude.c sha1 3f0894555f2f
+# cmd: FULL=1 STOPFIRST=1 corner_bnb_final_claude (= v7 source) 4 299 100 40 < full_j3.txt
+UNCLEARED line 1 box [32766/65536,32768/65536] [32764/65536,32768/65536] [32764/65536,32768/65536]
+P 1 boxes 41 fails 1
+TOTAL patterns 1 boxes 41 uncleared 1 dfsnodes 328 skipped 0

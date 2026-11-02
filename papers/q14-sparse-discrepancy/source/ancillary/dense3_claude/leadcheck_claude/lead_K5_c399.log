@@ -1,0 +1,6 @@
+checker: /Users/mac/Documents/ChatGPT/STOC理论计算机/claude_stoc2027_claude/q14paper_claude/ancillary/small_n_check/cover_bnb.py
+full n=5 c=399/100 j=1: PROVED boxes=1 0.0s
+full n=5 c=399/100 j=2: PROVED boxes=1 0.0s
+full n=5 c=399/100 j=3: PROVED boxes=1 0.0s
+full n=5 c=399/100 j=4: PROVED boxes=3 0.0s
+full n=5 c=399/100 j=5: PROVED boxes=29 2.4s

@@ -1,0 +1,37 @@
+{
+  "job_id": "c032-dspdag-research-5f16f6951448",
+  "status": "passed",
+  "seed": 321502,
+  "cases": {
+    "labelled_k2": 20,
+    "labelled_k3": 25,
+    "labelled_k4": 15,
+    "labelled_k5": 10,
+    "weighted_strict": 28,
+    "weighted_endpoints_only": 28,
+    "weighted_internal_only": 28
+  },
+  "yes_weighted": {
+    "strict": 2,
+    "endpoints_only": 2,
+    "internal_only": 2
+  },
+  "counts": {
+    "products": 1070895,
+    "padded_entries": 5626256,
+    "nodes": 1360,
+    "largest_half_width": 8,
+    "full_state_set_equalities": 132
+  },
+  "partition_combinations": {
+    "N4_k2": 16,
+    "N8_k3": 1260,
+    "N8_k4": 5376,
+    "N16_k3": 32760
+  },
+  "elapsed_seconds": 3.1748246250208467,
+  "scope": "Initial successful run, before adding the five named fixtures; preserved from actual tool output. Finite comparisons only.",
+  "backend": "Exact naive integer rectangular product modulo a deterministic prime p>N.",
+  "fast_rectangular_algorithm_implemented": false,
+  "fresh_referee": false
+}

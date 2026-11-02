@@ -1,0 +1,25 @@
+\begin{thebibliography}{CIMY26}
+
+\bibitem[AVW26]{AVW26}
+Josh Alman and Virginia Vassilevska~Williams.
+\newblock Truly subquadratic {3SUM} and truly subcubic {APSP} via triangles in
+  sparse lopsided graphs.
+\newblock arXiv:2610.06783v1, 2026.
+\newblock \url{https://arxiv.org/abs/2610.06783v1}.
+
+\bibitem[CIMY26]{CIMY26}
+Timothy~M. Chan, Reina Itakura, Zhiyuan Ma, and Yuancheng Yu.
+\newblock {3SUM} made simpler (without matrix multiplication), {$k$}-{SUM}
+  hypothesis refuted for odd {$k$}, and real {3SUM}/{APSP} derandomized.
+\newblock arXiv:2610.42012v1, 2026.
+\newblock \url{https://arxiv.org/abs/2610.42012v1}.
+
+\bibitem[Maj26]{Maj26}
+Ruhollah Majdoddin.
+\newblock Thin matrix products up to {$D\le N^{0.172}$} and lossless reductions
+  for {3SUM}, {Exact Triangle} and {APSP}, with {3SUM} over abelian groups and
+  a dichotomy for coordinatewise problems.
+\newblock arXiv:2610.17420v1, 2026.
+\newblock \url{https://arxiv.org/abs/2610.17420v1}.
+
+\end{thebibliography}

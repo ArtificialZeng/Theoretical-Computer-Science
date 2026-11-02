@@ -1,0 +1,9 @@
+leveled n=6 |I|=1 thresholds ['199/100', '299/100', '299/100', '299/100', '299/100', '299/100']
+  j=1: 4 patterns (Burnside 4), 4 boxes, 0.0s
+  j=2: 17 patterns (Burnside 17), 17 boxes, 0.0s
+  j=3: 68 patterns (Burnside 68), 70 boxes, 0.0s
+  j=4: 265 patterns (Burnside 265), 307 boxes, 0.2s
+  j=5: 977 patterns (Burnside 977), 1501 boxes, 4.4s
+NOT PROVED ((0, 1), (0, 1), (0, 1), (0, 1), (0, 1), (0, 1)) ABORT
+  j=6: 3424 patterns (Burnside 3424), 8901 boxes, 1195.6s
+TOTAL n=6 s=1: 4755 patterns, 10800 boxes, not proved 1

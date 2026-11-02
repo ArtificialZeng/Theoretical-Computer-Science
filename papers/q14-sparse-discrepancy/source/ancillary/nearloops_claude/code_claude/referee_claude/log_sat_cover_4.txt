@@ -1,0 +1,2 @@
+cover n=4 solver=kissat: vars=528 clauses=5312 result=UNSATISFIABLE time=0.0s
+cover n=4 solver=cadical: vars=528 clauses=5312 result=UNSATISFIABLE time=0.0s

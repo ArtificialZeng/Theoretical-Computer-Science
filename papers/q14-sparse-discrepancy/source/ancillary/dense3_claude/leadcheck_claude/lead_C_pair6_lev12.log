@@ -1,0 +1,4 @@
+# 2026-11-03 01:11:58 CST lead: C program (corner_bnb_v7_claude.c sha1 3f0894555f2f) on the single pattern 'level-1 and level-2 function share all 6 fractional items'
+# cmd: LEVELS=1,2,2,2,2,2 corner_bnb_final_claude 6 299 100 54 < pair6_lev.txt
+P 1 boxes 316 fails 0
+TOTAL patterns 1 boxes 316 uncleared 0 dfsnodes 12595057 skipped 33

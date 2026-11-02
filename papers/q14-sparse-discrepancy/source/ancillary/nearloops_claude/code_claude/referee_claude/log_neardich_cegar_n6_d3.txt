@@ -1,0 +1,3 @@
+iter 25: blocked sets 50, last |W|=22 |P|=41 |N|=1, elapsed 3s
+near-dichotomy CEGAR n=6 mindist=3 nimg=0 solver=cadical: result=UNSATISFIABLE after 33 iterations, 64 blocked sets, time 5s
+near-dichotomy CEGAR n=6 mindist=3 nimg=50 solver=kissat: result=UNSATISFIABLE after 5 iterations, 64 blocked sets, time 24s

@@ -1,0 +1,18 @@
+{
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "disproved",
+  "summary": "Proposed a combined full-scope disproof and finite-control unipotent characterization, including polynomial-bit-time pattern membership and copyless synthesis. New exact checks passed; fresh review is required.",
+  "next_test": "The runner should freeze the new combined packet and dispatch a new referee to audit the full-scope disproof, singular-map quotient, control-algebra/minimality transfer, algorithmic bounds, current novelty and significance before any writing.",
+  "evidence": [
+    "claim.json",
+    "evidence/resolution-proof.md",
+    "evidence/revision2/pass2-proof.md",
+    "evidence/revision2/pass2_exact_checks.json",
+    "evidence/revision2/pass2_algorithm_checks.json",
+    "evidence/revision2/pass2-baseline-reexecution.json",
+    "evidence/revision2/pass2-literature.md",
+    "evidence/revision2/pass2-integrity.json",
+    "checkpoint.md"
+  ]
+}

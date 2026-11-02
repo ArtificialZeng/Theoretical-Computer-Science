@@ -1,0 +1,21 @@
+explicit K_{2L+1} schedule of Cor (iv) verified step by step for L = 3..29
+K_3: least uniform level with cheap deletions = 2 (floor(n/2) = 1); with rule (b) only = 2 (n-3 = 0); cache=2 time=0.0s
+K_4: least uniform level with cheap deletions = 2 (floor(n/2) = 2); with rule (b) only = 2 (n-3 = 1); cache=4 time=0.0s
+K_5: least uniform level with cheap deletions = 2 (floor(n/2) = 2); with rule (b) only = 2 (n-3 = 2); cache=6 time=0.0s
+K_6: least uniform level with cheap deletions = 3 (floor(n/2) = 3); with rule (b) only = 3 (n-3 = 3); cache=11 time=0.0s
+K_7: least uniform level with cheap deletions = 3 (floor(n/2) = 3); with rule (b) only = 4 (n-3 = 4); cache=28 time=0.0s
+K_8: least uniform level with cheap deletions = 4 (floor(n/2) = 4); with rule (b) only = 5 (n-3 = 5); cache=46 time=0.0s
+K_9: least uniform level with cheap deletions = 4 (floor(n/2) = 4); with rule (b) only = 6 (n-3 = 6); cache=110 time=0.0s
+K_10: least uniform level with cheap deletions = 5 (floor(n/2) = 5); with rule (b) only = 7 (n-3 = 7); cache=183 time=0.0s
+K_11: least uniform level with cheap deletions = 5 (floor(n/2) = 5); with rule (b) only = 8 (n-3 = 8); cache=449 time=0.0s
+K_12: least uniform level with cheap deletions = 6 (floor(n/2) = 6); with rule (b) only = 9 (n-3 = 9); cache=755 time=0.0s
+K_13: least uniform level with cheap deletions = 6 (floor(n/2) = 6); with rule (b) only = 10 (n-3 = 10); cache=1875 time=0.1s
+K_14: least uniform level with cheap deletions = 7 (floor(n/2) = 7); with rule (b) only = 11 (n-3 = 11); cache=3157 time=0.1s
+K_15: least uniform level with cheap deletions = 7 (floor(n/2) = 7); with rule (b) only = 12 (n-3 = 12); cache=7880 time=0.8s
+K_16: least uniform level with cheap deletions = 8 (floor(n/2) = 8); with rule (b) only = 13 (n-3 = 13); cache=13230 time=1.4s
+K_17: least uniform level with cheap deletions = 8 (floor(n/2) = 8); with rule (b) only = 14 (n-3 = 14); cache=33006 time=7.2s
+K_18: least uniform level with cheap deletions = 9 (floor(n/2) = 9); with rule (b) only = 15 (n-3 = 15); cache=55237 time=10.8s
+K_19: least uniform level with cheap deletions = 9 (floor(n/2) = 9); with rule (b) only = 16 (n-3 = 16); cache=137462 time=73.8s
+K_20: least uniform level with cheap deletions = 10 (floor(n/2) = 10); with rule (b) only = 17 (n-3 = 17); cache=229492 time=117.6s
+K_21: least uniform level with cheap deletions = 10 (floor(n/2) = 10); with rule (b) only = 18 (n-3 = 18); cache=569438 time=726.3s
+K_22: least uniform level with cheap deletions = 11 (floor(n/2) = 11); with rule (b) only = 19 (n-3 = 19); cache=949180 time=975.8s

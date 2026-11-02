@@ -1,0 +1,8 @@
+{
+  "job_id": "c022-spe-memory-referee-af2ba8807d2f",
+  "snapshot_digest": "8167ae363386355fe869e8109b82155be5da309379f81a3f7216041bf9acf52f",
+  "files_checked": 22,
+  "mismatches": [],
+  "canonical_digest_matches": true,
+  "source_sha256": "9dd4ff19af8a2996db2a11e18b2a4caa65426f62647822995c446c31dd0899fe"
+}

@@ -1,0 +1,27 @@
+{
+  "scope": "Held-out exact diagnostics for the unaccepted finite-control theorem; not a fresh referee verdict.",
+  "seed": 20261103,
+  "controls": 161,
+  "families": {
+    "exhaustive_ternary_n_le2": 65,
+    "seeded_ternary_n3to5": 72,
+    "seeded_permutation_controls": 24
+  },
+  "ranks": {
+    "(1, 1)": 21,
+    "(2, 1)": 52,
+    "(2, 2)": 8,
+    "(3, 1)": 16,
+    "(3, 2)": 1,
+    "(3, 3)": 7,
+    "(4, 1)": 23,
+    "(4, 4)": 8,
+    "(5, 1)": 17,
+    "(5, 5)": 8
+  },
+  "max_control_semigroup": 800,
+  "full_block_minimal_dimension": 4,
+  "weighted_letters": "I4+E12,I4+E23,I4+E34 (row convention)",
+  "mismatches": [],
+  "all_passed": true
+}

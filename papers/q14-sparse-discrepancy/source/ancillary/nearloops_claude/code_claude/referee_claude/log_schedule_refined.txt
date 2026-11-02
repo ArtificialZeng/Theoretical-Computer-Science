@@ -1,0 +1,1 @@
+refined schedule condition: 30000 random inputs, hypothesis failures 0 (must be 0); inputs where the refined levels are below the lemma's p_v+max(2,a_v) somewhere: 20134

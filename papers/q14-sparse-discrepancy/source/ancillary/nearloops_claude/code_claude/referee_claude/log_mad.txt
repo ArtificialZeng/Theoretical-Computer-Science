@@ -1,0 +1,8 @@
+case: [instances, no orientation, greedy stuck, p+a!=indeg or schedule hypothesis fails, proof simulation fails]  (all but the first must be 0)
+  random n<=11, least k: [3000, 0, 0, 0, 0]
+  planar triangulations, k=3: [400, 0, 0, 0, 0]
+  icosahedron (dgn 5), k=3: [50, 0, 0, 0, 0]
+  max degree Delta, k=floor(Delta/2)+1: [1000, 0, 0, 0, 0]
+  degeneracies of the random triangulations: {3: 61, 4: 339}
+sanity K_7 with k=3: orientation found: True, in-degrees [3, 3, 3, 3, 3, 3, 3], greedy stuck: True (expected True)
+time 6.3s

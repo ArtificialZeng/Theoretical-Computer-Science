@@ -1,0 +1,20 @@
+{
+  "outcome": "continue",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Pass 2 adds a general-n charging proof for modular g with h(E)>=g(E), exact obstructions to three stronger lemmas, and one exact coupled residual certificate. The arbitrary-pair original remains unresolved; no publication candidate. The general submodular overlap budget is the remaining kernel.",
+  "next_test": "In the final permitted pass, extend the modular charging proof by replacing c(O intersect (E\\T))+c(L\\O)<=g(E) with a telescoping submodular overlap bound proving f(O)<=f(L)+g(E)+|O|d for |O|=|L|; verify any proposed identity exactly against the preserved witnesses and held-out n=8 traces.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "evidence/research-pass-2/modular-side-lemma.md",
+    "evidence/research-pass-2/obstructions.md",
+    "evidence/research-pass-2/independent-verification.json",
+    "evidence/research-pass-2/residual-dual.json",
+    "evidence/research-pass-2/residual-screen.json",
+    "evidence/research-pass-2/heldout-residual-screen.json",
+    "evidence/research-pass-2/literature.md",
+    "evidence/research-pass-2/validation.json"
+  ]
+}

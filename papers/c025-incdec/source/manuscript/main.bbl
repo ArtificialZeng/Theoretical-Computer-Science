@@ -1,0 +1,36 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{BBB{\etalchar{+}}26}
+
+\bibitem[BBB{\etalchar{+}}26]{BBBCDL26}
+Marcin Bienkowski, Joakim Blikstad, Jaros{\l}aw Byrka, Mart{\'i}n Costa, Yann
+  Disser, and Annette Lutz.
+\newblock Incremental submodular maximization: Better than greedy.
+\newblock In {\em 34th Annual European Symposium on Algorithms (ESA 2026)},
+  volume 388 of {\em Leibniz International Proceedings in Informatics
+  (LIPIcs)}, pages 134:1--134:23. Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r
+  Informatik, 2026.
+\newblock URL:
+  \url{https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESA.2026.134},
+  \href {https://doi.org/10.4230/LIPIcs.ESA.2026.134}
+  {\path{doi:10.4230/LIPIcs.ESA.2026.134}}.
+
+\bibitem[CK26]{CK26}
+Yixin Chen and Alan Kuhnle.
+\newblock Curvature beyond positivity: Greedy guarantees for arbitrary
+  submodular functions.
+\newblock arXiv:2605.07902v1, 2026.
+\newblock URL: \url{https://arxiv.org/abs/2605.07902v1}, \href
+  {https://doi.org/10.48550/arXiv.2605.07902}
+  {\path{doi:10.48550/arXiv.2605.07902}}.
+
+\bibitem[DKLS26]{DKLS26}
+Yann Disser, Max Klimm, Annette Lutz, and Lea Strubberg.
+\newblock Incremental--decremental maximization.
+\newblock {\em Acta Informatica}, 63, 2026.
+\newblock Article 31.
+\newblock URL:
+  \url{https://link.springer.com/article/10.1007/s00236-026-00546-x}, \href
+  {https://doi.org/10.1007/s00236-026-00546-x}
+  {\path{doi:10.1007/s00236-026-00546-x}}.
+
+\end{thebibliography}

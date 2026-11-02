@@ -1,0 +1,113 @@
+{
+  "package_schema": 5,
+  "project": "c029-vftfast",
+  "title": "Polynomial-Time Construction of Vertex-Fault-Tolerant Mixed-Stretch Spanners",
+  "readiness_label": "working_paper",
+  "stoc_assessment": {
+    "job_id": "c029-vftfast-referee-95ddbe77df2f",
+    "snapshot_digest": "b1495a4cbeb794181b64a2bc9a00b637d90f0a7a7fdf654844a24036b4029e66",
+    "review_type": "fresh_internal_stoc_assessment",
+    "verdict": "working_paper",
+    "strongest_result": "Full original-scope resolution: for every fixed delta in (0,1), deterministic polynomial-time construction on every undirected unweighted simple graph and all f>=0,k>=1 of an f-VFT (O_delta(sqrt(k)),O_delta(k))-spanner with tilde-O_delta((f+1)^(1+delta)*n^(1+1/k)) edges, simultaneously for all admissible faults and surviving pairs.",
+    "nearest_comparisons": [
+      "Parter--Popova--Tzalik, New Fault-Tolerant (alpha,beta)-Spanners, arXiv:2610.33934v1 (24 October 2026), Theorem 1.4 and printed pp.4--5; Sections 4--5 and Appendix A provide the witness-sequence packing dependencies. Same size/stretch tradeoff, with about f*n^sqrt(k) construction time. https://arxiv.org/abs/2610.33934v1",
+      "Dinitz--Robelle, Efficient and Simple Algorithms for Fault Tolerant Spanners, arXiv:2002.10889v2 (24 May 2020), Theorems 2,4,5,8,9: deterministic (2t-1)-VFT spanners of O(t*f^(1-1/t)*n^(1+1/t)) size and O(m*t*f^(2-1/t)*n^(1+1/t)) time. https://arxiv.org/abs/2002.10889v2",
+      "Fomin--Lokshtanov--Panolan--Saurabh, arXiv:1304.4626v4 (22 February 2016), Section 2.5 and Theorem 3 in Section 3, plus path-DP applications in Section 5: standard Vandermonde minor-vector representative families of binomial(p+q,p) size. JACM 63(4), article 29 (2016), DOI 10.1145/2886094. https://arxiv.org/html/1304.4626v4",
+      "Bodwin--Dinitz--Robelle, Optimal Vertex Fault-Tolerant Spanners in Polynomial Time, arXiv:2007.08401v3 (31 October 2020), Theorem 1.3 and surrounding randomized/deterministic results: optimal-size purely multiplicative spanners; different mixed-stretch tradeoff. https://arxiv.org/abs/2007.08401v3",
+      "Karthik C. S.--Parter, Deterministic Replacement Path Covering, arXiv:2008.05421v3 (9 April 2023), Theorems 2 and 28 including vertex variant, and Section 7: known fault-avoiding short-path coverings and different multiplicative/nearly additive applications. https://arxiv.org/html/2008.05421",
+      "Bilo--Chechik--Choudhary--Cohen--Schirneck, Simpler and Improved Replacement Path Coverings, arXiv:2604.27966v1, and Bilo--Choudhary--Cohen--Schirneck, Near-Optimal Replacement Path Coverings, arXiv:2608.07124v1: stronger covering-value/query results in edge-fault RPC settings; no statement of the complete PPT vertex-fault spanner realization. They weaken any primitive-level novelty claim for short-path separation. https://arxiv.org/html/2604.27966 ; https://arxiv.org/html/2608.07124"
+    ],
+    "criteria": {
+      "importance": {
+        "judgment": "strong",
+        "reason": "The result applies to all undirected unweighted graphs and the full uniform fault/stretch parameter range. PPT Theorem 1.4 and printed pp.4--5 identify inefficient short-path enumeration as an unresolved construction issue at an almost-linear-fault mixed-stretch tradeoff; replacing quasi-polynomial by deterministic polynomial time is a concrete algorithmic advance, not merely an additional finite example."
+      },
+      "novelty": {
+        "judgment": "strong",
+        "reason": "The reviewed combination supplies a complete uniform-time theorem not stated in the verified PPT, DR, BDR, FLPS or RPC primary comparisons. Its novelty is the use of complementary regimes with a verified partial-scan packing transfer. The constituent tools are established and are credited. This judgment is limited by a bounded literature search, not asserted as an exhaustive priority certificate."
+      },
+      "technical_depth": {
+        "judgment": "uncertain",
+        "reason": "The hardest new integration step is preserving the PPT witness-sequence count while using fault-dependent representatives and balancing their cost against the multiplicative branch. It is valid and nontrivial, but the deep combinatorial packing, robust-sunflower argument and representative algebra all come from prior work. The remaining regime balancing is short, and the record does not establish enough new technique beyond this synthesis for a strong STOC-depth assessment."
+      },
+      "breadth_or_consequence": {
+        "judgment": "uncertain",
+        "reason": "The exact construction gap is closed for the full target, but there is no improved size/stretch frontier, new lower bound, optimized runtime exponent or demonstrated additional application. The claimed general benefit beyond this spanner tradeoff has not been proved. A broadly consequential STOC case is therefore not established."
+      },
+      "exposition_and_verifiability": {
+        "judgment": "strong",
+        "reason": "The frozen dossier states the complete algorithm, representative invariant, protected cut test, all fault quantifiers, pendant scales, caps and uniform runtime. The primary packing proof is available and its dependencies were reconstructed. The fresh exact verifier passed and all frozen hashes match. A future manuscript still needs ordinary writing, build, citation and visual gates; this score assesses the mathematical dossier only."
+      }
+    },
+    "case_for_stoc": "The positive case is a full deterministic polynomial realization of a recent near-linear-fault mixed-stretch tradeoff on general graphs, by bypassing the source's n^sqrt(k) path enumeration without worsening the allowed tradeoff. The case falls short of a supported competitive-STOC judgment because the strongest new ingredient is a synthesis of established representatives, gap cuts, packing and multiplicative spanners, and no broader consequence is demonstrated. Mathematical and innovation acceptance are justified; working_paper is the appropriate conservative classification.",
+    "remaining_weaknesses": [
+      "The incremental technical depth over the source packing theorem and standard representative machinery is uncertain at the STOC level.",
+      "No consequence beyond making this size/stretch tradeoff polynomial-time constructible is established.",
+      "The polynomial exponent is not optimized and depends on delta; no practical efficiency claim is supported.",
+      "The literature search is bounded and the baseline is very recent, so unindexed contemporaneous work could be missed.",
+      "There is no manuscript yet; all subsequent artifact and presentation gates remain required."
+    ],
+    "label_is_not_a_venue_decision": true
+  },
+  "pages": 7,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "original_status": "proved",
+  "kind": "resolution-paper",
+  "pdf": "c029-vftfast_working_paper.pdf",
+  "pdf_sha256": "8f61902bb7427aec09254cd8ac7566c87a76748f4dc9eb4d9bbed9828af7a7a8",
+  "source_archive": "c029-vftfast_source_and_reproducibility.zip",
+  "source_archive_sha256": "5efb7b6502e0e74396ea94a1428eb16c1d43caffa2c6be55e145ef93caae3461",
+  "class_file": "manuscript/acmart.cls",
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "reproduce_scripts": [
+    "evidence/research3_full_checks.py",
+    "evidence/research3_parameter_checks.py",
+    "evidence/reproduce_referee_finite.py"
+  ],
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "8f61902bb7427aec09254cd8ac7566c87a76748f4dc9eb4d9bbed9828af7a7a8"
+    },
+    "kind": "resolution-paper",
+    "manuscript_digest": "8013342c36141de01d96e75509498833a97008d1df48c6153524aefa6caa4daa",
+    "original_status": "proved",
+    "pages": 7,
+    "pdf_digest": "8f61902bb7427aec09254cd8ac7566c87a76748f4dc9eb4d9bbed9828af7a7a8",
+    "provenance": {
+      "audit/build.json": "c3509785fb8ff31af092ec6448f6eb66cacc173d68d273e07c5bd1e5d0253b42",
+      "audit/build.md": "16d6d238e58b180ec588bda97fce5185e071e4649107cc3670e45914e06b39d9",
+      "audit/citations.json": "b275fc8a33576aca5f6e083c324e6d91ec39382583112b6582f1abf8e774a230",
+      "audit/citations.md": "6f850a06902eabc3be4c6c5674bfc7e3b9c40dfdf468ea688dcf60dd7e8bd9ba",
+      "audit/math.json": "b1143f8ce6068ec71fe63597045620af0c94628ba109e3573ff550ecb6186409",
+      "audit/math.md": "a936054d81ecf61a8400c6615fa1aa09cc73f6d1e39bd1b30bdecab3b3077206",
+      "audit/release-clean-build.log": "53a38780f0d217a4d49c9e38712cad24926438eefb7695cc040a95ff69929d58",
+      "audit/visual.json": "b5cf8eb53d3159e87ef5462319e7f8a0ad9f8db5a1320b35f84dcae1730a2ea6",
+      "audit/visual.md": "82c1277d7907f1fa8e5bb5f564afc01f688a0de74d3081ba050d033192cafc22",
+      "jobs/c029-vftfast-referee-95ddbe77df2f/role.json": "2f92959923ec8e899add275ef3d9e7638e50404402645ef20beff5758449d2ff",
+      "jobs/c029-vftfast-release-bdd37c945f4e/role.json": "8dbbbeee1b6c1ecfd53660db67a0971b129e026abe9f0ebb9f7aab60d726c895",
+      "jobs/c029-vftfast-research-9df2f29ab673/role.json": "8780d57f04530c80b1721ca62ce3db914e98cecd4c465517fbb01ee4e8b356bb"
+    },
+    "schema": 1,
+    "snapshot_digest": "b1495a4cbeb794181b64a2bc9a00b637d90f0a7a7fdf654844a24036b4029e66"
+  },
+  "citation_verdict": "accept",
+  "citation_limitations": [],
+  "excluded_third_party_text_caches": [],
+  "external_submission_performed": false
+}

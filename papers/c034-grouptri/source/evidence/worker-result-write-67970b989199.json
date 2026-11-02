@@ -1,0 +1,17 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Created, compiled, visually checked and froze an eight-page manuscript preserving the accepted full resolution. The actual STOC classification remains working_paper; separate release review is pending.",
+  "next_test": "Fresh release citation, clean-build, every-page visual and source-ZIP reproduction checks on the frozen manuscript and PDF, retaining working_paper.",
+  "evidence": [
+    "checkpoint.md",
+    "publication.json",
+    "manuscript/main.tex",
+    "output/pdf/bounded-exponent-exact-triangle_working_paper.pdf",
+    "audit/manuscript-snapshot.json",
+    "audit/stoc-assessment.json",
+    "evidence/writing-quality.json",
+    "literature/user_bibliography_check.md"
+  ]
+}

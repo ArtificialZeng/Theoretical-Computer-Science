@@ -1,0 +1,5 @@
+# 2026-11-02 23:29:38 CST src corner_bnb_v7_claude.c sha1 3f0894555f2f
+# cmd: corner_bnb_final_claude 7 299 100 10 < aug_n7_j1.txt
+P 1 boxes 1 fails 0
+P 2 boxes 1 fails 0
+TOTAL patterns 2 boxes 2 uncleared 0 dfsnodes 2 skipped 0

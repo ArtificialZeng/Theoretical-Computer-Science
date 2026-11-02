@@ -1,0 +1,6 @@
+# Mon Nov  2 23:05:50 CST 2026 paper checker full pattern K_5 c=399/100 sort_coords=True
+n=5 c=399/100 j=1: PROVED boxes=1 time=0.0s
+n=5 c=399/100 j=2: PROVED boxes=1 time=0.0s
+n=5 c=399/100 j=3: PROVED boxes=1 time=0.0s
+n=5 c=399/100 j=4: PROVED boxes=3 time=0.0s
+n=5 c=399/100 j=5: PROVED boxes=29 time=1.4s

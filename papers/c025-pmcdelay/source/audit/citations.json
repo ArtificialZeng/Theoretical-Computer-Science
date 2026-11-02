@@ -1,0 +1,32 @@
+{
+  "job_id": "c025-pmcdelay-release-dfedec0715d6",
+  "snapshot_digest": "9e18afcb85b19f266e11aab420e78596f90e785921128737257fbdd42a21cfbc",
+  "manuscript_digest": "8502854365556ca110be34d374a6e54b8133c7e747267dea571dd218f829c685",
+  "pdf_digest": "ff0b8c2710e0e8655e39aaaaeef6df945a006e772ebc9559845b12d5f145a80f",
+  "verdict": "accept_with_citation_limitations",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/acmart.dtx",
+    "manuscript/acmart.ins",
+    "manuscript/alpha.bst",
+    "manuscript/build.py",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/template-provenance.json"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "All ten declared publication sources, all eight resolved citations, 34 extracted claims, theorem-level primary passages, bounded novelty comparison, rendered references and complete local dependency scope reviewed. No user-designated workbook. BBC99 historical full-text access limitation disclosed; BLS v3 Lemma 1 supplies the inspected primitive theorem. Accepted mathematics and working_paper classification retained.",
+  "citation_audit_method": "citation-check-skill-advisory-plus-primary-source-manual",
+  "metadata_basis": "primary_sources",
+  "unverified_citations": [
+    {
+      "key": "BBC99",
+      "limitation": "Complete WG 1999 chapter text was not obtained. Publisher metadata and abstract verified; exact polynomial-delay primitive inspected in BLS v3 Lemma 1. Official queue code only corroborates the recipe. No unsupported attribution remains."
+    }
+  ],
+  "readiness_label": "working_paper"
+}

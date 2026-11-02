@@ -1,0 +1,71 @@
+{
+  "job_id": "c034-grouptri-triage-9f8a9008e4e4",
+  "role": "triage",
+  "dispatch_utc": "2026-11-02T15:29:26Z",
+  "first_clock_utc": "2026-11-02T15:31:30Z",
+  "last_scientific_clock_utc": "2026-11-02T15:33:13Z",
+  "source_sha256": "5e49e9583e24af889c0aa15a1b6dcadb797e1d85f3f467028441af101a677b0e",
+  "source_status": "open-supported",
+  "original_status": "unresolved",
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "primary_checks": [
+    {
+      "url": "https://arxiv.org/abs/2610.17420",
+      "retrieved_date": "2026-11-02",
+      "observation": "Live submission history displays v1 dated 2026-10-12; abstract distinguishes list 3SUM algorithms from triangle results. The list exponent-p^2 algorithm is not a solution to this triangle problem."
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.17420v1",
+      "local_pdf": "intake/primary/2610.17420v1.pdf",
+      "sha256": "a536921aea8fe16830262db76c624593c5815094ae495ef5afce8c761d1c3d2e",
+      "inspected_positions": "Section 19 Model; Definition 21.1; Theorem 21.3; Propositions 21.9 and 21.10 with proofs; discussion immediately before Open Problem 21.12 and its statement; Corollary 9.1(b) statement and start of proof",
+      "observation": "Full bounded-exponent triangle question explicitly left open. Elementary quotient filtering and restricted residue splitting do not cover all inputs. Model charges vector operations and compact representations."
+    },
+    {
+      "url": "https://arxiv.org/abs/2303.14572",
+      "local_text": "intake/primary/2303.14572-primary.txt",
+      "inspected_positions": "Theorem 5.1 and entire proof, printed pages 18-19 (text lines 1022-1092)",
+      "observation": "Construction sorts all middle witnesses for every outer pair and costs soft-O(n1*n2*n3+s*n1*n2+s*n2*n3+s^2*n1*n3). Update time soft-O(n1*n2*n3/s+s^2*n1*n3) assumes that preprocessing. Directly citing the update bound for fresh inputs is invalid. Equality/difference identities suggest a group adaptation, but that adaptation and its runtime were not established here."
+    },
+    {
+      "url": "https://arxiv.org/abs/2608.19092",
+      "local_text": "intake/primary/2608.19092v1.txt",
+      "inspected_positions": "Abstract and introduction; Section 2.3 located, not its full proof re-audited in this job",
+      "observation": "Generic detection-to-all-edge reductions and listing relationships are established prior work, with quantified black-box losses. They are tools, not proposed novelty."
+    }
+  ],
+  "searches": {
+    "date": "2026-11-02",
+    "queries": [
+      "\"Exact Triangle\" \"bounded exponent\" group",
+      "\"Majdoddin\" \"21.12\"",
+      "\"Exact Triangle\" \"finite abelian\" algorithm quotient kernel",
+      "\"triangle\" \"bounded-exponent\" algorithm subcubic"
+    ],
+    "conclusion": "No equivalent full resolution located. Search snippets were leads only; primary local texts and live arXiv records supplied the status checks. This is not an exhaustive priority search."
+  },
+  "prior_records_reused": {
+    "paths": [
+      "intake/root-handoff.md",
+      "intake/Majdoddin-current-repository-check.json",
+      "intake/Majdoddin-groups-current-README.md"
+    ],
+    "limitation": "The supplied repository check is dated today and pins commit 63e9490d3b5d62bf8b9f7f0a8103b0e409564a9d. Its README was read; no new online HEAD verification or Lean build was performed by this worker. Missing formalization is not a reason to reopen claimed prior theorems."
+  },
+  "duplicate_check": "The project handoff reports comparison against 446 registered leads and no semantic duplicate. This worker read that report but did not independently access the outside-project registry. Within this packet, list-3SUM, arbitrary-table identity checking and full group Exact Triangle are distinct targets.",
+  "cheapest_discriminating_test": {
+    "type": "model and nearest-standard-theorem check",
+    "result": "No immediate resolution follows from the cited decomposition: the advertised fast bound is an update bound, while initial construction is cubic. The original statement matches the named primary open question, including independence of c.",
+    "limits": "No computational enumeration or proof attempt was run. This does not prove that a different existing closure theorem cannot resolve the question."
+  },
+  "payoff": "A complete nonroutine quotient/kernel extension algorithm could settle every bounded exponent and transfer to representable coordinatewise triangle relations. Competitive STOC significance is plausible as a research aim, not established for any existing result.",
+  "obstacles": [
+    "Construct capped witnesses without cubic preprocessing and without illegal small-dimension oracle calls.",
+    "Verify complete-graph masks, edgewise quotient potentials and kernel encoding.",
+    "Charge frequency tables, exceptional triangles and all kernel instances through the full all-M induction.",
+    "Exclude a routine consequence of known closure/listing theorems before claiming innovation."
+  ],
+  "publication": "No mathematical candidate, fresh acceptance, venue assessment, manuscript or PDF. Resolution-only policy retained.",
+  "counters": "Read research_passes=0 from state.json; no research pass consumed or counters/state scheduling edited."
+}

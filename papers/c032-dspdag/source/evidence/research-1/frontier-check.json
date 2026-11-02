@@ -1,0 +1,24 @@
+{
+  "job_id": "c032-dspdag-research-2c4a21894757",
+  "status": "all_checks_passed",
+  "counts": {
+    "strassen_matrices": 48,
+    "exhaustive_hub_dags": 512,
+    "random_weighted_dags": 80,
+    "random_potential_dags": 80,
+    "structured_cases": 12
+  },
+  "dag_instances": 684,
+  "yes_instances": 167,
+  "square_products_executed": 4842720,
+  "rng_seed": 32017,
+  "n_original_range": [
+    6,
+    10
+  ],
+  "padded_frontier_vertices": 16,
+  "integer_arithmetic": "exact Python integers, Strassen recursion threshold 2",
+  "comparison": "entire reachable frontier table against scalar earliest-token recurrence; final answer against independently enumerated shortest path masks",
+  "exhaustiveness": "All 512 subsets of the nine stated hub-family edges only; random and structured tests are not exhaustive over all DAGs.",
+  "elapsed_seconds": 15.796545375138521
+}

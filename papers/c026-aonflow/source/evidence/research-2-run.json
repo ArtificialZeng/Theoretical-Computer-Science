@@ -1,0 +1,62 @@
+{
+  "job_id": "c026-aonflow-research-02dec8252283",
+  "role": "research",
+  "actual_dispatch_utc": "2026-11-02T00:15:35+00:00",
+  "first_clock_observed_utc": "2026-11-02T00:17:36+00:00",
+  "records_finalized_utc": "2026-11-02T00:27:25.757357+00:00",
+  "main_test_deadline_utc": "2026-11-02T00:32:34.999991+00:00",
+  "finalization_deadline_utc": "2026-11-02T00:35:34.999990+00:00",
+  "research_passes_observed": 2,
+  "research_pass_cap": 3,
+  "runner_state_edited": false,
+  "source_sha256": "7241936e887e814eebe18f891cfe9d90c883ee0298057dfc8bbdd2344501e29e",
+  "source_unchanged": true,
+  "all_six_primary_input_hashes_match": true,
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "status_qualification": "Proposer full-resolution claim; fresh referee not performed and no acceptance asserted.",
+  "new_evidence": [
+    "Complete protected uniform-copy composition for the full original target",
+    "CKS2013 corrected congestion-1 proof dependency reconstruction",
+    "Strict bounded-bit categorical sampling and small-k exact branch",
+    "Exact finite diagnostics saved in research-2-check-results.json"
+  ],
+  "previous_unresolved_kernel": {
+    "name": "NR nonuniform owned-mass rounding",
+    "status": "unproved and bypassed by uniform-copy route; not relabeled as established"
+  },
+  "proposer_mathematical_gaps_relative_to_stated_published_dependencies": [],
+  "fresh_review_obligations": [
+    "Full original-scope correctness",
+    "Precise CKS corrected proof transfer including shared vertices",
+    "Current equivalent results and routine-corollary risk",
+    "Substantive innovation and STOC-level significance"
+  ],
+  "claim_contract_validation": "Passed release_gate.claim_at read-only validation; no freeze, acceptance or release command invoked.",
+  "claim_evidence_file_count": 13,
+  "evidence_sha256": {
+    "claim.json": "12a3c4bb4cc45aa3f6403261253e401c06db3ab038d23770cc46096b5ef7f493",
+    "evidence/research-2-uniform-copy-resolution.md": "8a2f00fe6cb1ec88b49df208a786d2d8be48ecaf4e52183b8c8417c14d55d727",
+    "evidence/research-2-check.py": "306cd89b94f34aaa0294d41b41d037fbd99018a0a25a2a46c7b3de24a4465baf",
+    "evidence/research-2-check-results.json": "0589c5a68d08111050f352f972fbd27a69b646ab7fdb1c72617fe53bc8b0258a",
+    "evidence/research-2-literature.md": "3cad5ba17a183186f84994e5371150bbe868401083f8668b82dec291203adf87"
+  },
+  "failed_or_incomplete_routes": [
+    {
+      "label": "unknown",
+      "route": "Direct nonuniform NR extension",
+      "detail": "Not completed; full original-target proof instead uses the uniform prior rounding theorem."
+    }
+  ],
+  "operational_failures": [
+    {
+      "label": "access-blocked",
+      "detail": "Web refresh of CKS author PDF URLs failed; complete previously supplied hashed primary PDFs/texts were available and inspected. No mathematical conclusion follows from access failure."
+    }
+  ],
+  "agents_or_other_codex_or_background_workers_spawned": false,
+  "new_manuscript_or_output_pdf": false,
+  "acceptance_or_readiness_assessment_created": false,
+  "usage_limit_note": "Ended early after coherent full-target candidate and exact diagnostics; usage counters and runner state preserved. Token usage not independently measured."
+}

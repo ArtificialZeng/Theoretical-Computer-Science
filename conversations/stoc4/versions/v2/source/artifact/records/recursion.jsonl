@@ -1,0 +1,3 @@
+{"id":"recursion:1","kind":"recursion","case":0,"base":true,"trace":[[false,false,false,true],[false,true,true,true],[true,true,true,true]],"summary":[true,true],"rounds":3}
+{"id":"recursion:2","kind":"recursion","case":1,"base":false,"trace":[[false,false,false,false]],"summary":[false,false],"rounds":1}
+{"id":"recursion:3","kind":"recursion","case":2,"base":true,"trace":[[false,false,false,true],[false,true,true,true],[true,true,true,true]],"summary":[true,true],"rounds":3}

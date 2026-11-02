@@ -1,0 +1,2 @@
+near-dichotomy n=5 solver=kissat: vars=3360 clauses=21508 result=UNSATISFIABLE time=97.8s
+near-dichotomy n=5 solver=cadical: vars=3360 clauses=21508 result=UNSATISFIABLE time=159.4s

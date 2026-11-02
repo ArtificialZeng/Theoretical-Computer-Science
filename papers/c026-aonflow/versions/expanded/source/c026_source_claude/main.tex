@@ -1,0 +1,1008 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\emergencystretch=3em
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{claim}{Claim}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\LP}{\mathrm{LP}}
+\newcommand{\OPT}{\mathrm{OPT}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\load}{\mathrm{load}}
+\newcommand{\eps}{\varepsilon}
+
+\title{A Near-Logarithmic Approximation for\\ All-or-Nothing Multicommodity Flow}
+\author{Zijian Zeng\\ UCSI University\\ \texttt{1002266693@ucsiuniversity.edu.my}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In the all-or-nothing multicommodity flow problem we are given an undirected graph with unit
+edge capacities and $k$ terminal pairs, and we seek a largest set of pairs that can
+simultaneously send one unit of (splittable) flow each. The best known approximation ratio,
+due to Chekuri, Khanna and Shepherd (STOC 2005), is $O(\log^2 k)$, and Bansal, Jambulapati and
+Saranurak (ICALP 2026) conjectured that a $\log^{1+o(1)} k$ approximation exists. We confirm
+this conjecture: we give a polynomial-time algorithm that routes at least
+$\LP/(\log k\cdot 2^{O(\sqrt{\log\log k})})$ pairs with congestion one, where $\LP$ is the value
+of the natural multicommodity flow relaxation. Hence the integrality gap of this relaxation is
+$\log^{1+o(1)}k$; the known lower bound is $\log^{1/2-\delta}n$.
+
+The proof has two parts. First, a single decomposition computed by the integral-node-weight
+flow-expander decomposition algorithm of Bansal, Jambulapati and Saranurak, with node weights obtained
+by discretizing the fractional solution at granularity $\LP/(2k)$, yields the well-linked
+decomposition of Chekuri, Khanna and Shepherd with loss $\log^{1+o(1)}k$ instead of
+$O(\log^2k)$. This is the decomposition asked for by Bansal, Jambulapati and Saranurak, and
+the argument is short. Second, we give a complete and self-contained proof of the
+congestion-one rounding inside flow-linked instances that the decomposition requires. This
+rounding was stated by Chekuri, Khanna and Shepherd in 2005 together with a remark that its
+clustering had to be strengthened; the strengthened argument appeared in their 2013 journal
+paper, phrased for R\"acke-tree instances. Our proof follows their architecture, replaces
+cluster centers by a min-cut criterion, and uses a degree reduction to make clusters
+vertex-disjoint. We also extend the rounding to non-uniform paired weights.
+\end{abstract}
+
+\section{Introduction}
+
+\paragraph{The problem.}
+Let $G=(V,E)$ be an undirected graph with unit edge capacities and let
+$(s_1,t_1),\dots,(s_k,t_k)$ be (indexed) terminal pairs. A set $I\subseteq[k]$ is
+\emph{routable} if there is a multicommodity flow that sends one unit from $s_i$ to $t_i$ for
+every $i\in I$ and whose total load on every edge is at most one; flow of a commodity may be
+split along many paths. The \emph{all-or-nothing multicommodity flow problem} (AN-MCF) asks
+for a routable set of maximum cardinality. It was introduced by Chekuri, Mydlarz and
+Shepherd~\cite{CMS07} and studied in general graphs by Chekuri, Khanna and
+Shepherd~\cite{CKS04,CKS13}, as a relaxation of the edge-disjoint paths problem (EDP) that,
+unlike EDP, admits polylogarithmic approximation ratios: the natural multicommodity flow
+relaxation has an $\Omega(\sqrt n)$ integrality gap for EDP but only a polylogarithmic one for
+AN-MCF. Call $x\in[0,1]^k$ \emph{fractionally routable} if some multicommodity flow with load
+at most one on every edge routes $x_i$ units between $s_i$ and $t_i$ for every $i$. The
+relaxation is
+\begin{equation}\label{eq:lp}
+\LP=\max\Bigl\{\textstyle\sum_{i=1}^k x_i\;:\;x\in[0,1]^k\text{ fractionally routable}\Bigr\};
+\end{equation}
+it has a polynomial-size edge formulation, and clearly $\LP\ge\OPT$.
+
+\paragraph{Prior work.}
+Chekuri, Khanna and Shepherd~\cite{CKS04,CKS13} gave the first polylogarithmic
+approximation, $O(\log^3 n\log\log n)$, using R\"acke's hierarchical
+decompositions~\cite{Racke02,HHR03}. In~\cite{CKS05} they made precise the notion of a
+\emph{well-linked decomposition} (used earlier in~\cite{CKS04} and in work on planar EDP) and
+introduced its weighted version: a fractional solution is converted into a collection of
+vertex-disjoint instances in each of which the terminals are fractionally flow-linked, losing
+a factor $O(\beta\log k)$, where $\beta=O(\log k)$ is the flow-cut gap for product
+multicommodity flows~\cite{LR99,LLR95,AR98}; inside a flow-linked instance, a congestion-one
+rounding loses only a constant~\cite[Theorem~3.1]{CKS05}. This gives the current best ratio
+$O(\log^2 k)$ for general graphs~\cite[Theorem~3.2]{CKS05} (and $O(\log k)$ in planar graphs).
+On the negative side, AN-MCF is hard to approximate within $\log^{1/2-\delta}n$ for every
+$\delta>0$ unless $\mathrm{NP}\subseteq\mathrm{ZPTIME}(n^{\mathrm{polylog}\, n})$, and the
+relaxation~\eqref{eq:lp} has integrality gap $\log^{1/2-\delta}n$~\cite{ACGKTZ10}; the problem is
+APX-hard already on trees~\cite{GVY97}.
+
+Recently Bansal, Jambulapati and Saranurak~\cite{BJS26} gave the first polynomial-time
+flow-expander decompositions with overhead $\log^{1+o(1)}$, circumventing the flow-cut gap. In
+their list of open questions~\cite[Section~5]{BJS26} they observe that the $O(\log^2k)$ bound
+for AN-MCF is the product of the flow-cut gap and the recursion depth of the well-linked
+decomposition, and that their technique suggests these might be telescoped; but they point
+out that the connection is not black-box, since the well-linked decomposition of~\cite{CKS05}
+interleaves concurrent-flow computations with maximum-throughput flow steps. They ask whether
+the decomposition of~\cite{CKS05} can be built with $\log^{1+o(1)}k$ overhead, note that this
+would immediately imply the following conjecture, and state:
+
+\begin{quote}
+\textbf{Conjecture 5.1 of~\cite{BJS26}.} There is a polynomial-time $\log^{1+o(1)}k$-approximation
+algorithm for the all-or-nothing flow problem.
+\end{quote}
+
+\subsection{Our results}
+
+All logarithms are binary. We fix, once and for all, a nondecreasing function
+$\Gamma:\Z_{\ge 0}\to\R_{\ge1}$ with
+\begin{equation}\label{eq:gamma}
+\Gamma(a)=O\bigl(\log(a+2)\cdot\exp\bigl(O(\sqrt{\log\log(a+4)})\bigr)\bigr)
+\end{equation}
+such that the decomposition theorem of~\cite{BJS26} holds with cut bound $\phi|A|\Gamma(|A|)$
+(Theorem~\ref{thm:bjs} and the discussion after it).
+
+\begin{theorem}[Main theorem]\label{thm:main}
+There is a polynomial-time algorithm that, given an undirected graph with unit edge
+capacities and $k$ terminal pairs, outputs a routable set of pairs together with a routing of
+congestion one, of size at least
+\[
+\frac{\LP}{c\,\Gamma(4k)}\;\ge\;\frac{\OPT}{C\log(k+2)\exp\bigl(C\sqrt{\log\log (k+4)}\bigr)},
+\]
+where $c,C$ are absolute constants. In particular the integrality gap of~\eqref{eq:lp} is
+$\log^{1+o(1)}k$.
+\end{theorem}
+
+This confirms Conjecture~5.1 of~\cite{BJS26}. The guarantee depends only on $k$ (not on the
+number of vertices), no congestion is violated, and shared endpoints, coincident endpoints and
+repeated pairs are allowed. Apart from the call to the decomposition algorithm of~\cite{BJS26},
+the algorithm is deterministic. Theorem~\ref{thm:main} is the composition of the following two
+results.
+
+\paragraph{Well-linked decomposition with $\log^{1+o(1)}k$ loss.}
+Following~\cite{CKS05}, for a set $X$ of vertices and weights $\pi:X\to\R_{\ge0}$, $X$ is
+\emph{$\pi$-flow-linked} in $G$ if the product demand $\pi(u)\pi(v)/\pi(X)$ between every two
+distinct $u,v\in X$ is routable with congestion one.
+
+\begin{theorem}[see Theorem~\ref{thm:decomp}]\label{thm:decomp-intro}
+Given a feasible fractional multicommodity flow of total value $F$ for $k$ pairs with distinct
+degree-one endpoints, one can compute in polynomial time vertex-disjoint induced subgraphs
+$G_1,\dots,G_\ell$ and, for each $j$, a set $P_j$ of pairs inside $G_j$ with weights
+$\pi_j$ on their endpoints such that $\pi_j(s_i)=\pi_j(t_i)\le1$, the endpoints $X_j$ of
+$P_j$ are $\pi_j$-flow-linked in $G_j$, and $\sum_j\pi_j(X_j)\ge F/(c\,\Gamma(4k))$.
+\end{theorem}
+
+This is the well-linked decomposition of~\cite[Theorem~2.1]{CKS05} with the loss
+$O(\log^2 k)$ replaced by $\log^{1+o(1)}k$, i.e.\ the decomposition asked for
+in~\cite[Section~5]{BJS26}. As anticipated in~\cite{BJS26}, Theorem~\ref{thm:main} follows by
+combining it with congestion-one rounding inside flow-linked instances; we now discuss this
+second step, which is where most of the work of this paper lies.
+
+\paragraph{Congestion-one rounding, with a complete proof.}
+The rounding step is the following statement~\cite[Theorem~3.1]{CKS05}: if $X$ is
+$\alpha$-flow-linked (i.e.\ $\pi\equiv\alpha$), then for every matching $M$ on $X$ one can
+route $\Omega(\alpha|M|)$ pairs of $M$ with congestion one. In~\cite{CKS05} this theorem is
+attributed to the conference version~\cite{CKS04} of~\cite{CKS13}, with a footnote stating
+that the clustering of~\cite{CKS04} needs to be strengthened for congestion one and that
+details would appear in the journal version. The journal version~\cite[Section~3.4]{CKS13}
+contains the strengthened clustering. Its theorem~\cite[Theorem~3.8]{CKS13} is stated for
+``nice'' instances defined through a R\"acke tree, which is used to obtain a flow to a common
+distribution; the general case of clusters sharing vertices is indicated briefly at the end
+of the section, and the weighted case is outlined. Since the rounding is the step where
+congestion exactly one is obtained, we give a complete self-contained proof for arbitrary
+flow-linked sets (Section~\ref{sec:rounding}).
+
+\begin{theorem}[Theorem~\ref{thm:round} and Corollary~\ref{cor:paired}]\label{thm:round-intro}
+\begin{enumerate}[label=(\alph*),nosep]
+\item If $X$ is $\alpha$-flow-linked in $G$, $0<\alpha\le1$, and $M$ is a matching on $X$,
+then one can compute in polynomial time a set of at least $\max\{1,\alpha|M|/2^{15}\}$ pairs of
+$M$ that is routable with congestion one.
+\item If the vertices of $X$ have degree one, $M$ is a perfect matching on $X$,
+$\pi:X\to[0,1]$ satisfies $\pi(s)=\pi(t)$ for $st\in M$, and $X$ is $\pi$-flow-linked, then
+one can compute in polynomial time a set of at least $\max\{1,\pi(X)/2^{19}\}$ pairs of $M$
+routable with congestion one.
+\end{enumerate}
+\end{theorem}
+
+Part (b), a ``non-uniform'' rounding, follows from part (a) by the copying device
+of~\cite[Lemma~1.1]{CKS05}, in which the unit edges at the original terminals act as admission
+bottlenecks.
+
+\paragraph{Other consequences and limits.}
+The reduction behind Theorem~\ref{thm:decomp-intro} accepts any flow-expander decomposition
+algorithm for integral node weightings. Anand~\cite{Anand26} recently improved flow-expander
+decomposition to overhead $O(\log n\log\log n)$. His bound in terms of the total weight $|A|$
+requires every vertex to have weight at least one, which forces $|A|\ge n$, so we were not able
+to obtain an $O(\log k\log\log k)$ ratio. If the node-weighted bound stated in Appendix~C
+of~\cite{Anand26} (zero weights allowed, overhead $O(\log n\log\log n)$) is used, the same
+reduction gives an $O(\log n\log\log n)$-approximation (Remark~\ref{rem:anand}); this is
+conditional on that statement and is not a bound in terms of $k$. For the weighted (profit)
+version we only obtain $\log^{2+o(1)}k$ (Remark~\ref{rem:weighted}); a $\log^{1+o(1)}k$ bound
+for it, and the node-capacitated version, remain open (Section~\ref{sec:discussion}).
+
+\subsection{Technical overview}
+
+\paragraph{The decomposition.}
+The decomposition of~\cite{CKS05} fixes a path decomposition of the fractional solution and
+recursively cuts sparse cuts with respect to the current weights $\gamma(u,H)$, the flow of
+paths fully contained in the current piece $H$. These weights shrink whenever a cut destroys
+paths, so the weighting changes during the recursion, whereas the decomposition
+of~\cite{BJS26} works with one fixed integral node weighting $A$ and charges the cut to $|A|$.
+We therefore fix the weights in advance. We discretize the fractional solution $x$ at
+granularity $\eps=F/(2k)$: both endpoints of pair $i$ receive the integral weight
+$d_i=\lfloor x_i/\eps\rfloor$ (zero if $x_i<\eps$), in the spirit of the uniformization
+of~\cite[Lemma~1.1]{CKS05}. Then $K=\sum_id_i\le2k$, so $|A|\le4k$, while $\eps K\ge F/4$. We
+apply~\cite{BJS26} once (up to a constant number of trials to calibrate an unknown constant),
+with $\phi=\Theta(\eps/\Gamma(4k))$, so that at most $\eps K/4$ edges are cut. Two simple
+observations finish the proof. First, a pair whose endpoints are separated sends all of its
+flow $x_i\ge\eps d_i$ across the cut, so separated pairs carry at most a quarter of the total
+weight; this is the charging of~\cite[Lemma~2.2]{CKS05}, now against a fixed weighting. Second,
+flow expansion with respect to $A$ implies flow-linkedness of every sub-collection of weighted
+terminals, so after discarding separated pairs the remaining endpoints in each component are
+$\phi A$-flow-linked, and no weight is ever recomputed.
+
+\paragraph{Admission.}
+The pieces carry non-uniform weights $\phi d_i$. To use the uniform rounding we re-discretize
+and attach pendant copies of each terminal; since the original terminals have degree one, two
+copies of the same pair would have to share the unit edge at $s_i$, so a congestion-one routing
+of copy pairs uses at most one copy of each pair, and the rounding does not need to know about
+copies. This gives Theorem~\ref{thm:round-intro}(b).
+
+\paragraph{The rounding.}
+Our proof of Theorem~\ref{thm:round-intro}(a) follows the architecture of~\cite[Section~3.4]{CKS13}:
+terminals are grouped into clusters of $\Theta(1/\alpha)$ terminals, a sparse set of pairs is
+selected, every selected terminal spreads one unit to the terminals of its (possibly
+enlarged) cluster using at most half of the capacity of every edge except bridges, the
+received flow is sent to a common distribution using the other half of the capacity, and the
+excess on bridges is removed by an integrality argument~\cite[Lemma~3.10]{CKS13}. We make
+three changes that allow a short and complete proof: (i) a max-flow/min-cut argument
+(Lemma~\ref{lem:criterion}) gives a simple sufficient condition for a terminal to spread its
+unit, which removes the need for cluster centers; (ii) a flow-preserving degree reduction makes
+all clusters vertex-disjoint, which removes the case analysis caused by shared connector
+vertices; (iii) the common-distribution flow is obtained directly from flow-linkedness rather
+than from a R\"acke tree.
+
+\paragraph{On the contribution.}
+Once Theorem~3.1 of~\cite{BJS26} is available, the decomposition (Theorem~\ref{thm:decomp-intro})
+is a short argument, and~\cite{BJS26} anticipated that such a decomposition would imply their
+conjecture. The longer part of the paper is the congestion-one rounding; its structure follows
+\cite[Section~3.4]{CKS13}, and our contribution there is a complete proof for arbitrary
+flow-linked sets, with the simplifications above, and the non-uniform extension. We view the
+paper as settling the conjecture of~\cite{BJS26} by a short reduction together with a careful,
+self-contained treatment of the rounding step that the reduction needs.
+
+\paragraph{Organization.}
+Section~\ref{sec:prelim} gives definitions and the tools we use. Section~\ref{sec:rounding}
+proves the rounding theorem, Section~\ref{sec:decomp} the decomposition theorem, and
+Section~\ref{sec:main} the main theorem and its corollaries. Section~\ref{sec:discussion}
+discusses lower bounds and open problems.
+
+\section{Preliminaries}\label{sec:prelim}
+
+\paragraph{Graphs and flows.}
+Graphs are undirected and may have parallel edges; every edge has capacity one. For a graph
+$H$ and $Z\subseteq V(H)$, $\delta_H(Z)$ is the multiset of edges with exactly one endpoint in
+$Z$, and $H[Z]$ is the induced subgraph. An edge $e$ of $H$ is a \emph{bridge of $H$} if
+$H-e$ has more connected components than $H$; an edge with a parallel copy is never a bridge.
+If $e$ is a bridge of a connected graph $H$, then $H-e$ has exactly two components.
+A flow from $u$ to $v$ of value $\nu$ is a nonnegative function on the arcs of the
+bidirected version of $H$ satisfying conservation at all vertices other than $u,v$, with net
+outflow $\nu$ at $u$. The load of a collection of flows on an edge $e$ is the sum of all
+their values on the two arcs of $e$. A demand $D$ (a nonnegative function on unordered pairs
+of distinct vertices) is \emph{routable with congestion $\kappa$} if there are flows of value
+$D(u,v)$ between $u$ and $v$ for all pairs with total load at most $\kappa$ on every edge. A
+set of terminal pairs is \emph{routable} if the demand placing one unit on each pair is
+routable with congestion one. Routability of a given set is decidable by linear programming.
+If $Z$ contains $u$ but not $v$, then every flow from $u$ to $v$ of value $\nu$ has load at
+least $\nu$ on $\delta_H(Z)$.
+
+\begin{definition}[flow-linked sets~\cite{CKS05}]
+Let $X\subseteq V(H)$ and $\pi:X\to\R_{\ge0}$ with $\pi(X)>0$. Then $X$ is
+\emph{$\pi$-flow-linked in $H$} if the demand $\pi(u)\pi(v)/\pi(X)$ on every pair of distinct
+$u,v\in X$ is routable in $H$ with congestion one. For a constant $\alpha$, $X$ is
+\emph{$\alpha$-flow-linked} if it is $\pi$-flow-linked for $\pi\equiv\alpha$, i.e.\ the
+demand $\alpha/|X|$ on every pair is routable with congestion one.
+\end{definition}
+
+If $X$ is $\pi$-flow-linked in $H$ and $|X\cap\mathrm{supp}(\pi)|\ge2$, then all vertices of
+$X$ with positive weight lie in one component of $H$.
+
+\begin{definition}[flow expansion~\cite{BJS26}]
+Let $A:V(H)\to\R_{\ge0}$. A demand $D$ \emph{respects} $A$ if
+$\sum_{y\ne x}D(x,y)\le A(x)$ for every vertex $x$. The weighting $A$ is
+\emph{$\phi$-flow-expanding in $H$} if every demand that respects $A$ is routable in $H$ with
+congestion $1/\phi$. For $U\subseteq V(H)$,
+$A|_U$ denotes the restriction of $A$ to $U$.
+\end{definition}
+
+\begin{theorem}[{Bansal, Jambulapati and Saranurak~\cite[Theorem~3.1]{BJS26}}]\label{thm:bjs}
+For every undirected graph $H$, every integral node weighting $A:V(H)\to\Z_{\ge0}$ and every
+$\phi>0$, one can compute in polynomial time a set $C\subseteq E(H)$ such that
+$|C|\le\phi|A|\log(|A|)\exp(O(\sqrt{\log\log|A|}))$ and, for each connected component $U$ of
+$H-C$, the weighting $A|_U$ is $\phi$-flow-expanding in $H[U]$.
+\end{theorem}
+
+We use this theorem as a black box, with the following conventions.
+\begin{itemize}[nosep]
+\item \emph{The overhead function.} We write the bound as $|C|\le\phi|A|\Gamma(|A|)$ with
+$\Gamma=c_0\Gamma_1$, where $\Gamma_1(a)=\lceil\log(a+4)\rceil\cdot2^{\lceil\sqrt{\log\log(a+16)}\,\rceil}$
+is explicit and $c_0\ge1$ is the absolute constant implicit in~\cite{BJS26}. Our algorithm
+does not need to know $c_0$ (see the proof of Theorem~\ref{thm:decomp}). For $|A|\le1$ every
+respecting demand is zero (a respecting demand on $\{x,y\}$ is at most $\min\{A(x),A(y)\}$), so
+$C=\emptyset$ suffices. The internal parameters of the algorithm in~\cite{BJS26} are meant for
+large $|A|$; for $|A|$ bounded by an absolute constant one may instead use classical
+cut-and-recurse, which with the $O(\log|A|)$ flow-cut gap for product
+demands~\cite{LR99,LLR95,AR98} has overhead $O(\log^2|A|)=O(1)$. We take $c_0$ large enough to
+cover these cases.
+\item \emph{A factor of two.} The stopping rule of the algorithm in~\cite{BJS26} combined with
+their Fact~2.1 literally certifies $(\phi/2)$-flow expansion; if only this is available, one
+calls the algorithm with $2\phi$, which changes $c_0$ by a factor two. We use the theorem as
+stated.
+\item \emph{Multigraphs.} Parallel edges can be subdivided without changing any flow or cut
+quantity.
+\item \emph{Randomness.} The algorithm of~\cite{BJS26} is built from linear programming, sweep
+cuts and the sparse neighborhood cover of their Lemma~3.2; we have not verified whether the
+latter is deterministic, and we use no property of the algorithm beyond the statement above.
+All other steps of our algorithms are deterministic.
+\end{itemize}
+
+The following fact connects flow expansion to flow-linkedness.
+
+\begin{lemma}\label{lem:monotone}
+Let $A$ be $\phi$-flow-expanding in $H$ and let $Y\subseteq V(H)$ with $A(Y)>0$. Then $Y$ is
+$\pi$-flow-linked in $H$ for $\pi=\phi A|_Y$.
+\end{lemma}
+\begin{proof}
+The $\pi$-product demand $D(u,v)=\phi A(u)A(v)/A(Y)$ ($u\ne v\in Y$) has marginal at most
+$\phi A(u)(A(Y)-A(u))/A(Y)\le\phi A(u)$ at $u\in Y$ and is zero elsewhere. So $D/\phi$ respects
+$A$ and is routable with congestion $1/\phi$; scaling by $\phi$ routes $D$ with congestion
+one.
+\end{proof}
+
+The next lemma is~\cite[Lemma~3.10]{CKS13}; we include its short proof.
+
+\begin{lemma}[bridge integrality]\label{lem:bridge}
+Let $H$ be a graph and $N$ a set of terminal pairs. Suppose flows of value one for all pairs
+in $N$ have total load at most one on every non-bridge of $H$ and strictly less than two on
+every bridge of $H$. Then $N$ is routable in $H$ with congestion one, and such a routing can
+be computed in polynomial time.
+\end{lemma}
+\begin{proof}
+For each pair, decompose its flow into flows along paths and cycles and discard the cycles;
+loads do not increase, and each pair is now routed along simple paths. If $e$ is a bridge,
+a simple path from $s$ to $t$ uses $e$ exactly once if $e$ separates $s$ from $t$ and not at
+all otherwise. Hence the load on $e$ is the number of pairs of $N$ separated by $e$, an
+integer smaller than two, i.e.\ at most one.
+\end{proof}
+
+\paragraph{Normalized instances.}
+An AN-MCF instance is \emph{normalized} if its $2k$ terminals are distinct vertices of degree
+one. Every instance can be normalized: for every pair $i$ add two new vertices $s_i',t_i'$ and
+unit edges $s_is_i'$, $t_it_i'$, and replace the pair by $(s_i',t_i')$. Unit flows extend
+along the new edges (each is used only by its own pair) and project back by deleting them,
+so routable sets, $\OPT$ and $\LP$ are unchanged (a pair with $s_i=t_i$ becomes a pair at
+distance two). Parallel edges of the input may be subdivided. Hence we assume throughout that
+the input is normalized and simple.
+
+\section{Congestion-one rounding in flow-linked instances}\label{sec:rounding}
+
+\begin{theorem}\label{thm:round}
+Let $G$ be a connected graph, $X\subseteq V(G)$ a set of $q\ge2$ vertices, $M$ a matching on
+$X$ (a non-empty set of pairwise disjoint pairs of elements of $X$), and $0<\alpha\le1$, such
+that $X$ is $\alpha$-flow-linked in $G$. Then one can compute in polynomial time a set $M'\subseteq M$
+with $|M'|\ge\max\{1,\alpha|M|/2^{15}\}$ and a routing of $M'$ with congestion one.
+\end{theorem}
+
+\begin{corollary}\label{cor:paired}
+Let $G$ be a graph, $M$ a set of pairs whose endpoint set $X$ consists of distinct vertices of
+degree one, and $\pi:X\to[0,1]$ with $\pi(s)=\pi(t)$ for every $st\in M$ and $\pi(X)>0$, such
+that $X$ is $\pi$-flow-linked in $G$. Then one can compute in polynomial time a set
+$M'\subseteq M$ with $|M'|\ge\max\{1,\pi(X)/2^{19}\}$ and a routing of $M'$ with congestion
+one.
+\end{corollary}
+
+As discussed in the introduction, Theorem~\ref{thm:round} is~\cite[Theorem~3.1]{CKS05} (with
+an explicit constant); the proof below follows the strategy of~\cite[Section~3.4]{CKS13} but
+is self-contained. Terminals not covered by $M$ are allowed; they serve only as receivers of
+flow. Sections~\ref{sec:reductions}--\ref{sec:selection} prove
+Theorem~\ref{thm:round}, and Section~\ref{sec:paired} proves Corollary~\ref{cor:paired}.
+
+\subsection{Two reductions}\label{sec:reductions}
+
+\begin{lemma}\label{lem:reduce}
+Given $(G,X,M,\alpha)$ as in Theorem~\ref{thm:round}, one can construct in polynomial time a
+connected graph $\hat G$ and a set $\hat X\subseteq V(\hat G)$ with a bijection
+$x\mapsto\hat x$ from $X$ to $\hat X$ such that (a) every vertex of $\hat X$ has degree one
+in $\hat G$; (b) every vertex of $\hat G$ has at most three distinct neighbours; (c) $\hat X$
+is $\alpha$-flow-linked in $\hat G$; and (d) if a set of pairs $\{\hat s\hat t\}$ is routable
+in $\hat G$, the corresponding set $\{st\}$ is routable in $G$, and the routing can be
+transformed in polynomial time.
+\end{lemma}
+\begin{proof}
+First attach to every $x\in X$ a new vertex $x'$ by a unit edge and let $X'=\{x'\}$. The
+product flow between $u,v\in X$ extends along $u'u$ and $vv'$; the edge $x'x$ then carries
+$\alpha(q-1)/q<1$, so $X'$ is $\alpha$-flow-linked. Routings project back by deleting the
+pendant edges.
+
+Next (after deleting loops, which carry no useful flow), let $v$ be a vertex not in $X'$
+with incident edges $e_1,\dots,e_d$, $d\ge4$ (counted with multiplicity). Replace $v$ by a path $v_1,\dots,v_d$, attach $e_i$ to $v_i$, and join each
+$v_l$ and $v_{l+1}$ by $d$ parallel edges. Do this for every such vertex. Every new vertex has
+at most three distinct neighbours, vertices of degree at most three are unchanged, and the
+graph stays connected. A flow in the new graph projects to the old one by contracting the
+paths; loads on original edges are unchanged. Conversely, consider flows in the old graph
+between vertices of $X'$ with load at most one on every edge, decomposed into simple paths.
+A path through $v$ enters through some $e_i$ and leaves through some $e_j$; reroute it along
+$v_i,\dots,v_j$ and split its value evenly among the $d$ parallel edges of each step. The
+paths crossing the step between $v_l$ and $v_{l+1}$ carry at most
+$\sum_i\load(e_i)\le d$ in total, so each parallel edge carries at most one. Applying this at
+every split vertex lifts any routing with congestion one; in particular the product flow,
+so (c) holds. Vertices of $X'$ have degree one and are not split, so (a) holds.
+\end{proof}
+
+By Lemma~\ref{lem:reduce} we assume, until the end of Section~\ref{sec:selection}, that $G$
+is connected, every terminal (vertex of $X$) has degree one, every vertex has at most three
+distinct neighbours, and $X$ is $\alpha$-flow-linked. ``Bridge'' always means a bridge of
+this graph $G$. We set
+\[
+\rho:=\alpha/4 .
+\]
+
+\subsection{Common distribution and assembly}\label{sec:assembly}
+
+\begin{lemma}[common distribution]\label{lem:common}
+There are flows $h_v$ ($v\in X$), where $h_v$ sends $\rho/q$ units from $v$ to every
+$w\in X\setminus\{v\}$, with total load at most $1/2$ on every edge.
+\end{lemma}
+\begin{proof}
+Let $\psi_{vw}$ be flows routing $\alpha/q$ between every pair $\{v,w\}$ of distinct
+terminals with total load at most one. Let $h_v$ consist of $\frac14\psi_{vw}$, oriented from
+$v$ to $w$, for all $w\ne v$; it sends $\alpha/(4q)=\rho/q$ to $w$. Each $\psi_{vw}$ is used
+with factor $\frac14$ by $h_v$ and by $h_w$, so the total load is at most half that of all
+$\psi_{vw}$.
+\end{proof}
+
+\begin{definition}
+For $s\in V(G)$ and $\gamma:X\to\R_{\ge0}$ with $\sum_v\gamma(v)=1$, a \emph{flow from $s$ to
+$\gamma$} is a function on arcs whose net outflow at every vertex $y$ equals
+$[y=s]-\gamma(y)$ (with $\gamma(y)=0$ for $y\notin X$). Let $S\subseteq X$. A \emph{spreading
+system} for $S$ consists of flows $g_s$ from $s$ to $\gamma_s$, $s\in S$, such that
+$\sum_{s\in S}\gamma_s(v)\le\rho$ for every $v\in X$, and the total load of all $g_s$ is at
+most $1/2$ on every non-bridge and at most one on every bridge.
+\end{definition}
+
+\begin{lemma}[assembly]\label{lem:assembly}
+If $M'\subseteq M$ and the set $S$ of endpoints of $M'$ has a spreading system, then $M'$ is
+routable with congestion one, and a routing can be computed in polynomial time.
+\end{lemma}
+\begin{proof}
+For $s\in S$ let $\sigma_s:=g_s+\sum_{v\in X}(\gamma_s(v)/\rho)\,h_v$. The term
+$(\gamma_s(v)/\rho)h_v$ moves $\gamma_s(v)/q$ from $v$ to every $w\ne v$ and leaves
+$\gamma_s(v)/q$ at $v$, so $\sigma_s$ is a flow from $s$ to the uniform distribution on $X$: the net inflow at
+$w\in X$ is $\gamma_s(w)/q+\sum_{v\ne w}\gamma_s(v)/q=1/q$. For $st\in M'$, the
+sum of $\sigma_s$ and the reversal of $\sigma_t$ is therefore a flow from $s$ to $t$ of value
+one. The total load of all these flows is at most the load of $\sum_s g_s$ plus
+$\sum_{v\in X}\bigl(\sum_{s}\gamma_s(v)/\rho\bigr)\load(h_v)\le\sum_v\load(h_v)\le 1/2$ by
+Lemma~\ref{lem:common}. Thus the load is at most $1$ on non-bridges and at most $3/2<2$ on
+bridges, and Lemma~\ref{lem:bridge} gives a routing with congestion one.
+\end{proof}
+
+\subsection{A criterion for spreading}\label{sec:criterion}
+
+\begin{definition}
+Let $Q$ be a connected subgraph of $G$, $s\in V(Q)$ and $R\subseteq X\cap V(Q)$. We say that $s$
+\emph{spreads in $(Q,R)$} if there is a flow in $Q$ from $s$ to some $\gamma$ with
+$\gamma(v)\le\rho$ for $v\in R$ and $\gamma(v)=0$ for $v\notin R$, whose load is at most $1/2$
+on every edge of $Q$ that is not a bridge of $G$ and at most one on every edge of $Q$ that is a
+bridge of $G$.
+\end{definition}
+
+(Up to normalization, this is the notion of a \emph{pseudocenter} in~\cite{CKS13}.)
+
+\begin{lemma}[criterion]\label{lem:criterion}
+Let $Q$ be a connected subgraph of $G$, $s\in V(Q)$ and $R\subseteq X\cap V(Q)$ with
+$\rho|R|\ge1$. Suppose that for every edge $e$ of $Q$ that is a bridge of $Q$ but not a bridge
+of $G$, the component of $Q-e$ containing $s$ contains at least $1/\rho$ vertices of $R$.
+Then $s$ spreads in $(Q,R)$, and the flow can be computed by a maximum-flow computation.
+\end{lemma}
+\begin{proof}
+Give every edge of $Q$ capacity one if it is a bridge of $G$ and $1/2$ otherwise, add a sink
+$z$ and an arc of capacity $\rho$ from every $v\in R$ to $z$. It suffices to show that every
+$s$--$z$ cut has capacity at least one: then a maximum $s$--$z$ flow, scaled to value one,
+is the required flow, with $\gamma(v)$ the flow on the arc $vz$. Such a cut is given by $Z\subseteq V(Q)$ with $s\in Z$,
+and its capacity is $c(\delta_Q(Z))+\rho|R\cap Z|$. If $\delta_Q(Z)=\emptyset$ then $Z=V(Q)$
+and the capacity is at least $\rho|R|\ge1$. If $|\delta_Q(Z)|\ge2$, then
+$c(\delta_Q(Z))\ge1$. If $\delta_Q(Z)=\{e\}$, then $e$ is a bridge of $Q$ and $Z$ is the
+component of $Q-e$ containing $s$; either $e$ is a bridge of $G$ and $c(e)=1$, or by
+hypothesis $\rho|R\cap Z|\ge1$.
+\end{proof}
+
+\subsection{Clusters, bad bridges and tags}\label{sec:clusters}
+
+\begin{lemma}[clusters]\label{lem:clusters}
+Let $W\ge1$ with $\rho q\ge W$. One can compute a partition $V(G)=V_1\cup\dots\cup V_p$ such
+that every $G[V_j]$ is connected and $W\le\rho|X\cap V_j|<4W$ for every $j$.
+\end{lemma}
+\begin{proof}
+Since $\rho q\ge W\ge1$ we have $q\ge 4$, so $G$ is not a single edge, and the neighbour of a
+terminal is a non-terminal. Let $T$ be a spanning tree rooted at a non-terminal $r$; every
+vertex has at most three children and every terminal is a leaf of $T$ (it has degree one).
+Write $\rho(Y)=\rho|X\cap Y|$. Maintain a subtree $T'$ containing $r$, initially $T$. While
+$\rho(V(T'))\ge W$, pick a vertex $x$ of $T'$ whose subtree $T'_x$ in $T'$ satisfies
+$\rho(V(T'_x))\ge W$ while $\rho(V(T'_y))<W$ for every child $y$ of $x$ (walk down from $r$).
+Since $\rho<1\le W$, $x$ is not a leaf, so it is a non-terminal and
+$\rho(V(T'_x))<3W$. Output $V(T'_x)$ as a cluster and delete $T'_x$ from $T'$ (if $x=r$ the
+tree becomes empty). When the loop stops, the remaining tree has weight less than $W$; if it
+is non-empty, add its vertices to the last output cluster, whose top vertex has its parent in
+the remaining tree. At least one cluster is output since $\rho q\ge W$, every cluster induces
+a connected subgraph (it contains a spanning subtree), and the weights are in $[W,3W)$, or
+$[W,4W)$ for the merged cluster.
+\end{proof}
+
+From now on fix $W:=2$ and assume $\rho q\ge2$. Fix the partition of
+Lemma~\ref{lem:clusters}, and write $G_j:=G[V_j]$, $S_j:=X\cap V_j$, and $j(u)$ for the index
+of the cluster containing $u$. Thus
+\begin{equation}\label{eq:clustersize}
+2/\rho\le|S_j|<8/\rho\qquad\text{for every }j.
+\end{equation}
+Distinct cluster graphs are vertex-disjoint, hence edge-disjoint. An edge of $G$ whose
+endpoints lie in different clusters belongs to no cluster graph.
+
+\begin{definition}
+Let $s\in S_j$. A \emph{bad bridge for $s$} is an edge $e$ of $G_j$ that is a bridge of
+$G_j$ but not a bridge of $G$, such that the component $Z_e(s)$ of $G_j-e$ containing $s$
+satisfies $\rho|S_j\cap Z_e(s)|<1$. The terminal $s$ is \emph{good} if it has no bad bridge.
+\end{definition}
+
+\begin{lemma}\label{lem:bad}
+Let $s\in S_j$.
+\begin{enumerate}[label=(\roman*),nosep]
+\item If $s$ is good, then $s$ spreads in $(G_j,S_j)$.
+\item If $s$ is not good, there is a bad bridge $e_s$ for $s$ such that
+$Z_s:=Z_{e_s}(s)\subseteq Z_e(s)$ for every bad bridge $e$ for $s$. Moreover there is an edge
+$f_s=x_sy_s$ of $G$ with $x_s\in Z_s$ and $y_s\notin V_j$.
+\end{enumerate}
+Both can be computed in polynomial time.
+\end{lemma}
+\begin{proof}
+(i) follows from Lemma~\ref{lem:criterion} with $Q=G_j$ and $R=S_j$, since
+$\rho|S_j|\ge2$.
+
+(ii) Let $e\ne e'$ be bad bridges for $s$, with $Z=Z_e(s)$, $Z'=Z_{e'}(s)$ and far sides
+$F=V_j\setminus Z$, $F'=V_j\setminus Z'$. We claim $Z\subseteq Z'$ or $Z'\subseteq Z$. The
+graph $G_j[F]$ is a component of $G_j-e$, so it is connected. If $e'$ is not an edge of
+$G_j[F]$, then $F$ lies in one component of $G_j-e'$, so $F\subseteq F'$ (i.e.\ $Z'\subseteq Z$)
+or $F\cap F'=\emptyset$. If $e'$ is an edge of $G_j[F]$, then $G_j[Z]$ is connected, contains
+$s$ and avoids $e'$, so $Z\subseteq Z'$. It remains to exclude $F\cap F'=\emptyset$: then
+$F'\subseteq Z$, and since $\rho|S_j\cap Z'|<1$ and $\rho|S_j|\ge2$ we get
+$\rho|S_j\cap Z|\ge\rho|S_j\cap F'|>1$, contradicting that $e$ is bad. Hence the sets $Z_e(s)$
+over bad bridges $e$ form a chain; distinct bridges have distinct sides (as
+$\delta_{G_j}(Z_e(s))=\{e\}$), and we let $e_s$ be the one with the smallest side.
+
+Since $e_s$ is not a bridge of $G$ and $V_j\setminus Z_s\neq\emptyset$, the cut
+$\delta_G(Z_s)$ contains an edge $f_s\ne e_s$; write $f_s=x_sy_s$ with $x_s\in Z_s$. If
+$y_s\in V_j$, then $f_s$ would be an edge of $G_j$ joining the two components of $G_j-e_s$, so
+$f_s=e_s$; hence $y_s\notin V_j$.
+\end{proof}
+
+\begin{lemma}[tagging]\label{lem:tag}
+Let $s\in S_j$ be not good, and let $A$ be a connected subgraph of $G$ that is edge-disjoint
+from $G_j$, contains $x_s$, and contains $S_{j'}$ for some $j'\ne j$. Then $s$ spreads in
+$(G_j\cup A,\ S_j\cup S_{j'})$.
+\end{lemma}
+\begin{proof}
+Let $Q=G_j\cup A$ (connected) and $R=S_j\cup S_{j'}$, so $\rho|R|\ge2$. We verify the
+hypothesis of Lemma~\ref{lem:criterion}. Let $e$ be a bridge of $Q$ that is not a bridge of
+$G$, let $Z$ be the component of $Q-e$ containing $s$, and let $Z_0=Z\cap V_j$. Every edge of
+$G_j$ between $Z_0$ and $V_j\setminus Z_0$ lies in $\delta_Q(Z)=\{e\}$. If there is no such
+edge, connectivity of $G_j$ gives $V_j\subseteq Z$ and $\rho|R\cap Z|\ge\rho|S_j|\ge2$.
+Otherwise $e\in E(G_j)$ is a bridge of $G_j$ and $Z_0=Z_e(s)$. If
+$\rho|S_j\cap Z_0|\ge1$ we are done. If not, $e$ is a bad bridge for $s$, so
+$x_s\in Z_s\subseteq Z_0\subseteq Z$ by Lemma~\ref{lem:bad}(ii). Since $A$ is connected,
+contains $x_s$ and does not contain $e$, we get $V(A)\subseteq Z$, so
+$\rho|R\cap Z|\ge\rho|S_{j'}|\ge2$.
+\end{proof}
+
+\begin{lemma}[pairing in trees; cf.~{\cite[Lemma~3.14]{CKS13}}]\label{lem:pairing}
+Let $H$ be a tree and $Y$ a multiset of vertices of $H$ of even size. Then one can compute
+$|Y|/2$ pairwise edge-disjoint paths in $H$ (a path may consist of a single vertex) whose
+endpoints are exactly the elements of $Y$, each element used once.
+\end{lemma}
+\begin{proof}
+Induction on $|V(H)|$. Two copies of the same vertex can be paired by a trivial path, which
+uses no edge; so we may assume that every vertex occurs at most once in $Y$. If $|V(H)|=1$
+then $Y=\emptyset$. Otherwise let $\ell$ be a leaf of $H$ with neighbour $u$. If
+$\ell\notin Y$, apply induction to $H-\ell$. If $\ell\in Y$, let $Y'$ be the multiset obtained
+from $Y$ by replacing $\ell$ by an (additional) copy of $u$, apply induction to $Y'$ in
+$H-\ell$, and extend the path that ends at this copy of $u$ by the edge $u\ell$ (a trivial path
+at $u$ becomes the path $u\ell$). The edge $u\ell$ is used by exactly one path.
+\end{proof}
+
+\subsection{Selecting the pairs: proof of Theorem~\ref{thm:round}}\label{sec:selection}
+
+If $\rho q<2$, i.e.\ $\alpha q<8$, we route a single pair along a path; this suffices since
+$|M|\le q/2$ gives $\alpha|M|/2^{15}<1$. Assume $\rho q\ge2$ and fix the clusters as above.
+
+\paragraph{Step 1: one pair per cluster.}
+Scan the pairs of $M$ in any order and add $st$ to a set $Z$ if neither $j(s)$ nor $j(t)$ is
+marked; then mark $j(s)$ and $j(t)$.
+
+\begin{claim}\label{cl:Z}
+$|Z|\ge\rho|M|/16$, and every cluster contains terminals of at most one pair of $Z$.
+\end{claim}
+\begin{proof}
+A pair of $M\setminus Z$ has an endpoint in a cluster marked by an earlier pair of $Z$.
+Every pair of $Z$ marks two clusters with fewer than $16/\rho$ terminals in total
+by~\eqref{eq:clustersize}, so fewer than $16/\rho$ pairs of $M$ (including itself) have an
+endpoint there. Hence $|M|<16|Z|/\rho$. If a cluster contained terminals of two pairs of
+$Z$, the later one would have been added while the cluster was marked.
+\end{proof}
+
+Let $Z_1\subseteq Z$ be the pairs with $j(s)=j(t)$. If $|Z_1|\ge|Z|/2$, route every
+$st\in Z_1$ along a path in $G_{j(s)}$; these paths are edge-disjoint by
+Claim~\ref{cl:Z}, and $|Z_1|\ge\rho|M|/32$. Otherwise let $Z'=Z\setminus Z_1$, so
+$|Z'|\ge|Z|/2$. For a terminal $s$ of a pair of $Z'$ we call $j(s)$ its \emph{own cluster};
+by Claim~\ref{cl:Z}, distinct terminals of pairs of $Z'$ have distinct own clusters, and an
+own cluster contains no other terminal of a pair of $Z$.
+
+\paragraph{Step 2: tags and an independent set.}
+For every terminal $s$ of a pair of $Z'$ that is not good (in its own cluster),
+Lemma~\ref{lem:bad} gives $f_s=x_sy_s$; let $\tau(s):=j(y_s)\ne j(s)$ be the cluster
+\emph{tagged} by $s$. Let $D$ be the digraph on $Z'$ with an arc from $P$ to $P'\ne P$
+whenever a non-good terminal $s$ of $P$ has $\tau(s)=j(u)$ for a terminal $u$ of $P'$. Every
+pair has out-degree at most two, because a cluster contains terminals of at most one pair of
+$Z$.
+
+\begin{claim}\label{cl:I}
+One can compute $I\subseteq Z'$ with $|I|\ge|Z'|/5$ such that no arc of $D$ joins two pairs
+of $I$.
+\end{claim}
+\begin{proof}
+Every subset $Z''\subseteq Z'$ induces at most $2|Z''|$ arcs, so it contains a pair with at most
+four neighbours (in- or out-) within $Z''$. Repeatedly put such a pair into $I$ and delete it
+and its neighbours.
+\end{proof}
+
+Let $I_2\subseteq I$ be the pairs $st$ with $\tau(s)=j(t)$ or $\tau(t)=j(s)$, and
+$I_3=I\setminus I_2$. Suppose $|I_2|\ge|I|/2$. For $st\in I_2$ with, say, $\tau(s)=j(t)$, take
+a walk consisting of a path from $s$ to $x_s$ in $G_{j(s)}$, the edge $f_s$, and a path from
+$y_s$ to $t$ in $G_{j(t)}$. All edges of this walk have both endpoints in
+$V_{j(s)}\cup V_{j(t)}$, and for distinct pairs of $I_2$ these unions are disjoint. So the
+walks are edge-disjoint, $I_2$ is routable, and $|I_2|\ge|I|/2\ge\rho|M|/320$. From now on
+assume $|I_3|\ge|I|/2$.
+
+\begin{claim}\label{cl:transit}
+If $s$ is a non-good terminal of a pair of $I_3$, then the cluster $\tau(s)$ contains no
+terminal of any pair of $I$.
+\end{claim}
+\begin{proof}
+Let $st\in I_3$. We have $\tau(s)\ne j(s)$, and $\tau(s)\ne j(t)$ since $st\notin I_2$. If
+$\tau(s)=j(u)$ for a terminal $u$ of a pair $P'\in I\setminus\{st\}$, then $D$ has an arc from
+$st$ to $P'$, contradicting Claim~\ref{cl:I}.
+\end{proof}
+
+The clusters $\tau(s)$ of Claim~\ref{cl:transit} are called \emph{transit clusters}. They
+contain no terminal of $I$, so a transit cluster is nobody's own cluster. For a transit
+cluster $C$ let $T(C)$ be the set of non-good terminals $s$ of pairs of $I_3$ with $\tau(s)=C$,
+and $d(C)=|T(C)|$.
+
+The tag edges are pairwise distinct and belong to no cluster graph: $f_s$ joins the own
+cluster $j(s)$ to a transit cluster, so its endpoint in a non-transit cluster is $x_s$; if
+$f_s=f_u$ for terminals $s\ne u$ of pairs of $I_3$, then $x_s=x_u$, so $j(s)=j(u)$, which is
+impossible for distinct terminals.
+
+\paragraph{Step 3: pairing through transit clusters.}
+For every transit cluster $C$ with $d(C)\ge2$, fix a spanning tree $H_C$ of $G_C$; if $d(C)$ is
+odd, declare one terminal of $T(C)$ \emph{isolated}. Apply Lemma~\ref{lem:pairing} to the
+multiset $\{y_s:s\in T(C)\text{ not isolated}\}$ in $H_C$; if a path $P$ pairs $y_s$ with
+$y_{s'}$, call $s$ and $s'$ \emph{partners} and set $P_{ss'}:=P$. Let $B$ be the graph on the
+terminals whose edges join partners; every terminal has degree at most one in $B$.
+
+\begin{claim}\label{cl:Y}
+The set $Y$ of pairs of $I_3$ with no isolated terminal satisfies $|Y|\ge|I_3|/3$.
+\end{claim}
+\begin{proof}
+A transit cluster has at most one isolated terminal, and only if $d(C)\ge3$. Since every
+terminal lies in at most one set $T(C)$, the number of isolated terminals is at most
+$\frac13\sum_Cd(C)\le\frac23|I_3|$, and each of them excludes one pair.
+\end{proof}
+
+\paragraph{Step 4: sparsification.}
+Two distinct pairs of $Y$ \emph{conflict} if a terminal of one is a partner of a terminal of
+the other. Each pair conflicts with at most two others, so greedily we find a conflict-free
+$Y'\subseteq Y$ with $|Y'|\ge|Y|/3$. Let $Y'_a$ be the pairs $st\in Y'$ in which $s$ and $t$
+are partners, and $Y'_b=Y'\setminus Y'_a$.
+
+Suppose $|Y'_a|\ge|Y'|/2$. For $st\in Y'_a$ partnered through $C$, take the walk formed by a
+path from $s$ to $x_s$ in $G_{j(s)}$, the edge $f_s$, the path $P_{st}$ in $H_C$, the edge
+$f_t$, and a path from $x_t$ to $t$ in $G_{j(t)}$. Own clusters are distinct and are not
+transit clusters, pairing paths in one tree $H_C$ are edge-disjoint, distinct transit clusters
+are vertex-disjoint, and tag edges are distinct and lie in no cluster graph. Hence these walks
+are edge-disjoint and $Y'_a$ is routable.
+
+\paragraph{Step 5: spreading for $Y'_b$.}
+Now suppose $|Y'_b|\ge|Y'|/2$.
+
+\begin{claim}\label{cl:cases}
+Let $s$ be a terminal of a pair $st\in Y'_b$. Then exactly one of the following holds:
+($\alpha$) $s$ is good; ($\beta$) $s$ is not good and $d(\tau(s))=1$; ($\gamma$) $s$ is not
+good, $d(\tau(s))\ge2$, and $s$ has a partner $s'$ that is not a terminal of any pair of $Y'$.
+\end{claim}
+\begin{proof}
+If $s$ is not good and $d(\tau(s))\ge2$, then $s$ is not isolated (as $st\in Y$), so it has a
+partner $s'$. We have $s'\ne t$ because $st\notin Y'_a$, and if $s'$ were a terminal of a pair
+$P'\in Y'$, then $P'\ne st$ and $st$ would conflict with $P'$.
+\end{proof}
+
+For every terminal $s$ of a pair of $Y'_b$ define a subgraph $Q(s)$ and a receiver set $R(s)$:
+\begin{itemize}[nosep]
+\item[($\alpha$)] $Q(s)=G_{j(s)}$ and $R(s)=S_{j(s)}$;
+\item[($\beta$)] with $C=\tau(s)$: $Q(s)=G_{j(s)}\cup\{f_s\}\cup G_C$ and
+$R(s)=S_{j(s)}\cup S_C$;
+\item[($\gamma$)] with $C=\tau(s)$: $Q(s)=G_{j(s)}\cup\{f_s\}\cup P_{ss'}\cup\{f_{s'}\}\cup
+G_{j(s')}$ and $R(s)=S_{j(s)}\cup S_{j(s')}$. Here $j(s')$ is the own cluster of $s'$; we call it
+the \emph{donor cluster} of $s$.
+\end{itemize}
+
+\begin{claim}\label{cl:spread}
+Every such $s$ spreads in $(Q(s),R(s))$.
+\end{claim}
+\begin{proof}
+Case ($\alpha$) is Lemma~\ref{lem:bad}(i). In case ($\beta$) apply Lemma~\ref{lem:tag} with
+$A=\{f_s\}\cup G_C$: it is connected ($f_s$ joins $x_s$ to $y_s\in V_C$), contains $x_s$ and
+$S_C$, and is edge-disjoint from $G_{j(s)}$ because $V_C\cap V_{j(s)}=\emptyset$. In case
+($\gamma$) apply Lemma~\ref{lem:tag} with $A=\{f_s\}\cup P_{ss'}\cup\{f_{s'}\}\cup G_{j(s')}$:
+it is connected (the walk $x_s,y_s,P_{ss'},y_{s'},x_{s'}$ ends in $V_{j(s')}$), contains $x_s$
+and $S_{j(s')}$, and $j(s')\ne j(s)$ since $s'\notin\{s,t\}$. It is edge-disjoint from
+$G_{j(s)}$: $f_s$ and $f_{s'}$ have an endpoint in $V_C$, $P_{ss'}\subseteq G_C$, and
+$V_{j(s')}\cap V_{j(s)}=\emptyset$.
+\end{proof}
+
+\begin{claim}\label{cl:disjoint}
+For distinct terminals $s\ne u$ of pairs of $Y'_b$, the graphs $Q(s)$ and $Q(u)$ are
+edge-disjoint and $R(s)\cap R(u)=\emptyset$.
+\end{claim}
+\begin{proof}
+Each $Q(s)$ consists of: its own cluster graph; at most two tag edges; in case ($\beta$) a
+transit cluster graph $G_C$ with $d(C)=1$; in case ($\gamma$) a pairing path inside a transit
+cluster with $d(C)\ge2$ and a donor cluster graph. We check that no part is shared. Own clusters
+of distinct terminals are distinct. A donor cluster $j(s')$ contains the terminal $s'$ of a
+pair of $I$ that is not in $Y'$; it is therefore not the own cluster of any terminal of $Y'_b$
+(an own cluster contains terminals of only one pair of $Z$) and not a transit cluster. The
+donors of distinct terminals are distinct (partners are unique), and the donor clusters of
+distinct donors $s',u'$ are distinct: otherwise $s',u'$ would be the two terminals of one pair
+of $Z'$, which lie in different clusters. A transit cluster $C$ with $d(C)=1$ is used, in case
+($\beta$), only by the unique terminal of $T(C)$, and it carries no pairing path. Pairing
+paths in one tree are edge-disjoint, and $P_{ss'}$ is used only by $s$, since its other end
+$s'$ is not a terminal of $Y'$. Tag edges are distinct, lie in no cluster graph, and $f_{s'}$
+is used only by the unique partner $s$ of $s'$. Finally, $R(s)$ is the union of $S_j$ over the
+own cluster and the transit or donor cluster of $s$; we showed that these clusters are
+distinct for distinct terminals, and the sets $S_j$ are disjoint.
+\end{proof}
+
+For every terminal $s$ of a pair of $Y'_b$ let $g_s$ be the flow given by
+Claim~\ref{cl:spread}. By Claim~\ref{cl:disjoint}, the total load of these flows is at most
+$1/2$ on every non-bridge and at most one on every bridge, and every $v\in X$ receives at
+most $\rho$, from at most one terminal. Thus they form a spreading system, and
+Lemma~\ref{lem:assembly} routes $Y'_b$ with congestion one.
+
+\paragraph{Counting.}
+In every branch the routed set has size at least
+$|Y'|/2\ge|Y|/6\ge|I_3|/18\ge|I|/36\ge|Z'|/180\ge|Z|/360\ge\rho|M|/5760=\alpha|M|/23040$,
+and $23040<2^{15}$; the other branches give more. If the routed set happens to be empty
+(possible only when $\alpha|M|/2^{15}<1$), we route a single pair instead. Every step (clusters, bridges, tags, greedy
+selections, pairing, maximum flows, the final linear program and cycle cancelling) takes
+polynomial time. By Lemma~\ref{lem:reduce}(d) the routing transfers to the original graph.
+This proves Theorem~\ref{thm:round}.\qed
+
+\subsection{Non-uniform paired weights: proof of Corollary~\ref{cor:paired}}\label{sec:paired}
+
+If $\pi(X)<2^{19}$, some pair has positive weight, so its endpoints are connected (the
+product demand between them is positive); route that pair alone. Assume $\pi(X)\ge 2^{19}$
+and let $q=|X|$ and $\phi_0=\pi(X)/(4q)$. Discard all pairs with $\pi(s)<\phi_0$; their total
+weight is less than $q\phi_0=\pi(X)/4$. For each remaining terminal $u$ let
+$n(u)=\lfloor\pi(u)/\phi_0\rfloor\ge1$ and $\pi'(u)=\phi_0n(u)\ge\pi(u)/2$, and $\pi'=0$ on
+discarded terminals. Then $\pi'(X)\ge\frac38\pi(X)$ and $n(u)\le1/\phi_0\le 4q$. Let
+$\lambda=\pi'(X)/\pi(X)\in[\frac38,1]$ and $\pi''=\lambda\pi'$. Since
+$\pi''(u)\pi''(v)/\pi''(X)=\pi'(u)\pi'(v)/\pi(X)\le\pi(u)\pi(v)/\pi(X)$, the set
+$X''=\mathrm{supp}(\pi'')$ is $\pi''$-flow-linked, and $\pi''(X)\ge\frac{9}{64}\pi(X)$.
+
+Construct $G'$ from $G$ by attaching, to every $u\in X''$, $n(u)$ new pendant vertices
+(\emph{copies} of $u$), as in~\cite[Lemma~1.1]{CKS05}. For each remaining pair $st$ (note $n(s)=n(t)$) match the $r$-th copy
+of $s$ with the $r$-th copy of $t$; let $M_c$ be the resulting $q'=\sum_u n(u)$ copies'
+matching. Put $\phi=\lambda\phi_0\le\frac14$, so that $\pi''(u)=\phi\,n(u)$ and
+$\pi''(X)=\phi q'$. We claim the set of copies is $\phi$-flow-linked in $G'$. Between copies of
+distinct $u,v$ the total demand is $n(u)n(v)\phi/q'=\pi''(u)\pi''(v)/\pi''(X)$, which we route
+along the $\pi''$-product flow between $u$ and $v$ (at most the $\pi$-product flow) extended by
+the pendant edges; between two copies of the same $u$ we route through $u$. Each pendant edge
+carries at most $\phi(q'-1)/q'<1$, and the original edges carry at most one. All copies lie in
+one component of $G'$, to which we apply Theorem~\ref{thm:round} with $\alpha=\phi$. It
+returns at least $\phi|M_c|/2^{15}=\pi''(X)/2^{16}\ge 9\pi(X)/2^{22}\ge\pi(X)/2^{19}$ copy pairs
+routable with congestion one.
+
+No two of them are copies of the same pair $st$: the unique edge of $G$ at $s$ separates $s$
+and all its copies from $t$ and all its copies, so two such copy pairs would each send one
+unit across this edge. Deleting the pendant edges from the routing (after cycle cancelling,
+a path from a copy of $s$ to a copy of $t$ is a path from $s$ to $t$ extended by two pendant
+edges) gives a routing of the corresponding pairs of $M$ in $G$ with congestion one. All
+quantities are polynomial since $n(u)\le4q$.\qed
+
+\section{Well-linked decomposition with near-logarithmic loss}\label{sec:decomp}
+
+\begin{theorem}\label{thm:decomp}
+Let $G$ be a graph and $(s_i,t_i)_{i\in[k]}$ pairs whose $2k$ endpoints are distinct vertices
+of degree one. Let $f$ be a feasible multicommodity flow routing $x_i\in[0,1]$ between $s_i$
+and $t_i$, with $F=\sum_ix_i>0$. Then one can compute in polynomial time, using a constant
+number of calls to the algorithm of Theorem~\ref{thm:bjs} on $G$ with an integral weighting of
+total weight at most $4k$, disjoint sets $U_1,\dots,U_\ell\subseteq V(G)$, and for every $j$ a
+set $P_j$ of pairs with both endpoints in $U_j$ and weights $\pi_j$ on the endpoint set $X_j$
+of $P_j$, such that:
+\begin{enumerate}[label=(\roman*),nosep]
+\item $\pi_j(s_i)=\pi_j(t_i)\le1/8$ for $i\in P_j$; moreover all values of all $\pi_j$ are
+positive integer multiples of a common rational $\phi>0$;
+\item every vertex of $X_j$ has degree one in $G[U_j]$, and $X_j$ is $\pi_j$-flow-linked in
+$G[U_j]$;
+\item $\sum_j\pi_j(X_j)\ge 3F/(128\,\Gamma(4k))$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\emph{Discretization.} Let $\eps=F/(2k)$. For every $i$ let $d_i=\lfloor x_i/\eps\rfloor$ if
+$x_i\ge\eps$ and $d_i=0$ otherwise (this is the uniformization idea
+of~\cite[Lemma~1.1]{CKS05}, at granularity $\eps$). Let $K=\sum_id_i$. Then
+$K\le\sum_ix_i/\eps=2k$. Moreover $\lfloor y\rfloor\ge y/2$ for $y\ge1$, and the pairs with
+$x_i<\eps$ have total value less than $k\eps=F/2$, so
+\begin{equation}\label{eq:K}
+K\eps\ \ge\ \tfrac12\textstyle\sum_{i:x_i\ge\eps}x_i\ \ge\ F/4 .
+\end{equation}
+Let $A(s_i)=A(t_i)=d_i$ for every $i$ and $A=0$ elsewhere; this is well defined because the
+endpoints are distinct, and $|A|=2K\le4k$.
+
+\emph{One decomposition.} With $\Gamma=c_0\Gamma_1$ as in Section~\ref{sec:prelim}, for
+$j=0,1,2,\dots$ run the algorithm of Theorem~\ref{thm:bjs} on $(G,A)$ with
+$\phi_j=\eps/(2^{j+3}\Gamma_1(2K))$, obtaining $C_j$, and stop at the first $j$ with
+$|C_j|\le\eps K/4$. Since $|C_j|\le\phi_j\cdot2K\cdot c_0\Gamma_1(2K)=c_0\eps K/2^{j+2}$, the
+search stops at some $j\le\lceil\log c_0\rceil$, i.e.\ after $O(1)$ calls. Let $\phi$ and $C$
+be the final values. Then
+\[
+|C|\le\eps K/4,\qquad \phi\ \ge\ \frac{\eps}{2^{\lceil\log c_0\rceil+3}\Gamma_1(2K)}\ \ge\
+\frac{\eps}{16\,\Gamma(2K)},
+\]
+and $A|_U$ is $\phi$-flow-expanding in $G[U]$ for every component $U$ of $G-C$. (If $c_0$ is
+known, a single call with $\phi=\eps/(8\Gamma(2K))$ suffices.)
+
+\emph{Charging.} Call pair $i$ (with $d_i\ge1$) \emph{separated} if $s_i$ and $t_i$ lie in
+different components of $G-C$. If $Z$ is the component containing $s_i$, then
+$\delta_G(Z)\subseteq C$, so the flow of pair $i$ in $f$ has load at least $x_i\ge\eps d_i$ on
+$C$. As $f$ has load at most one on each edge (cf.~\cite[Lemma~2.2]{CKS05}),
+\[
+\eps\textstyle\sum_{i\ \mathrm{separated}}d_i\ \le\ \sum_{i\ \mathrm{separated}}x_i\ \le\
+|C|\ \le\ \eps K/4 .
+\]
+Hence the pairs that are not separated and have $d_i\ge1$ (the \emph{surviving} pairs) satisfy
+$\sum_{i\ \mathrm{surviving}}d_i\ge3K/4$.
+
+\emph{The pieces.} For every component $U$ of $G-C$ that contains a surviving pair, let $P_U$
+be the set of surviving pairs with both endpoints in $U$, $X_U$ their endpoints, and
+$\pi_U=\phi A|_{X_U}$. Property (i) holds since $\phi\le\eps/(8\Gamma_1(2K))\le\eps/8$ gives
+$\phi d_i\le\phi x_i/\eps\le1/8$, and all values are multiples of $\phi$. For a surviving pair $i$ in $U$, the vertices $s_i\ne t_i$ are
+connected in $G-C$, so the unique edge at $s_i$ is not in $C$ and the neighbour of $s_i$ lies in
+$U$; thus $s_i$ (and likewise $t_i$) has degree one in $G[U]$. By Lemma~\ref{lem:monotone},
+applied to the $\phi$-flow-expanding weighting $A|_U$ in $G[U]$ and $Y=X_U$, the set $X_U$ is
+$\pi_U$-flow-linked in $G[U]$. This proves (ii). Distinct components are disjoint. Finally,
+by~\eqref{eq:K},
+\[
+\sum_U\pi_U(X_U)=2\phi\sum_{i\ \mathrm{surviving}}d_i\ \ge\ \tfrac32\phi K\ \ge\
+\frac{3K\eps}{32\,\Gamma(2K)}\ \ge\ \frac{3F}{128\,\Gamma(4k)},
+\]
+using monotonicity of $\Gamma$. All steps are polynomial.
+\end{proof}
+
+\begin{remark}[other decomposition algorithms]\label{rem:oracle}
+The proof uses only the following property of Theorem~\ref{thm:bjs}: for the integral
+weighting $A$ with $|A|\le4k$ and any $\phi>0$, the algorithm returns $C$ with
+$|C|\le\phi|A|\gamma$ such that $A|_U$ is $\phi$-flow-expanding in $G[U]$ for every component
+$U$ of $G-C$. Any algorithm with this property, for a known $\gamma$, yields
+Theorem~\ref{thm:decomp} with $16\Gamma(4k)$ replaced by $8\gamma$ (take $\phi=\eps/(8\gamma)$).
+\end{remark}
+
+\section{The approximation algorithm}\label{sec:main}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Normalize the instance (Section~\ref{sec:prelim}) and solve the LP~\eqref{eq:lp} in its
+compact edge form; let $x$ and $f$ be an optimal solution. If $\LP=0$, no pair is connected and
+we return the empty set. Otherwise $\LP\ge\OPT\ge1$, since a single connected pair is routable.
+Apply Theorem~\ref{thm:decomp} to $f$ with $F=\LP$. For every piece $(U_j,P_j,\pi_j)$ apply
+Corollary~\ref{cor:paired} in $G[U_j]$; its hypotheses hold by Theorem~\ref{thm:decomp}(i)--(ii).
+It returns a set of pairs of $P_j$ of size at least $\pi_j(X_j)/2^{19}$ routable in $G[U_j]$
+with congestion one. The sets $U_j$ are disjoint, so the induced subgraphs are edge-disjoint and
+the union of these routings is a routing of congestion one in $G$. Its size is at least
+\[
+\sum_j\frac{\pi_j(X_j)}{2^{19}}\ge\frac{3\,\LP}{2^{26}\,\Gamma(4k)} .
+\]
+(If no piece exists, we return one connected pair; Corollary~\ref{cor:paired} returns at least
+one pair per piece, so the output is never empty.) All steps other than the calls to the
+algorithm of~\cite{BJS26} are deterministic and polynomial. By~\eqref{eq:gamma},
+$\Gamma(4k)\le C'\log(k+2)\exp(C'\sqrt{\log\log(k+4)})$ for an absolute constant $C'$, and
+$\LP\ge\OPT$.
+\end{proof}
+
+\begin{corollary}[integrality gap]
+For every unit-capacity instance with $k$ pairs, $\LP\le O(\Gamma(4k))\cdot\OPT
+=\log^{1+o(1)}k\cdot\OPT$.
+\end{corollary}
+
+\begin{remark}[integer capacities]
+If edges have integer capacities $u(e)$ and demands are one, one can replace every edge by
+$u(e)$ parallel unit edges. To keep the instance polynomial, first use the argument
+of~\cite[Section~2]{CKS13}: decompose an optimal edge flow into polynomially many paths and
+take a basic optimal solution of the path formulation restricted to these paths. A pair with
+$x_i\in(0,1)$ has a non-tight pair constraint, so the number of such pairs is at most the
+number of tight edge constraints, i.e.\ at most $m$. If the pairs with $x_i=1$ carry at least
+half of $\LP$, they form a routable set; otherwise restrict to the at most $m$ fractional pairs,
+whose total load on any edge is at most $m$, and cap the capacities at $m$. This loses a factor
+two, and Theorem~\ref{thm:main} then applies with the same asymptotic ratio.
+\end{remark}
+
+\begin{remark}[weighted version, with an extra logarithm]\label{rem:weighted}
+For pairs with profits $w_i\ge0$ and the weighted relaxation $\LP_w=\max\sum_iw_ix_i$, the
+standard class argument gives ratio $O(\Gamma(4k)\log k)=\log^{2+o(1)}k$. Let $W$ be the
+largest profit of a pair with connected endpoints, so $\LP_w\ge W$ (pairs with disconnected
+endpoints have $x_i=0$). Pairs with $w_i<W/k^2$ contribute at most $W/k\le\LP_w/k$ and are
+discarded; the others fall into $O(\log k)$ classes $\{i:w_i\in(W2^{-j-1},W2^{-j}]\}$, one of
+which carries at least an $\Omega(1/\log k)$ fraction of $\LP_w$. Theorem~\ref{thm:decomp} and
+Corollary~\ref{cor:paired} apply to the optimal flow restricted to that class (any feasible flow
+may be used), and every routed pair has profit at least half the maximum profit in its class. We
+do not know how to avoid the extra logarithm; see Section~\ref{sec:discussion}.
+\end{remark}
+
+\begin{remark}[Anand's decomposition; conditional]\label{rem:anand}
+Anand~\cite{Anand26} improves flow-expander decomposition to overhead $O(\log n\log\log n)$.
+His node-weighted theorem (Theorem~5.1 of~\cite{Anand26}) gives overhead
+$O(\log|A|\log\log|A|)$ for rational weightings with $A(v)\ge1$ for \emph{every} vertex $v$, so
+that $|A|\ge n$. Our weighting vanishes outside the $2k$ terminals, so this bound does not give
+an overhead in terms of $k$. For weightings that may vanish, Section~5 and Appendix~C
+of~\cite{Anand26} state overhead $O(\log n\log\log n)$, with $n$ the number of vertices; we
+have not verified that appendix. \emph{If} that statement holds, Remark~\ref{rem:oracle} and
+Corollary~\ref{cor:paired} give a polynomial-time $O(\log n\log\log n)$-approximation for
+AN-MCF (the normalized graph has $n+2k$ vertices, and by the previous remark we may assume
+$k\le m$). This bound is incomparable with Theorem~\ref{thm:main} and better when
+$n\le k^{O(1)}$. Obtaining $O(\log k\log\log k)$ would require a node-weighted decomposition
+whose overhead depends only on the total weight even when most vertices have weight zero, or a
+reduction eliminating zero-weight vertices without loss; we leave this open.
+\end{remark}
+
+\section{Lower bounds and open problems}\label{sec:discussion}
+
+\paragraph{Lower bounds.}
+Andrews, Chuzhoy, Guruswami, Khanna, Talwar and Zhang~\cite{ACGKTZ10} show that AN-MCF is hard
+to approximate within $\log^{1/2-\delta}n$ unless
+$\mathrm{NP}\subseteq\mathrm{ZPTIME}(n^{\mathrm{polylog}\, n})$, and that the integrality gap
+of~\eqref{eq:lp} is $\log^{1/2-\delta}n$ (as quoted in~\cite{CKS13}). These bounds are stated in
+terms of the number $n$ of vertices. Pairs with $s_i=t_i$ count equally in $\LP$ and $\OPT$ and
+can be removed; afterwards, keeping at most $\deg(u)$ copies of each repeated pair $\{u,v\}$
+changes neither $\LP$ nor $\OPT$, so one may assume $k\le n^2m$. For instances of polynomial
+size ($m\le n^{O(1)}$, as produced by such reductions) this gives $\log k=O(\log n)$, and the
+lower bounds read $\Omega(\log^{1/2-\delta}k)$. Thus on such instances the integrality gap of
+the natural relaxation lies between $\log^{1/2-\delta}k$ and $\log^{1+o(1)}k$. The
+$\Omega(\log n)$ lower bound on the overhead of expander decompositions~\cite{BJS26} concerns the
+decomposition, not AN-MCF, and we do not know whether $\Omega(\log k)$ is a barrier for
+approaches based on flow-linked decompositions.
+
+\paragraph{Weighted version.}
+For pairs with profits $w_i$, the decomposition step charges separated pairs by the amount of
+flow crossing the cut, which bounds their total \emph{flow}; a cut of the allowed size may
+separate all of the most profitable pairs. Weighting the terminals by profit makes the cut
+bound grow with the profit range, and grouping pairs into profit classes loses a further
+logarithm, which gives the $\log^{2+o(1)}k$ bound of Remark~\ref{rem:weighted}. We do not know
+how to obtain a $\log^{1+o(1)}k$ ratio for weighted AN-MCF. (We
+expect the rounding of Section~\ref{sec:rounding} to extend to weights along the lines
+indicated in~\cite{CKS13}; the obstacle is the decomposition.)
+
+\paragraph{Node capacities.}
+For node-capacitated AN-MCF, \cite{CKS05} obtain polylogarithmic ratios with congestion
+$1+\eps$. An analogue of Theorem~\ref{thm:main} would require vertex flow-expander
+decompositions with near-logarithmic overhead for integral weightings, which~\cite{BJS26}
+list as open, and a node analogue of the rounding.
+
+\paragraph{Other questions.}
+Can the ratio be improved to $O(\log k)$, or even to $O(\log^{1/2+o(1)}k)$? Can the
+decomposition of Theorem~\ref{thm:decomp} improve other applications of well-linked
+decompositions in general graphs, such as those in~\cite{CL16}?
+
+\paragraph{Computational sanity checks.}
+We implemented the rounding of Section~\ref{sec:rounding} (degree reduction, clusters, bad
+bridges, tags, Steps~1--5, spreading flows by maximum flow) and ran it on $270$ random instances
+with up to $68$ terminals, checking every intermediate assertion of the proof (nesting of bad bridges,
+existence of tag edges, transit clusters free of terminals of $I$, edge-disjointness of the
+graphs $Q(s)$ and of the direct routings, the spreading-system conditions) and verifying by linear
+programming that each selected set is routable with congestion one. Lemmas~\ref{lem:criterion},
+\ref{lem:bad} and~\ref{lem:tag} were also tested directly on $20000$ random small graphs. Because
+of the constants, small instances mostly exercise the simpler branches of
+Section~\ref{sec:selection}: the branches $Z_1$, $I_2$ and $Y'_b$ (with cases ($\alpha$) and
+($\beta$)) occurred, while case ($\gamma$) and the branch $Y'_a$ did not occur (Lemma~\ref{lem:tag},
+which case ($\gamma$) uses, was tested directly). These checks are diagnostics only and are not part of any
+proof.
+
+\section*{Acknowledgment}
+This paper was prepared with substantial assistance from AI language models (Anthropic's
+Claude), which were used for research exploration, proof drafting, and computational
+verification; the author has checked the arguments and takes full responsibility for the
+content.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

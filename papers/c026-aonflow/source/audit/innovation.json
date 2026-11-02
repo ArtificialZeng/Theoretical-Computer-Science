@@ -1,0 +1,16 @@
+{
+  "job_id": "c026-aonflow-referee-92aab2001150",
+  "snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd",
+  "verdict": "accept",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    "Bansal, Jambulapati and Saranurak, Expander Decomposition with Almost Optimal Overhead, arXiv:2602.15015v2 / ICALP 2026 article 22, Theorem 3.1 (integral total-weight flow decomposition) and Conjecture 5.1 (full near-logarithmic AON target); verified in frozen and current official primary text.",
+    "Chekuri, Khanna and Shepherd, Multicommodity Flow, Well-linked Terminals, and Routing Problems, STOC 2005, 183–192, DOI 10.1145/1060590.1060618, Lemma 1.1 (uniformization), Theorem 3.1 (uniform congestion-1 matching rounding), Theorem 3.2 (O(log^2 k) AON); verified in author PDF, with its correction footnote.",
+    "Chekuri, Khanna and Shepherd, The All-or-Nothing Multicommodity Flow Problem, SIAM J. Comput. 42(4), 1467–1493 (2013), DOI 10.1137/100796820, Lemmas 3.3–3.4 and 3.9–3.14; inspected corrected published proof and checked its common-distribution transfer for uniform leaf endpoints.",
+    "Anand, Greedy Region Growing, arXiv:2610.17237v1, Theorems 1.4 and 5.1, Appendix C; current primary text improves decomposition overhead and gives an n-sensitive nonnegative-weight extension, without an AON admission algorithm."
+  ],
+  "substantive_delta": "One uniform randomized polynomial-time algorithm for the entire immutable unit-capacity undirected AON input class achieves C log(k+2) exp(C sqrt(log log(k+4))) approximation with exact congestion one, distinct original admissions, always feasible output and probability at least 3/4, improving the primary-source O(log^2 k) baseline.",
+  "why_nonroutine": "The result does not merely substitute an improved bound into adaptive throughput decomposition. A fixed feasible uniform path family permits a cut-loss charge while protected original occurrence cuts convert unit copy selection to distinct original admission; the uniform scale cancels in the one-shot decomposition/rounding yield. The exact small-k branch removes the remaining n-versus-k obstruction. Uniformization, clustering and flow decomposition are credited as known. Their admission-preserving interface yields a new full-target algorithm rather than a restricted or subsidiary corollary.",
+  "significance": "It reduces nearly one logarithmic exponent for a standard nonlinear admission/routing model on all undirected unit-capacity graphs without congestion augmentation, resolving the exact recent BJS conjecture and the stated older O(log^2 k) benchmark. This is substantive mathematical value; the separate venue assessment is conservative about technical depth and broader consequences.",
+  "remaining_gaps": []
+}

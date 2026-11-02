@@ -1,0 +1,16 @@
+{
+  "job_id": "c022-spe-memory-release-fb6f51f9715a",
+  "checks": {
+    "all_current_job_ids": true,
+    "all_current_bindings": true,
+    "sources_exact_sorted": true,
+    "dependency_scope_complete": true,
+    "undefined_citations_false": true,
+    "scope_nonempty": true,
+    "build_log_digest_matches": true,
+    "clean_build_true": true,
+    "pages_exact": true,
+    "all_frozen_hashes_preserved": true,
+    "working_paper_retained": true
+  }
+}

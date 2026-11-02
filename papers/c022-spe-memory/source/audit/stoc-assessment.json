@@ -1,0 +1,47 @@
+{
+  "job_id": "c022-spe-memory-referee-af2ba8807d2f",
+  "snapshot_digest": "8167ae363386355fe869e8109b82155be5da309379f81a3f7216041bf9acf52f",
+  "review_type": "fresh_internal_stoc_assessment",
+  "verdict": "working_paper",
+  "strongest_result": "Every pure SPE in every set-sized n-player turn-based Boolean reachability arena without dead ends, with arbitrary branching, has an exact-payoff-equivalent pure SPE using at most n*3^n vertex-update memory states per player, credible after every legal history. Old lower-semicontinuous-payoff existence yields unconditional bounded-memory existence. For n=k+2, the frozen finite degree-two O(k^2)-vertex family forces binomial(k,floor(k/2)) states in every E-winning SPE.",
+  "nearest_comparisons": [
+    "arXiv:1806.05544v2, Proposition 19/Corollary 21 (related I&C 2021,104594): arena-dependent finite-graph reconstruction. The present bound is uniform over arbitrary infinite graphs; Theorem 34 already supplied FPT.",
+    "Bruyere et al., I&C 2021,104553, author-postprint Theorem 7: closely related outcome-indexed path selection under absorbing-leaf hypotheses. The candidate handles continuing arenas and arbitrary prescribed SPE payoffs.",
+    "Main, I&C 2026,105425, inspected author-version Theorem 23/Remark 1: arena-independent NE memory; the candidate enforces credibility after all histories in the same vertex model.",
+    "Flesch et al., MOR 2010, Theorem 2.3/Section 3.3: unrestricted pure existence and punishment antecedent; the finite-memory corollary adds no separate existence technique.",
+    "FSTTCS 2023 paper 1, Section 3.1.3, and Fijalkow-Horn arXiv:1010.2420v2 Lemmas 1-2: existing exponential-memory and checking mechanisms; no independent priority claim for exponential necessity is accepted.",
+    "Alluwaym-Main-Schewe arXiv:2607.07151v1, Theorems 7/10: randomized stationary finite-graph and absorbing-target pure results, without the candidate's constrained pure payoff preservation."
+  ],
+  "criteria": {
+    "importance": {
+      "judgment": "uncertain",
+      "reason": "The result fully answers Main's explicit 2025 memory question for a basic synthesis model. It identifies that arena size and branching do not force more internal states. However, the inspected sources and frozen packet do not establish a major wider TCS barrier or a compelling consequence outside this particular equilibrium-memory problem."
+    },
+    "novelty": {
+      "judgment": "strong",
+      "reason": "The precise full-scope theorem was not found in the bounded current primary-source review, and it is not an application of the compared statements. The new content is all-history compatibility/previous-owner normalization with a concrete vertex-update bound. Outcome labels, uniform path selection, minimizing punishments, unrestricted existence, FPT and qualitative exponential necessity already have antecedents and are excluded from the novelty case."
+    },
+    "technical_depth": {
+      "judgment": "uncertain",
+      "reason": "The new reset rule solves a real merging-history and credibility obstruction, and the all-history deviation invariant is rigorous. The proof is nevertheless a compact uniformization using elementary finite-target progress and closely related older constructions. The record does not establish a deeper general theorem, a new algorithmic framework, or a broader technique with demonstrated consequences."
+    },
+    "breadth_or_consequence": {
+      "judgment": "uncertain",
+      "reason": "The arena quantifiers are broad, and exact payoff preservation covers every winner constraint. But the objective class remains qualitative Reach, infinite vertex tables need not be effectively computable, finite-arena FPT was already known, and the lower bound only matches exponential order. No further algorithmic improvement or cross-objective consequence is proved."
+    },
+    "exposition_and_verifiability": {
+      "judgment": "strong",
+      "reason": "The frozen proof supplies explicit update and next functions, finite-rank progress and an arbitrary-deviation invariant. The lower-bound construction and collision argument are self-contained. The fresh checker verifies actual continuation payoffs and incentives after all legal histories on finite inputs. The additionally identified 2021 antecedent is explicitly recorded here for proper manuscript attribution; formal verification and publication-layout checks remain separate."
+    }
+  },
+  "case_for_stoc": "There is a concrete conceptual advance: an SPE can carry a finite credible payoff promise while the graph supplies progress, so neither continuation vertices nor path positions need be stored. It resolves the original arbitrary-arena memory problem and gives exponential-order bounds. This supports a worthwhile theory paper. It does not by itself demonstrate competitive STOC importance, depth and breadth: much of the machinery has close antecedents, and no new algorithmic or wider structural consequence is established. Mathematical acceptance therefore supports working_paper only.",
+  "remaining_weaknesses": [
+    "Broad STOC-level importance beyond the specialized equilibrium-memory question is not established.",
+    "Technical depth and generality beyond the compact promise-uniformization argument remain uncertain.",
+    "The existence corollary is routine and exponential necessity has known antecedents; neither can be counted again as an independent breakthrough.",
+    "The newly identified I&C 2021,104553 antecedent must be accurately credited; novelty is the precise extension, not outcome-memory or positional path selection in isolation.",
+    "No effective infinite-arena algorithm, new finite-arena FPT classification, general omega-regular extension or optimal exponential base is proved.",
+    "The literature search is bounded and does not certify exhaustive priority; no manuscript/build/citation/visual release gates were performed in this referee phase."
+  ],
+  "label_is_not_a_venue_decision": true
+}

@@ -1,0 +1,67 @@
+{
+  "job_id": "c025-incdec-referee-2ab23be91f58",
+  "snapshot_digest": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4",
+  "exact_arithmetic": true,
+  "seed": 250211,
+  "frozen_witnesses": 4,
+  "stats": {
+    "instances": 625,
+    "greedy_orders": 4318,
+    "comparator_checks": 83003,
+    "branch_nonnegative": 7567,
+    "branch_negative": 706,
+    "branch_zero": 3636,
+    "reversed_instances": 288,
+    "zero_endpoint_instances": 231,
+    "all_ties_instances": 148,
+    "minimum_slack": 0,
+    "maximum_ratio": "3/2"
+  },
+  "lower_bound": [
+    {
+      "n": 2,
+      "permutations": 2,
+      "minimum_worst_ratio": "1",
+      "formula": "1"
+    },
+    {
+      "n": 3,
+      "permutations": 6,
+      "minimum_worst_ratio": "4/3",
+      "formula": "4/3"
+    },
+    {
+      "n": 4,
+      "permutations": 24,
+      "minimum_worst_ratio": "3/2",
+      "formula": "3/2"
+    },
+    {
+      "n": 5,
+      "permutations": 120,
+      "minimum_worst_ratio": "8/5",
+      "formula": "8/5"
+    },
+    {
+      "n": 6,
+      "permutations": 720,
+      "minimum_worst_ratio": "5/3",
+      "formula": "5/3"
+    },
+    {
+      "n": 7,
+      "permutations": 5040,
+      "minimum_worst_ratio": "12/7",
+      "formula": "12/7"
+    },
+    {
+      "n": 8,
+      "permutations": 40320,
+      "minimum_worst_ratio": "7/4",
+      "formula": "7/4"
+    }
+  ],
+  "snapshot_preserved": true,
+  "all_checks_pass": true,
+  "scope": "Finite exact falsification and independent proof-step checks only. No owner code imported. Universal correctness and the limiting lower bound are established in audit/math.md, not by this finite computation."
+}

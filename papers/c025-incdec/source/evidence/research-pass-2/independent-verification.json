@@ -1,0 +1,71 @@
+{
+  "job_id": "c025-incdec-research-5525eccf7fba",
+  "witness_checks": [
+    {
+      "kind": "strong-h",
+      "n": 6,
+      "word": "RLLLLL",
+      "gap": "1/15",
+      "all_original_function_hypotheses_checked": true,
+      "all_trace_choices_maximal": true,
+      "all_output_prefixes_satisfy_ratio_2": true,
+      "worst_ratio": "10/7"
+    },
+    {
+      "kind": "residual-h",
+      "n": 6,
+      "word": "RLLLLL",
+      "gap": "1/15",
+      "all_original_function_hypotheses_checked": true,
+      "all_trace_choices_maximal": true,
+      "all_output_prefixes_satisfy_ratio_2": true,
+      "worst_ratio": "10/7"
+    },
+    {
+      "kind": "comparator-loss",
+      "n": 5,
+      "word": "LRLLL",
+      "gap": "1/7",
+      "all_original_function_hypotheses_checked": true,
+      "all_trace_choices_maximal": true,
+      "all_output_prefixes_satisfy_ratio_2": true,
+      "worst_ratio": "7/5"
+    }
+  ],
+  "compact_coverage_descriptions_match": true,
+  "residual_dual": {
+    "coefficient_identity_exact": true,
+    "nonnegative_weights": true,
+    "support_size": 12,
+    "scope": "One six-item trace/comparator only; no general-n claim."
+  },
+  "symbolic_family_checks": [
+    {
+      "m": 5,
+      "worst_ratio": "10/7",
+      "strong_template_gap": 1
+    },
+    {
+      "m": 6,
+      "worst_ratio": "3/2",
+      "strong_template_gap": 2
+    },
+    {
+      "m": 10,
+      "worst_ratio": "5/3",
+      "strong_template_gap": 6
+    },
+    {
+      "m": 100,
+      "worst_ratio": "100/51",
+      "strong_template_gap": 96
+    },
+    {
+      "m": 10000,
+      "worst_ratio": "10000/5001",
+      "strong_template_gap": 9996
+    }
+  ],
+  "source_sha256": "12956c470e37f8a548f510c7eb1781eda7b961999c5fa1163df43b56513b45a4",
+  "status": "All stated finite exact checks pass; original unresolved. Analytic restricted proof is in modular-side-lemma.md and has no fresh referee review."
+}

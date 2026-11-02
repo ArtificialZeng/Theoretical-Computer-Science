@@ -1,0 +1,52 @@
+{
+  "verified_cases": 255,
+  "verified_dead_end_sets": 122,
+  "recomputed_from_input_descriptions": true,
+  "exact_arithmetic": true,
+  "minimal_dead_end": {
+    "n": 3,
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "g": [
+      "0",
+      "12",
+      "4",
+      "13",
+      "5",
+      "12",
+      "9",
+      "13"
+    ],
+    "f": [
+      "13",
+      "9",
+      "12",
+      "5",
+      "13",
+      "4",
+      "12",
+      "0"
+    ],
+    "opt": [
+      "13",
+      "13",
+      "12",
+      "0"
+    ],
+    "dead_end_set": 1,
+    "good_chain": [
+      2,
+      1,
+      0
+    ]
+  },
+  "scope": "Exact finite observations and one intermediate-counterexample certificate only."
+}

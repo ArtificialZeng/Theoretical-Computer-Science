@@ -1,0 +1,39 @@
+{
+  "job_id": "c029-vftfast-research-36ff17e1eeb1",
+  "field_prime": 101,
+  "graphs": 110,
+  "DP_configurations": 4024,
+  "fault_disjointness_comparisons": 106424,
+  "failures": 0,
+  "coverage": [
+    {
+      "n": 2,
+      "graph_masks_checked": 2,
+      "all_labeled_graphs": true
+    },
+    {
+      "n": 3,
+      "graph_masks_checked": 8,
+      "all_labeled_graphs": true
+    },
+    {
+      "n": 4,
+      "graph_masks_checked": 64,
+      "all_labeled_graphs": true
+    },
+    {
+      "n": 5,
+      "graph_masks_checked": 18,
+      "all_labeled_graphs": false
+    },
+    {
+      "n": 6,
+      "graph_masks_checked": 18,
+      "all_labeled_graphs": false
+    }
+  ],
+  "d_range": "1..min(n-1,4)",
+  "f_range": "0..n-d-1",
+  "elapsed_seconds": 0.122574,
+  "scope": "Exact finite representative-DP test. No complete spanner test or infinite original resolution."
+}

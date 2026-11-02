@@ -1,0 +1,91 @@
+{
+  "job_id": "c026-aonflow-release-7db9e6fea069",
+  "snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd",
+  "manuscript_digest": "d852233f598ab85f715ccb8d53630a2f2d61b1da067c66cb20deb30f9503838c",
+  "pdf_digest": "50c157c4b7b471f5d2778b669efa55fde604245ebe40372a6c3cd79988c48fe4",
+  "checked_at_utc": "2026-11-02T01:01:23.276353+00:00",
+  "search_date_utc": "2026-11-02",
+  "search_templates_run": {
+    "BJS26": [
+      "Bansal 2026 Expander Decomposition with Almost Optimal Overhead",
+      "\"Expander Decomposition with Almost Optimal Overhead\" site:arxiv.org OR site:semanticscholar.org",
+      "Bansal Jambulapati Saranurak 2026 ICALP",
+      "doi:10.4230/LIPIcs.ICALP.2026.22",
+      "arxiv:2602.15015"
+    ],
+    "CKS05": [
+      "Chekuri 2005 Multicommodity Flow Well-Linked",
+      "\"Multicommodity Flow, Well-Linked Terminals, and Routing Problems\" site:arxiv.org OR site:semanticscholar.org",
+      "Chekuri 2005 STOC well-linked",
+      "doi:10.1145/1060590.1060618"
+    ],
+    "CKS13": [
+      "Chekuri 2013 The All-or-Nothing",
+      "\"The All-or-Nothing Multicommodity Flow Problem\" site:arxiv.org OR site:semanticscholar.org",
+      "Chekuri 2013 SIAM Journal Computing",
+      "doi:10.1137/100796820"
+    ],
+    "Anand26": [
+      "Anand 2026 Greedy Region Growing",
+      "\"Greedy Region Growing: Improved Approximations for Cutwidth, Pathwidth, Flow-Expander Decomposition, and More\" site:arxiv.org OR site:semanticscholar.org",
+      "doi:10.48550/arXiv.2610.17237",
+      "arxiv:2610.17237"
+    ]
+  },
+  "sources": [
+    {
+      "key": "BJS26",
+      "metadata_basis": "official_publisher_and_frozen_primary_text",
+      "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2026.22",
+      "primary_text": "intake/primary/2602.15015-expanders.txt",
+      "passages": [
+        "Theorem 3.1, printed page 3",
+        "Section 5 / Conjecture 5.1, printed page 13"
+      ],
+      "finding": "Integral nonnegative weights, total-weight overhead and induced-component all-demand expansion agree. Unit-capacity AON model, O(log^2 k) baseline and original target agree."
+    },
+    {
+      "key": "CKS05",
+      "metadata_basis": "live_author_pdf_and_author_institution_record",
+      "url": "https://chekuri.cs.illinois.edu/papers/well-linked.pdf",
+      "metadata_url": "https://experts.illinois.edu/en/publications/multicommodity-flow-well-linked-terminals-and-routing-problems/",
+      "primary_text": "intake/primary/CKS2005-welllinked.txt",
+      "passages": [
+        "Lemma 1.1, PDF pages 3\u20134",
+        "Theorems 3.1\u20133.2 and strengthened-clustering footnote, PDF page 7"
+      ],
+      "finding": "Prior uniformization/duplication and general uniform matching rounding are credited accurately; baseline is O(log^2 k). Author PDF determines conference identity; an unrelated event field in the institutional index is disregarded."
+    },
+    {
+      "key": "CKS13",
+      "metadata_basis": "complete_frozen_published_primary_pdf_and_text",
+      "url": "https://chekuri.cs.illinois.edu/papers/anflow-sicomp.pdf",
+      "primary_text": "intake/primary/CKS2013-AON.txt",
+      "passages": [
+        "Title page / printed page 1467: authors, journal, volume 42(4), pages 1467\u20131493, year 2013, DOI 10.1137/100796820",
+        "Lemma 3.3, printed pages 1476\u20131477",
+        "Lemma 3.4, printed page 1477",
+        "Section 3.4, printed pages 1478\u20131483; Theorem 3.8; Lemmas 3.9\u20133.14"
+      ],
+      "finding": "Nice-instance theorem is distinguished from the general conference statement. Common-distribution transfer, leaf receiving ownership, residual coverage and bridge integrality are explained as the accepted application-specific reconstruction. The journal paper identifies its preliminary version as STOC 2004; manuscript does not misidentify it as the journal version of CKS05."
+    },
+    {
+      "key": "Anand26",
+      "metadata_basis": "live_arxiv_v1_record_and_primary_html",
+      "url": "https://arxiv.org/abs/2610.17237v1",
+      "text_url": "https://arxiv.org/html/2610.17237v1",
+      "passages": [
+        "Theorem 1.4",
+        "Section 5 preamble and Theorem 5.1",
+        "Appendix C"
+      ],
+      "finding": "Author, exact full title, 12 October 2026 version and DOI agree. Theorem 5.1 assumes all weights at least one; arbitrary nonnegative weights use an n-sensitive extension. Manuscript claims decomposition context only."
+    }
+  ],
+  "format_source": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html",
+  "refresh_limits": [
+    "ACM publisher DOI endpoint: HTTP 403",
+    "CKS13 DOI endpoint: HTTP 403; live author PDF timed out"
+  ],
+  "no_user_designated_workbook": true
+}

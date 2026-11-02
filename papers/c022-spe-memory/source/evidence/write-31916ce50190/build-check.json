@@ -1,0 +1,43 @@
+{
+  "job_id": "c022-spe-memory-write-31916ce50190",
+  "pdf": "output/pdf/spe-memory-working_paper.pdf",
+  "pdf_sha256": "1c714b9216ce3cf89b26123c6beebf3c7a38d14b31e0b5a727dcaa214978306f",
+  "build_command": "sh manuscript/build.sh",
+  "final_build_started_with_empty_build_directory": true,
+  "final_engine_exit_code": 0,
+  "bibtex_exit_code": 0,
+  "page_count": 8,
+  "page_cap": 12,
+  "letter_size_points": [
+    612,
+    792
+  ],
+  "undefined_references_or_citations": false,
+  "overfull_boxes": false,
+  "bibtex_warnings": false,
+  "cited_entries": [
+    "AMS26",
+    "BBGR18",
+    "BBGR21",
+    "BGMR23",
+    "BLPR21",
+    "FH12",
+    "FKMSSV10",
+    "Main26",
+    "MainQuestion25"
+  ],
+  "all_cited_keys_resolve": true,
+  "all_fonts_embedded": true,
+  "remaining_nonfatal_warnings": [
+    "acmart reports unused global natbib=false although its option selects standard LaTeX citation handling",
+    "acmart reports no affiliation city; no unprovided city was invented"
+  ],
+  "build_logs": [
+    "manuscript/build/pass-1.txt",
+    "manuscript/build/bibtex.txt",
+    "manuscript/build/pass-2.txt",
+    "manuscript/build/pass-3.txt",
+    "manuscript/build/main.log",
+    "manuscript/build/main.blg"
+  ]
+}

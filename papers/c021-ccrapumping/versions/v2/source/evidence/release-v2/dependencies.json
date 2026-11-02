@@ -1,0 +1,21 @@
+{
+  "local_inputs": [
+    "manuscript/build/main.aux",
+    "manuscript/build/main.bbl",
+    "manuscript/build/main.out",
+    "manuscript/main.tex",
+    "manuscript/vendor/acmart.cls"
+  ],
+  "publication_source_files": [
+    "manuscript/BUILD.md",
+    "manuscript/latexmkrc",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/vendor/ACM-Reference-Format.bst",
+    "manuscript/vendor/README",
+    "manuscript/vendor/acmart.cls",
+    "manuscript/vendor/acmart.dtx",
+    "manuscript/vendor/acmart.ins"
+  ],
+  "final_auxiliary_regenerated": true
+}

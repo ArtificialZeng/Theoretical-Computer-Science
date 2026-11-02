@@ -1,0 +1,340 @@
+\documentclass[acmsmall,screen,nonacm,11pt,natbib=false]{acmart}
+\geometry{letterpaper,left=1in,right=1in,top=1in,bottom=1in}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\setcopyright{none}
+\renewcommand{\bibliofont}{\normalsize}
+\newcommand{\OPT}{\operatorname{OPT}}
+\newcommand{\F}{F}
+\newcommand{\emptysetv}{\varnothing}
+\title{Optimal Deterministic Incremental--Decremental Submodular Maximization}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\renewcommand{\shortauthors}{Zijian Zeng}
+\date{}
+\begin{document}
+\begin{abstract}
+\normalsize
+Incremental--decremental maximization asks for one ordering of a finite ground
+set such that every prefix has high utility. For two nonnegative monotone
+submodular functions $h$ and $g$, the utility of a prefix $S$ is
+$h(S)+g(E\setminus S)$, and its benchmark is the best set of the same size.
+Disser, Klimm, Lutz and Strubberg established a deterministic competitive
+upper bound of $1+e/(e-1)$ and a structural lower bound of $2$.
+
+We give a deterministic $2$-competitive algorithm for the full class,
+including arbitrary unequal endpoint totals. It uses $O(|E|^2)$ exact
+value-oracle queries and polynomial additional computation. If $h(E)\ge g(E)$,
+the algorithm greedily maximizes the actual objective marginal at each step,
+continuing through negative gains. Otherwise it swaps the functions and
+reverses the resulting order. The proof retains the initial objective as a
+budget in a submodular union comparison; endpoint orientation controls the
+negative-gain suffix. Combined with the existing lower bound, which we
+reproduce with attribution, this determines the optimal uniform deterministic
+constant as $2$, both with unrestricted computation and in the polynomial
+exact-value-oracle model.
+\end{abstract}
+\maketitle
+\clearpage
+
+\section{The problem and the sharp guarantee}
+
+An infrastructure renewal order must maintain useful service throughout a
+transition: some elements already operate under a new system, while the
+others remain in the old system. The incremental--decremental model of
+Disser, Klimm, Lutz and Strubberg~\cite{DKLS26} captures this requirement
+by evaluating both parts of a partition. The mathematical difficulty is to
+choose a \emph{single} order that performs well at every cardinality,
+rather than an unrelated approximate solution for each cardinality.
+
+Let $E$ be a finite ground set of size $n$. A set function $q:2^E\to
+\mathbb R_{\ge0}$ is normalized if $q(\varnothing)=0$, monotone if
+$q(A)\le q(B)$ whenever $A\subseteq B$, and submodular if
+\[
+ q(A)+q(B)\ge q(A\cup B)+q(A\cap B)\qquad(A,B\subseteq E).
+\]
+Initially assume that $h$ and $g$ have all three properties. Define
+\begin{equation}\label{eq:objective}
+ F(S)=h(S)+g(E\setminus S),\qquad
+ \OPT_k=\max_{\substack{O\subseteq E\\|O|=k}}F(O).
+\end{equation}
+For a permutation $\pi=(e_1,\ldots,e_n)$, write
+$S_k=\{e_1,\ldots,e_k\}$ and $S_0=\varnothing$.
+The permutation is $r$-competitive if
+\begin{equation}\label{eq:competitive}
+ rF(S_k)\ge\OPT_k\qquad(0\le k\le n).
+\end{equation}
+This inequality convention includes zero objectives without dividing by zero.
+The endpoint cardinalities each have a unique feasible set.
+
+The previous full-class bounds are $2$ and $1+e/(e-1)\approx2.582$:
+Corollary~2 and Proposition~11 of~\cite{DKLS26} give the upper and lower
+bounds, respectively, and its Section~5 asks to close the gap. Its
+Proposition~17 already gives a factor of $2$ when $h(E)=g(E)$.
+We address the entire pair class, with no equality requirement on these totals.
+
+\begin{theorem}\label{thm:main}
+For every finite $E$ and normalized nonnegative monotone submodular
+$h,g:2^E\to\mathbb R_{\ge0}$, a deterministic algorithm returns one permutation
+satisfying
+\[
+ 2F(S_k)\ge\OPT_k\qquad\text{simultaneously for every }k=0,\ldots,n.
+\]
+It uses $O(n^2)$ exact value-oracle queries and polynomial additional
+computation in a unit-cost exact-arithmetic and comparison model.
+The optimal uniform deterministic competitive constant is $2$ for both
+unrestricted algorithms and polynomial-oracle algorithms.
+The same constants hold for nonnegative monotone submodular inputs without
+normalization.
+\end{theorem}
+
+The algorithmic upper bound is the contribution here. The impossibility of
+any uniform constant below $2$ is prior work~\cite[Proposition~11]{DKLS26};
+Section~\ref{sec:lower} reproduces a coverage-family proof for completeness.
+Thus the result determines the exact worst-case cost of maintaining a single
+nested sequence for this model, with an efficient construction.
+
+The key distinction from ordinary monotone submodular greedy analysis is
+that $F$ may decrease. We preserve its positive initial value in the proof
+rather than subtracting it. Before greedy gains become negative, that initial
+value pays for the loss in comparing an optimal set with its union with a
+prefix. Afterward, orienting the order toward the larger endpoint supplies
+the guarantee directly. Both parts use elementary diminishing returns; no
+claim of a more general nonmonotone greedy theorem is needed.
+
+\paragraph{Relation to nearby results.}
+The double-greedy algorithm in~\cite{DKLS26} compares separate $h$ and $g$
+marginals when extending opposite ends of an order. Its exact worst-case
+ratio is $1+e/(e-1)$, even with modular $g$
+\cite[Proposition~19 and Corollary~20]{DKLS26}. Our algorithm instead commits
+to one direction and maximizes the marginal of the \emph{combined} objective.
+Consequently this is a different algorithm, rather than a sharper analysis
+of that double-greedy rule.
+
+For monotone incremental maximization, the subcase $g=0$,
+\cite{BBBCDL26} reports an upper bound of approximately $1.373$ and a lower bound of $1.25$.
+Its improved upper bound sacrifices computational efficiency and does not
+supply an upper bound for arbitrary pairs $h,g$. The factor $2$ proved here
+is sharp over the pair class; it is not asserted to be sharp for that subcase.
+For another nearby comparison, Chen and Kuhnle~\cite{CK26} analyze
+curvature-dependent greedy with pruning under a fixed at-most-$k$ constraint.
+Pruning can remove selected elements, so that result does not itself provide
+one permutation at every exact cardinality. These comparisons concern the
+stated models and theorems, rather than all possible consequences of those
+papers. A bounded primary-literature check found no equivalent full-class
+guarantee as of November~1, 2026; this does not establish universal priority.
+
+\section{The algorithm}\label{sec:algorithm}
+
+Fix a total order on $E$ for deterministic tie breaking. For a function $W$,
+write $W(e\mid P)=W(P\cup\{e\})-W(P)$ when $e\notin P$.
+Let $H=h(E)$ and $G=g(E)$.
+
+\begin{enumerate}
+\item If $H\ge G$, start with $P_0=\varnothing$. For $i=1,\ldots,n$ choose
+\[
+ e_i\in\arg\max_{e\in E\setminus P_{i-1}}F(e\mid P_{i-1}),
+ \qquad P_i=P_{i-1}\cup\{e_i\},
+\]
+breaking ties by the fixed order. Return $(e_1,\ldots,e_n)$.
+\item If $H<G$, apply the preceding greedy construction to the swapped
+objective $F'(A)=g(A)+h(E\setminus A)$, and return its order in reverse.
+\end{enumerate}
+
+The construction always continues until every element has been selected,
+including when the maximum available marginal is negative. It does not
+query $\OPT_k$. For $E=\varnothing$ it returns the empty permutation.
+The endpoint comparison is part of the algorithm, and will be used in the
+negative-gain case of the proof.
+
+There are $n(n+1)/2$ candidate evaluations. Each combined objective value
+uses two summand-oracle queries, and caching the current objective permits
+each marginal comparison with constant additional scalar arithmetic.
+Together with the endpoint queries this is at most $n(n+1)+2$ summand
+queries for normalized inputs. Set construction and bookkeeping require
+only polynomial additional computation. The model permits exact arithmetic
+and comparisons on oracle answers at unit cost; no bit-complexity guarantee
+for arbitrarily encoded real answers is asserted.
+
+\section{Proof of the simultaneous upper bound}\label{sec:proof}
+
+We first consider the orientation $H\ge G$. Complementation preserves
+submodularity: apply the defining inequality for $g$ to $E\setminus A$
+and $E\setminus B$, and interchange union and intersection. Thus
+$S\mapsto g(E\setminus S)$, and hence $F$, is submodular. Although $F$
+need not be monotone, its decomposition yields two useful bounds.
+
+\begin{lemma}\label{lem:budget}
+For every $O,P\subseteq E$,
+\begin{align}
+ F(O)&\le H+G,\label{eq:global}\\
+ F(O)&\le F(O\cup P)+G.\label{eq:union}
+\end{align}
+\end{lemma}
+\begin{proof}
+Monotonicity bounds $h(O)$ by $H$ and $g(E\setminus O)$ by $G$,
+proving~\eqref{eq:global}. Moreover,
+\begin{align*}
+ F(O)-F(O\cup P)
+ &=h(O)-h(O\cup P)\\
+ &\quad+g(E\setminus O)-g(E\setminus(O\cup P))\le G.
+\end{align*}
+The first difference is nonpositive by monotonicity of $h$; the second
+is at most $G$ by monotonicity and nonnegativity of $g$.
+\end{proof}
+
+Let $a_i=F(P_i)-F(P_{i-1})$ be the gains of the greedy order. These gains
+are nonincreasing, including after they become negative. Indeed, for
+$e\notin P_i$, diminishing returns and the preceding maximal choice give
+\[
+ F(e\mid P_i)\le F(e\mid P_{i-1})\le a_i.
+\]
+Maximizing the left side over the remaining elements proves
+$a_{i+1}\le a_i$ for $i<n$. Also $F(\varnothing)=G$ and $F(E)=H$.
+
+Fix any internal cardinality $1\le k<n$, put $P=P_k$ and $d=a_{k+1}$,
+and let $O$ be any set of size $k$.
+
+\paragraph{Case 1: $d\ge0$.}
+Adding the elements of $O\setminus P$ one by one, diminishing returns gives
+\begin{equation}\label{eq:extend}
+ F(O\cup P)-F(P)
+ \le\sum_{e\in O\setminus P}F(e\mid P)
+ \le |O\setminus P|d\le kd.
+\end{equation}
+The middle inequality follows because $d$ is the maximum marginal at $P$.
+The last inequality uses $d\ge0$ and $|O\setminus P|\le k$.
+Since the gains are nonincreasing,
+\begin{equation}\label{eq:charge}
+ kd\le\sum_{i=1}^k a_i=F(P)-G.
+\end{equation}
+Combining~\eqref{eq:union}, \eqref{eq:extend} and~\eqref{eq:charge} yields
+\[
+ F(O)\le F(P)+G+kd\le 2F(P).
+\]
+The initial value $G$ in~\eqref{eq:charge} cancels exactly the union-loss
+budget in~\eqref{eq:union}. The argument allows $d=0$ and arbitrary
+intersection between $O$ and $P$.
+
+\paragraph{Case 2: $d<0$.}
+Every remaining gain is at most $d<0$, so
+\[
+ H=F(E)=F(P)+\sum_{i=k+1}^{n}a_i\le F(P).
+\]
+Using~\eqref{eq:global} and the chosen orientation $H\ge G$ gives
+\[
+ F(O)\le H+G\le2H\le2F(P).
+\]
+
+The set $O$ was arbitrary. Thus this same order is $2$-competitive at every
+internal cardinality. At $k=0,n$ the unique feasible set is itself optimal,
+so the guarantee also holds there. Nonnegativity handles even zero endpoint
+values, and the proof never divides by a function value. There is no internal
+cardinality to consider for $n\le1$.
+
+\paragraph{Reversing the orientation.}
+If $H<G$, swap $h$ and $g$ and let $(u_1,\ldots,u_n)$ be the greedy order
+for $F'$. Its totals satisfy $H'=G\ge G'=H$, so the argument just proved
+applies. Write $Q_j=\{u_1,\ldots,u_j\}$. A size-$k$ prefix $S_k$ of
+the returned reverse order is $E\setminus Q_{n-k}$. Therefore
+\[
+ F(S_k)=F'(Q_{n-k}),\qquad
+ \OPT_k=\max_{|A|=n-k}F'(A).
+\]
+The second equality uses the bijection $A=E\setminus O$ between all
+size-$k$ comparators and size-$(n-k)$ comparators. The swapped guarantee
+now gives $2F(S_k)\ge\OPT_k$ simultaneously for every $k$.
+This completes the normalized upper-bound proof.
+
+\paragraph{Nonnegative baselines.}
+For unnormalized nonnegative monotone inputs set
+$\bar h(S)=h(S)-h(\varnothing)$,
+$\bar g(S)=g(S)-g(\varnothing)$, and
+$B=h(\varnothing)+g(\varnothing)\ge0$.
+The barred functions satisfy the normalized hypotheses. Apply the algorithm,
+including its endpoint comparison, to these functions. With
+$\bar F=\bar h+\bar g\circ(E\setminus\cdot)$, we have
+$F=\bar F+B$ and $\OPT_k=\overline{\OPT}_k+B$. Hence
+\[
+ 2F(S_k)=2\bar F(S_k)+2B
+ \ge\overline{\OPT}_k+2B\ge\OPT_k.
+\]
+This costs two extra baseline queries. It is the usual normalization transfer,
+also used in~\cite[Eq.~(5)]{DKLS26}; negative baselines are outside the model.
+
+\section{The matching lower bound from prior work}\label{sec:lower}
+
+For completeness we reproduce the curvature-one coverage construction of
+Disser, Klimm, Lutz and Strubberg~\cite[Proposition~11]{DKLS26}.
+For $n\ge2$ let $E=\{a,b_1,\ldots,b_{n-1}\}$ and define
+\[
+ q(S)=\begin{cases}
+ n-1,&a\in S,\\
+ |S|,&a\notin S.
+ \end{cases}
+\]
+This is a normalized nonnegative monotone coverage function: there are $n-1$
+unit-weight features, $a$ covers all of them, and $b_i$ covers only feature
+$i$. Set $h=g=q$. Each summand is submodular.
+
+At cardinalities $1$ and $n-1$ the optimum is $2(n-1)$, attained by
+$\{a\}$ and $E\setminus\{a\}$, respectively. This value is also an upper
+bound because each summand is at most $n-1$. In any permutation, if $a$
+is not first, its first prefix is a singleton $b_i$ and has objective value
+$1+(n-1)=n$. If $a$ is first, its prefix of size $n-1$ contains $a$, and
+the complement is one $b_i$; again its objective value is $n$.
+Every permutation therefore has competitive ratio at least
+\[
+ \frac{2(n-1)}{n}=2-\frac2n.
+\]
+For every $r<2$, choose an integer $n>2/(2-r)$. This instance has no
+$r$-competitive permutation, even with unlimited computation and full
+knowledge of both functions.
+
+Formally, let $C_{\mathrm{struct}}$ be the infimum of uniform competitive
+constants of deterministic algorithms without computational restrictions,
+and let $C_{\mathrm{poly}}$ be the same infimum restricted to the exact
+polynomial-oracle model. The lower family and the upper algorithm give
+\[
+ 2\le C_{\mathrm{struct}}\le C_{\mathrm{poly}}\le2.
+\]
+Thus both equal $2$, completing Theorem~\ref{thm:main}. No assumption that
+a finite lower-bound instance attains the limiting value is needed.
+Normalized instances already force this lower bound, so allowing nonnegative
+unnormalized baselines does not alter either constant.
+
+\section{Scope and research methodology}\label{sec:limits}
+
+The guarantee is deterministic and applies to one permutation for every
+cardinality, arbitrary unequal totals, and arbitrary exact ties resolved by
+a fixed rule. Its proof uses the pair decomposition in
+Lemma~\ref{lem:budget}; it does not give a uniform guarantee for all
+nonmonotone submodular functions. Indeed,~\cite[Proposition~18]{DKLS26}
+shows an unbounded deterministic incremental ratio in that larger class.
+The result also makes no optimality claim for narrower function classes,
+randomized algorithms, or additional feasibility constraints.
+
+Substantial AI assistance was used in developing the algorithm and proof,
+searching for counterexamples, implementing finite exact-arithmetic and
+numerical diagnostic checks, comparing primary literature, and drafting
+this text. Counterexamples to intermediate proof proposals were used to
+redirect the analysis; they are not disproofs of the original ordering
+problem. The universal result rests on the inequalities in
+Section~\ref{sec:proof}, not on finite experiments or model-generated review.
+The proof is elementary, and no broader consequences beyond the stated
+incremental--decremental model are claimed.
+
+\bibliographystyle{alphaurl}
+\bibliography{references}
+
+\section*{AI methodology statement}
+OpenAI Codex was used substantively for algorithm and proof discovery,
+counterexample search, computational implementation and checks,
+primary-literature comparison, an additional model-based examination of the
+argument, and preparation of the entire manuscript. These uses materially
+affected all sections. The model-based examination is not external peer
+review, and no independent human verification is claimed in this document.
+The mathematical claims and references require the sole human author's
+responsibility before any submission. Finite checks and AI-generated
+assessments are not mathematical certificates.
+\end{document}

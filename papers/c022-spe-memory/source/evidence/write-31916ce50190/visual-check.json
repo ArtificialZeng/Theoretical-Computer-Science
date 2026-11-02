@@ -1,0 +1,60 @@
+{
+  "job_id": "c022-spe-memory-write-31916ce50190",
+  "review_type": "writing_context_visual_check_not_fresh_release_audit",
+  "pdf_sha256": "1c714b9216ce3cf89b26123c6beebf3c7a38d14b31e0b5a727dcaa214978306f",
+  "render_command": "pdftoppm -r 110 -png output/pdf/spe-memory-working_paper.pdf evidence/write-31916ce50190/pages/page",
+  "pages": [
+    {
+      "page": 1,
+      "image": "evidence/write-31916ce50190/pages/page-1.png",
+      "inspected": true,
+      "result": "No clipping, overlap, missing glyphs or illegible formulas observed."
+    },
+    {
+      "page": 2,
+      "image": "evidence/write-31916ce50190/pages/page-2.png",
+      "inspected": true,
+      "result": "No clipping, overlap, missing glyphs or illegible formulas observed."
+    },
+    {
+      "page": 3,
+      "image": "evidence/write-31916ce50190/pages/page-3.png",
+      "inspected": true,
+      "result": "No clipping, overlap, missing glyphs or illegible formulas observed."
+    },
+    {
+      "page": 4,
+      "image": "evidence/write-31916ce50190/pages/page-4.png",
+      "inspected": true,
+      "result": "No clipping, overlap, missing glyphs or illegible formulas observed."
+    },
+    {
+      "page": 5,
+      "image": "evidence/write-31916ce50190/pages/page-5.png",
+      "inspected": true,
+      "result": "No clipping, overlap, missing glyphs or illegible formulas observed."
+    },
+    {
+      "page": 6,
+      "image": "evidence/write-31916ce50190/pages/page-6.png",
+      "inspected": true,
+      "result": "No clipping, overlap, missing glyphs or illegible formulas observed."
+    },
+    {
+      "page": 7,
+      "image": "evidence/write-31916ce50190/pages/page-7.png",
+      "inspected": true,
+      "result": "No clipping, overlap, missing glyphs or illegible formulas observed."
+    },
+    {
+      "page": 8,
+      "image": "evidence/write-31916ce50190/pages/page-8.png",
+      "inspected": true,
+      "result": "No clipping, overlap, missing glyphs or illegible formulas observed."
+    }
+  ],
+  "title_page_separate": true,
+  "references_on_final_page": true,
+  "remaining_visual_issues": [],
+  "fresh_release_review_still_required": true
+}

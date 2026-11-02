@@ -1,0 +1,48 @@
+{
+  "job_id": "c026-aonflow-triage-83e920793ea7",
+  "checked_at_utc": "2026-11-02T00:04:12.590261+00:00",
+  "source_sha256": "7241936e887e814eebe18f891cfe9d90c883ee0298057dfc8bbdd2344501e29e",
+  "source_unchanged": true,
+  "input_checks": [
+    {
+      "path": "intake/primary/2602.15015-expanders.pdf",
+      "expected": "6fa6c1ad4abc810ee54928315737c4dce46e0f4ce70423addf98120ded67acd0",
+      "actual": "6fa6c1ad4abc810ee54928315737c4dce46e0f4ce70423addf98120ded67acd0",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/2602.15015-expanders.txt",
+      "expected": "36492874d7b26636b21977af5fb114ab71b9d0106813974df9b2ebca0da83e08",
+      "actual": "36492874d7b26636b21977af5fb114ab71b9d0106813974df9b2ebca0da83e08",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/CKS2005-welllinked.pdf",
+      "expected": "0ef6547b8fa491a8d79cd7c8ae04ff1e6343a0426035f8950930f7dffd034da4",
+      "actual": "0ef6547b8fa491a8d79cd7c8ae04ff1e6343a0426035f8950930f7dffd034da4",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/CKS2005-welllinked.txt",
+      "expected": "a2fa9cca0c01988b96bf8d8d40dc0408d1707a9b7415f8d081e07cc684a8edbb",
+      "actual": "a2fa9cca0c01988b96bf8d8d40dc0408d1707a9b7415f8d081e07cc684a8edbb",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/CKS2013-AON.pdf",
+      "expected": "db4bc30dde6862b59460a6455339fbb390736f6faa8ff50eb74f9196dcc13fe3",
+      "actual": "db4bc30dde6862b59460a6455339fbb390736f6faa8ff50eb74f9196dcc13fe3",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/CKS2013-AON.txt",
+      "expected": "03327d5c472979ef1b748180859c670d3b88781afd9d885e5d47eee9eba00946",
+      "actual": "03327d5c472979ef1b748180859c670d3b88781afd9d885e5d47eee9eba00946",
+      "matches": true
+    }
+  ],
+  "research_passes_observed": 0,
+  "research_passes_consumed_by_triage": 0,
+  "mathematical_status": "unresolved",
+  "candidate_kind": "none"
+}

@@ -1,0 +1,2853 @@
+{
+  "job_id": "c025-pmcdelay-research-338d67d18097",
+  "at_utc": "2026-11-01T23:15:40.559995+00:00",
+  "case_count": 29,
+  "all_cases_passed": true,
+  "generator_separator_oracle": "Polynomial graph-search BBC queue scheme; no subset enumeration.",
+  "finite_expected_oracle": "All subsets using PMC criterion and full-component separator criterion, n<=10.",
+  "limits": "Finite transcription diagnostics only; no universal delay/correctness or novelty certificate. Python hash sets are replaced by tries in the mathematical algorithm.",
+  "records": [
+    {
+      "label": "empty",
+      "n": 0,
+      "edges": [],
+      "outputs": [],
+      "separator_count": 0,
+      "recursive_checks": []
+    },
+    {
+      "label": "isolated-5",
+      "n": 5,
+      "edges": [],
+      "outputs": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "separator_count": 1,
+      "recursive_checks": []
+    },
+    {
+      "label": "complete-1",
+      "n": 1,
+      "edges": [],
+      "outputs": [
+        1
+      ],
+      "separator_count": 0,
+      "recursive_checks": []
+    },
+    {
+      "label": "path-1",
+      "n": 1,
+      "edges": [],
+      "outputs": [
+        1
+      ],
+      "separator_count": 0,
+      "recursive_checks": []
+    },
+    {
+      "label": "complete-2",
+      "n": 2,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "outputs": [
+        3
+      ],
+      "separator_count": 0,
+      "recursive_checks": []
+    },
+    {
+      "label": "path-2",
+      "n": 2,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "outputs": [
+        3
+      ],
+      "separator_count": 0,
+      "recursive_checks": []
+    },
+    {
+      "label": "complete-4",
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "outputs": [
+        15
+      ],
+      "separator_count": 0,
+      "recursive_checks": []
+    },
+    {
+      "label": "path-4",
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "outputs": [
+        12,
+        6,
+        3
+      ],
+      "separator_count": 2,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 3,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 3
+        }
+      ]
+    },
+    {
+      "label": "complete-7",
+      "n": 7,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "outputs": [
+        127
+      ],
+      "separator_count": 0,
+      "recursive_checks": []
+    },
+    {
+      "label": "path-7",
+      "n": 7,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "outputs": [
+        96,
+        48,
+        24,
+        12,
+        6,
+        3
+      ],
+      "separator_count": 5,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 3,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 3
+        },
+        {
+          "n": 5,
+          "pmcs": 4,
+          "separators": 3,
+          "max_fiber": 1,
+          "popped": 4
+        },
+        {
+          "n": 6,
+          "pmcs": 5,
+          "separators": 4,
+          "max_fiber": 1,
+          "popped": 5
+        },
+        {
+          "n": 7,
+          "pmcs": 6,
+          "separators": 5,
+          "max_fiber": 1,
+          "popped": 6
+        }
+      ]
+    },
+    {
+      "label": "complete-10",
+      "n": 10,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "outputs": [
+        1023
+      ],
+      "separator_count": 0,
+      "recursive_checks": []
+    },
+    {
+      "label": "path-10",
+      "n": 10,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "outputs": [
+        768,
+        384,
+        192,
+        96,
+        48,
+        24,
+        12,
+        6,
+        3
+      ],
+      "separator_count": 8,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 3,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 3
+        },
+        {
+          "n": 5,
+          "pmcs": 4,
+          "separators": 3,
+          "max_fiber": 1,
+          "popped": 4
+        },
+        {
+          "n": 6,
+          "pmcs": 5,
+          "separators": 4,
+          "max_fiber": 1,
+          "popped": 5
+        },
+        {
+          "n": 7,
+          "pmcs": 6,
+          "separators": 5,
+          "max_fiber": 1,
+          "popped": 6
+        },
+        {
+          "n": 8,
+          "pmcs": 7,
+          "separators": 6,
+          "max_fiber": 1,
+          "popped": 7
+        },
+        {
+          "n": 9,
+          "pmcs": 8,
+          "separators": 7,
+          "max_fiber": 1,
+          "popped": 8
+        },
+        {
+          "n": 10,
+          "pmcs": 9,
+          "separators": 8,
+          "max_fiber": 1,
+          "popped": 9
+        }
+      ]
+    },
+    {
+      "label": "cycle-4",
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "outputs": [
+        13,
+        7,
+        11,
+        14
+      ],
+      "separator_count": 2,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 4,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 4
+        }
+      ]
+    },
+    {
+      "label": "cycle-6",
+      "n": 6,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "outputs": [
+        49,
+        25,
+        13,
+        7,
+        35,
+        42,
+        11,
+        52,
+        21,
+        44,
+        41,
+        19,
+        38,
+        37,
+        50,
+        26,
+        56,
+        14,
+        22,
+        28
+      ],
+      "separator_count": 9,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 3,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 3
+        },
+        {
+          "n": 5,
+          "pmcs": 4,
+          "separators": 3,
+          "max_fiber": 1,
+          "popped": 4
+        },
+        {
+          "n": 6,
+          "pmcs": 20,
+          "separators": 9,
+          "max_fiber": 1,
+          "popped": 20
+        }
+      ]
+    },
+    {
+      "label": "cycle-9",
+      "n": 9,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "outputs": [
+        385,
+        193,
+        97,
+        49,
+        25,
+        13,
+        7,
+        259,
+        266,
+        11,
+        148,
+        21,
+        104,
+        41,
+        88,
+        81,
+        168,
+        161,
+        324,
+        321,
+        131,
+        262,
+        261,
+        386,
+        274,
+        19,
+        164,
+        37,
+        200,
+        73,
+        152,
+        145,
+        292,
+        289,
+        67,
+        268,
+        265,
+        388,
+        133,
+        322,
+        290,
+        35,
+        196,
+        69,
+        140,
+        137,
+        276,
+        273,
+        194,
+        448,
+        98,
+        352,
+        50,
+        304,
+        26,
+        280,
+        14,
+        138,
+        84,
+        146,
+        22,
+        100,
+        112,
+        42,
+        296,
+        56,
+        82,
+        336,
+        176,
+        162,
+        416,
+        328,
+        134,
+        38,
+        208,
+        74,
+        400,
+        392,
+        70,
+        76,
+        224,
+        52,
+        28,
+        44
+      ],
+      "separator_count": 27,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 3,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 3
+        },
+        {
+          "n": 5,
+          "pmcs": 4,
+          "separators": 3,
+          "max_fiber": 1,
+          "popped": 4
+        },
+        {
+          "n": 6,
+          "pmcs": 5,
+          "separators": 4,
+          "max_fiber": 1,
+          "popped": 5
+        },
+        {
+          "n": 7,
+          "pmcs": 6,
+          "separators": 5,
+          "max_fiber": 1,
+          "popped": 6
+        },
+        {
+          "n": 8,
+          "pmcs": 7,
+          "separators": 6,
+          "max_fiber": 1,
+          "popped": 7
+        },
+        {
+          "n": 9,
+          "pmcs": 84,
+          "separators": 27,
+          "max_fiber": 1,
+          "popped": 84
+        }
+      ]
+    },
+    {
+      "label": "cycle-10",
+      "n": 10,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "outputs": [
+        769,
+        385,
+        193,
+        97,
+        49,
+        25,
+        13,
+        7,
+        515,
+        522,
+        11,
+        276,
+        21,
+        168,
+        41,
+        208,
+        81,
+        176,
+        161,
+        328,
+        321,
+        644,
+        641,
+        259,
+        518,
+        517,
+        770,
+        530,
+        19,
+        292,
+        37,
+        200,
+        73,
+        152,
+        145,
+        296,
+        289,
+        580,
+        577,
+        131,
+        524,
+        521,
+        772,
+        261,
+        642,
+        546,
+        35,
+        324,
+        69,
+        392,
+        137,
+        280,
+        273,
+        548,
+        545,
+        67,
+        532,
+        529,
+        268,
+        265,
+        388,
+        133,
+        578,
+        386,
+        896,
+        194,
+        704,
+        98,
+        608,
+        50,
+        560,
+        26,
+        536,
+        14,
+        266,
+        148,
+        274,
+        22,
+        104,
+        164,
+        42,
+        552,
+        224,
+        336,
+        82,
+        592,
+        112,
+        304,
+        162,
+        672,
+        584,
+        322,
+        832,
+        648,
+        262,
+        290,
+        38,
+        196,
+        74,
+        88,
+        146,
+        656,
+        800,
+        776,
+        70,
+        400,
+        138,
+        784,
+        140,
+        134,
+        448,
+        100,
+        352,
+        52,
+        28,
+        84,
+        44,
+        416,
+        76,
+        56
+      ],
+      "separator_count": 35,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 3,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 3
+        },
+        {
+          "n": 5,
+          "pmcs": 4,
+          "separators": 3,
+          "max_fiber": 1,
+          "popped": 4
+        },
+        {
+          "n": 6,
+          "pmcs": 5,
+          "separators": 4,
+          "max_fiber": 1,
+          "popped": 5
+        },
+        {
+          "n": 7,
+          "pmcs": 6,
+          "separators": 5,
+          "max_fiber": 1,
+          "popped": 6
+        },
+        {
+          "n": 8,
+          "pmcs": 7,
+          "separators": 6,
+          "max_fiber": 1,
+          "popped": 7
+        },
+        {
+          "n": 9,
+          "pmcs": 8,
+          "separators": 7,
+          "max_fiber": 1,
+          "popped": 8
+        },
+        {
+          "n": 10,
+          "pmcs": 120,
+          "separators": 35,
+          "max_fiber": 1,
+          "popped": 120
+        }
+      ]
+    },
+    {
+      "label": "bipartite-4-5",
+      "n": 9,
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "outputs": [
+        271,
+        143,
+        79,
+        47,
+        31,
+        500,
+        504,
+        498,
+        497
+      ],
+      "separator_count": 2,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 3,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 3
+        },
+        {
+          "n": 5,
+          "pmcs": 4,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 4
+        },
+        {
+          "n": 6,
+          "pmcs": 5,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 5
+        },
+        {
+          "n": 7,
+          "pmcs": 7,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 7
+        },
+        {
+          "n": 8,
+          "pmcs": 8,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 8
+        },
+        {
+          "n": 9,
+          "pmcs": 9,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 9
+        }
+      ]
+    },
+    {
+      "label": "wheel-9",
+      "n": 9,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "outputs": [
+        387,
+        195,
+        99,
+        51,
+        27,
+        15,
+        263,
+        277,
+        23,
+        169,
+        43,
+        209,
+        83,
+        177,
+        163,
+        329,
+        323,
+        135,
+        269,
+        267,
+        389,
+        293,
+        39,
+        201,
+        75,
+        153,
+        147,
+        297,
+        291,
+        71,
+        281,
+        275,
+        393,
+        139,
+        325,
+        197,
+        449,
+        101,
+        353,
+        53,
+        305,
+        29,
+        149,
+        105,
+        165,
+        45,
+        225,
+        337,
+        85,
+        113,
+        417,
+        141,
+        77,
+        89,
+        401,
+        57
+      ],
+      "separator_count": 20,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 3,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 3
+        },
+        {
+          "n": 5,
+          "pmcs": 4,
+          "separators": 3,
+          "max_fiber": 1,
+          "popped": 4
+        },
+        {
+          "n": 6,
+          "pmcs": 5,
+          "separators": 4,
+          "max_fiber": 1,
+          "popped": 5
+        },
+        {
+          "n": 7,
+          "pmcs": 6,
+          "separators": 5,
+          "max_fiber": 1,
+          "popped": 6
+        },
+        {
+          "n": 8,
+          "pmcs": 56,
+          "separators": 20,
+          "max_fiber": 1,
+          "popped": 56
+        },
+        {
+          "n": 9,
+          "pmcs": 56,
+          "separators": 20,
+          "max_fiber": 1,
+          "popped": 56
+        }
+      ]
+    },
+    {
+      "label": "petersen",
+      "n": 10,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      "outputs": [
+        618,
+        360,
+        676,
+        417,
+        901,
+        805,
+        233,
+        457,
+        713,
+        834,
+        537,
+        284,
+        789,
+        781,
+        124,
+        466,
+        217,
+        372,
+        628,
+        244,
+        720,
+        142,
+        907,
+        410,
+        914,
+        558,
+        406,
+        682,
+        810,
+        71,
+        469,
+        775,
+        621,
+        205,
+        203,
+        837,
+        51,
+        250,
+        555,
+        403,
+        822,
+        118,
+        117,
+        570,
+        434
+      ],
+      "separator_count": 15,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 3,
+          "separators": 2,
+          "max_fiber": 2,
+          "popped": 3
+        },
+        {
+          "n": 5,
+          "pmcs": 10,
+          "separators": 5,
+          "max_fiber": 1,
+          "popped": 10
+        },
+        {
+          "n": 6,
+          "pmcs": 11,
+          "separators": 6,
+          "max_fiber": 1,
+          "popped": 11
+        },
+        {
+          "n": 7,
+          "pmcs": 21,
+          "separators": 9,
+          "max_fiber": 1,
+          "popped": 21
+        },
+        {
+          "n": 8,
+          "pmcs": 29,
+          "separators": 13,
+          "max_fiber": 2,
+          "popped": 29
+        },
+        {
+          "n": 9,
+          "pmcs": 36,
+          "separators": 14,
+          "max_fiber": 1,
+          "popped": 36
+        },
+        {
+          "n": 10,
+          "pmcs": 45,
+          "separators": 15,
+          "max_fiber": 1,
+          "popped": 45
+        }
+      ]
+    },
+    {
+      "label": "disconnected-cycle-path",
+      "n": 9,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "outputs": [
+        13,
+        7,
+        11,
+        14,
+        384,
+        192,
+        96,
+        48
+      ],
+      "separator_count": 6,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 4,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 4
+        },
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 3,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 3
+        },
+        {
+          "n": 5,
+          "pmcs": 4,
+          "separators": 3,
+          "max_fiber": 1,
+          "popped": 4
+        }
+      ]
+    },
+    {
+      "label": "disconnected-cliques",
+      "n": 7,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "outputs": [
+        7,
+        120
+      ],
+      "separator_count": 1,
+      "recursive_checks": []
+    },
+    {
+      "label": "new-random-9-0",
+      "n": 9,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "outputs": [
+        260,
+        132,
+        264,
+        9,
+        3,
+        34,
+        16,
+        64
+      ],
+      "separator_count": 6,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 3,
+          "separators": 2,
+          "max_fiber": 2,
+          "popped": 3
+        },
+        {
+          "n": 5,
+          "pmcs": 4,
+          "separators": 3,
+          "max_fiber": 1,
+          "popped": 4
+        },
+        {
+          "n": 6,
+          "pmcs": 5,
+          "separators": 4,
+          "max_fiber": 1,
+          "popped": 5
+        },
+        {
+          "n": 7,
+          "pmcs": 6,
+          "separators": 5,
+          "max_fiber": 2,
+          "popped": 6
+        }
+      ]
+    },
+    {
+      "label": "new-random-9-1",
+      "n": 9,
+      "edges": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "outputs": [
+        320,
+        69,
+        31,
+        177,
+        155,
+        134,
+        156,
+        97,
+        218,
+        91,
+        212,
+        149,
+        100,
+        37,
+        209,
+        122,
+        59,
+        240,
+        62,
+        94,
+        186,
+        180
+      ],
+      "separator_count": 11,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 3,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 3
+        },
+        {
+          "n": 5,
+          "pmcs": 4,
+          "separators": 3,
+          "max_fiber": 2,
+          "popped": 4
+        },
+        {
+          "n": 6,
+          "pmcs": 4,
+          "separators": 3,
+          "max_fiber": 2,
+          "popped": 4
+        },
+        {
+          "n": 7,
+          "pmcs": 5,
+          "separators": 4,
+          "max_fiber": 2,
+          "popped": 5
+        },
+        {
+          "n": 8,
+          "pmcs": 7,
+          "separators": 5,
+          "max_fiber": 2,
+          "popped": 7
+        },
+        {
+          "n": 9,
+          "pmcs": 22,
+          "separators": 11,
+          "max_fiber": 2,
+          "popped": 22
+        }
+      ]
+    },
+    {
+      "label": "new-random-9-2",
+      "n": 9,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "outputs": [
+        463,
+        239,
+        415,
+        379,
+        497,
+        54,
+        223,
+        443,
+        431,
+        251,
+        475,
+        491
+      ],
+      "separator_count": 6,
+      "recursive_checks": [
+        {
+          "n": 4,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 5,
+          "pmcs": 3,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 3
+        },
+        {
+          "n": 6,
+          "pmcs": 5,
+          "separators": 3,
+          "max_fiber": 1,
+          "popped": 5
+        },
+        {
+          "n": 7,
+          "pmcs": 12,
+          "separators": 6,
+          "max_fiber": 1,
+          "popped": 12
+        },
+        {
+          "n": 8,
+          "pmcs": 12,
+          "separators": 6,
+          "max_fiber": 1,
+          "popped": 12
+        },
+        {
+          "n": 9,
+          "pmcs": 12,
+          "separators": 6,
+          "max_fiber": 2,
+          "popped": 12
+        }
+      ]
+    },
+    {
+      "label": "new-random-9-3",
+      "n": 9,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "outputs": [
+        439,
+        247,
+        383,
+        495,
+        223,
+        443,
+        446,
+        191,
+        254
+      ],
+      "separator_count": 5,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 5,
+          "pmcs": 4,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 4
+        },
+        {
+          "n": 6,
+          "pmcs": 5,
+          "separators": 3,
+          "max_fiber": 1,
+          "popped": 5
+        },
+        {
+          "n": 7,
+          "pmcs": 5,
+          "separators": 3,
+          "max_fiber": 1,
+          "popped": 5
+        },
+        {
+          "n": 8,
+          "pmcs": 5,
+          "separators": 3,
+          "max_fiber": 1,
+          "popped": 5
+        },
+        {
+          "n": 9,
+          "pmcs": 9,
+          "separators": 5,
+          "max_fiber": 1,
+          "popped": 9
+        }
+      ]
+    },
+    {
+      "label": "new-random-9-4",
+      "n": 9,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "outputs": [
+        416,
+        144,
+        136,
+        132,
+        5,
+        2,
+        64
+      ],
+      "separator_count": 3,
+      "recursive_checks": [
+        {
+          "n": 4,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 5,
+          "pmcs": 3,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 3
+        },
+        {
+          "n": 6,
+          "pmcs": 4,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 4
+        },
+        {
+          "n": 7,
+          "pmcs": 5,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 5
+        }
+      ]
+    },
+    {
+      "label": "new-random-9-5",
+      "n": 9,
+      "edges": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "outputs": [
+        1,
+        2,
+        200,
+        104,
+        144,
+        172,
+        228,
+        76,
+        256
+      ],
+      "separator_count": 4,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 3,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 3
+        },
+        {
+          "n": 5,
+          "pmcs": 5,
+          "separators": 3,
+          "max_fiber": 2,
+          "popped": 5
+        },
+        {
+          "n": 6,
+          "pmcs": 6,
+          "separators": 3,
+          "max_fiber": 1,
+          "popped": 6
+        }
+      ]
+    },
+    {
+      "label": "new-random-9-6",
+      "n": 9,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "outputs": [
+        410,
+        314,
+        122,
+        209,
+        459,
+        347,
+        233,
+        186,
+        363,
+        425,
+        301,
+        226,
+        309,
+        248,
+        313,
+        500,
+        485,
+        185,
+        316,
+        440,
+        492
+      ],
+      "separator_count": 11,
+      "recursive_checks": [
+        {
+          "n": 3,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 4,
+          "pmcs": 3,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 3
+        },
+        {
+          "n": 5,
+          "pmcs": 10,
+          "separators": 5,
+          "max_fiber": 1,
+          "popped": 10
+        },
+        {
+          "n": 6,
+          "pmcs": 10,
+          "separators": 5,
+          "max_fiber": 2,
+          "popped": 10
+        },
+        {
+          "n": 7,
+          "pmcs": 11,
+          "separators": 6,
+          "max_fiber": 1,
+          "popped": 11
+        },
+        {
+          "n": 8,
+          "pmcs": 12,
+          "separators": 7,
+          "max_fiber": 2,
+          "popped": 12
+        },
+        {
+          "n": 9,
+          "pmcs": 21,
+          "separators": 11,
+          "max_fiber": 2,
+          "popped": 21
+        }
+      ]
+    },
+    {
+      "label": "new-random-9-7",
+      "n": 9,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "outputs": [
+        471,
+        247,
+        377,
+        495,
+        222
+      ],
+      "separator_count": 3,
+      "recursive_checks": [
+        {
+          "n": 4,
+          "pmcs": 2,
+          "separators": 1,
+          "max_fiber": 1,
+          "popped": 2
+        },
+        {
+          "n": 5,
+          "pmcs": 4,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 4
+        },
+        {
+          "n": 6,
+          "pmcs": 5,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 5
+        },
+        {
+          "n": 7,
+          "pmcs": 5,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 5
+        },
+        {
+          "n": 8,
+          "pmcs": 5,
+          "separators": 2,
+          "max_fiber": 1,
+          "popped": 5
+        },
+        {
+          "n": 9,
+          "pmcs": 5,
+          "separators": 3,
+          "max_fiber": 2,
+          "popped": 5
+        }
+      ]
+    }
+  ]
+}

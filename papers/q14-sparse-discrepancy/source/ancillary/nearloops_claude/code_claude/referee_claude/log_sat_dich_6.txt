@@ -1,0 +1,2 @@
+near-dichotomy n=6 solver=kissat: vars=12864 clauses=108996 result=None time=676.6s
+near-dichotomy n=6 solver=cadical: vars=12864 clauses=108996 result=None time=13.1s

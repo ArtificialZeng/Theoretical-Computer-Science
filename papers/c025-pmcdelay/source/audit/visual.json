@@ -1,0 +1,77 @@
+{
+  "job_id": "c025-pmcdelay-release-dfedec0715d6",
+  "snapshot_digest": "9e18afcb85b19f266e11aab420e78596f90e785921128737257fbdd42a21cfbc",
+  "manuscript_digest": "8502854365556ca110be34d374a6e54b8133c7e747267dea571dd218f829c685",
+  "pdf_digest": "ff0b8c2710e0e8655e39aaaaeef6df945a006e772ebc9559845b12d5f145a80f",
+  "verdict": "accept",
+  "report": "audit/visual.md",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "render_tool": "pdftoppm -png -r 120 manuscript/main.pdf evidence/release-pages/page",
+  "rendered_pages": [
+    {
+      "page": 1,
+      "path": "evidence/release-pages/page-1.png",
+      "sha256": "7429f2eb4ab5a24f34f853ded4fd1e358bf8148628634703d93abf2699d846d2",
+      "observation": "Title/sole author/abstract/contact footnote intact; email wraps within margin."
+    },
+    {
+      "page": 2,
+      "path": "evidence/release-pages/page-2.png",
+      "sha256": "a5ebb060250d34c855e585c98288f660f05a77a4da57caccf174e311ca137ad3",
+      "observation": "Main theorem, attributed comparison bounds, citations and section transition legible."
+    },
+    {
+      "page": 3,
+      "path": "evidence/release-pages/page-3.png",
+      "sha256": "b431a3181e87481af4de20a846bcfd2f532b350b7c91a5d00fbc1ecdeb53442c",
+      "observation": "All four primitive items and helper statement fit; mathematical glyphs intact."
+    },
+    {
+      "page": 4,
+      "path": "evidence/release-pages/page-4.png",
+      "sha256": "7beccb63a69f3036b4d552fbb006533468a930c0574dddd6d3bbcc7e87ffa252",
+      "observation": "Minimality/Helly proofs and structural-witness display (1) fit without clipping."
+    },
+    {
+      "page": 5,
+      "path": "evidence/release-pages/page-5.png",
+      "sha256": "322fab0fcdf4244566e650c743fa5e1120f92e7a31caf6579dec633d7f7724ef",
+      "observation": "Guarded neighborhood, transfer proof and phases I\u2013II readable; split before phase III is orderly."
+    },
+    {
+      "page": 6,
+      "path": "evidence/release-pages/page-6.png",
+      "sha256": "6f743f09b2b06d925e9c86c909116908619e86e60337e2fb94548b462c0a24a8",
+      "observation": "Phase III, correctness proof and simultaneous bounds (2)\u2013(4) fit with readable indices."
+    },
+    {
+      "page": 7,
+      "path": "evidence/release-pages/page-7.png",
+      "sha256": "5ca8fa70b6bc400ecef9f2c83205079558e87a0a37b8c5f26e73de686ae72090",
+      "observation": "All three phase estimates and FIFO argument readable; no equation extends past margins."
+    },
+    {
+      "page": 8,
+      "path": "evidence/release-pages/page-8.png",
+      "sha256": "197f7efa67ce54f8661912bb76514a548ba71b4624180e122b5cb209f15f1fa6",
+      "observation": "Disconnected/empty input proof, diagnostic counts and limitations readable; intentional whitespace before references."
+    },
+    {
+      "page": 9,
+      "path": "evidence/release-pages/page-9.png",
+      "sha256": "889a9b99cdd2c7a68a5f4b78d1b0dd2a16e93674477f1bcfefadb8ddcd722a3a",
+      "observation": "All eight alphanumeric references/URLs and final substantial AI disclosure readable; bibliography underfull spacing benign."
+    }
+  ],
+  "readiness_label": "working_paper"
+}

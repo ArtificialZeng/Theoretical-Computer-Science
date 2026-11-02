@@ -1,0 +1,15 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Release gate passed for the accepted full-scope resolution. Citation, clean-build, source-ZIP reproduction and all-eight-page visual audits accept; working_paper classification retained.",
+  "next_test": "Supervisor reruns the gate and publishes the exact audited bytes locally, retaining working_paper.",
+  "evidence": [
+    "audit/citations.json",
+    "audit/build.json",
+    "audit/visual.json",
+    "evidence/release-reproduction.json",
+    "evidence/release-gate-check.json",
+    "checkpoint.md"
+  ]
+}

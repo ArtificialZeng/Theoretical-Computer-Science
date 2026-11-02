@@ -1,0 +1,20 @@
+{
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Proposed full-scope polynomial-delay algorithm and complete proof, with explicit source-endpoint transfer, polynomial separator charging, simultaneous additive timing induction, and all delay boundaries. Targeted polynomial-primitive generator passed 29 finite cases. Fresh correctness, novelty and STOC review remain required.",
+  "next_test": "Fresh referee: challenge the frozen source-preimage transfer, separator helper and simultaneous emission/termination proof, then independently assess current novelty, substantive innovation and STOC significance.",
+  "evidence": [
+    "claim.json",
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "research/streaming_proof.md",
+    "research/polynomial_primitives.md",
+    "evidence/pass1-literature.md",
+    "research/targeted_streaming_check.py",
+    "evidence/pass1-targeted-streaming.json",
+    "evidence/pass1-operational-log.md",
+    "evidence/pass1-research-record.json"
+  ]
+}

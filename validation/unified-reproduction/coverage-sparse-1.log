@@ -1,0 +1,1822 @@
+{
+  "arithmetic": "exact fractions; Python standard library",
+  "scope": "finite verification; infinite statements have analytic proofs in the article",
+  "results": {
+    "finite_certificates": [
+      {
+        "k": 2,
+        "m": 2,
+        "model": "equality",
+        "delta": null,
+        "profiles": 6,
+        "C_target": "1/2",
+        "optimum": "7/8",
+        "primal": [
+          [
+            [
+              0,
+              2
+            ],
+            "1/2"
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            "1/2"
+          ]
+        ],
+        "dual_y0_yT_yC": [
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "labeled_subsets_verified": 16,
+        "vertex_marginals_verified": 4,
+        "edge_moments_verified": 2,
+        "primal_support_size": 6,
+        "profile_dual_slacks": [
+          {
+            "occupancy": [
+              0,
+              0
+            ],
+            "slack": "1/4"
+          },
+          {
+            "occupancy": [
+              0,
+              1
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              0,
+              2
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              1,
+              1
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              1,
+              2
+            ],
+            "slack": "1/4"
+          },
+          {
+            "occupancy": [
+              2,
+              2
+            ],
+            "slack": "3/4"
+          }
+        ]
+      },
+      {
+        "k": 2,
+        "m": 3,
+        "model": "equality",
+        "delta": null,
+        "profiles": 10,
+        "C_target": "1/3",
+        "optimum": "5/6",
+        "primal": [
+          [
+            [
+              0,
+              0,
+              2
+            ],
+            "1/3"
+          ],
+          [
+            [
+              0,
+              1,
+              1
+            ],
+            "2/3"
+          ]
+        ],
+        "dual_y0_yT_yC": [
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        "labeled_subsets_verified": 64,
+        "vertex_marginals_verified": 6,
+        "edge_moments_verified": 3,
+        "primal_support_size": 15,
+        "profile_dual_slacks": [
+          {
+            "occupancy": [
+              0,
+              0,
+              0
+            ],
+            "slack": "1/4"
+          },
+          {
+            "occupancy": [
+              0,
+              0,
+              1
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              0,
+              0,
+              2
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              0,
+              1,
+              1
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              0,
+              1,
+              2
+            ],
+            "slack": "1/4"
+          },
+          {
+            "occupancy": [
+              0,
+              2,
+              2
+            ],
+            "slack": "3/4"
+          },
+          {
+            "occupancy": [
+              1,
+              1,
+              1
+            ],
+            "slack": "1/8"
+          },
+          {
+            "occupancy": [
+              1,
+              1,
+              2
+            ],
+            "slack": "1/2"
+          },
+          {
+            "occupancy": [
+              1,
+              2,
+              2
+            ],
+            "slack": "1"
+          },
+          {
+            "occupancy": [
+              2,
+              2,
+              2
+            ],
+            "slack": "3/2"
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "m": 2,
+        "model": "equality",
+        "delta": null,
+        "profiles": 10,
+        "C_target": "3/2",
+        "optimum": "5/6",
+        "primal": [
+          [
+            [
+              0,
+              3
+            ],
+            "1/4"
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            "3/4"
+          ]
+        ],
+        "dual_y0_yT_yC": [
+          "1/3",
+          "1/9",
+          "1/9"
+        ],
+        "labeled_subsets_verified": 64,
+        "vertex_marginals_verified": 6,
+        "edge_moments_verified": 6,
+        "primal_support_size": 20,
+        "profile_dual_slacks": [
+          {
+            "occupancy": [
+              0,
+              0
+            ],
+            "slack": "1/3"
+          },
+          {
+            "occupancy": [
+              0,
+              1
+            ],
+            "slack": "1/9"
+          },
+          {
+            "occupancy": [
+              0,
+              2
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              0,
+              3
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              1,
+              1
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              1,
+              2
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              1,
+              3
+            ],
+            "slack": "1/9"
+          },
+          {
+            "occupancy": [
+              2,
+              2
+            ],
+            "slack": "1/9"
+          },
+          {
+            "occupancy": [
+              2,
+              3
+            ],
+            "slack": "1/3"
+          },
+          {
+            "occupancy": [
+              3,
+              3
+            ],
+            "slack": "2/3"
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "m": 3,
+        "model": "equality",
+        "delta": null,
+        "profiles": 20,
+        "C_target": "1",
+        "optimum": "65/81",
+        "primal": [
+          [
+            [
+              0,
+              0,
+              3
+            ],
+            "1/3"
+          ],
+          [
+            [
+              1,
+              1,
+              1
+            ],
+            "2/3"
+          ]
+        ],
+        "dual_y0_yT_yC": [
+          "8/27",
+          "11/81",
+          "8/81"
+        ],
+        "labeled_subsets_verified": 512,
+        "vertex_marginals_verified": 9,
+        "edge_moments_verified": 9,
+        "primal_support_size": 30,
+        "profile_dual_slacks": [
+          {
+            "occupancy": [
+              0,
+              0,
+              0
+            ],
+            "slack": "8/27"
+          },
+          {
+            "occupancy": [
+              0,
+              0,
+              1
+            ],
+            "slack": "8/81"
+          },
+          {
+            "occupancy": [
+              0,
+              0,
+              2
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              0,
+              0,
+              3
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              0,
+              1,
+              1
+            ],
+            "slack": "1/81"
+          },
+          {
+            "occupancy": [
+              0,
+              1,
+              2
+            ],
+            "slack": "2/81"
+          },
+          {
+            "occupancy": [
+              0,
+              1,
+              3
+            ],
+            "slack": "11/81"
+          },
+          {
+            "occupancy": [
+              0,
+              2,
+              2
+            ],
+            "slack": "4/27"
+          },
+          {
+            "occupancy": [
+              0,
+              2,
+              3
+            ],
+            "slack": "10/27"
+          },
+          {
+            "occupancy": [
+              0,
+              3,
+              3
+            ],
+            "slack": "19/27"
+          },
+          {
+            "occupancy": [
+              1,
+              1,
+              1
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              1,
+              1,
+              2
+            ],
+            "slack": "7/81"
+          },
+          {
+            "occupancy": [
+              1,
+              1,
+              3
+            ],
+            "slack": "22/81"
+          },
+          {
+            "occupancy": [
+              1,
+              2,
+              2
+            ],
+            "slack": "20/81"
+          },
+          {
+            "occupancy": [
+              1,
+              2,
+              3
+            ],
+            "slack": "41/81"
+          },
+          {
+            "occupancy": [
+              1,
+              3,
+              3
+            ],
+            "slack": "68/81"
+          },
+          {
+            "occupancy": [
+              2,
+              2,
+              2
+            ],
+            "slack": "4/9"
+          },
+          {
+            "occupancy": [
+              2,
+              2,
+              3
+            ],
+            "slack": "20/27"
+          },
+          {
+            "occupancy": [
+              2,
+              3,
+              3
+            ],
+            "slack": "29/27"
+          },
+          {
+            "occupancy": [
+              3,
+              3,
+              3
+            ],
+            "slack": "38/27"
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "m": 3,
+        "model": "upper",
+        "delta": "1",
+        "profiles": 20,
+        "C_target": "2",
+        "optimum": "73/81",
+        "primal": [
+          [
+            [
+              0,
+              0,
+              3
+            ],
+            "2/3"
+          ],
+          [
+            [
+              1,
+              1,
+              1
+            ],
+            "1/3"
+          ]
+        ],
+        "dual_y0_yT_yC": [
+          "8/27",
+          "11/81",
+          "8/81"
+        ],
+        "labeled_subsets_verified": 512,
+        "vertex_marginals_verified": 9,
+        "edge_moments_verified": 9,
+        "primal_support_size": 30,
+        "profile_dual_slacks": [
+          {
+            "occupancy": [
+              0,
+              0,
+              0
+            ],
+            "slack": "8/27"
+          },
+          {
+            "occupancy": [
+              0,
+              0,
+              1
+            ],
+            "slack": "8/81"
+          },
+          {
+            "occupancy": [
+              0,
+              0,
+              2
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              0,
+              0,
+              3
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              0,
+              1,
+              1
+            ],
+            "slack": "1/81"
+          },
+          {
+            "occupancy": [
+              0,
+              1,
+              2
+            ],
+            "slack": "2/81"
+          },
+          {
+            "occupancy": [
+              0,
+              1,
+              3
+            ],
+            "slack": "11/81"
+          },
+          {
+            "occupancy": [
+              0,
+              2,
+              2
+            ],
+            "slack": "4/27"
+          },
+          {
+            "occupancy": [
+              0,
+              2,
+              3
+            ],
+            "slack": "10/27"
+          },
+          {
+            "occupancy": [
+              0,
+              3,
+              3
+            ],
+            "slack": "19/27"
+          },
+          {
+            "occupancy": [
+              1,
+              1,
+              1
+            ],
+            "slack": "0"
+          },
+          {
+            "occupancy": [
+              1,
+              1,
+              2
+            ],
+            "slack": "7/81"
+          },
+          {
+            "occupancy": [
+              1,
+              1,
+              3
+            ],
+            "slack": "22/81"
+          },
+          {
+            "occupancy": [
+              1,
+              2,
+              2
+            ],
+            "slack": "20/81"
+          },
+          {
+            "occupancy": [
+              1,
+              2,
+              3
+            ],
+            "slack": "41/81"
+          },
+          {
+            "occupancy": [
+              1,
+              3,
+              3
+            ],
+            "slack": "68/81"
+          },
+          {
+            "occupancy": [
+              2,
+              2,
+              2
+            ],
+            "slack": "4/9"
+          },
+          {
+            "occupancy": [
+              2,
+              2,
+              3
+            ],
+            "slack": "20/27"
+          },
+          {
+            "occupancy": [
+              2,
+              3,
+              3
+            ],
+            "slack": "29/27"
+          },
+          {
+            "occupancy": [
+              3,
+              3,
+              3
+            ],
+            "slack": "38/27"
+          }
+        ]
+      }
+    ],
+    "matching_tests": {
+      "m_range": [
+        1,
+        12
+      ],
+      "cases": [
+        {
+          "m": 1,
+          "mode": "multiplicative",
+          "error": "0",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 1,
+          "mode": "multiplicative",
+          "error": "1/3",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 1,
+          "mode": "multiplicative",
+          "error": "1",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 1,
+          "mode": "multiplicative",
+          "error": "2",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 1,
+          "mode": "additive",
+          "error": "0",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 1,
+          "mode": "additive",
+          "error": "1/3",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 1,
+          "mode": "additive",
+          "error": "1",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 1,
+          "mode": "additive",
+          "error": "2",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 2,
+          "mode": "multiplicative",
+          "error": "0",
+          "mixture_t": "1/2",
+          "value": "7/8"
+        },
+        {
+          "m": 2,
+          "mode": "multiplicative",
+          "error": "1/3",
+          "mixture_t": "2/3",
+          "value": "11/12"
+        },
+        {
+          "m": 2,
+          "mode": "multiplicative",
+          "error": "1",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 2,
+          "mode": "multiplicative",
+          "error": "2",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 2,
+          "mode": "multiplicative",
+          "error": "3",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 2,
+          "mode": "additive",
+          "error": "0",
+          "mixture_t": "1/2",
+          "value": "7/8"
+        },
+        {
+          "m": 2,
+          "mode": "additive",
+          "error": "1/6",
+          "mixture_t": "5/6",
+          "value": "23/24"
+        },
+        {
+          "m": 2,
+          "mode": "additive",
+          "error": "1/4",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 2,
+          "mode": "additive",
+          "error": "1/2",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 2,
+          "mode": "additive",
+          "error": "1",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 3,
+          "mode": "multiplicative",
+          "error": "0",
+          "mixture_t": "1/3",
+          "value": "5/6"
+        },
+        {
+          "m": 3,
+          "mode": "multiplicative",
+          "error": "1/3",
+          "mixture_t": "4/9",
+          "value": "31/36"
+        },
+        {
+          "m": 3,
+          "mode": "multiplicative",
+          "error": "1",
+          "mixture_t": "2/3",
+          "value": "11/12"
+        },
+        {
+          "m": 3,
+          "mode": "multiplicative",
+          "error": "2",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 3,
+          "mode": "multiplicative",
+          "error": "3",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 3,
+          "mode": "multiplicative",
+          "error": "4",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 3,
+          "mode": "additive",
+          "error": "0",
+          "mixture_t": "1/3",
+          "value": "5/6"
+        },
+        {
+          "m": 3,
+          "mode": "additive",
+          "error": "1/9",
+          "mixture_t": "2/3",
+          "value": "11/12"
+        },
+        {
+          "m": 3,
+          "mode": "additive",
+          "error": "1/3",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 3,
+          "mode": "additive",
+          "error": "2/3",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 3,
+          "mode": "additive",
+          "error": "1",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 4,
+          "mode": "multiplicative",
+          "error": "0",
+          "mixture_t": "1/4",
+          "value": "13/16"
+        },
+        {
+          "m": 4,
+          "mode": "multiplicative",
+          "error": "1/3",
+          "mixture_t": "1/3",
+          "value": "5/6"
+        },
+        {
+          "m": 4,
+          "mode": "multiplicative",
+          "error": "1",
+          "mixture_t": "1/2",
+          "value": "7/8"
+        },
+        {
+          "m": 4,
+          "mode": "multiplicative",
+          "error": "3",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 4,
+          "mode": "multiplicative",
+          "error": "4",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 4,
+          "mode": "multiplicative",
+          "error": "5",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 4,
+          "mode": "additive",
+          "error": "0",
+          "mixture_t": "1/4",
+          "value": "13/16"
+        },
+        {
+          "m": 4,
+          "mode": "additive",
+          "error": "1/16",
+          "mixture_t": "1/2",
+          "value": "7/8"
+        },
+        {
+          "m": 4,
+          "mode": "additive",
+          "error": "1/12",
+          "mixture_t": "7/12",
+          "value": "43/48"
+        },
+        {
+          "m": 4,
+          "mode": "additive",
+          "error": "1/4",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 4,
+          "mode": "additive",
+          "error": "1/2",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 4,
+          "mode": "additive",
+          "error": "1",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 5,
+          "mode": "multiplicative",
+          "error": "0",
+          "mixture_t": "1/5",
+          "value": "4/5"
+        },
+        {
+          "m": 5,
+          "mode": "multiplicative",
+          "error": "1/3",
+          "mixture_t": "4/15",
+          "value": "49/60"
+        },
+        {
+          "m": 5,
+          "mode": "multiplicative",
+          "error": "1",
+          "mixture_t": "2/5",
+          "value": "17/20"
+        },
+        {
+          "m": 5,
+          "mode": "multiplicative",
+          "error": "4",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 5,
+          "mode": "multiplicative",
+          "error": "5",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 5,
+          "mode": "multiplicative",
+          "error": "6",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 5,
+          "mode": "additive",
+          "error": "0",
+          "mixture_t": "1/5",
+          "value": "4/5"
+        },
+        {
+          "m": 5,
+          "mode": "additive",
+          "error": "1/25",
+          "mixture_t": "2/5",
+          "value": "17/20"
+        },
+        {
+          "m": 5,
+          "mode": "additive",
+          "error": "1/15",
+          "mixture_t": "8/15",
+          "value": "53/60"
+        },
+        {
+          "m": 5,
+          "mode": "additive",
+          "error": "1/5",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 5,
+          "mode": "additive",
+          "error": "2/5",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 5,
+          "mode": "additive",
+          "error": "1",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 6,
+          "mode": "multiplicative",
+          "error": "0",
+          "mixture_t": "1/6",
+          "value": "19/24"
+        },
+        {
+          "m": 6,
+          "mode": "multiplicative",
+          "error": "1/3",
+          "mixture_t": "2/9",
+          "value": "29/36"
+        },
+        {
+          "m": 6,
+          "mode": "multiplicative",
+          "error": "1",
+          "mixture_t": "1/3",
+          "value": "5/6"
+        },
+        {
+          "m": 6,
+          "mode": "multiplicative",
+          "error": "5",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 6,
+          "mode": "multiplicative",
+          "error": "6",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 6,
+          "mode": "multiplicative",
+          "error": "7",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 6,
+          "mode": "additive",
+          "error": "0",
+          "mixture_t": "1/6",
+          "value": "19/24"
+        },
+        {
+          "m": 6,
+          "mode": "additive",
+          "error": "1/36",
+          "mixture_t": "1/3",
+          "value": "5/6"
+        },
+        {
+          "m": 6,
+          "mode": "additive",
+          "error": "1/18",
+          "mixture_t": "1/2",
+          "value": "7/8"
+        },
+        {
+          "m": 6,
+          "mode": "additive",
+          "error": "1/6",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 6,
+          "mode": "additive",
+          "error": "1/3",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 6,
+          "mode": "additive",
+          "error": "1",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 7,
+          "mode": "multiplicative",
+          "error": "0",
+          "mixture_t": "1/7",
+          "value": "11/14"
+        },
+        {
+          "m": 7,
+          "mode": "multiplicative",
+          "error": "1/3",
+          "mixture_t": "4/21",
+          "value": "67/84"
+        },
+        {
+          "m": 7,
+          "mode": "multiplicative",
+          "error": "1",
+          "mixture_t": "2/7",
+          "value": "23/28"
+        },
+        {
+          "m": 7,
+          "mode": "multiplicative",
+          "error": "6",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 7,
+          "mode": "multiplicative",
+          "error": "7",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 7,
+          "mode": "multiplicative",
+          "error": "8",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 7,
+          "mode": "additive",
+          "error": "0",
+          "mixture_t": "1/7",
+          "value": "11/14"
+        },
+        {
+          "m": 7,
+          "mode": "additive",
+          "error": "1/49",
+          "mixture_t": "2/7",
+          "value": "23/28"
+        },
+        {
+          "m": 7,
+          "mode": "additive",
+          "error": "1/21",
+          "mixture_t": "10/21",
+          "value": "73/84"
+        },
+        {
+          "m": 7,
+          "mode": "additive",
+          "error": "1/7",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 7,
+          "mode": "additive",
+          "error": "2/7",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 7,
+          "mode": "additive",
+          "error": "1",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 8,
+          "mode": "multiplicative",
+          "error": "0",
+          "mixture_t": "1/8",
+          "value": "25/32"
+        },
+        {
+          "m": 8,
+          "mode": "multiplicative",
+          "error": "1/3",
+          "mixture_t": "1/6",
+          "value": "19/24"
+        },
+        {
+          "m": 8,
+          "mode": "multiplicative",
+          "error": "1",
+          "mixture_t": "1/4",
+          "value": "13/16"
+        },
+        {
+          "m": 8,
+          "mode": "multiplicative",
+          "error": "7",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 8,
+          "mode": "multiplicative",
+          "error": "8",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 8,
+          "mode": "multiplicative",
+          "error": "9",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 8,
+          "mode": "additive",
+          "error": "0",
+          "mixture_t": "1/8",
+          "value": "25/32"
+        },
+        {
+          "m": 8,
+          "mode": "additive",
+          "error": "1/64",
+          "mixture_t": "1/4",
+          "value": "13/16"
+        },
+        {
+          "m": 8,
+          "mode": "additive",
+          "error": "1/24",
+          "mixture_t": "11/24",
+          "value": "83/96"
+        },
+        {
+          "m": 8,
+          "mode": "additive",
+          "error": "1/8",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 8,
+          "mode": "additive",
+          "error": "1/4",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 8,
+          "mode": "additive",
+          "error": "1",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 9,
+          "mode": "multiplicative",
+          "error": "0",
+          "mixture_t": "1/9",
+          "value": "7/9"
+        },
+        {
+          "m": 9,
+          "mode": "multiplicative",
+          "error": "1/3",
+          "mixture_t": "4/27",
+          "value": "85/108"
+        },
+        {
+          "m": 9,
+          "mode": "multiplicative",
+          "error": "1",
+          "mixture_t": "2/9",
+          "value": "29/36"
+        },
+        {
+          "m": 9,
+          "mode": "multiplicative",
+          "error": "8",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 9,
+          "mode": "multiplicative",
+          "error": "9",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 9,
+          "mode": "multiplicative",
+          "error": "10",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 9,
+          "mode": "additive",
+          "error": "0",
+          "mixture_t": "1/9",
+          "value": "7/9"
+        },
+        {
+          "m": 9,
+          "mode": "additive",
+          "error": "1/81",
+          "mixture_t": "2/9",
+          "value": "29/36"
+        },
+        {
+          "m": 9,
+          "mode": "additive",
+          "error": "1/27",
+          "mixture_t": "4/9",
+          "value": "31/36"
+        },
+        {
+          "m": 9,
+          "mode": "additive",
+          "error": "1/9",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 9,
+          "mode": "additive",
+          "error": "2/9",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 9,
+          "mode": "additive",
+          "error": "1",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 10,
+          "mode": "multiplicative",
+          "error": "0",
+          "mixture_t": "1/10",
+          "value": "31/40"
+        },
+        {
+          "m": 10,
+          "mode": "multiplicative",
+          "error": "1/3",
+          "mixture_t": "2/15",
+          "value": "47/60"
+        },
+        {
+          "m": 10,
+          "mode": "multiplicative",
+          "error": "1",
+          "mixture_t": "1/5",
+          "value": "4/5"
+        },
+        {
+          "m": 10,
+          "mode": "multiplicative",
+          "error": "9",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 10,
+          "mode": "multiplicative",
+          "error": "10",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 10,
+          "mode": "multiplicative",
+          "error": "11",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 10,
+          "mode": "additive",
+          "error": "0",
+          "mixture_t": "1/10",
+          "value": "31/40"
+        },
+        {
+          "m": 10,
+          "mode": "additive",
+          "error": "1/100",
+          "mixture_t": "1/5",
+          "value": "4/5"
+        },
+        {
+          "m": 10,
+          "mode": "additive",
+          "error": "1/30",
+          "mixture_t": "13/30",
+          "value": "103/120"
+        },
+        {
+          "m": 10,
+          "mode": "additive",
+          "error": "1/10",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 10,
+          "mode": "additive",
+          "error": "1/5",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 10,
+          "mode": "additive",
+          "error": "1",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 11,
+          "mode": "multiplicative",
+          "error": "0",
+          "mixture_t": "1/11",
+          "value": "17/22"
+        },
+        {
+          "m": 11,
+          "mode": "multiplicative",
+          "error": "1/3",
+          "mixture_t": "4/33",
+          "value": "103/132"
+        },
+        {
+          "m": 11,
+          "mode": "multiplicative",
+          "error": "1",
+          "mixture_t": "2/11",
+          "value": "35/44"
+        },
+        {
+          "m": 11,
+          "mode": "multiplicative",
+          "error": "10",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 11,
+          "mode": "multiplicative",
+          "error": "11",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 11,
+          "mode": "multiplicative",
+          "error": "12",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 11,
+          "mode": "additive",
+          "error": "0",
+          "mixture_t": "1/11",
+          "value": "17/22"
+        },
+        {
+          "m": 11,
+          "mode": "additive",
+          "error": "1/121",
+          "mixture_t": "2/11",
+          "value": "35/44"
+        },
+        {
+          "m": 11,
+          "mode": "additive",
+          "error": "1/33",
+          "mixture_t": "14/33",
+          "value": "113/132"
+        },
+        {
+          "m": 11,
+          "mode": "additive",
+          "error": "1/11",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 11,
+          "mode": "additive",
+          "error": "2/11",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 11,
+          "mode": "additive",
+          "error": "1",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 12,
+          "mode": "multiplicative",
+          "error": "0",
+          "mixture_t": "1/12",
+          "value": "37/48"
+        },
+        {
+          "m": 12,
+          "mode": "multiplicative",
+          "error": "1/3",
+          "mixture_t": "1/9",
+          "value": "7/9"
+        },
+        {
+          "m": 12,
+          "mode": "multiplicative",
+          "error": "1",
+          "mixture_t": "1/6",
+          "value": "19/24"
+        },
+        {
+          "m": 12,
+          "mode": "multiplicative",
+          "error": "11",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 12,
+          "mode": "multiplicative",
+          "error": "12",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 12,
+          "mode": "multiplicative",
+          "error": "13",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 12,
+          "mode": "additive",
+          "error": "0",
+          "mixture_t": "1/12",
+          "value": "37/48"
+        },
+        {
+          "m": 12,
+          "mode": "additive",
+          "error": "1/144",
+          "mixture_t": "1/6",
+          "value": "19/24"
+        },
+        {
+          "m": 12,
+          "mode": "additive",
+          "error": "1/36",
+          "mixture_t": "5/12",
+          "value": "41/48"
+        },
+        {
+          "m": 12,
+          "mode": "additive",
+          "error": "1/12",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 12,
+          "mode": "additive",
+          "error": "1/6",
+          "mixture_t": "1",
+          "value": "1"
+        },
+        {
+          "m": 12,
+          "mode": "additive",
+          "error": "1",
+          "mixture_t": "1",
+          "value": "1"
+        }
+      ],
+      "case_count": 137,
+      "nature": "finite exact coupling checks; no asymptotic inference"
+    },
+    "core_dual_tests": {
+      "local_k_range": [
+        2,
+        40
+      ],
+      "local_cases": 858,
+      "integer_line_t_range": "0..8k",
+      "line_cases": 6591,
+      "occupancy_k_range": [
+        2,
+        8
+      ],
+      "occupancy_m_range": [
+        1,
+        6
+      ],
+      "sorted_profiles": 11397,
+      "completeness": "Every ordered occupancy vector in this finite domain is a permutation of a checked sorted profile; all quantities are invariant."
+    },
+    "product_tests": {
+      "cases": [
+        {
+          "k": 2,
+          "m": 1,
+          "n": 2,
+          "product_value": "1",
+          "sparse_upper": "1"
+        },
+        {
+          "k": 2,
+          "m": 2,
+          "n": 4,
+          "product_value": "3/4",
+          "sparse_upper": "7/8"
+        },
+        {
+          "k": 2,
+          "m": 3,
+          "n": 6,
+          "product_value": "19/27",
+          "sparse_upper": "5/6"
+        },
+        {
+          "k": 2,
+          "m": 4,
+          "n": 8,
+          "product_value": "175/256",
+          "sparse_upper": "13/16"
+        },
+        {
+          "k": 3,
+          "m": 1,
+          "n": 3,
+          "product_value": "1",
+          "sparse_upper": "28/27"
+        },
+        {
+          "k": 3,
+          "m": 2,
+          "n": 6,
+          "product_value": "3/4",
+          "sparse_upper": "47/54"
+        },
+        {
+          "k": 3,
+          "m": 3,
+          "n": 9,
+          "product_value": "19/27",
+          "sparse_upper": "22/27"
+        },
+        {
+          "k": 3,
+          "m": 4,
+          "n": 12,
+          "product_value": "175/256",
+          "sparse_upper": "85/108"
+        },
+        {
+          "k": 4,
+          "m": 1,
+          "n": 4,
+          "product_value": "1",
+          "sparse_upper": "271/256"
+        },
+        {
+          "k": 4,
+          "m": 2,
+          "n": 8,
+          "product_value": "3/4",
+          "sparse_upper": "223/256"
+        },
+        {
+          "k": 4,
+          "m": 3,
+          "n": 12,
+          "product_value": "19/27",
+          "sparse_upper": "207/256"
+        }
+      ],
+      "correction": {
+        "k": 2,
+        "m": 3,
+        "full_independent_value": "19/27",
+        "alpha_k": "3/4",
+        "claim_refuted": "The product expectation is alpha_k for every k,m."
+      }
+    },
+    "heterogeneous_tests": {
+      "cases": [
+        {
+          "k": 2,
+          "m": 2,
+          "model": "equality",
+          "sum_e": "1/68",
+          "upper": "239/272"
+        },
+        {
+          "k": 2,
+          "m": 3,
+          "model": "equality",
+          "sum_e": "1/51",
+          "upper": "57/68"
+        },
+        {
+          "k": 3,
+          "m": 2,
+          "model": "equality",
+          "sum_e": "3/34",
+          "upper": "404/459"
+        },
+        {
+          "k": 3,
+          "m": 3,
+          "model": "equality",
+          "sum_e": "1/17",
+          "upper": "377/459"
+        },
+        {
+          "k": 3,
+          "m": 3,
+          "model": "upper",
+          "sum_e": "18/17",
+          "upper": "428/459"
+        }
+      ],
+      "scope": "finite examples only; all heterogeneous budgets follow analytically from the nonnegative pointwise dual"
+    }
+  }
+}

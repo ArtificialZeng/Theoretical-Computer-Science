@@ -1,0 +1,45 @@
+{
+  "job_id": "c032-dspdag-referee-56b0105494de",
+  "snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+  "review_type": "fresh_internal_stoc_assessment",
+  "verdict": "working_paper",
+  "strongest_result": "Deterministic O_k(m+n+n^(k+0.3)) prescribed vertex-disjoint shortest-path detection for every fixed k>=3 on every positive-weight DAG in the immutable source addition/comparison model, with all new algebraic operands O_k(log(n+2)) bits and their elementary arithmetic charged. The k=3, delta=0.7 consequence fully and positively resolves AVW Open Problem 3. The original-weight bit-cost and arbitrary parallel-arc input-scan qualifications are explicit and unchanged.",
+  "nearest_comparisons": [
+    "Akmal--Vassilevska Williams--Wein, arXiv:2404.15916v2, p.2 and Open Problem 3 p.41, ICALP 2024 DOI 10.4230/LIPIcs.ICALP.2024.9: the inspected dense baseline is n^(k+1), while the candidate gives n^(k+0.3) for all fixed k>=3; their linear shortest-path theorem is for k=2.",
+    "Berczi--Kobayashi, ESA 2017 Proposition 10, DOI 10.4230/LIPIcs.ESA.2017.13, and Eppstein TR 95-52 Sections 2--4, Lemma 2 and Theorem 2: label-specific shortest-path filtering, ordered tuple graphs and terminal handling are established tools. The new contribution is their correctly charged rectangular transition schedule, not these definitions.",
+    "Valiant, JCSS 10(2):308--315 (1975), DOI 10.1016/S0022-0000(75)80046-8, inspected 1974 report: chronological closure with Boolean multiplication is prior work. Its generic use on N^k states does not give the candidate's exact output partition, dimensions or dyadic sum.",
+    "Le Gall--Urrutia, arXiv:1708.05622v2 Section 2.2/Table 3, SODA 2018 DOI 10.1137/1.9781611975031.67, gives the sufficient aspect-2 exponent 3.251640; Vassilevska Williams--Xu--Xu--Zhou, arXiv:2307.07970v2 Table 1, improves it to <3.250385. Both are prior multiplication results. The candidate proves their source-model applicability but does not improve their tensor bounds.",
+    "Choudhary--Kumar--Saggi, ITCS 2026 Theorem 1.1, DOI 10.4230/LIPIcs.ITCS.2026.39, concerns two pairs in more general digraphs and does not imply the new all-fixed-k DAG bound."
+  ],
+  "criteria": {
+    "importance": {
+      "judgment": "strong",
+      "reason": "The theorem gives a polynomial dense exponent saving for the full unrestricted original and for every fixed k>=3. AVW explicitly identifies the same baseline as persisting from the 1980 tuple-graph approach and asks this exact improvement. Prescribed routing and individually shortest paths are central algorithmic graph problems, so the result has value beyond an arbitrary special-case exercise."
+    },
+    "novelty": {
+      "judgment": "strong",
+      "reason": "Against the precise inspected tuple-graph, shortest-path and closure theorems, the first-context-in-R output partition and charged rectangular schedule supply a new algorithmic bound. The fresh current primary search found no equivalent full theorem. Established recursion and multiplication tools are explicitly excluded from the novelty claim; the bounded search is not asserted to prove global priority."
+    },
+    "technical_depth": {
+      "judgment": "uncertain",
+      "reason": "The dependency-safe output partition and complete packing charge are substantive and sufficient for mathematical innovation. Their core is nevertheless a compact adaptation of chronological divide and conquer to a known tuple recurrence. The stronger numerical exponent then follows from existing rectangular multiplication and standard rational interpolation. The packet does not yet demonstrate a broader new algebraic or structural mechanism, and I cannot confidently assess this level of new technique alone as strong for STOC."
+    },
+    "breadth_or_consequence": {
+      "judgment": "uncertain",
+      "reason": "The theorem covers all fixed k and arbitrary label-specific common-order edge graphs, including ordinary prescribed disjoint paths and weighted shortest paths. That is a meaningful consequence. The proved improvement is dense-instance detection on DAGs, with O_k(n^k) state storage; there is no established extension to cyclic digraphs, matching lower bound, optimal exponent, or further independent TCS application in this packet. Whether the demonstrated consequences alone support a broad STOC case remains uncertain."
+    },
+    "exposition_and_verifiability": {
+      "judgment": "strong",
+      "reason": "The frozen proof explicitly states the original model, repeated-terminal and completion reductions, scalar recurrence, dyadic invariant, disjoint output classes, all matrix dimensions, repeated data movement, bit bounds and prior dependencies. This referee reconstructed those steps and independently passed 4,718 full-state and 360 original weighted-path comparisons. The unimplemented fast rectangular primitive is honestly a cited-theorem dependency with a proved exact bridge, not an alleged benchmark. The packet is sufficient for mathematical verification; manuscript layout and citation/build checks remain future gates."
+    }
+  },
+  "case_for_stoc": "The concrete case is a deterministic polynomial exponent improvement over the longstanding dense frontier-transition baseline for all fixed k>=3, resolving the exact AVW question already at k=3. The obstacle is that chronological tuple states cannot be updated by an unrestricted matrix contraction without violating dependencies or paying for too many outputs. The candidate addresses it with a disjoint output-minimum partition and a global rectangular cost analysis, which is a real new scheduling insight. This supports mathematical acceptance and serious algorithms interest. The current evidence leaves the venue-level technical-depth and broader-consequence case uncertain because the remaining machinery is established and no additional application or optimality phenomenon is proved. Under the user's all-strong standard this is working_paper, not submission_ready.",
+  "remaining_weaknesses": [
+    "The new technical core is compact; its depth relative to known generic closure acceleration needs a stronger venue-level case before submission_ready is justified.",
+    "Consequences beyond prescribed common-order DAG routing have not been established; neither an optimal exponent nor a matching lower bound is proved.",
+    "The numerical primitive may have enormous fixed constants and has no supplied fast implementation. This does not invalidate the uniform asymptotic theorem but limits practical evidence.",
+    "The priority screen is bounded and cannot exclude unindexed equivalent work; all inspected primary comparisons and access limits are recorded separately.",
+    "No manuscript, clean build, citation audit or every-page visual audit has yet been performed by this referee job."
+  ],
+  "label_is_not_a_venue_decision": true
+}

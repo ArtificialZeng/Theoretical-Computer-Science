@@ -1,0 +1,17 @@
+# Writing checkpoint
+
+Job: c029-vftfast-write-7567570a6950; 2026-11-02 UTC.
+The prior research checkpoint is preserved in evidence/write-entry-checkpoint.md.
+Accumulated research passes remain 3/3; no counters, usage or earlier verdicts were reset.
+
+The frozen resolution-paper / proved claim has an actual accepted fresh internal mathematical review (audit/math.json and audit/math.md), innovation acceptance (audit/innovation.json), and a separate working_paper assessment (audit/stoc-assessment.json). The write-phase check-math command passed against snapshot b1495a4cbeb794181b64a2bc9a00b637d90f0a7a7fdf654844a24036b4029e66. Source.md and all frozen evidence remain unchanged.
+
+A full English article is drafted in manuscript/main.tex, preserving all original graph/fault/parameter quantifiers, deterministic uniform polynomial time, and the accepted size/stretch theorem. It credits the PPT packing, DR cut/multiplicative constructors and FLPS representative machinery. Its author is solely Zijian Zeng, UCSI University, with the requested email, and it discloses substantial OpenAI Codex assistance. No submission, venue acceptance or independent human verification is claimed.
+
+Current official STOC CFP format/anonymity was checked (evidence/write-format-check.md). The unmodified official acmart inputs are copied locally. Native single-spaced acmsmall with 11pt, letter paper and one-inch margins is used for the current submission instructions. The first manuscript-option build rejected changing its default line spacing; the observed error is recorded in evidence/write-build-failures.md as an operational issue (its raw initial log was overwritten) and was resolved without changing the class. An initial duplicated running author was found visually and corrected. The draft is seven total pages, including title and references. No Excel bibliography exists for this job; relevant primary records and access limits are in literature/user_bibliography_check.md.
+
+Completed: the final seven-page PDF is manuscript/vftfast-working_paper.pdf. All seven final rendered pages were inspected and show no clipping, overlap, missing glyphs or unreadable equations. Final LaTeX/BibTeX has no undefined citations/references, no overfull boxes, and no bibliography metadata warning. Two disclosed nonfatal warnings remain: affiliation city was not supplied, and one visually acceptable underfull bibliography line. A source-only isolated clean rebuild reproduces both PDF and bibliography bytes exactly; all 17 frozen mathematical file hashes still match. The validation record is evidence/write-validation.json. Operational build/header/log-decoding corrections are recorded separately in evidence/write-build-failures.md and do not constitute mathematical evidence.
+
+The actual release_gate.py freeze-manuscript command passed. Mathematical snapshot: b1495a4cbeb794181b64a2bc9a00b637d90f0a7a7fdf654844a24036b4029e66. Manuscript snapshot: 7e28f729eb7f2234aa10abc7de8172036addb82ab9269cd132f9e0c336fc1247. PDF SHA-256: 3489530d8f29e5851151a68c1def490c4305b44012f70751fd647ea8692b5a89. publication.json lists every TeX/BibTeX/class/style/build input and preserves the actual working_paper assessment. No release or external submission is declared.
+
+One next test: a separate release reviewer must perform fresh citation/build/every-page/ZIP-reproduction checks bound to audit/manuscript-snapshot.json before local release. No new mathematical research pass is requested or authorized.

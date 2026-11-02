@@ -1,0 +1,34 @@
+{
+  "artifacts": {
+    "main.pdf": "e9b3d5055ad93f76865143de8acab7b3c4dc6c1f3cd1fe3b20482eb99d68cfa4"
+  },
+  "citation_verdict": "accept_with_citation_limitations",
+  "kind": "resolution-paper",
+  "manuscript_digest": "a40f8840ae0d14f65c4af83e804cb282ac08f663f3e89dfedb04cd0efadea7ba",
+  "original_status": "proved",
+  "pages": 8,
+  "pdf_digest": "e9b3d5055ad93f76865143de8acab7b3c4dc6c1f3cd1fe3b20482eb99d68cfa4",
+  "provenance": {
+    "audit/build.json": "410cddbf6f75bec1c5dee21002cb99bf0926ae07ee61bda249f074e7c1f9ed75",
+    "audit/build.md": "32b436e18952dcf7379a5926f0e6f9044c47a160ca124200d687593dc94b8d60",
+    "audit/citations.json": "6218f49b81b94f89b05d27009a1a23f6d4ef184d4cf857fb7a5c54aee1923d9c",
+    "audit/citations.md": "17e58389e47b8c8c06562c26454a034f45a7b4167528005ed8e9444e0aaadbf2",
+    "audit/math.json": "7fbf3de714f0fcf47cae1f485ce4e35cec151f65be9116d7274a130f2deaf05d",
+    "audit/math.md": "5dfe457941d7859160b2d38ff48949b5a9f2d081d73605ee7440fb5973a89e8f",
+    "audit/visual.json": "85d7ae3e4c1b9625cd4dbfb2f83d1720bc5779962fc9b7858579270430479a2b",
+    "audit/visual.md": "f99afe8934be619fc9482239554a38812eb55d092ff32bbf737c43ed5803b3e3",
+    "evidence/release-build.log": "11abf27ed8844aaadbac10d5641695126abef373959c188c0cd11dcd7f7db369",
+    "jobs/c034-grouptri-referee-e6a7f319b8fe/role.json": "e5a569c749f479c63d1d37b62d36f82d036f03e1d76c582d81cd0d7c9b162cff",
+    "jobs/c034-grouptri-release-98d1e823492f/role.json": "fbd180072e8611a472f47a2072b13811bfa8bcf31ee734247a37db38892df668",
+    "jobs/c034-grouptri-research-d92d3d43a90d/role.json": "a0946d4692dbe6042a674d22885479a16926fab83622d9276722c62e50bdd5d4"
+  },
+  "schema": 1,
+  "snapshot_digest": "05aa22d3dd75b43826bffb43bc7976a87898d16ab67f0597c8e4a686ca39b771",
+  "unverified_citations": [
+    {
+      "citation": "Ruhollah Majdoddin, arXiv:2610.17420v1 (2026)",
+      "key": "Maj26",
+      "limitation": "Only optional DOI registry completion is uncertified. Versioned arXiv displayed pending registration, current record omitted that note; the advertised DOI is retained. Existence, author/title/date/version and full cited passages verified."
+    }
+  ]
+}

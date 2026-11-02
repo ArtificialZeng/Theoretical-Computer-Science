@@ -1,0 +1,7 @@
+{
+  "job_id": "c025-incdec-write-571412ddfbdf",
+  "command": "release_gate.py freeze-manuscript PROJECT_DIR",
+  "exit_code": 0,
+  "stdout": "{\"ok\":true,\"manuscript_digest\":\"339c240c607b3e1abc2562d37898d5f413031750f56b38e36f853c183a238175\",\"pdf_digest\":\"1bccbffd17b02d6383c460ebaae75935efe66a529d78e922980dbe941d4ed51b\",\"snapshot_digest\":\"2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4\",\"changed\":true}\n",
+  "stderr": ""
+}

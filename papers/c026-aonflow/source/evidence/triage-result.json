@@ -1,0 +1,14 @@
+{
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Original scope and primary conjecture verified; bounded current search found no resolution. A new October 2026 decomposition result updates the toolkit. Full congestion-1 AON improvement has plausible substantive value; admission is not acceptance. No research pass consumed.",
+  "next_test": "In the first bounded research pass, reconstruct CKS Theorems 2.1–3.2 and prove or falsify a paired-mass composition invariant for current flow-expander tools, with loss depending on k, total edge load at most 1, and polynomial bit complexity; resolve the rational-weight n-versus-k issue explicitly.",
+  "evidence": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/triage-literature.md",
+    "evidence/triage-integrity.json",
+    "intake/source-inputs.json"
+  ]
+}

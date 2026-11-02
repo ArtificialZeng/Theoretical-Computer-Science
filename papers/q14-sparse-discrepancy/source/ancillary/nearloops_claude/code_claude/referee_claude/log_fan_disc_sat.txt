@@ -1,0 +1,12 @@
+F_6 (apex+P5), all bundles 1: items=9 vars=64 clauses=872 kissat: UNSATISFIABLE (0.0s)
+F_6 (apex+P5), all bundles 1: items=9 vars=64 clauses=872 cadical: UNSATISFIABLE (0.0s)
+F_6, spokes bundles 2: items=14 vars=1088 clauses=45376 kissat: UNSATISFIABLE (0.6s)
+F_6, spokes bundles 2: items=14 vars=1088 clauses=45376 cadical: UNSATISFIABLE (0.4s)
+F_6, path bundles 2, 1 private item at apex: items=14 vars=176 clauses=17912 kissat: UNSATISFIABLE (0.5s)
+F_6, path bundles 2, 1 private item at apex: items=14 vars=176 clauses=17912 cadical: UNSATISFIABLE (0.4s)
+F_7 (apex+P6), all bundles 1: items=11 vars=104 clauses=2884 kissat: UNSATISFIABLE (0.0s)
+F_7 (apex+P6), all bundles 1: items=11 vars=104 clauses=2884 cadical: UNSATISFIABLE (0.0s)
+F_7, alternate spokes bundles 2: items=14 vars=572 clauses=28430 kissat: UNSATISFIABLE (0.3s)
+F_7, alternate spokes bundles 2: items=14 vars=572 clauses=28430 cadical: UNSATISFIABLE (0.3s)
+sanity K_2 bundle 2, D=2 (expect SAT): SATISFIABLE
+sanity K_2 bundle 2, D=3 (expect UNSAT since K_2=2): UNSATISFIABLE

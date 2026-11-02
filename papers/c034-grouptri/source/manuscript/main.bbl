@@ -1,0 +1,85 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{3}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter does
+%%% not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+\makeatletter
+\@ifundefined{NAT@parse@date}{}{\let\NAT@parse@date@orig\NAT@parse@date}
+\@ifundefined{NAT@parse@date}{}{\def\NAT@parse@date#1#2#3#4#5#6@@{\NAT@parse@date@orig#1#2#3#4#5#6@@\def\NAT@tempyear{0000}\def\NAT@tempexlab{{?}}\ifx\NAT@year\NAT@tempyear\ifx\NAT@exlab\NAT@tempexlab\def\NAT@date{[n.\,d.]}\else\edef\NAT@date{[n.\,d.]\NAT@exlab}\fi\fi}}
+\makeatother
+
+\bibitem[Chan et~al\mbox{.}(2023)]%
+        {CVX23}
+\bibfield{author}{\bibinfo{person}{Timothy~M. Chan},
+  \bibinfo{person}{Virginia~Vassilevska Williams}, {and}
+  \bibinfo{person}{Yinzhan Xu}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{Fredman's Trick Meets Dominance Product: Fine-Grained
+  Complexity of Unweighted {APSP}, {3SUM} Counting, and More}.
+\newblock
+\showeprint[arxiv]{2303.14572}~[cs.DS]
+\href{https://doi.org/10.48550/arXiv.2303.14572}{doi:\nolinkurl{10.48550/arXiv.2303.14572}}
+\newblock
+\shownote{Version 1, 25 March 2023}.
+
+
+\bibitem[Majdoddin(2026)]%
+        {Maj26}
+\bibfield{author}{\bibinfo{person}{Ruhollah Majdoddin}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Thin matrix products up to {$D\le N^{0.172}$} and
+  lossless reductions for {3SUM}, {Exact Triangle} and {APSP}, with {3SUM} over
+  abelian groups and a dichotomy for coordinatewise problems}.
+\newblock
+\showeprint[arxiv]{2610.17420}~[cs.DS]
+\href{https://doi.org/10.48550/arXiv.2610.17420}{doi:\nolinkurl{10.48550/arXiv.2610.17420}}
+\newblock
+\shownote{Version 1, 12 October 2026}.
+
+
+\bibitem[Sheffield et~al\mbox{.}(2026)]%
+        {SWX26}
+\bibfield{author}{\bibinfo{person}{Nathan Sheffield},
+  \bibinfo{person}{Virginia~Vassilevska Williams}, {and} \bibinfo{person}{Zoe
+  Xi}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{The Limits of Black-Box Reductions for All-Pairs
+  Triangle Detection}.
+\newblock
+\showeprint[arxiv]{2608.19092}~[cs.DS]
+\href{https://doi.org/10.48550/arXiv.2608.19092}{doi:\nolinkurl{10.48550/arXiv.2608.19092}}
+\newblock
+\shownote{Version 1, 19 August 2026}.
+
+
+\end{thebibliography}

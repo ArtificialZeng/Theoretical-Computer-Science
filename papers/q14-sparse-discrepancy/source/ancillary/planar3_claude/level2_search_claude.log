@@ -1,0 +1,10 @@
+Q3 cube                      n= 8 m=12  level-2 schedule: True
+grid 3x3                     n= 9 m=12  level-2 schedule: True
+grid 3x4                     n=12 m=17  level-2 schedule: True
+C4                           n= 4 m= 4  level-2 schedule: True
+K_{2,3}                      n= 5 m= 6  level-2 schedule: True
+K_{3,3} (nonplanar)          n= 6 m= 9  level-2 schedule: True
+octahedron (E=12,n=6)        n= 6 m=12  level-2 schedule: False
+K4                           n= 4 m= 6  level-2 schedule: True
+K5 (E=10=2n)                 n= 5 m=10  level-2 schedule: False
+Petersen (nonplanar)         n=10 m=15  level-2 schedule: True

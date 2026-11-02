@@ -1,0 +1,209 @@
+{
+  "job_id": "c034-grouptri-release-98d1e823492f",
+  "phase": "extraction_only",
+  "source": "manuscript/main.tex",
+  "source_digest": "dc358479f2c3c27006351f7f5e4ced5ac31dce6175f8b2d2d1b632ae2f0ad2b3",
+  "claims": [
+    {
+      "claim_id": "C01",
+      "claim_text": "For every fixed M, deterministic uniform Exact Triangle has a saving delta_M independent of c; complete cyclic-product inputs and all charged operations.",
+      "claim_type": "Existence + Comparative",
+      "location": "Abstract; Theorem 1"
+    },
+    {
+      "claim_id": "C02",
+      "claim_text": "delta_M=10^-3(144000)^(1-Omega(M)); delta_4=1/144000000.",
+      "claim_type": "Statistic",
+      "location": "Abstract; Theorem 1; Section 1; Section 6"
+    },
+    {
+      "claim_id": "C03",
+      "claim_text": "Majdoddin Theorem 21.3 and Corollary 21.7(a) supply the elementary-group case.",
+      "claim_type": "Attribution",
+      "location": "Section 1"
+    },
+    {
+      "claim_id": "C04",
+      "claim_text": "Majdoddin Remark 21.8 identifies lift-carry and re-gauging obstacles.",
+      "claim_type": "Attribution",
+      "location": "Section 1"
+    },
+    {
+      "claim_id": "C05",
+      "claim_text": "Majdoddin Propositions 21.9 and 21.10 cover few quotient-zero triangles and limited incident residue diversity.",
+      "claim_type": "Attribution",
+      "location": "Section 1"
+    },
+    {
+      "claim_id": "C06",
+      "claim_text": "Majdoddin Open Problem 21.12 asks the unrestricted bounded-exponent question, including Z_4^d.",
+      "claim_type": "Attribution",
+      "location": "Abstract; Section 1"
+    },
+    {
+      "claim_id": "C07",
+      "claim_text": "CVX23 Theorem 5.1 has a hitting/frequency decomposition, cubic initial witness sorting and a faster update cost.",
+      "claim_type": "Attribution + Comparative",
+      "location": "Sections 1 and 4"
+    },
+    {
+      "claim_id": "C08",
+      "claim_text": "Edgewise potential equations underlie the cited CVX construction.",
+      "claim_type": "Attribution",
+      "location": "Sections 1 and 4"
+    },
+    {
+      "claim_id": "C09",
+      "claim_text": "Generic detection/all-edge/listing relationships are prior work discussed by SWX26.",
+      "claim_type": "Attribution",
+      "location": "Section 1"
+    },
+    {
+      "claim_id": "C10",
+      "claim_text": "The new quotient/kernel extension handles every fixed exponent, including dense quotient-zero, residue-diverse inputs.",
+      "claim_type": "Existence + Comparative",
+      "location": "Section 1"
+    },
+    {
+      "claim_id": "C11",
+      "claim_text": "Order bound gives d<=c log_2 n and charged O_{M,c}(log(n+2)) coordinate operations.",
+      "claim_type": "Existence",
+      "location": "Theorem 1; Section 2"
+    },
+    {
+      "claim_id": "C12",
+      "claim_text": "Cyclic embedding is injective, preserves zero sums, costs O_{M,c}(n^2 log(n+2)) and has ambient order n^(c log_2 M).",
+      "claim_type": "Existence",
+      "location": "Section 2"
+    },
+    {
+      "claim_id": "C13",
+      "claim_text": "Majdoddin Theorem 21.3 gives O(p^6 b^(3-epsilon gamma) log^6 b) with the stated polynomial-order hypothesis.",
+      "claim_type": "Attribution + Statistic",
+      "location": "Section 2"
+    },
+    {
+      "claim_id": "C14",
+      "claim_text": "Majdoddin Corollary 9.1(b) and Section 16 instantiate H(1/14,0.077), product 0.0055, yielding conservative epsilon_0=1/1000.",
+      "claim_type": "Attribution + Statistic",
+      "location": "Section 2"
+    },
+    {
+      "claim_id": "C15",
+      "claim_text": "For fixed p the source restriction p<=b^(epsilon/4) excludes a finite range handled directly.",
+      "claim_type": "Existence",
+      "location": "Section 2"
+    },
+    {
+      "claim_id": "C16",
+      "claim_text": "Three independent absence markers encode exactly the present triangles, including characteristic two; construction O(b^2(D+3)).",
+      "claim_type": "Existence",
+      "location": "Section 2"
+    },
+    {
+      "claim_id": "C17",
+      "claim_text": "Capped witnesses are exactly min(t_ij,T), distinct and genuine, in O-tilde(n^(3-epsilon_0 theta/6)).",
+      "claim_type": "Existence",
+      "location": "Lemma 2 and proof"
+    },
+    {
+      "claim_id": "C18",
+      "claim_text": "Cutoff b_0 retains polynomial-order promises at every queried dimension; positive leaf scan and all control costs fit the claimed bound.",
+      "claim_type": "Existence",
+      "location": "Lemma 2 proof"
+    },
+    {
+      "claim_id": "C19",
+      "claim_text": "Greedy witnesses, hitting sets and frequency scans have stated sizes and charged construction bounds.",
+      "claim_type": "Existence",
+      "location": "Section 4"
+    },
+    {
+      "claim_id": "C20",
+      "claim_text": "Quotient-zero triangles partition disjointly into exceptions and O-tilde(s^3) pieces, with the specified edgewise potentials.",
+      "claim_type": "Existence",
+      "location": "Lemma 3 and proof"
+    },
+    {
+      "claim_id": "C21",
+      "claim_text": "Arbitrary potential lifts cancel exactly; dividing pZ_M by p gives Z_q even for non-split extensions.",
+      "claim_type": "Existence",
+      "location": "Section 5"
+    },
+    {
+      "claim_id": "C22",
+      "claim_text": "Complete marked kernel instances preserve precisely original zero triangles, meet polynomial order, and cost O-tilde(n^2) each.",
+      "claim_type": "Existence",
+      "location": "Section 5"
+    },
+    {
+      "claim_id": "C23",
+      "claim_text": "Induction covers all M and all small/trivial/empty cases, terminates, and uses no advice or preprocessed universe.",
+      "claim_type": "Existence",
+      "location": "Section 6"
+    },
+    {
+      "claim_id": "C24",
+      "claim_text": "All ledger costs including every materialized instance imply delta_M=delta_q/144000 with polylog slack.",
+      "claim_type": "Existence + Comparative",
+      "location": "Section 6 ledger and proof"
+    },
+    {
+      "claim_id": "C25",
+      "claim_text": "Exact verifier checked 512 capped-listing instances, sides 0..3.",
+      "claim_type": "Statistic",
+      "location": "Section 7"
+    },
+    {
+      "claim_id": "C26",
+      "claim_text": "Exact verifier checked 676333 potential/kernel cases for composite M<=36 and proper prime divisors.",
+      "claim_type": "Statistic",
+      "location": "Section 7"
+    },
+    {
+      "claim_id": "C27",
+      "claim_text": "Exact verifier checked 3548440 marker cases for 2<=q<=36.",
+      "claim_type": "Statistic",
+      "location": "Section 7"
+    },
+    {
+      "claim_id": "C28",
+      "claim_text": "Exact verifier checked 360 seeded graph cases, sides 1..6, dimensions 1..3, yielding 6850 kernel instances.",
+      "claim_type": "Statistic",
+      "location": "Section 7"
+    },
+    {
+      "claim_id": "C29",
+      "claim_text": "Exact verifier checked 2047 exact exponent ledgers for 2<=M<=2048.",
+      "claim_type": "Statistic",
+      "location": "Section 7"
+    },
+    {
+      "claim_id": "C30",
+      "claim_text": "These finite tests use brute-force detectors and establish finite semantic coverage, not the infinite algorithmic theorem.",
+      "claim_type": "Existence",
+      "location": "Section 7"
+    },
+    {
+      "claim_id": "C31",
+      "claim_text": "Bibliography Maj26: author/title/year/arXiv version/date/DOI.",
+      "claim_type": "Attribution + Temporal",
+      "location": "References [2]"
+    },
+    {
+      "claim_id": "C32",
+      "claim_text": "Bibliography CVX23: authors/title/year/arXiv version/date/DOI.",
+      "claim_type": "Attribution + Temporal",
+      "location": "References [1]"
+    },
+    {
+      "claim_id": "C33",
+      "claim_text": "Bibliography SWX26: authors/title/year/arXiv version/date/DOI.",
+      "claim_type": "Attribution + Temporal",
+      "location": "References [3]"
+    }
+  ],
+  "snapshot_digest": "05aa22d3dd75b43826bffb43bc7976a87898d16ab67f0597c8e4a686ca39b771",
+  "pdf_digest": "e9b3d5055ad93f76865143de8acab7b3c4dc6c1f3cd1fe3b20482eb99d68cfa4",
+  "manuscript_digest": "a40f8840ae0d14f65c4af83e804cb282ac08f663f3e89dfedb04cd0efadea7ba"
+}

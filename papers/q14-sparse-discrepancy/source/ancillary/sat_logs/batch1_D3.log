@@ -1,0 +1,9 @@
+RESULT cycle [4, 3] 3 NOCOVER 0.2s
+RESULT cycle [5, 3] 3 NOCOVER 4.6s
+RESULT cycle [6, 3] 3 NOCOVER 281.3s
+RESULT cycle [3, 4] 3 NOCOVER 0.3s
+RESULT cycle [4, 4] 3 NOCOVER 8.2s
+RESULT cycle [5, 4] 3 NOCOVER 1240.2s
+RESULT complete [5, 1] 3 NOCOVER 0.0s
+RESULT complete [6, 1] 3 NOCOVER 20.4s
+RESULT complete [4, 2] 3 NOCOVER 0.2s

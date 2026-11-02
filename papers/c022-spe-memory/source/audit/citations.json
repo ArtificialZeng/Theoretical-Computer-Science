@@ -1,0 +1,28 @@
+{
+  "job_id": "c022-spe-memory-release-fb6f51f9715a",
+  "snapshot_digest": "8167ae363386355fe869e8109b82155be5da309379f81a3f7216041bf9acf52f",
+  "manuscript_digest": "fda8041cddf4c1a9b3b39b3e7e551e135f79bf4f894525e547ac174a11bbfaa2",
+  "pdf_digest": "1c714b9216ce3cf89b26123c6beebf3c7a38d14b31e0b5a727dcaa214978306f",
+  "verdict": "accept_with_citation_limitations",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/acmart.dtx",
+    "manuscript/alpha.bst",
+    "manuscript/build.sh",
+    "manuscript/build/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "citation_audit_method": "citation-check-skill two-pass plus primary-source-manual",
+  "scope": "All eight listed sources, all 13 extracted assertion groups, nine bibliography entries, original theorem hypotheses, bounded nearest-work comparison, recorder dependency scope, extracted and rendered references reviewed on 2026-11-02 Asia/Shanghai. No user Excel/BibTeX authority designated. Actual full frozen texts available; BBGR21 DOI refresh unavailable; no unsupported strengthening or undefined keys. Working_paper assessment retained.",
+  "unverified_citations": [
+    {
+      "key": "BBGR21",
+      "limitation": "DOI10.1016/j.ic.2020.104594 endpoint not independently refreshed successfully in bounded review; existence and journal metadata confirmed from primary UMONS record, and exact nearby theorem claims verified in frozen full version."
+    }
+  ]
+}

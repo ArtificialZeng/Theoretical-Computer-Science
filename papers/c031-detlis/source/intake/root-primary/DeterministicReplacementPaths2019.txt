@@ -1,0 +1,859 @@
+Deterministic Combinatorial Replacement Paths
+and Distance Sensitivity Oracles
+Noga Alon
+Department of Mathematics, Princeton University, Princeton, NJ 08544, USA
+Schools of Mathematics and Computer Science, Tel Aviv University, Tel Aviv 69978, Israel
+nogaa@tau.ac.il
+
+Shiri Chechik
+Blavatnik School of Computer Science, Tel Aviv University, Tel Aviv 69978, Israel
+shiri.chechik@gmail.com
+
+Sarel Cohen
+Blavatnik School of Computer Science, Tel Aviv University, Tel Aviv 69978, Israel
+sarelcoh@post.tau.ac.il
+      Abstract
+In this work we derandomize two central results in graph algorithms, replacement paths and distance
+sensitivity oracles (DSOs) matching in both cases the running time of the randomized algorithms.
+     For the replacement paths problem, let G = (V, E) be a directed unweighted graph with n
+vertices and m edges and let P be a shortest path from s to t in G. The replacement paths problem
+is to find for every edge e ∈ P the shortest path from s to t avoiding e. Roditty and Zwick [ICALP
+2005] obtained a randomized algorithm with running time of O(m     e √n). Here we provide the first
+                                                                √
+deterministic algorithm for this problem, with the same O(m e     n) time. Due to matching conditional
+lower bounds of Williams et al. [FOCS 2010], our deterministic combinatorial algorithm for the
+replacement paths problem is optimal up to polylogarithmic factors (unless the long standing bound
+of O(mn)
+    e       for the combinatorial boolean matrix multiplication can be improved). This also implies
+a deterministic algorithm for the second simple shortest path problem in O(m      e √n) time, and a
+                                                                             √
+deterministic algorithm for the k-simple shortest paths problem in O(km e      n) time (for any integer
+constant k > 0).
+     For the problem of distance sensitivity oracles, let G = (V, E) be a directed graph with real-edge
+weights. An f -Sensitivity Distance Oracle (f -DSO) gets as input the graph G = (V, E) and a
+parameter f , preprocesses it into a data-structure, such that given a query (s, t, F ) with s, t ∈ V
+and F ⊆ E ∪ V, |F | ≤ f being a set of at most f edges or vertices (failures), the query algorithm
+efficiently computes the distance from s to t in the graph G \ F (i.e., the distance from s to t in the
+graph G after removing from it the failing edges and vertices F ).
+     For weighted graphs with real edge weights, Weimann and Yuster [FOCS 2010] presented several
+randomized f -DSOs. In particular, they presented a combinatorial f -DSO with e      O(mn4−α ) prepro-
+                                     2−2(1−α)/f
+cessing time and subquadratic e  O(n            ) query time, giving a tradeoff between preprocessing
+and query time for every value of 0 < α < 1. We derandomize this result and present a combinatorial
+deterministic f -DSO with the same asymptotic preprocessing and query time.
+2012 ACM Subject Classification Theory of computation → Design and analysis of algorithms;
+Theory of computation → Dynamic graph algorithms
+Keywords and phrases replacement paths, distance sensitivity oracles, derandomization
+Digital Object Identifier 10.4230/LIPIcs.ICALP.2019.12
+Category Track A: Algorithms, Complexity and Games
+Related Version A full version of the paper is available at [3], https://arxiv.org/abs/1905.07483.
+Funding Noga Alon: Research supported in part by NSF grant DMS-1855464, ISF grant 281/17
+and GIF grant G-1347-304.6/2016.
+Shiri Chechik: Research supported in part by the Israel Science Foundation grant No. 1528/15 and
+the Blavatnik Fund.
+Sarel Cohen: Research supported in part by the Israel Science Foundation grant No. 1528/15 and
+the Blavatnik Fund.
+             © Noga Alon, Shiri Chechik, and Sarel Cohen;
+                                                                                                       EA
+             licensed under Creative Commons License CC-BY
+                                                                                                       TC S
+46th International Colloquium on Automata, Languages, and Programming (ICALP 2019).
+Editors: Christel Baier, Ioannis Chatzigiannakis, Paola Flocchini, and Stefano Leonardi;
+Article No. 12; pp. 12:1–12:14
+                     Leibniz International Proceedings in Informatics
+                     Schloss Dagstuhl – Leibniz-Zentrum für Informatik, Dagstuhl Publishing, Germany
+12:2   Deterministic Combinatorial Replacement Paths and Distance Sensitivity Oracles
+
+
+        1     Introduction
+
+       In many algorithms used in computing environments such as massive storage devices, large
+       scale parallel computation, and communication networks, recovering from failures must be
+       an integral part. Therefore, designing algorithms and data structures whose running time is
+       efficient even in the presence of failures is an important task. In this paper we study variants
+       of shortest path queries in setting with failures.
+            The computation of shortest paths and distances in the presence of failures was extensively
+       studied. Two central problems researched in this field are the Replacement Paths problem
+       and Distance Sensitivity Oracles, we define these problems hereinafter.
+
+
+       The Replacement Paths problem. (See, e.g., [26, 28, 16, 14, 21, 27, 6, 30, 22, 23, 24, 25,
+       29, 15].) Let G = (V, E) be a graph (directed or undirected, weighted or unweighted) with
+       n vertices and m edges and let PG (s, t) be a shortest path from s to t. For every edge
+       e ∈ PG (s, t) a replacement path PG (s, t, e) is a shortest path from s to t in the graph G \ {e}
+       (which is the graph G after removing the edge e). Let dG (s, t, e) be the length of the path
+       PG (s, t, e). The replacement paths problem is as follows: given a shortest path PG (s, t) from
+       s to t in G, compute dG (s, t, e) (or an approximation of it) for every e ∈ PG (s, t).
+
+
+       Distance Sensitivity Oracles. (See, e.g., [9, 17, 7, 8, 10, 11, 12, 13, 19].) An f -Sensitivity
+       Distance Oracle (f -DSO) gets as input a graph G = (V, E) and a parameter f , preprocesses
+       it into a data-structure, such that given a query (s, t, F ) with s, t ∈ V and F ⊆ E ∪ V, |F | ≤ f
+       being a set of at most f edges or vertices (failures), the query algorithm efficiently computes
+       (exactly or approximately) dG (s, t, F ) which is the distance from s to t in the graph G \ F
+       (i.e., in the graph G after removing from it the failing edges and vertices F ). Here we would
+       like to optimize several parameters of the data-structure: minimize the size of the oracle,
+       support many failures f , have efficient preprocessing and query algorithms, and if the output
+       is an approximation of the distance then optimize the approximation-ratio.
+            An important line of research in the theory of computer science is derandomization. In
+       many algorithms and data-structures there exists a gap between the best known randomized
+       algorithms and the best known deterministic algorithms. There has been extensive research
+       on closing the gaps between the best known randomized and deterministic algorithms in
+       many problems or proving that no deterministic algorithm can perform as good as its
+       randomized counterpart. There also has been a long line of work on developing derandomiz-
+       ation techniques, in order to obtain deterministic versions of randomized algorithms (e.g.,
+       Chapter 16 in [2]).
+            In this paper we derandomize algorithms and data-structures for computing distances
+       and shortest paths in the presence of failures. Many randomized algorithms for computing
+       shortest paths and distances use variants of the following sampling lemma (see Lemma 1 in
+       Roditty and Zwick [26]).
+
+       I Lemma 1 (Lemma 1 in [26]). Let D1 , D2 , . . . , Dq ⊆ V satisfy |Di | > L for 1 ≤ i ≤ q and
+       |V | = n. If R ⊆ V is a random subset obtained by selecting each vertex, independently, with
+       probability (c ln n)/L, for some c > 0, then with probability of at least 1 − q · n−c we have
+       Di ∩ R 6= ∅ for every 1 ≤ i ≤ q.
+
+           Our derandomization step of Lemma 1 is very simple, as described in Section 1.3, we use
+       the folklore greedy approach to prove the following lemma, which is a deterministic version
+       of Lemma 1.
+N. Alon, S. Chechik, and S. Cohen                                                                      12:3
+
+
+I Lemma 2 (See also Section 1.3). Let D1 , D2 , . . . , Dq ⊆ V satisfy |Di | > L for 1 ≤ i ≤ q and
+|V | = n. One can deterministically find in O(qL)
+                                            e           time a set R ⊂ V such that |R| = O(n/L)
+                                                                                           e
+and Di ∩ R 6= ∅ for every 1 ≤ i ≤ q.
+   We emphasize that the use of Lemma 2 is very standard and is not our main contribution.
+The main technical challenge is how to efficiently and deterministically compute a small
+number of sets D1 , D2 , . . . , Dq ⊆ V so that the invocation of Lemma 2 is fast.
+
+1.1    Derandomizing the Replacment Paths Algorithm of Roditty and
+       Zwick [26]
+We derandomize the algorithm of Roditty and Zwick [26] and obtain a near optimal determ-
+inistic algorithm for the replacement paths problem in directed unweighed graphs (a problem
+which was open for more than a decade since the randomized algorithm was published) as
+stated in the following theorem.
+I Theorem 3. There exists a deterministic algorithm for the replacement paths problem
+                                                e √n). This algorithm is near optimal
+in unweighted directed graphs whose runtime is O(m
+assuming the conditional lower bound of combinatorial boolean matrix multiplication of [29].
+    The term “combinatorial algorithms” is not well-defined, and it is often interpreted as
+non-Strassen-like algorithms [4], or more intuitively, algorithms that do not use any matrix
+multiplication tricks. Arguably, in practice, combinatorial algorithms are to some extent
+considered more efficient since the constants hidden in the matrix multiplication bounds are
+high. On the other hand, there has been research done to make fast matrix multiplication
+practical, e.g., [18, 5].
+                                                                                          √
+    Vassilevska Williams and Williams [29] proved a subcubic equivalence between n
+occurrences of the combinatorial replacement paths problem in unweighted directed graphs
+and the combinatorial boolean multiplication (BMM) problem. More precisely, they proved
+that there exists some fixed  > 0 such that the combinatorial replacement paths problem
+can be solved in O(mn1/2− ) time if and only if there exists some fixed δ > 0 such that the
+combinatorial boolean matrix multiplication (BMM) can be solved in subcubic O(n3−δ ) time.
+Giving a subcubic combinatorial algorithm to the BMM problem, or proving that no such
+algorithm exists, is a long standing open problem. This implies that either both problems can
+be polynomially improved, or neither of them does. Hence, assuming the conditional lower
+                                                          √
+bound of combinatorial BMM, our combinatorial e      O(m n) algorithm for the replacement
+paths problem in unweighted directed graphs is essentially optimal (up to no(1) factors).
+    The replacement paths problem is related to the k simple shortest paths problem, where
+the goal is to find the k simple shortest paths between two vertices. Using known reductions
+from the replacement paths problem to the k simple shortest paths problem, we close this
+gap as the following Corollary states.
+I Corollary 4. There exists a deterministic algorithm for computing k simple shortest paths
+                                                     √
+in unweighted directed graphs whose runtime is eO(km n).
+The trivial O(mn)
+            e       time algorithm for solving the replacement paths problem in directed
+weighted graphs (simply, for every edge e ∈ PG (s, t) run Dijkstra in the graph G \ {e}) is
+deterministic and near optimal (according to a conditional lower bound by [29]). To the
+best of our knowledge the only deterministic combinatorial algorithms known for directed
+unweighted graphs are the algorithms for general directed weighted graphs whose runtime
+   O(mn) leaving a significant gap between the randomized and deterministic algorithms.
+is e
+                                                             √
+As mentioned above, in this paper we derandomize the e  O(m n) algorithm of Roditty and
+Zwick [26] and close this gap. More related work can be found in the full version.
+
+
+                                                                                                     ICALP 2019
+12:4   Deterministic Combinatorial Replacement Paths and Distance Sensitivity Oracles
+
+
+       1.2    Derandomizing the Combinatorial Distance Sensitivity Oracle of
+              Weimann and Yuster [27]
+       Our second result is derandomizing the combinatorial distance sensitivity oracle of Weimann
+       and Yuster [27] and obtaining the following theorem.
+
+       I Theorem 5. Let G = (V, E) be a directed graph with real edge weights, let |V | = n and
+       |E| = m. There exists a deterministic algorithm that given G and parameters f = O( logloglogn n )
+                                                                     O(mn4−α ) time. Given a query
+       and 0 < α < 1 constructs an f -sensitivity distance oracle in e
+       (s, t, F ) with s, t ∈ V and F ⊆ E ∪ V, |F | ≤ f being a set of at most f edges or vertices
+                                                                  e 2−2(1−α)/f ) time the distance
+       (failures), the deterministic query algorithm computes in O(n
+       from s to t in the graph G \ F .
+
+           We remark that while our focus in this paper is in computing distances, one may obtain
+       the actual shortest path in time proportional to the number of edges of the shortest paths,
+       using the same algorithm for obtaining the shortest paths in the replacement paths problem
+       [26], and in the distance sensitivity oracles case [27].
+
+
+       1.3    Technical Contribution and Our Derandomization Framework
+       Let A be a random algorithm that uses Lemma 1 for sampling a subset of vertices R ⊆ V .
+       We say that P = {D1 , . . . , Dq } is a set of critical paths for the randomized algorithm A if A
+       uses the sampling Lemma 1 and it is sufficient for the correctness of algorithm A that R is
+       a hitting set for P (i.e., every path in P contains at least one vertex of R). According to
+       Lemma 2 one can derandomize the random selection of the hitting set R in time that depends
+       on the number of paths in P. Therefore, in order to obtain an efficient derandomization
+       procedure, we want to find a small set P of critical paths for the randomized algorithms.
+          Our main technical contribution is to show how to compute a small set of critical paths
+       that is sufficient to be used as input for the greedy algorithm stated in Lemma 2.
+          Our framework for derandomizing algorithms and data-structures that use the sampling
+       Lemma 1 is given in Figure 1.
+
+
+        1 Step 1: Prove the existence of a small set of critical paths {D1 , . . . , Dq } such that
+           |Di | > L and show that it is sufficient for the correctness of the randomized
+           algorithm that the set R obtained by Lemma 1 hits all the paths D1 , . . . , Dq .
+        2 Step 2: Find an efficient algorithm to compute the paths D1 , . . . , Dq .
+        3 Step 3: Use a deterministic algorithm to compute a small subset R ⊆ V of vertices
+           such that Di ∩ R 6= ∅ for every 1 ≤ i ≤ q. For example, one can use the greedy
+           algorithm of Lemma 2 or the blocker set algorithm of [20] to find a subset R ⊂ V of
+           O(n/L)
+            e       vertices.
+
+          Figure 1 Our derandomization framework to derandomize algorithms that use the sampling
+       Lemma 1.
+
+
+           Our first main technical contribution, denoted as Step 1 in Figure 1, is proving the
+       existence of small sets of critical paths for the randomized replacement path algorithm of
+       Roditty and Zwick [26] and for the distance sensitivity oracles of Weimann and Yuster
+       [27]. Our second main technical contribution, denoted as Step 2 in Figure 1, is developing
+       algorithms to efficiently compute these small sets of critical paths.
+N. Alon, S. Chechik, and S. Cohen                                                                        12:5
+
+
+    For the replacement paths problem, Roditty and Zwick [26] proved the existence of a
+                                                                 √
+critical set of O(n2 ) paths, each path containing at least d ne edges. Simply applying
+Lemma 2 on this set of paths requires O(n  e 2.5 ) time which is too much, and it is also not
+clear from their algorithm how to efficiently compute this set of critical paths. As for Step 1,
+                                                                                      √
+we prove the existence of a small set of O(n) critical paths, each path contains d ne edges,
+and for Step 2, we develop an efficient algorithm that computes this set of critical paths in
+ e √n) time.
+O(m
+    For the problem of distance sensitivity oracles, Weimann and Yuster [27] proved the
+existence of a critical set of O(n2f +3 ) paths, each path containing n(1−α)/f edges (where
+0 < α < 1). Simply applying Lemma 2 on this set of paths requires e     O(n2f +3+(1−α)/f ) time
+which is too much, and here too, it is also not clear from their algorithm how to efficiently
+and deterministically compute this set of critical paths. As for Step 1, we prove the existence
+of a small set of O(n2+ ) critical paths, each path contains n(1−α)/f edges, and for Step 2,
+we develop an efficient deterministic algorithm that computes this set of critical paths in
+O(mn1+ ) time.
+ e
+    For Step 3, we use the folklore greedy deterministic algorithm denoted here by
+GreedyPivotsSelection({D1 , . . . , Dq }). Given as input the paths D1 , . . . , Dq , each path
+contains at least L vertices, the algorithm chooses a set of pivots R ⊆ V such that for every
+                                                                       e n ) and the runtime of
+1 ≤ i ≤ q it holds that Di ∩ R 6= ∅. In addition, it holds that |R| = O( L
+the algorithm is eO(qL).
+    The GreedyPivotsSelection algorithm works as follows. Let P = {D1 , . . . , Dq }. Starting
+with R ← ∅, find a vertex v ∈ V which is contained in the maximum number of sets of P,
+add it to R and remove all the sets that contain v from P. Repeat this process until P = ∅.
+    The following greedy selection lemma is folklore and we prove it in the full version.
+
+I Lemma 6. Let 1 ≤ L ≤ n and 1 ≤ q < poly(n) be two integers. Let D1 , . . . , Dq ⊆ V be
+paths satisfying |Di | ≥ L for every 1 ≤ i ≤ q. The algorithm GreedyPivotsSelection({D1 , . . . ,
+Dq }) finds in O(qL)
+                e      time a set R ⊂ V such that for every 1 ≤ i ≤ q it holds that R ∩ Di 6= ∅
+               n log q
+and |R| = O( L ) = O(n/L).
+                         e
+
+
+
+Related Work - the Blocker Set Algorithm of King. We remark that the GreedyPivotsSe-
+lection algorithm is similar to the blocker set algorithm described in [20] for finding a hitting
+set for a set of paths. The blocker set algorithm was used in [20] to develop sequential
+dynamic algorithms for the APSP problem. Additional related work is that of Agarwal
+et al. [1]. They presented a deterministic distributed algorithm to compute APSP in an
+edge-weighted directed or undirected graph in e     O(n3/2 ) rounds in the Congest model by
+incorporating a deterministic distributed version of the blocker set algorithm.
+    While our derandomization framework uses the greedy algorithm (or the blocker set
+algorithm) to find a hitting set of vertices for a critical set of paths D1 , . . . , Dq , we stress
+that our main contribution are the techniques to reduce the number of sets q the greedy
+algorithm must hit (Step 1), and the algorithms to efficiently compute the sets D1 , . . . , Dq
+(Step 2). These techniques are our main contribution, which enable us to use the greedy
+algorithm (or the blocker set algorithm) for a wider range of problems. Specifically, these
+techniques allow us to derandomize the best known random algorithms for the replacement
+paths problem and distance sensitivity oracles. We believe that our techniques can also be
+leveraged for additional related problems which use a sampling lemma similar to Lemma 1.
+
+
+
+
+                                                                                                       ICALP 2019
+12:6   Deterministic Combinatorial Replacement Paths and Distance Sensitivity Oracles
+
+
+       Outline. The structure of the paper is as follows. In Section 1.4 we describe some prelimin-
+       aries and notations. In Section 2 we apply our framework to the replacement paths algorithm
+       of Roditty and Zwick [26]. In Section 3 we apply our framework to the DSO of Weimann
+       and Yuster for graphs with real-edge weights [27].
+
+       1.4     Preliminaries
+       Let G = (V, E) be a directed weighted graph with n vertices and m edges with real edge
+       weights ω(·). Given a path P in G we define its weight ω(P ) = Σe∈E(P ) ω(e).
+            Given s, t ∈ V , let PG (s, t) be a shortest path from s to t in G and let dG (s, t) = ω(PG (s, t))
+       be its length, which is the sum of its edge weights. Let |PG (s, t)| denote the number of
+       edges along PG (s, t). Note that for unweighted graphs we have |PG (s, t)| = dG (s, t). When
+       G is known from the context we sometimes abbreviate PG (s, t), dG (s, t) with P (s, t), d(s, t)
+       respectively.
+            We define the path concatenation operator ◦ as follows. Let P1 = (x1 , x2 , . . . , xr )
+       and P2 = (y1 , y2 , . . . , yt ) be two paths. Then P = P1 ◦ P2 is defined as the path P =
+       (x1 , x2 , . . . , xr , y1 , y2 , . . . , yt ), and it is well defined if either xr = y1 or (xr , y1 ) ∈ E.
+            For a graph H we denote by V (H) the set of its vertices, and by E(H) the set of its
+       edges. When it is clear from the context, we abbreviate e ∈ E(H) by e ∈ H and v ∈ V (H)
+       by v ∈ H.
+            Let P be a path which contains the vertices u, v ∈ V (P ) such that u appears before v
+       along P . We denote by P [u..v] the subpath of P from u to v.
+            For every edge e ∈ PG (s, t) a replacement path PG (s, t, e) for the triple (s, t, e) is a
+       shortest path from s to t avoiding e. Let dG (s, t, e) = ω(PG (s, t, e)) be the length of the
+       replacement path PG (s, t, e).
+            We will assume, without loss of generality, that every replacement path PG (s, t, e) can
+       be decomposed into a common prefix CommonPref s,t,e with the shortest path PG (s, t), a
+       detour Detours,t,e which is disjoint from the shortest path PG (s, t) (except for its first vertex
+       and last vertex), and finally a common suffix CommonSuff s,t,e which is common with the
+       shortest path PG (s, t). Therefore, for every edge e ∈ PG (s, t) it holds that PG (s, t, e) =
+       CommonPref s,t,e ◦ Detours,t,e ◦ CommonSuff s,t,e (the prefix and/or suffix may be empty).
+            Let F ⊆ V ∪ E be a set of vertices and edges. We define the graph G \ F = (V \ F, E \ F )
+       as the graph obtained from G by removing the vertices and edges F . We define a replacement
+       path PG (s, t, F ) as a shortest path from s to t in the graph G \ F , and let dG (s, t, F ) =
+       w(PG (s, t, e)) be its length.
+
+                                                      √
+        2      Deterministic Replacement Paths in O(m
+                                                  f     n) Time
+       In this section we apply our framework from Section 1.3 to the replacement paths algorithm
+       of Roditty and Zwick [26].
+           The randomized algorithm by Roddity and Zwick as described in [26] takes O(m        e √n)
+       expected time. They handle separately the case that a replacement path has a short detour
+                             √
+       containing at most d ne edges, and the case that a replacement path has a long detour
+                               √
+       containing more than d ne edges. The first case is solved deterministically. The second case
+       is solved by first sampling a subset of vertices R according to Lemma 1, where each vertex
+                                                                                   √
+       is sampled uniformly independently at random with probability c ln n/ n for large enough
+       constant c > 0. Using this uniform sampling, it holds with high probability (of at least
+       1 − n−c+2 ) that for every long triple (s, t, e) (as defined hereinafter), the detour Detours,t,e
+       of the replacement path PG (s, t, e) contains at least one vertex of R.
+N. Alon, S. Chechik, and S. Cohen                                                                      12:7
+
+
+I Definition 7. Let s, t ∈ V, e ∈ PG (s, t). The triple (s, t, e) is a long triple if every
+                                                                                  √
+replacement path from s to t avoiding e has its detour part containing more than d ne edges.
+
+    Note that in Definition 7 we defined (s, t, e) to be a long triple if every replacement
+                                                                          √
+path from s to t avoiding e has a long detour (containing more than d ne edges). We could
+have defined (s, t, e) to be a long triple even if at least one replacement path from s to t
+avoiding e has a long detour (perhaps more similar to the definitions in [26]), however we
+find Definition 7 more convenient for the following reason. If (s, t, e) has a replacement path
+                                           √
+whose detour part contains at most d ne edges, then the algorithm of [26] for handling
+short detours finds deterministically a replacement path for (s, t, e). Hence, we only need to
+find the replacement paths for triples (s, t, e) for which every replacement path from s to t
+avoiding e has a long detour, and this is the case for which we define (s, t, e) as a long triple.
+    It is sufficient for the correctness of the replacement paths algorithm that the following
+condition holds; For every long triple (s, t, e) the detour Detours,t,e of the replacement path
+PG (s, t, e) contains at least one vertex of R. As the authors of [26] write, the choice of the
+random set R is the only randomization used in their algorithm. To obtain a deterministic
+algorithm for the replacement paths problem and to prove Theorem 3, we prove the following
+deterministic alternative of Lemma 2.
+
+I Lemma 8 (Our derandomized version of Lemma 2 for the replacement paths algorithm).
+                 e √n) time deterministic algorithm that computes a set R ⊆ V of O(
+There exists an O(m                                                                      e √n)
+vertices, such that for every long triple (s, t, e) there exists a replacement path PG (s, t, e)
+whose detour part contains at least one of the vertices of R.
+                                                                                           √
+                                                                                       O(m n)
+    Following the above description, in order to prove Theorem 3, that there exists an e
+deterministic replacement paths algorithm, it is sufficient to prove the derandomization
+Lemma 8, we do so in the following sections.
+
+2.1    Step 1: the Method of Reusing Common Subpaths - Defining the
+       Set Dn
+In this section we prove the following lemma.
+                                                                                           √
+I Lemma 9. There exists a set Dn of at most n paths, each path of length exactly d ne
+with the following property; for every long triple (s, t, e) there exists a path D ∈ Dn and a
+replacement path PG (s, t, e) such that D is contained in the detour part of PG (s, t, e).
+
+   In order to define the set of paths Dn and prove Lemma 9 we need the following definitions.
+Let G0 = G \ E(PG (s, t)) be the graph obtained by removing the edges of the path PG (s, t)
+from G. For two vertices u and v, let dG0 (u, v) be the distance from u to v in G0 .
+   We use the following definitions of the index ρ(x), the set of vertices V√n and the set of
+paths Dn .
+
+I Definition 10 (The index ρ(x)). Let PG (s, t) =< v0 , . . . , vk > and let X = {x ∈
+                             √
+V | ∃0≤i≤k dG0 (vi , x) = d ne} be the subset of all the vertices x ∈ V such that there
+                                                         √
+exists at least one index 0 ≤ i ≤ k with dG0 (vi , x) = d ne.
+    For every vertex x ∈ X we define the index 0 ≤ ρ(x) ≤ k to be the minimum index such
+                        √
+that dG0 (vρ(x) , x) = d ne.
+
+I Definition 11 (The set of vertices V√n ). We define the set of vertices V√n = {x ∈
+                          √
+X|∀i<ρ(x) dG0 (vi , x) > d ne}. In other words, V√n is the set of all vertices x ∈ X such that
+                                                                                   √
+for all the vertices vi before vρ(x) along PG (s, t) it holds that dG0 (vi , x) > d ne.
+
+
+
+                                                                                                     ICALP 2019
+12:8   Deterministic Combinatorial Replacement Paths and Distance Sensitivity Oracles
+
+
+       I Definition 12 (A set of paths Dn ). For every vertex x ∈ V√n , let D(x) be an arbitrary
+                                                             √                         √
+       shortest path from vρ(x) to x in G0 (whose length is d ne as dG0 (vρ(x) , x) = d ne). We
+       define Dn = {D(x)|x ∈ V√n }.
+
+           Note that while V√n is uniquely defined (as it is defined according to distances between
+       vertices) the set of paths Dn is not unique, as there may be many shortest paths from vρ(x)
+       to x in G0 , and we take D(x) = PG0 (vρ(x) , x) to be an arbitrary such shortest path.
+           The basic intuition for the method of reusing common subpaths is as follows. Let
+                                                                                                     √
+       PG (s, t, e1 ), . . . , PG (s, t, er ) be arbitrary replacement paths such that x is the (d ne + 1)th
+       vertex along the detours of all the replacement path PG (s, t, e1 ), . . . , PG (s, t, er ). Then one can
+       construct replacement paths PG0 (s, t, e1 ), . . . , PG0 (s, t, er ) such that the subpath D(x) ∈ Dn is
+       contained in all these replacement paths. Therefore, the subpath D(x) is reused as a common
+       subpath in many replacement paths. We utilize this observation in the following proof of
+       Lemma 9.
+
+
+       Proof of Lemma 9. Obviously, the set Dn described in Definition 12 contains at most n
+                                                     √
+       paths, each path is of length exactly d ne.
+           We prove that for every long triple (s, t, e) there exists a path D ∈ Dn and a replacement
+       path P 0 (s, t, e) s.t. D is contained in the detour part of P 0 (s, t, e).
+           Let PG (s, t, e) be a replacement path for (s, t, e). Since (s, t, e) is a long triple then the
+                                                                         √
+       detour part Detours,t,e of PG (s, t, e) contains more than d ne edges. Let x ∈ Detours,t,e be
+              √
+       the (d ne + 1)th vertex along Detours,t,e , and let vj be the first vertex of Detours,t,e . Let P1
+       be the subpath of Detours,t,e from vj to x and let P2 be the subpath of PG (s, t, e) from x to
+       t. In other words, PG (s, t, e) =< v0 , . . . , vj > ◦P1 ◦ P2 . Since Detours,t,e contains more than
+        √
+       d ne edges and is disjoint from PG (s, t) except for the first and last vertices of Detours,t,e
+       and P1 ⊂ Detours,t,e it follows that P1 is disjoint from PG (s, t) (except for the vertex vj ). In
+       particular, since P1 is a shortest path in G \ {e} that is edge-disjoint from PG (s, t), then P1
+                                                                                                  √
+       is also a shortest path in G0 = G \ E(PG (s, t)). We get that dG0 (vj , x) = |P1 | = d ne.
+                                                                                                       √
+           We prove that j = ρ(x) and x ∈ V√n . As we have already proved that dG0 (vj , x) = d ne,
+                                                                                          √
+       we need to prove that for every 0 ≤ i < j it holds that dG0 (vi , x) > d ne. Assume by
+                                                                                            √
+       contradiction that there exists an index 0 ≤ i < j such that dG0 (vi , x) ≤ d ne. Then the
+       path P̂ =< v0 , . . . , vi > ◦PG0 (vi , x) ◦ P2 is a path from s to t that avoids e and its length is:
+
+           |P̂ | = | < v0 , . . . , vi > ◦PG0 (vi , x) ◦ P2 |
+                        √
+                 ≤ i + d ne + |P2 |
+                        √
+                 < j + d ne + |P2 |
+                 = |PG (s, vj ) ◦ P1 ◦ P2 |
+                 = |PG (s, t, e)|
+
+            This means that the path P̂ is a path from s to t in G \ {e} and its length is shorter than
+       the length of the shortest path PG (s, t, e) from s to t in G \ {e}, which is a contradiction.
+                                     √                                                                     √
+       We get that dG0 (vj , x) = d ne and for every 0 ≤ i < j it holds that dG0 (vi , x) > d ne.
+       Therefore, according to Definitions 10 and 11 it holds that j = ρ(x) and x ∈ V√n .
+            Let D(x) ∈ Dn , then according to Definition 12, D(x) is a shortest path from vρ(x) to x
+       in G0 . We define the path P 0 (s, t, e) =< v0 , . . . , vρ(x) > ◦D(x) ◦ P2 . It follows that P 0 (s, t, e)
+       is a path from s to t that avoids e and |P 0 (s, t, e)| = | < v0 , . . . , vρ(x) > ◦D(x) ◦ P2 | =
+                  √
+       ρ(x) + d ne + |P2 | = |PG (s, t, e)| = dG (s, t, e). Hence, P 0 (s, t, e) is a replacement path for
+       (s, t, e) such that D(x) ⊂ P 0 (s, t, e) so the lemma follows.                                           J
+N. Alon, S. Chechik, and S. Cohen                                                                           12:9
+
+
+2.2    Step 2: the Method of Decremental Distances from a Path -
+       Computing the Set Dn
+In this section we describe a decremental algorithm that enables us to compute the set of
+                  √
+paths Dn in e O(m n) time, proving the following lemma.
+I Lemma 13. There exists a deterministic algorithm for computing the set of paths Dn in
+    √
+O(m n) time.
+e
+
+    Our algorithm for computing the set of path Dn is a variant of the decremental SSSP
+(single source shortest paths) algorithm of King [20]. Our variant of the algorithm is used
+to find distances of vertices from a path rather than from a single source vertex as we
+define below.
+                                                                                    √
+Overview of the Deterministic Algorithm for Computing Dn in O(m               e       n) Time. In the
+following description let P = PG (s, t). Consider the following assignment of weights ω
+to edges of G. We assign weight  for every edge e on the path P , and weight 1 for all
+the other edges where  is a small number such that 0 <  < 1/n. We define a graph
+Gw = (G, w) as the weighted graph G with edge weights ω. We define for every 0 ≤ i ≤ k
+the graph Gi = G \ {vi+1 , . . . , vk } and the path Pi = P \ {vi+1 , . . . , vk }. We define the graph
+Gwi = (Gi , w) as the weighted graph Gi with edge weights ω.
+    The algorithm computes the graph Gw by simply taking G and setting all edge weights of
+PG (s, t) to be  (for some small  such that  < 1/n) and all other edge weights to be 1. The
+algorithm then removes the vertices of PG (s, t) from Gw one after the other (starting from
+the vertex that is closest to t). Loosely speaking after each vertex is removed, the algorithm
+computes the distances from s in the current graph. In each such iteration, the algorithm
+                                                                                                   √
+adds to V√wn all vertices such that their distance from s in the current graph is between d ne
+      √
+and d ne + 1. We will later show that at the end of the algorithm we have V√wn = V√n .
+Unfortunately, we cannot afford running Dijkstra after the removal of every vertex of PG (s, t)
+as there might be n vertices on PG (s, t). To overcome this issue, the algorithm only maintains
+                                √
+nodes at distance at most d ne + 1 from s. In addition, we observe that to compute the
+SSSP from s in the graph after the removal of a vertex vi we only need to spend time on
+nodes such that their shortest path from s uses the removed vertex. Roughly speaking, for
+these nodes we show that their distance from s rounded down to the closest integer must
+increase by at least 1 as a result of the removal of the vertex. Hence, for every node we spend
+                         √                                                                     √
+time on it in at most d ne + 1 iterations until its distance from s is bigger than d ne + 1.
+As we will show later this will yield our desired running time.
+    In the full version we analyse the algorithm and prove Lemma 13.
+                                                  √
+Proof of Theorem 3. We summarize the e       O(m n) deterministic replacement paths al-
+                                                                        √
+gorithm and outline the proof of Theorem 3. First, compute in e     O(m n) time the set
+of paths Dn as in Lemma 13. Given Dn , the deterministic greedy selection algorithm
+GreedyPivotsSelection(Dn ) (as described in Lemma 2) computes a set R ⊂ V of O(    e √n)
+                √
+vertices in O(n
+            e     n) time with the following property; every path D ∈ Dn contains at least
+one of the vertices of R. Theorem 3 follows from Lemmas 8, 9 and 13.
+
+ 3     Deterministic Distance Sensitivity Oracles
+Let 0 <  < 1 and 1 ≤ f = O( logloglogn n ) be two parameters. In [27], Weimann and Yuster
+considered the following notion of intervals (note that in [27] they use a parameter 0 < α < 1
+and we use a parameter 0 <  < 1 such that  = 1 − α). They define an interval of a long
+
+
+                                                                                                          ICALP 2019
+12:10   Deterministic Combinatorial Replacement Paths and Distance Sensitivity Oracles
+
+
+        simple path P as a subpath of P consisting of n/f consecutive vertices, so every simple
+        path induces less than n (overlapping) intervals. For every subset F ⊂ E of at most f edges,
+        and for every pair of vertices u, v ∈ V , let PG (u, v, F ) be a shortest path from u to v in
+        G \ F . The path PG (u, v, F ) induces less than n (overlapping) intervals. The total number
+        of possible intervals is less than O(n2f +3 ) as each one of the (at most) O(n2f +2 ) possible
+        queries (u, v, F ) corresponds to a shortest path PG (u, v, F ) that induces less than n intervals.
+
+        I Definition 14. Let Df be defined as all the intervals (subpaths containing n/f edges) of
+        all the replacement paths PG (s, t, F ) for every s, t ∈ V, F ⊆ E ∪ V with |F | ≤ f .
+
+            Weimann and Yuster apply Lemma 1 to find a set R ⊆ V of e        O(n1−/f ) vertices that
+        hit w.h.p. all the intervals Df . According to these bounds (that Df contains O(n2f +3 )
+        paths, each containing exactly n/f edges) applying the greedy algorithm to obtain the set R
+        deterministically according to Lemma 2 takes e O(n2f +3+/f ) time, which is very inefficient.
+            In this section we assume that all weights are non-negative (so we can run Dijkstra’s
+        algorithm) and that shortest paths are unique, we justify these assumptions in the full version.
+
+
+        3.1    Step 1: the Method of Using Fault-Tolerant Trees to Significantly
+               Reduce the Number of Intervals
+        In Lemma 15 we prove that the set of intervals Df actually contains at most O(n2+ ) unique
+        intervals, rather than the O(n2f +3 ) naive upper bound mentioned above. From Lemmas 15
+        and 2 it follows that the GreedyPivotsSelection(Df ) finds in O(n  e 2++/f ) time the subset
+                        1−/f
+        R ⊆ V of O(ne         ) vertices that hit all the intervals Df . In the full version we further
+        reduce the time it takes for the greedy algorithm to compute the set of pivots R to O(ne 2+ ).
+
+        I Lemma 15. |Df | = O(n2+ ).
+
+           In order to prove Lemma 15 we describe the fault-tolerant trees data-structure, which is
+        a variant of the trees which appear in Appendix A of [9].
+
+        I Definition 16. Let PGL (s, t, F ) be the shortest among the s-to-t paths in G \ F that
+        contain at most L edges and let dL                     L                                 L
+                                            G (s, t, F ) = ω(PG (s, t, F )). In other words, dG (s, t, F ) =
+        min{ω(P ) | P is an s − to − t path on at most L edges}. If there is no path from s to t in
+        G \ F containing at most L edges then we define PGL (s, t, F ) = ∅ and dL     G (s, t, F ) = ∞. For
+        F = ∅ we abbreviate PGL (s, t, ∅) = PGL (s, t) as the shortest path from s to t that contains at
+        most L edges, and dL            L
+                           G (s, t) = dG (s, t, ∅) as its length.
+
+            Let s, t ∈ V be vertices and let L, f ≥ 1 be fixed integer parameters, we define the trees
+        F T L,f (s, t) as follows.
+            In the root of F T L,f (s, t) we store the path PGL (s, t) (and its length dL   G (s, t)), and also
+            store the vertices and edges of PGL (s, t) in a binary search tree BST L (s, t); If PGL (s, t) = ∅
+            then we terminate the construction of F T L,f (s, t).
+            For every edge or vertex a1 of PGL (s, t) we recursively build a subtree F T L,f (s, t, a1 ) as
+            follows. Let PGL (s, t, {a1 }) be the shortest path from s to t that contains at most L edges
+            in the graph G \ {a1 }. Then in the subtree F T L,f (s, t, a1 ) we store the path PGL (s, t, {a1 })
+           (and its length dL                                                                   L
+                                 G (s, t, {a1 })) and we also store the vertices and edges of PG (s, t, {a1 }) in
+                                            L               L
+            a binary search tree BST (s, t, a1 ); If PG (s, t, {a1 }) = ∅ we terminate the construction of
+            F T L,f (s, t, a1 ). If f > 1 then for every vertex or edge a2 in PGL (s, t, {a1 }) we recursively
+            build the subtree F T L,f (s, t, a1 , a2 ) as follows.
+N. Alon, S. Chechik, and S. Cohen                                                                                      12:11
+
+
+    For the recursive step, assume we want to construct the subtree F T L,f (s, t, a1 , . . . , ai ). In
+    the root of F T L,f (s, t, a1 , . . . , ai ) we store the path PGL (s, t, {a1 , . . . , ai }) (and its length
+    dL                                                                               L
+     G (s, t, {a1 , . . . , ai })) and we also store the vertices and edges of PG (s, t, {a1 , . . . , ai }) in a
+                                     L                        L
+    binary search tree BST (s, t, a1 , . . . , ai ). If PG (s, t, {a1 , . . . , ai }) = ∅ then we terminate
+    the construction of F T L,f (s, t, a1 , . . . , ai ). If i < f then for every vertex or edge ai+1 in
+    PGL (s, t, {a1 , . . . , ai })) we recursively build the subtree F T L,f (s, t, a1 , . . . , ai , ai+1 ).
+
+    Observe that there are two conditions in which we terminate the recursive construction
+of F T L,f (s, t, a1 , . . . , ai ):
+    Either i = f in which case F T L,f (s, t, a1 , . . . , af ) is a leaf node of F T L,f (s, t) and we
+    store in the leaf node F T L,f (s, t, a1 , . . . , af ) the path PGL (s, t, {a1 , . . . , af }).
+    Or there is no path from s to t in G \ {a1 , . . . , ai } that contains at most L edges and then
+    F T L,f (s, t, a1 , . . . , ai ) is a leaf vertex of F T L,f (s, v) and we store in it PGL (s, t, {a1 , . . . ,
+    ai }) = ∅.
+
+Querying the tree F T L,f (s, t). Given a query (s, t, F ) such that F ⊂ V ∪ E with |F | = f
+we would like to compute dL        G (s, t, F ) using the tree F T
+                                                                     L,f
+                                                                         (s, t).
+                                                           L
+    The query procedure is as follows. Let PG (s, t) be the path stored in the root of
+F T L,f (s, t) (if the root of F T L,f (s, t) contains ∅ then we output that dL               G (s, t, F ) = ∞).
+                         L
+First we check if PG (s, t) ∩ F = ∅ by checking if any of the elements a1 ∈ F appear in
+BST L (s, t) (which takes O(log L) time for each element a1 ∈ F ). If PGL (s, t) ∩ F = ∅ we
+output dL                   L               L
+          G (s, t, F ) = dG (s, t) (as PG (s, t) does not contain any of the vertices or edges in F ).
+                           L
+Otherwise, let a1 ∈ PG (s, t) ∩ F .
+    We continue the search similarly in the subtree F T L,f (s, t, a1 ) as follows. Let PGL (s, t, {a1 })
+be the path stored in the root of F T L,f (s, t, a1 ) (if the root of F T L,f (s, t, a1 ) contains ∅ then
+we output that dL                                                L
+                     G (s, t, F ) = ∞). First we check if PG (s, t, {a1 }) ∩ F = ∅ by checking if any
+                                                  L
+of the elements a2 ∈ F appear in BST (s, t, a1 ) (which takes O(log L) time for each element
+a2 ∈ F ). If PGL (s, t, {a1 }) ∩ F = ∅ we output dL                          L                      L
+                                                           G (s, t, F ) = dG (s, t, {a1 }) (as PG (s, t, {a1 })
+                                                                                           L
+does not contain any of the vertices or edges in F ). Otherwise, let a2 ∈ PG (s, t, {a1 })∩F . We
+continue the search similarly in the subtrees F T L,f (s, t, a1 , a2 ), F T L,f (s, t, a1 , a2 , . . . , ai ) until
+we either reach a leaf node which contains ∅ (and in this case we output that dL               G (s, t, F ) = ∞)
+or we find a path PGL (s, t, {a1 , . . . , ai }) such that PGL (s, t, {a1 , . . . , ai }) ∩ F = ∅ and then we
+output dL                   L
+          G (s, t, F ) = dG (s, t, {a1 , . . . , ai }).
+    In the full version we prove the following lemma.
+
+I Lemma 17. Given the tree F T L,f (s, t) and a set of failures F ⊂ V ∪ E with |F | ≤ f , the
+query procedure computes the distance dL                  2
+                                       G (s, t, F ) in O(f log L) time.
+
+    We are now ready to prove lemma 15 asserting that |Df | = O(n2+ ).
+
+Proof of Lemma 15. Let L = n/f and let D be the set of all the unique shortest paths
+PGL (s, t, {a1 , . . . , ai }) stored in all the nodes of all the trees {F T L,f (s, t)}s,t∈V . Since the
+number of nodes in every tree F T L,f (s, t) is at most Lf = (n/f )f = n , and there are O(n2 )
+trees (one tree for every pair of vertices s, t ∈ V ) we get that the number of nodes in all the
+trees {F T L,f (s, t)}s,t∈V is O(n2+ ) and hence |D| = O(n2+ ).
+    We prove that Df ⊆ D. By definition, Df contains all the intervals (subpaths containing
+n/f edges) of all the replacement paths PG (s, t, F ) for every s, t ∈ V, F ⊆ E ∪ V with
+|F | ≤ f . Let P ∈ Df be the unique shortest path, then P is a subpath containing n/f
+edges of the replacement paths PG (s, t, F ). Let u be the first vertex of P , and let v be the
+last vertex of P . Then P is a shortest path from u to v in G \ F , and since we assume
+
+
+
+                                                                                                                      ICALP 2019
+12:12   Deterministic Combinatorial Replacement Paths and Distance Sensitivity Oracles
+
+
+        that the shortest paths our algorithms compute are unique then P = PG (u, v, F ) is the
+        unique shortest path from u to v in G \ F . Since P is assumed to be a path on exactly
+        L = n/f edges, then P = PG (u, v, F ) = PGL (u, v, F ). According to the query procedure in
+        the tree F T L,f (u, v) and Lemma 17, if we query the tree F T L,f (u, v) with (u, v, F ) then
+        we reach a node F T L,f (u, v, a1 , . . . , ai ) which contains the path PGL (u, v, {a1 , . . . , ai }) with
+        {a1 , . . . , ai } ⊆ F such that PGL (u, v, {a1 , . . . , ai }) = PGL (u, v, F ) = P is the shortest u-to-v
+        path in G \ F . Hence, P ∈ D and thus Df ⊆ D and |Df | ≤ |D| = O(n2+ )                                   J
+
+        3.2     Step 2: Efficient Construction of the Fault-Tolerant Trees –
+                Computing the Paths Df
+        Recall that we defined the trees F T L,f (u, v) with respect the parameters f (the maximum
+        number of failures) and L (where we search for shortest paths among paths of at most L
+        edges). The idea is to build the trees F T L,f (u, v) using dynamic programming having the
+        trees F T L−1,f (u, v) with parameters f, L − 1 as subproblems.
+            Assume we have already built the trees F T i,f (u, v), where u, v ∈ V, 1 ≤ i < L, we describe
+        how to build the trees F T i+1,f (u, v). Let (u, v, F ) be a query for which we want to compute
+        the distance di+1 (u, v, F ) (as part of the construction of the tree F T i+1,f (u, v)). Scan all the
+        edges (u, z) ∈ E and query the tree F T i,f (z, v) with the set F to find the distance di (z, v, F ).
+        Querying the tree F T i,f (z, v) takes O(f 2 log i) = O(f 2 log L) time as described in Lemma
+        17 (note that f 2 log L = O(1)
+                                     e     for f ≤ log n as L ≤ n), and we run O(out-degree(u)) such
+        queries and take the minimum of the following equation.
+
+            di+1 (u, v, F ) = min{ω(u, z) + di (z, v, F ) | (u, z) ∈ E AN D u, z, (u, z) 6∈ F }                      (1)
+                                 z
+
+
+         parenti+1 (u, v, F ) = arg min{ω(u, z) + di (z, v, F ) | (u, z) ∈ E AN D u, z, (u, z) 6∈ F } (2)
+                                         z
+
+            Note that in Equation 1 we assume that for every vertex u ∈ V it holds that G contains
+        the self loops (u, u) ∈ E such that ω(u, u) = 0.
+            So the time to compute di+1 (u, v, F ) is e         O(out-degree(u)). Next, we describe how to
+                                     i+1
+        reconstruct the path P (u, v, F ) in O(L) additional time. We reconstruct the shortest
+        path P i+1 (u, v, F ) by simply following the (at most L) parent pointers. In more details, let
+        z = parenti+1 (u, v, F ) be the vertex defined according to Equation 2. We reconstruct the
+        shortest path P i+1 (u, v, F ) by concatenating (u, z) with the shortest path P i (z, v, F ) (which
+        we reconstruct in the same way), thus we can reconstruct P i+1 (u, v, F ) edge by edge in
+        constant time per edge, and hence it takes O(L) time to reconstruct the path P i+1 (u, v, F )
+        that contains at most L edges.
+            The tree F T i,f (u, v) contains if ≤ Lf nodes, and thus all the trees {F T i,f (u, v)} for all
+        i ≤ L, u, v ∈ V contain O(n2 Lf +1 ) nodes together.
+            In each such node we compute the distance di (u, v, {a1 , . . . , aj }) in O(out-degree(u))
+                                                                                            e                        time
+                                         i
+        and reconstruct the path P (u, v, {a1 , . . . , aj }) in additional O(L) time. Theretofore, com-
+        puting all the distances di (u, v, {a1 , . . . , aj }) and all the paths P i (u, v, {a1 , . . . , aj }) in all the
+        nodes of all the trees {F T i,f (u, v)}u,v∈V,1≤i≤L takes O(    e P               f
+                                                                            i≤L,u,v∈V L (out-degree(u) + L)) =
+                 f +1    2   f +2                                     /f
+        O(mnL
+         e            +n L        ) time. substituting L = e      O(n ) we get an algorithm to compute the
+                    L,f                         1++/f          2++2/f
+        trees {F T (u, v)}u,v∈V in O(mn    e                 +n           ) time.
+            This proves the following Lemma.
+
+        I Lemma 18. One can deterministically construct the trees F T L,f (s, t) for every s, t ∈ V
+           O(mn1++/f + n2++2/f ) time.
+        in e
+N. Alon, S. Chechik, and S. Cohen                                                                      12:13
+
+
+                                                                  1+
+    In the full version we further reduce the runtime to O(mn
+                                                            e         ) by using dynamic pro-
+gramming only for computing the first f − 1 levels of the trees F T L,f (s, t) and then applying
+Dijkstra in a sophisticated manner to compute the last layer of the trees F T L,f (s, t). In addi-
+tion, we also boost-up the runtime of the greedy pivots selection algorithm from e  O(n2++/f )
+    e 2+ ) time.
+to O(n
+
+
+     References
+ 1   Udit Agarwal, Vijaya Ramachandran, Valerie King, and Matteo Pontecorvi. A Deterministic
+     Distributed Algorithm for Exact Weighted All-Pairs Shortest Paths in Õ(n 3/2 ) Rounds. In
+     Proceedings of the 2018 ACM Symposium on Principles of Distributed Computing, PODC
+     2018, Egham, United Kingdom, July 23-27, 2018, pages 199–205, 2018.
+ 2   N. Alon and J.H. Spencer. The Probabilistic Method. Fourth Edition. Wiley, 2016.
+ 3   Noga Alon, Shiri Chechik, and Sarel Cohen. Deterministic combinatorial replacement paths
+     and distance sensitivity oracles. CoRR, abs/1905.07483, 2019. arXiv:1905.07483.
+ 4   Grey Ballard, James Demmel, Olga Holtz, and Oded Schwartz. Graph Expansion and
+     Communication Costs of Fast Matrix Multiplication. J. ACM, 59(6):32:1–32:23, January 2013.
+     doi:10.1145/2395116.2395121.
+ 5   Austin R. Benson and Grey Ballard. A Framework for Practical Parallel Fast Matrix Multi-
+     plication. SIGPLAN Not., 50(8):42–53, January 2015. doi:10.1145/2858788.2688513.
+ 6   Aaron Bernstein. A Nearly Optimal Algorithm for Approximating Replacement Paths and
+     K Shortest Simple Paths in General Graphs. In Proceedings of the Twenty-first Annual
+     ACM-SIAM Symposium on Discrete Algorithms, SODA ’10, pages 742–755, 2010. URL:
+     http://dl.acm.org/citation.cfm?id=1873601.1873662.
+ 7   Aaron Bernstein and David Karger. Improved Distance Sensitivity Oracles via Random
+     Sampling. In Proceedings of the Nineteenth Annual ACM-SIAM Symposium on Discrete
+     Algorithms, SODA, pages 34–43, 2008. URL: http://dl.acm.org/citation.cfm?id=1347082.
+     1347087.
+ 8   Aaron Bernstein and David Karger. A Nearly Optimal Oracle for Avoiding Failed Vertices and
+     Edges. In Proceedings of the Forty-first Annual ACM Symposium on Theory of Computing
+     (STOC), pages 101–110, 2009. doi:10.1145/1536414.1536431.
+ 9   Shiri Chechik, Sarel Cohen, Amos Fiat, and Haim Kaplan. (1 + ) approximate f -sensitive
+     Distance Oracles. In Proceedings of the Twenty-Eighth Annual ACM-SIAM Symposium on
+     Discrete Algorithms, SODA ’17, pages 1479–1496, 2017. URL: http://dl.acm.org/citation.
+     cfm?id=3039686.3039782.
+10   Shiri Chechik, Michael Langberg, David Peleg, and Liam Roditty. f-Sensitivity Distance Oracles
+     and Routing Schemes. Algorithmica, 63(4):861–882, 2012. doi:10.1007/s00453-011-9543-0.
+11   Camil Demetrescu and Mikkel Thorup. Oracles for Distances Avoiding a Link-failure. In
+     Proceedings of the Thirteenth Annual ACM-SIAM Symposium on Discrete Algorithms, SODA,
+     pages 838–843, 2002. URL: http://dl.acm.org/citation.cfm?id=545381.545490.
+12   Camil Demetrescu, Mikkel Thorup, Rezaul Alam Chowdhury, and Vijaya Ramachandran.
+     Oracles for Distances Avoiding a Failed Node or Link. SIAM J. Comput., 37(5):1299–1318,
+     January 2008. doi:10.1137/S0097539705429847.
+13   Ran Duan and Seth Pettie. Dual-failure Distance and Connectivity Oracles. In Proceedings of
+     the Twentieth Annual ACM-SIAM Symposium on Discrete Algorithms, SODA, pages 506–515,
+     2009. URL: http://dl.acm.org/citation.cfm?id=1496770.1496826.
+14   Yuval Emek, David Peleg, and Liam Roditty. A Near-linear-time Algorithm for Computing
+     Replacement Paths in Planar Directed Graphs. ACM Trans. Algorithms, 6(4):64:1–64:13,
+     September 2010. Appeared also in the Proceedings of the Nineteenth Annual ACM-SIAM
+     Symposium on Discrete Algorithms (SODA ’08). doi:10.1145/1824777.1824784.
+15   David Eppstein. Finding the k Shortest Paths. SIAM J. Comput., 28(2):652–673, 1998.
+     doi:10.1137/S0097539795290477.
+
+
+
+
+                                                                                                      ICALP 2019
+12:14   Deterministic Combinatorial Replacement Paths and Distance Sensitivity Oracles
+
+
+        16   Zvi Gotthilf and Moshe Lewenstein. Improved Algorithms for the K Simple Shortest Paths
+             and the Replacement Paths Problems. Inf. Process. Lett., 109(7):352–355, March 2009.
+             doi:10.1016/j.ipl.2008.12.015.
+        17   Fabrizio Grandoni and Virginia Vassilevska Williams. Improved Distance Sensitivity Oracles
+             via Fast Single-Source Replacement Paths. In 53rd Annual IEEE Symposium on Foundations
+             of Computer Science, FOCS 2012, 20-23, 2012, pages 748–757, 2012. doi:10.1109/FOCS.
+             2012.17.
+        18   J. Huang, L. Rice, D. A. Matthews, and R. A. v. d. Geijn. Generating Families of Practical
+             Fast Matrix Multiplication Algorithms. In 2017 IEEE International Parallel and Distributed
+             Processing Symposium (IPDPS), pages 656–667, May 2017. doi:10.1109/IPDPS.2017.56.
+        19   Neelesh Khanna and Surender Baswana. Approximate Shortest Paths Avoiding a Failed Vertex:
+             Optimal Size Data Structures for Unweighted Graphs. In 27th International Symposium on
+             Theoretical Aspects of Computer Science, STACS, pages 513–524, 2010. doi:10.4230/LIPIcs.
+             STACS.2010.2481.
+        20   Valerie King. Fully Dynamic Algorithms for Maintaining All-Pairs Shortest Paths and
+             Transitive Closure in Digraphs. In 40th Annual Symposium on Foundations of Computer
+             Science, FOCS ’99, 17-18 October, 1999, New York, NY, USA, pages 81–91, 1999. doi:
+             10.1109/SFFCS.1999.814580.
+        21   Philip N. Klein, Shay Mozes, and Oren Weimann. Shortest Paths in Directed Planar Graphs
+             with Negative Lengths: A Linear-space O(n log2 n)-time Algorithm. ACM Trans. Algorithms,
+             6(2):30:1–30:18, April 2010. doi:10.1145/1721837.1721846.
+        22   Eugene L. Lawler. A Procedure for Computing the K Best Solutions to Discrete Optimization
+             Problems and Its Application to the Shortest Path Problem. Management Science, 18(7):401–
+             405, 1972. doi:10.1287/mnsc.18.7.401.
+        23   Cheng-Wei Lee and Hsueh-I Lu. Replacement Paths via Row Minima of Concise Matrices.
+             SIAM J. Discrete Math., 28(1):206–225, 2014. doi:10.1137/120897146.
+        24   K. Malik, A. K. Mittal, and S. K. Gupta. The K Most Vital Arcs in the Shortest Path Problem.
+             Oper. Res. Lett., 8(4):223–227, August 1989. doi:10.1016/0167-6377(89)90065-5.
+        25   Enrico Nardelli, Guido Proietti, and Peter Widmayer. A Faster Computation of the Most
+             Vital Edge of a Shortest Path. Inf. Process. Lett., 79(2):81–85, June 2001. doi:10.1016/
+             S0020-0190(00)00175-7.
+        26   Liam Roditty and Uri Zwick. Replacement Paths and k Simple Shortest Paths in Unweighted
+             Directed Graphs. In Automata, Languages and Programming, 32nd International Colloquium,
+             ICALP, 2005, pages 249–260. See also ACM Trans. Algorithms, 8(4):33:1–11, 2012, 2005.
+             doi:10.1007/11523468_21.
+        27   Oren Weimann and Raphael Yuster. Replacement Paths and Distance Sensitivity Oracles
+             via Fast Matrix Multiplication. In Proceedings of the 2010 IEEE 51st Annual Symposium on
+             Foundations of Computer Science, FOCS ’10, pages 655–662, Washington, DC, USA, 2010.
+             IEEE Computer Society. doi:10.1109/FOCS.2010.68.
+        28   Virginia Vassilevska Williams. Faster Replacement Paths. In Proceedings of the Twenty-Second
+             Annual ACM-SIAM Symposium on Discrete Algorithms, SODA 2011, 23-25, 2011, pages
+             1337–1346, 2011. doi:10.1137/1.9781611973082.102.
+        29   Virginia Vassilevska Williams and Ryan Williams. Subcubic Equivalences between Path,
+             Matrix and Triangle Problems. In 51st Annual IEEE Symposium on Foundations of Computer
+             Science, FOCS 2010, October 23-26, 2010, pages 645–654, 2010. doi:10.1109/FOCS.2010.67.
+        30   Jin Y. Yen. Finding the K Shortest Loopless Paths in a Network. Management Science,
+             17(11):712–716, 1971. doi:10.1287/mnsc.17.11.712.
+

@@ -1,0 +1,22 @@
+{
+  "job_id": "c022-spe-memory-release-fb6f51f9715a",
+  "reproduced_pdf_exists": true,
+  "reproduced_text_identical": true,
+  "reproduced_bbl_identical": true,
+  "source_zip": "evidence/release-fb6f51f9715a/source-reproduction.zip",
+  "source_zip_digest": "ed8868e389f2cd06e90ea225d22731a85e01ed03250ce9d9e4a25e5c046031b1",
+  "original_pdf_digest": "1c714b9216ce3cf89b26123c6beebf3c7a38d14b31e0b5a727dcaa214978306f",
+  "reproduced_pdf_digest": "8c9af6c8b4f5601d74cba9e2e0337af35abc931c1811f2e674d3552dd3881109",
+  "local_recorder_inputs": [
+    "main.tex",
+    "./acmart.cls",
+    "acmart.cls",
+    "build/main.aux",
+    "build/main.out",
+    "build/main.bbl"
+  ],
+  "warnings": [
+    "LaTeX Warning: Unused global option(s):\n    [natbib=false].",
+    "Class acmart Warning: No city present for an affiliation."
+  ]
+}

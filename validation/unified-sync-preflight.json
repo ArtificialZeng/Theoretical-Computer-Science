@@ -1,0 +1,85 @@
+{
+  "at_utc": "2026-11-02T17:30:42.887305+00:00",
+  "passed": true,
+  "expected_parent": "46fc32065b3ffcd920b15685d51fa23d5934c2f5",
+  "topics": 26,
+  "working_paper": 26,
+  "submission_ready": 0,
+  "additional_expanded_versions": 2,
+  "readmes": [
+    {
+      "file": "README.md",
+      "sha256": "f3c49fa28a5c8299e9ba5e57ce4401032b597c9889dc360e26f8c7da41b10b38",
+      "github_rendered_details": 2,
+      "collapsed_by_default": true,
+      "abstracts": 26
+    },
+    {
+      "file": "README.zh-CN.md",
+      "sha256": "59d191aca652facafcb5490972494abc6484cecd03e0c44b56bb156af166a547",
+      "github_rendered_details": 2,
+      "collapsed_by_default": true,
+      "abstracts": 26
+    },
+    {
+      "file": "README.de.md",
+      "sha256": "d525e42a1a6b817aff0d5c3217bd6165db0f97d6032d98f2bef678ff1d946b86",
+      "github_rendered_details": 2,
+      "collapsed_by_default": true,
+      "abstracts": 26
+    },
+    {
+      "file": "README.fr.md",
+      "sha256": "e20bb1c2ba3fc11bda4847aaf0c3943e1ff83b99b2bd94b56a291408bcbc85b9",
+      "github_rendered_details": 2,
+      "collapsed_by_default": true,
+      "abstracts": 26
+    },
+    {
+      "file": "README.ja.md",
+      "sha256": "aa5b8a1e5e416731f220e8c7ff8d614a5936cdbc792454bd2a9f1ea1717f894c",
+      "github_rendered_details": 2,
+      "collapsed_by_default": true,
+      "abstracts": 26
+    }
+  ],
+  "missing_links": [],
+  "all_current_primary_finite_checks_passed": true,
+  "all_current_primary_clean_builds_passed": true,
+  "all_source_archive_bytes_verified": true,
+  "old_research_artifact_paths_unchanged": true,
+  "changed_existing_paths": [
+    "RANKING.md",
+    "RANKING.zh-CN.md",
+    "README.de.md",
+    "README.fr.md",
+    "README.ja.md",
+    "README.md",
+    "README.zh-CN.md",
+    "catalog.json",
+    "conversations/README.md",
+    "conversations/stoc1/README.md",
+    "conversations/stoc2/README.md",
+    "conversations/stoc3/README.md",
+    "conversations/stoc4/README.md",
+    "conversations/stoc5/README.md",
+    "descriptions.json",
+    "papers/advice-matching/README.md",
+    "papers/c002-coverage/README.md",
+    "papers/c009-cycle2/README.md",
+    "papers/c012-upcycles/README.md",
+    "papers/c015-imagebound/README.md",
+    "papers/c017-wheeler/README.md",
+    "papers/c021-ccrapumping/README.md",
+    "papers/coverage-sparse/README.md",
+    "papers/curvature-noise/README.md",
+    "papers/privacy-interpolation/README.md",
+    "papers/robust-stopping/README.md",
+    "scripts/build_pdfs.py",
+    "scripts/render_readmes.py",
+    "scripts/reproduce.py",
+    "scripts/verify_artifacts.py"
+  ],
+  "secret_scan": "No configured credential patterns found; no environment or credentials dumped.",
+  "scope": "Synchronization and presentation checks, not new mathematical acceptance or certification of extended drafts."
+}

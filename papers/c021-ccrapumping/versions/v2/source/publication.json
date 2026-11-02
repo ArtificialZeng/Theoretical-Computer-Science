@@ -1,0 +1,16 @@
+{
+  "source_files": [
+    "manuscript/BUILD.md",
+    "manuscript/latexmkrc",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/vendor/ACM-Reference-Format.bst",
+    "manuscript/vendor/README",
+    "manuscript/vendor/acmart.cls",
+    "manuscript/vendor/acmart.dtx",
+    "manuscript/vendor/acmart.ins"
+  ],
+  "pdf": "manuscript/build/main.pdf",
+  "author_metadata": "authors.json",
+  "kind": "resolution-paper"
+}

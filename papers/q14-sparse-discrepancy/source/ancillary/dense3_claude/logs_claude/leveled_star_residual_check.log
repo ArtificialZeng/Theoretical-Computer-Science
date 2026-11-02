@@ -1,0 +1,3 @@
+means: leaves [Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)] center 0
+2-Lipschitz: True
+every corner has a leaf with |h|>=2 or center >=3: True

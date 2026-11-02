@@ -1,0 +1,42 @@
+{
+  "job_id": "c029-vftfast-write-7567570a6950",
+  "type": "writer_validation_not_fresh_release_audit",
+  "created_utc": "2026-11-02T06:12:17.086810+00:00",
+  "pdf": "manuscript/vftfast-working_paper.pdf",
+  "pdf_sha256": "3489530d8f29e5851151a68c1def490c4305b44012f70751fd647ea8692b5a89",
+  "pages": 7,
+  "page_cap": 12,
+  "clean_build_command": "sh manuscript/build.sh",
+  "source_only_rebuild_pdf_byte_identical": true,
+  "source_only_rebuild_bbl_byte_identical": true,
+  "build_log": "tmp/pdfs/final-build.log",
+  "clean_rebuild_log": "tmp/pdfs/rebuild-clean.log",
+  "undefined_citations": false,
+  "undefined_references": false,
+  "overfull_boxes": false,
+  "retained_nonfatal_warnings": [
+    "No city present for an affiliation: the user supplied only the institution, so no city was invented.",
+    "One underfull bibliography hbox, badness 1158; inspected and readable."
+  ],
+  "visual_pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "visual_render_prefix": "tmp/pdfs/final-page-",
+  "visual_observations": "Every final page inspected: no clipping, overlap, missing glyphs or unreadable equations; one human author and corrected running headers. Title page, body, references and substantial AI disclosure are present.",
+  "artifact_marker": "Required PDF create marker ran successfully exactly once before authoring.",
+  "official_inputs_unchanged": {
+    "acmart.cls": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+    "ACM-Reference-Format.bst": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04"
+  },
+  "accepted_snapshot_digest": "b1495a4cbeb794181b64a2bc9a00b637d90f0a7a7fdf654844a24036b4029e66",
+  "all_17_frozen_files_unchanged": true,
+  "source_sha256": "45828a099cc88bde52aee6450b298c8b73397e4367d3911585521595f94657b8",
+  "readiness_label": "working_paper",
+  "release_status": "awaiting separate fresh citation/build/visual/reproduction audit"
+}

@@ -1,0 +1,74 @@
+\begin{thebibliography}{BCEG04}
+
+\bibitem[ACC19]{ACC19}
+Noga Alon, Shiri Chechik, and Sarel Cohen.
+\newblock Deterministic combinatorial replacement paths and distance
+  sensitivity oracles.
+\newblock In {\em 46th International Colloquium on Automata, Languages, and
+  Programming (ICALP 2019)}, volume 132 of {\em Leibniz International
+  Proceedings in Informatics (LIPIcs)}, pages 12:1--12:14. Schloss Dagstuhl --
+  Leibniz-Zentrum f{\"u}r Informatik, 2019.
+\newblock \href {https://doi.org/10.4230/LIPIcs.ICALP.2019.12}
+  {\path{doi:10.4230/LIPIcs.ICALP.2019.12}}.
+
+\bibitem[BCEG04]{BCEG04}
+Amitabha Bagchi, Amitabh Chaudhary, David Eppstein, and Michael~T. Goodrich.
+\newblock Deterministic sampling and range counting in geometric data streams.
+\newblock In {\em Proceedings of the Twentieth Annual Symposium on
+  Computational Geometry}, pages 144--151. ACM, 2004.
+\newblock URL: \url{https://arxiv.org/abs/cs/0307027}, \href
+  {https://doi.org/10.1145/997817.997842} {\path{doi:10.1145/997817.997842}}.
+
+\bibitem[GGK25]{GGK25}
+Pawe{\l} Gawrychowski, Egor Gorbachev, and Tomasz Kociumaka.
+\newblock Core-sparse {Monge} matrix multiplication: Improved algorithm and
+  applications.
+\newblock In {\em 33rd Annual European Symposium on Algorithms (ESA 2025)},
+  volume 351 of {\em Leibniz International Proceedings in Informatics
+  (LIPIcs)}, pages 74:1--74:17. Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r
+  Informatik, 2025.
+\newblock \href {https://doi.org/10.4230/LIPIcs.ESA.2025.74}
+  {\path{doi:10.4230/LIPIcs.ESA.2025.74}}.
+
+\bibitem[HPS11]{HS11}
+Sariel Har-Peled and Micha Sharir.
+\newblock Relative $(p,\varepsilon)$-approximations in geometry.
+\newblock {\em Discrete \& Computational Geometry}, 45(3):462--496, 2011.
+\newblock URL: \url{https://arxiv.org/abs/0909.0717v2}, \href
+  {https://doi.org/10.1007/s00454-010-9248-1}
+  {\path{doi:10.1007/s00454-010-9248-1}}.
+
+\bibitem[Kor26]{Kor26}
+Keisuke Korogi.
+\newblock Near-linear preprocessing for range weighted longest increasing
+  subsequence queries, 2026.
+\newblock arXiv:2610.20983v1, October 14, 2026.
+\newblock URL: \url{https://arxiv.org/abs/2610.20983v1}.
+
+\bibitem[KR25]{KRfull}
+{Karthik C. S.} and Saladi Rahul.
+\newblock Range longest increasing subsequence and its relatives, 2025.
+\newblock Full version, arXiv:2404.04795v2, revised December 1, 2025.
+\newblock URL: \url{https://arxiv.org/abs/2404.04795v2}.
+
+\bibitem[KR26]{KR26}
+{Karthik C. S.} and Saladi Rahul.
+\newblock Range longest increasing subsequence and its relatives.
+\newblock In {\em 17th Innovations in Theoretical Computer Science Conference
+  (ITCS 2026)}, volume 362 of {\em Leibniz International Proceedings in
+  Informatics (LIPIcs)}, pages 87:1--87:20. Schloss Dagstuhl -- Leibniz-Zentrum
+  f{\"u}r Informatik, 2026.
+\newblock \href {https://doi.org/10.4230/LIPIcs.ITCS.2026.87}
+  {\path{doi:10.4230/LIPIcs.ITCS.2026.87}}.
+
+\bibitem[TSP11]{TSP11}
+Yufei Tao, Cheng Sheng, and Jian Pei.
+\newblock On $k$-skip shortest paths.
+\newblock In {\em Proceedings of the 2011 ACM SIGMOD International Conference
+  on Management of Data}, pages 421--432. ACM, 2011.
+\newblock URL:
+  \url{https://www.cse.cuhk.edu.hk/~taoyf/paper/sigmod11-skip.pdf}, \href
+  {https://doi.org/10.1145/1989323.1989368}
+  {\path{doi:10.1145/1989323.1989368}}.
+
+\end{thebibliography}

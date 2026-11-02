@@ -1,0 +1,52 @@
+{
+  "data_sha256": {
+    "bisection-test-cases.json": "ca3970e0e9073ec7459327e3bee7183c300051ee5461729f0613d3bad1ec2b5c",
+    "linear-oracle-test-cases.json": "693104cb38c0527ca9811a94b6fe6f9850c0adbdfa6107c6a6609e4889f42376",
+    "oracle-test-cases.json": "467f1cbc954fcf9c1a2dd3274a52ae05fbd064e58b719216fd03433f44421913"
+  },
+  "forced_bisection": [
+    {
+      "b": 2,
+      "bisection_steps": 65,
+      "value": "4/3"
+    },
+    {
+      "b": 3,
+      "bisection_steps": 139,
+      "value": "39/20"
+    }
+  ],
+  "generated_full_certificates": 36,
+  "generated_signed_ties": 216,
+  "objective_separation": {
+    "cost_optimum": "15/8",
+    "cross_values": [
+      "21/16",
+      "2"
+    ],
+    "ratio_optimum": "5/4"
+  },
+  "observed_software": {
+    "J": "12/5",
+    "law": [
+      "1/4",
+      "3/8",
+      "3/8"
+    ],
+    "moment": "9/8"
+  },
+  "saved_certificates": {
+    "bisection-test-cases.json": 3,
+    "linear-oracle-test-cases.json": 144,
+    "oracle-test-cases.json": 611
+  },
+  "scope": "Exact finite certificate checks; universal claims use the manuscript proofs.",
+  "separation": {
+    "best_within_level": "11/5",
+    "global": "39/20",
+    "support_level": "14/5"
+  },
+  "status": "passed",
+  "uniform_certificates": 1071,
+  "uniform_endpoint_agreement": 334
+}

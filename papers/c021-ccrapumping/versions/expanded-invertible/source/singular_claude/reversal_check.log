@@ -1,0 +1,34 @@
+=== 1. g(u_0#...#u_k) = sum_i prod_{j<i}|u_j| ===
+copyless machine (x:=x*A+1, A:=0 on #) computes g^r on all words of length <= 12: True
+hand representation computes g (|w|<=11): True
+hand representation minimal: True
+ranks: M_a 3  M_# 2  M_#^2 1
+Hankel minimal dimension of g: 3 ; of g^r: 3
+r1*M_b(l) = [1, 0, 0]  (should be r1)
+r2*M_b(l) = [l + 1, 0, l + 1]  (should be beta*r1 + alpha*r2)
+alpha(l) = l + 1  beta(l) = l + 1  beta/(alpha-1) = (l + 1)/l
+lambda*M_u for u=eps: [1, 0, 1]  = r1 + r2, not in Q r1
+
+=== 2. MPS Example 52 ===
+copyless machine for f correct on |w|<=12: True
+minimal dimension of f^r: 4 ; of f: 4
+rep of f^r verified on |w|<=10: True
+ranks of minimal letter matrices of f^r: M_0 3  M_1 2
+dim X = span{lambda M_u M_b...} with u="1", b_l = 0^{l+1}1 : 2
+fixed rows in X: [{c0: -c1}]
+r1 = [1, 0, -1, 0]
+r2 = lambda M_u = [0, 0, 1, 0] ; rank[r1;r2] = 2
+r1 * M_b(l) - r1 = [0, 0, 0, 0]
+r2 * M_b(l) = beta r1 + alpha r2 with [{A: -1, B: l + 1}]
+alpha(l) = l + 1  beta(l) = -1  beta/(alpha-1) = -1/l
+
+=== 3. Zariski closure of the monoid of g ===
+phi*M_a = phi(t0,u,s,t+1): True
+phi*M_# = phi(t0,u+t*s,t*s,0): True
+M_a^n*phi = phi(t0+n,...): True
+M_# itself = phi(0,1,1,0): True
+e idempotent: True  rank 2  e in closure (block rank<=1, first row e1): yes
+h = e h e: True
+action of h on im(e) = span{e_S, e_Q}: r_S -> r_S, r_Q -> b r_S + a r_Q  (Aff(1))
+product of two such: [1, 0, 0, a*b2 + b, a*a2, 0, 0, 0, 0]
+e = phi(0,0,1,1): False

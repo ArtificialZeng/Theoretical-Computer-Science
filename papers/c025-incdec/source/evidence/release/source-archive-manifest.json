@@ -1,0 +1,22 @@
+{
+  "job_id": "c025-incdec-release-4b3b2544efe9",
+  "archive": "evidence/release/optimal-incdec-working_paper-source.zip",
+  "archive_sha256": "11df862b898792d19c8e8b0ccf84f93032b914d928169bf9a7b9fb85df7a4f58",
+  "readiness_label": "working_paper",
+  "snapshot_digest": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4",
+  "manuscript_digest": "d4717112b7a2b8ec108123ef8efb3e63f3f6ed5f1f6caf1810a2969f35593c6a",
+  "pdf_digest": "407ec869e3c74ed3fea9001fc3e1afb187d4b3175fabfd78c52d40408afeb186",
+  "members": {
+    "audit/stoc-assessment.json": "4248bd9c0aff7977ce6815b5f9a49eed231464d86e36b510179a9f159c44c2c3",
+    "manuscript/README.md": "924403b8d035be75a9d800447a12d488dee83a83a26feec952d73b69eba16a8a",
+    "manuscript/acmart.cls": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+    "manuscript/acmart.dtx": "e29efd327f5c759f3d1f2e99dc8588c6a05b734c142f89c3e348161b893e44ff",
+    "manuscript/alphaurl.bst": "f218fe037634ba5ddda3abdcc237208f48aec18af0c27d44b847972456a38285",
+    "manuscript/build.py": "986e7e6227289b80696bad641a7741dc809c7668b643602824ae23f624f1ab49",
+    "manuscript/main.bbl": "7fee4bee314c5b1e304962a96a735c65290194743868b191a1203a9498b91f72",
+    "manuscript/main.tex": "a4ac5bf6b3732f5fb6d30099169df3acb379a7f09beff8c578d7f0202053b9f9",
+    "manuscript/optimal-incdec-working_paper.pdf": "407ec869e3c74ed3fea9001fc3e1afb187d4b3175fabfd78c52d40408afeb186",
+    "manuscript/references.bib": "aa47fb7057719d1eeb97d6a1969c09f7e12a8ffb6de9bca9ebf39b6b98bb5cda",
+    "publication.json": "f2128c3cd3d16f655d8cc6be175ab082775f21b3be15f12e1c19df5dffaa4e86"
+  }
+}

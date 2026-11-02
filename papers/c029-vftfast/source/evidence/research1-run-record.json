@@ -1,0 +1,39 @@
+{
+  "job_id": "c029-vftfast-research-6281f7685c7a",
+  "role": "research",
+  "assigned_research_pass": 1,
+  "max_accumulated_research_passes": 3,
+  "dispatch_utc": "2026-11-02T04:52:23+00:00",
+  "first_clock_observed_utc": "2026-11-02T04:54:24+00:00",
+  "scientific_work_closed_and_records_checked_utc": "2026-11-02T05:08:09.447540+00:00",
+  "main_test_deadline_utc": "2026-11-02T05:09:22.999990+00:00",
+  "finalization_deadline_utc": "2026-11-02T05:12:22.999989+00:00",
+  "source_sha256": "45828a099cc88bde52aee6450b298c8b73397e4367d3911585521595f94657b8",
+  "source_unchanged": true,
+  "runner_counters_or_scheduling_edited": false,
+  "agents_or_background_workers_started": false,
+  "new_experiments": [
+    "exhaustive protected gap subroutine check",
+    "exact finite obstruction-family check"
+  ],
+  "experiment_elapsed_seconds": 2.105,
+  "operational_notes": [
+    "One combined apply_patch request failed validation before writing; corrected with sequential edits. This is not mathematical evidence.",
+    "No process environment or credentials inspected."
+  ],
+  "mathematical_status": "unresolved",
+  "candidate_created": false,
+  "manuscript_or_pdf_created": false,
+  "result_schema_fields_and_evidence_paths_checked": true,
+  "evidence_hashes": {
+    "source.md": "45828a099cc88bde52aee6450b298c8b73397e4367d3911585521595f94657b8",
+    "problem.md": "c097221f8e37753e475e871741233c8a3d065af38364712fef333fe63af94822",
+    "checkpoint.md": "afce08216d577ae98f9a8517221a147947e9cf86b1f492ac96ec92bfa08ac0c8",
+    "evidence/research1-separator.md": "d1e409dc3d9277f8c65504c7d247eee3f8fe0514be9a32d4396a775173e72b75",
+    "evidence/research1-checks.json": "250192e9507b1409becefc199b18ac195916ece38695c8cc60abd1c85a83f67d",
+    "evidence/research1_checks.py": "c9bb680f487d9a9e5a00ac3f98b38bb5d70f33856ff553f8455c5e32b6dca0f5",
+    "evidence/research1-obstruction-witness.json": "0c7015a91f775ebfda41da327dd439ea3a0d38ef351fe287716d0b3faf3356f7",
+    "evidence/research1-sources.md": "2e36ef75654c534359b0bb119a6b83ab828eba8a671c940bddba01ddbfe9bc38",
+    "evidence/research1-entry-checkpoint.md": "10fad31286ff92218c7ac652c490fb7acba77d9cf80364e05b6db8fb8e88d6f8"
+  }
+}

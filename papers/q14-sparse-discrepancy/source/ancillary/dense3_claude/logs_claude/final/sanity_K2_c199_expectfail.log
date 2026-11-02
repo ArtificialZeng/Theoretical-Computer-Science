@@ -1,0 +1,5 @@
+# 2026-11-02 23:15:59 CST  src: corner_bnb_v7_claude.c sha1 3f0894555f2f
+# cmd: STOPFIRST=1 corner_bnb_final_claude (= v7 source) 2 199 100 20 < pair2.txt
+UNCLEARED line 1 box [4092/8192,4096/8192] [4092/8192,4096/8192]
+P 1 boxes 21 fails 1
+TOTAL patterns 1 boxes 21 uncleared 1 dfsnodes 84 skipped 0

@@ -1,0 +1,17 @@
+iter 25: blocked sets 1294, last |W|=32 |P|=95 |N|=1, elapsed 8s
+iter 50: blocked sets 2582, last |W|=32 |P|=95 |N|=1, elapsed 17s
+iter 75: blocked sets 3869, last |W|=35 |P|=92 |N|=1, elapsed 27s
+iter 100: blocked sets 5162, last |W|=35 |P|=92 |N|=1, elapsed 37s
+iter 125: blocked sets 6447, last |W|=32 |P|=95 |N|=1, elapsed 49s
+iter 150: blocked sets 7695, last |W|=33 |P|=94 |N|=1, elapsed 61s
+iter 175: blocked sets 8930, last |W|=34 |P|=93 |N|=1, elapsed 75s
+iter 200: blocked sets 10185, last |W|=34 |P|=93 |N|=1, elapsed 90s
+iter 225: blocked sets 11432, last |W|=35 |P|=92 |N|=1, elapsed 106s
+iter 250: blocked sets 12672, last |W|=34 |P|=93 |N|=1, elapsed 122s
+iter 275: blocked sets 13955, last |W|=35 |P|=92 |N|=1, elapsed 138s
+iter 300: blocked sets 15211, last |W|=35 |P|=92 |N|=1, elapsed 153s
+iter 325: blocked sets 16488, last |W|=35 |P|=92 |N|=1, elapsed 171s
+iter 350: blocked sets 17741, last |W|=34 |P|=93 |N|=1, elapsed 188s
+iter 375: blocked sets 19000, last |W|=35 |P|=92 |N|=1, elapsed 207s
+iter 400: blocked sets 20256, last |W|=35 |P|=92 |N|=1, elapsed 228s
+near-dichotomy CEGAR n=7 mindist=3 nimg=50 solver=cadical: result=None after 400 iterations, 20256 blocked sets, time 228s

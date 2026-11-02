@@ -1,0 +1,172 @@
+{
+  "verified": true,
+  "topics": 26,
+  "papers": [
+    {
+      "id": "c034-group3sum",
+      "files": 74,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "c034-grouptri",
+      "files": 75,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "c032-dspdag",
+      "files": 90,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "c031-detlis",
+      "files": 40,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "c029-vftfast",
+      "files": 89,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "c026-aonflow",
+      "files": 80,
+      "additional_versions": [
+        {
+          "pdf": "papers/c026-aonflow/versions/expanded/c026-aonflow_expanded_working_paper.pdf",
+          "files": 11
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "c025-pmcdelay",
+      "files": 80,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "c025-incdec",
+      "files": 116,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "c022-spe-memory",
+      "files": 92,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "c021-ccrapumping",
+      "files": 126,
+      "additional_versions": [
+        {
+          "pdf": "papers/c021-ccrapumping/versions/expanded-invertible/c021-ccrapumping_expanded_working_paper.pdf",
+          "files": 111
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "advice-matching",
+      "files": 78,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "c002-coverage",
+      "files": 66,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "c009-cycle2",
+      "files": 89,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "c012-upcycles",
+      "files": 221,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "c015-imagebound",
+      "files": 69,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "c017-wheeler",
+      "files": 101,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "coverage-sparse",
+      "files": 83,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "curvature-noise",
+      "files": 68,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "privacy-interpolation",
+      "files": 83,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "q14-sparse-discrepancy",
+      "files": 485,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "robust-stopping",
+      "files": 141,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "stoc1",
+      "files": 66,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "stoc2",
+      "files": 11,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "stoc3",
+      "files": 46,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "stoc4",
+      "files": 39,
+      "additional_versions": [],
+      "verified": true
+    },
+    {
+      "id": "stoc5",
+      "files": 90,
+      "additional_versions": [],
+      "verified": true
+    }
+  ]
+}

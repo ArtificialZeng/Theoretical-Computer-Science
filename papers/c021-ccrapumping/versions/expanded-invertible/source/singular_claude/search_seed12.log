@@ -1,0 +1,8 @@
+control g        dim 3  affine context found: ('', '', '0', '1', [Fraction(0, 1), Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1)], [Fraction(-1, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(-1, 1)])
+control g^r      dim 3  affine context found: None
+control h        dim 3  affine context found: ('', '', '0', '1', [Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(5, 1)], [Fraction(-1, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(-1, 1)])
+control h^r      dim 3  affine context found: None
+control mps f    dim 4  affine context found: None
+control mps f^r  dim 4  affine context found: ('', '', '0', '01', [Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(5, 1)], [Fraction(-1, 1), Fraction(-2, 1), Fraction(-3, 1), Fraction(-4, 1), Fraction(-5, 1)])
+reversal of a CCRA series has an affine context (so it is not CCRA): [('00', '', '11', '00', [Fraction(64, 1), Fraction(16, 1), Fraction(-32, 1), Fraction(-80, 1), Fraction(-128, 1)], [Fraction(-1, 12096), Fraction(43, 254016), Fraction(-181, 254016), Fraction(-11, 4032), Fraction(-1493, 254016)])]
+{'singular-d9': 5, 'singular-d8': 2, 'singular-d3': 3, 'invertible-d4': 2, 'singular-d5': 2, 'singular-d4': 5, 'invertible-d1': 4, 'singular-d6': 7, 'context-in-reversal': 1, 'singular-d7': 1, 'invertible-d3': 2, 'singular-d2': 3, 'invertible-d2': 4}

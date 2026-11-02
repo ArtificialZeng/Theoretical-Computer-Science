@@ -1,0 +1,23 @@
+{
+  "job_id": "c029-vftfast-release-bdd37c945f4e",
+  "snapshot_digest": "b1495a4cbeb794181b64a2bc9a00b637d90f0a7a7fdf654844a24036b4029e66",
+  "manuscript_digest": "8013342c36141de01d96e75509498833a97008d1df48c6153524aefa6caa4daa",
+  "pdf_digest": "8f61902bb7427aec09254cd8ac7566c87a76748f4dc9eb4d9bbed9828af7a7a8",
+  "verdict": "accept",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/acmart.cls",
+    "manuscript/build.sh",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/vftfast-working_paper.bbl"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "All seven citations, exact theorem/passages, complete publication dependencies, accepted mathematical scope, exact finite counts, current primary comparisons and rendered references reviewed. No Excel bibliography was designated. FLPS DOI returned 403 and DR/BCCCS abs pages had cache misses, but alternative original texts verify records and support; no citation remains unverified. Working_paper retained.",
+  "citation_audit_method": "citation-check-skill advisory two-pass + primary-source-manual",
+  "claims_report": "audit/citation-extraction.md",
+  "search_date": "2026-11-02",
+  "unverified_citations": []
+}

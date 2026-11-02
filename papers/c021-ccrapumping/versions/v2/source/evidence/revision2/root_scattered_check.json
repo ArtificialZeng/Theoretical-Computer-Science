@@ -1,0 +1,14 @@
+{
+  "scope": "Exact finite diagnostics only; finite-state CCRA exclusion theorem is unaccepted.",
+  "seed": 20261102,
+  "cases": 474,
+  "yes": 150,
+  "no": 324,
+  "wa_value_checks": 33980,
+  "yes_copyless_synthesis_checks": 11712,
+  "no_certificates_checked": 324,
+  "max_dimension": 180,
+  "max_witness_length": 4,
+  "mismatches": [],
+  "all_passed": true
+}

@@ -1,0 +1,2 @@
+k2n [5, 2] m= 20 degs [10, 10, 4, 4, 4, 4, 4]
+RESULT k2n [5, 2] 3 NOCOVER 299.8s

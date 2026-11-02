@@ -1,0 +1,24 @@
+n=1: subsets=4, with near-loop=3, without=1; cover-lemma violations: 0
+   probe: partitions (up to swap) with neither side containing a (1-step,defect<=1) path: 0 e.g. None
+   probe: partitions with neither side containing a 2-loop (2-step, defect 0): 1 e.g. [[0], [1]]
+   near-dichotomy: W without near-loop: 1, splits checked: 2, violations: 0, both near-thick: 0
+   probe dist(P,N)>=2 instead of 3: splits 2, failures 0
+   time 0.0s
+n=2: subsets=16, with near-loop=11, without=5; cover-lemma violations: 0
+   probe: partitions (up to swap) with neither side containing a (1-step,defect<=1) path: 1 e.g. [[1, 2], [0, 3]]
+   probe: partitions with neither side containing a 2-loop (2-step, defect 0): 2 e.g. [[0, 1], [2, 3]]
+   near-dichotomy: W without near-loop: 5, splits checked: 10, violations: 0, both near-thick: 0
+   probe dist(P,N)>=2 instead of 3: splits 10, failures 0
+   time 0.0s
+n=3: subsets=256, with near-loop=231, without=25; cover-lemma violations: 0
+   probe: partitions (up to swap) with neither side containing a (1-step,defect<=1) path: 4 e.g. [[2, 3, 4, 5], [0, 1, 6, 7]]
+   probe: partitions with neither side containing a 2-loop (2-step, defect 0): 8 e.g. [[0, 1, 2, 3], [4, 5, 6, 7]]
+   near-dichotomy: W without near-loop: 25, splits checked: 50, violations: 0, both near-thick: 0
+   probe dist(P,N)>=2 instead of 3: splits 50, failures 0
+   time 0.0s
+n=4: subsets=65536, with near-loop=64647, without=889; cover-lemma violations: 0
+   probe: partitions (up to swap) with neither side containing a (1-step,defect<=1) path: 203 e.g. [[4, 5, 6, 7, 8, 9, 10, 11], [0, 1, 2, 3, 12, 13, 14, 15]]
+   probe: partitions with neither side containing a 2-loop (2-step, defect 0): 128 e.g. [[0, 1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14, 15]]
+   near-dichotomy: W without near-loop: 889, splits checked: 1778, violations: 0, both near-thick: 0
+   probe dist(P,N)>=2 instead of 3: splits 1842, failures 0
+   time 2.2s

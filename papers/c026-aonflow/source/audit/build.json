@@ -1,0 +1,15 @@
+{
+  "job_id": "c026-aonflow-release-7db9e6fea069",
+  "snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd",
+  "manuscript_digest": "d852233f598ab85f715ccb8d53630a2f2d61b1da067c66cb20deb30f9503838c",
+  "pdf_digest": "50c157c4b7b471f5d2778b669efa55fde604245ebe40372a6c3cd79988c48fe4",
+  "checked_at_utc": "2026-11-02T01:01:23.276353+00:00",
+  "verdict": "accept",
+  "report": "audit/build.md",
+  "build_log": "manuscript/build/aonflow-working_paper.log",
+  "build_log_digest": "ba03df6a5336b2d2c91de87b6b71fb44c03adbf8cfa06cc8056d3480d34ba55a",
+  "clean_build": true,
+  "source_package": "evidence/release-7db9e6fea069-working_paper-source.zip",
+  "source_package_digest": "ace17ef4582b2810678d9864e6d38153dde46745657701cc90651482f6729908",
+  "zip_reproduction_report": "evidence/release-7db9e6fea069-zip-reproduction.json"
+}

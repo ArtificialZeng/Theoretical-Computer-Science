@@ -1,0 +1,234 @@
+{
+  "job_id": "c022-spe-memory-research-776ae007899c",
+  "arithmetic": "exact integer masks and graph reachability",
+  "coverage": "Explicit canonical SPE profiles for k=1..7, every legal history; no exhaustive enumeration of arbitrary machines.",
+  "profile_checks": [
+    {
+      "k": 1,
+      "players": 3,
+      "arena_vertices": 7,
+      "all_legal_history_product_positions": 9,
+      "profitable_deviation_positions": 0,
+      "initial_payoff_mask": 6,
+      "initial_A_profitable_deviation": null
+    },
+    {
+      "k": 2,
+      "players": 4,
+      "arena_vertices": 18,
+      "all_legal_history_product_positions": 43,
+      "profitable_deviation_positions": 0,
+      "initial_payoff_mask": 14,
+      "initial_A_profitable_deviation": null
+    },
+    {
+      "k": 3,
+      "players": 5,
+      "arena_vertices": 29,
+      "all_legal_history_product_positions": 113,
+      "profitable_deviation_positions": 0,
+      "initial_payoff_mask": 30,
+      "initial_A_profitable_deviation": null
+    },
+    {
+      "k": 4,
+      "players": 6,
+      "arena_vertices": 46,
+      "all_legal_history_product_positions": 376,
+      "profitable_deviation_positions": 0,
+      "initial_payoff_mask": 62,
+      "initial_A_profitable_deviation": null
+    },
+    {
+      "k": 5,
+      "players": 7,
+      "arena_vertices": 63,
+      "all_legal_history_product_positions": 1143,
+      "profitable_deviation_positions": 0,
+      "initial_payoff_mask": 126,
+      "initial_A_profitable_deviation": null
+    },
+    {
+      "k": 6,
+      "players": 8,
+      "arena_vertices": 86,
+      "all_legal_history_product_positions": 3279,
+      "profitable_deviation_positions": 0,
+      "initial_payoff_mask": 254,
+      "initial_A_profitable_deviation": null
+    },
+    {
+      "k": 7,
+      "players": 9,
+      "arena_vertices": 109,
+      "all_legal_history_product_positions": 10824,
+      "profitable_deviation_positions": 0,
+      "initial_payoff_mask": 510,
+      "initial_A_profitable_deviation": null
+    }
+  ],
+  "subset_complement_checks": [
+    {
+      "k": 1,
+      "A_subsets": 1,
+      "E_response_subsets": 1,
+      "pairs_exhaustively_checked": 1,
+      "distinct_required_memory_states": 1,
+      "unique_successful_response_is_complement": true
+    },
+    {
+      "k": 2,
+      "A_subsets": 2,
+      "E_response_subsets": 2,
+      "pairs_exhaustively_checked": 4,
+      "distinct_required_memory_states": 2,
+      "unique_successful_response_is_complement": true
+    },
+    {
+      "k": 3,
+      "A_subsets": 3,
+      "E_response_subsets": 3,
+      "pairs_exhaustively_checked": 9,
+      "distinct_required_memory_states": 3,
+      "unique_successful_response_is_complement": true
+    },
+    {
+      "k": 4,
+      "A_subsets": 6,
+      "E_response_subsets": 6,
+      "pairs_exhaustively_checked": 36,
+      "distinct_required_memory_states": 6,
+      "unique_successful_response_is_complement": true
+    },
+    {
+      "k": 5,
+      "A_subsets": 10,
+      "E_response_subsets": 10,
+      "pairs_exhaustively_checked": 100,
+      "distinct_required_memory_states": 10,
+      "unique_successful_response_is_complement": true
+    },
+    {
+      "k": 6,
+      "A_subsets": 20,
+      "E_response_subsets": 20,
+      "pairs_exhaustively_checked": 400,
+      "distinct_required_memory_states": 20,
+      "unique_successful_response_is_complement": true
+    },
+    {
+      "k": 7,
+      "A_subsets": 35,
+      "E_response_subsets": 35,
+      "pairs_exhaustively_checked": 1225,
+      "distinct_required_memory_states": 35,
+      "unique_successful_response_is_complement": true
+    },
+    {
+      "k": 8,
+      "A_subsets": 70,
+      "E_response_subsets": 70,
+      "pairs_exhaustively_checked": 4900,
+      "distinct_required_memory_states": 70,
+      "unique_successful_response_is_complement": true
+    },
+    {
+      "k": 9,
+      "A_subsets": 126,
+      "E_response_subsets": 126,
+      "pairs_exhaustively_checked": 15876,
+      "distinct_required_memory_states": 126,
+      "unique_successful_response_is_complement": true
+    },
+    {
+      "k": 10,
+      "A_subsets": 252,
+      "E_response_subsets": 252,
+      "pairs_exhaustively_checked": 63504,
+      "distinct_required_memory_states": 252,
+      "unique_successful_response_is_complement": true
+    },
+    {
+      "k": 11,
+      "A_subsets": 462,
+      "E_response_subsets": 462,
+      "pairs_exhaustively_checked": 213444,
+      "distinct_required_memory_states": 462,
+      "unique_successful_response_is_complement": true
+    },
+    {
+      "k": 12,
+      "A_subsets": 924,
+      "E_response_subsets": 924,
+      "pairs_exhaustively_checked": 853776,
+      "distinct_required_memory_states": 924,
+      "unique_successful_response_is_complement": true
+    }
+  ],
+  "forgetful_E_control": {
+    "k": 2,
+    "players": 4,
+    "arena_vertices": 18,
+    "all_legal_history_product_positions": 43,
+    "profitable_deviation_positions": 5,
+    "initial_payoff_mask": 14,
+    "initial_A_profitable_deviation": [
+      [
+        "A",
+        0,
+        0
+      ],
+      [
+        "Amark",
+        0,
+        0,
+        1
+      ],
+      [
+        "A",
+        1,
+        1
+      ],
+      [
+        "Amark",
+        1,
+        1,
+        0
+      ],
+      [
+        "E",
+        0,
+        0
+      ],
+      [
+        "Emark",
+        0,
+        0,
+        1
+      ],
+      [
+        "E",
+        1,
+        1
+      ],
+      [
+        "Emark",
+        1,
+        1,
+        0
+      ],
+      [
+        "C",
+        0
+      ],
+      [
+        "C",
+        1
+      ],
+      [
+        "winA"
+      ]
+    ]
+  },
+  "unbounded_lower_bound_basis": "The mathematical injectivity argument, not these finite tests."
+}

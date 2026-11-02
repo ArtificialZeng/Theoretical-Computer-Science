@@ -1,0 +1,6 @@
+n=6 j=1: 4 patterns; orbit sum 18 vs labelled 18: True
+n=6 j=2: 20 patterns; orbit sum 171 vs labelled 171: True
+n=6 j=3: 86 patterns; orbit sum 1140 vs labelled 1140: True
+n=6 j=4: 336 patterns; orbit sum 5985 vs labelled 5985: True
+n=6 j=5: 1211 patterns; orbit sum 26334 vs labelled 26334: True
+n=6 j=6: 4066 patterns; orbit sum 100947 vs labelled 100947: True

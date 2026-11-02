@@ -1,0 +1,2 @@
+CCRA trials: {'total': 1500, 'invertible': 620, 'interesting': 483, 'ok': 483, 'fail': 0, 'nonunip': 483, 'finitepart': 0, 'has_unipotent_part': 380, 'has_nonunit_eigenvalue': 446, 'both': 344, 'maxdim': 16}
+control: {'upper_tri_fail': 7, 'upper_tri': 26, 'general_fail': 24, 'general': 24}

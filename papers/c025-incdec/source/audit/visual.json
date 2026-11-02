@@ -1,0 +1,50 @@
+{
+  "job_id": "c025-incdec-release-4b3b2544efe9",
+  "snapshot_digest": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4",
+  "manuscript_digest": "d4717112b7a2b8ec108123ef8efb3e63f3f6ed5f1f6caf1810a2969f35593c6a",
+  "pdf_digest": "407ec869e3c74ed3fea9001fc3e1afb187d4b3175fabfd78c52d40408afeb186",
+  "verdict": "accept",
+  "report": "audit/visual.md",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "readiness_label": "working_paper",
+  "render_command": "pdftoppm -r 120 -png manuscript/optimal-incdec-working_paper.pdf evidence/release/page",
+  "page_renders": [
+    {
+      "page": 1,
+      "path": "evidence/release/page-1.png",
+      "sha256": "8dcff66bd4e389214da384c1ffca14aef9da863e84b070f5182444e45dab5665"
+    },
+    {
+      "page": 2,
+      "path": "evidence/release/page-2.png",
+      "sha256": "533fd176a1ca6a48e874f0230ed487070a927f71601a0bc731da83c8ff23a0f9"
+    },
+    {
+      "page": 3,
+      "path": "evidence/release/page-3.png",
+      "sha256": "157dbe351f8d10701f9904ff30266d81c6e56500250ab1580e1af9cc01f66a14"
+    },
+    {
+      "page": 4,
+      "path": "evidence/release/page-4.png",
+      "sha256": "e45dcb0159f748c45d981bcb77652ff529294797055f73ddb76d740d746f3f24"
+    },
+    {
+      "page": 5,
+      "path": "evidence/release/page-5.png",
+      "sha256": "fd044f220e7cfc7e9851966e171f9056252c6d832e49629b50d00aeca0a69794"
+    },
+    {
+      "page": 6,
+      "path": "evidence/release/page-6.png",
+      "sha256": "4b9fc861dbc980a002bf556206239fa573768733d593585c2beb7defd2106c66"
+    }
+  ]
+}

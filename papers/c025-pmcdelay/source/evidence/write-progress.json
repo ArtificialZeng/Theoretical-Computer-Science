@@ -1,0 +1,10 @@
+{
+  "job_id": "c025-pmcdelay-write-7714292f197a",
+  "phase": "write",
+  "math_gate": "passed",
+  "snapshot_digest": "9e18afcb85b19f266e11aab420e78596f90e785921128737257fbdd42a21cfbc",
+  "readiness_label": "working_paper",
+  "source_sha256": "30ba523462232346f8c2d671825d32d790edcd9362f00b8eec84a58e11d4e5cc",
+  "counters_unchanged": true,
+  "next_test": "Compile the complete accepted proof in official acmart with a 12-total-page cap; then inspect every rendered page and freeze the manuscript for a separate release review."
+}

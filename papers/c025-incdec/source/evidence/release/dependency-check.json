@@ -1,0 +1,38 @@
+{
+  "job_id": "c025-incdec-release-4b3b2544efe9",
+  "snapshot_digest": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4",
+  "manuscript_digest": "d4717112b7a2b8ec108123ef8efb3e63f3f6ed5f1f6caf1810a2969f35593c6a",
+  "pdf_digest": "407ec869e3c74ed3fea9001fc3e1afb187d4b3175fabfd78c52d40408afeb186",
+  "citation_keys": [
+    "BBBCDL26",
+    "CK26",
+    "DKLS26"
+  ],
+  "bib_keys": [
+    "BBBCDL26",
+    "CK26",
+    "DKLS26"
+  ],
+  "bbl_keys": [
+    "BBBCDL26",
+    "CK26",
+    "DKLS26"
+  ],
+  "undefined": [],
+  "unused_bib_keys": [],
+  "recorder_nonabsolute_inputs": [
+    "./acmart.cls",
+    "./main.aux",
+    "./main.bbl",
+    "./main.out",
+    "acmart.cls",
+    "main.aux",
+    "main.bbl",
+    "main.out",
+    "main.tex"
+  ],
+  "official_acmart_cls_identical": true,
+  "official_acmart_dtx_identical": true,
+  "source_sha256": "12956c470e37f8a548f510c7eb1781eda7b961999c5fa1163df43b56513b45a4",
+  "stoc_assessment_sha256": "4248bd9c0aff7977ce6815b5f9a49eed231464d86e36b510179a9f159c44c2c3"
+}

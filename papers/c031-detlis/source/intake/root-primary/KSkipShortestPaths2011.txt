@@ -1,0 +1,889 @@
+                                                 On k-skip Shortest Paths
+
+                                                    Yufei Tao† Cheng Sheng† Jian Pei‡
+                      †                                                                         ‡
+                          Department of Computer Science and Engineering                            School of Computing Science
+                                 Chinese University of Hong Kong                                      Simon Fraser University
+                                    New Territories, Hong Kong                                         Burnaby, BC Canada
+                                 {taoyf, csheng}@cse.cuhk.edu.hk                                          jpei@cs.sfu.ca
+
+
+
+ABSTRACT                                                                                The SP problem has received considerable attention from the re-
+Given two vertices s, t in a graph, let P be the shortest path (SP)                  search community in the past few years (see the recent work [4,
+from s to t, and P ⋆ a subset of the vertices in P . P ⋆ is a k-skip                 24, 27] and the references therein), due to its profound importance
+shortest path from s to t, if it includes at least a vertex out of every             in Spatial Network Databases (SNDB). An SNDB manages geo-
+k consecutive vertices in P . In general, P ⋆ succinctly describes                   metric entities positioned in an underlying road network, and sup-
+P by sampling the vertices in P with a rate of at least 1/k. This                    ports efficient data retrieval with predicates on network distances,
+makes P ⋆ a natural substitute in scenarios where reporting every                    and optionally also on spatial properties (a representative system is
+single vertex of P is unnecessary or even undesired.                                 Google Maps). A standard modeling of a road network is a graph
+                                                                                     where each vertex corresponds to a junction and each edge repre-
+   This paper studies k-skip SP computation in the context of spa-                   sents a road segment. An edge’s weight is often set to the length of
+tial network databases (SNDB). Our technique has two properties                      the corresponding road segment or the average time for a vehicle to
+crucial for real-time query processing in SNDB. First, our solution                  pass through the segment.
+is able to answer k-skip queries significantly faster than finding
+the original SPs in their entirety. Second, the previous objective                      Traditionally, a SP query retrieves every vertex on the short-
+is achieved with a structure that occupies less space than storing                   est path P , which is sometimes unnecessarily detailed in practice.
+the underlying road network. The proposed algorithms are the out-                    Consider, for example, that a person leaves home for a retreat desti-
+come of a careful theoretical analysis that reveals valuable insight                 nation. Typically, the SP would first wind through her/his neighbor-
+into the characteristics of the k-skip SP problem. Their efficiency                  hood R1 , continue onto a set of highways R2 , and eventually enter
+has been confirmed by extensive experiments with real data.                          the neighborhood R3 of the destination. The region, in which fine-
+                                                                                     detailed directions are imperative, is R3 . In R1 and R2 , it is often
+                                                                                     sufficient to guide the user at a coarse level, in a manner similar
+Categories and Subject Descriptors                                                   to putting sign-posts along the way, for example, by naming some
+H3.3 [Information search and retrieval]: Search process                              streets to be passed, and the highways to be taken in succession.
+                                                                                        In fact, even the computation of turn-by-turn driving directions
+General Terms                                                                        does not always demand all the vertices on P . This is because P
+Algorithms                                                                           may contain vertices at which no turning is needed. To illustrate,
+                                                                                     assume that P stays on the Main Street in an urban area for one
+Keywords                                                                             kilometer, during which the street intersects another street every
+                                                                                     100 meters. Each of those 10 intersections is a vertex in P , but
+k-skip, shortest path, road network                                                  only the first and last of them are enough to generate the instruc-
+                                                                                     tions for turning into and away from the Main Street, respectively.
+1.     INTRODUCTION                                                                  The situation is similar if P involves a long highway, in which the
+   Finding shortest paths (SP) in a graph is a classic problem in                    vertices between the points where P enters and leaves the highway
+computer science. Formally, let G = (V, E) be a graph where                          respectively can be ignored.
+V is a set of vertices and E a set of edges. Each edge carries a                        In this paper, we are interested in computing a subset, say P ⋆ , of
+non-negative weight. Define the length of a path P , represented as                  the vertices in P . Instead of an arbitrary subset, however, we de-
+kP k, to be the total weight of the edges in P . Given two vertices                  mand that P ∗ be k-skip shortest path, namely, it should contain at
+s, t ∈ V , a SP query returns the path from s to t with the minimum                  least one vertex out of every k consecutive vertices in P . Figure 1
+length.                                                                              shows an example with k = 4, where P consists of all the (black
+                                                                                     and white) vertices while P ⋆ only the black ones. Note that there
+                                                                                     can be more than one black vertex in every 4 consecutive vertices
+                                                                                     in P , but it is impossible to have none.
+Permission to make digital or hard copies of all or part of this work for
+personal or classroom use is granted without fee provided that copies are               P ⋆ succinctly describes P by sampling its vertices with a rate of
+not made or distributed for profit or commercial advantage and that copies           at least 1/k. Such a sample set can replace P in answering queries
+bear this notice and the full citation on the first page. To copy otherwise, to
+republish, to post on servers or to redistribute to lists, requires prior specific   like: what are the highways (alternatively, neighborhoods or cities)
+permission and/or a fee.                                                             that P needs to go through? P ⋆ is equally useful in discovering
+SIGMOD’11, June 12–16, 2011, Athens, Greece.                                         the gas stations (similarly, attractions or hotels) along P , because
+Copyright 2011 ACM 978-1-4503-0661-4/11/06 ...$10.00.
+                                                                                Our second contribution is a full set of algorithms required to
+                                                                             process k-skip SP queries within a stringent time limit. Specifi-
+      s
+                                                                             cally, these algorithms settle three sub-problems: (i) find a small
+                                                                t            V ⋆ in time linear to the complexity of G, (ii) construct from V ⋆
+                                                                             a space-economical structure, and (iii) answer a k-skip query by
+ Figure 1: The black vertices constitute a 4-skip shortest path              accessing only a small portion of the structure. We thoroughly
+                                                                             evaluated these algorithms with extensive experiments on real data,
+                                                                             including the massive road network of the US which has about 24
+it is often sufficient to find the stations close to the vertices in P ⋆ ,   million vertices and 58 million edges. Our results prove that the
+as opposed to all the vertices of P . This is the idea of [18] in            proposed technique very well satisfy both requirements mentioned
+approaching the continuous nearest neighbor problem. Moreover,               earlier in all settings.
+P ⋆ is also adequate for estimating various statistics about P , as in
+                                                                             Roadmap. The next section reviews the literature of SP computa-
+the query: find the percentage of dessert coverage in the route from
+                                                                             tion. Section 3 formally defines the target problem, and gives an
+Los Angeles to Las Vegas. Finally, P ⋆ is exactly what is needed to
+                                                                             overview of our solutions. Section 4 elaborates the theoretical re-
+plot the original P in a digital map with a decreased resolution. For
+                                                                             sults on k-skip covers, and the algorithms for constructing the pro-
+example, at Google Maps, only a subset of the vertices on a path
+                                                                             posed structure. Section 5 clarifies how to answer a k-skip query
+need to be displayed according to the current zooming level.
+                                                                             and perform a zoom-in efficiently. Section 6 contains the experi-
+   For traditional mapping purposes, P ⋆ has two notable advan-              mental results, while Section 7 concludes the paper with directions
+tages over P . First, it is (much) smaller in size, and hence, requires      for future work.
+less bandwidth to transmit. This is a precious feature in mobile
+computing that will especially be appreciated by users charged by            2. RELATED WORK
+the amount of Internet usage. Second, using a clever algorithm, P ⋆             There is an extremely rich literature on the SP problem. In Sec-
+can be faster to compute because, intuitively, fewer vertices need to        tion 2.1, we clarify the details of the reach algorithm, which is the
+be retrieved than P . Such an efficiency gain provides valuable op-          state of the art for SP computation in road networks. Section 2.2
+portunities for in-car navigation devices and routing websites such          surveys the other recent progress in the database and theory com-
+as Google Maps to support a great variety of on-route services in            munities.
+shorter time.
+   The concept of k-skip SP comes with a zoom-in operation. Given
+                                                                             2.1 Dijkstra and reach
+consecutive vertices u, v on P ⋆ , the operation finds the missing              To facilitate discussion, given two vertices u, v in the input graph
+vertices on P from u to v. As there are at most k − 1 missing ver-           G = (V, E), we denote by SP (u, v) the SP from u to v. The
+tices, for small k a zoom-in incurs negligible time, because it only         length of SP (u, v), i.e., kSP (u, v)k, is called the distance be-
+needs to compute a very short path. This adds a nice pay-as-you-go           tween u and v. If (u, v) is an edge in G, we represent its weight
+feature in applying k-skip SP. First, a driver can request the least         as ℓ(u, v). In case G is directed, (u, v) is an edge from u to v,
+zoom-in’s to complete the part of the route outside her/his knowl-           and (v, u) means the opposite. To avoid unnecessary distraction,
+edge. This allows her/him to pay for the most useful information             our examples use undirected graphs, but all the notations in our
+only. Second, an algorithm preparing turn-by-turn directions can             description are carefully written so that they are also correct for
+zoom-in only when necessary (i.e., a turning may exist between two           directed graphs.
+adjacent vertices P ⋆ ), thus saving the cost of locating the skipped        Dijkstra. Let us first review the Dijkstra’s algorithm [5], which is
+vertices.                                                                    the foundation of the reach method described shortly. Dijkstra finds
+Contributions. Somewhat surprisingly, the notion of k-skip SP, or            SP (s, t) by exploring the vertices in ascending order of their dis-
+in general the idea of sampling (the vertices in) a SP, has not been         tances to the source s. At any time, each vertex u ∈ V has a status
+mentioned previously to the best of our knowledge, let alone any             chosen from {unseen, labeled, scanned}. Furthermore, u is
+algorithm dealing with the problem of k-skip SP computation. We              associated with a label l(u) equal to the distance of the SP from
+fill the gap with a systematic study of this problem. In particular,         s to u found so far (i.e., an even shorter path may be discovered
+our objectives are twofold:                                                  later). On this path, the vertex immediately preceding u is kept in
+                                                                             pred(u), referred to as the predecessor of u.
+   1. Resolve a k-skip query significantly faster than calculating
+      the original SP in entirety.                                              At the beginning of Dijkstra, all vertices u ∈ V have status
+                                                                             unseen, l(u) = ∞ and pred(u) = ∅. The only exception is s,
+   2. Achieve the previous purpose with a data structure that oc-            whose status is labeled, with l(s) = 0 and pred(u) = ∅. At all
+      cupies less space than storing the input graph G = (V, E)              times, the vertices of status labeled are managed by a min-heap
+      itself. This permits the structure to reside in memory even            Q, using their labels as the sorting key. In each iteration, the algo-
+      for the largest road network, as is crucial for real-time query        rithm (i) de-heaps the vertex u ∈ Q with the minimum l(u), (ii)
+      processing in SNDB.                                                    relaxes all edges (u, v) such that the status of v is not scanned,
+                                                                             and (iii) changes the status of u to scanned. Specifically, relax-
+   The first contribution of this paper is to formally establish the
+                                                                             ation of (u, v) involves the following steps:
+fact that, only a small subset V ⋆ of the vertices in G need to be
+considered to attack the k-skip problem. In other words, the other
+vertices in V \V ⋆ are never needed to form any k-skip SP. Referring             relax (u, v)
+to V ⋆ as a k-skip cover, we show that there always exists a V ⋆ with            1. if the status of v is unseen then
+size roughly proportional to |V |/k. This theoretical finding is of              2.      l(v) ← l(u) + ℓ(u, v)
+independent interest because it is not limited to road networks, but             3.      the status of v ← labeled
+actually holds for general graphs.                                               4. else if l(v) > l(u) + ℓ(u, v) then
+                       b        5       d       5       f
+
+                 4                  3       3               4
+
+         1             5                1               5           1
+    s        a                  c               e               g       t
+                                                                                                                 s                    t
+                            (a) The input graph
+
+                 a      b   c       d   e   f       g   s   t
+                 1      0   6       5   6   0       1   0   0
+                     (b) Global reaches of the vertices
+                      Figure 2: Illustration of reach                               Figure 3: Comparison of Dijkstra, bi-directional, and reach
+
+
+    5.       l(v) ← l(u) + ℓ(u, v)                                                where lf (u) and lb (u) are the labels of u in the forward and back-
+    6.       pred(v) ← u                                                          ward search, respectively. λ is reduced to λ′ if λ > λ′ , since
+                                                                                  it implies the existence of a shorter s-to-t path that concatenates
+                                                                                  SP (s, u), (u, v), and SP (v, t), where v is the current predecessor
+                                                                                  of u in the backward search. The algorithm terminates when either
+The present l(u) is guaranteed to be kSP (s, u)k. The algorithm                   direction de-heaps a vertex already scanned in the other direction.
+terminates as soon as t, the destination, is selected by an iteration.
+                                                                                     Let us demonstrate bi-directional on the graph in Figure 2a.
+   To illustrate, assume that we want to compute SP (s, t) in Fig-                After three iterations of each direction, which are the same as
+ure 2a. In the first iteration, Dijkstra scans s and relaxes (s, a),              in Dijkstra, the forward (backward) search has scanned s, a, b
+after which Q = {a} and l(a) = 1. The next iteration de-heaps a                   (t, g, f ), such that Qf (Qb ) contains vertices c, d (e, d) with la-
+and relaxes (a, b), (a, c). Note that (a, s) is not relaxed because the           bels 6, 10, respectively. Currently, λ = ∞. Next, the forward
+status of s has become scanned. Now Q contains b, c with labels                   search de-heaps c ∈ Qf and relaxes edges (c, d), (c, e), after
+5, 6, respectively. The algorithm then scans b and relaxes (b, d),                which lf (e) = 7, lf (d) = 9. Similarly, the backward search then
+which labels d with 10. This is followed by de-heaping c, and                     de-heaps e ∈ Qb . As the status of e in the forward direction is
+relaxing (c, d), (c, e). Note that the relaxation of (c, d) decreases             labeled, the algorithm updates λ to lf (e) + lb (e) = 7 + 6 = 13,
+l(d) to 9. The rest of the algorithm proceeds in the same manner.                 before it relaxes (e, c), (e, d). The forward search continues by
+By tracing the execution, one can verify that, at termination, all the            de-heaping e ∈ Qf , which, however, has been scanned in the
+vertices except t have already been scanned.                                      backward search. The algorithm therefore terminates, without de-
+   Dijkstra can be implemented in O(m + n log n) time [3], where                  heaping d in either direction.
+n, m are the number of vertices and edges, respectively (i.e., n =                Reach. Intuitively, if λ is the length of SP (s, t), Dijkstra searches
+|V |, m = |E|). In a road network, each vertex has an O(1) degree,                a ball that centers at s, and has radius λ, shown as the dashed circle
+so the time complexity is essentially O(n log n).                                 in Figure 3. Bi-directional, on the other hand, explores two balls
+Bi-directional. Dijkstra starts a graph traversal from s and gradu-               with radius λ/2 that center at s, t respectively (the two solid circles
+ally approaches t; call this a forward search. Immediately by sym-                in Figure 3). The reach algorithm, which is the current state of
+metry, the SP problem can also be solved by a backward search                     the art, dramatically shrinks the search area to a small dumb-bell
+from t to s (if G is directed, the backward search implicitly re-                 shape, as illustrated by the shaded region in Figure 3.
+verses the direction of each edge). The bi-directional algorithm                     Let us start the explanation with the notion of local reach. Let u
+[10, 20] achieves better efficiency by performing both searches syn-              be a vertex on SP (s, t). The local reach of u in SP (s, t) equals
+chronously, the effect of which is essentially to explore the vertices            rs,t (u) as calculated in Equation 1. Note that this notion relies on
+u ∈ V in ascending order of rs,t (u), where                                       a particular SP. Any vertex v ∈/ SP (s, t) has no local reach defined
+             rs,t (u) = min{kSP (s, u)k, kSP (u, t)k}.                      (1)   in SP (s, t). Now we extend the definition to global reach:
+In fact, if u is closer to s (than to t), then it will first be touched in           D EFINITION 1 (G LOBAL REACH [12]). The global reach,
+the forward search; otherwise, the backward search will find it first.            denoted as r(u), of a vertex u is the maximum local reach of u
+The forward/backward search proceeds as in the standard Dijkstra’s                in all the shortest paths that pass u. Formally:
+algorithm (as if the other search did not exist). Let Qf (Qb ) be
+the heap of the forward (backward) direction. Synchronization is                                      r(u) =         max        rs,t (u).            (2)
+                                                                                                               s,t|u∈SP (s,t)
+carried out by advancing in each iteration the direction that has a
+smaller label at the top of the heap.                                                The reach r(u) can be understood intuitively as follows. If u is
+   Bi-directional monitors the distance λ of the shortest s-to-t path             on SP (s, t), then either s or t must have distance at most r(u) to
+found so far. λ is set to ∞ initially, and may be updated when the                u. In other words, in case neither s nor t is within distance r(u)
+forward search (the backward case is symmetric) de-heaps a vertex                 from u, u can be safely pruned in computing SP (s, t).
+u whose status in the backward direction is labeled1 . Specif-                       Consider, for instance, vertex c in Figure 2a. To decide its global
+ically, at this time, the algorithm computes λ′ = lf (u) + lb (u),                reach r(c), first collect the set S of all the SPs that pass c, namely,
+1
+ This status cannot be scanned; otherwise, the algorithm would                    S = {SP (s, t), SP (s, g), ..., SP (a, e), ...}. We then calculate
+have terminated right after u was de-heaped by the forward search,                the local reach of c in each SP of S. For example, its local reach
+as will be clear shortly.                                                         in SP (a, e) is min{kSP (a, c)k, kSP (c, e)k} = 1. The final r(c)
+equals the maximum of all the local reaches, which can be verified      on the empirical evaluation of [10, 25], HH has comparable perfor-
+to be 6 (as is its local reach in SP (s, t)). Figure 2b shows the       mance with respect to reach.
+global reaches of all the vertices.
+                                                                           The separator technique is another popular approach [15, 16,
+   In computing SP (s, t), the reach algorithm [10, 12] proceeds        17] to preprocess a graph G for efficient SP retrieval. The idea is to
+in the same way as bi-directional, but may prune a vertex in re-        divide the vertices of G into several components, and for each com-
+laxing an edge (u, v). Without loss of generality, suppose that the     ponent, extract a set of boundary vertices such that the SP between
+relaxation takes place in the forward search (the backward case is      two vertices in different components must go through a boundary
+symmetric). This implies that the forward search just scanned u,        vertex. Query efficiency benefits from the fact that, most computa-
+but has never scanned v (otherwise the edge would not have been         tion of a SP can be restricted only to the boundary vertices. Accord-
+relaxed). The pruning of reach takes place as follows:                  ing to [25], however, separator-based methods are not as efficient as
+                                                                        HH on road networks. Another disadvantage is that these methods
+  RULE 1. Vertex v is pruned if both of the following hold:             often have expensive space consumption. For example, the space
+                                                                        of [15] is at the order of n1.5 (where n is the number of vertices),
+   1. v has status labeled or unseen in the backward direction          which is prohibitive for massive graphs.
+   2. r(v) < lf (u)                                                        In [28], Wagner et al. described a geometric container technique,
+                                                                        which associates each edge (u, v) in G with a geometric region.
+where lf (u) is the label of u in the forward search.                   The region covers all the vertices t such that the SP from u to t
+                                                                        goes through v. In running Dijkstra, such regions can be used to
+   In general, reach can be understood as the execution of bi-          prune many vertices that do not appear in the SP. Lauther [19] in-
+directional on the vertices that survive pruning. In Figure 2, for      tegrated a similar idea with the bi-directional algorithm discussed
+example, reach finds SP (s, t) by scanning only s, a, c, e, g, t. As    in Section 2.1. Samet et al. [24] proposed to break the geometric
+in bi-directional, reach first scans s (t) in the forward (backward)    regions into smaller disjoint pieces that can be indexed by a quad-
+direction, after which Qf (Qb ) includes a (g) with label 1. Next,      tree. Their solution lowers the cost of SP calculation (compared to
+the forward search de-heaps a from Qf , and relaxes (a, b), (a, c).     [19, 28]), but entails O(n1.5 ) space. A common shortcoming of
+The relaxation of (a, b) prunes b by Rule 1 because r(b) = 0 <          [19, 24, 28] is that their preprocessing essentially determines the
+lf (a) = 1. The backward search then eliminates f in a similar          SPs between all pairs of vertices. The all-SP problem is notori-
+fashion. The rest of the algorithm proceeds as in bi-directional.       ously difficult. Even on planar graphs, the fastest solution requires
+Vertex d does not need to be scanned for the reason explained ear-      O(n2 ) time [7], which is practically intractable for large n.
+lier for bi-directional.
+                                                                           Recently, Sankaranarayanan et al. [27] proposed a path oracle
+   The space consumption of reach is very economical because, ex-       that is constructed from well-separated pair decomposition, and
+cept G itself, only one extra value needs to be stored for each ver-    can be used to accelerate SP retrieval. Such an oracle consumes
+tex. However, it can be expensive to calculate the exact reach of       O(s2 n) space in 2-d space, where s is shown to be around 12 for
+every vertex. Fortunately, there are fast algorithms [10, 12] to ob-    practical data. Xiao et al. [30] showed that SP queries can be accel-
+tain approximate reaches that are guaranteed to upper bound their       erated by exploiting symmetry in the data graph. Their approach,
+original values. Pruning remains the same except that r(u) should       however, is limited to the case where all edges have a unit weight.
+be replaced by its upper bound. The outstanding efficiency of this      Wei [29] developed an alternative solution by resorting to tree de-
+algorithm on road networks has been theoretically justified [1].        composition [23]. Rice and Tsotras [22] studied the shortest path
+                                                                        problem with label restrictions. Some other work considers how to
+2.2 More results on SP computation                                      estimate shortest path distances, e.g., [11, 21].
+   The A⋆ algorithm [13] is a classic SP solution that captures Dijk-
+stra as a special case. The effectiveness of A⋆ relies on a method to      We emphasize that all the works aforementioned calculate tradi-
+calculate, typically in constant time, a lower bound of kSP (u, v)k     tional, complete, SPs. The concept of k-skip SP has not appeared
+for any two vertices u, v. Apparently, 0 can be a trivial lower         previously, and is formalized in the next section for the first time in
+bound, but in that case A⋆ degenerates into Dijkstra. In general,       the literature.
+the tighter the lower bounds are, the faster A⋆ is than Dijkstra.
+   Motivated by this, Agrawal and Jagadish [2] proposed to pre-         3. K-SKIP SHORTEST PATHS
+compute the distances between each vertex and a special set of ver-        For simplicity, we assume that the data graph G = (V, E) is
+tices called landmarks. In answering a SP query, those distances        undirected, and will discuss directed graphs only when the exten-
+are deployed to derive lower bounds based on triangle inequality.       sion is not straightforward. The following definition formalizes k-
+This idea is also the basis of the ALT algorithm developed by Gold-     skip SP:
+berg and Harrelson [9], which has lower query time (than [2]) at
+the tradeoff of consuming more space. The experiments of [10]              D EFINITION 2 (k- SKIP SHORTEST PATH ). Let SP (s, t) be
+indicate that ALT is slower than the reach method described in Sec-     the shortest path from source s to destination t. Label the ver-
+tion 2.1. Note, however, that ALT and reach are compatible, in the      tices in SP (s, t) in the order they appear: v1 , v2 , ..., vl (i.e.,
+sense that their heuristics can be applied at the same time to maxi-    v1 = s, vl = t), where l is the total number of vertices in the
+mize efficiency [10].                                                   path. If l ≥ k, let P ⋆ be an ordered subset of {v1 , ..., vl }, where
+   Sanders and Schultes [8, 25, 26] presented a highway hierar-         the ordering respects that in SP (s, t). P ⋆ is a k-skip shortest path
+chy (HH) technique, whose rationale is to identify some edges that      from s to t if
+mimic the role of highways in reality. In computing a SP, the algo-
+                                                                                            P ⋆ ∩ {vi , ..., vi+k−1 } 6= ∅                 (3)
+rithm of HH modifies Dijkstra so that the search can skip as many
+non-highway edges as possible, and thus, terminate earlier. Based       for every 1 ≤ i ≤ l − k + 1.
+                                                  .
+                                                                          SP (u, v) (namely, the shortest path from u to v in G) does not pass
+                 a                            a                           any other vertex in V ⋆ .
+                                                      3
+                       f         d            3           f       d
+                                                              3              It is easy to see that the SP from u to any of its k-skip neighbor v
+                                          3           2
+                                                                          can have at most k edges. In an undirected G, the relation implied
+        b        e                   b        e           3
+                                                  3
+                                                                          by the above definition is symmetric, i.e., u is a k-skip neighbor of
+                       c                                  c               v if and only if v is a k-skip neighbor of u. This is not necessarily
+                                                  .                       true for directed graphs. In any case, let Nk (u) be the set of all
+                                                                          k-skip neighbors of u. For instance, in Figure 4a, N3 (a) = {e, f }.
+           (a) Black vertices            (b) 3-skip graph
+        constitute a 3-skip cover                                            D EFINITION 5 (k- SKIP GRAPH ). A k-skip graph of G is a
+                                                                          graph G⋆ = (V ⋆ , E ⋆ ), where
+      Figure 4: Preprocessing for 3-skip SP computation
+                                                                              • V ⋆ is a k-skip cover of G;
+
+   Even for fixed s and t, there can be multiple P ⋆ satisfying the           • for every vertex u ∈ V ⋆ , E ⋆ has an edge (u, v) for each
+above condition. In other words, k-skip SPs are not unique, al-                 k-skip neighbor v of u, namely, v ∈ Nk (u).
+though all of them have to be subsets of SP (s, t). Our objective is
+                                                                          The weight of (u, v) ∈ E ⋆ is kSP (u, v)k.
+to preprocess G into a space-economical structure such that, given
+any s, t at run time, we can find a k-skip SP between any s and t            We call each edge (u, v) ∈ E ⋆ a super-edge. Figure 4b demon-
+efficiently.                                                              strates the 3-skip graph G⋆ of the graph G in Figure 4a. The weight
+   The first step of our preprocessing is to eliminate the redundant      of (a, e) in G⋆ equals 3, which is the distance of a and e in G.
+vertices in G. The intuition is that, since most vertices in a SP need       As shown later, finding a k-skip SP on the original graph G can
+not be reported under the k-skip definition, certain vertices would       be reduced to computing a (traditional) SP on a k-skip graph G⋆ .
+end up being never returned. For example, consider the graph G            In the next section, we will delve into the properties of G⋆ , and
+in Figure 4a where all edges have a unit weight. Observe that,            give a method to construct it efficiently. Then, the reduction and
+for k = 3, any SP with 3 vertices must contain at least one black         the accompanied algorithms will be elaborated in Section 5.
+vertex. In other words, it suffices to form k-skip SPs using just the
+black vertices, whereas the other (white) vertices can be discarded.
+                                                                          4. K-SKIP GRAPH
+   We refer to the set of black vertices in the above example as             The effectiveness of our pre-computed structure, namely a k-
+a 3-skip cover. The next definition generalizes the notion to k-          skip graph G⋆ = (V ⋆ , E ⋆ ), relies on the size of the k-skip cover
+skip cover, which contains a subset of the vertices that need to be       V ⋆ . No performance gain would be possible if a small V ⋆ could
+considered for k-skip SPs.                                                not be guaranteed. Fortunately, we will show that such a good V ⋆
+                                                                          always exists (Section 4.1). Sections 4.2 and 4.3 then elaborate the
+   D EFINITION 3 (k- SKIP COVER ). Let V ⋆ be a subset of the             algorithms for building G⋆ .
+vertices in G. V ⋆ is a k-skip cover if it has the property that, for
+arbitrary s, t ∈ V such that SP (s, t) has at least k vertices,           4.1 Size of k-skip cover
+                             ⋆
+                           V ∩ SP (s, t)                                    This subsection will establish:
+
+is a k-skip SP from s to t, after ordering the vertices of V ⋆ ∩             T HEOREM 1. Let G = (V, E) be a graph with n = |V | ver-
+SP (s, t) appropriately.                                                  tices. For any 1 ≤ k ≤ n, G has a k-skip cover V ⋆ of size
+                                                                          O( nk log nk ).
+   As will be clear in Section 5, the efficiency of our k-skip SP
+algorithm crucially depends on the fact that, it does not need to            Our proof leverages the theory of Vapnik-Chervonenkis (VC) di-
+process the vertices of V \ V ⋆ . Hence, the minimization of |V ⋆ |       mension, which quantifies how decomposable a search problem is.
+is essential, but it turns out to be rather challenging on an arbitrar-   Specifically, let D be a dataset and Q be a set of queries that can be
+ily complex G. In fact, it is non-trivial even if one simply wants        issued on D. Given a query q ∈ Q, define q(D) to be the result of q
+to know whether a small V ⋆ always exists. These issues will be           on D. A shatterable set S ⊆ D is such that, for any S ′ ⊆ S, there
+resolved in the next section.                                             is always a query q ∈ Q with q(D) ∩ S = S ′ . In other words, any
+                                                                          subset S ′ ⊆ S needs to have the property that, a query q ∈ Q re-
+   We want to capture the adjacency of the vertices in V ⋆ as far         trieves all the items of S ′ , and nothing from S \ S ′ (the result of q,
+as k-skip SPs are concerned. For example, the black vertex a in           however, may also include items from D \ S). The VC dimension
+Figure 4a can be consecutive only to e and f in a 3-skip SP (ob-          of (D, Q) is the size of the largest shatterable subset of D. Note
+serve that e and f have blocked all the possible ways that can lead       that the VC dimension is not defined on a dataset, but instead, on a
+a to any other black vertex). We represent this by generating two         pair of a dataset and a query set.
+“super-edges” that link a to e, f respectively. After this, the orig-
+inal edges (of G) incident on a can be ignored in computing any              Now let us analyze the VC dimension of the SP problem. Here,
+k-skip SP beginning from a.                                               we have an input graph G = (V, E). The D mentioned earlier
+                                                                          corresponds to V . A SP query qs,t is uniquely defined by a source
+   Let us formalize the rationales behind the preceding paragraph         vertex s and a destination vertex t. Hence, the result qs,t (V ) of
+in the next two definitions.                                              qs,t is SP (s, t).
+                                                                                         S Let Q be the union of all the possible SP queries,
+                                                                          namely, Q = s,t∈V qs,t (thus, |Q| = n2 ). Next, we give a crucial
+   D EFINITION 4 (k- SKIP NEIGHBOR ). Let u, v be two vertices
+                                                                          lemma:
+in a k-skip cover V ⋆ . We say that v is a k-skip neighbor of u if
+  L EMMA 1. For any graph G, the VC dimension of (V, Q) is 2.            the edges in G that are between the vertices of Vλ (u). For instance,
+   P ROOF. Assume for contradiction that the VC dimension d of           in Figure 5a, the edges of G2 (u) are those that fall entirely in the
+(V, Q) is at least 3 (note that d must be an integer). Hence, there is   diamond.
+a shatterable set S with size d, which belongs to the SP returned by        By computing the SPs inside Gλ (u) from u to all the other ver-
+a query q ∈ Q. Let u1 , u2 , ..., ud be the vertices of S ordered by     tices in Vλ (u) (that is, each SP uses only the edges of Gλ (u)), one
+their appearance on the SP. Hence, u2 is on the SP from u1 to ud .       obtains a λ-hop shortest path tree Tλ (u) rooted at u. For every ver-
+In this case, however, S ′ = {u1 , ud } cannot be in any SP that does    tex v in Gλ (u), the u-to-v path in Tλ (u) is the SP from u to v inside
+not contain u2 , contradicting the fact that S is shatterable.           Gλ (u). Figure 5b demonstrates the 2-hop SP tree T2 (u) of u. It is
+  It remains to verify that the VC dimension can be 2. We omit the       worth noting the difference between a SP inside the tree and a SP in
+details as this is trivial.                                              the whole graph. For example, the u-to-c path in T2 (u) has length
+                                                                         5. Although this is the shortest when only the edges of G2 (u) are
+   The rest of the proof (for Theorem 1) concerns ǫ-net. Let D, Q        considered, there is an even shorter path u → f → e → d → c
+be as defined earlier in our introduction to VC dimension. A set         which uses two edges (e, d), (d, c) outside the 2-vicinity of u.
+S ⊆ D is an ǫ-net of (D, Q) if S ∩ q(D) 6= ∅ for any q satisfying
+                                                                            We now arrive at the most crucial concept underlying the AS
+|q(D)| ≥ ǫ|D|. In other words, if q retrieves no less than ǫ|D|
+                                                                         algorithm. Let V ⋆ be a subset of the vertices in G. We say that
+items, at least one of these items must appear in S. The lemma
+                                                                         a λ-hop SP tree Tλ (u) is covered by V ⋆ , if every u-to-v path in
+below draws the correspondence between ǫ-net and k-skip cover:
+                                                                         Tλ (u) having at least λ edges goes through at least one vertex in
+  L EMMA 2. A ( nk )-net V ⋆ of (V, Q) is a k-skip cover of G.           V ⋆ , where v is a vertex in Tλ (u). In Figure 5a, for example, let
+                                                                         V ⋆ be the set of black vertices. Then, the T2 (u) in Figure 5b is not
+     P ROOF. Let Q′ be the set of queries q ∈ Q such that the SP         covered because the path u-to-b has 2 edges but passes no black
+q(V ) returned by q has exactly k vertices. By the definition of         vertex.
+(k/n)-net, for each q ′ ∈ Q′ , V ⋆ ∩ q ′ (V ) 6= ∅. Now consider a
+query q ∈ Q \ Q′ whose result q(V ) has more than k vertices.              The next lemma gives an important property:
+Clearly, any sub-path of q(V ) including k vertices is the result
+q ′ (v) of some q ′ ∈ Q′ , from which V ⋆ contains at least a vertex.     L EMMA 3. V ⋆ is a k-skip cover if it covers the Tk−1 (u) of all
+Therefore, V ⋆ is a k-skip cover.                                        u∈V.
+
+   The ǫ-net theorem [14] dictates that any (D, Q) with VC dimen-           P ROOF. Assume for contradiction that a V ⋆ fulfilling the if-
+sion d has an ǫ-net of size O( dǫ log 1ǫ ). This, combined with Lem-     condition of the lemma is not a k-skip cover. It follows that there
+mas 1 and 2, gives Theorem 1.                                            exist two vertices u, v ∈ V such that SP (u, v) has k vertices none
+                                                                         of which is in V ⋆ . Since SP (u, v) has k−1 edges, by the construc-
+Remark 1. Effectively, the proof of the ǫ-net theorem [14] shows         tion of Tk−1 (u), we know (i) all the vertices on SP (u, v) are in
+that a random subset of D with size O( dǫ log 1ǫ ) is an ǫ-net with      Tk−1 (u), and (ii) the u-to-v path in Tk−1 (u) is exactly SP (u, v).
+high probability. Hence, we can find a k-skip cover V ⋆ by simply        This means, however, that Tk−1 (u) has not been covered by V ⋆ ,
+taking O( nk log nk ) vertices from V randomly.                          thus reaching a contradiction.
+Remark 2. There is a trivial lower bound of n/k on the size of a k-
+                                                                           We are ready to clarify the AS algorithm:
+skip cover. Hence, the upper bound in Theorem 1 is asymptotically
+tight, up to only a logarithmic factor.
+                                                                             adaptive-sampling
+4.2 Computing a k-skip cover                                                 1. V ⋆ = ∅
+                                                                ⋆
+   As mentioned in the previous subsection, a k-skip cover V can             2. randomly permutate the vertices of V
+be obtained by taking O( nk log nk ) random vertices from V . It is          3. for each vertex u ∈ V
+well-known that randomized techniques generally work much bet-               4.     if Tk−1 (u) is not covered by V ⋆ then
+ter in practice than predicted by theory. Therefore, the V ⋆ of a            5.         add u to V ⋆
+real graph would be much smaller, rendering a sample set of size
+O( nk log nk ) most probably unnecessarily large. Of course, we
+could artificially reduce the number of samples, but a good sam-         The correctness of the algorithm follows from Lemma 3, and the
+ple size appears to be difficult to decide. A large size gives only      fact that, if Tk−1 (u) has not been covered by V ⋆ yet, including u
+marginal improvement, whereas a small size has the risk that the         itself to V ⋆ immediately makes Tk−1 (u) covered. For instance, as
+sample set may no longer be a k-skip cover.                              shown earlier, the T2 (u) in Figure 5b is not covered, but it will be,
+                                                                         once u is added to V ⋆ .
+   We propose an adaptive sampling (AS) algorithm to resolve the
+above issue. Before explaining the algorithm, we need a few more         Heuristic. We can further reduce the size of V ⋆ by first sorting the
+definitions. Let the λ-hop neighbor set of a vertex u ∈ V , denoted      vertices of V in descending order of their degrees, and then, ran-
+as Vλ (u), be the set of all vertices v ∈ V that can be reached from     domly permute the vertices with an identical degree. This increases
+u by crossing at most λ edges. Each v ∈ Vλ (u) is called a λ-hop         the chance of sampling a vertex with a higher degree, which is ben-
+neighbor of u. For example, assume an input graph G as shown             eficial because such a vertex tends to lie on more SPs, and therefore,
+in Figure 5a, where all edges, except those explicitly labeled, have     have stronger covering power.
+weight 1. The 2-hop neighbor set V2 (u) of u contains all the ver-
+                                                                         Time complexity. We close the subsection by analyzing the ex-
+tices in the shaded diamond. Note that V2 (u) is decided without
+                                                                         ecution time of the algorithm, assuming that each vertex has an
+taking the edge weights into account.
+                                                                         O(1) degree, which is true in road networks. The randomization at
+   Denote by Gλ (u) the graph induced by Vλ (u), which is referred       Line 1 can be implemented in O(n) time [6] where n = |V | (the
+to as the λ-hop vicinity of u. That is, Gλ (u) includes all and only     sorting in the high-degree-favoring heuristic can be done in O(n)
+                                                               .
+
+                                 2
+                                                                                                      g        2
+                 2
+                                                                           b                                                             g
+             2       2                   b                                                    2
+                                                                                          2       2                    b
+                                              2
+                                                           u               a                                                                     b
+                         u       4       a                                                                                  2
+                                                                                              h       u 5              a
+                 2                   2                                 2                                                            h    u       a
+             2           f       5       c2                f               c                  2                    2
+                                                                                          2           f        5       c2
+                                         d                                                                                               f       c
+                     2       e                                     e
+                                                                                                  2        e           d
+                                                                                                                                             e   d
+                                                               .
+      (a) 2-hop vicinity of u and its             (b) 2-hop SP tree of u
+  Figure 5: Deciding whether to sample u into a 3-skip cover                           (a) 3-hop vicinity of u                  (b) 3-hop SP tree of u
+
+                                                                                                          Figure 6: Deciding M3 (u)
+time when there are only a constant number of possible degrees).
+The λ-hop vicinity of a node u can be found by a standard breath
+first traversal (BFT) initiated at u, which terminates in O(σλ (u))            M3 (u) = {b, f, g, h}. Note that a, for example, is not in M3 (u)
+time where σλ (u) is the number of λ-hop neighbors of u, i.e.,                 due to the presence of b that blocks the path from u to a.
+σλ (u) = |Vλ (u)|. Then, the λ-hop SP tree Tλ (u) can be extracted              The lemma below establishes the relationship of Mk (u) and
+from Gλ (u) using the Dijkstra’s algorithm in O(σλ (u) log σλ (u))             Nk (u).
+time. Checking whether Tλ (u) is covered by V ⋆ demands a sin-
+gle traversal of Tλ (u) in O(σλ (u)) time. Hence, the total cost of               L EMMA 4. Nk (u) ⊆ Mk (u).
+the algorithm is O(nσ̄k−1 log σ̄k−1 ), where σ̄k−1 is the average
+number of (k − 1)-hop neighbors of the vertices in V .                            P ROOF. By Definition 4, the fact v ∈ Nk (u) implies that (i)
+                                                                               SP (u, v) does not pass any other sample, and (ii) SP (u, v) has
+   The value of σ̄k−1 depends on the structure of the road network,            no more than k edges. Property (ii) indicates that all the vertices
+but not the number n of the vertices. For example, consider two                of SP (u, v) must be in the k-hop vicinity of u, and hence, are
+simple road networks that are a 100 × 100 and 1000 × 1000 grid,                present in Tk (u). It follows that the u-to-v path in Tk (u) is exactly
+respectively. Although the second grid has 100 times more vertices,            SP (u, v). Property (i) further shows that the path cannot contain
+the two grids have the same σ̄k−1 = Θ(k2 ). Hence, when k is far               any other sample. Therefore, by the construction of Mk (u), we
+smaller than n, O(nσ̄k−1 log σ̄k−1 ) grows linearly with n.                    know v ∈ Mk (u).
+
+4.3 Computing a k-skip graph                                                      We call Mk (u) a super neighbor set of u. After acquiring it, we
+   Recall that the goal of our preprocessing is to produce a k-skip            create a super-edge (u, v) in E ⋆ from u to each vertex v ∈ Mk (u),
+graph G⋆ = (V ⋆ , E ⋆ ). V ⋆ is simply a k-skip cover, whose deriva-           and set its weight to the length of the u-to-v path in Tk (u). In other
+tion has been clarified in Section 4.2. Next we complete the puzzle            words, the super-edge represents a path in the original graph. The
+by explaining the derivation of E ⋆ . Our discussion concentrates              final E ⋆ is complete after carrying out the above procedure for all
+on the subproblem that, given a vertex u ∈ V ⋆ , how to calculate              the vertices u ∈ V .
+the set Nk (u) of its k-skip neighbors (Definition 4). Once this is            Time complexity. After Tk (u) is ready, Mk (u) can be eas-
+done, it is trivial to obtain E ⋆ according to Definition 5, because we        ily obtained by a single traversal of Tk (u) in O(σk (u)) time,
+only need to add to E ⋆ a super-edge from each u to every vertex               where σk (u) is the number of the k-hop neighbors of u (i.e., the
+v ∈ Nk (u).                                                                    number of vertices in Tk (u)). A straightforward adaptation of
+   We will call each vertex of V ⋆ a sample from now on, due to the            the analysis in Section 4.2 shows that the cost of processing all
+sampling nature of the AS algorithm. A naive approach to acquire               u ∈ V ⋆ is O(nσ̄k log σ̄k ), where σ̄k is the average number of k-
+Nk (u) is to first find the SP from u to every other sample v ∈                hop neighbors size of the vertices in V . For k far lower than n,
+V ⋆ , and then add v to Nk (u) if the path passes no other sample.             O(nσ̄k log σ̄k ) is linear in n, due to the reasons explained at the
+However, since |V ⋆ | ≥ n/k (see Remark 2 of Section 4.1), doing               end of Section 4.2.
+so for all u ∈ V ⋆ would incur Ω(n2 /k) time, which is prohibitive
+for large n. We circumvent the performance pitfall by aiming at                5. QUERY ALGORITHM
+a superset Mk (u) of Nk (u). As will be clear shortly, despite that
+                                                                                  Given vertices s, t in the data graph G, next we will explain how
+Mk (u) may result in a G⋆ with more edges, it has the advantage
+                                                                               to obtain a k-skip SP from s to t using the k-skip graph G⋆ pre-
+of being computable in significantly less time, thus allowing our
+                                                                               computed. Section 5.1 first gives an overview of our algorithm. A
+technique to support gigantic graphs.
+                                                                               part of the algorithm needs to retrieve a traditional SP from G⋆ ,
+   Mk (u) can be conveniently defined by recycling the notations               for which Section 5.2 presents an improved version of the reach
+of the previous subsection. Let us first have the k-hop SP tree                method. Finally, Section 5.3 will discuss how to perform a zoom-
+Tk (u) of u (as opposed to the Tk−1 (u) in the AS algorithm). Then,            in operation efficiently.
+Mk (u) includes all the samples v 6= u in Tk (u) such that the u-
+to-v path in Tk (u) does not pass any other sample. For illustration,          5.1 High-level description
+Figure 6a shows a 3-skip cover V ⋆ (the black vertices) on the data               Recall that the vertex set of G⋆ is a k-skip cover V ⋆ . The task
+graph of Figure 5a. To determine M3 (u), we first extract the 3-               of k-skip SP calculation is simple when both s and t are samples,
+hop SP tree T3 (u) as in Figure 6b. Then, it becomes clear that                namely, they belong to V ⋆ . In this case, we only need to find the
+                                                                                        3     2     4    10    5     4     2
+
+                                                                                        u     a     b     c    d     e     v
+                                     ⋆
+                                 G                                                      Figure 8: Super reach calculation
+        s                                                 t
+
+
+              Mk (s)                            Mk (t)                  cause a direction change can take place only when the relevant edge
+                                                                        is touched by the algorithm.
+              Figure 7: In-place sampling of s and t                    5.2 Reach⋆
+                                                                           Now that we have converted k-skip SP computation to finding
+SP from s to t in G⋆ , that is, traveling only on the super-edges. By   SP ⋆ (s, t) on G⋆ (in case s, t are not samples, simply treat G⋆s,t
+the definition of G⋆ , this SP is guaranteed to be a k-skip SP in the   as G⋆ ), many SP algorithms such as Dijkstra, bi-directional, and
+original graph G.                                                       reach, can be plugged in to obtain SP ⋆ (s, t). However, as those
+                                                                        methods are not designed for our context, they may be improved
+   Let us focus on the situation where neither s nor t is a sample.     by taking into account the characteristics of G⋆ . Next, we achieve
+Our solution is to sample them into G⋆ right away, so that the case     the purpose for reach.
+can be converted to the previous scenario where s and t are sam-
+ples. The inclusion of s, t as samples is temporary; after query           As discussed in Section 2.1, reach prunes a vertex v in relaxing
+processing, they will be removed from G⋆ , whose size therefore         an edge (u, v), if the global reach r(v) of v is small, compared to
+does not change.                                                        the distance that the algorithm has traveled in the forward/backward
+                                                                        search (see Rule 1). On a k-skip graph, using only r(v) for pruning
+   Incorporation of s, t in G⋆ involves two steps. First, s and t       may miss plenty of pruning opportunities. The reason is that, a
+are inserted in V ⋆ . Second, some super-edges are created to re-       super-edge (u, v) implicitly captures a path in the original graph,
+flect the appearance of s, t, in the same way the existing super-       and hence, can be pruned as long as any vertex on that path has a
+edges are computed. That is, given s (similarly for t), we first        low global reach. Motivated by this, we formulate a new notion:
+obtain the super neighbor set Mk (s) of s, and then add to E ⋆
+a super-edge from s to each u ∈ Mk (s), all exactly as de-                 D EFINITION 6 (S UPER REACH ). Let (u, v) be a super-edge
+scribed in Section 4.3. This process is illustrated in Figure 7.        in G⋆ , and P be the path in G that (u, v) represents. The super
+The analysis of Section 4.3 shows that, the above strategy runs in      reach of (u, v), denoted as sr(u, v), equals the minimum h(w) of
+O(σs (k) log σs (k)+σt (k) log σt (k)) time. Remember that σs (k),      all the vertices w ∈ P , where
+the number of k-hop neighbors of s, is low when k is small (simi-
+                                                                                        h(w) = r(w) − min{kP1 k, kP2 k}                   (4)
+larly for σt (k)). Hence, sampling-in-place s and t incurs insignifi-
+cant overhead.                                                          where r(w) is the global reach of w, and P1 (P2 ) is the path on P
+                                                                        from u to w (w to v).
+  Let G⋆s,t                      ⋆
+             be the resulting G with the new super-edges, and
+SP (s, t) be the SP from s to t on G⋆ . The rest of our algorithm re-
+   ⋆
+                                                                           To illustrate, assume that the path P captured by a super-edge
+turns directly SP ⋆ (s, t), whose correctness is shown in the lemma     (u, v) is as shown in Figure 8. The number above each vertex is
+below:                                                                  its global reach (e.g., r(u) = 3); and suppose for simplicity all the
+                                                                        edges have weight 1. To decide, for example, h(b), we first observe
+  L EMMA 5. SP ⋆ (s, t) is a k-skip SP of SP (s, t).                    kP1 k = 2 and kP2 k = 4, and then calculate by Equation 4 h(b) =
+   P ROOF. Let u be the first sample (counting also t) when we          4 − min{2, 4} = 2. After S = {h(u), h(a), ..., h(e), h(v)} is
+walk from s along SP (s, t). By the definition of k-skip SP,            ready, the super reach sr(u, v) can be determined as the minimum
+SP (s, u) has at most k edges, all of which appear in the k-hop         of S, i.e., h(a) = 1.
+SP tree of s. Hence, u ∈ Mk (s) (otherwise, there would be an-             Apparently, sr(u, v) can be computed in time linear to the num-
+other sample on SP (s, u), contradicting the choice of u), which        ber of vertices in P , i.e., at most k. Also, preserving all the super
+means (s, u) is a super-edge in G⋆s,t .                                 reaches entails small space, as only one extra value per super edge
+   Let v be the last sample (counting also s) on SP (s, t) before we    is stored. Next, we propose a new rule to enhance the pruning
+arrive at t. A similar argument shows that (v, t) is also a super-      power of reach.
+edge. The correctness of the lemma then follows from the fact that
+every super-edge has a weight equal to the length of the path it           RULE 2. When the forward search is about to relax a super
+represents.                                                             edge (u, v), prune the edge if sr(u, v) < lf (u), where lf (u) is
+                                                                        the label of u. A similar rule applies to the backward search.
+Remark on directed graphs. Let S be the set of super-edges on t
+                                                                           More precisely, pruning the super-edge (u, v) means that (i) the
+newly computed for G⋆s,t . In the above, we computed S by first
+                                                                        relaxation is not performed, and (ii) v is not en-heaped at this time
+finding the super neighbor set Mk (t) of t, and then inserting a
+                                                                        (it is possible for v to get en-heaped due to another later relaxation
+super-edge (u, t) for each u ∈ Mk (t). If G is directed, the deriva-
+                                                                        though). Also note that the pruning happens regardless of the status
+tion of S is slightly different, in the sense that we need to first
+                                                                        of v in the other direction (unlike Rule 1 which requires v to have
+reverse the directions of the edges in G, before proceeding as de-
+                                                                        status labeled or unseen in the opposite search). This turns out
+scribed earlier. Intuitively, Mk (t) should contain the samples that
+                                                                        to be a valuable property that permits the development of a crucial
+can reach t “directly” (without passing another sample). Reversing
+                                                                        heuristic for maximizing efficiency, as discussed shortly.
+directions allows us to apply the same algorithm in Section 4.2 to
+extract Mk (t), originally designed to find samples reachable from         Our algorithm, named reach⋆ , for SP computation over G⋆ is
+t directly. The reversing incurs no additional execution time, be-      identical to bi-directional (see Section 2.1), except that Rule 2 is
+checked prior to every edge relaxation in an attempt to avoid the         which is that we may end up applying the rule a huge number of
+relaxation. The following theorem establishes the correctness of          times during the entire algorithm.
+the algorithm.
+                                                                             The next heuristic allows us to significantly reduce the cost,
+                         ⋆                  ⋆                             while still eliminating as many super-edges as before, with no in-
+   T HEOREM 2. Reach finds a SP on G correctly.
+                                                                          crease in the space assumption at all. The idea is to store the outgo-
+   P ROOF. If the forward or backward search applies Rule 2 to            ing super-edges of each vertex u in G⋆ in descending order of their
+prune a super-edge on SP ⋆ (s, t), we say that a blow occurs. The         super reaches. After de-heaping u in the algorithm, we attempt
+lemma is obvious if no blow ever happens, so the subsequent dis-          to prune those edges in the sorted order. The benefit is that once
+cussion considers that there was at least one blow. Our argument          an edge has been eliminated by Rule 2, we can assert that all the
+proceeds in two steps. First, we will show that there can be only         remaining edges can be pruned as well, because all of them must
+one blow during the execution of reach⋆ . This implies that every         have lower super reaches (than the one pruned), and therefore, will
+super-edge in SP ⋆ (s, t) must be eventually relaxed in at least one      satisfy Rule 2 for sure.
+direction, since two blows are needed to eliminate a super-edge
+                                                                             The above heuristic is made possible by the fact that, to prune an
+from both directions. Equipped with these facts, we will prove the
+                                                                          edge (u, v), Rule 2 does not require checking the status of v (in the
+lemma in the second step.
+                                                                          search opposite to the one where the pruning happens). If this was
+Step 1. Without loss of generality, assume that the first blow oc-        not the case, the heuristic would virtually promise no performance
+curred in the forward search, and eliminated super-edge (u, v) ∈          gain as checking the status of v takes nearly the same amount of
+SP ⋆ (s, t). It is easy to see that, when the blow happened, (i) the      time as applying Rule 2 on (u, v).
+forward direction had scanned all the vertices in SP ∗ (s, u), and (ii)
+                                                                          Remark. It is worth pointing out that, the mechanism behind
+sr(u, v) < lf (u) (by Rule 2), where lf (u) equals kSP ⋆ (s, u)k =
+                                                                          reach⋆ , namely the integration of bi-directional and the no-status-
+kSP (s, u)k. Thus,
+                                                                          checking pruning strategy of Rule 2, actually extends the algorith-
+                      sr(u, v) < kSP (s, u)k.                      (5)    mic paradigm for SP computation as illustrated in Section 2.1. In
+                                                                          retrospect, reach⋆ is an immediate benefit of this extension.
+Let P be the path in G that (u, v) represents, and w be the vertex in
+P that minimizes h(w) (see Equation 4), i.e., sr(u, v) = r(w) −           5.3 Zoom-in
+min{kSP (u, w)k, kSP (w, v)k}. Hence,                                        As mentioned in Section 1, the concept of k-skip SP is naturally
+               r(w) − kSP (u, w)k ≤ sr(u, v)                       (6)    accompanied by a zoom-in operator. Given consecutive vertices
+                                                                          u, v on a k-skip SP ⋆ (s, t), the operator finds all the vertices be-
+               r(w) − kSP (w, v)k ≤ sr(u, v).                      (7)    tween u and v on the full SP (s, t). A naive way to zoom-in is to
+Inequalities 5 and 6 lead to r(w) < kSP (s, u)k +                         run Dijkstra to extract the SP from u to v. A faster solution ap-
+kSP (u, w)k = kSP (s, w)k.          By definition, r(w) is at             plies bi-directional. In fact, one can do even better using reach.
+least min{kSP (s, w)k, kSP (w, t)k}. So we know r(w) ≥                    However, simply executing reach afresh to compute SP (u, v) is
+kSP (w, t)k which, together with Inequality 7, gives:                     not likely to outperform bi-directional much. This is because the
+                                                                          pruning of reach (i.e., Rule 1 in Section 2.1) is effective only if the
+    sr(u, v) ≥ kSP (w, t)k − kSP (w, v)k = kSP (v, t)k.            (8)    vertex u de-heaped in the, for example, forward search has a large
+                                                                          label lf (u). This requires the forward search to have come a long
+Inequalities 5 and 8 indicate kSP (s, u)k > kSP (v, t)k. Due to           way from the source, a situation that will not happen between u and
+(i) the way bi-directional synchronizes the two directions and (ii)       v, because they are at most k vertices apart on their SP.
+the choice of (u, v), the backward search must have scanned all the
+vertices on SP (v, t) before the blow happened.                              There is a simple remedy to significantly boost the efficiency.
+                                                                          The main idea is to pretend as if we were running reach to compute
+   If there was a second blow, either the forward search needed to        SP (s, t) (as opposed to SP (u, v)), and that the algorithm had just
+de-heap a vertex in SP (v, t), or the reverse search needed to de-        come to u and v in the forward and backward searches, respec-
+heap a vertex in SP (s, u). But both events would have terminated         tively. We “continue” the forward direction by setting lf (u) =
+the algorithm immediately, because bi-direction ends when the for-        min{kSP (s, u)k, kSP (v, t)k}, and making u the only vertex in
+ward/backward search de-heaps a vertex already scanned in the             the heap Qf (which implies giving u the status labeled). Note
+other direction. Therefore, no second blow could have occurred.           that both kSP (s, u)k and kSP (v, t)k are available in the k-skip
+Step 2. The analysis of Step 1 shows that, at the moment the blow         SP ⋆ (s, t) already calculated. Similarly, the backward direction is
+took place, the status of v was scanned in the backward search.           also continued by setting lb (v) = lf (u) and creating a heap Qb
+This means that, u had a status of labeled in the backward di-            with only v inside. We then start a normal iteration and proceed as
+rection. Consequently, when the forward search de-heaped u (right         in reach.
+before the blow), as in bi-directional, reach⋆ updated λ, which
+records the length of the SP found so far, to lf (u) + lb (u) =           6. EXPERIMENTS
+kSP ⋆ (s, u)k + kSP ⋆ (u, t)k = kSP ⋆ (s, t)k. In other words,
+                                                                             In this section, we empirically evaluate the performance of the
+reach⋆ found the correct SP successfully.
+                                                                          proposed solutions. Our experimentation used four spatial net-
+                                                                          works2 whose specifications are summarized in Table 1. Specif-
+   After the forward (or backward) search de-heaps a vertex u, our
+                                                                          ically, NY, BAY, CA-NV, and USA contain the road networks in
+current reach⋆ attempts to prune each out-going super-edge at u
+                                                                          New York city, San Francisco Bay area, California and Nevada
+with Rule 2. Hence, the rule has to be applied numerous times
+                                                                          combined, and the entire US, respectively. The weight of an edge
+if many super-edges out of u can be eliminated. This can harm
+the efficiency because each vertex in G⋆ may have a large degree          2
+                                                                            All datasets can be downloaded from
+(unlike G, where each vertex’s degree is bounded), the result of          http://www.dis.uniroma1.it/∼challenge9/download.shtml.
+               dataset   num. of vertices     num. of edges                                 reach              reach-on-supergraph                   reach⋆
+                NY           264,346             733,846                        milli-seconds                              milli-seconds
+                                                                          1.6                                        1.6
+                BAY          321,270             800,172
+               CA-NV        1,890,815           4,657,742                 1.4                                        1.4
+                USA        23,947,347          58,333,344                 1.2                                        1.2
+                                                                           1                                          1
+                    Table 1: Dataset specifications                       0.8                                        0.8
+                                                                          0.6                                        0.6
+                                         k                                0.4                                        0.4
+     dataset      4       6      8       10       12     14    16         0.2                                        0.2
+       NY        51%     38%    31%     26%      22%    20%   18%          0                                          0
+                                                                                4     6     8   10   12   14    16         4     6     8   10   12   14   16
+      BAY        46%     33%    26%     22%      18%    16%   14%                               k                                          k
+     CA-NV       46%     33%    21%     19%      16%    16%   15%
+      USA        45%     32%    25%     21%      18%    16%   15%               (a) NY (Dijkstra = 15ms)               (b) BAY (Dijkstra = 21ms)
+                                                                                milli-seconds                              milli-seconds
+                            (a) Vertex ratio                               9                                         70
+                                                                           8                                         60
+     dataset      4       6      8       10       12     14    16          7
+       NY        72%     65%    61%     58%      56%    53%   52%          6
+                                                                                                                     50
+      BAY        66%     57%    52%     48%      45%    43%   42%          5                                         40
+     CA-NV       63%     54%    49%     45%      43%    41%   40%          4                                         30
+      USA        61%     51%    47%     44%      41%    39%   38%          3
+                                                                                                                     20
+                             (b) Edge ratio                                2
+                                                                           1                                         10
+
+                   Table 2: Sizes of k-skip graphs                         0
+                                                                                4     6     8   10   12   14    16
+                                                                                                                      0
+                                                                                                                           4     6     8   10   12   14   16
+                                                                                                k                                          k
+                                                                          (c) CA-NV (Dijkstra = 168ms) (d) USA (Dijkstra = 3300ms)
+equals the travel time on the corresponding road segment. All of
+our results were obtained on a computer equipped with an Intel                      Figure 9: Cost of k-skip and traditional SP queries
+Core 2 DUO 3.0Ghz CPU and 2 Giga bytes memory, running Fe-
+dora Linux 13.
+                                                                          Dijkstra is given separately beside the dataset name, because it is
+Size of the pre-computed structure. Our technique has the fea-            substantially slower than all other competitors.
+ture of demanding only a structure with sub-linear size, i.e., a k-
+                                                                             Both k-skip algorithms reach⋆ and reach-on-supergraph outper-
+skip graph G⋆ = (V ⋆ , E ⋆ ) occupies less space than the underlying
+                                                                          form reach significantly. Furthermore, their performance gains
+road network G = (V, E). The first set of experiments demon-
+                                                                          over reach become increasingly obvious as k grows larger (reach
+strates this by proving that G⋆ has fewer vertices and edges than
+                                                                          is irrelevant to k as it always reports the entire SP). This, therefore,
+G. Equivalently, if we define the vertex ratio to be |V ⋆ |/|V | and
+                                                                          validates k-skip graph as an effective methodology to attack the
+the edge ratio to be |E ⋆ |/|E|, the goal is to show that both ratios
+                                                                          k-skip SP problem. Between the two k-skip algorithms, the con-
+are below 1 by a comfortable margin. Moreover, remember that V ⋆
+                                                                          sistent superiority of reach⋆ ascertains the necessity of designing a
+is a k-skip cover (Definition 3). Hence, the vertex ratio also reflects
+                                                                          new algorithm that is able to leverage the characteristics of k-skip
+the effectiveness of the AS algorithm in Section 4.2.
+                                                                          graphs. Remember that reach⋆ gleans its performance advantages
+   Table 2a presents the vertex ratios of each dataset as k varies        at very little space overhead, because only one extra value needs to
+from 4 to 16. Interestingly, we noticed that the ratio roughly equals     be stored for each edge in G⋆ .
+2/k in all cases, that is, AS finds a k-skip cover with size about
+                                                                             For the subsequent discussion, we define the SP-cardinality of
+2|V |/k. In the same style, Table 2b shows the corresponding edge
+                                                                          query as the number of vertices in its complete SP. Figure 9 does
+ratios, which are also much lower than 1, and decrease with the
+                                                                          not shed much light on each method’s behavior in handling queries
+increase of k. A general observation is that, both ratios tend to be
+                                                                          with different SP-cardinalities. Figure 10 remedies the drawback
+smaller (i.e., greater size reduction) when the underlying network
+                                                                          with a detailed version of the results for k = 10 (Dijkstra is omitted
+is sparser (NY is the densest among all the datasets).
+                                                                          due to its poor efficiency). To obtain Figure 10a, we first decided
+Query characteristics. Ideally, a k-skip SP query should be an-           the range ρ of the SP-cardinalities of all the queries in a workload.
+swered much faster than its traditional counterpart (that retrieves       Then, for each algorithm, we measured its average cost in answer-
+the whole path). Next, we compare the reach⋆ algorithm devel-             ing the queries whose SP-cardinalities were among the first 10% of
+oped in Section 5.2 against reach, which is the state of the art for      ρ, second 10%, ..., and the last 10%, respectively. The collection
+the (traditional) SP problem, as reviewed in Section 2.1. We also         of these 10 values correspond to the dots on a curve in Figure 10a.
+examined a method reach-on-supergraph that can be regarded as a           The other diagrams in Figure 10 were acquired in the same manner.
+compromise of the two algorithms. As mentioned in Section 5.2,            The relative performance of all algorithms remains stable through-
+any SP algorithm can be applied to produce a k-skip SP by finding         out the whole spectrum of SP- cardinality. The bell-shape of each
+a SP on the k-skip graph G⋆ . Following this rationale, reach-on-         curve is a characteristic of the reach algorithm (and hence, also its
+supergraph is a k-skip solution that simply employs reach on G⋆ .         variant reach⋆ ).
+As a reference, we also report the performance of Dijkstra.
+                                                                             The next experiment studies the number of vertices in a k-skip
+   The cost of each method is measured as its average response time       SP. We present the number as a percentage of the query’s SP-
+in processing a workload of 1000 queries whose source and desti-          cardinality (e.g., 50% means that the k-skip path contains half of
+nation are both randomly selected from the vertices of the original       the vertices in the entire SP), which is referred to as the output per-
+network G. Figures 9a-9d plot the costs of alternative solutions as       centage. For each dataset, Table 3 reports the average output per-
+a function of k for the four datasets, respectively. The overhead of      centages of a workload under different values of k. As expected,
+                    reach               reach-on-supergraph                       reach⋆                                µ -seconds
+                                                                                                                   17
+      milli-seconds                                     milli-seconds                                              16
+1.8                                               2.2                                                                                                   USA
+1.6                                                 2                                                              15
+                                                  1.8
+1.4
+                                                  1.6                                                              14
+1.2                                               1.4                                                                                                   CA-NV
+  1
+                                                                                                                   13
+                                                  1.2
+0.8                                                 1                                                              12                                   BAY
+0.6                                               0.8
+                                                                                                                   11
+                                                  0.6                                                                                                   NY
+0.4                                                                                                                10
+                                                  0.4
+0.2                                               0.2
+                                                                                                                   9
+  0                                                 0
+      0      200       400     600     800              0   200 400 600 800 1000 1200                              8
+                    SP cardinality                               SP cardinality                                         4       6        8    10         12          14          16
+                                                                                                                                              k
+                      (a) NY                                            (b) BAY
+14
+      milli-seconds
+                                                  90
+                                                        milli-seconds                                                       Figure 11: Zoom-in time vs. k
+12                                                80
+                                                  70                                                                          k-skip cover                   super-edges
+10
+                                                  60                                             seconds                                             seconds
+ 8                                                                                          18                                                 18
+                                                  50
+                                                                                            16                                                 16
+ 6                                                40
+                                                                                            14                                                 14
+                                                  30
+ 4                                                                                          12                                                 12
+                                                  20                                                                                           10
+ 2                                                                                          10
+                                                  10                                         8                                                  8
+ 0                                                 0                                         6                                                  6
+      0      1k       2k      3k       4k               0   2k    4k 6k 8k 10k 12k
+                    SP cardinality                                  SP cardinality           4                                                  4
+                                                                                             2                                                  2
+                   (c) CA-NV                                            (d) USA                                                                 0
+                                                                                             0
+                                                                                                  4    6       8       10     12    14   16              4       6       8       10   12   14   16
+                                                                                                                       k                                                         k
+Figure 10: Query cost vs. the number of vertices in the com-                                                   (a) NY                                                    (b) BAY
+plete SP (k = 10)
+                                                                                                  seconds                                                seconds
+                                                                                            120                                                1200
+                                                     k                                      100                                                1000
+          dataset       4         6          8       10           12        14     16       80                                                     800
+           NY          55%       41%        34%     29%          27%       24%    22%
+           BAY         52%       36%        29%     25%          22%       20%    18%       60                                                     600
+          CA-NV        52%       36%        29%     25%          22%       21%    19%       40                                                     400
+           USA         51%       35%        28%     24%          22%       20%    19%
+                                                                                            20                                                     200
+Table 3: Number of vertices in a k-skip SP (in percentage of                                 0                                                      0
+                                                                                                   4       6   8        10    12    14 16                    4       6       8   10 12     14 16
+the SP-cardinality)                                                                                                     k                                                        k
+                                                                                                            (c) CA-NV                                                    (d) USA
+
+the percentage decreases as k increases. It is not hard to observe                                                 Figure 12: Pre-processing cost vs. k
+a strong correlation between the output percentages and the vertex
+ratios in Table 2.
+                                                                                           overhead on USA is about 12 times that of CA-NV, where 12 is
+   We proceed to assess the efficiency of the zoom-in algorithm in                         roughly the ratio between the numbers of edges in USA and CA-
+Section 5.3. The k-skip SP P ⋆ of a query naturally defines l − 1                          NV.
+possible zoom-in operations if P ⋆ has l vertices. For each road
+network and a particular k, we randomly performed 10% of all the
+zoom-in’s determined by 50,000 queries with random sources and                             7. CONCLUSIONS
+destinations, and gauged their average time. Figure 11 illustrates                            This paper introduced a novel concept called k-skip shortest
+the results of all datasets. Note that the y-axis is in µ-seconds (1µs                     path, which is a subset of the vertices in a traditional SP P , sub-
+= 10−6 sec). In general, for k ≤ 16, the cost of a zoom-in is at the                       ject to the constraint that the subset must include at least one vertex
+order of 10µs, and is thus negligible in practice.                                         in every k consecutive vertices of P . We carried out a systematic
+                                                                                           study on the problem of k-skip SP computation, where the goal is
+Pre-computation overhead. The last set of experiments examines
+                                                                                           to pre-process a road network into a structure of economical size
+the time of constructing a k-skip graph G⋆ . Given an input graph
+                                                                                           such that a k-skip query on the original network can be processed
+G with all vertices’ reaches already computed (the time of reach
+                                                                                           significantly faster than finding the entire SP. We settled the prob-
+computation has been thoroughly evaluated in [10, 12]), the cost
+                                                                                           lem with a new methodology that constructs a k-skip graph from a
+of building G⋆ has two components: the time of (i) finding a k-
+                                                                                           set of selected vertices of G constituting a k-skip cover. The effi-
+skip cover V ⋆ (Section 4.2), and (ii) determining the super-edges
+                                                                                           ciency of the proposed technique has been verified with extensive
+of G⋆ (Section 4.3). For each road network, Figure 12 reports the
+                                                                                           experiments.
+overhead of these components as a function of k. The overall pre-
+processing time is dominated by the cost of (i) because it has to                             Our work also points to several promising directions for future
+process all vertices in G, whereas (ii) only needs to process the                          research on the k-skip SP problem. One, for example, is to design
+vertices of G⋆ . Consulting the specifications in Table 1, we observe                      a deterministic algorithm for finding the minimum k-skip cover,
+that the pre-processing overhead increases linearly with the number                        which does not appear to be trivial at all even for k = 2. An-
+of edges in the original graph. For example, for the same k, the                           other interesting problem is to prove (possibly by resorting to the
+highway dimension [1]) a theoretical upper bound on the number          [14] D. Haussler and E. Welzl. Epsilon-nets and simplex range
+of super-edges in a k-skip graph, which will immediately lead to a           queries. Discrete & Computational Geometry, 2:127–151,
+bound on the overall space consumption of our technique. Finally,            1987.
+it is certainly an important direction to explore the semantics of k-   [15] D. A. Hutchinson, A. Maheshwari, and N. Zeh. An external
+skip SP as well as the corresponding algorithms on other types of            memory data structure for shortest path queries. Discrete
+graphs, such as social networks.                                             Applied Mathematics, 126(1):55–82, 2003.
+                                                                        [16] N. Jing, Y.-W. Huang, and E. A. Rundensteiner. Hierarchical
+Acknowledgements                                                             encoded path views for path query processing: An optimal
+Yufei Tao and Cheng Sheng were supported by grants GRF                       model and its performance evaluation. IEEE Transactions on
+4173/08, GRF 4169/09, and GRF 4166/10 from HKRGC. Jian Pei                   Knowledge and Data Engineering (TKDE), 10(3):409–432,
+was supported by NSERC Discovery grants, NSERC Discovery                     1998.
+Accelerator Supplement grants, and NRAS Research Team Pro-              [17] S. Jung and S. Pramanik. An efficient path computation
+gram. We thank the anonymous reviewers for their constructive                model for hierarchically structured topographical road maps.
+suggestions on improving the paper.                                          IEEE Transactions on Knowledge and Data Engineering
+                                                                             (TKDE), 14(5):1029–1046, 2002.
+8.    REFERENCES                                                        [18] M. R. Kolahdouzan and C. Shahabi. Alternative solutions for
+                                                                             continuous k nearest neighbor queries in spatial network
+ [1] I. Abraham, A. Fiat, A. V. Goldberg, and R. F. F. Werneck.              databases. GeoInformatica, 9(4):321–341, 2005.
+     Highway dimension, shortest paths, and provably efficient          [19] U. Lauther. An extremely fast, exact algorithm for finding
+     algorithms. In Proceedings of the Annual ACM-SIAM                       shortest paths in static networks with geographical
+     Symposium on Discrete Algorithms (SODA), pages 782–793,                 background. Geoinformation und Mobilität - von der
+     2010.                                                                   Forschung zur praktischen Anwendung, 22:219–230, 2004.
+ [2] R. Agrawal and H. V. Jagadish. Algorithms for searching            [20] T. A. J. Nicholson. Finding the shortest route between two
+     massive graphs. IEEE Transactions on Knowledge and Data                 points in a network. The Computer Journal, 9:275–280,
+     Engineering (TKDE), 6(2):225–238, 1994.                                 1966.
+ [3] T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein.         [21] M. Potamias, F. Bonchi, C. Castillo, and A. Gionis. Fast
+     Introduction to Algorithms, Second Edition. The MIT Press,              shortest path distance estimation in large networks. In
+     2001.                                                                   Proceedings of Conference on Information and Knowledge
+ [4] K. Deng, X. Zhou, H. T. Shen, S. W. Sadiq, and X. Li.                   Management (CIKM), pages 867–876, 2009.
+     Instance optimal query processing in spatial networks. The         [22] M. N. Rice and V. J. Tsotras. Graph indexing of road
+     VLDB Journal, 18(3):675–693, 2009.                                      networks for shortest path queries with label restrictions.
+ [5] E. W. Dijkstra. A note on two problems in connexion with                Proceedings of the VLDB Endowment (PVLDB), 4(2):69–80,
+     graphs. Numerische Mathematik, 1:269–271, 1959.                         2010.
+ [6] R. Durstenfeld. Algorithm 235: Random permutation.                 [23] N. Robertson and P. D. Seymour. Graph minors. iii. planar
+     Communications of the ACM (CACM), 7(7):420, 1964.                       tree-width. Journal of Combinatorial Theory, Series B,
+ [7] G. N. Frederickson. Fast algorithms for shortest paths in               36(1):49–64, 1984.
+     planar graphs, with applications. SIAM Journal of                  [24] H. Samet, J. Sankaranarayanan, and H. Alborzi. Scalable
+     Computing, 16(6):1004–1022, 1987.                                       network distance browsing in spatial databases. In
+ [8] R. Geisberger, P. Sanders, D. Schultes, and D. Delling.                 Proceedings of ACM Management of Data (SIGMOD), pages
+     Contraction hierarchies: Faster and simpler hierarchical                43–54, 2008.
+     routing in road networks. In Proceedings of Workshop on            [25] P. Sanders and D. Schultes. Highway hierarchies hasten
+     Experimental Algorithms (WEA), pages 319–333, 2008.                     exact shortest path queries. In Proceedings of European
+ [9] A. V. Goldberg and C. Harrelson. Computing the shortest                 Symposium on Algorithms (ESA), pages 568–579, 2005.
+     path: A∗ search meets graph theory. In Proceedings of the          [26] P. Sanders and D. Schultes. Engineering highway
+     Annual ACM-SIAM Symposium on Discrete Algorithms                        hierarchies. In Proceedings of European Symposium on
+     (SODA), pages 156–165, 2005.                                            Algorithms (ESA), pages 804–816, 2006.
+[10] A. V. Goldberg, H. Kaplan, and R. F. Werneck. Reach for            [27] J. Sankaranarayanan, H. Samet, and H. Alborzi. Path oracles
+     A∗ : Shortest path algorithms with preprocessing. In                    for spatial networks. Proceedings of the VLDB Endowment
+     Proceedings of Workshop on Algorithm Engineering and                    (PVLDB), 2(1):1210–1221, 2009.
+     Experiments (ALENEX), pages 38–51, 2006.                           [28] D. Wagner, T. Willhalm, and C. D. Zaroliagis. Geometric
+[11] A. Gubichev, S. J. Bedathur, S. Seufert, and G. Weikum. Fast            containers for efficient shortest-path computation. ACM
+     and accurate estimation of shortest paths in large graphs. In           Journal of Experimental Algorithmics, 10, 2005.
+     Proceedings of Conference on Information and Knowledge             [29] F. Wei. Tedi: Efficient shortest path query answering on
+     Management (CIKM), pages 499–508, 2010.                                 graphs. In Proceedings of ACM Management of Data
+[12] R. J. Gutman. Reach-based routing: A new approach to                    (SIGMOD), pages 99–110, 2010.
+     shortest path algorithms optimized for road networks. In           [30] Y. Xiao, W. Wu, J. Pei, W. Wang, and Z. He. Efficiently
+     Proceedings of Workshop on Algorithm Engineering and                    indexing shortest paths by exploiting symmetry in graphs. In
+     Experiments (ALENEX), pages 100–111, 2004.                              Proceedings of Extending Database Technology (EDBT),
+[13] P. E. Hart, N. J. Nilsson, and B. Raphael. A formal basis for           pages 493–504, 2009.
+     the heuristic determination of minimum cost paths. IEEE
+     Trans. Systems Science and Cybernetics, 4(2):100–107,
+     1968.
+

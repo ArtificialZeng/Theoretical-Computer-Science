@@ -1,0 +1,9 @@
+{
+  "job_id": "c025-pmcdelay-referee-6970e98c3a2b",
+  "at_utc": "2026-11-01T23:33:55.469051+00:00",
+  "snapshot_digest": "9e18afcb85b19f266e11aab420e78596f90e785921128737257fbdd42a21cfbc",
+  "canonical_digest_matches": true,
+  "frozen_file_count": 18,
+  "mismatched_files": [],
+  "source_sha256": "30ba523462232346f8c2d671825d32d790edcd9362f00b8eec84a58e11d4e5cc"
+}

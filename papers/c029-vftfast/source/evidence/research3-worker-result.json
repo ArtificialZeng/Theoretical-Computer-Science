@@ -1,0 +1,20 @@
+{
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Proposed a complete deterministic polynomial-time construction for the immutable tradeoff, combining fault-representative paths with a large-fault multiplicative branch. Packing transfer, all scales and boundaries are proved in the evidence packet; 3,160 finite constructions and 20,465 exact parameter cases passed. Fresh correctness, novelty and significance review remains required.",
+  "next_test": "Fresh referee audit of claim.json, especially the witness-sequence packing transfer and uniform parameter switch, followed by independent current novelty, substantive-innovation and STOC assessment.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "claim.json",
+    "evidence/research3-resolution.md",
+    "evidence/research3-sources.md",
+    "evidence/research3-full-checks.json",
+    "evidence/research3_full_checks.py",
+    "evidence/research3-parameter-checks.json",
+    "evidence/research3_parameter_checks.py",
+    "evidence/research3-run-record.json"
+  ]
+}

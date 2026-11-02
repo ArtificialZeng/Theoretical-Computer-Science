@@ -1,0 +1,20 @@
+{
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Proposed full positive resolution: deterministic three-pair weighted-DAG detection in O(n^3.9) source-model time via minimum-frontier Boolean batching. Complete proof and 764 exact validation cases saved; fresh correctness, novelty and significance review remains required. No manuscript/PDF or acceptance created.",
+  "next_test": "Fresh referee: independently verify the minimum-rank recursion, all product packing/scattering costs, terminal normalization and source-model arithmetic, then check generic tensor-DP equivalents and substantive significance.",
+  "evidence": [
+    "claim.json",
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "evidence/research-1/proof.md",
+    "evidence/research-1/frontier_check.py",
+    "evidence/research-1/frontier-check.json",
+    "evidence/research-1/heldout-check.json",
+    "evidence/research-1/literature.md",
+    "evidence/research-1/progress.json",
+    "evidence/research-1/manifest.json"
+  ]
+}

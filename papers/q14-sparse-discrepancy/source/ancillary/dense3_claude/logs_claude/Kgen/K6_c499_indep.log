@@ -1,0 +1,6 @@
+n=6 c=499/100 j=1: PROVED boxes=1 time=0.0s
+n=6 c=499/100 j=2: PROVED boxes=1 time=0.0s
+n=6 c=499/100 j=3: PROVED boxes=1 time=0.0s
+n=6 c=499/100 j=4: PROVED boxes=1 time=0.0s
+n=6 c=499/100 j=5: PROVED boxes=3 time=0.0s
+n=6 c=499/100 j=6: PROVED boxes=15 time=56.4s

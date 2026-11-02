@@ -1,0 +1,8 @@
+n=2 m=2 D=2: COVER (0.0s)
+   verified min-max |g| = 2.0
+n=1 m=1 D=2: NOCOVER (0.0s)
+n=1 m=2 D=2: NOCOVER (0.0s)
+n=1 m=3 D=2: NOCOVER (0.0s)
+n=1 m=4 D=2: NOCOVER (0.0s)
+RESULT cycle [4, 2] 2 COVER 0.0s
+   verified min-max |g| = 2.0

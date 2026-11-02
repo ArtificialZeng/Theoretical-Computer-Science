@@ -1,0 +1,50 @@
+{
+  "seconds": 52.97912641684525,
+  "limit_seconds": 75,
+  "stats": [
+    {
+      "n": 3,
+      "calls": 6,
+      "failures": 0,
+      "maximum_violation": 0.0,
+      "complete": true
+    },
+    {
+      "n": 4,
+      "calls": 14,
+      "failures": 0,
+      "maximum_violation": 0.0,
+      "complete": true
+    },
+    {
+      "n": 5,
+      "calls": 30,
+      "failures": 0,
+      "maximum_violation": 0.0,
+      "complete": true
+    },
+    {
+      "n": 6,
+      "calls": 62,
+      "failures": 0,
+      "maximum_violation": 0.0,
+      "complete": true
+    },
+    {
+      "n": 7,
+      "calls": 126,
+      "failures": 0,
+      "maximum_violation": 0.0,
+      "complete": true
+    },
+    {
+      "n": 8,
+      "calls": 254,
+      "failures": 0,
+      "maximum_violation": 0.0,
+      "complete": true
+    }
+  ],
+  "numerical_witness": null,
+  "scope": "Numerical adversarial screening, not proof. All full-table monotonicity/submodularity and every greedy comparison for canonical one-sided trace; endpoint orientation imposed. Canonical trace covers every tie-admissible greedy order up to relabeling. Universal analytic proof is separate."
+}

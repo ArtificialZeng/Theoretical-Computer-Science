@@ -1,0 +1,224 @@
+\subsection{Polynomial ambiguity in the invertible sector}\label{ssec:polyamb}
+A weighted automaton $\mathcal P$ over $\Q$ consists of a finite state set $S$, an initial row
+$\alpha\in\Q^{1\times S}$, a final column $\beta\in\Q^{S\times 1}$ and letter matrices
+$A_a\in\Q^{S\times S}$, where $(A_a)_{pq}$ is the weight of the transition $p\xrightarrow{a}q$
+($0$ if there is none); it computes $f(w)=\alpha A_w\beta$, $A_{a_1\cdots a_n}=A_{a_1}\cdots A_{a_n}$.
+A \emph{path} labelled $w=a_1\cdots a_n$ from $p$ to $q$ is a sequence $p=s_0,\ldots,s_n=q$ with
+$(A_{a_i})_{s_{i-1}s_i}\ne0$ for all $i$; it is \emph{accepting} if moreover $\alpha_{s_0}\ne0\ne\beta_{s_n}$.
+The automaton is \emph{polynomially ambiguous} if the number of accepting paths labelled $w$ is
+bounded by a polynomial in $|w|$~\cite{MPS26,PS24}. A series is polynomially ambiguous if some
+polynomially ambiguous weighted automaton over $\Q$ computes it.
+
+\begin{theorem}\label{thm:polyamb}
+For an invertible rational series $f:\Sigma^*\to\Q$ the following are equivalent.
+\begin{enumerate}
+\item $f$ is polynomially ambiguous.
+\item $\cG_f^\circ$ is triangularizable over $\Q$.
+\item $\Gamma_f$ has a subgroup of finite index that is triangularizable over $\Q$.
+\end{enumerate}
+\end{theorem}
+
+Together with Theorem~\ref{thm:main} and Corollary~\ref{cor:consequences} this settles the
+relation between the two classes in the invertible sector.
+
+\begin{corollary}\label{cor:polyamb}
+An invertible series is CCRA-computable if and only if it is polynomially ambiguous and any two
+unipotent elements of $\cG_f$ commute; equivalently, iff it is polynomially ambiguous and the
+unipotent radical of $\cG_f^\circ$ is commutative. Given a rational weighted automaton, one can
+decide in deterministic polynomial time whether its series is invertible and polynomially ambiguous.
+\end{corollary}
+\begin{proof}
+The first claim follows from Theorem~\ref{thm:polyamb} and the equivalence (1)$\Leftrightarrow$(3) of
+Theorem~\ref{thm:main}; if $\cG_f^\circ$ is triangularizable over $\Q$, every unipotent
+element of $\cG_f$ lies in $\cG_f^\circ$ (A3), and the unipotent elements of $\cG_f^\circ$ form its
+unipotent radical (A5). For the second claim, minimize and test invertibility
+(Theorem~\ref{thm:decision}) and compute the block form of Section~\ref{ssec:block} (step~1 of the
+algorithm there, in polynomial time); condition~(2) is condition~(a) of Section~\ref{sec:polytime}, which
+is decidable in deterministic polynomial time by Lemma~\ref{lem:atest}.
+\end{proof}
+
+Thus in the invertible sector the CCRA series are exactly the polynomially ambiguous series for which
+the unipotent radical of $\cG_f^\circ$ is commutative; the series of~\cite[Example~17]{MPSfull} and of
+Example~\ref{ex:heis} are polynomially ambiguous, with $\cG_f^\circ$ triangular over $\Q$ and
+noncommutative unipotent radical. In particular, all eigenvalues of all word matrices of an
+invertible polynomially ambiguous series are roots of rationals (elements of
+$\Gamma_f\cap\cG_f^\circ$ are triangular over $\Q$, and $g^k\in\Gamma_f\cap\cG_f^\circ$ for
+$g\in\Gamma_f$ and $k=[\Gamma_f:\Gamma_f\cap\cG_f^\circ]$), and $\cG_f^\circ$ modulo its unipotent radical
+is a $\Q$-split torus (A5); a non-split torus, as for a rotation matrix of infinite order, never occurs.
+This is in line with the one-letter statement of~\cite{BFLM22}.
+
+\begin{remark}\label{rem:polyamb-ps}
+Puch and Smertnig~\cite[Theorem~1.6]{PS24} characterize polynomial ambiguity of an invertible
+series by a spectral condition on the word matrices (finitely generated spectrum and a
+power-splitting property); with~\cite[Theorem~1.3, Proposition~9.4]{PS24} this is equivalent to the
+representation being an epimorphic image of a block-triangular representation with monomial diagonal
+blocks. That structural form is closely related to condition~(3) of Theorem~\ref{thm:polyamb}, since a
+block-triangular group with monomial diagonal blocks has a triangularizable subgroup of finite index.
+The sufficiency direction there uses unit equations, and decidability is obtained through
+Zariski-closure computations. Theorem~\ref{thm:polyamb} gives an intrinsic condition on the Zariski
+closure of the minimal group, its proof below is direct (it uses neither their result nor unit
+equations), and it yields the polynomial-time bound of Corollary~\ref{cor:polyamb}. The proof of Theorem~\ref{thm:polyamb}
+uses only that $\Q$ has characteristic zero and holds verbatim over any field of characteristic zero,
+with automata and triangularizability taken over that field; the complexity claim is specific to $\Q$.
+\end{remark}
+
+\begin{proof}[Proof of Theorem~\ref{thm:polyamb}: (2)$\Leftrightarrow$(3) and (2)$\Rightarrow$(1)]
+Write $\Gamma=\Gamma_f$, $\cG=\cG_f$ and $\Gamma^\circ=\Gamma\cap\cG^\circ$, a normal subgroup of
+finite index (Lemma~\ref{lem:monoid}). If (2) holds, $\Gamma^\circ$ fixes the rational flag fixed by
+$\cG^\circ$. If $\Gamma_1$ is as in (3), its closure has finite index in $\cG$, hence contains
+$\cG^\circ$ (A1), and fixes the rational flag fixed by $\Gamma_1$.
+
+Assume (2) and choose $h_0\in\GL_d(\Q)$ such that $h_0^{-1}gh_0$ is upper triangular for all
+$g\in\cG^\circ$. With $F=\Gamma/\Gamma^\circ$, $\varphi$, the words $r_g$ and the cocycle
+$c(g,a)=M_{r_g}M_aM_{r_{g\varphi(a)}}^{-1}\in\Gamma^\circ$ as in Section~\ref{sec:normalform} (their
+construction and~\eqref{eq:cocycle} use only Lemma~\ref{lem:monoid}, not condition~(3) of Theorem~\ref{thm:main}), the
+matrices $c'(g,a)=h_0^{-1}c(g,a)h_0$ are rational and upper triangular, and by~\eqref{eq:cocycle}
+\[
+f(w)=(\lambda h_0)\,c'(g_0,a_1)\cdots c'(g_{n-1},a_n)\,(h_0^{-1}M_{r_{g_n}}\gamma).
+\]
+Let $\mathcal P$ have states $F\times\{1,\ldots,d\}$, a transition $(g,i)\xrightarrow{a}(g\varphi(a),j)$
+of weight $c'(g,a)_{ij}$ whenever this entry is nonzero, initial weights $(\lambda h_0)_i$ on $(1,i)$ and
+final weights $(h_0^{-1}M_{r_g}\gamma)_j$ on $(g,j)$. Its letter matrices are block permutation matrices
+with blocks $c'(g,a)$, so $\mathcal P$ computes $f$ by the displayed formula. On a word of length $n$
+the first components along an accepting path are $g_0,\ldots,g_n$, and the second components form a
+nondecreasing sequence $i_0\le\cdots\le i_n$ in $\{1,\ldots,d\}$, because each $c'(g,a)$ is upper
+triangular. Such a sequence is determined by the number of occurrences of each index, so there are at most $(n+2)^d$ accepting paths, and $\mathcal P$ is
+polynomially ambiguous.
+\end{proof}
+
+For (1)$\Rightarrow$(2), fix a polynomially ambiguous automaton $\mathcal P$ computing $f$, which we may
+assume \emph{trim}: every state lies on an accepting path (removing the other states changes neither
+$f$ nor the accepting paths).
+
+\begin{lemma}\label{lem:uniquepath}
+Let $C$ be a strongly connected component of the transition graph of $\mathcal P$. For every word
+$w$ and all $p,q\in C$ there is at most one path labelled $w$ from $p$ to $q$, and its states lie in
+$C$.
+\end{lemma}
+\begin{proof}
+Every state of such a path is reachable from $p$ and reaches $q$, so it lies in $C$. Suppose that
+$\pi_1\ne\pi_2$ are two paths labelled $w$ from $p$ to $q$; then $|w|\ge1$. Let $\tau$ be a path from
+$q$ to $p$, labelled $v$ (empty if $p=q$). Then $\pi_1\tau$ and $\pi_2\tau$ are distinct paths labelled $wv$ from $p$ to $p$. As
+$\mathcal P$ is trim, there are paths labelled $u$ from a state with nonzero initial weight to $p$ and
+labelled $u'$ from $p$ to a state with nonzero final weight. Choosing one of the two cycles for each
+of the $k$ blocks gives $2^k$ accepting paths labelled $u(wv)^ku'$, pairwise distinct because the blocks
+have the same length and are aligned; as $|u(wv)^ku'|$ grows linearly in $k$, this contradicts polynomial
+ambiguity.
+\end{proof}
+
+\begin{lemma}[Component lemma]\label{lem:component}
+Let $C$ be a finite set and $\rho(a)\in\Q^{C\times C}$ for $a\in\Sigma$, with
+$\rho(a_1\cdots a_n)=\rho(a_1)\cdots\rho(a_n)$. Define paths as above and assume:
+\begin{itemize}
+\item[(U)] for every word $w$ and all $p,q\in C$ there is at most one path labelled $w$ from $p$ to $q$.
+\end{itemize}
+Let $Y\subseteq X\subseteq\Q^C$ be subspaces invariant under every $\rho(a)$ (acting on columns), such
+that every $\rho(a)$ induces an invertible operator $\sigma(a)$ on $D=X/Y$, and let $\cH$ be the
+Zariski closure of $\{\sigma(w):w\in\Sigma^*\}$ in $\GL(D)$. Then $\cH^\circ$ is a torus split over
+$\Q$; in particular $\cH^\circ$ is diagonalizable over $\Q$.
+\end{lemma}
+\begin{proof}
+\emph{Supports.} By (U), $\rho(w)_{pq}$ is the product of the weights along the unique path labelled
+$w$ from $p$ to $q$ if it exists, and $0$ otherwise. Let $B_w\subseteq C\times C$ be the support of
+$\rho(w)$. Then $B_{uv}=B_u\circ B_v$ (composition of relations), so $w\mapsto B_w$ is a morphism
+onto a finite monoid $\mathfrak B$ of relations. For words $z_1,\ldots,z_k$ the sequences
+$p=s_0,\ldots,s_k=q$ with $(s_{i-1},s_i)\in B_{z_i}$ for all $i$ correspond injectively to paths
+labelled $z_1\cdots z_k$ from $p$ to $q$, so by (U) there is at most one such sequence, and
+\begin{equation}\label{eq:singleterm}
+\rho(z_1\cdots z_k)_{pq}=\textstyle\prod_{i=1}^k\rho(z_i)_{s_{i-1}s_i}
+\end{equation}
+for that sequence if it exists, and $0$ otherwise.
+
+\emph{An idempotent with a group around it.} The intersection $\mathfrak J$ of all two-sided ideals of
+$\mathfrak B$ is nonempty (it contains the product of all of them), hence the minimum ideal, and
+$\mathfrak B^1x\mathfrak B^1=\mathfrak J$ for every $x\in\mathfrak J$. Some power of an element of
+$\mathfrak J$ is an idempotent $E\in\mathfrak J$; write $E=B_e$ for a word $e$. The finite monoid
+$\mathfrak M=E\mathfrak BE$ with identity $E$ is a group: for $x\in\mathfrak M$ we have
+$E=sxt$ with $s,t\in\mathfrak B^1$, hence $E=(EsE)x(EtE)$; so $t'(s'x)=E$ for
+$s'=EsE$, $t'=EtE\in\mathfrak M$, because in a finite monoid $yz=1$ implies $zy=1$; thus $x$ has a
+left inverse, hence is a unit. Let $n=|\mathfrak M|$. Then $B_{(exe)^n}=(EB_xE)^n=E$ for every word
+$x$. Put $L=\{z\in\Sigma^*:B_z=E\}$, a semigroup containing $e$ and all $(exe)^n$. If $D\ne0$ then
+$\sigma(e)$ is invertible, so $\rho(e)\ne0$ and $E\ne\emptyset$; if $D=0$ there is nothing to prove.
+
+\emph{Fixed points of $E$.} Let $\Theta=\{\theta\in C:(\theta,\theta)\in E\}$. By the uniqueness statement above with
+all $B_{z_i}=E$, for every $k\ge1$ and all $p,q$ there is at most one sequence of length $k$ from $p$
+to $q$ with consecutive pairs in $E$ (an \emph{$E$-sequence}). Hence:
+(i) if $\theta\ne\theta'$ are in $\Theta$ then $(\theta,\theta')\notin E$, since otherwise $\theta,\theta,\theta'$ and $\theta,\theta',\theta'$ are two
+$E$-sequences;
+(ii) for $(p,q)\in E$ there is exactly one $\theta\in\Theta$ with $(p,\theta),(\theta,q)\in E$. Uniqueness is clear.
+For existence, $E=E^{k}$ for $k=|C|+1$ yields an $E$-sequence $s_0=p,\ldots,s_k=q$, in which some
+state repeats, $s_i=s_j$ with $i<j$; then $(s_i,s_i)\in E^{j-i}=E$, so $\theta=s_i\in\Theta$, and
+$(p,\theta)\in E$ (if $i=0$ then $p=\theta$) and $(\theta,q)\in E$ (if $j=k$ then $\theta=q$).
+
+\emph{Factorization through a diagonal character.} Let $\iota\in\Q^{C\times\Theta}$ be the inclusion of
+coordinates. For $z\in L$ the matrix $\chi(z)=\iota^{\mathsf T}\rho(z)\iota$ is diagonal by (i), with
+nonzero diagonal entries. For $z,z'\in L$, \eqref{eq:singleterm} and the uniqueness of
+$E$-sequences give $\chi(zz')=\chi(z)\chi(z')$: the only $E$-sequence $\theta,r,\theta$ is $r=\theta$. Moreover, for
+$z,y,z'\in L$,
+\begin{equation}\label{eq:factor}
+\rho(zyz')=\rho(z)\,\iota\,\chi(y)\,\iota^{\mathsf T}\rho(z').
+\end{equation}
+Indeed, the $(p,q)$ entry of the right side is $\sum_{\theta\in\Theta}\rho(z)_{p\theta}\chi(y)_{\theta\theta}\rho(z')_{\theta q}$,
+whose nonzero terms correspond to $E$-sequences $p,\theta,\theta,q$; the left side is given by
+\eqref{eq:singleterm} with $E$-sequences $p,r,s,q$ of length three. If $(p,q)\notin E=E^3$, both sides
+vanish. If $(p,q)\in E$, the unique $\theta$ of (ii) gives an $E$-sequence $p,\theta,\theta,q$, which is therefore
+the only $E$-sequence of length three from $p$ to $q$, and both sides equal
+$\rho(z)_{p\theta}\rho(y)_{\theta\theta}\rho(z')_{\theta q}$.
+
+\emph{A morphism from a $\Q$-split diagonalizable group onto the closure.} Let $\mathcal D\subseteq\Q^{\Theta\times\Theta}$ be
+the linear span of $\chi(L)$, a space of diagonal matrices. By~\eqref{eq:factor} with $z=z'=e$, the
+linear map $\delta\mapsto\rho(e)\iota\delta\iota^{\mathsf T}\rho(e)$ sends $\chi(y)$ to $\rho(eye)$ for
+$y\in L$; hence on $\mathcal D$ it takes values preserving $X$ and $Y$ and induces a linear map
+$\Lambda:\mathcal D\to\operatorname{End}(D)$ with $\Lambda(\chi(y))=\sigma(eye)=\sigma(e)\sigma(y)\sigma(e)$.
+The linear map $\Psi(\delta)=\sigma(e)^{-1}\Lambda(\delta)\sigma(e)^{-1}$, defined over $\Q$ and
+extended to $\mathcal D\otimes\Qb$, satisfies $\Psi(\chi(y))=\sigma(y)$ for $y\in L$. Let $\mathcal T$
+be the Zariski closure of $\chi(L)$ in the diagonal torus of $\GL_{\Theta}$; it lies in
+$\mathcal D\otimes\Qb$ and is a closed subgroup by the proof of Lemma~\ref{lem:monoid}, which applies to
+subsemigroups of $\GL$ with one more line: from $\bar S=x\bar S$ and $x\in\bar S$ we get $x=xy$ with
+$y\in\bar S$, so $1=y\in\bar S$ and then $x^{-1}\in\bar S$. The polynomial identity $\Psi(ab)=\Psi(a)\Psi(b)$ holds on
+$\chi(L)\times\chi(L)$, hence on its closure $\mathcal T\times\mathcal T$; and $\Psi(1)=1$, because
+$\Psi(1)\Psi(\chi(e))=\Psi(\chi(e))=\sigma(e)$ is invertible; then $\Psi(a)\Psi(a^{-1})=1$. So $\Psi:\mathcal T\to\GL(D)$ is a
+morphism of algebraic groups defined over $\Q$. Its image is closed (A2), contains $\sigma(L)$, and
+lies in the closure $\cK$ of $\sigma(L)$; hence $\cK=\Psi(\mathcal T)$ and $\cK^\circ=\Psi(\mathcal T^\circ)$.
+The torus $\mathcal T^\circ$ is a subtorus of a diagonal torus defined over $\Q$, hence split over $\Q$,
+and so is its image $\cK^\circ$ under the $\Q$-morphism $\Psi$ (characters of $\cK^\circ$ pull back
+injectively and Galois-equivariantly to characters of $\mathcal T^\circ$).
+
+\emph{The closure contains $\cH^\circ$.} This is the argument of Lemma~\ref{lem:dense}. The group $\cH$ is
+the closure of $\sigma(\Sigma^*)$ (Lemma~\ref{lem:monoid}), and $\cK\subseteq\cH$ is a closed subgroup.
+Let $g=\sigma(e)$ and $\Xi(h)=(ghg)^n$. For every word $x$, $\Xi(\sigma(x))=\sigma((exe)^n)\in\cK$,
+so $\Xi(\cH)\subseteq\cK$ by density; for $k\in\cH^\circ$, $\Xi(g^{-1}kg^{-1})=k^n\in\cK$. The closure
+of the group generated by all $k^n$, $k\in\cH^\circ$, is normal in $\cH^\circ$ and contained in $\cK$,
+and the quotient of $\cH^\circ$ by it is connected of finite exponent, hence trivial (A4). Thus
+$\cH^\circ\subseteq\cK\subseteq\cH$, so $\cH^\circ=\cK^\circ$ is a $\Q$-split torus, and a $\Q$-split torus
+acting on a rational vector space is diagonalizable over $\Q$ (A5).
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:polyamb}: (1)$\Rightarrow$(2)]
+Let $\mathcal P=(\alpha,(A_a)_a,\beta)$ be trim and polynomially ambiguous, computing $f$. Number its
+strongly connected components $C_1,\ldots,C_r$ so that every transition goes from $C_i$ to $C_j$ with
+$i\le j$. Then $V_j=\spn\{e_q:q\in C_1\cup\cdots\cup C_j\}$ is invariant under every $A_a$ acting on
+columns, and $A_w$ induces on $V_j/V_{j-1}\cong\Q^{C_j}$ the diagonal block
+$\rho_j(w)=(A_w)_{C_jC_j}$; the $\rho_j$ satisfy (U) by Lemma~\ref{lem:uniquepath}.
+
+By Section~\ref{sec:prelim}, with $W=\spn\{A_w\beta\}$ and $N=\{h\in W:\alpha A_vh=0\ \forall v\}$, the
+operators induced on $W/N$ form a representation isomorphic to the minimal one; identify $W/N$ with
+$\Q^d$. Put $W_j=W\cap V_j$ and $\Phi_j=(W_j+N)/N$, so $0=\Phi_0\subseteq\cdots\subseteq \Phi_r=\Q^d$ are
+rational subspaces invariant under every $M_a$, hence under $\Gamma_f$ and $\cG_f$. Restricting
+coordinates to $C_j$ maps $W_j$ equivariantly onto $X_j\subseteq\Q^{C_j}$ with kernel $W_{j-1}$, and
+the surjection $W_j\to \Phi_j/\Phi_{j-1}$ has kernel $W_j\cap(W_{j-1}+N)\supseteq W_{j-1}$. Hence
+$\Phi_j/\Phi_{j-1}\cong X_j/Y_j$, where $Y_j$ is the image of $W_j\cap(W_{j-1}+N)$, and this isomorphism
+intertwines the operator induced by $M_w$ with the operator $\sigma_j(w)$ induced by $\rho_j(w)$. As
+$M_w$ is invertible, so is $\sigma_j(w)$. By Lemma~\ref{lem:component} the closure $\cH_j$ of
+$\{\sigma_j(w)\}$ has an identity component diagonalizable over $\Q$. The induced-action morphism
+$\varpi_j$ from $\cG_f$ to $\GL(\Phi_j/\Phi_{j-1})$ maps $\cG_f$ onto $\cH_j$ and $\cG_f^\circ$ onto $\cH_j^\circ$
+(A2). Choosing in each $\Phi_j/\Phi_{j-1}$ a rational basis diagonalizing $\cH_j^\circ$ and lifting, we obtain
+a complete rational flag of $\Q^d$ fixed by $\cG_f^\circ$.
+\end{proof}
+
+The proof shows more: $\cG_f^\circ$ acts on each graded piece $\Phi_j/\Phi_{j-1}$ through a $\Q$-split torus,
+so the unipotent radical of $\cG_f^\circ$ is exactly the subgroup acting trivially on all of them
+(that subgroup is normal and consists of unipotent elements, and unipotent elements act trivially
+through a torus).
+Polynomial ambiguity thus controls the reductive part of $\cG_f^\circ$, whereas copylessness
+additionally forces the unipotent radical to be commutative.

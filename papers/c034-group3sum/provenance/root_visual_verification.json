@@ -1,0 +1,40 @@
+{
+  "at_utc": "2026-11-02T17:12:43.318265+00:00",
+  "reviewer": "root visual inspection of the actual final delivered PDF; not a new mathematical or novelty review",
+  "pdf_sha256": "4b4f3ebf15ef2108bc9e85219b4a16f7bd7f19b9e209052cd53785818350513b",
+  "source_archive_sha256": "648737941d6d01c29f022526dadf67d0fc13f390107d7c50054b5084aa6d933d",
+  "pages_seen": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "render_dpi": 120,
+  "render_directory": "research/continuous/batches/20261102-034/root-final-group3sum-4b4f3ebf15ef",
+  "result": "pass",
+  "observations": [
+    "All eight actual final pages viewed individually. Separate title page, sole author/contact and body text are legible.",
+    "Equations, full proof, finite-relation corollary, references, body and end AI disclosures are legible without clipping, overlap or missing glyphs.",
+    "Ordinary paragraph/reference continuations across pages; last page contains remaining references and AI statement.",
+    "Nominal 11pt body font confirmed by Poppler XML; unprovided city and obsolete default author absent."
+  ],
+  "frozen_packets": [
+    {
+      "packet": "audit/snapshot.json",
+      "digest": "15a73043f23436b1592a376f95f678e39919b724da29d1fc7773757f6a82f52a",
+      "files": 13,
+      "all_hashes_match": true
+    },
+    {
+      "packet": "audit/manuscript-snapshot.json",
+      "digest": "b3fb8002c2d047475286116eba50f1d26f407044ad1fabec0d9b739f50e07d32",
+      "files": 8,
+      "all_hashes_match": true
+    }
+  ],
+  "readiness_label": "working_paper"
+}

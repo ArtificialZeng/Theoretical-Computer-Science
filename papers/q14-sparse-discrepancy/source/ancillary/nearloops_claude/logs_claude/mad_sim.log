@@ -1,0 +1,2 @@
+schedule lemma: 1925 simulated schedules (random graphs n<=14, min in-degree orientations, level k+2, random orders): all hypotheses of Lemma cheap hold
+mad schedule: 2224 simulated schedules on random graphs (n<=13), level k+1 with k = smallest integer >= 2 exceeding max |E'|/|V'|: all hypotheses of Lemma cheap hold

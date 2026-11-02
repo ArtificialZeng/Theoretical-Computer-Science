@@ -1,0 +1,11 @@
+# Mon Nov  2 23:26:04 CST 2026 python3 -I seven_vertex_claude.py
+7-vertex graphs (up to iso) with <= 7 non-edges examined: 146
+NOT resolved: K_7 minus ()
+NOT resolved: K_7 minus ((0, 1),)
+NOT resolved: K_7 minus ((0, 1), (0, 2))
+NOT resolved: K_7 minus ((0, 1), (2, 3))
+NOT resolved: K_7 minus ((0, 1), (0, 2), (1, 2))
+NOT resolved: K_7 minus ((0, 1), (0, 2), (1, 3))
+NOT resolved: K_7 minus ((0, 1), (2, 3), (4, 5))
+NOT resolved: K_7 minus ((0, 1), (0, 2), (1, 3), (2, 3))
+number unresolved: 8

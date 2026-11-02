@@ -1,0 +1,15 @@
+{
+  "job_id": "c026-aonflow-referee-92aab2001150",
+  "checked_at_utc": "2026-11-02T00:39:59.270469+00:00",
+  "snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd",
+  "command": "release_gate.py check-math PROJECT_DIR",
+  "exit_code": 0,
+  "result": {
+    "ok": true,
+    "snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd",
+    "referee_job_id": "c026-aonflow-referee-92aab2001150"
+  },
+  "own_audit_schema_checks_passed": true,
+  "frozen_files_unchanged": true,
+  "scope": "Structural provenance and file-integrity check; not mathematical certification."
+}

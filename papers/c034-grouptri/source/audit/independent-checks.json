@@ -1,0 +1,23 @@
+{
+  "job_id": "c034-grouptri-referee-e6a7f319b8fe",
+  "snapshot_digest": "05aa22d3dd75b43826bffb43bc7976a87898d16ab67f0597c8e4a686ca39b771",
+  "status": "passed",
+  "seed": 703411,
+  "counts": {
+    "listing_instances": 512,
+    "local_gauge_kernel_cases": 676333,
+    "complete_mask_cases": 3548440,
+    "graph_decompositions": 360,
+    "explicit_kernel_instances": 6850,
+    "exact_cost_ledger_cases": 2047
+  },
+  "coverage": {
+    "listing": "All size triples in {0,1,2,3}^3, eight seeded arbitrary Boolean relations each; varying caps, cutoffs and shuffled depth-first child orders.",
+    "local_lifts": "Every proper prime divisor p of each composite M<=36, all p^3 potential triples and (M/p)^3 kernel-offset triples in one coordinate.",
+    "masks": "All q in [2,36], all 8 edge-presence patterns, all q^3 one-coordinate plus-label triples.",
+    "graphs": "360 seeded complete inputs of sides 1..6, dimensions 1..3, twelve listed composite moduli, independent randomized capped witness subsets; ordinary and dense-gauge quotient modes.",
+    "exponents": "Exact rational ledger for every M in [2,2048]."
+  },
+  "limits": "Finite semantic checks with brute-force detectors; no asymptotic benchmark or formal proof. No proposer test code imported or frozen file changed.",
+  "script_sha256": "ef26de1c1d1f8f3eee423e87a7f25be1ea7ba045168ef5da53d0814c94eae884"
+}

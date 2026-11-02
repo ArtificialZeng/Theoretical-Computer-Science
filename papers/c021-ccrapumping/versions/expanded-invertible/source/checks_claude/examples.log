@@ -1,0 +1,11 @@
+[E1 alternating sum] minimal dim 2, invertible=True, criterion=True (consistent on 27 elements), expected=True; WA==closed form up to len 7: True; WA==CCRA up to len 7: True; exact equivalence (difference has minimal dim 0)
+[E2 MPS Ex.27 sum 2^k_i] minimal dim 2, invertible=True, criterion=True (consistent on 27 elements), expected=True; WA==closed form up to len 7: True; WA==CCRA up to len 7: True; exact equivalence (difference has minimal dim 0)
+[E3 position sum] minimal dim 3, invertible=True, criterion=False (('T2 fails', ['0'], ['1'])), expected=False; WA==closed form up to len 7: True
+[E4 MPS Ex.17] minimal dim 3, invertible=True, criterion=False (('T2 fails', ['a'], ['b'])), expected=False
+[E5 alternating position sum] minimal dim 3, invertible=True, criterion=False (('T2 fails', ['0'], ['0^-1', '1'])), expected=False; WA==closed form up to len 7: True
+[E6 scaled Heisenberg] minimal dim 3, invertible=True, criterion=False (('T2 fails', ['a'], ['b'])), expected=False
+[E7 BS(1,2) type] minimal dim 2, invertible=True, criterion=True (consistent on 27 elements), expected=True; WA==CCRA up to len 7: True; exact equivalence (difference has minimal dim 0)
+[E8 S3-twisted counters] minimal dim 22, invertible=True, criterion=True (consistent on 27 elements), expected=True; WA==CCRA up to len 7: True; exact equivalence (difference has minimal dim 0)
+[E9 Z2-controlled affine] minimal dim 4, invertible=True, criterion=True (consistent on 27 elements), expected=True; WA==CCRA up to len 7: True; exact equivalence (difference has minimal dim 0)
+[E10 singular physical updates] minimal dim 3, invertible=False, criterion=None (singular), expected=True; WA==CCRA up to len 7: True; exact equivalence (difference has minimal dim 0)
+summary: {'E1': True, 'E2': True, 'E3': False, 'E4': False, 'E5': False, 'E6': False, 'E7': True, 'E8': True, 'E9': True, 'E10': None}

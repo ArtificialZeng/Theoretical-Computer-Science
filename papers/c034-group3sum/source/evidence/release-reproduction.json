@@ -1,0 +1,33 @@
+{
+  "job_id": "c034-group3sum-release-5f0540aba52c",
+  "all_mathematical_inputs_unchanged": true,
+  "source_sha256": "f3507a3e5b20d6707750b7e703d5d1c0764d4d5b13ef6b7a4f0001d940c8e8cf",
+  "official_acmart_byte_identical": true,
+  "publication_edit_only_city_and_title_break": true,
+  "source_zip": "manuscript/bounded-exponent-3sum-sources-working_paper.zip",
+  "source_zip_digest": "18af105bd46abbb88e692264aa8fa993366a1b8eeb971ea73bebb769a502362c",
+  "zip_source_files": [
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/alpha.bst",
+    "manuscript/build.sh",
+    "manuscript/build/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "clean_zip_build": true,
+  "zip_pdf_text_identical": true,
+  "zip_bbl_identical": true,
+  "reproduction_pdf_digest": "2f460c659346b3ade4582d90c5b9b75ed867f5131ff867550ce0766763b2d186",
+  "pdf_byte_identity_required": false,
+  "pdf_byte_identity_note": "TeX PDF date/trailer identifiers vary across clean builds; full extracted page text, bibliography and page count are compared.",
+  "local_recorder_inputs": [
+    "./acmart.cls",
+    "acmart.cls",
+    "build/main.aux",
+    "build/main.bbl",
+    "build/main.out",
+    "main.tex"
+  ],
+  "readiness_label": "working_paper"
+}

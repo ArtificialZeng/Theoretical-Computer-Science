@@ -1,0 +1,211 @@
+{
+  "job_id": "c025-incdec-release-4b3b2544efe9",
+  "snapshot_digest": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4",
+  "manuscript_digest": "d4717112b7a2b8ec108123ef8efb3e63f3f6ed5f1f6caf1810a2969f35593c6a",
+  "pdf_digest": "407ec869e3c74ed3fea9001fc3e1afb187d4b3175fabfd78c52d40408afeb186",
+  "pass": "2-verification-only",
+  "extraction": "evidence/release/claims-extracted.json",
+  "findings": [
+    {
+      "claim_id": "C01",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "location": "Abstract; Section 1",
+      "basis": "DKLS26",
+      "repair": null
+    },
+    {
+      "claim_id": "C02",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "location": "Section 1",
+      "basis": "DKLS26",
+      "repair": null
+    },
+    {
+      "claim_id": "C03",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "location": "Section 1, nearby results",
+      "basis": "DKLS26",
+      "repair": null
+    },
+    {
+      "claim_id": "C04",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "location": "Section 1, nearby results",
+      "basis": "BBBCDL26",
+      "repair": "Qualified 1.373 as approximate, matching the source theorem."
+    },
+    {
+      "claim_id": "C05",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "location": "Section 1, nearby results",
+      "basis": "CK26",
+      "repair": null
+    },
+    {
+      "claim_id": "C06",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "Section 1, nearby results",
+      "basis": "research records",
+      "repair": null
+    },
+    {
+      "claim_id": "C07",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "Abstract; Theorem 1",
+      "basis": "accepted proof",
+      "repair": null
+    },
+    {
+      "claim_id": "C08",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "Abstract; Theorem 1; Section 4",
+      "basis": "accepted proof + DKLS26",
+      "repair": null
+    },
+    {
+      "claim_id": "C09",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "Sections 1 and 3",
+      "basis": "accepted proof",
+      "repair": null
+    },
+    {
+      "claim_id": "C10",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "Sections 2 and 3",
+      "basis": "accepted proof",
+      "repair": null
+    },
+    {
+      "claim_id": "C11",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "Section 2",
+      "basis": "algorithm count",
+      "repair": null
+    },
+    {
+      "claim_id": "C12",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "Lemma 2",
+      "basis": "accepted proof",
+      "repair": null
+    },
+    {
+      "claim_id": "C13",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "Section 3",
+      "basis": "accepted proof",
+      "repair": null
+    },
+    {
+      "claim_id": "C14",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "Section 3, Case 1",
+      "basis": "accepted proof",
+      "repair": null
+    },
+    {
+      "claim_id": "C15",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "Section 3, Case 2",
+      "basis": "accepted proof",
+      "repair": null
+    },
+    {
+      "claim_id": "C16",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "Sections 2, 3 and 5",
+      "basis": "accepted proof",
+      "repair": null
+    },
+    {
+      "claim_id": "C17",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "Section 3, Nonnegative baselines",
+      "basis": "accepted proof",
+      "repair": null
+    },
+    {
+      "claim_id": "C18",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "location": "Section 3, Nonnegative baselines",
+      "basis": "DKLS26",
+      "repair": null
+    },
+    {
+      "claim_id": "C19",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "location": "Section 4",
+      "basis": "DKLS26",
+      "repair": null
+    },
+    {
+      "claim_id": "C20",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "Section 4",
+      "basis": "accepted proof + DKLS26",
+      "repair": null
+    },
+    {
+      "claim_id": "C21",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "Section 4",
+      "basis": "accepted proof",
+      "repair": null
+    },
+    {
+      "claim_id": "C22",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "location": "Section 5",
+      "basis": "DKLS26",
+      "repair": null
+    },
+    {
+      "claim_id": "C23",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "References",
+      "basis": "DKLS26",
+      "repair": null
+    },
+    {
+      "claim_id": "C24",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "References",
+      "basis": "BBBCDL26",
+      "repair": null
+    },
+    {
+      "claim_id": "C25",
+      "status": "Verified",
+      "confidence": "exact",
+      "location": "References",
+      "basis": "CK26",
+      "repair": null
+    }
+  ],
+  "report": "audit/citations.md"
+}

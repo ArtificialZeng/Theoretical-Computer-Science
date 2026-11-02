@@ -1,0 +1,21 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "For every fixed integer M>=2, with C=ceil(log_2 M), eta=min(1/18,1/(8C)), gamma=63/1000 and delta_M=eta*gamma/2, a uniform classical randomized algorithm solves three-list zero-sum detection and witness recovery over every compactly given finite abelian group of exponent dividing M and order at most n^c, for every fixed c>0, in worst-case O_(M,c)(n^(2-delta_M) polylog(n)) charged operations. It never returns a false witness, always rejects negative inputs, and returns a witness on each fixed positive input with probability at least 3/4. This uses the existing Alman-Vassilevska Williams Corollary 26 thin-product algorithm, with all reduction, randomness, call, scanning and recovery costs charged. The full immutable source scope is asserted resolved by the proposed proof, subject to fresh review.",
+  "contribution": "Proposed full resolution of the general bounded-exponent question beyond known elementary and exponent-dividing-p^2 scopes. Simultaneous original-coset divisor profiles and a maximum-slope quotient/row-count certificate balance all sum-order layers into a single elementary-middle support product per profile. Explicit caps give bounded-time one-sided error and witness recovery without a torsion-incompatible integer hash or an unproved recursive induction. Novelty, nonroutine value and STOC significance require actual fresh independent assessment.",
+  "proposer_job_id": "c034-group3sum-research-3974e7a3f8f0",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "research/divisor-profile-proof.md",
+    "research/verify_divisor_hash.py",
+    "evidence/divisor-hash-tests.json",
+    "evidence/research-pass1-literature.md",
+    "evidence/research-pass1-selfcheck.md",
+    "intake/primary/2610.17420v1.pdf",
+    "intake/primary/2610.17420v1-pdf.txt",
+    "intake/primary/2610.06783v1.html",
+    "intake/primary/2610.06783v1-corollary26.txt",
+    "intake/Majdoddin-groups-current-README.md"
+  ]
+}

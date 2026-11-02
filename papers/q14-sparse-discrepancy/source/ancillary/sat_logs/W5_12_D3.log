@@ -1,0 +1,2 @@
+wheel [5, 1, 2] m= 15 degs [4, 4, 4, 4, 4, 10]
+RESULT wheel [5, 1, 2] 3 NOCOVER 1.3s

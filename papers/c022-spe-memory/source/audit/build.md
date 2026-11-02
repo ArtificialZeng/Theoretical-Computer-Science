@@ -1,0 +1,11 @@
+# Fresh build audit
+
+Job: c022-spe-memory-release-fb6f51f9715a. Reviewed current manuscript/build/main.log and BibTeX/pass logs, not just file existence. Final original log records a successful pdfLaTeX eight-page build. No fatal errors, undefined citations/references, rerun-needed diagnostics, missing glyphs, overfull or underfull boxes remain. BibTeX produces nine resolved entries. The two warnings are unused global option natbib=false and no affiliation city; neither changes typography or the supplied correct affiliation, and an unprovided city was not invented.
+
+All publication.json source dependencies were checked against the recorder. acmart.cls and acmart.dtx byte-match the designated official ACM distribution. System packages/fonts are installed dependencies. All fifteen PDF font instances are embedded/subset with Unicode mappings. PDF title is correct; XMP dc:creator is Zijian Zeng. The visible sole author, affiliation and email match authors.json. No encrypted content or JavaScript is present. Letter size, eight total pages and nonempty text are confirmed.
+
+Fresh source-archive reproduction: evidence/release-fb6f51f9715a/source-reproduction.zip contains the complete eight listed sources and publication.json. It was extracted in isolation; generated BBL was removed; sh manuscript/build.sh completed successfully from that extraction, regenerating BBL and PDF. The reproduced BBL and pdftotext -layout output are byte-identical to those of the reviewed PDF. Raw PDF bytes differ because this independent build carries new PDF metadata/identifiers; the original reviewed PDF was not overwritten. See reproduction.json and reproduction-command.log plus the extracted build/main.log. This is an audit reproduction, not a new manuscript or deliverable.
+
+The current primary STOC2027 CFP was read at https://acm-stoc.org/stoc2027/stoc2027-cfp.html . Named authors, separate title page, nominal 11pt single-column body, letter paper and one-inch geometry settings match its format. The user's stricter twelve-TOTAL-page cap is met. Substantial AI use is explicitly disclosed. Formatting compliance does not upgrade the fresh working_paper assessment or authorize submission.
+
+Verdict: accept. The audit JSON binds the existing actual final original build log and its SHA-256, as well as all current snapshot/PDF digests.

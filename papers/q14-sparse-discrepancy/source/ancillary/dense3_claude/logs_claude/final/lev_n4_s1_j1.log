@@ -1,0 +1,11 @@
+# 2026-11-02 23:05:43 CST  src: corner_bnb_v7_claude.c sha1 3f0894555f2f
+# cmd: LEVELS=1,2,2,2 corner_bnb_final_claude (= v7 source) 4 299 100 9 < pat_n4_s1_j1.txt
+function 0: c = 199/100, dmix 2
+function 1: c = 299/100, dmix 3
+function 2: c = 299/100, dmix 3
+function 3: c = 299/100, dmix 3
+P 1 boxes 1 fails 0
+P 2 boxes 1 fails 0
+P 3 boxes 1 fails 0
+P 4 boxes 1 fails 0
+TOTAL patterns 4 boxes 4 uncleared 0 dfsnodes 4 skipped 0

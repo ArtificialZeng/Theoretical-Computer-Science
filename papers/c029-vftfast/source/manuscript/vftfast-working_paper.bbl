@@ -1,0 +1,153 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{7}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter does
+%%% not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+\makeatletter
+\@ifundefined{NAT@parse@date}{}{\let\NAT@parse@date@orig\NAT@parse@date}
+\@ifundefined{NAT@parse@date}{}{\def\NAT@parse@date#1#2#3#4#5#6@@{\NAT@parse@date@orig#1#2#3#4#5#6@@\def\NAT@tempyear{0000}\def\NAT@tempexlab{{?}}\ifx\NAT@year\NAT@tempyear\ifx\NAT@exlab\NAT@tempexlab\def\NAT@date{[n.\,d.]}\else\edef\NAT@date{[n.\,d.]\NAT@exlab}\fi\fi}}
+\makeatother
+
+\bibitem[Bil{\`o} et~al\mbox{.}(2026a)]%
+        {BCCCS26}
+\bibfield{author}{\bibinfo{person}{Davide Bil{\`o}}, \bibinfo{person}{Shiri
+  Chechik}, \bibinfo{person}{Keerti Choudhary}, \bibinfo{person}{Sarel Cohen},
+  {and} \bibinfo{person}{Martin Schirneck}.} \bibinfo{year}{2026}\natexlab{a}.
+\newblock \bibinfo{title}{Simpler and Improved Replacement Path Coverings}.
+\newblock \bibinfo{howpublished}{arXiv:2604.27966v1}.
+\newblock
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2604.27966v1}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Bil{\`o} et~al\mbox{.}(2026b)]%
+        {BCCS26}
+\bibfield{author}{\bibinfo{person}{Davide Bil{\`o}}, \bibinfo{person}{Keerti
+  Choudhary}, \bibinfo{person}{Sarel Cohen}, {and} \bibinfo{person}{Martin
+  Schirneck}.} \bibinfo{year}{2026}\natexlab{b}.
+\newblock \bibinfo{title}{Near-Optimal Replacement Path Coverings}.
+\newblock \bibinfo{howpublished}{arXiv:2608.07124v1}.
+\newblock
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2608.07124v1}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Bodwin et~al\mbox{.}(2020)]%
+        {BDR21}
+\bibfield{author}{\bibinfo{person}{Greg Bodwin}, \bibinfo{person}{Michael
+  Dinitz}, {and} \bibinfo{person}{Caleb Robelle}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \bibinfo{title}{Optimal Vertex Fault-Tolerant Spanners in Polynomial
+  Time}.
+\newblock \bibinfo{howpublished}{arXiv:2007.08401v3}.
+\newblock
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2007.08401v3}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{Version 3, 31 October 2020; conference version in SODA 2021}.
+
+
+\bibitem[Dinitz and Robelle(2020)]%
+        {DR20}
+\bibfield{author}{\bibinfo{person}{Michael Dinitz} {and} \bibinfo{person}{Caleb
+  Robelle}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \bibinfo{title}{Efficient and Simple Algorithms for Fault-Tolerant
+  Spanners}.
+\newblock \bibinfo{howpublished}{arXiv:2002.10889v2}.
+\newblock
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2002.10889v2}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{Version 2, 24 May 2020}.
+
+
+\bibitem[Fomin et~al\mbox{.}(2016)]%
+        {FLPS16}
+\bibfield{author}{\bibinfo{person}{Fedor~V. Fomin}, \bibinfo{person}{Daniel
+  Lokshtanov}, \bibinfo{person}{Fahad Panolan}, {and} \bibinfo{person}{Saket
+  Saurabh}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Efficient Computation of Representative Families
+  with Applications in Parameterized and Exact Algorithms}.
+\newblock \bibinfo{journal}{\emph{J. ACM}} \bibinfo{volume}{63},
+  \bibinfo{number}{4}, Article \bibinfo{articleno}{29} (\bibinfo{year}{2016}),
+  \bibinfo{numpages}{60}~pages.
+\newblock
+\href{https://doi.org/10.1145/2886094}{doi:\nolinkurl{10.1145/2886094}}
+\newblock
+\shownote{Preprint title: Efficient Computation of Representative Sets with
+  Applications in Parameterized and Exact Algorithms; version 4, 22 February
+  2016}.
+
+
+\bibitem[{Karthik C. S.} and Parter(2023)]%
+        {KP23}
+\bibfield{author}{\bibinfo{person}{{Karthik C. S.}} {and}
+  \bibinfo{person}{Merav Parter}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{Deterministic Replacement Path Covering}.
+\newblock \bibinfo{howpublished}{arXiv:2008.05421v3}.
+\newblock
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2008.05421v3}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{Version 3, 9 April 2023}.
+
+
+\bibitem[Parter et~al\mbox{.}(2026)]%
+        {PPT26}
+\bibfield{author}{\bibinfo{person}{Merav Parter}, \bibinfo{person}{Elizaveta
+  Popova}, {and} \bibinfo{person}{Elad Tzalik}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{New Fault-Tolerant {$(\alpha,\beta)$}-Spanners}.
+\newblock \bibinfo{howpublished}{arXiv:2610.33934v1}.
+\newblock
+\urldef\tempurl%
+\url{https://arxiv.org/abs/2610.33934v1}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{Version 1, 24 October 2026}.
+
+
+\end{thebibliography}

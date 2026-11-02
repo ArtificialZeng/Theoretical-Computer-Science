@@ -1,0 +1,41 @@
+{
+  "job_id": "c026-aonflow-research-4dc78c591460",
+  "role": "research",
+  "actual_dispatch_utc": "2026-11-02T00:05:39+00:00",
+  "first_clock_observed_utc": "2026-11-02T00:07:41+00:00",
+  "records_finalized_utc": "2026-11-02T00:15:11.168297+00:00",
+  "main_test_deadline_utc": "2026-11-02T00:22:38.999991+00:00",
+  "finalization_deadline_utc": "2026-11-02T00:25:38.999989+00:00",
+  "research_passes_observed": 1,
+  "research_pass_cap": 3,
+  "runner_state_edited": false,
+  "source_sha256": "7241936e887e814eebe18f891cfe9d90c883ee0298057dfc8bbdd2344501e29e",
+  "source_unchanged": true,
+  "outcome": "continue",
+  "original_status": "unresolved",
+  "candidate_kind": "none",
+  "new_evidence": [
+    "Support-size integer domination lemma N with polynomial rational arithmetic",
+    "Fixed-flow deletion lemma P with paired retained endpoint weights",
+    "Mass-based initial cluster selection and conditional capacity-1 composition",
+    "Exact bounded algebra checks in research-1-check-results.json"
+  ],
+  "remaining_gap": "Full nonuniform owned-mass pseudocenter/tagging refinement NR; original algorithm and substantive innovation not established.",
+  "failed_or_incomplete_routes": [
+    {
+      "label": "unknown",
+      "route": "Complete nonuniform extension of CKS congestion-1 rounding",
+      "detail": "Initial selection and final capacity composition are justified; shared-vertex tagging/refinement construction remains unproved."
+    },
+    {
+      "label": "unknown",
+      "route": "Invoking the statement of Anand Lemma C.1 as a k-sensitive bound",
+      "detail": "Its stated normalization adds unit weight to all n vertices and supplies an n-dependent bound. A support-sensitive version does not follow from that statement; no lower bound against a better version is asserted. Lemma N instead uses the BJS integral-weight theorem."
+    }
+  ],
+  "operational_failures": [],
+  "agents_or_background_workers_spawned": false,
+  "new_manuscript_or_output_pdf": false,
+  "acceptance_or_readiness_assessment_created": false,
+  "usage_limit_note": "Finite job ended early after a useful positive reduction and a precise remaining test; token usage not independently measured."
+}

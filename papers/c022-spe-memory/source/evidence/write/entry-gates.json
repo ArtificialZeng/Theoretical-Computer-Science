@@ -1,0 +1,11 @@
+{
+  "job_id": "c022-spe-memory-write-ec7adf27a885",
+  "phase": "write",
+  "check_math_passed": true,
+  "snapshot_digest": "584a7fb098fe85033ce2ffdf4ed2efe808d7dde6097b69a23cab1d6c9f6df4e9",
+  "source_sha256": "9dd4ff19af8a2996db2a11e18b2a4caa65426f62647822995c446c31dd0899fe",
+  "frozen_files_unchanged": true,
+  "retained_classification": "working_paper",
+  "classification_review_job": "c022-spe-memory-referee-4a3aae04fe17",
+  "status": "preparing manuscript after acceptance; no release claimed"
+}

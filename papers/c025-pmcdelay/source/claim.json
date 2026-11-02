@@ -1,0 +1,26 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "For every finite simple undirected graph G, there exists one fixed deterministic algorithm enumerating all nonempty potential maximal cliques of G exactly once, with one fixed polynomial in |V(G)|+|E(G)|+1 bounding time to the first output, every inter-output interval, and time from the final output to termination. The empty vertex graph terminates within that polynomial without output. No graph-class or output-size restriction is imposed; exponential storage is permitted. The complete algorithm and proposed proof are in research/streaming_proof.md.",
+  "contribution": "Proposed full resolution of the immutable all-PMC polynomial-delay question. The new step is a streaming conversion of the known recursive seed-and-neighborhood enumeration: polynomial-time separator helpers with polynomial fibers pay for seed production, injective lifts transfer child output ranks, and a simultaneous emission-rank/termination induction has an additive polynomial recurrence. Recognition, structural preimages, minimal triangulation, separator extension and buffering are credited prior tools. No fresh correctness, novelty, significance or STOC verdict is claimed.",
+  "proposer_job_id": "c025-pmcdelay-research-338d67d18097",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "research/streaming_proof.md",
+    "research/polynomial_primitives.md",
+    "evidence/pass1-literature.md",
+    "research/targeted_streaming_check.py",
+    "evidence/pass1-targeted-streaming.json",
+    "intake/pmc_streaming_finite.py",
+    "intake/pmc_atom_neighborhood.py",
+    "intake/primary/2610.19850v3-PMC.pdf",
+    "intake/primary/2610.19850v3-PMC.txt",
+    "intake/primary/2610.24856v1-smallPMC.pdf",
+    "intake/primary/2610.24856v1-smallPMC.txt",
+    "intake/primary/IPEC2025-21-PMC.pdf",
+    "intake/primary/IPEC2025-21-PMC.txt",
+    "intake/primary/MCSM2004.pdf",
+    "intake/primary/MCSM2004.txt"
+  ]
+}

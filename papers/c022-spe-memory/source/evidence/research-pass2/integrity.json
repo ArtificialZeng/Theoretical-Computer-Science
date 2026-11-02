@@ -1,0 +1,122 @@
+{
+  "job_id": "c022-spe-memory-research-776ae007899c",
+  "role": "research",
+  "pass": 2,
+  "started_at_utc": "2026-11-01T18:44:18Z",
+  "recorded_at_utc": "2026-11-01T18:51:35.284356+00:00",
+  "entry_hashes": {
+    "source.md": "9dd4ff19af8a2996db2a11e18b2a4caa65426f62647822995c446c31dd0899fe",
+    "problem.md": "6c680e0831b69a44419134e04c1cb1370123b7ebf569959445d0f9348b707178",
+    "state.json": "f40685c68eba410299bb75ea69b6bfa7421466e97a9b2355ce5e06952ba35e3b",
+    "checkpoint.md": "813b7592a83b0be40b539c9b8d484dd3d7c2d2cf0d25a07ef293c3ec3f567c25"
+  },
+  "historical_snapshot_digest": "584a7fb098fe85033ce2ffdf4ed2efe808d7dde6097b69a23cab1d6c9f6df4e9",
+  "historical_mathematical_files": {
+    "claim.json": {
+      "actual": "c4fbb6632c0558173c24cfc9d2b789d0bbdebd485ca99403f8644732d69b3d71",
+      "expected": "c4fbb6632c0558173c24cfc9d2b789d0bbdebd485ca99403f8644732d69b3d71",
+      "matches": true
+    },
+    "code/check_promise_reset.py": {
+      "actual": "f872638f7f4506394f78b5a21edcfdf8a60e99a2402bd789e458efdbc0b80217",
+      "expected": "f872638f7f4506394f78b5a21edcfdf8a60e99a2402bd789e458efdbc0b80217",
+      "matches": true
+    },
+    "evidence/promise-reset-finite-checks.json": {
+      "actual": "b80514a693fcee2ba0625c85a97f9277671ce493444bdd315c88fe04631be40c",
+      "expected": "b80514a693fcee2ba0625c85a97f9277671ce493444bdd315c88fe04631be40c",
+      "matches": true
+    },
+    "evidence/promise-reset-proof.md": {
+      "actual": "243f87d4219d77f4fbbfc40b73f51f45596f578f5e513d792fa4e71a0e07b454",
+      "expected": "243f87d4219d77f4fbbfc40b73f51f45596f578f5e513d792fa4e71a0e07b454",
+      "matches": true
+    },
+    "evidence/research-pass1-adversarial.md": {
+      "actual": "d40f9f5fd6dbafe0f0ef97a25955eb008babb77022507d4971774f3c0e22ef16",
+      "expected": "d40f9f5fd6dbafe0f0ef97a25955eb008babb77022507d4971774f3c0e22ef16",
+      "matches": true
+    },
+    "evidence/research-pass1-literature.md": {
+      "actual": "58c8f0e7c8d0157f63e301175c8d25d5ab97d7366fb6ccfb772797a2be856177",
+      "expected": "58c8f0e7c8d0157f63e301175c8d25d5ab97d7366fb6ccfb772797a2be856177",
+      "matches": true
+    },
+    "intake/main-NE-2026.pdf": {
+      "actual": "444fa25b4917d64cb01261201a39f437e3ff8da5da28bad5d2e683af1c175cc7",
+      "expected": "444fa25b4917d64cb01261201a39f437e3ff8da5da28bad5d2e683af1c175cc7",
+      "matches": true
+    },
+    "intake/main-NE-2026.txt": {
+      "actual": "d4f164cf7513c8e9ebc4e534d29cc1eace07e1b5f4a72169c93d20547388e2d5",
+      "expected": "d4f164cf7513c8e9ebc4e534d29cc1eace07e1b5f4a72169c93d20547388e2d5",
+      "matches": true
+    },
+    "intake/weak-spe-full.pdf": {
+      "actual": "c6662a03bd9b4f4aebec28c3cc87bef362ec3507e158b758e079cae8858f5612",
+      "expected": "c6662a03bd9b4f4aebec28c3cc87bef362ec3507e158b758e079cae8858f5612",
+      "matches": true
+    },
+    "intake/weak-spe-full.txt": {
+      "actual": "4a33dcaa2306217900a17caaafe7491bdfe459375498c025add3a5d73518a6a7",
+      "expected": "4a33dcaa2306217900a17caaafe7491bdfe459375498c025add3a5d73518a6a7",
+      "matches": true
+    },
+    "problem.md": {
+      "actual": "6c680e0831b69a44419134e04c1cb1370123b7ebf569959445d0f9348b707178",
+      "expected": "6c680e0831b69a44419134e04c1cb1370123b7ebf569959445d0f9348b707178",
+      "matches": true
+    },
+    "source.md": {
+      "actual": "9dd4ff19af8a2996db2a11e18b2a4caa65426f62647822995c446c31dd0899fe",
+      "expected": "9dd4ff19af8a2996db2a11e18b2a4caa65426f62647822995c446c31dd0899fe",
+      "matches": true
+    }
+  },
+  "research_passes_observed": 2,
+  "no_agents": true,
+  "scheduler_state_modified": false,
+  "acceptance_metadata_created": false,
+  "manuscript_or_pdf_created": false,
+  "usage_reset": false,
+  "status": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "finished_at_utc": "2026-11-01T19:04:07.679860+00:00",
+  "elapsed_seconds_observed": 1189.67986,
+  "source_unchanged": true,
+  "problem_unchanged": true,
+  "scheduler_state_unchanged": true,
+  "historical_12_file_snapshot_unchanged": true,
+  "claim_contract_fields_and_paths_validated": true,
+  "frozen_by_worker": false,
+  "new_scope_acceptance_reused": false,
+  "polynomial_strengthening": "disproved by all-SPE family; original positive theorem retained",
+  "no_additional_research_pass_requested": true,
+  "optional_shell_download_status": "two URLError failures; actual primary full texts accessed through web",
+  "artifact_sha256": {
+    "claim.json": "45640657f281c2a79243205ccd2c135c9f80b5d08e8898b56a32cd0951fb0c79",
+    "checkpoint.md": "cb9126544f3e0db51bc1cc120806cb516d2626d245e95acac6dd6c9fe9398562",
+    "source.md": "9dd4ff19af8a2996db2a11e18b2a4caa65426f62647822995c446c31dd0899fe",
+    "problem.md": "6c680e0831b69a44419134e04c1cb1370123b7ebf569959445d0f9348b707178",
+    "evidence/promise-reset-proof.md": "243f87d4219d77f4fbbfc40b73f51f45596f578f5e513d792fa4e71a0e07b454",
+    "evidence/research-pass1-adversarial.md": "d40f9f5fd6dbafe0f0ef97a25955eb008babb77022507d4971774f3c0e22ef16",
+    "evidence/research-pass1-literature.md": "58c8f0e7c8d0157f63e301175c8d25d5ab97d7366fb6ccfb772797a2be856177",
+    "code/check_promise_reset.py": "f872638f7f4506394f78b5a21edcfdf8a60e99a2402bd789e458efdbc0b80217",
+    "evidence/promise-reset-finite-checks.json": "b80514a693fcee2ba0625c85a97f9277671ce493444bdd315c88fe04631be40c",
+    "evidence/research-pass2/combined-theorem.md": "2705db23419ecdb8748fecee9e74f75473d5873115c2a6650fcc747eeba04c38",
+    "evidence/research-pass2/exponential-lower-bound.md": "db06c5c4fa1dfc75608a84a02473322d21d2fe26aab2597856df96dbf6782e0f",
+    "evidence/research-pass2/adversarial.md": "6e6bc16fe9cf2b79412fe33f2722aa339e6ec50912c9f460f2e5eb3883a46862",
+    "evidence/research-pass2/literature.md": "be7f0bccd1987fd0bbcd893125b3a81ab012312276a44324027b9a1af2d75a3b",
+    "code/check_subset_memory.py": "22a4a201389774af6fef67ccac95214f8a830437fcd3ea8a286ef9c11a8bb13c",
+    "evidence/research-pass2/subset-memory-checks.json": "b8cc8f333ddcea27b091b10ce7ef87f431d9dcb35c358a1c3f6b5a078a422c6f",
+    "intake/flesch-existence/Flesch-et-al-2010.pdf": "70cb24306f70a0bdc4690f527f54d9184c82d9ed347335e8c5d5342ebbd93572",
+    "intake/flesch-existence/Flesch-et-al-2010.txt": "6eaacc8b4c634ddfb06d1a312801877d3d7c647c67a556c20bab61bf7223deaa",
+    "intake/flesch-existence/source.json": "70b0fc6137681cc78a3bc98762526e9d9de07d36f5bb7322da50974b7ed8d404",
+    "intake/weak-spe-full.txt": "4a33dcaa2306217900a17caaafe7491bdfe459375498c025add3a5d73518a6a7",
+    "intake/weak-spe-full.pdf": "c6662a03bd9b4f4aebec28c3cc87bef362ec3507e158b758e079cae8858f5612",
+    "intake/main-NE-2026.txt": "d4f164cf7513c8e9ebc4e534d29cc1eace07e1b5f4a72169c93d20547388e2d5",
+    "intake/main-NE-2026.pdf": "444fa25b4917d64cb01261201a39f437e3ff8da5da28bad5d2e683af1c175cc7",
+    "intake/research-pass2/sources.json": "a0a6074378615cfdcceb1e549a2ee75b556f733118fba71de0ccf6f37e5b82d9"
+  }
+}

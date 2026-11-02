@@ -1,0 +1,12 @@
+{
+  "audit/snapshot.json": {
+    "digest": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4",
+    "files_checked": 24,
+    "mismatches": []
+  },
+  "audit/manuscript-snapshot.json": {
+    "digest": "339c240c607b3e1abc2562d37898d5f413031750f56b38e36f853c183a238175",
+    "files_checked": 9,
+    "mismatches": []
+  }
+}

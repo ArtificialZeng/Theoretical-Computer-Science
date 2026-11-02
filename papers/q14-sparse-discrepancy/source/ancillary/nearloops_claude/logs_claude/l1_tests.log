@@ -1,0 +1,7 @@
+nS=7 nT=1 ell=1 delta=1 lam=0 path=jump a=2 -> UNSAT
+nS=6 nT=2 ell=1 delta=1 lam=0 path=walk a=2 -> UNSAT
+nS=6 nT=3 ell=1 delta=1 lam=0 path=walk a=2 -> UNSAT
+nS=5 nT=4 ell=1 delta=1 lam=0 path=rand4 a=2 -> UNSAT
+nS=6 nT=3 ell=1 delta=1 lam=0 path=rand5 a=2 -> UNSAT
+nS=5 nT=4 ell=1 delta=1 lam=0 path=rand6 a=2 -> UNSAT
+nS=6 nT=4 ell=1 delta=1 lam=0 path=rand7 a=2 -> UNSAT

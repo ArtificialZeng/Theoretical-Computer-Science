@@ -1,0 +1,2 @@
+choices 7365 boxes 20613 fails 0
+python3 -I k3_rigorous_exact.py  7.99s user 0.52s system 82% cpu 10.310 total

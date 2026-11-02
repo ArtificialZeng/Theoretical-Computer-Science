@@ -1,0 +1,30 @@
+{
+  "job_id": "c034-grouptri-release-98d1e823492f",
+  "snapshot_digest": "05aa22d3dd75b43826bffb43bc7976a87898d16ab67f0597c8e4a686ca39b771",
+  "manuscript_digest": "a40f8840ae0d14f65c4af83e804cb282ac08f663f3e89dfedb04cd0efadea7ba",
+  "pdf_digest": "e9b3d5055ad93f76865143de8acab7b3c4dc6c1f3cd1fe3b20482eb99d68cfa4",
+  "verdict": "accept",
+  "report": "audit/visual.md",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "render_dpi": 120,
+  "rendered_images": [
+    "tmp/release-build/review-page-1.png",
+    "tmp/release-build/review-page-2.png",
+    "tmp/release-build/review-page-3.png",
+    "tmp/release-build/review-page-4.png",
+    "tmp/release-build/review-page-5.png",
+    "tmp/release-build/review-page-6.png",
+    "tmp/release-build/review-page-7.png",
+    "tmp/release-build/review-page-8.png"
+  ],
+  "readiness_label": "working_paper"
+}

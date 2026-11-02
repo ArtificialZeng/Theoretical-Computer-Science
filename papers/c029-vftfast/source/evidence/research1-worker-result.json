@@ -1,0 +1,18 @@
+{
+  "outcome": "continue",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Proved the protected fixed-path gap test, documented conditional packing and scale transfer, and established a lower bound for fault-oblivious path lists. Exact checks passed. The full construction remains unresolved; a weaker shortest-violation separator is sufficient and still unproved.",
+  "next_test": "Construct or diagnose an H-dependent shortest-violation separator with O(r*f) protected fault witnesses and time 2^O(r+d*log(d+2))*poly(n,f,r), complete whenever an original-budget fault set gives G-F distance exactly d and H-F distance greater than r.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "evidence/research1-separator.md",
+    "evidence/research1-checks.json",
+    "evidence/research1_checks.py",
+    "evidence/research1-obstruction-witness.json",
+    "evidence/research1-sources.md",
+    "evidence/research1-entry-checkpoint.md"
+  ]
+}

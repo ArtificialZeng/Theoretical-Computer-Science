@@ -1,0 +1,8 @@
+{
+  "job_id": "c032-dspdag-referee-56b0105494de",
+  "snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+  "digest_matches": true,
+  "files_checked": 21,
+  "mismatches": [],
+  "source_sha256": "bd9f92784c80f57bb9d38b0d1ec47a1127cfe421e2d2ca69776e28d431657a90"
+}

@@ -1,0 +1,52 @@
+{
+  "job_id": "c021-ccrapumping-research-b9b720512ca2",
+  "immutable_inputs": {
+    "source.md": {
+      "expected_sha256": "688e017d0cb9e92733e81d94a4b79b563f2c44592795597818c63e616df13c0c",
+      "actual_sha256": "688e017d0cb9e92733e81d94a4b79b563f2c44592795597818c63e616df13c0c",
+      "unchanged": true
+    },
+    "problem.md": {
+      "expected_sha256": "e4ea97b858f08a2d228e19f5564e96d2fc6ae88bbcd2a90995f1cf46970aef3d",
+      "actual_sha256": "e4ea97b858f08a2d228e19f5564e96d2fc6ae88bbcd2a90995f1cf46970aef3d",
+      "unchanged": true
+    },
+    "evidence/resolution-proof.md": {
+      "expected_sha256": "cb8953e85a48ad7237e84df4069a25393826a91663bb5230e628153efa25b239",
+      "actual_sha256": "cb8953e85a48ad7237e84df4069a25393826a91663bb5230e628153efa25b239",
+      "unchanged": true
+    },
+    "AGENTS.md": {
+      "expected_sha256": "ab0e41e6ccfb8b84ee525a76f94ce7666a3460b793d4f8f861b814f96f0c5011",
+      "actual_sha256": "ab0e41e6ccfb8b84ee525a76f94ce7666a3460b793d4f8f861b814f96f0c5011",
+      "unchanged": true
+    },
+    "publication-policy.json": {
+      "expected_sha256": "d7be31119a0c2afda511eec47bf27d0eabaefc41d03a06c7f560c1f6540a5702",
+      "actual_sha256": "d7be31119a0c2afda511eec47bf27d0eabaefc41d03a06c7f560c1f6540a5702",
+      "unchanged": true
+    },
+    "intake/ccra-2502.07356v2.pdf": {
+      "expected_sha256": "090fa33d6f5e05d0f23ab9b95844284f5521ed4a7288f18a3296de364ed19c31",
+      "actual_sha256": "090fa33d6f5e05d0f23ab9b95844284f5521ed4a7288f18a3296de364ed19c31",
+      "unchanged": true
+    },
+    "intake/ccra-official-STACS2026-67.pdf": {
+      "expected_sha256": "5f0a88be105d904d5594af4da8712cb7c719fe9a542cfd8344f072a0ae5163a4",
+      "actual_sha256": "5f0a88be105d904d5594af4da8712cb7c719fe9a542cfd8344f072a0ae5163a4",
+      "unchanged": true
+    },
+    "intake/monomial-2410.03444v2.pdf": {
+      "expected_sha256": "81c2ec30ee6061a88ce9e131617bd5c006c9052c44f4c4f2ed7e9e90e6077403",
+      "actual_sha256": "81c2ec30ee6061a88ce9e131617bd5c006c9052c44f4c4f2ed7e9e90e6077403",
+      "unchanged": true
+    }
+  },
+  "all_checked_inputs_unchanged": true,
+  "research_passes_observed": 2,
+  "maximum_research_passes": 3,
+  "counters_reset": false,
+  "manuscript_or_pdf_authored": false,
+  "new_acceptance_created": false,
+  "phase": "research"
+}

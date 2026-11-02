@@ -1,0 +1,177 @@
+{
+  "job_id": "c022-spe-memory-research-5979be48ad66",
+  "arithmetic": "exact finite sets and integer bitmasks",
+  "exhaustive": {
+    "description": "all labelled 2-vertex 2-player no-dead-end directed arenas, all ownership and target memberships, initial vertex 0",
+    "expected_games": 576,
+    "games": 576,
+    "profiles": 612,
+    "product_nodes": 1986,
+    "max_product_nodes": 7,
+    "max_rank": 1,
+    "max_fixed_point_iterations": 2
+  },
+  "random": {
+    "seed": 20261102,
+    "games": 1000,
+    "players_vertices": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        8
+      ]
+    ]
+  },
+  "total": {
+    "games": 1576,
+    "profiles": 1848,
+    "product_nodes": 21187,
+    "max_product_nodes": 116,
+    "max_rank": 7,
+    "max_fixed_point_iterations": 5
+  },
+  "negative_controls": {
+    "merging_history_correct_product_nodes": 13,
+    "owner_omission_rejected": "('profitable deviation after legal history', 1, (2, (0, 0, 0)), 0)",
+    "rank_omission_rejected": "('promise not realized', (0, (0, 1, 0)), 0, 1)",
+    "off_profile_noncredible_threat_rejected": "('profitable deviation after legal history', 1, (2, (0, 0, 0)), 0)",
+    "merging_game": {
+      "adj": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "owners_zero_based": [
+        2,
+        0,
+        1,
+        2,
+        2,
+        2
+      ],
+      "target_masks": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "players": 3,
+      "initial_payoff_mask": 0
+    }
+  },
+  "all_checks_passed": true,
+  "elapsed_seconds": 0.229,
+  "scope_limit": "Finite structural-label/machine checks only; arbitrary infinite arenas are covered only by the separate mathematical proof."
+}

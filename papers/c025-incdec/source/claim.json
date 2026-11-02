@@ -1,0 +1,32 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "For every finite ground set E and every pair of normalized nonnegative monotone submodular h,g:2^E -> R_{>=0}, endpoint-oriented one-sided actual-objective greedy returns, deterministically in O(|E|^2) exact value-oracle queries and polynomial arithmetic/comparisons, one permutation pi satisfying 2[h(S_k)+g(E\\S_k)] >= max_{|O|=k}[h(O)+g(E\\O)] simultaneously for every k=0,...,|E|, with arbitrary unequal totals and zero objectives included. Orient forward when h(E)>=g(E), otherwise swap h/g and reverse the resulting order. Together with the reproduced existing structural lower bound approaching 2, this establishes C_struct=C_poly=2 in the full immutable source.md/problem.md scope; nonnegative unnormalized baselines transfer by subtraction and addition as proved.",
+  "contribution": "Proposed sharp full-scope deterministic upper bound 2, improving the verified source upper 1+e/(e-1) and matching its existing lower 2. The new proposed mechanism compares actual objective gains in one endpoint-chosen direction, charges the entire union-comparison loss once to the initial endpoint budget, and uses the larger endpoint after gains turn negative. This resolves the entire arbitrary-pair single-permutation gap rather than a restricted case or an intermediate lemma. The lower bound is explicitly prior work. Bounded current primary search found no complete equivalent; fresh review must independently judge correctness, antecedents, substantive innovation and separate STOC significance. No acceptance or readiness is asserted.",
+  "proposer_job_id": "c025-incdec-research-76b5f4e5209a",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "evidence/research-pass-3/oriented-greedy-proof.md",
+    "evidence/research-pass-3/literature.md",
+    "evidence/research-pass-3/research-progress.md",
+    "evidence/research-pass-3/oriented-greedy-exact.json",
+    "evidence/research-pass-3/oriented-greedy-lp.json",
+    "evidence/research-pass-3/exact-verification.json",
+    "evidence/research-pass-3/prefix-kernel-screen.json",
+    "code/pass3_oriented_greedy.py",
+    "code/pass3_oriented_lp.py",
+    "code/pass3_prefix_kernel.py",
+    "code/verify_pass3.py",
+    "code/pass2_residual.py",
+    "code/chain_dp.py",
+    "evidence/research-pass-2/template-screen.json",
+    "evidence/research-pass-2/comparator-screen.json",
+    "intake/source-inputs.json",
+    "intake/primary/incremental-decremental-2026.pdf",
+    "intake/primary/incremental-decremental-2026.txt",
+    "intake/ESA2026-scope-update.json",
+    "intake/primary/ESA2026-134-incremental.pdf",
+    "intake/primary/ESA2026-134-incremental.txt"
+  ]
+}

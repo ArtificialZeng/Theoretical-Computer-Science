@@ -1,0 +1,8 @@
+{
+  "python": "Python 3.13, existing scientific environment",
+  "numpy": "2.2.3",
+  "scipy": "1.15.3",
+  "rust": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "rust_installation": "Official task-local minimal toolchain; shell profiles unchanged. Rust is required by stoc1, NumPy/SciPy by the selected Q14 checker.",
+  "original_source_bytes_unchanged": true
+}

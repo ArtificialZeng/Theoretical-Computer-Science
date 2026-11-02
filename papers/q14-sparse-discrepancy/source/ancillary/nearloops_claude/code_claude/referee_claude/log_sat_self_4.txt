@@ -1,0 +1,2 @@
+selftest n=4 kissat: codim2-subcube no-nl:SATISFIABLE (expect SAT); half-cube contains-nl:SATISFIABLE (expect SAT); codim2 contains-nl:UNSATISFIABLE (expect UNSAT); half-cube no-nl:UNSATISFIABLE (expect UNSAT)
+selftest n=4 cadical: codim2-subcube no-nl:SATISFIABLE (expect SAT); half-cube contains-nl:SATISFIABLE (expect SAT); codim2 contains-nl:UNSATISFIABLE (expect UNSAT); half-cube no-nl:UNSATISFIABLE (expect UNSAT)

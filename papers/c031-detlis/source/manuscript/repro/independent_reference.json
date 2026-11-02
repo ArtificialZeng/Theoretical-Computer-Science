@@ -1,0 +1,518 @@
+{
+  "job_id": "c031-detlis-referee-f280f716946c",
+  "snapshot_digest": "76aff8cb1dceada574829e417470dcca336a544f9c08e579f9c49cff43896135",
+  "started_utc": "2026-11-02T10:08:54.134976+00:00",
+  "finished_utc": "2026-11-02T10:08:55.420343+00:00",
+  "status": "passed",
+  "counts": {
+    "inputs": 1236,
+    "subpaths": 35318,
+    "localized_traces": 21850,
+    "short_query_thresholds": 330120,
+    "stitching_pivots": 88758,
+    "rounded_table_entries": 2160,
+    "aggregate_scores": 512,
+    "compression_steps": 64,
+    "certified_compressions": 8
+  },
+  "fixtures": [
+    {
+      "values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sample": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        null,
+        2
+      ],
+      "p": "1",
+      "eta": "1/2",
+      "initial": "209/4096",
+      "terminal": "0",
+      "certified": true,
+      "output": [
+        null,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sample": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        null,
+        2
+      ],
+      "p": "1/4",
+      "eta": "1/4",
+      "initial": "45847/4096",
+      "terminal": "5",
+      "certified": false,
+      "output": [
+        1,
+        4,
+        2,
+        null
+      ]
+    },
+    {
+      "values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sample": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        5,
+        null,
+        null
+      ],
+      "p": "1",
+      "eta": "1/2",
+      "initial": "53/2048",
+      "terminal": "0",
+      "certified": true,
+      "output": [
+        null,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "sample": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        5,
+        null,
+        null
+      ],
+      "p": "1/4",
+      "eta": "1/4",
+      "initial": "5779/1024",
+      "terminal": "2",
+      "certified": false,
+      "output": [
+        0,
+        4,
+        null,
+        2
+      ]
+    },
+    {
+      "values": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "sample": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        null,
+        2
+      ],
+      "p": "1",
+      "eta": "1/2",
+      "initial": "161/4096",
+      "terminal": "0",
+      "certified": true,
+      "output": [
+        null,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "values": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "sample": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        null,
+        2
+      ],
+      "p": "1/4",
+      "eta": "1/4",
+      "initial": "357/64",
+      "terminal": "5",
+      "certified": false,
+      "output": [
+        0,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "values": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "sample": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        5,
+        null,
+        null
+      ],
+      "p": "1",
+      "eta": "1/2",
+      "initial": "45/2048",
+      "terminal": "0",
+      "certified": true,
+      "output": [
+        null,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "values": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "sample": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        5,
+        null,
+        null
+      ],
+      "p": "1/4",
+      "eta": "1/4",
+      "initial": "101/32",
+      "terminal": "2",
+      "certified": false,
+      "output": [
+        0,
+        2,
+        4,
+        4
+      ]
+    },
+    {
+      "values": [
+        0,
+        3,
+        1,
+        2,
+        2,
+        4
+      ],
+      "sample": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        null,
+        2
+      ],
+      "p": "1",
+      "eta": "1/2",
+      "initial": "225/4096",
+      "terminal": "0",
+      "certified": true,
+      "output": [
+        null,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "values": [
+        0,
+        3,
+        1,
+        2,
+        2,
+        4
+      ],
+      "sample": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        null,
+        2
+      ],
+      "p": "1/4",
+      "eta": "1/4",
+      "initial": "5623/512",
+      "terminal": "5",
+      "certified": false,
+      "output": [
+        5,
+        2,
+        null,
+        0
+      ]
+    },
+    {
+      "values": [
+        0,
+        3,
+        1,
+        2,
+        2,
+        4
+      ],
+      "sample": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        5,
+        null,
+        null
+      ],
+      "p": "1",
+      "eta": "1/2",
+      "initial": "53/2048",
+      "terminal": "0",
+      "certified": true,
+      "output": [
+        null,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "values": [
+        0,
+        3,
+        1,
+        2,
+        2,
+        4
+      ],
+      "sample": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        5,
+        null,
+        null
+      ],
+      "p": "1/4",
+      "eta": "1/4",
+      "initial": "2855/512",
+      "terminal": "2",
+      "certified": false,
+      "output": [
+        0,
+        4,
+        2,
+        null
+      ]
+    },
+    {
+      "values": [
+        1,
+        0,
+        1,
+        0,
+        2,
+        3
+      ],
+      "sample": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        null,
+        2
+      ],
+      "p": "1",
+      "eta": "1/2",
+      "initial": "209/4096",
+      "terminal": "0",
+      "certified": true,
+      "output": [
+        null,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "values": [
+        1,
+        0,
+        1,
+        0,
+        2,
+        3
+      ],
+      "sample": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        null,
+        2
+      ],
+      "p": "1/4",
+      "eta": "1/4",
+      "initial": "20651/2048",
+      "terminal": "6",
+      "certified": false,
+      "output": [
+        1,
+        4,
+        null,
+        2
+      ]
+    },
+    {
+      "values": [
+        1,
+        0,
+        1,
+        0,
+        2,
+        3
+      ],
+      "sample": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        5,
+        null,
+        null
+      ],
+      "p": "1",
+      "eta": "1/2",
+      "initial": "53/2048",
+      "terminal": "0",
+      "certified": true,
+      "output": [
+        null,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "values": [
+        1,
+        0,
+        1,
+        0,
+        2,
+        3
+      ],
+      "sample": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        5,
+        null,
+        null
+      ],
+      "p": "1/4",
+      "eta": "1/4",
+      "initial": "5727/1024",
+      "terminal": "2",
+      "certified": false,
+      "output": [
+        5,
+        0,
+        2,
+        null
+      ]
+    }
+  ],
+  "limits": "Fresh finite checks only. Exhaustive ternary words through length 5 for short reporting and stitching; all permutations through 6 for path identities; 16 manually parameterized compressions. No candidate code imported or rerun. No empirical claim about the asymptotic running time.",
+  "script_sha256": "22864fa4e2365a86b955c4df0ab707fbd8056904b5381696c78694bdf171f24f"
+}

@@ -1,75 +1,74 @@
 #!/usr/bin/env python3
-"""Clean-build manuscript PDFs in disposable copies, preserving released files."""
+"""Clean-build the primary PDFs of the unified catalog on disposable copies."""
 import argparse
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timezone
+from datetime import datetime,timezone
 import json
 import os
 from pathlib import Path
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import time
 
-from reproduce import ROOT, select
+sys.dont_write_bytecode=True
+from reproduce import ROOT,select
 
 
 def pdf_text(path):
-    if not shutil.which('pdftotext'):
-        return None
-    result = subprocess.run(['pdftotext', str(path), '-'], capture_output=True, check=True)
-    return re.sub(rb'\s+', b' ', result.stdout).strip()
+    output=subprocess.check_output(['pdftotext',str(path),'-'])
+    return re.sub(rb'\s+',b' ',output).strip()
 
 
-def build(p, timeout, destination):
-    started = time.monotonic()
+def build(p,timeout,destination):
+    if p.get('legacy_check_adapter'):
+        from check_conversations import check as original_check
+        return original_check(p,argparse.Namespace(mode='build',timeout=timeout),destination)
+    started=time.monotonic()
     with tempfile.TemporaryDirectory(prefix='tcs-build-') as temporary:
-        source = Path(temporary) / 'source'
-        shutil.copytree(ROOT / p['source_directory'], source)
-        for suffix in ('.aux', '.bbl', '.blg', '.fdb_latexmk', '.fls', '.out', '.toc'):
-            for f in source.rglob('*' + suffix):
-                f.unlink()
-        for f in source.rglob('*.pdf'):
-            f.unlink()
-        environment = os.environ.copy()
-        environment['TEXINPUTS'] = './/:'
-        environment['BSTINPUTS'] = './/:'
-        command = ['latexmk', '-gg', '-pdf', '-interaction=nonstopmode', '-halt-on-error',
-                   '-outdir=../output/pdf', 'main.tex']
+        source=Path(temporary)/'source'
+        shutil.copytree(ROOT/p['source_directory'],source)
+        for suffix in ['.aux','.bbl','.blg','.fdb_latexmk','.fls','.out','.toc']:
+            for path in source.rglob('*'+suffix):
+                path.unlink()
+        directory=source/p.get('build_directory','manuscript')
+        output=source/'.sync-clean-build'
+        environment=os.environ.copy()
+        environment['TEXINPUTS']='.//:'
+        environment['BSTINPUTS']='.//:'
+        tex=p.get('tex_entry','main.tex')
+        command=['latexmk','-gg','-pdf','-interaction=nonstopmode','-halt-on-error','-outdir='+str(output),tex]
         try:
-            result = subprocess.run(command, cwd=source / 'manuscript', env=environment,
-                                    capture_output=True, timeout=timeout)
-            output, code = result.stdout + result.stderr, result.returncode
+            result=subprocess.run(command,cwd=directory,env=environment,capture_output=True,timeout=timeout)
+            log_bytes,code=result.stdout+result.stderr,result.returncode
         except subprocess.TimeoutExpired as e:
-            output, code = (e.stdout or b'') + (e.stderr or b'') + b'\nTIMEOUT\n', 124
-        built = source / 'output/pdf/main.pdf'
-        text_equal = pdf_text(built) == pdf_text(ROOT / p['pdf']) if code == 0 and built.exists() else False
-        log = destination / (p['id'] + '.log')
-        log.write_bytes(output.replace(str(Path(temporary)).encode(), b'<temporary>'))
-        passed = code == 0 and built.is_file() and text_equal
-        record = {'id': p['id'], 'passed': passed, 'exit_code': code,
-                  'normalized_pdf_text_matches_release': text_equal,
-                  'seconds': round(time.monotonic() - started, 3),
-                  'log': log.relative_to(ROOT).as_posix()}
-    print(f"{p['id']}: {'PASS' if passed else 'FAIL'}", flush=True)
+            log_bytes,code=(e.stdout or b'')+(e.stderr or b'')+b'\nTIMEOUT\n',124
+        built=output/(Path(tex).stem+'.pdf')
+        equal=code==0 and built.is_file() and pdf_text(built)==pdf_text(ROOT/p['pdf'])
+        log=destination/(p['id']+'.log')
+        log.write_bytes(log_bytes.replace(str(Path(temporary)).encode(),b'<temporary>'))
+        record={'id':p['id'],'passed':bool(equal),'exit_code':code,'normalized_pdf_text_matches_release':bool(equal),
+                'seconds':round(time.monotonic()-started,3),'log':log.relative_to(ROOT).as_posix()}
+    print(p['id']+': '+('PASS' if equal else 'FAIL'),flush=True)
     return record
 
 
 def main():
-    args, papers = select(argparse.ArgumentParser(description=__doc__))
-    for tool in ('latexmk', 'pdftotext'):
-        if not shutil.which(tool):
-            raise SystemExit('Required build verification tool not installed: ' + tool)
-    destination = ROOT / 'validation/builds'
-    destination.mkdir(parents=True, exist_ok=True)
+    args,papers=select(argparse.ArgumentParser(description=__doc__))
+    for name in ['latexmk','pdftotext']:
+        if not shutil.which(name):
+            raise SystemExit('Required tool missing: '+name)
+    destination=ROOT/'validation/unified-builds'
+    destination.mkdir(parents=True,exist_ok=True)
     with ThreadPoolExecutor(max_workers=args.jobs) as executor:
-        records = list(executor.map(lambda p: build(p, args.timeout, destination), papers))
-    passed = all(p['passed'] for p in records)
-    (destination / 'summary.json').write_text(json.dumps({
-        'utc': datetime.now(timezone.utc).isoformat(), 'passed': passed,
-        'comparison': 'Whitespace-normalized pdftotext output; PDF timestamps may differ',
-        'papers': records}, indent=2) + '\n')
+        records=list(executor.map(lambda p:build(p,args.timeout,destination),papers))
+    passed=all(p['passed'] for p in records)
+    summary_name='summary.json' if args.all else 'summary-'+args.paper+'.json'
+    (destination/summary_name).write_text(json.dumps({'at_utc':datetime.now(timezone.utc).isoformat(),
+        'passed':passed,'scope':'Clean builds and normalized PDF text comparison for the primary indexed versions; no new manuscript editing or mathematical acceptance.',
+        'papers':records},indent=2)+'\n')
     raise SystemExit(0 if passed else 1)
 
 

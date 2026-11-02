@@ -1,0 +1,23 @@
+{
+  "job_id": "c022-spe-memory-release-fb6f51f9715a",
+  "frozen_text_locations": {
+    "BBGR18": {
+      "file": "intake/weak-spe-full.txt",
+      "Proposition9": "printed p.6",
+      "Proposition19": "printed pp.10-11",
+      "Corollary21": "printed p.13, Reach proof p.19",
+      "Theorem34": "printed p.25"
+    },
+    "Main26": {
+      "file": "intake/main-NE-2026.txt",
+      "Remark1": "printed p.5",
+      "Theorem23": "printed p.23"
+    },
+    "FKMSSV10": {
+      "file": "intake/flesch-existence/Flesch-et-al-2010.txt",
+      "model_and_existence": "printed pp.743-744",
+      "minimizing_continuation": "printed p.750, Section3.3 equation17"
+    }
+  },
+  "note": "Page numbers checked by reading page headers, not inferred from PDF file offsets."
+}

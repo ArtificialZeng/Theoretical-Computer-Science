@@ -1,0 +1,21 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "disproved",
+  "summary": "Release gate passed for the 11-page accepted full-resolution manuscript. Clean build and all-page visual audits passed; one optional citation-metadata limitation is disclosed.",
+  "next_test": "Supervisor runs release_gate.py publish on this checked state and verifies the local manifest/PDF digest.",
+  "evidence": [
+    "checkpoint.md",
+    "audit/citations.json",
+    "audit/citations.md",
+    "audit/build.json",
+    "audit/build.md",
+    "audit/visual.json",
+    "audit/visual.md",
+    "audit/manuscript-snapshot.json",
+    "evidence/release-v2/release-check.json",
+    "evidence/release-v2/integrity.json",
+    "evidence/release-v2/rebuild-comparison.json",
+    "manuscript/build/main.pdf"
+  ]
+}

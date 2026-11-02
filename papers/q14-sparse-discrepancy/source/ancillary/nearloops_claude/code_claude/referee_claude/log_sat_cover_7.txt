@@ -1,0 +1,1 @@
+cover n=7 solver=kissat: vars=32896 clauses=919808 result=UNSATISFIABLE time=5.4s

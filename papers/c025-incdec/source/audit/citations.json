@@ -1,0 +1,25 @@
+{
+  "job_id": "c025-incdec-release-4b3b2544efe9",
+  "snapshot_digest": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4",
+  "manuscript_digest": "d4717112b7a2b8ec108123ef8efb3e63f3f6ed5f1f6caf1810a2969f35593c6a",
+  "pdf_digest": "407ec869e3c74ed3fea9001fc3e1afb187d4b3175fabfd78c52d40408afeb186",
+  "verdict": "accept",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/acmart.dtx",
+    "manuscript/alphaurl.bst",
+    "manuscript/build.py",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "All eight sorted publication source files, complete TeX/BibTeX dependencies, all 25 extracted claims, three primary source metadata records and nearby theorem hypotheses/passages, bounded novelty language, accepted full original scope, extracted/rendered bibliography, sole author and substantive AI disclosure were reviewed. Current Springer/Dagstuhl/arXiv sources were accessible; no citation-access limitations remain. No designated Excel bibliography exists. One approximate ESA numeric wording was qualified, rebuilt and refrozen. Priority review is bounded to checked sources; CK26 is compared only at its stated fixed-cardinality pruning theorem. The actual working_paper assessment is retained.",
+  "citation_audit_method": "citation-check-skill-advisory-with-primary-text-manual",
+  "search_date": "2026-11-02",
+  "unverified_citations": [],
+  "readiness_label": "working_paper"
+}

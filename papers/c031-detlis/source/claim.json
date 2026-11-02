@@ -1,0 +1,29 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "For every positive integer n, every nonnegative integer m, every sequence of n arbitrary real values (with repetitions allowed), and every family of m index-interval times value-interval rectangles, one uniform deterministic algorithm reports an optimal strictly increasing subsequence in each rectangle using O((n+m)*n^(2/3)*log^30(n+m+2))+O(K) comparison and O(log(n+m+2))-bit word operations, where K is total output length. Constants are universal; arbitrary overlaps, empty ranges and all optimum lengths are covered. This strengthens the same full immutable source.md question with epsilon=1/3. All non-unit-size arithmetic and winner-only output expansion are charged in the proof.",
+  "contribution": "A complete deterministic two-dimensional Range-LIS reporting algorithm with a fixed one-third exponent saving. The proposed substantive step is original-interval localization of canonical source trees within relative merge/reduce, compressed-tree evaluation of all rounded conditional scores, and the complete charged reporting integration. Generic relative approximations, conditional expectation, path-hitting existence, descendant sums and the truncated-LIS/stitching framework are prior art. Har-Peled--Sharir Lemma 2.15 already gives the corresponding generic sampling rate; substantive novelty/value of the background-sensitive implementation requires fresh independent review. This is a stronger version of one original target, with no inherited acceptance or STOC label.",
+  "proposer_job_id": "c031-detlis-research-bf90b0105355",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "evidence/research-bf90b0105355-proof.md",
+    "evidence/research-bf90b0105355-literature.md",
+    "evidence/research-bf90b0105355-check.py",
+    "evidence/research-bf90b0105355-checks.json",
+    "intake/root-diagnostics/check_fenwick_trace_oracle.py",
+    "intake/root-diagnostics/check_localized_net.py",
+    "intake/primary/RangeLIS2404.04795v2.pdf",
+    "intake/primary/RangeLIS2404.04795v2.txt",
+    "intake/primary/WeightedLIS2610.20983v1.pdf",
+    "intake/primary/WeightedLIS2610.20983v1.txt",
+    "intake/root-primary/RelativeApproximations0909.0717.pdf",
+    "intake/root-primary/RelativeApproximations0909.0717.txt",
+    "intake/root-primary/DeterministicSamplingGeometricDataStreams.pdf",
+    "intake/root-primary/DeterministicSamplingGeometricDataStreams.txt",
+    "intake/root-primary/KSkipShortestPaths2011.pdf",
+    "intake/root-primary/KSkipShortestPaths2011.txt",
+    "intake/root-primary/DeterministicReplacementPaths2019.pdf",
+    "intake/root-primary/DeterministicReplacementPaths2019.txt"
+  ]
+}

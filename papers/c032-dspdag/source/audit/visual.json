@@ -1,0 +1,30 @@
+{
+  "job_id": "c032-dspdag-release-5fe4e38b60c7",
+  "snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+  "manuscript_digest": "c2916fd05375010d302349b16227c74c3b9034412b631d619036c3087052fe3f",
+  "pdf_digest": "04e5cdc5235be2a9327b7f80616afcc3d5854ecbab67d4f9fe5c12c23aca20f2",
+  "reviewed_at": "2026-11-02T12:51:51.063385+00:00",
+  "verdict": "accept",
+  "report": "audit/visual.md",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "render_dpi": 110,
+  "rendered_pages": [
+    "evidence/release/page-1.png",
+    "evidence/release/page-2.png",
+    "evidence/release/page-3.png",
+    "evidence/release/page-4.png",
+    "evidence/release/page-5.png",
+    "evidence/release/page-6.png",
+    "evidence/release/page-7.png",
+    "evidence/release/page-8.png"
+  ]
+}

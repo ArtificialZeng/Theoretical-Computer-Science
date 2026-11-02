@@ -1,0 +1,1 @@
+[0] {'d': 9, 'm': 3, 'nlab': 5, 'dimLieS_short': 0, 'dimLieS_gt': 3, 'T1_ok': False, 'bits_v0': 1, 'bits_xhat': 1, 'bits_m': 2, '|Psi|': 24, 'bits_phi': 5, 'dimU_new': 24, 'ht_u_new': 1, 'time': 0.45, 'dimU_gt': 24, 'Z3_ok': True, 'xhat_in_U': True, 'ht_u_gt_adapted': 1}

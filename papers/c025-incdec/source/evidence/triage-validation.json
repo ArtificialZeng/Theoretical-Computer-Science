@@ -1,0 +1,44 @@
+{
+  "job_id": "c025-incdec-triage-ff0d5f864af1",
+  "role": "triage",
+  "recorded_at_utc": "2026-11-01T23:03:13.686371+00:00",
+  "outcome": "advance",
+  "source_status": "open-supported",
+  "original_status": "unresolved",
+  "candidate_kind": "none",
+  "source_sha256": "12956c470e37f8a548f510c7eb1781eda7b961999c5fa1163df43b56513b45a4",
+  "source_unchanged": true,
+  "research_passes_observed": 0,
+  "research_passes_consumed": 0,
+  "source_inputs": [
+    {
+      "path": "intake/primary/incremental-decremental-2026.pdf",
+      "sha256": "63304ebd20c7401f394f4e54035fc8b47223a6fcfecb823b7d7422c0d1545913",
+      "bytes": 445307,
+      "manifest_match": true
+    },
+    {
+      "path": "intake/primary/incremental-decremental-2026.txt",
+      "sha256": "01c5de094ec3d6fe17ed0edbfca37f9d4944765e2dbf6d4c782ce443b8d3cc82",
+      "bytes": 93776,
+      "manifest_match": true
+    }
+  ],
+  "registry": {
+    "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/research/continuous/registry.json",
+    "sha256": "170a5a260e74a78f1b98c362f0302d47bcf6a21e499dadd475376f5f1310c977",
+    "lead_count": 317,
+    "term_match_count": 1,
+    "terms": [
+      "incremental",
+      "incdec",
+      "decremental"
+    ],
+    "limitation": "Term screening plus supplied semantic comparison; not an exhaustive equivalence proof."
+  },
+  "mathematical_experiments_run": false,
+  "efficiency_caveat": "Source infimum unrestricted; polynomial value-oracle upper bound additionally required.",
+  "acceptance_or_readiness_assessed": false,
+  "final_validation_at_utc": "2026-11-01T23:03:33.771331+00:00",
+  "worker_result_schema_checked": true
+}

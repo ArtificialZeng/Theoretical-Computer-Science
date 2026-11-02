@@ -1,0 +1,4 @@
+minimal dimension of the reversal: 4  ranks {'0': 4, '1': 2}
+r1 fixed: True ; v0 not in Q r1: True
+alpha(l) = -(2*l - 1)/2   beta(l) = l*(2*l + 3)/5   beta/(alpha-1) = 2*l*(-2*l - 3)/(5*(2*l + 1))
+identity symbolic: True

@@ -1,0 +1,28 @@
+{
+  "job_id": "c032-dspdag-release-5fe4e38b60c7",
+  "snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+  "manuscript_digest": "c2916fd05375010d302349b16227c74c3b9034412b631d619036c3087052fe3f",
+  "pdf_digest": "04e5cdc5235be2a9327b7f80616afcc3d5854ecbab67d4f9fe5c12c23aca20f2",
+  "reviewed_at": "2026-11-02T12:51:51.063385+00:00",
+  "render_command": "pdftoppm -r 110 -png output/pdf/dspdag-working_paper.pdf evidence/release/page",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "images": {
+    "evidence/release/page-1.png": "2a52ab58b7abbed7f3a0034cd4e59fa64722135c8791530a4512bb0fdafeacd1",
+    "evidence/release/page-2.png": "5127391c5119bce9d5aed4b99879841d85df057ffaeb3abd09d49a44db6aef38",
+    "evidence/release/page-3.png": "3c56d528e4821c54d555612aea0b4c29879a2e1391285e7e56cb97011e6d1613",
+    "evidence/release/page-4.png": "07fd12ebfb9c0222e702919888482ac48840f53bf95e6aef1902213370cc3886",
+    "evidence/release/page-5.png": "66f05d0dc7875d224275013f352ab99dbe11202baaab41e351f310d89b7b34d9",
+    "evidence/release/page-6.png": "8629157a3886758ce29959c1f754fd57b390f1dc7a08052ac4cfd4434d69bbed",
+    "evidence/release/page-7.png": "01d62c1fc1f4b1b933941a65492e13306dcbad47fa30a31d74b008b148a071ee",
+    "evidence/release/page-8.png": "366f305974a83d4ddd53e9a8951e58025bee399aa341612c18a12208236048d3"
+  }
+}

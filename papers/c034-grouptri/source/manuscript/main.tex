@@ -1,0 +1,472 @@
+\documentclass[manuscript,screen,nonacm,11pt]{acmart}
+\settopmatter{printfolios=true,printccs=false,printacmref=false}
+\setcopyright{none}
+\geometry{letterpaper,margin=1in}
+\setlength{\footskip}{16pt}
+\raggedbottom
+\usepackage{mathtools}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Ot}{\widetilde O}
+\newcommand{\eps}{\varepsilon_0}
+\newcommand{\Tri}{\operatorname{Tri}}
+\newcommand{\Om}{\Omega}
+\title{Truly Subcubic Exact Triangle over Bounded-Exponent Abelian Groups}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\renewcommand{\shortauthors}{Zijian Zeng}
+\begin{abstract}
+For every fixed integer $M\ge2$, we give a deterministic algorithm for
+Exact Triangle over compactly presented finite abelian groups of exponent
+dividing $M$ and polynomial order. On a complete tripartite graph with at
+most $n$ vertices in each part and group order at most $n^c$, the algorithm
+runs in $O_{M,c}(n^{3-\delta_M}\operatorname{polylog}(n+2))$ word-RAM
+operations, where $\delta_M>0$ is independent of $c$. This resolves the
+bounded-exponent question in Majdoddin's Open Problem~21.12, using his
+elementary-group algorithm as the base case. One conservative saving is
+$\delta_M=10^{-3}(144000)^{1-\Om(M)}$, where $\Om$ counts prime factors
+with multiplicity. We construct quotient-zero pieces using capped witness
+lists and the known hitting-set/frequency decomposition. Each piece has
+edgewise vertex potentials. Lifting these potentials cancels carries before
+division into the kernel, even for non-split extensions. Separate absence
+markers make every recursive query a legitimate complete input. All witness
+acquisition, graph construction, coordinate arithmetic and recursive calls
+are charged.
+\end{abstract}
+\keywords{Exact Triangle, finite abelian groups, bounded exponent,
+fine-grained algorithms, quotient and kernel}
+\begin{document}
+\maketitle
+\clearpage
+
+\section{The result and its context}
+
+Exact Triangle asks whether three edge labels around a triangle sum to zero.
+The algebra of the labels matters when the group is given by short coordinate
+vectors rather than by an enumerated multiplication table. We consider a
+complete tripartite graph with parts $U,X,V$, each of size at most $n$.
+Every edge has a label in
+\[
+ G=\prod_{j=1}^d\Z_{m_j},\qquad m_j\ge2,\quad m_j\mid M,
+ \qquad |G|\le n^c.
+\]
+The presentation lists the cyclic factors and each label's residues. Both
+$M\ge2$ and $c>0$ are fixed, but the algorithm must handle every dimension
+allowed by this order bound. A solution is a triple whose three labels sum
+to zero in $G$. We allow the empty product, representing the trivial group.
+
+\begin{theorem}\label{thm:main}
+For each fixed $M\ge2$ there is a deterministic uniform word-RAM algorithm
+that solves this problem, for every fixed $c>0$, in
+\[
+ O_{M,c}\bigl(n^{3-\delta_M}\operatorname{polylog}(n+2)\bigr),
+ \qquad
+ \delta_M=\frac1{1000}\left(\frac1{144000}\right)^{\Om(M)-1}.
+\]
+The saving is independent of $c$. The bound includes reading the input,
+preprocessing, constructing every instance, coordinate arithmetic, and all
+recursive calls. Words have $\Theta(\log(n+2))$ bits. Each group vector has
+$O_c(\log(n+2))$ residues, and operations are charged coordinate by
+coordinate.
+\end{theorem}
+
+Majdoddin~\cite{Maj26}, Theorem~21.3 and Corollary~21.7(a), supplies the
+elementary-group case. His Remark~21.8 explains the difficulty in transferring
+the list-based lifting method to triangles: an edge's lift carry depends on
+the other labels, and a useful split must survive re-gauging. His
+Propositions~21.9 and~21.10 treat, respectively, few quotient-zero triangles
+and limited incident residue diversity. Open Problem~21.12 asks for a truly
+subcubic algorithm without these promises, including the unrestricted
+$\Z_4^d$ case and the general fixed bounded-exponent case. Theorem~\ref{thm:main}
+extends the elementary backend to every fixed bounded exponent for compact
+cyclic-product inputs.
+
+Our contribution is the fully charged quotient/kernel extension step.
+Chan, Vassilevska Williams and Xu~\cite[Theorem~5.1]{CVX23} give a
+zero-triangle decomposition with a hitting-set/frequency structure. Its
+initial witness sorting is cubic; its faster update bound cannot be used
+as fresh-input preprocessing. We reconstruct the part of that structure
+needed here using capped detection, and explicitly expose the edgewise
+potential equations already underlying their construction. Those equations
+let us cancel arbitrary lift carries before making kernel queries. We pay
+for complete, explicitly labelled graphs rather than using the cost of a
+compact representation. A finite induction then handles every fixed $M$.
+Capped listing, hitting sets and frequency decomposition are established
+supporting tools. For prior relationships between detection, all-edge
+detection and listing, see Sheffield, Vassilevska Williams and Xi~\cite{SWX26}.
+Our extension uses the conservative capped routine proved below.
+
+The result removes the elementary/non-elementary distinction for this entire
+bounded-exponent class, including dense quotient-zero inputs with many
+incident residue classes. The quantitative guarantee is weak:
+$\delta_4=1/144000000$, and it deteriorates with $\Om(M)$. The comparison
+above uses the stated versioned primary results.
+
+\paragraph{Research methodology.}
+OpenAI Codex materially contributed to developing the quotient/kernel
+algorithm and proof, comparing prior work, and implementing exact semantic
+checks. A separate model context reviewed the mathematical argument and
+wrote an additional verifier. The closing AI methodology statement describes
+the full scope of this assistance.
+
+\section{Representation and the elementary backend}\label{sec:backend}
+
+Throughout, $\Ot$ suppresses a fixed power of $\log(n+2)$ and constants
+depending on the fixed parameters. Group coordinates have bounded modulus
+when $M$ is fixed. The order promise gives $d\le c\log_2 n$ for nontrivial
+inputs. Thus coordinatewise operations and comparisons cost $O_{M,c}(\log(n+2))$,
+not one operation. Sorting means deterministic lexicographic sorting of
+representations, without assuming an order compatible with group addition.
+
+The embedding $\Z_m\hookrightarrow\Z_M$, $x\mapsto(M/m)x$, is injective
+when $m\mid M$. Applying it to every coordinate preserves zero sums and
+takes $O_{M,c}(n^2\log(n+2))$ operations. The ambient group becomes $\Z_M^d$,
+of order at most $n^{c\log_2 M}$. There is no group enumeration. We may
+therefore prove the algorithm for homogeneous groups.
+
+We use the following precise prior dependency, with $\eps=1/1000$.
+For every fixed prime $p$, elementary-group Exact Triangle over $\F_p^D$
+has a deterministic algorithm taking
+\begin{equation}\label{eq:backend}
+ O_{p,C}\bigl(b^{3-\eps}\operatorname{polylog}(b+2)\bigr)
+ \quad\text{whenever }p^D\le b^C,
+\end{equation}
+for every fixed $C$, with the saving independent of $C$.
+Indeed, Majdoddin~\cite[Theorem~21.3]{Maj26} states the running time
+\[
+ O\bigl(p^6b^{3-\varepsilon\gamma}(\log b)^6\bigr)
+\]
+under his matrix primitive
+$H(\varepsilon,\gamma)$. His Corollary~9.1(b) and Section~16 instantiate
+$H(1/14,0.077)$, giving $\varepsilon\gamma=0.0055>\eps$;
+Corollary~21.7(a) makes this unconditional. For a fixed $p$, the restriction
+$p\le b^{\varepsilon/4}$ excludes only a finite range, handled by direct
+enumeration. We rely on this stated prior theorem and its matrix dependency,
+rather than assuming a new matrix oracle. The algorithm uses the actual
+dimension, not a supplied numerical bound $C$.
+
+For the rest of the proof, write the labels on $U_iX_k$, $X_kV_j$, $U_iV_j$
+as $A_{ik},B_{kj},-C_{ij}$, respectively. We seek
+\begin{equation}\label{eq:zero}
+ A_{ik}+B_{kj}-C_{ij}=0\quad\text{in }\Z_M^d.
+\end{equation}
+Missing edges arise only inside reductions; the original input is complete.
+Here is a uniform way to represent them. Over any $\Z_q^D$ with $q\ge2$,
+append three coordinates, one for each edge kind. Present edges have zero
+markers. An absent edge has zero original coordinates and marker $1$ in its
+own kind's coordinate, zero in the other two. These are the actual
+\emph{plus-sum} labels. A triangle has one edge of each kind, so its marker
+sum is zero exactly when all three edges are present. The construction
+works also in characteristic two, where one shared sentinel could cancel.
+Encoding a graph of side $b$ costs $O(b^2(D+3))$ operations.
+
+\section{Capped witnesses from legal detection queries}\label{sec:capped}
+
+The following standard detection/listing construction records the cutoff
+needed when dimension is measured against the original input size.
+
+\begin{lemma}\label{lem:capped}
+Fix a prime $p$, constants $c>0$ and $0<\theta<1$, and a positive integer
+cap $T=O(n^{1-\theta})$. On a possibly masked instance over $\F_p^d$ with
+$p^d\le n^c$, one can deterministically obtain, for each outer pair $(i,j)$,
+exactly $\min(t_{ij},T)$ distinct middle witnesses, where $t_{ij}$ is its
+true number of present zero triangles. The fully charged time is
+$\Ot(n^{3-\eps\theta/6})$.
+\end{lemma}
+\begin{proof}
+Handle $n\le1$ directly. Pad the three parts to the least power of two
+$N\ge n$, marking every edge incident to a padded vertex absent. Put
+$\alpha=\theta/6$, and let $b_0$ be the least power of two at least
+$N^\alpha$. Thus $N^\alpha\le b_0<2N^\alpha$, except for the harmless
+equality at $N=1$. Store a counter and a list for each original outer pair.
+
+Traverse the product octree of the three padded intervals in depth-first
+order: each cube of side $b>b_0$ has eight children of side $b/2$. On
+entering a cube, construct a fresh complete encoded query. Its active edges
+are the original present edges, except that any outer pair whose counter
+has reached $T$ is also absent. Query~\eqref{eq:backend}, using the three
+absence coordinates. A negative cube returns. A positive cube of side
+larger than $b_0$ visits its children. At a positive cube of side $b_0$,
+scan every triple, outputting exactly the genuine present zero triangles
+whose pair is still unsaturated; increment its counter immediately.
+
+Every emitted witness is genuine, and leaves have disjoint tuple domains,
+so witnesses are distinct. Every positive cube emits at least once before
+returning. To see this, choose an active witness at entry. If no earlier
+descendant emits, its pair remains unsaturated and its path stays positive
+until a leaf emits it. If an earlier descendant emits, the assertion already
+holds. Depth-first execution ensures that no outside subtree changes the
+counters during this argument. A pair finally below $T$ never saturated,
+so none of its witnesses could have been pruned; all were emitted. A pair
+at $T$ has exactly $T$ distinct stored witnesses. This proves the cap claim.
+
+All queries have $b\ge b_0\ge N^\alpha$. Since $n\ge2$,
+\[
+ p^{d+3}\le p^3n^c\le N^{c+3\log_2 p}
+       \le b^{(c+3\log_2 p)/\alpha}.
+\]
+Thus one fixed order exponent makes every detector call legal. There are no
+queries below this cutoff. Word sizes $\log b$ and $\log n$ differ by a
+fixed factor. At side $b$ there are at most $(N/b)^3$ queries. Both their
+construction and detection cost at most
+$\Ot(N^3b^{-\eps})$, since $b^2\le b^{3-\eps}$. Summing over levels
+gives $\Ot(n^{3-\alpha\eps})$, including negative queries and control.
+
+There are $Z\le n^2T=O(n^{3-\theta})$ outputs. Distinct positive leaves
+emit distinct tuples, so at most $Z$ leaves are scanned. Their total cost
+is $\Ot(Zb_0^3)=\Ot(n^{3-\theta+3\alpha})
+=\Ot(n^{3-\theta/2})$. This is dominated by the detector bound. Counters,
+lists, padding and coordinate operations fit the same bound; cubes can be
+streamed. If $b_0=N$, the scan concerns a finite range depending on $\alpha$,
+or follows the same estimates. No preprocessing universe is assumed.
+\end{proof}
+
+\section{A charged quotient decomposition}\label{sec:pieces}
+
+Let $M$ be composite, choose its least prime divisor $p$, and put $q=M/p$.
+Reduce $A,B,C$ modulo $p$, writing $a,b,c$ for labels in $Q=\F_p^d$.
+Choose a rational $0<\theta<1$, to be fixed in Section~\ref{sec:cost}, and set
+\begin{equation}\label{eq:params}
+ s=2^{\lfloor\theta\lfloor\log_2 n\rfloor\rfloor},\qquad
+ L=\lfloor n/s\rfloor,\quad T=L+1,\quad r=s^2.
+\end{equation}
+Here $s=\Theta(n^\theta)$, $1\le s\le n$, and $T=O(n^{1-\theta})$.
+Integer logarithms and rational arithmetic implement these parameters
+without floating-point rounding. Define
+$W_{ij}=\{k:a_{ik}+b_{kj}=c_{ij}\}$.
+
+Apply Lemma~\ref{lem:capped}. A pair with fewer than $T$ stored witnesses
+is \emph{light}; its list is complete and has size at most $L$. Put these
+triangles in $R_{\rm few}$. All other pairs are \emph{heavy}. For each
+heavy pair retain its genuine stored set $S_{ij}$ of size $L+1>n/s$.
+The total number of stored incidences is $O(n^3/s)$.
+
+Greedily hit these sets by middle vertices. If $m$ unhit sets remain,
+their total incidences exceed $mn/s$, so some vertex hits more than $m/s$
+sets. Repeatedly choose a vertex of maximum current incidence degree.
+After $O(s\log(n+2))$ choices all sets are hit; denote the chosen set by
+$H$. Assign each heavy pair its first chosen hitter $h_{ij}\in S_{ij}$.
+In particular, this pivot is a real witness, so
+\begin{equation}\label{eq:pivot}
+ c_{ij}=a_{i h_{ij}}+b_{h_{ij}j}.
+\end{equation}
+For $s=1$ no pair is heavy, since $T=n+1$.
+To implement the greedy rule, use incidence lists and a max heap of degrees,
+breaking ties by vertex index. Once a set is hit, delete its incidences and
+update degrees. Each incidence is deleted once; setup, updates and pivot
+assignment take $O((n^3/s+n^2+n)\log(n+2))$ operations.
+
+For each $h\in H$ and $k\in X$, sort the $|V|$ values $b_{hj}-b_{kj}$,
+keeping the list of indices for each value. Let $F_{hk}$ contain the values
+of frequency strictly greater than $n/r$. There are at most $r$ such values;
+give them a canonical lexicographic order. Write $t_{hk\ell}$ for the
+$\ell$-th one, when defined, with $1\le\ell\le r$. All tables take
+$\Ot(|H|n^2)=\Ot(sn^2)$ time and storage.
+
+For each $(h,i,k)$ look up $v=a_{ik}-a_{ih}$. If $v\notin F_{hk}$,
+scan its index list, of size at most $n/r$, and retain a triple $(i,k,j)$
+only if $(i,j)$ is heavy and $h_{ij}=h$. Put these triples in $R_{\rm low}$.
+Equation~\eqref{eq:pivot} and the matched value show they are quotient-zero.
+The assignment filter prevents duplicates from different pivots. The total
+scan and setup cost is
+\begin{equation}\label{eq:lowcost}
+ \Ot(|H|n^2+|H|n^3/r)=\Ot(sn^2+n^3/s).
+\end{equation}
+
+For each $(h,\ell)\in H\times\{1,\ldots,r\}$ form a masked graph $P_{h\ell}$
+on the original vertex sets. Its present edges are exactly
+\begin{align}
+ U_iV_j &: (i,j)\text{ is heavy and }h_{ij}=h,\nonumber\\
+ U_iX_k &: t_{hk\ell}\text{ is defined and }a_{ik}-a_{ih}=t_{hk\ell},\label{eq:pieces}\\
+ X_kV_j &: t_{hk\ell}\text{ is defined and }b_{hj}-b_{kj}=t_{hk\ell}.\nonumber
+\end{align}
+There are $|H|r=\Ot(s^3)$ pieces.
+
+\begin{lemma}\label{lem:partition}
+The quotient-zero triangles are the disjoint union of $R_{\rm few}$,
+$R_{\rm low}$, and the triangles of all $P_{h\ell}$.
+On a fixed piece there are potentials $\alpha_i,\beta_j,\tau_k\in Q$
+such that every present edge satisfies
+\begin{equation}\label{eq:potentials}
+ a_{ik}=\alpha_i+\tau_k,\qquad
+ b_{kj}=\beta_j-\tau_k,\qquad
+ c_{ij}=\alpha_i+\beta_j.
+\end{equation}
+\end{lemma}
+\begin{proof}
+A light pair contributes precisely its listed quotient-zero triangles.
+For a heavy quotient-zero triangle, its assigned $h=h_{ij}$ is unique,
+and~\eqref{eq:pivot} gives
+$a_{ik}-a_{ih}=b_{hj}-b_{kj}$. If this value is low frequency, the scan
+puts it in $R_{\rm low}$. Otherwise it is in a unique slot $\ell$ of
+$F_{hk}$, and all three edges satisfy~\eqref{eq:pieces}. Conversely, a
+triangle in a piece is quotient-zero by the same equations. Uniqueness of
+the assigned pivot and of the slot for fixed $(h,k)$ proves disjointness.
+
+For a fixed piece, take $\alpha_i=a_{ih}$, $\beta_j=b_{hj}$, and
+$\tau_k=t_{hk\ell}$ if defined, otherwise $\tau_k=0$.
+The two incident-edge identities follow from~\eqref{eq:pieces}; the outer
+identity follows from the assigned actual witness~\eqref{eq:pivot}.
+If the slot is undefined, both incident edge kinds at $X_k$ are absent,
+so its arbitrary potential makes no assertion about a present edge.
+\end{proof}
+
+This is the hitting/frequency mechanism of~\cite[Theorem~5.1]{CVX23},
+reconstructed over $Q$ using only equality and subtraction. What changes
+in its construction is the capped acquisition of genuine witnesses, rather
+than cubic initial sorting. Materializing all pieces still costs
+$\Ot(s^3n^2)$; that charge is essential below.
+
+\section{Removing lift carries and encoding the kernel}\label{sec:kernel}
+
+Fix $P_{h\ell}$ and its potentials in Lemma~\ref{lem:partition}.
+Lift $\alpha_i,\beta_j,\tau_k$ to vectors $u_i,v_j,z_k\in\Z_M^d$
+by choosing coordinate representatives in $\{0,\ldots,p-1\}$.
+These lifts need not define a homomorphism. On present edges put
+\begin{equation}\label{eq:adjust}
+ A'_{ik}=A_{ik}-u_i-z_k,\qquad
+ B'_{kj}=B_{kj}-v_j+z_k,\qquad
+ C'_{ij}=C_{ij}-u_i-v_j.
+\end{equation}
+Each vector reduces to zero modulo $p$ by~\eqref{eq:potentials}, so it
+belongs to $(p\Z_M)^d$. On any present triangle the lifted potentials
+cancel exactly:
+\begin{equation}\label{eq:cancel}
+ A'_{ik}+B'_{kj}-C'_{ij}=A_{ik}+B_{kj}-C_{ij}\quad\text{in }\Z_M^d.
+\end{equation}
+The additive map $p\Z_M\longrightarrow\Z_q$, $px\mapsto x\bmod q$,
+is well-defined and bijective: two representatives $px,py$ agree modulo
+$M=pq$ exactly when $x=y\bmod q$. This works also when $p\mid q$.
+Consequently dividing all three adjusted vectors by $p$ turns their
+zero-sum condition into the original condition~\eqref{eq:zero}.
+There is no assumption that the extension splits and no discarded carry.
+
+Make a complete kernel instance over $\Z_q^{d+3}$. A present edge gets
+plus-sum label $A'/p$, $B'/p$, or $-C'/p$, with zero markers. An absent
+edge gets zero original coordinates and $1$ in its own edge-kind marker.
+The marker argument in Section~\ref{sec:backend} proves that every zero
+triangle of this complete instance uses present edges. Together with
+\eqref{eq:cancel}, this gives an exact correspondence between its zero
+triangles and the original zero triangles contained in the piece.
+In particular the marker on the third edge is $+1$ as a plus-sum label;
+the sign convention for $C$ does not alter the absence test.
+
+Each query has the same vertex-side bound $n$ as the original instance,
+and $q^{d+3}\le n^C$ for a fixed $C$ depending on $M,c$, for $n\ge2$.
+For example, the extra constant factor $q^3$ is at most
+$n^{3\log_2 q}$. Along recursion only three coordinates per layer are
+added, and the depth depends only on $M$. Thus the inductive order promise
+is valid in every call. We do not retain a large dimension while applying
+the kernel algorithm to tiny sides. All edge tests, potentials, adjusted
+coordinates, divisions, and markers take $\Ot(n^2)$ time per piece;
+this is an explicit complete graph, not an oracle representation.
+
+\section{The algorithm and its total cost}\label{sec:cost}
+
+We prove Theorem~\ref{thm:main} by induction on $M$. Empty parts return NO.
+If the input group is trivial, a nonempty complete graph returns YES.
+For $n\le1$, read and check its at most one triangle directly. Apply the
+coordinate embedding of Section~\ref{sec:backend} otherwise. For prime $M$,
+use~\eqref{eq:backend}, setting $\delta_M=\eps$.
+
+For composite $M$, let $p$ be its least prime divisor, $q=M/p\ge2$, and
+use the already established algorithm at exponent $q$. Set
+\begin{equation}\label{eq:recurrence}
+ \theta=\delta_q/12,\qquad \alpha=\theta/6,\qquad
+ \delta_M=\eps\delta_q/144=\delta_q/144000.
+\end{equation}
+Construct the capped lists, exception sets and pieces of
+Section~\ref{sec:pieces}. Check every exception in the original group,
+returning YES if it satisfies~\eqref{eq:zero}. For each piece construct the
+complete kernel instance of Section~\ref{sec:kernel} and run the exponent-$q$
+algorithm. Return YES if any call does, and NO otherwise.
+
+Correctness follows from the disjoint partition in Lemma~\ref{lem:partition}
+and the kernel correspondence. Every original zero triangle is quotient-zero,
+so it is checked directly or represented in a kernel query. Conversely,
+exception checks are made in the original group, and a positive kernel query
+has no absent edge and satisfies~\eqref{eq:cancel}. All recursive decisions
+are correct by induction. Only decision is needed from the kernel algorithm.
+
+For clarity the full ledger, including every complete graph construction, is
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Operation & Charged time, up to fixed polylogarithms\\
+\midrule
+Capped quotient witnesses & $n^{3-\eps\theta/6}$\\
+Lists, hitting set, light exceptions & $n^3/s+n^2$\\
+Frequency tables, low exceptions & $sn^2+n^3/s$\\
+All materialized kernel graphs & $s^3n^2$\\
+All recursive kernel calls & $s^3n^{3-\delta_q}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The $\log(n+2)$ factors in $|H|$ and sorting are included in the notation.
+In particular we multiply the entire inductive cost by the number of pieces;
+there is no amortized free call or uncharged initialization. Input reading,
+coordinate embedding, direct exception tests, control, and termination are
+covered by the displayed terms. Streaming one complete piece at a time is
+sufficient. Stored witness lists, frequency tables, counters and incidence
+structures have polynomial size, so their indices occupy a constant number
+of logarithmic words. No unit-cost long integer operations are used.
+
+Because $s=\Theta(n^\theta)$, the possible exponent savings in this ledger
+are at least
+\[
+ \eps\theta/6,\quad\theta,\quad1-\theta,\quad
+ 1-3\theta,\quad\delta_q-3\theta=3\delta_q/4.
+\]
+Here $0<\delta_q\le\eps\le1$, so the smallest is
+$\eps\delta_q/72$. Taking half of it in~\eqref{eq:recurrence} leaves
+slack to absorb every fixed polylogarithm, even when its exponent or constant
+depends on $M,c$. All rounding in~\eqref{eq:params} changes only fixed
+multiplicative constants. Fixed-prime exceptional ranges of the backend,
+and any finite small-$n$ cases, are absorbed by direct enumeration with
+constants depending on the fixed parameters. This proves the stated time
+bound. Iterating~\eqref{eq:recurrence} until a prime remains gives
+$\delta_M=10^{-3}(144000)^{1-\Om(M)}$, independently of $c$.
+
+Uniformity here means an explicit deterministic procedure for the compact
+input: the dimension is read, the least prime divisor and rational parameters
+are computable from $M$, and every loop and recursive call is specified.
+There is no advice depending on $n$, no preprocessed universe, and no supplied
+order exponent required by the algorithm. All recursive exponent parameters
+are smaller, so termination follows as well. This completes the proof.
+
+\section{Verification and limitations}
+
+The theorem is a decision algorithm on complete compact inputs for fixed
+$M$, with an explicit saving depending on $M$. Its proof uses the stated
+elementary-group theorem of~\cite{Maj26} and the existing matrix primitive.
+The source's full chain of matrix dependencies is used as prior work; a
+formal verification of that chain is outside this paper.
+
+Exact Python checks supplement the argument. A separately written verifier
+checked 512 capped-listing instances on sides in $\{0,1,2,3\}$ with varying
+caps and traversal orders; 676,333 one-coordinate potential/kernel cases
+for composite $M\le36$ and proper prime divisors; and 3,548,440 marker cases
+for $2\le q\le36$. It also checked 360 seeded graph decompositions with
+sides $1$--$6$ and dimensions $1$--$3$, yielding 6,850 explicit kernel
+instances, and 2,047 exact rational exponent ledgers for $2\le M\le2048$.
+The graph tests include ordinary and dense quotient-gauge inputs. Their
+detectors are brute force; these are finite semantic checks, neither a
+benchmark of the fast algorithm nor a proof of the infinite theorem.
+The supplied verification scripts and their coverage records are suitable
+for reproducing these finite checks locally.
+
+\paragraph{AI methodology.}
+OpenAI Codex was used substantially throughout the research: to develop and
+test the quotient/kernel algorithm, reconstruct supporting prior machinery,
+search and compare primary literature, write exact verification programs,
+and draft this paper. A separate model context performed an internal
+mathematical and novelty review and wrote the additional verifier. This
+assistance materially affected the arguments, experiments, literature
+comparisons, and exposition throughout the paper. The sole listed human
+author is responsible for checking the content, dependencies, references,
+and originality before dissemination.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\end{document}

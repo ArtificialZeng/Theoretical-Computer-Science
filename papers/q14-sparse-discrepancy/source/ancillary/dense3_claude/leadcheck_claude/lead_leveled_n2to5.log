@@ -1,0 +1,60 @@
+leveled n=2 |I|=1 thresholds ['199/100', '299/100']
+  j=1: 3 patterns (Burnside 3), 3 boxes, 0.0s
+  j=2: 6 patterns (Burnside 6), 6 boxes, 0.0s
+TOTAL n=2 s=1: 9 patterns, 9 boxes, not proved 0
+leveled n=3 |I|=1 thresholds ['199/100', '299/100', '299/100']
+  j=1: 4 patterns (Burnside 4), 4 boxes, 0.0s
+  j=2: 13 patterns (Burnside 13), 13 boxes, 0.0s
+  j=3: 32 patterns (Burnside 32), 34 boxes, 0.0s
+TOTAL n=3 s=1: 49 patterns, 51 boxes, not proved 0
+leveled n=3 |I|=2 thresholds ['199/100', '199/100', '299/100']
+  j=1: 3 patterns (Burnside 3), 3 boxes, 0.0s
+  j=2: 9 patterns (Burnside 9), 9 boxes, 0.0s
+  j=3: 19 patterns (Burnside 19), 23 boxes, 0.0s
+TOTAL n=3 s=2: 31 patterns, 35 boxes, not proved 0
+leveled n=4 |I|=1 thresholds ['199/100', '299/100', '299/100', '299/100']
+  j=1: 4 patterns (Burnside 4), 4 boxes, 0.0s
+  j=2: 16 patterns (Burnside 16), 16 boxes, 0.0s
+  j=3: 54 patterns (Burnside 54), 56 boxes, 0.0s
+  j=4: 156 patterns (Burnside 156), 198 boxes, 0.0s
+TOTAL n=4 s=1: 230 patterns, 274 boxes, not proved 0
+leveled n=4 |I|=2 thresholds ['199/100', '199/100', '299/100', '299/100']
+  j=1: 4 patterns (Burnside 4), 4 boxes, 0.0s
+  j=2: 17 patterns (Burnside 17), 17 boxes, 0.0s
+  j=3: 52 patterns (Burnside 52), 56 boxes, 0.0s
+  j=4: 147 patterns (Burnside 147), 257 boxes, 0.1s
+TOTAL n=4 s=2: 220 patterns, 334 boxes, not proved 0
+leveled n=4 |I|=3 thresholds ['199/100', '199/100', '199/100', '299/100']
+  j=1: 3 patterns (Burnside 3), 3 boxes, 0.0s
+  j=2: 9 patterns (Burnside 9), 9 boxes, 0.0s
+  j=3: 23 patterns (Burnside 23), 29 boxes, 0.0s
+  j=4: 51 patterns (Burnside 51), 149 boxes, 0.0s
+TOTAL n=4 s=3: 86 patterns, 190 boxes, not proved 0
+leveled n=5 |I|=1 thresholds ['199/100', '299/100', '299/100', '299/100', '299/100']
+  j=1: 4 patterns (Burnside 4), 4 boxes, 0.0s
+  j=2: 17 patterns (Burnside 17), 17 boxes, 0.0s
+  j=3: 65 patterns (Burnside 65), 67 boxes, 0.0s
+  j=4: 230 patterns (Burnside 230), 272 boxes, 0.0s
+  j=5: 736 patterns (Burnside 736), 1258 boxes, 3.9s
+TOTAL n=5 s=1: 1052 patterns, 1618 boxes, not proved 0
+leveled n=5 |I|=2 thresholds ['199/100', '199/100', '299/100', '299/100', '299/100']
+  j=1: 4 patterns (Burnside 4), 4 boxes, 0.0s
+  j=2: 20 patterns (Burnside 20), 20 boxes, 0.0s
+  j=3: 79 patterns (Burnside 79), 83 boxes, 0.0s
+  j=4: 285 patterns (Burnside 285), 399 boxes, 0.1s
+  j=5: 914 patterns (Burnside 914), 2460 boxes, 6.5s
+TOTAL n=5 s=2: 1302 patterns, 2966 boxes, not proved 0
+leveled n=5 |I|=3 thresholds ['199/100', '199/100', '199/100', '299/100', '299/100']
+  j=1: 4 patterns (Burnside 4), 4 boxes, 0.0s
+  j=2: 17 patterns (Burnside 17), 17 boxes, 0.0s
+  j=3: 58 patterns (Burnside 58), 64 boxes, 0.0s
+  j=4: 183 patterns (Burnside 183), 333 boxes, 0.1s
+  j=5: 514 patterns (Burnside 514), 2454 boxes, 5.8s
+TOTAL n=5 s=3: 776 patterns, 2872 boxes, not proved 0
+leveled n=5 |I|=4 thresholds ['199/100', '199/100', '199/100', '199/100', '299/100']
+  j=1: 3 patterns (Burnside 3), 3 boxes, 0.0s
+  j=2: 9 patterns (Burnside 9), 9 boxes, 0.0s
+  j=3: 23 patterns (Burnside 23), 29 boxes, 0.0s
+  j=4: 56 patterns (Burnside 56), 168 boxes, 0.0s
+  j=5: 120 patterns (Burnside 120), 1032 boxes, 3.2s
+TOTAL n=5 s=4: 211 patterns, 1241 boxes, not proved 0

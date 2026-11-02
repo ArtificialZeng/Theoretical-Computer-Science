@@ -1,0 +1,22 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Fresh citation, clean-build, all-seven-page visual and extracted-ZIP reproduction audits passed; release_gate.py check succeeded. Retained working_paper classification and disclosed two optional CKS publisher-refresh limitations. Accepted mathematics and immutable source unchanged.",
+  "next_test": "Supervisor runs release_gate.py publish on the validated state and verifies the activated digests while retaining working_paper.",
+  "evidence": [
+    "audit/citations.json",
+    "audit/citations.md",
+    "audit/build.json",
+    "audit/build.md",
+    "audit/visual.json",
+    "audit/visual.md",
+    "audit/manuscript-snapshot.json",
+    "audit/stoc-assessment.json",
+    "evidence/release-7db9e6fea069-gate-check.json",
+    "evidence/release-7db9e6fea069-zip-reproduction.json",
+    "evidence/release-7db9e6fea069-working_paper-source.zip",
+    "manuscript/build/aonflow-working_paper.pdf",
+    "checkpoint.md"
+  ]
+}

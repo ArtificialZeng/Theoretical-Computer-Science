@@ -1,0 +1,60 @@
+{
+  "at_utc": "2026-11-02T06:32:51.173735+00:00",
+  "project": "c029-vftfast",
+  "pdf_sha256": "8f61902bb7427aec09254cd8ac7566c87a76748f4dc9eb4d9bbed9828af7a7a8",
+  "source_archive_sha256": "5efb7b6502e0e74396ea94a1428eb16c1d43caffa2c6be55e145ef93caae3461",
+  "actual_root_viewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "inspection": "All final release-page renders actually viewed by root. Fresh delivered-PDF renders at115dpi matched every viewed PNG byte; new packaged PDF unchanged after reproduction-entry repair. No clipped/overlapping text, cut equations, unreadable references or missing glyphs seen.",
+  "pages": 7,
+  "letter_single_column": true,
+  "declared_body_font": "official acmart11pt option; bibliography reset to normalsize",
+  "margins": "geometryletterpaper margin1in; actual page renders checked",
+  "all_fonts_embedded": true,
+  "official_class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "sole_author_verified": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "ai_body_and_endmatter_present": true,
+  "final_zip_actual_clean_build_and_all_page_pixels_match": true,
+  "finite_reproduction_scripts": [
+    "evidence/research3_full_checks.py",
+    "evidence/research3_parameter_checks.py",
+    "evidence/reproduce_referee_finite.py"
+  ],
+  "offline_referee_reproduction_equivalence": {
+    "all_math_helper_functions_AST_identical": {
+      "coordinate": true,
+      "basis": true,
+      "dp": true,
+      "paths": true,
+      "faults": true,
+      "bfs": true,
+      "dist": true,
+      "scan": true,
+      "pendant": true
+    },
+    "main_start_and_entire_finite_test_loop_AST_identical": true,
+    "original_reviewer_script_unchanged": true,
+    "omitted_only": "Internal third-party cache hash check and audit-report write; output explicitly labelled offline reproduction, not new review."
+  },
+  "initial_package_failure_preserved": "research/archive/continuous/c029-vftfast-20261102T143113/initial-package-verification-failure.json",
+  "readiness_label": "working_paper",
+  "stoc_remaining_limits": [
+    "Technical depth and breadth/consequence uncertain in actual fresh assessment.",
+    "Finite reference implementations are checks, not practical runtime benchmarks or proofs of asymptotic sparsity."
+  ],
+  "external_submission_performed": false,
+  "external_upload_performed": false
+}

@@ -1,0 +1,11 @@
+# Bounded writing operations
+
+Job c021-ccrapumping-write-f8f9e1107e7a. Only this project was modified. No agents, other Codex processes, background workers, process-environment diagnostics, package installations, submissions, uploads, contacts or emails were used. External tools read current primary sources and the official CFP.
+
+The PDF skill was read and its artifact-start marker completed successfully exactly once immediately before manuscript authoring. One combined PDF was authored after check-math passed and after reading the fresh accepted math/innovation records. Old historical manuscript, PDF, acceptance and release files were not modified or promoted as current.
+
+Operational failures preserved honestly: the first attempted build command ran in the project root with an incorrect relative log path, and failed before launching TeX. A subsequent metadata-edit snippet used root-relative paths from manuscript/ and failed with FileNotFoundError before editing. Both were corrected by explicit working directories. The source compilation then completed; no operational error was used as mathematical evidence. First-pass title/header warnings were corrected using a short running title and a PDF-string-safe line break. A final clean rebuild ran latexmk -C then latexmk -pdf main.tex successfully.
+
+The remaining harmless optional metadata warnings are acmart's missing affiliation city (the institution/country preserve the user-provided affiliation without inventing a campus) and ACM BibTeX's empty publisher address for C25 (not supplied by the cited primary record). No undefined citation/reference, TeX error or overfull box remains. No mathematical evidence, accepted claim, snapshot, audit verdict, research counter, usage record or scheduling state was changed. Earlier research checkpoint and all failed routes remain preserved.
+
+All eleven final PDF pages were rendered at 110 dpi and visually inspected individually, including the first-page sole-author contact, projection and quotient equations, finite-control algebra proof, algorithm bounds, synthesis formula, pumping calculation, assistance disclosure and all references. This is writer QA only. A separate fresh release review remains required.

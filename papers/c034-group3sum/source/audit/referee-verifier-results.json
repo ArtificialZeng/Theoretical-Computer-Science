@@ -1,0 +1,19 @@
+{
+  "job_id": "c034-group3sum-referee-f77368142a77",
+  "snapshot_digest": "15a73043f23436b1592a376f95f678e39919b724da29d1fc7773757f6a82f52a",
+  "status": "all_exact_assertions_passed",
+  "counts": {
+    "reduced_row_distributions": 1382,
+    "full_row_distributions": 778,
+    "profile_subinstances": 4622,
+    "support_instances": 144,
+    "literal_product_entries": 45932,
+    "probes_checked": 13244,
+    "failed_probes_checked": 3036
+  },
+  "limits": [
+    "Finite algebra/interface checks only; no proof of an asymptotic bound or priority.",
+    "The matrix primitive is checked by its published theorem statement, not reimplemented here.",
+    "The independent derivation of costs and success probability is in audit/math.md."
+  ]
+}

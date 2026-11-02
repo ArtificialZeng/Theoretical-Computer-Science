@@ -1,0 +1,14 @@
+{
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Primary sources support the open full-scope deterministic sharp-ratio target. Preserved the distinction between the unrestricted source infimum and the required polynomial-oracle construction; verified known bounds, normalization, and algorithm-specific barriers. No research pass or publication candidate.",
+  "next_test": "Run bounded exact rational reachability DP for 2-good chains on n<=8 coverage pairs, including source equal-total and tight-double-greedy adversaries; distinguish global chain obstructions from local extension failures and seek a polynomial constructive invariant.",
+  "evidence": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/triage.md",
+    "evidence/triage-validation.json",
+    "intake/source-inputs.json"
+  ]
+}

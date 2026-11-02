@@ -1,0 +1,15 @@
+{
+  "job_id": "c032-dspdag-research-2c4a21894757",
+  "selection": "held-out boundary family chosen after initial schedule/tests were fixed",
+  "rng_seed": 73190,
+  "instances": 80,
+  "yes_instances": 36,
+  "covers": [
+    "zero-edge s_i=t_i paths",
+    "interleaved source/target ranks",
+    "all three paths trivial",
+    "dense and sparse positive-weight DAGs"
+  ],
+  "result": "all complete frontier tables and shortest-path-enumeration answers agree",
+  "limits": "No endpoint-sharing normalization implementation is tested here; its proof is separately stated."
+}

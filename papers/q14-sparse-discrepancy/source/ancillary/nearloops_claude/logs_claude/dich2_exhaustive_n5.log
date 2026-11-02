@@ -1,0 +1,2 @@
+n=5: 418801 near-loop-free W (incl. empty), 12592 with disconnected complement, 862850 labellings, 0 violations
+python3 -I dich2_exhaustive_claude.py 5  36.60s user 0.29s system 94% cpu 39.239 total

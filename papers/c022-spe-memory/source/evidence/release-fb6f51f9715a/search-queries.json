@@ -1,0 +1,90 @@
+{
+  "job_id": "c022-spe-memory-release-fb6f51f9715a",
+  "search_date": "2026-11-02 Asia/Shanghai",
+  "method": "citation-check-skill search templates; completed query groups plus direct primary opens",
+  "query_groups": [
+    [
+      "flesch",
+      [
+        "Flesch 2010 Perfect Information Games",
+        "\"Perfect-Information Games with Lower-Semicontinuous Payoffs\" site:arxiv.org OR site:semanticscholar.org",
+        "Flesch 2010 Mathematics Operations Research lower semicontinuous",
+        "doi:10.1287/moor.1100.0469"
+      ]
+    ],
+    [
+      "blpr",
+      [
+        "Bruyere 2021 On the Existence",
+        "\"On the Existence of Weak Subgame Perfect Equilibria\" site:arxiv.org OR site:semanticscholar.org",
+        "Bruyere 2021 Information Computation weak equilibria",
+        "doi:10.1016/j.ic.2020.104553"
+      ]
+    ],
+    [
+      "main",
+      [
+        "Main 2026 Arena Independent Memory",
+        "\"Arena-independent memory bounds for Nash equilibria in reachability games\" site:arxiv.org OR site:semanticscholar.org",
+        "Main 2026 Information Computation reachability memory",
+        "doi:10.1016/j.ic.2026.105425"
+      ]
+    ],
+    [
+      "bgmr",
+      [
+        "Brihaye 2023 Reachability Games and Friends",
+        "\"Reachability Games and Friends: A Journey Through the Lens of Memory and Complexity\" site:arxiv.org OR site:semanticscholar.org",
+        "Brihaye 2023 FSTTCS reachability",
+        "doi:10.4230/LIPIcs.FSTTCS.2023.1"
+      ]
+    ],
+    [
+      "ams",
+      [
+        "Alluwaym 2026 Simple Nash Equilibria",
+        "\"Simple Nash Equilibria for Qualitative Multiplayer Games\" site:arxiv.org OR site:semanticscholar.org",
+        "Alluwaym 2026 MFCS",
+        "doi:10.4230/LIPIcs.MFCS.2026.85"
+      ]
+    ],
+    [
+      "fh",
+      [
+        "Fijalkow 2012 The Surprizing Complexity",
+        "\"The Surprizing Complexity of Generalized Reachability Games\" site:arxiv.org OR site:semanticscholar.org",
+        "Fijalkow 2012 arxiv 1010.2420",
+        "arxiv:1010.2420"
+      ]
+    ],
+    [
+      "question",
+      [
+        "Main 2025 Memory Requirements of Subgame",
+        "\"Memory requirements of subgame perfect equilibria in reachability games\" site:semanticscholar.org OR site:arxiv.org",
+        "Main 2025 Automata Exchange memory subgame"
+      ]
+    ],
+    [
+      "bbgr-arxiv",
+      [
+        "arxiv:1806.05544"
+      ]
+    ]
+  ],
+  "initial_bbgr_queries": [
+    "Brihaye 2018 Constrained Existence Problem",
+    "\"Constrained Existence Problem for Weak Subgame Perfect Equilibria with ω-Regular Boolean Objectives\" site:arxiv.org OR site:semanticscholar.org",
+    "Brihaye 2021 Information Computation constrained weak equilibria",
+    "doi:10.1016/j.ic.2020.104594"
+  ],
+  "current_comparison_queries": [
+    "\"reachability\" \"subgame-perfect\" \"arena-independent\" memory 2026",
+    "\"SPE\" \"reachability\" \"memory\" \"2026\" arbitrary arenas"
+  ],
+  "limits": [
+    "The version-specific arXiv 1806.05544v2 refresh returned cache miss; frozen v2 publisher text inspected.",
+    "Flesch author-site PDF refresh timed out; frozen full publisher text inspected.",
+    "BBGR21 DOI endpoint was not successfully independently refreshed; primary university journal record and actual full-version theorem text were available."
+  ]
+}

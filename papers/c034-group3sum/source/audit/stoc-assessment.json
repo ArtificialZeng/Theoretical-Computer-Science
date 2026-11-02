@@ -1,0 +1,45 @@
+{
+  "job_id": "c034-group3sum-referee-f77368142a77",
+  "snapshot_digest": "15a73043f23436b1592a376f95f678e39919b724da29d1fc7773757f6a82f52a",
+  "review_type": "fresh_internal_stoc_assessment",
+  "verdict": "working_paper",
+  "strongest_result": "For every fixed M>=2, let eta=min(1/18,1/(8 ceil(log_2 M))) and delta_M=eta*(63/1000)/2. Three-list zero-sum detection and witness recovery over every compact finite abelian group of exponent dividing M and order <=n^c, for every fixed c>0, has a uniform classical randomized algorithm of worst-case cost O_(M,c)(n^(2-delta_M) polylog(n)). It never returns a false witness, always rejects negative instances, and succeeds on each fixed positive input with probability at least 3/4. This resolves the entire frozen original question.",
+  "nearest_comparisons": [
+    "Majdoddin, arXiv:2610.17420v1, Theorem 19.17/Corollary 19.25: deterministic exponent-dividing-p^2 algorithms already exist. The accepted theorem covers all fixed M, but is randomized and does not improve the existing p^2 exponent guarantee.",
+    "Majdoddin, Lemmas 19.6-19.7 and Section 19.7: support products, probes and a proposed layer-induction direction are prior. The new part is simultaneous original-coset profiles plus the extremal divisor certificate, which avoids a recursive layer construction and balances every order in one call.",
+    "Alman-Vassilevska Williams, arXiv:2610.06783v1, Corollary 26: the thin selected-entry matrix algorithm is inherited in full. This work expands its group-theoretic applicability; it supplies no new matrix exponent, integer-3SUM exponent or APSP improvement.",
+    "Majdoddin, Lemma 20.3(d), Lemma 20.4(a), Remark 20.6: the accepted group theorem implies uniform truly subquadratic algorithms for every fixed abelian-group-representable finite coordinate relation. Those reduction lemmas are prior; no classification of the remaining nonrepresentable relations follows.",
+    "Chan-Itakura-Ma-Yu, arXiv:2610.42012v1, Theorem 2.3/Sections 2-3: recent integer-3SUM and odd-k-SUM results use scalar prime hashing and carry-free convolution. They do not settle this torsion-group scope, but demonstrate that the wider area is moving quickly beyond the original matrix route."
+  ],
+  "criteria": {
+    "importance": {
+      "judgment": "strong",
+      "reason": "The actual theorem closes the whole bounded-exponent algebraic class, with a saving independent of c, instead of one p^3 example. Together with the verified finite-representation reduction it establishes a general sufficient tractability principle for coordinate relations. This is a concrete consequence, not significance inferred solely from an open-problem label."
+    },
+    "novelty": {
+      "judgment": "strong",
+      "reason": "The nearest verified group theorem is confined to exponent dividing p^2. The simultaneous original-coset divisor profiles and extremal row-count certificate are absent from the inspected prior proof and are the substantive mechanism enabling the full extension. A fresh bounded primary search found no equivalent, with priority limits disclosed."
+    },
+    "technical_depth": {
+      "judgment": "uncertain",
+      "reason": "The certificate is a nontrivial and effective new balancing argument, especially its simultaneous control of class branching and every torsion order despite profile fragmentation. However, the support construction and the expensive matrix algorithm are prior, and the source already anticipated the qualitative bounded-layer extension. The present audit establishes substantive innovation but does not establish that this compact replacement for the anticipated induction has sufficiently broad conceptual depth for a competitive STOC paper."
+    },
+    "breadth_or_consequence": {
+      "judgment": "strong",
+      "reason": "The algorithm handles all higher prime powers and mixed products, and the verified prior Lemmas 20.3(d)/20.4(a) imply uniform subquadratic algorithms for every fixed group-representable finite relation. This is a real generic consequence. It leaves nonrepresentable relations, full dichotomies, stronger counting, integer exponents and APSP untouched."
+    },
+    "exposition_and_verifiability": {
+      "judgment": "strong",
+      "reason": "The frozen proof explicitly handles original-profile fragmentation, all sum orders, matrix call dimensions/query budgets, one-sided error, exact parameter computation, worst-case execution caps and witnesses. The independent verifier checks literal support matrices and failed-probe charging on serialized deterministic test families. The mathematical argument is inspectable without relying on the proposer confidence or on computational fitting; manuscript presentation and release audits have not yet occurred."
+    }
+  },
+  "case_for_stoc": "The positive case is a complete algebraic tractability theorem beyond the prior p^2 boundary, proved by a compact simultaneous balancing certificate, with a broad consequence for every fixed group-representable coordinate relation. This connects fine-grained algorithms and finite algebra in a reusable way. The critical limitation is that most of the infrastructure and the qualitative extension goal are inherited; the current record does not yet demonstrate a compelling STOC-level conceptual impact beyond completing that extension. Mathematical correctness and substantive novelty pass, but technical-depth uncertainty prevents submission_ready under the required all-strong rule. The actual classification is working_paper.",
+  "remaining_weaknesses": [
+    "The review does not establish that the new certificate, relative to the source's already suggested layer program, has sufficient conceptual depth for a competitive STOC submission.",
+    "The generic representable-relation consequence is important but follows by prior reductions; no new hardness classification or consequence for nonrepresentable relations is proved.",
+    "The randomized saving deteriorates with M, while known p^2 algorithms remain deterministic and stronger in their existing scope. The qualitative full-class advance, not an exponent improvement, must carry the impact case.",
+    "The current primary-literature screen is bounded in a fast-developing area and cannot certify universal priority.",
+    "No manuscript, clean build, final citation audit or rendered-page verification has yet been performed; this assessment binds the mathematical snapshot only."
+  ],
+  "label_is_not_a_venue_decision": true
+}

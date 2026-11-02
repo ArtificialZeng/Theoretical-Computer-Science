@@ -1,0 +1,5 @@
+C4_2121_b3 m=12 [2, 1, 2, 1] -> UNSAT 
+tri_122_b3 m=9 [1, 2, 2] -> UNSAT 
+W4_level2_b2 m=16 [2, 2, 2, 2, 2] -> UNSAT 
+
+[exited with code 0]

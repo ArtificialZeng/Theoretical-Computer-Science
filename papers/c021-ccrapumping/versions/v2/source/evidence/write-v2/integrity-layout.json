@@ -1,0 +1,85 @@
+{
+  "job_id": "c021-ccrapumping-write-f8f9e1107e7a",
+  "frozen_mathematical_inputs_changed": [],
+  "source_sha256": "688e017d0cb9e92733e81d94a4b79b563f2c44592795597818c63e616df13c0c",
+  "vendor_byte_identical": {
+    "acmart.cls": true,
+    "README": true,
+    "ACM-Reference-Format.bst": true,
+    "acmart.ins": true,
+    "acmart.dtx": true
+  },
+  "pages": 11,
+  "page_dimensions": [
+    [
+      "918",
+      "1188"
+    ],
+    [
+      "918",
+      "1188"
+    ],
+    [
+      "918",
+      "1188"
+    ],
+    [
+      "918",
+      "1188"
+    ],
+    [
+      "918",
+      "1188"
+    ],
+    [
+      "918",
+      "1188"
+    ],
+    [
+      "918",
+      "1188"
+    ],
+    [
+      "918",
+      "1188"
+    ],
+    [
+      "918",
+      "1188"
+    ],
+    [
+      "918",
+      "1188"
+    ],
+    [
+      "918",
+      "1188"
+    ]
+  ],
+  "body_line_count": 164,
+  "tex_body_size": "11pt class option (TeX normal size 10.95pt)",
+  "undefined_reference_or_citation": false,
+  "overfull_boxes": false,
+  "math_scope_preserved": true,
+  "author_count": 1,
+  "remaining_release_gate": "Fresh separate citation/build/visual review; writer checks do not grant release.",
+  "selected_long_text_sizes_pt_poppler_rounded": [
+    8.666666666666666,
+    10.666666666666666
+  ],
+  "font_note": "Rounded Poppler values include the title-page author-contact footnote. Normal body, abstract and references use the 11pt class normal font (TeX 10.95pt); no body-font reduction was applied.",
+  "writer_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "writer_visual_issues_found": []
+}

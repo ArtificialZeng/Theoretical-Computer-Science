@@ -1,0 +1,19 @@
+{
+  "source_referee_job": "c029-vftfast-referee-95ddbe77df2f",
+  "run_role": "offline_reproduction_not_new_referee",
+  "exact_field_prime": 11,
+  "counts": {
+    "graphs": 84,
+    "representative_instances": 2012,
+    "avoidance_comparisons": 22712,
+    "scan_instances": 1636,
+    "insertion_witnesses": 3638,
+    "rejection_fault_tests": 5866,
+    "all_length_path_distance_tests": 15624,
+    "pendant_mixed_tests": 1078
+  },
+  "failures": 0,
+  "elapsed_seconds": 0.263,
+  "coverage": "All labeled n=2,3,4 graphs and ten explicit n=5 masks; d<=3,f<=2 subject to f+d+1<=n; radii d,d+1,2d+1; independent pendant projection checks. Augmented N<=10.",
+  "limitations": "Finite checks only; no literature-cache snapshot, new mathematical/novelty review or asymptotic sparsity verification."
+}

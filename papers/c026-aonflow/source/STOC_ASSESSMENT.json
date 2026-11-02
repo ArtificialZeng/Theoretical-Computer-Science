@@ -1,0 +1,44 @@
+{
+  "job_id": "c026-aonflow-referee-92aab2001150",
+  "snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd",
+  "review_type": "fresh_internal_stoc_assessment",
+  "verdict": "working_paper",
+  "strongest_result": "Accepted full-original-scope randomized polynomial-time congestion-1 AON approximation C log(k+2) exp(C sqrt(log log(k+4))) on every undirected unit-capacity graph with k indexed terminal pairs; always feasible output and at least 3/4 probability of the cardinality guarantee.",
+  "nearest_comparisons": [
+    "CKS2005 Theorem 3.2 gives O(log^2 k) general-graph AON. The candidate improves the ratio to log^(1+o(1)) k without augmented congestion or restricted inputs.",
+    "BJS2026 Theorem 3.1 supplies the integral-node-weight decomposition and Conjecture 5.1 states the exact AON target. The candidate adds a fixed-path admission-preserving transfer; it does not add a new decomposition theorem.",
+    "CKS2005 Lemma 1.1 / Theorem 3.1 and corrected CKS2013 Section 3.4 supply uniformization and exact matching rounding. These substantial ingredients are prior work; the candidate contribution is their full-scope interface with BJS.",
+    "Anand2026 Theorem 5.1 / Appendix C improves decomposition overhead with different weight/parameter guarantees, but no equivalent AON resolution was located in its primary full text."
+  ],
+  "criteria": {
+    "importance": {
+      "judgment": "strong",
+      "reason": "The theorem improves the full general-graph congestion-1 admission problem from the verified O(log^2 k) baseline to near-logarithmic approximation. Unit admission is a meaningful nonlinear objective and the improvement applies to the whole original input class."
+    },
+    "novelty": {
+      "judgment": "strong",
+      "reason": "No equivalent original-scope algorithm was located in the bounded fresh primary search. The fixed-path cut charge combined with protected original bridges supplies the admission interface missing from a mere overhead substitution. All uniformization, decomposition and CKS rounding ingredients are explicitly prior work."
+    },
+    "technical_depth": {
+      "judgment": "uncertain",
+      "reason": "The new proof is a compact composition of powerful established tools. Its interface is useful and mathematically substantive, but the record does not establish a new decomposition or rounding method, a matching lower bound, or technical depth comparable to strong broad STOC advances."
+    },
+    "breadth_or_consequence": {
+      "judgment": "uncertain",
+      "reason": "The AON improvement itself is general and substantial, but no further algorithmic applications or broader transfer consequences beyond this single routing model are established in the frozen candidate. A concrete competitive breadth case remains unmade."
+    },
+    "exposition_and_verifiability": {
+      "judgment": "uncertain",
+      "reason": "The main reduction and exact bit/success accounting are checkable, and independent finite diagnostics passed. The dossier mixes a precise known CKS theorem with an incomplete sketch of its corrected proof; the residual coverage convention and exact source pagination need clearer exposition. There is no completed manuscript or implemented BJS/CKS composition."
+    }
+  },
+  "case_for_stoc": "A full general-graph exact-congestion AON improvement of nearly one logarithmic exponent is a serious approximation-algorithms contribution. The attractive conceptual point is that one fixed prepared path family and protected admission cuts can bypass changing-throughput weights. That supports mathematical innovation acceptance. It does not yet justify all-strong venue judgments: most technical machinery is imported, and broader consequences and depth of the new interface are uncertain. The appropriate current internal assessment is working_paper, not submission_ready.",
+  "remaining_weaknesses": [
+    "Technical depth of the new interface relative to the substantial known ingredients remains uncertain for competitive STOC evaluation.",
+    "No established consequence beyond the full AON improvement or broader structural transfer theorem is supplied.",
+    "Future exposition should cite CKS2005 Theorem 3.1 precisely, explain its corrected journal support and the residual-cluster coverage convention, and avoid treating journal Theorem 3.8 as an arbitrary-component black box.",
+    "The current equivalent-result search is bounded and source refreshes have disclosed access limits; no exhaustive priority finding is claimed.",
+    "Writing, clean build, citation, visual and release gates remain outside this mathematical referee job."
+  ],
+  "label_is_not_a_venue_decision": true
+}

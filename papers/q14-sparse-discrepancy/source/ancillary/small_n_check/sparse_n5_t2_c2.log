@@ -1,0 +1,6 @@
+n=5 t=2 c=2 j=1: 2 patterns, 2 boxes
+n=5 t=2 c=2 j=2: 7 patterns, 7 boxes
+n=5 t=2 c=2 j=3: 22 patterns, 22 boxes
+n=5 t=2 c=2 j=4: 69 patterns, 101 boxes
+n=5 t=2 c=2 j=5: 198 patterns, 1080 boxes
+TOTAL uncleared: 0

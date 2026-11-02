@@ -1,0 +1,7 @@
+W_3 bundles 1: items=6 clauses=176 kissat: UNSATISFIABLE (0.0s)
+W_4 bundles 1: items=8 clauses=456 kissat: UNSATISFIABLE (0.0s)
+W_5 bundles 1: items=10 clauses=1420 kissat: UNSATISFIABLE (0.0s)
+W_6 bundles 1: items=12 clauses=4968 kissat: UNSATISFIABLE (0.2s)
+W_4 spokes 2: items=12 clauses=9184 kissat: UNSATISFIABLE (0.1s)
+W_5 rim 2, hub private 1: items=16 clauses=67520 kissat: UNSATISFIABLE (23.4s)
+W_3=K_4 all bundles 2: items=12 clauses=6912 kissat: UNSATISFIABLE (0.1s)

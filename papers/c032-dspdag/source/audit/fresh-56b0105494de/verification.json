@@ -1,0 +1,35 @@
+{
+  "job_id": "c032-dspdag-referee-56b0105494de",
+  "status": "passed",
+  "counts": {
+    "cross_nodes": 15854,
+    "product_batches": 1558584,
+    "complete_state_set_comparisons": 4718,
+    "exhaustive_labelled_n3_k3": 3072,
+    "exhaustive_common_n4_k3": 1536,
+    "random_labelled_k2": 30,
+    "random_labelled_k3": 50,
+    "random_labelled_k4": 20,
+    "random_labelled_k5": 10,
+    "weighted_direct_enumeration_comparisons": 360
+  },
+  "weighted_outcomes": {
+    "strict": {
+      "yes": 7,
+      "no": 113
+    },
+    "endpoints_only": {
+      "yes": 12,
+      "no": 108
+    },
+    "internal_only": {
+      "yes": 29,
+      "no": 91
+    }
+  },
+  "seed": 5610494,
+  "elapsed_seconds": 2.0955246249213815,
+  "scope": "Independent bit-mask batching versus scalar recurrence; direct original weighted shortest-path enumeration and three endpoint conventions. Finite bug checks, not an asymptotic or novelty certificate.",
+  "fast_rectangular_algorithm_implemented": false,
+  "script_sha256": "f2f315f5612ea7ec3241658ae524746bda5479552d4f2ab873273da3932dfc1c"
+}

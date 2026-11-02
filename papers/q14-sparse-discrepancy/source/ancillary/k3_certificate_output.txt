@@ -1,0 +1,3 @@
+choices 7365 boxes 20613 max_depth 6 fails 0
+VERIFIED: no product weight admits a bad cover
+python3 -I k3_certificate.py  7.00s user 0.34s system 82% cpu 8.944 total

@@ -1,0 +1,19 @@
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[node distance=5mm and 4mm]
+\node[box,text width=2.7cm] (e) {\textbf{Edit input}\\edge/target toggle\\or legal pair edit};
+\node[box,text width=3.1cm,right=of e] (b) {\textbf{Local bag updates}\\owner to root\\union and closure};
+\node[box,text width=2.8cm,right=of b] (s) {\textbf{Stored summary}\\$S_p$: entry to exit\\matched calls};
+\node[box,text width=3.8cm,right=of s,draw=tfgreen,fill=green!3] (c) {\textbf{Caller propagation}\\$C_{s,p}S_pR_{s,p}$\\target union; caller bags\\then higher caller ranks};
+\node[box,text width=3.1cm,below=of e,draw=tforange,fill=orange!3] (f) {\textbf{New candidate?}\\rebuild\\exact solve};
+\node[box,text width=2.8cm,below=of s] (q) {\textbf{Query access}\\entry/exit: one bit\\other points: pin};
+\draw[arr] (e)--(b);\draw[arr] (b)--(s);\draw[arr] (s)--(c);
+\draw[arr] (s)--(q);\draw[arr,dashed,draw=tforange] (e)--(f);
+\end{tikzpicture}
+\caption{TreeFlow's acyclic update stages. Caller propagation moves strictly
+up the call DAG; it does not feed back into the edited procedure. Queries
+read maintained summaries on a separate branch. Bag matrices have order
+$O((t+1)d)$, $d=D+1$; an edit reaches $\lambda$ gates, costing
+$O(\bits(e)+1+\lambda\cost((t+5)d))$.}
+\label{fig:framework}
+\end{figure}

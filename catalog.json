@@ -1,87 +1,508 @@
 {
-  "schema": 1,
-  "snapshot_date": "2026-11-01",
+  "schema": 2,
+  "snapshot_date": "2026-11-02",
   "papers": [
     {
-      "id": "coverage-sparse",
-      "series": "legacy",
-      "title": "Coverage Correlation Gaps under Graph-Constrained Pairwise Independence",
-      "status": "proved",
-      "kind": "resolution-paper",
+      "source_archive": "papers/c034-group3sum/source.zip",
+      "source_directory": "papers/c034-group3sum/source",
+      "archive_prefix": "c034-group3sum_source/",
+      "reproduction_commands": [
+        [
+          "research/verify_divisor_hash.py"
+        ],
+        [
+          "research/reproduce_referee_finite.py"
+        ]
+      ],
+      "provenance": "papers/c034-group3sum/provenance",
+      "version": "current verified local release",
+      "id": "c034-group3sum",
+      "title": "Truly Subquadratic 3SUM over Every Bounded-Exponent Abelian Group",
       "pages": 8,
-      "pdf": "papers/coverage-sparse/paper.pdf",
-      "source_archive": "papers/coverage-sparse/source.zip",
-      "source_directory": "papers/coverage-sparse/source",
-      "pdf_sha256": "a1fb1c406f6c59c5196dbe1481bb9ea12e5528d261f6be3fe228ee9d3f8d1bca",
-      "source_archive_sha256": "15c6e43066ef6f93af8220da721b8fd9f32d6a096307cc1547f427fea44c679a",
+      "pdf": "papers/c034-group3sum/c034-group3sum_working_paper.pdf",
+      "pdf_sha256": "4b4f3ebf15ef2108bc9e85219b4a16f7bd7f19b9e209052cd53785818350513b",
+      "source_archive_sha256": "648737941d6d01c29f022526dadf67d0fc13f390107d7c50054b5084aa6d933d",
+      "readiness_label": "working_paper",
+      "assessment_basis": "fresh_internal_stoc_assessment",
+      "kind": "resolution-paper",
+      "mathematical_status": "proved",
+      "readme": "papers/c034-group3sum/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "research/verify_divisor_hash.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "research/reproduce_referee_finite.py"
+          ]
+        }
+      ]
+    },
+    {
+      "source_archive": "papers/c034-grouptri/source.zip",
+      "source_directory": "papers/c034-grouptri/source",
+      "archive_prefix": "c034-grouptri_source/",
+      "reproduction_commands": [
+        [
+          "evidence/test_capped_listing.py"
+        ],
+        [
+          "evidence/test_quotient_kernel.py"
+        ],
+        [
+          "manuscript/verification/independent_verifier.py"
+        ]
+      ],
+      "provenance": "papers/c034-grouptri/provenance",
+      "version": "current verified local release",
+      "id": "c034-grouptri",
+      "title": "Truly Subcubic Exact Triangle over Bounded-Exponent Abelian Groups",
+      "pages": 8,
+      "pdf": "papers/c034-grouptri/c034-grouptri_working_paper.pdf",
+      "pdf_sha256": "e9b3d5055ad93f76865143de8acab7b3c4dc6c1f3cd1fe3b20482eb99d68cfa4",
+      "source_archive_sha256": "5883187d35b4c27ccb791da9d5b87149077abf63ffa00a3d88dbb109d3fddd1a",
+      "readiness_label": "working_paper",
+      "assessment_basis": "fresh_internal_stoc_assessment",
+      "kind": "resolution-paper",
+      "mathematical_status": "proved",
+      "readme": "papers/c034-grouptri/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/test_capped_listing.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/test_quotient_kernel.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "manuscript/verification/independent_verifier.py"
+          ]
+        }
+      ]
+    },
+    {
+      "source_archive": "papers/c032-dspdag/source.zip",
+      "source_directory": "papers/c032-dspdag/source",
+      "archive_prefix": "c032-dspdag_source/",
+      "reproduction_commands": [
+        [
+          "evidence/research-2/verify.py"
+        ],
+        [
+          "audit/fresh-56b0105494de/independent_verify.py"
+        ]
+      ],
+      "provenance": "papers/c032-dspdag/provenance",
+      "version": "current verified local release",
+      "id": "c032-dspdag",
+      "title": "Rectangular Batching for Disjoint Shortest Paths on DAGs",
+      "pages": 8,
+      "pdf": "papers/c032-dspdag/c032-dspdag_working_paper.pdf",
+      "pdf_sha256": "04e5cdc5235be2a9327b7f80616afcc3d5854ecbab67d4f9fe5c12c23aca20f2",
+      "source_archive_sha256": "15f869e60bc374c3903ce18ecebcf32cd129a7e438e63f5e1e0773e955dcc4ce",
+      "readiness_label": "working_paper",
+      "assessment_basis": "fresh_internal_stoc_assessment",
+      "kind": "resolution-paper",
+      "mathematical_status": "proved",
+      "readme": "papers/c032-dspdag/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/research-2/verify.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "audit/fresh-56b0105494de/independent_verify.py"
+          ]
+        }
+      ]
+    },
+    {
+      "source_archive": "papers/c031-detlis/source.zip",
+      "source_directory": "papers/c031-detlis/source",
+      "archive_prefix": "",
       "reproduction_commands": [
         [
           "manuscript/reproduce.py"
         ]
+      ],
+      "provenance": "papers/c031-detlis/provenance",
+      "version": "current verified local release",
+      "id": "c031-detlis",
+      "title": "Deterministic Truly Subquadratic Two-Dimensional Range-LIS Reporting",
+      "pages": 9,
+      "pdf": "papers/c031-detlis/c031-detlis_working_paper.pdf",
+      "pdf_sha256": "eda5b06b35b0ffe14b99d31a0397a0e6d5668a624820594da580ab97ebe02afc",
+      "source_archive_sha256": "160e91ff5750f5d74bba73594e4ac442f7a2f1aef448e941c816a4084564182b",
+      "readiness_label": "working_paper",
+      "assessment_basis": "fresh_internal_stoc_assessment",
+      "kind": "resolution-paper",
+      "mathematical_status": "proved",
+      "readme": "papers/c031-detlis/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ]
+        }
       ]
     },
     {
-      "id": "privacy-interpolation",
-      "series": "legacy",
-      "title": "Mandatory Excursions in Privacy-Constrained Probability Paths",
-      "status": "unresolved",
-      "kind": "result-note",
+      "source_archive": "papers/c029-vftfast/source.zip",
+      "source_directory": "papers/c029-vftfast/source",
+      "archive_prefix": "c029-vftfast_source/",
+      "reproduction_commands": [
+        [
+          "evidence/research3_full_checks.py"
+        ],
+        [
+          "evidence/research3_parameter_checks.py"
+        ],
+        [
+          "evidence/reproduce_referee_finite.py"
+        ]
+      ],
+      "provenance": "papers/c029-vftfast/provenance",
+      "version": "current verified local release",
+      "id": "c029-vftfast",
+      "title": "Polynomial-Time Construction of Vertex-Fault-Tolerant Mixed-Stretch Spanners",
       "pages": 7,
-      "pdf": "papers/privacy-interpolation/paper.pdf",
-      "source_archive": "papers/privacy-interpolation/source.zip",
-      "source_directory": "papers/privacy-interpolation/source",
-      "pdf_sha256": "8ec2d595f7e1285ce79dc26f46caadf881d9065bce1928a7865f9d81d91b2d43",
-      "source_archive_sha256": "dfea246476d1a5b57a549ea309c146872017e8ee7c65f0cb96f136bc7631342a",
-      "reproduction_commands": [
-        [
-          "manuscript/reproduce.py"
-        ]
+      "pdf": "papers/c029-vftfast/c029-vftfast_working_paper.pdf",
+      "pdf_sha256": "8f61902bb7427aec09254cd8ac7566c87a76748f4dc9eb4d9bbed9828af7a7a8",
+      "source_archive_sha256": "5efb7b6502e0e74396ea94a1428eb16c1d43caffa2c6be55e145ef93caae3461",
+      "readiness_label": "working_paper",
+      "assessment_basis": "fresh_internal_stoc_assessment",
+      "kind": "resolution-paper",
+      "mathematical_status": "proved",
+      "readme": "papers/c029-vftfast/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/research3_full_checks.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/research3_parameter_checks.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/reproduce_referee_finite.py"
+          ]
+        }
       ]
     },
     {
-      "id": "robust-stopping",
-      "series": "legacy",
-      "title": "Certified Expected-Cost Optimization for Robust Ski Rental",
-      "status": "unresolved",
-      "kind": "result-note",
-      "pages": 11,
-      "pdf": "papers/robust-stopping/paper.pdf",
-      "source_archive": "papers/robust-stopping/source.zip",
-      "source_directory": "papers/robust-stopping/source",
-      "pdf_sha256": "750891c12b44b7761c1c8c96968e8005e68e4b8b7f3f4299a8a5fe80fd96ce84",
-      "source_archive_sha256": "feedbf5adb3b34ce65942ee8a08c0544f32c33a2c534a5dfe516eee9e006c8a2",
+      "source_archive": "papers/c026-aonflow/source.zip",
+      "source_directory": "papers/c026-aonflow/source",
+      "archive_prefix": "c026-aonflow_source/",
       "reproduction_commands": [
         [
-          "manuscript/reproduce.py"
+          "evidence/research-2-check.py"
         ]
+      ],
+      "provenance": "papers/c026-aonflow/provenance",
+      "version": "current verified local release",
+      "id": "c026-aonflow",
+      "title": "A Near-Logarithmic Approximation for All-or-Nothing Flow",
+      "pages": 7,
+      "pdf": "papers/c026-aonflow/c026-aonflow_working_paper.pdf",
+      "pdf_sha256": "50c157c4b7b471f5d2778b669efa55fde604245ebe40372a6c3cd79988c48fe4",
+      "source_archive_sha256": "b7cc2b225daa929c056d7ccebd68a79f2a3324564602f076c6e18723c66d9ca5",
+      "readiness_label": "working_paper",
+      "assessment_basis": "fresh_internal_stoc_assessment",
+      "kind": "resolution-paper",
+      "mathematical_status": "proved",
+      "readme": "papers/c026-aonflow/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/research-2-check.py"
+          ]
+        }
+      ],
+      "additional_versions": [
+        {
+          "pdf": "papers/c026-aonflow/versions/expanded/c026-aonflow_expanded_working_paper.pdf",
+          "source_archive": "papers/c026-aonflow/versions/expanded/source.zip",
+          "source_directory": "papers/c026-aonflow/versions/expanded/source",
+          "archive_prefix": "",
+          "pages": 16,
+          "pdf_sha256": "eb4bdb7694d181d0d63fe1549ad533a4b515290841cfc96f2bde075145f47240",
+          "source_archive_sha256": "a906e52c27f0455367763bbd6f07b6c57bf3c8b3490987ba42d8c01b0d0fedb3",
+          "readiness_label": "working_paper",
+          "assessment_basis": "Existing expanded manuscript; no acceptance under the shared fresh all-strong STOC standard. Claims and original author lists preserved; not a new audited resolution."
+        }
       ]
     },
     {
-      "id": "curvature-noise",
-      "series": "legacy",
-      "title": "A Sparse-Cardinality Curvature Bound under Persistent Adversarial Noise",
-      "status": "unresolved",
-      "kind": "result-note",
+      "source_archive": "papers/c025-pmcdelay/source.zip",
+      "source_directory": "papers/c025-pmcdelay/source",
+      "archive_prefix": "c025-pmcdelay_source/",
+      "reproduction_commands": [
+        [
+          "audit/referee_verify.py"
+        ]
+      ],
+      "provenance": "papers/c025-pmcdelay/provenance",
+      "version": "current verified local release",
+      "id": "c025-pmcdelay",
+      "title": "Polynomial-Delay Enumeration of All Potential Maximal Cliques",
+      "pages": 9,
+      "pdf": "papers/c025-pmcdelay/c025-pmcdelay_working_paper.pdf",
+      "pdf_sha256": "ff0b8c2710e0e8655e39aaaaeef6df945a006e772ebc9559845b12d5f145a80f",
+      "source_archive_sha256": "d8cdf77a3004b949f81c73e223ad3bce6c25594c60b035e3f4f788862cee6f9a",
+      "readiness_label": "working_paper",
+      "assessment_basis": "fresh_internal_stoc_assessment",
+      "kind": "resolution-paper",
+      "mathematical_status": "proved",
+      "readme": "papers/c025-pmcdelay/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "audit/referee_verify.py"
+          ]
+        }
+      ]
+    },
+    {
+      "source_archive": "papers/c025-incdec/source.zip",
+      "source_directory": "papers/c025-incdec/source",
+      "archive_prefix": "c025-incdec_source/",
+      "reproduction_commands": [
+        [
+          "code/verify_pass3.py"
+        ],
+        [
+          "code/pass3_oriented_greedy.py"
+        ]
+      ],
+      "provenance": "papers/c025-incdec/provenance",
+      "version": "current verified local release",
+      "id": "c025-incdec",
+      "title": "Optimal Deterministic Incremental--Decremental Submodular Maximization",
       "pages": 6,
-      "pdf": "papers/curvature-noise/paper.pdf",
-      "source_archive": "papers/curvature-noise/source.zip",
-      "source_directory": "papers/curvature-noise/source",
-      "pdf_sha256": "2a3b071bfdd103f2e2bbbde6f590ea75ee26229a96b46b0c79b3e02d754cf012",
-      "source_archive_sha256": "18ee55050ceb21213f3c8376efab377d5103dc95bbb83ec718a0b370737d79fd",
+      "pdf": "papers/c025-incdec/c025-incdec_working_paper.pdf",
+      "pdf_sha256": "407ec869e3c74ed3fea9001fc3e1afb187d4b3175fabfd78c52d40408afeb186",
+      "source_archive_sha256": "214088df673bb274698c3c32958c33c6f2b6a7dec3063fc39bef7097c3de95f7",
+      "readiness_label": "working_paper",
+      "assessment_basis": "fresh_internal_stoc_assessment",
+      "kind": "resolution-paper",
+      "mathematical_status": "proved",
+      "readme": "papers/c025-incdec/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "code/verify_pass3.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "code/pass3_oriented_greedy.py"
+          ]
+        }
+      ]
+    },
+    {
+      "source_archive": "papers/c022-spe-memory/source.zip",
+      "source_directory": "papers/c022-spe-memory/source",
+      "archive_prefix": "c022-spe-memory_source/",
       "reproduction_commands": [
         [
-          "manuscript/reproduce.py"
+          "code/check_promise_reset.py"
+        ],
+        [
+          "code/check_subset_memory.py"
+        ],
+        [
+          "audit/referee-checks.py"
         ]
+      ],
+      "provenance": "papers/c022-spe-memory/provenance",
+      "version": "current verified local release",
+      "id": "c022-spe-memory",
+      "title": "Arena-Independent Memory for Pure Subgame-Perfect Equilibria in Reachability Games",
+      "pages": 8,
+      "pdf": "papers/c022-spe-memory/c022-spe-memory_working_paper.pdf",
+      "pdf_sha256": "1c714b9216ce3cf89b26123c6beebf3c7a38d14b31e0b5a727dcaa214978306f",
+      "source_archive_sha256": "53009573715781eba5403ec891556538d6ec3e5154e2ffa8e957cebbbf430e1e",
+      "readiness_label": "working_paper",
+      "assessment_basis": "fresh_internal_stoc_assessment",
+      "kind": "resolution-paper",
+      "mathematical_status": "proved",
+      "readme": "papers/c022-spe-memory/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "code/check_promise_reset.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "code/check_subset_memory.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "audit/referee-checks.py"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c021-ccrapumping",
+      "title": "Copyless Realizability of Unipotent Weighted Automata and a Uniform Pumping Separation",
+      "status": "disproved",
+      "kind": "resolution-paper",
+      "pages": 11,
+      "pdf": "papers/c021-ccrapumping/c021-ccrapumping_working_paper.pdf",
+      "source_archive": "papers/c021-ccrapumping/versions/v2/source.zip",
+      "source_directory": "papers/c021-ccrapumping/versions/v2/source",
+      "pdf_sha256": "a995aec21cc9daffd8f604e82c00be5cd08162aeafbc36af0feb17052d4076c1",
+      "source_archive_sha256": "cdd4326932bdddbea79a6ddd5edb20b80da8076a6dc2bbeae3de48fd2bfd5694",
+      "reproduction_commands": [
+        [
+          "evidence/research_checks.py"
+        ],
+        [
+          "evidence/revision2/pass2_exact_checks.py"
+        ],
+        [
+          "evidence/revision2/pass2_algorithm_checks.py"
+        ],
+        [
+          "audit/referee_check.py"
+        ]
+      ],
+      "version": "current verified local release",
+      "archive_prefix": "c021-ccrapumping_source/",
+      "provenance": "papers/c021-ccrapumping/versions/v2/provenance",
+      "readiness_label": "working_paper",
+      "assessment_basis": "conservative_label_pending_fresh_stoc_assessment",
+      "mathematical_status": "disproved",
+      "readme": "papers/c021-ccrapumping/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/research_checks.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/revision2/pass2_exact_checks.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/revision2/pass2_algorithm_checks.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "audit/referee_check.py"
+          ]
+        }
+      ],
+      "earlier_version": {
+        "pdf": "papers/c021-ccrapumping/paper.pdf",
+        "source_archive": "papers/c021-ccrapumping/source.zip",
+        "pages": 9
+      },
+      "additional_versions": [
+        {
+          "pdf": "papers/c021-ccrapumping/versions/expanded-invertible/c021-ccrapumping_expanded_working_paper.pdf",
+          "source_archive": "papers/c021-ccrapumping/versions/expanded-invertible/source.zip",
+          "source_directory": "papers/c021-ccrapumping/versions/expanded-invertible/source",
+          "archive_prefix": "",
+          "pages": 57,
+          "pdf_sha256": "8c1236f6ae24f0473cc49df0d8ef1860600e24674679d3c0cf8bb475ba33a505",
+          "source_archive_sha256": "c81806302df54e93f35410c333ea4cf9f23de63a09869e32f00a1836e351d645",
+          "readiness_label": "working_paper",
+          "assessment_basis": "Existing expanded manuscript; no acceptance under the shared fresh all-strong STOC standard. Claims and original author lists preserved; not a new audited resolution."
+        }
       ]
     },
     {
       "id": "advice-matching",
-      "series": "legacy",
       "title": "Matching Advice on Degree-Two Bipartite Graphs: Exact Consistency–Robustness Frontiers",
       "status": "proved",
-      "kind": "resolution-paper",
+      "kind": "historical_manuscript",
       "pages": 6,
-      "pdf": "papers/advice-matching/paper.pdf",
+      "pdf": "papers/advice-matching/advice-matching_working_paper.pdf",
       "source_archive": "papers/advice-matching/source.zip",
       "source_directory": "papers/advice-matching/source",
       "pdf_sha256": "97f90509d1413691ce7cb13e0c7dc8bc0ee2a2b1f133131cc43a2ed9cea6ffa2",
@@ -90,16 +511,30 @@
         [
           "manuscript/reproduce.py"
         ]
+      ],
+      "archive_prefix": "paper5_source/",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "Not recorded in this delivery manifest; consult original source provenance.",
+      "readme": "papers/advice-matching/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ]
+        }
       ]
     },
     {
       "id": "c002-coverage",
-      "series": "continuous",
       "title": "A Size-Independent Discrepancy Bound for Sparse Coverage Functions",
       "status": "proved",
       "kind": "resolution-paper",
       "pages": 7,
-      "pdf": "papers/c002-coverage/paper.pdf",
+      "pdf": "papers/c002-coverage/c002-coverage_working_paper.pdf",
       "source_archive": "papers/c002-coverage/source.zip",
       "source_directory": "papers/c002-coverage/source",
       "pdf_sha256": "b2dac13ca628fb6c3b7495516ee0acbdd390a90b0942127ada2935401ba873db",
@@ -111,16 +546,38 @@
         [
           "audit/referee_verify.py"
         ]
+      ],
+      "archive_prefix": "c002-coverage_source/",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "proved",
+      "readme": "papers/c002-coverage/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/research_rounding_check.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "audit/referee_verify.py"
+          ]
+        }
       ]
     },
     {
       "id": "c009-cycle2",
-      "series": "continuous",
       "title": "A Global Sidorenko Inequality for 2-Subdivided Alternating Cycles",
       "status": "proved",
       "kind": "resolution-paper",
       "pages": 6,
-      "pdf": "papers/c009-cycle2/paper.pdf",
+      "pdf": "papers/c009-cycle2/c009-cycle2_working_paper.pdf",
       "source_archive": "papers/c009-cycle2/source.zip",
       "source_directory": "papers/c009-cycle2/source",
       "pdf_sha256": "519a8f77e5e1fd12c6abf00b04b53c6e43a17273c04d3cfb8668ff6c98866710",
@@ -132,16 +589,38 @@
         [
           "audit/referee_verify.py"
         ]
+      ],
+      "archive_prefix": "c009-cycle2_source/",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "proved",
+      "readme": "papers/c009-cycle2/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/research_exact.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "audit/referee_verify.py"
+          ]
+        }
       ]
     },
     {
       "id": "c012-upcycles",
-      "series": "continuous",
       "title": "A Universal Partial Cycle with Three Wildcards per Window",
       "status": "proved",
       "kind": "resolution-paper",
       "pages": 5,
-      "pdf": "papers/c012-upcycles/paper.pdf",
+      "pdf": "papers/c012-upcycles/c012-upcycles_working_paper.pdf",
       "source_archive": "papers/c012-upcycles/source.zip",
       "source_directory": "papers/c012-upcycles/source",
       "pdf_sha256": "eade3f9df07bd82943ef54b3e0c9c1b95d1510ab9e779dc9ff26a9cdf71cedef",
@@ -153,16 +632,38 @@
         [
           "evidence/research2-witness/minimal_check.py"
         ]
+      ],
+      "archive_prefix": "c012-upcycles_source/",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "proved",
+      "readme": "papers/c012-upcycles/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "manuscript/verify.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/research2-witness/minimal_check.py"
+          ]
+        }
       ]
     },
     {
       "id": "c015-imagebound",
-      "series": "continuous",
       "title": "Tight Mortality Bounds for Image-Bounded Nondeterministic Automata",
       "status": "proved",
       "kind": "resolution-paper",
       "pages": 6,
-      "pdf": "papers/c015-imagebound/paper.pdf",
+      "pdf": "papers/c015-imagebound/c015-imagebound_working_paper.pdf",
       "source_archive": "papers/c015-imagebound/source.zip",
       "source_directory": "papers/c015-imagebound/source",
       "pdf_sha256": "0abeb3c8720795bb730d6501ea49669b8e9f1006bc34b0e0d9578051921c4d19",
@@ -171,16 +672,30 @@
         [
           "evidence/portable-check.py"
         ]
+      ],
+      "archive_prefix": "c015-imagebound_source/",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "proved",
+      "readme": "papers/c015-imagebound/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/portable-check.py"
+          ]
+        }
       ]
     },
     {
       "id": "c017-wheeler",
-      "series": "continuous",
       "title": "Deciding Membership and Realizability for Wheeler Transducers",
       "status": "proved",
       "kind": "resolution-paper",
       "pages": 10,
-      "pdf": "papers/c017-wheeler/paper.pdf",
+      "pdf": "papers/c017-wheeler/c017-wheeler_working_paper.pdf",
       "source_archive": "papers/c017-wheeler/source.zip",
       "source_directory": "papers/c017-wheeler/source",
       "pdf_sha256": "f634d9f8abb35aab26ba0f93564fdd36b9f59aee0f150228002611a8fbb71de1",
@@ -195,30 +710,294 @@
         [
           "evidence/research-2-check-realizability.py"
         ]
+      ],
+      "archive_prefix": "c017-wheeler_source/",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "proved",
+      "readme": "papers/c017-wheeler/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/check_membership.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/check_exact_certificates.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/research-2-check-realizability.py"
+          ]
+        }
       ]
     },
     {
-      "id": "c021-ccrapumping",
-      "series": "continuous",
-      "title": "Uniform Pumping Does Not Characterize Copyless Cost Register Automata",
-      "status": "disproved",
-      "kind": "resolution-paper",
-      "pages": 9,
-      "pdf": "papers/c021-ccrapumping/paper.pdf",
-      "source_archive": "papers/c021-ccrapumping/source.zip",
-      "source_directory": "papers/c021-ccrapumping/source",
-      "pdf_sha256": "a9c5a9244838f61a7c8fcd01a8ef0902229b629de8e3ba55d917e0c639c5f27b",
-      "source_archive_sha256": "957895b52d94ddb190cddf51db23bdcb75d7c2fc9256060c39e55c9fa661187a",
+      "id": "coverage-sparse",
+      "title": "Coverage Correlation Gaps under Graph-Constrained Pairwise Independence",
+      "status": "proved",
+      "kind": "historical_manuscript",
+      "pages": 8,
+      "pdf": "papers/coverage-sparse/coverage-sparse_working_paper.pdf",
+      "source_archive": "papers/coverage-sparse/source.zip",
+      "source_directory": "papers/coverage-sparse/source",
+      "pdf_sha256": "a1fb1c406f6c59c5196dbe1481bb9ea12e5528d261f6be3fe228ee9d3f8d1bca",
+      "source_archive_sha256": "15c6e43066ef6f93af8220da721b8fd9f32d6a096307cc1547f427fea44c679a",
       "reproduction_commands": [
         [
-          "evidence/research_checks.py"
-        ],
-        [
-          "audit/referee-check.py"
+          "manuscript/reproduce.py"
         ]
       ],
-      "version": "v1: nine-page released separation; later extension pending release review"
+      "archive_prefix": "paper1_source/",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "Not recorded in this delivery manifest; consult original source provenance.",
+      "readme": "papers/coverage-sparse/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "curvature-noise",
+      "title": "A Sparse-Cardinality Curvature Bound under Persistent Adversarial Noise",
+      "status": "unresolved",
+      "kind": "historical_manuscript",
+      "pages": 6,
+      "pdf": "papers/curvature-noise/curvature-noise_working_paper.pdf",
+      "source_archive": "papers/curvature-noise/source.zip",
+      "source_directory": "papers/curvature-noise/source",
+      "pdf_sha256": "2a3b071bfdd103f2e2bbbde6f590ea75ee26229a96b46b0c79b3e02d754cf012",
+      "source_archive_sha256": "18ee55050ceb21213f3c8376efab377d5103dc95bbb83ec718a0b370737d79fd",
+      "reproduction_commands": [
+        [
+          "manuscript/reproduce.py"
+        ]
+      ],
+      "archive_prefix": "paper4_source/",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "Not recorded in this delivery manifest; consult original source provenance.",
+      "readme": "papers/curvature-noise/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ]
+        }
+      ],
+      "scope_warning": "original_unresolved"
+    },
+    {
+      "id": "privacy-interpolation",
+      "title": "Mandatory Excursions in Privacy-Constrained Probability Paths",
+      "status": "unresolved",
+      "kind": "historical_manuscript",
+      "pages": 7,
+      "pdf": "papers/privacy-interpolation/privacy-interpolation_working_paper.pdf",
+      "source_archive": "papers/privacy-interpolation/source.zip",
+      "source_directory": "papers/privacy-interpolation/source",
+      "pdf_sha256": "8ec2d595f7e1285ce79dc26f46caadf881d9065bce1928a7865f9d81d91b2d43",
+      "source_archive_sha256": "dfea246476d1a5b57a549ea309c146872017e8ee7c65f0cb96f136bc7631342a",
+      "reproduction_commands": [
+        [
+          "manuscript/reproduce.py"
+        ]
+      ],
+      "archive_prefix": "paper2_source/",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "Not recorded in this delivery manifest; consult original source provenance.",
+      "readme": "papers/privacy-interpolation/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ]
+        }
+      ],
+      "scope_warning": "original_unresolved"
+    },
+    {
+      "id": "q14-sparse-discrepancy",
+      "title": "Sparse Discrepancy Beyond Additive Functions: Acyclic, Bounded-Degree and Degenerate Sparsity Patterns",
+      "pages": 54,
+      "pdf": "papers/q14-sparse-discrepancy/q14-sparse-discrepancy_working_paper.pdf",
+      "source_archive": "papers/q14-sparse-discrepancy/source.zip",
+      "source_directory": "papers/q14-sparse-discrepancy/source",
+      "archive_prefix": "",
+      "pdf_sha256": "fe77adea7d25c2c8dad39f89701918cd03d80cfa49cd6a2e0b3824b425e2e2b3",
+      "source_archive_sha256": "a83088d455fba53b304a3119377f80ddb45e5022ef1e07824dcef77c6017c7cc",
+      "readiness_label": "working_paper",
+      "readme": "papers/q14-sparse-discrepancy/README.md",
+      "kind": "existing-partial-manuscript",
+      "mathematical_status": "The full general sparse nonadditive-discrepancy problem remains unresolved.",
+      "assessment_basis": "Conservative classification of an existing 54-page partial-result manuscript. Not a new continuous full-original resolution or an accepted fresh STOC assessment.",
+      "reproduction_steps": [
+        {
+          "cwd": "ancillary",
+          "argv": [
+            "python3",
+            "-B",
+            "k3_rigorous_exact.py"
+          ],
+          "required_output": "fails 0"
+        }
+      ],
+      "build_directory": ".",
+      "tex_entry": "main.tex",
+      "scope_warning": "original_unresolved"
+    },
+    {
+      "id": "robust-stopping",
+      "title": "Certified Expected-Cost Optimization for Robust Ski Rental",
+      "status": "unresolved",
+      "kind": "historical_manuscript",
+      "pages": 11,
+      "pdf": "papers/robust-stopping/robust-stopping_working_paper.pdf",
+      "source_archive": "papers/robust-stopping/source.zip",
+      "source_directory": "papers/robust-stopping/source",
+      "pdf_sha256": "750891c12b44b7761c1c8c96968e8005e68e4b8b7f3f4299a8a5fe80fd96ce84",
+      "source_archive_sha256": "feedbf5adb3b34ce65942ee8a08c0544f32c33a2c534a5dfe516eee9e006c8a2",
+      "reproduction_commands": [
+        [
+          "manuscript/reproduce.py"
+        ]
+      ],
+      "archive_prefix": "paper3_source/",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "Not recorded in this delivery manifest; consult original source provenance.",
+      "readme": "papers/robust-stopping/README.md",
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ]
+        }
+      ],
+      "scope_warning": "original_unresolved"
+    },
+    {
+      "id": "stoc1",
+      "title": "Representation and Preprocessing in Grammar-Constrained Decoding: Stack Indexes and Online Completion Lower Bounds",
+      "kind": "existing-conversation-manuscript",
+      "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "pages": 12,
+      "pdf": "conversations/stoc1/stoc1_working_paper.pdf",
+      "source_archive": "conversations/stoc1/source.zip",
+      "source_directory": "conversations/stoc1/source",
+      "archive_prefix": "",
+      "pdf_sha256": "5df559f9b2579911d4640104af77713d414e17d04f334959bc00eeb55bad5b6f",
+      "source_archive_sha256": "2f662a998b3136188af62bf73a03d5b3437c084c2f9ff3aa3d7576109826920b",
+      "readme": "conversations/stoc1/README.md",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "legacy_check_adapter": true
+    },
+    {
+      "id": "stoc2",
+      "title": "Syntax Repair in Near-Linear Time: Exact Bounds for Marked-Palindrome Grammars",
+      "kind": "existing-conversation-manuscript",
+      "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "pages": 9,
+      "pdf": "conversations/stoc2/stoc2_working_paper.pdf",
+      "source_archive": "conversations/stoc2/source.zip",
+      "source_directory": "conversations/stoc2/source",
+      "archive_prefix": "",
+      "pdf_sha256": "35b701e8686499f5b01e74b948d6cd9c02012f23d3055af8ee8c5b272bfe4752",
+      "source_archive_sha256": "5f47a3066f956ab138a9674818640f7b0966faa20e81cacb35278c67f1beffd3",
+      "readme": "conversations/stoc2/README.md",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "legacy_check_adapter": true
+    },
+    {
+      "id": "stoc3",
+      "title": "Is Quadratic Subtyping Optimal? Conditional Hardness on Shared Acyclic Type Graphs",
+      "kind": "existing-conversation-manuscript",
+      "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "pages": 18,
+      "pdf": "conversations/stoc3/stoc3_working_paper.pdf",
+      "source_archive": "conversations/stoc3/source.zip",
+      "source_directory": "conversations/stoc3/source",
+      "archive_prefix": "3-source/",
+      "pdf_sha256": "a6b8d9226e4149358b58f09579ccc6764971c1a46caa34a46b27d38600aaddbc",
+      "source_archive_sha256": "9179a70f3b0658c4508193b5596d2395128fba9cda7cd45c21f178ea7ba5173b",
+      "readme": "conversations/stoc3/README.md",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "legacy_check_adapter": true
+    },
+    {
+      "id": "stoc4",
+      "title": "Fully Dynamic Interprocedural Dataflow Analysis: OMv Barriers and Summary-Local TreeFlow Updates",
+      "kind": "existing-conversation-manuscript",
+      "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "pages": 10,
+      "pdf": "conversations/stoc4/stoc4_working_paper.pdf",
+      "source_archive": "conversations/stoc4/versions/v2/source.zip",
+      "source_directory": "conversations/stoc4/versions/v2/source",
+      "archive_prefix": "stoc4/",
+      "pdf_sha256": "db743d64d2a56de670aa03b05fff49328d304abb7dcbbadb8023a888579a95fc",
+      "source_archive_sha256": "a742124b3dc8a9ea6bb2c28222fd298e31d5ef0f1767024ce78462f8d452c480",
+      "readme": "conversations/stoc4/README.md",
+      "reproduction_commands": [],
+      "provenance": "conversations/stoc4/versions/v2/provenance",
+      "version": "current original source archive; synchronization checks recorded separately",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "legacy_check_adapter": true
+    },
+    {
+      "id": "stoc5",
+      "title": "Octagons Are APSP-Complete: Fine-Grained Complexity of Weakly Relational Abstract Domains",
+      "kind": "existing-conversation-manuscript",
+      "source_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "pages": 19,
+      "pdf": "conversations/stoc5/stoc5_working_paper.pdf",
+      "source_archive": "conversations/stoc5/source.zip",
+      "source_directory": "conversations/stoc5/source",
+      "archive_prefix": "",
+      "pdf_sha256": "cfd986c64c49ca77ab979c0d0ffd49d6d8c2f3b82489364adb842eef1b486a67",
+      "source_archive_sha256": "5930442b5a35fbe85b77b9fef28c808a5d659424b93a41a860398eae15870826",
+      "readme": "conversations/stoc5/README.md",
+      "readiness_label": "working_paper",
+      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "mathematical_status": "scope-limited manuscript; independent novelty assessment outstanding",
+      "legacy_check_adapter": true
     }
   ],
-  "status_convention": "Manuscript scope/local release status; no external peer-review or conference-acceptance claim"
+  "index_convention": "One unified topic index; only submission_ready and working_paper are display groups. Ordering within a group is navigation, not an acceptance ranking.",
+  "status_convention": "Readiness is an internal evidence-based classification, not an external review, acceptance decision or probability. Historical partial manuscripts retain their unresolved scope."
 }

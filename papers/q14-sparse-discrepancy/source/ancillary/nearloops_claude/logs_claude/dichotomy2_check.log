@@ -1,0 +1,3 @@
+n=4: 6000 failing labellings tested, 0 dichotomy violations, 0 tree violations (sampled)
+n=5: 3000 failing labellings tested, 0 dichotomy violations, 0 tree violations (sampled)
+n=6: 600 failing labellings tested, 0 dichotomy violations, 0 tree violations (sampled)

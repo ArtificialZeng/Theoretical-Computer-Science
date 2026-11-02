@@ -1,0 +1,26 @@
+{
+  "classification": "working_paper",
+  "files": {
+    "PACKAGE-README.md": "afebf93c82c945a4276f6c00988528efb7c33c6cbcc2d9e6d9097fdfd8aa3521",
+    "audit/stoc-assessment.json": "4946623a0030b2f2dccd8c7a7de86e686783d2f86c57653f7b67cbf84cdbaf3a",
+    "authors.json": "7b4e94eb52ddac3b21ed72e132eb272f0f8f764127e55a814c7b46d7e6b38e1d",
+    "claim.json": "12a3c4bb4cc45aa3f6403261253e401c06db3ab038d23770cc46096b5ef7f493",
+    "evidence/research-2-check-results.json": "0589c5a68d08111050f352f972fbd27a69b646ab7fdb1c72617fe53bc8b0258a",
+    "evidence/research-2-check.py": "306cd89b94f34aaa0294d41b41d037fbd99018a0a25a2a46c7b3de24a4465baf",
+    "evidence/research-2-uniform-copy-resolution.md": "8a2f00fe6cb1ec88b49df208a786d2d8be48ecaf4e52183b8c8417c14d55d727",
+    "manuscript/ACM-Reference-Format.bst": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04",
+    "manuscript/BUILD.md": "e3315ed875535ffe70ae86f3d87fff8774effd2bd06bab54c2e0208c2eb5b3a5",
+    "manuscript/Makefile": "a8c8686f8991e06f9cde4ab1c52b994a137b964d35f771203b5a4e5f34d069ec",
+    "manuscript/README": "5f4b13963e839e1df1783d70495d1ea485e58facf936cfea27841fad6bdda863",
+    "manuscript/acmart.cls": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+    "manuscript/acmart.dtx": "e29efd327f5c759f3d1f2e99dc8588c6a05b734c142f89c3e348161b893e44ff",
+    "manuscript/acmart.ins": "fa7daaa9375775ce699f33f909667bdb83c0408fd8d67606926df86c346c4044",
+    "manuscript/build/aonflow-working_paper.bbl": "8961eac57e219e470c1df9265cfec7dd2776f50044ce12ff415b026f8702e27f",
+    "manuscript/main.tex": "5c6a65a815baabf9d709b7af87fb5c97dfe2a2f22f12e61a0ebed0ee0ce799c2",
+    "manuscript/references.bib": "2b7be339414bff00f18df0e515ab678a594067d4b0a47ecb29c6c57154eb4d54",
+    "problem.md": "fc1e5529784826e03728b29c4eceeb1a328a41fa5294e94c361e654ba3ecb561",
+    "source.md": "7241936e887e814eebe18f891cfe9d90c883ee0298057dfc8bbdd2344501e29e"
+  },
+  "job_id": "c026-aonflow-release-7db9e6fea069",
+  "mathematical_snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd"
+}

@@ -1,0 +1,17 @@
+{
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Proposed full-scope randomized algorithm for every fixed bounded exponent, with c-independent saving, worst-case charged cost and witness recovery. Divisor-profile maximum-slope hashing passed exact finite interface checks. Requires fresh correctness, novelty and significance review; no manuscript or PDF.",
+  "next_test": "Fresh referee: audit all-divisor occupancy and maximum-slope bounds, mixed-prime survival, capped support-product costs and witness recovery, then compare novelty and significance with current primary prior work.",
+  "evidence": [
+    "claim.json",
+    "research/divisor-profile-proof.md",
+    "research/verify_divisor_hash.py",
+    "evidence/divisor-hash-tests.json",
+    "evidence/research-pass1-selfcheck.md",
+    "evidence/research-pass1-literature.md",
+    "evidence/research-pass1-provenance.json",
+    "checkpoint.md"
+  ]
+}

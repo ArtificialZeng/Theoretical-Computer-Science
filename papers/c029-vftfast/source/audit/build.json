@@ -1,0 +1,12 @@
+{
+  "job_id": "c029-vftfast-release-bdd37c945f4e",
+  "snapshot_digest": "b1495a4cbeb794181b64a2bc9a00b637d90f0a7a7fdf654844a24036b4029e66",
+  "manuscript_digest": "8013342c36141de01d96e75509498833a97008d1df48c6153524aefa6caa4daa",
+  "pdf_digest": "8f61902bb7427aec09254cd8ac7566c87a76748f4dc9eb4d9bbed9828af7a7a8",
+  "verdict": "accept",
+  "report": "audit/build.md",
+  "build_log": "audit/release-clean-build.log",
+  "build_log_digest": "53a38780f0d217a4d49c9e38712cad24926438eefb7695cc040a95ff69929d58",
+  "clean_build": true,
+  "reproduction_report": "audit/release-reproduction.json"
+}

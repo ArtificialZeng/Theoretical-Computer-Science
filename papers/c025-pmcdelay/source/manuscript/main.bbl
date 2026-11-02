@@ -1,0 +1,67 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{GKTvdZ25}
+
+\bibitem[BBC99]{BBC99}
+Anne Berry, Jean-Paul Bordat, and Olivier Cogis.
+\newblock Generating all the minimal separators of a graph.
+\newblock In {\em Graph-Theoretic Concepts in Computer Science (WG 1999)},
+  volume 1665 of {\em Lecture Notes in Computer Science}, pages 167--172.
+  Springer, 1999.
+\newblock \url{https://doi.org/10.1007/3-540-46784-X_17}.
+
+\bibitem[BBHP04]{BBHP04}
+Anne Berry, Jean R.~S. Blair, Pinar Heggernes, and Barry~W. Peyton.
+\newblock Maximum cardinality search for computing minimal triangulations of
+  graphs.
+\newblock {\em Algorithmica}, 39:287--298, 2004.
+\newblock \url{https://doi.org/10.1007/s00453-004-1084-3}.
+
+\bibitem[BCL{\etalchar{+}}24]{BCLPR24}
+Caroline Brosse, Alessio Conte, Vincent Limouzy, Giulia Punzi, and Davide
+  Rucci.
+\newblock Output-sensitive enumeration of potential maximal cliques in
+  polynomial space.
+\newblock arXiv:2402.18265v1; IWOCA 2024, 2024.
+\newblock \url{https://arxiv.org/abs/2402.18265v1}.
+
+\bibitem[BLS26]{BLS26}
+Pierre Berg{\'e}, Vincent Limouzy, and Nicolas Schivre.
+\newblock Output-linear time enumeration of potential maximal cliques.
+\newblock arXiv:2610.19850v3, 2026.
+\newblock Version of 20 October 2026. \url{https://arxiv.org/abs/2610.19850v3}.
+
+\bibitem[CS23]{CS23}
+Florent Capelli and Yann Strozecki.
+\newblock Geometric amortization of enumeration algorithms.
+\newblock In {\em 40th International Symposium on Theoretical Aspects of
+  Computer Science (STACS 2023)}, volume 254 of {\em Leibniz International
+  Proceedings in Informatics}, pages 18:1--18:22. Schloss Dagstuhl --
+  Leibniz-Zentrum f{\"u}r Informatik, 2023.
+\newblock \url{https://doi.org/10.4230/LIPIcs.STACS.2023.18}.
+
+\bibitem[CS26]{CS26}
+Florent Capelli and Yann Strozecki.
+\newblock From amortized to worst case delay in enumeration algorithms.
+\newblock {\em Computational Complexity}, 35, 2026.
+\newblock Article 6, published 20 July 2026.
+  \url{https://doi.org/10.1007/s00037-026-00287-w}.
+
+\bibitem[GKTvdZ25]{GKTZ25}
+Alexander Grigoriev, Yasuaki Kobayashi, Hisao Tamaki, and Tom~C. van~der
+  Zanden.
+\newblock A polynomial delay algorithm generating all potential maximal cliques
+  in triconnected planar graphs.
+\newblock In {\em 20th International Symposium on Parameterized and Exact
+  Computation (IPEC 2025)}, volume 358 of {\em Leibniz International
+  Proceedings in Informatics}, pages 21:1--21:17. Schloss Dagstuhl --
+  Leibniz-Zentrum f{\"u}r Informatik, 2025.
+\newblock \url{https://doi.org/10.4230/LIPIcs.IPEC.2025.21}.
+
+\bibitem[Ken26]{Kenig26}
+Batya Kenig.
+\newblock Enumerating small potential maximal cliques with fixed-parameter
+  delay.
+\newblock arXiv:2610.24856v1, 2026.
+\newblock Version of 17 October 2026. \url{https://arxiv.org/abs/2610.24856v1}.
+
+\end{thebibliography}

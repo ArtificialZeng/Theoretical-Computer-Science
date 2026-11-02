@@ -1,0 +1,36 @@
+{
+  "seconds": 25.138237207895145,
+  "limit_seconds": 120,
+  "counts": {
+    "3": {
+      "side_words": 8,
+      "lp_calls": 32,
+      "numerical_failures": 0,
+      "max_positive_objective": 0.0,
+      "complete": true
+    },
+    "4": {
+      "side_words": 16,
+      "lp_calls": 176,
+      "numerical_failures": 0,
+      "max_positive_objective": 0.0,
+      "complete": true
+    },
+    "5": {
+      "side_words": 32,
+      "lp_calls": 832,
+      "numerical_failures": 0,
+      "max_positive_objective": 0.0,
+      "complete": true
+    },
+    "6": {
+      "side_words": 64,
+      "lp_calls": 3648,
+      "numerical_failures": 0,
+      "max_positive_objective": 0.0,
+      "complete": true
+    }
+  },
+  "found_exact_witness": false,
+  "scope": "LP nonfindings are numerical screening, not exact nonexistence. Canonical item order removes relabeling symmetry; every side word represents all possible tie-admissible chronological traces up to item labels."
+}

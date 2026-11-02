@@ -1,0 +1,29 @@
+{
+  "title": "Truly Subquadratic 3SUM over Every Bounded-Exponent Abelian Group",
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "source_files": [
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/acmart.cls",
+    "manuscript/alpha.bst",
+    "manuscript/build.sh",
+    "manuscript/build/main.bbl",
+    "manuscript/README.md"
+  ],
+  "pdf": "manuscript/bounded-exponent-3sum-working_paper.pdf",
+  "build_command": "sh manuscript/build.sh",
+  "readiness_label": "working_paper",
+  "stoc_assessment": "audit/stoc-assessment.json",
+  "snapshot_digest": "15a73043f23436b1592a376f95f678e39919b724da29d1fc7773757f6a82f52a",
+  "writing_job_id": "c034-group3sum-write-f534b28c23ae",
+  "page_limit_total": 12,
+  "external_submission_authorized": false
+}

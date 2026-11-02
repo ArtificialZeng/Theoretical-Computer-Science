@@ -1,0 +1,26 @@
+{
+  "job_id": "c026-aonflow-release-7db9e6fea069",
+  "snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd",
+  "manuscript_digest": "d852233f598ab85f715ccb8d53630a2f2d61b1da067c66cb20deb30f9503838c",
+  "pdf_digest": "50c157c4b7b471f5d2778b669efa55fde604245ebe40372a6c3cd79988c48fe4",
+  "frozen_math_files_verified": 14,
+  "manuscript_files_verified": 8,
+  "final_log_diagnostics": [],
+  "citation_keys": [
+    "Anand26",
+    "BJS26",
+    "CKS05",
+    "CKS13"
+  ],
+  "all_cited_keys_resolved": true,
+  "complete_local_compilation_inputs": [
+    "manuscript/acmart.cls",
+    "manuscript/build/aonflow-working_paper.bbl",
+    "manuscript/main.tex"
+  ],
+  "all_fonts_embedded_with_unicode": true,
+  "page_count": 7,
+  "retained_classification": "working_paper",
+  "classification_digest_unchanged": true,
+  "source_zip_reproduces_all_page_rasters": true
+}

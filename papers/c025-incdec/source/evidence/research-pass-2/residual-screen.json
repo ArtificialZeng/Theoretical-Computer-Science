@@ -1,0 +1,606 @@
+{
+  "seconds": 60.02026391681284,
+  "limit_seconds": 60,
+  "lp_calls": 4148,
+  "solver_failures": 0,
+  "exact_witnesses": {},
+  "trace_words": [
+    {
+      "n": 3,
+      "word": "LLL"
+    },
+    {
+      "n": 3,
+      "word": "LRR"
+    },
+    {
+      "n": 3,
+      "word": "RRR"
+    },
+    {
+      "n": 3,
+      "word": "RRL"
+    },
+    {
+      "n": 3,
+      "word": "LRL"
+    },
+    {
+      "n": 3,
+      "word": "LLR"
+    },
+    {
+      "n": 3,
+      "word": "RLL"
+    },
+    {
+      "n": 3,
+      "word": "RLR"
+    },
+    {
+      "n": 4,
+      "word": "RRLR"
+    },
+    {
+      "n": 4,
+      "word": "RRRL"
+    },
+    {
+      "n": 4,
+      "word": "LLRR"
+    },
+    {
+      "n": 4,
+      "word": "RLRL"
+    },
+    {
+      "n": 4,
+      "word": "LLLR"
+    },
+    {
+      "n": 4,
+      "word": "RLLR"
+    },
+    {
+      "n": 4,
+      "word": "LLRL"
+    },
+    {
+      "n": 4,
+      "word": "LRLL"
+    },
+    {
+      "n": 4,
+      "word": "RLLL"
+    },
+    {
+      "n": 4,
+      "word": "LRRL"
+    },
+    {
+      "n": 4,
+      "word": "LRLR"
+    },
+    {
+      "n": 4,
+      "word": "LRRR"
+    },
+    {
+      "n": 4,
+      "word": "RRLL"
+    },
+    {
+      "n": 4,
+      "word": "RRRR"
+    },
+    {
+      "n": 4,
+      "word": "LLLL"
+    },
+    {
+      "n": 4,
+      "word": "RLRR"
+    },
+    {
+      "n": 5,
+      "word": "LLLRR"
+    },
+    {
+      "n": 5,
+      "word": "LLRLR"
+    },
+    {
+      "n": 5,
+      "word": "LRLLR"
+    },
+    {
+      "n": 5,
+      "word": "RLRLR"
+    },
+    {
+      "n": 5,
+      "word": "LRRLL"
+    },
+    {
+      "n": 5,
+      "word": "RRRLR"
+    },
+    {
+      "n": 5,
+      "word": "LLLLL"
+    },
+    {
+      "n": 5,
+      "word": "RRLLR"
+    },
+    {
+      "n": 5,
+      "word": "RLRLL"
+    },
+    {
+      "n": 5,
+      "word": "RRLLL"
+    },
+    {
+      "n": 5,
+      "word": "LLRRR"
+    },
+    {
+      "n": 5,
+      "word": "LLRLL"
+    },
+    {
+      "n": 5,
+      "word": "LRRRL"
+    },
+    {
+      "n": 5,
+      "word": "RRRLL"
+    },
+    {
+      "n": 5,
+      "word": "LRRRR"
+    },
+    {
+      "n": 5,
+      "word": "RRLRL"
+    },
+    {
+      "n": 5,
+      "word": "LRLRL"
+    },
+    {
+      "n": 5,
+      "word": "LRLRR"
+    },
+    {
+      "n": 5,
+      "word": "RLLRR"
+    },
+    {
+      "n": 5,
+      "word": "RRRRL"
+    },
+    {
+      "n": 5,
+      "word": "LLRRL"
+    },
+    {
+      "n": 5,
+      "word": "LLLLR"
+    },
+    {
+      "n": 5,
+      "word": "RRRRR"
+    },
+    {
+      "n": 5,
+      "word": "RLRRL"
+    },
+    {
+      "n": 5,
+      "word": "RLLLL"
+    },
+    {
+      "n": 5,
+      "word": "LLLRL"
+    },
+    {
+      "n": 5,
+      "word": "RRLRR"
+    },
+    {
+      "n": 5,
+      "word": "RLLLR"
+    },
+    {
+      "n": 5,
+      "word": "LRRLR"
+    },
+    {
+      "n": 5,
+      "word": "RLRRR"
+    },
+    {
+      "n": 5,
+      "word": "RLLRL"
+    },
+    {
+      "n": 5,
+      "word": "LRLLL"
+    },
+    {
+      "n": 6,
+      "word": "LRLRLR"
+    },
+    {
+      "n": 6,
+      "word": "LLLLRL"
+    },
+    {
+      "n": 6,
+      "word": "LLLRRL"
+    },
+    {
+      "n": 6,
+      "word": "LRRLLL"
+    },
+    {
+      "n": 6,
+      "word": "LLLLRR"
+    },
+    {
+      "n": 6,
+      "word": "RLLLRR"
+    },
+    {
+      "n": 6,
+      "word": "LRRRRR"
+    },
+    {
+      "n": 6,
+      "word": "RRLLLR"
+    },
+    {
+      "n": 6,
+      "word": "RRRRLL"
+    },
+    {
+      "n": 6,
+      "word": "RLRLRR"
+    },
+    {
+      "n": 6,
+      "word": "RRRLRL"
+    },
+    {
+      "n": 6,
+      "word": "RRRRRR"
+    },
+    {
+      "n": 6,
+      "word": "RRRLLL"
+    },
+    {
+      "n": 6,
+      "word": "LRLRLL"
+    },
+    {
+      "n": 6,
+      "word": "RRLRRL"
+    },
+    {
+      "n": 6,
+      "word": "LLRRLL"
+    },
+    {
+      "n": 6,
+      "word": "RRLRRR"
+    },
+    {
+      "n": 6,
+      "word": "LLLLLR"
+    },
+    {
+      "n": 6,
+      "word": "LRLRRL"
+    },
+    {
+      "n": 6,
+      "word": "LRRLRR"
+    },
+    {
+      "n": 6,
+      "word": "RLLLLR"
+    },
+    {
+      "n": 6,
+      "word": "LLRRLR"
+    },
+    {
+      "n": 6,
+      "word": "RRLLRR"
+    },
+    {
+      "n": 6,
+      "word": "RRLLLL"
+    },
+    {
+      "n": 6,
+      "word": "RLRLLR"
+    },
+    {
+      "n": 6,
+      "word": "RLLRLL"
+    },
+    {
+      "n": 6,
+      "word": "RLLLLL"
+    },
+    {
+      "n": 6,
+      "word": "LLLRRR"
+    },
+    {
+      "n": 6,
+      "word": "RLLLRL"
+    },
+    {
+      "n": 6,
+      "word": "RRRLRR"
+    },
+    {
+      "n": 6,
+      "word": "LRRLRL"
+    },
+    {
+      "n": 6,
+      "word": "RLLRLR"
+    },
+    {
+      "n": 6,
+      "word": "RLRRLL"
+    },
+    {
+      "n": 6,
+      "word": "RLLRRL"
+    },
+    {
+      "n": 6,
+      "word": "LLRLRR"
+    },
+    {
+      "n": 6,
+      "word": "RRRLLR"
+    },
+    {
+      "n": 6,
+      "word": "LLLLLL"
+    },
+    {
+      "n": 6,
+      "word": "LLRLLR"
+    },
+    {
+      "n": 6,
+      "word": "RRLRLR"
+    },
+    {
+      "n": 6,
+      "word": "LRRRRL"
+    },
+    {
+      "n": 6,
+      "word": "LRLLLR"
+    },
+    {
+      "n": 6,
+      "word": "RRLRLL"
+    },
+    {
+      "n": 6,
+      "word": "RLLRRR"
+    },
+    {
+      "n": 6,
+      "word": "RLRLRL"
+    },
+    {
+      "n": 6,
+      "word": "LLRLLL"
+    },
+    {
+      "n": 6,
+      "word": "LLRRRR"
+    },
+    {
+      "n": 6,
+      "word": "RLRRRR"
+    },
+    {
+      "n": 6,
+      "word": "LLLRLL"
+    },
+    {
+      "n": 6,
+      "word": "LRLRRR"
+    },
+    {
+      "n": 6,
+      "word": "LRRRLR"
+    },
+    {
+      "n": 6,
+      "word": "RLRRRL"
+    },
+    {
+      "n": 6,
+      "word": "LLLRLR"
+    },
+    {
+      "n": 6,
+      "word": "RRRRRL"
+    },
+    {
+      "n": 6,
+      "word": "LRLLLL"
+    },
+    {
+      "n": 6,
+      "word": "RRLLRL"
+    },
+    {
+      "n": 6,
+      "word": "RLRRLR"
+    },
+    {
+      "n": 6,
+      "word": "LRLLRR"
+    },
+    {
+      "n": 6,
+      "word": "LRLLRL"
+    },
+    {
+      "n": 6,
+      "word": "LRRLLR"
+    },
+    {
+      "n": 6,
+      "word": "LRRRLL"
+    },
+    {
+      "n": 6,
+      "word": "RLRLLL"
+    },
+    {
+      "n": 6,
+      "word": "LLRLRL"
+    },
+    {
+      "n": 6,
+      "word": "RRRRLR"
+    },
+    {
+      "n": 6,
+      "word": "LLRRRL"
+    },
+    {
+      "n": 7,
+      "word": "LLRRLLR"
+    },
+    {
+      "n": 7,
+      "word": "RLLLRLR"
+    },
+    {
+      "n": 7,
+      "word": "RLRRRLL"
+    },
+    {
+      "n": 7,
+      "word": "RLRLRRR"
+    },
+    {
+      "n": 7,
+      "word": "LRRLRRL"
+    },
+    {
+      "n": 7,
+      "word": "RRRRRRR"
+    },
+    {
+      "n": 7,
+      "word": "RRRRRLR"
+    },
+    {
+      "n": 7,
+      "word": "LRLLRRR"
+    },
+    {
+      "n": 7,
+      "word": "RRLLLRR"
+    },
+    {
+      "n": 7,
+      "word": "LLLLLLR"
+    },
+    {
+      "n": 7,
+      "word": "LRLRRRR"
+    },
+    {
+      "n": 7,
+      "word": "RRRRLRR"
+    },
+    {
+      "n": 7,
+      "word": "LRLRLRR"
+    },
+    {
+      "n": 7,
+      "word": "LRRRLRR"
+    },
+    {
+      "n": 7,
+      "word": "RLRLLRR"
+    },
+    {
+      "n": 7,
+      "word": "LRLRRLR"
+    },
+    {
+      "n": 7,
+      "word": "RLLRRRL"
+    },
+    {
+      "n": 7,
+      "word": "LLLRRLL"
+    },
+    {
+      "n": 7,
+      "word": "LLRLLLR"
+    },
+    {
+      "n": 7,
+      "word": "LRLLLRL"
+    },
+    {
+      "n": 7,
+      "word": "LLRLRLR"
+    },
+    {
+      "n": 7,
+      "word": "RRLRRLL"
+    },
+    {
+      "n": 7,
+      "word": "RRRRRRL"
+    },
+    {
+      "n": 7,
+      "word": "LRLLRRL"
+    },
+    {
+      "n": 7,
+      "word": "RRRRRLL"
+    },
+    {
+      "n": 7,
+      "word": "RLRRLLL"
+    },
+    {
+      "n": 7,
+      "word": "RLLRRRR"
+    },
+    {
+      "n": 7,
+      "word": "RRLLLLL"
+    },
+    {
+      "n": 7,
+      "word": "RLLRLLR"
+    }
+  ],
+  "scope": "Templates only, not original problem; nonfindings numerical and bounded."
+}

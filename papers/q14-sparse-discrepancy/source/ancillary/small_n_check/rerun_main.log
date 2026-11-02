@@ -1,0 +1,31 @@
+== sanity (expect PROVED) ==
+K_3<=2                       j=1 c=2: PROVED  boxes=1 leaves=1 maxdepth=0 searchnodes=1 time=0.000s
+K_3<=2                       j=2 c=2: PROVED  boxes=1 leaves=1 maxdepth=0 searchnodes=1 time=0.000s
+K_3<=2                       j=3 c=2: PROVED  boxes=13 leaves=7 maxdepth=2 searchnodes=83 time=0.003s
+== sanity (expect FAIL) ==
+n=4 c=2 full                 j=3 c=2: FAIL    boxes=66 leaves=26 maxdepth=14 searchnodes=386 time=0.011s  stuck-box=[[0,1/16384], [8191/16384,1/2], [8191/16384,1/2]]
+n=4 c=2 full                 j=4 c=2: FAIL    boxes=90 leaves=37 maxdepth=14 searchnodes=938 time=0.052s  stuck-box=[[0,1/16384], [4095/16384,1/4], [4095/16384,1/4], [8191/16384,1/2]]
+n=2 c=1.9 full               j=2 c=19/10: FAIL    boxes=47 leaves=20 maxdepth=14 searchnodes=155 time=0.003s  stuck-box=[[1843/4096,7373/16384], [8191/16384,1/2]]
+n=3 c=1.9 full               j=3 c=19/10: FAIL    boxes=71 leaves=31 maxdepth=14 searchnodes=391 time=0.010s  stuck-box=[[819/4096,3277/16384], [4095/16384,1/4], [8191/16384,1/2]]
+n=4 c=2.9 full               j=4 c=29/10: FAIL    boxes=97 leaves=44 maxdepth=14 searchnodes=945 time=0.062s  stuck-box=[[819/4096,3277/16384], [4095/16384,1/4], [8191/16384,1/2], [8191/16384,1/2]]
+t=3 four-item pattern        j=4 c=2: FAIL    boxes=133 leaves=56 maxdepth=14 searchnodes=843 time=0.031s  stuck-box=[[1365/16384,683/8192], [4095/16384,1/4], [5461/16384,2731/8192], [3413/8192,6827/16384]]
+== Claim 1 ==
+Claim1 n=4                   j=1 c=3: PROVED  boxes=1 leaves=1 maxdepth=0 searchnodes=1 time=0.000s
+Claim1 n=4                   j=2 c=3: PROVED  boxes=1 leaves=1 maxdepth=0 searchnodes=1 time=0.000s
+Claim1 n=4                   j=3 c=3: PROVED  boxes=1 leaves=1 maxdepth=0 searchnodes=1 time=0.000s
+Claim1 n=4                   j=4 c=3: PROVED  boxes=13 leaves=7 maxdepth=2 searchnodes=166 time=0.008s
+    leaf [[0,1/4], [0,1/4], [0,1/2], [0,1/2]]
+    leaf [[0,1/4], [1/4,1/2], [0,1/4], [0,1/2]]
+    leaf [[0,1/4], [1/4,1/2], [1/4,1/2], [0,1/2]]
+    leaf [[1/4,1/2], [0,1/4], [0,1/4], [0,1/2]]
+    leaf [[1/4,1/2], [0,1/4], [1/4,1/2], [0,1/2]]
+    leaf [[1/4,1/2], [1/4,1/2], [0,1/4], [0,1/2]]
+    leaf [[1/4,1/2], [1/4,1/2], [1/4,1/2], [0,1/2]]
+== Claim 2 (n=5 slots, t=2, c=2) ==
+  j=0: 1 patterns, proved 1, boxes 1, 0.00s
+  j=1: 2 patterns, proved 2, boxes 2, 0.00s
+  j=2: 7 patterns, proved 7, boxes 7, 0.00s
+  j=3: 22 patterns, proved 22, boxes 22, 0.00s
+  j=4: 69 patterns, proved 69, boxes 101, 0.02s
+  j=5: 198 patterns, proved 198, boxes 1080, 7.00s
+  total 299 patterns, 1213 boxes, 7.0s; slowest pattern (5.692513942718506, ((0, 1), (0, 1), (0, 1), (0, 1), (0, 1)), 391, 3)

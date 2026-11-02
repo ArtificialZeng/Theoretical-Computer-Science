@@ -1,0 +1,25 @@
+{
+  "official_template_source": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/templates/acm-official/distribution/acmart",
+  "class_version": "acmart 2026/08/16 v2.20",
+  "unmodified_files": {
+    "acmart.cls": {
+      "sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+      "matches_official_input": true
+    },
+    "acmart.dtx": {
+      "sha256": "e29efd327f5c759f3d1f2e99dc8588c6a05b734c142f89c3e348161b893e44ff",
+      "matches_official_input": true
+    },
+    "acmart.ins": {
+      "sha256": "fa7daaa9375775ce699f33f909667bdb83c0408fd8d67606926df86c346c4044",
+      "matches_official_input": true
+    }
+  },
+  "bibliography_style": {
+    "file": "alpha.bst",
+    "sha256": "95e0b35ce728b91a136480717dc52cbafa046268f607e22a701633a8d923ea2e",
+    "basis": "unchanged installed standard TeX Live alpha style"
+  },
+  "format_basis": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html",
+  "format_note": "The official single-column acmsmall option is used with 12pt text and Letter paper with 1in margins. It avoids the manuscript option's built-in one-and-a-half spacing, so no class file or baseline-stretch guard is modified."
+}

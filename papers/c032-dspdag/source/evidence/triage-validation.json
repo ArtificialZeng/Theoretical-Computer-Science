@@ -1,0 +1,101 @@
+{
+  "job_id": "c032-dspdag-triage-c30f8ac75ef3",
+  "phase": "triage",
+  "entry_clock_utc": "2026-11-02T11:05:17Z",
+  "last_scientific_check_utc": "2026-11-02T11:07:07Z",
+  "source_sha256": "bd9f92784c80f57bb9d38b0d1ec47a1127cfe421e2d2ca69776e28d431657a90",
+  "source_matches_existing_state": true,
+  "source_input_checks": [
+    {
+      "path": "intake/primary/DSP-ITCS2026.pdf",
+      "expected_sha256": "72b8d384f0f691735533df6310ba5755fb374756dd589e7bedf51cd528d1e0c1",
+      "actual_sha256": "72b8d384f0f691735533df6310ba5755fb374756dd589e7bedf51cd528d1e0c1",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/DSP-ITCS2026.txt",
+      "expected_sha256": "e88454be13169c625cf71b79ac50f2dab3b75ae3e562a52ebba3177421a77f30",
+      "actual_sha256": "e88454be13169c625cf71b79ac50f2dab3b75ae3e562a52ebba3177421a77f30",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/DSP-full2509.14588.pdf",
+      "expected_sha256": "6c5cc77ec20b79feed52315ded8994afd9b9ccebf7a6539503e34fa3673244a3",
+      "actual_sha256": "6c5cc77ec20b79feed52315ded8994afd9b9ccebf7a6539503e34fa3673244a3",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/DSP-full2509.14588.txt",
+      "expected_sha256": "3e95d3853f5301c56b4d2776a88786f5db95be7d722da824a434d9bc0d187670",
+      "actual_sha256": "3e95d3853f5301c56b4d2776a88786f5db95be7d722da824a434d9bc0d187670",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/DSP-linear2404.15916.pdf",
+      "expected_sha256": "709ca7a232602574ae96baa89509fbcb3534242a3a7fdacbc76fd3c3d0b5dd99",
+      "actual_sha256": "709ca7a232602574ae96baa89509fbcb3534242a3a7fdacbc76fd3c3d0b5dd99",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/DSP-linear2404.15916.txt",
+      "expected_sha256": "77696d5941dc6c4386a33afbfdbde0d6216e966af5a7f2cacded6f287a75298b",
+      "actual_sha256": "77696d5941dc6c4386a33afbfdbde0d6216e966af5a7f2cacded6f287a75298b",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/DirectedDSP2017.pdf",
+      "expected_sha256": "5ba862b6f35c1975506e2205083b2327aca269e967700a670324dfe357a036ca",
+      "actual_sha256": "5ba862b6f35c1975506e2205083b2327aca269e967700a670324dfe357a036ca",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/DirectedDSP2017.txt",
+      "expected_sha256": "c4eaa000b66d5ed469c19cdbe5241410b63eca21da51886b2b814db50c241e71",
+      "actual_sha256": "c4eaa000b66d5ed469c19cdbe5241410b63eca21da51886b2b814db50c241e71",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/DSPLower2408.03933.pdf",
+      "expected_sha256": "8e05d81d056a6c79b307c1e44ac15077dc4975f8ce1c888d537c41614b1185b3",
+      "actual_sha256": "8e05d81d056a6c79b307c1e44ac15077dc4975f8ce1c888d537c41614b1185b3",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/DSPLower2408.03933.txt",
+      "expected_sha256": "73c0591807e66df7650a9f50a86600155125b065c34b33a55f219cc1809d5092",
+      "actual_sha256": "73c0591807e66df7650a9f50a86600155125b065c34b33a55f219cc1809d5092",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/PlanarDSP2505.03353.pdf",
+      "expected_sha256": "dc8f7a6a632be5322cc1806b0072b239129b15ab0cc7fbedcc1d044a79ade32f",
+      "actual_sha256": "dc8f7a6a632be5322cc1806b0072b239129b15ab0cc7fbedcc1d044a79ade32f",
+      "matches": true
+    },
+    {
+      "path": "intake/primary/PlanarDSP2505.03353.txt",
+      "expected_sha256": "0a0fd2d1a370378c81a2f6d550fffb221e47f6b53ef81892e0965ce541db950d",
+      "actual_sha256": "0a0fd2d1a370378c81a2f6d550fffb221e47f6b53ef81892e0965ce541db950d",
+      "matches": true
+    }
+  ],
+  "source_status": "open-supported (provisional; bounded current search)",
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "research_passes_observed": 0,
+  "research_passes_consumed_by_triage": 0,
+  "research_cap": 3,
+  "state_json_modified": false,
+  "experiments_run": [],
+  "registry_comparison": "No historical registry supplied inside project; cross-project inspection not performed. Global duplicate status unverified. Local source is AVW Open Problem 3, not the distinct search/reporting or general-directed three-pair targets.",
+  "operational_limits": [
+    "Dispatch preceded model entry by approximately 125 seconds; all scientific checks ended before main-test deadline.",
+    "Publisher DOI tool access failed for 10.1016/j.tcs.2026.115842. Journal full-text changes not checked; primary author/institution metadata and supplied arXiv version inspected.",
+    "No exhaustive diagnostics repeated; no new algorithm/proof claimed.",
+    "Record finalization exceeded the 11:09:12 UTC reserve deadline; no scientific test was added after the 11:07:07 check. This timing overrun is not mathematical evidence."
+  ],
+  "publication_status": "No manuscript, PDF, acceptance or venue assessment created.",
+  "finalization_clock_observed_utc": "2026-11-02T11:09:42Z",
+  "finalization_deadline_met": false
+}

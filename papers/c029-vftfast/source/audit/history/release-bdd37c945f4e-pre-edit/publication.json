@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "title": "Polynomial-Time Construction of Vertex-Fault-Tolerant Mixed-Stretch Spanners",
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "source_files": [
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/acmart.cls",
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/build.sh",
+    "manuscript/vftfast-working_paper.bbl"
+  ],
+  "pdf": "manuscript/vftfast-working_paper.pdf",
+  "build_command": "sh manuscript/build.sh",
+  "author_file": "authors.json",
+  "readiness_label": "working_paper",
+  "assessment_file": "audit/stoc-assessment.json",
+  "accepted_snapshot_digest": "b1495a4cbeb794181b64a2bc9a00b637d90f0a7a7fdf654844a24036b4029e66",
+  "writer_job_id": "c029-vftfast-write-7567570a6950",
+  "max_total_pages": 12,
+  "external_submission_authorized": false,
+  "status": "awaiting fresh release review"
+}

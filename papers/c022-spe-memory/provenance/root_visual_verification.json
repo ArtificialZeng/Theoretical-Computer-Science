@@ -1,0 +1,70 @@
+{
+  "reviewer": "root supervisor",
+  "review_type": "actual_final_page_visual_inspection",
+  "at_utc": "2026-11-01T19:42:15.554065+00:00",
+  "pdf_sha256": "1c714b9216ce3cf89b26123c6beebf3c7a38d14b31e0b5a727dcaa214978306f",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "render_dpi": 110,
+  "page_observations": [
+    {
+      "page": 1,
+      "image": "tmp/pdfs/c022-spe-memory-final-root/page-1.png",
+      "sha256": "1cf670e864b95e5149bb7babbed6cecdb08240760e661ef32c5fbc4624bbfc3b",
+      "observation": "Title, single author/affiliation/contact and abstract are legible; separate title page has normal blank space."
+    },
+    {
+      "page": 2,
+      "image": "tmp/pdfs/c022-spe-memory-final-root/page-2.png",
+      "sha256": "30aeaa10011ca76a8e17c0c7872d34345843389c963cc2867da0f566b13ba14d",
+      "observation": "Main theorems, exponential bounds and prior-work section are readable; no overlap or clipping."
+    },
+    {
+      "page": 3,
+      "image": "tmp/pdfs/c022-spe-memory-final-root/page-3.png",
+      "sha256": "4bb581e2e687770493d0d7b73882a922d27fb6b2ad8cf5b910415109d5e0b860",
+      "observation": "Prior work and vertex-update convention are readable; all displayed expressions fit."
+    },
+    {
+      "page": 4,
+      "image": "tmp/pdfs/c022-spe-memory-final-root/page-4.png",
+      "sha256": "fd66157130a7db77e50571fe41c438a1e8e8ba6ea022f2fec3833c4c92b0b038",
+      "observation": "Credibility/progress lemmas and piecewise reset function fit within margins."
+    },
+    {
+      "page": 5,
+      "image": "tmp/pdfs/c022-spe-memory-final-root/page-5.png",
+      "sha256": "acb991e1c153cb116992eecdac2c9393a30b76a4b66733d193a4edfef0a34015",
+      "observation": "All-history realization/deviation proof and existence deduction fit; no clipped symbols."
+    },
+    {
+      "page": 6,
+      "image": "tmp/pdfs/c022-spe-memory-final-root/page-6.png",
+      "sha256": "9c59218ccd02d4bcfd24cda4bf64e280a4431c0cfed59c6e1ba99679365f6586",
+      "observation": "Quota/checker lower-bound construction and full-history proof are legible."
+    },
+    {
+      "page": 7,
+      "image": "tmp/pdfs/c022-spe-memory-final-root/page-7.png",
+      "sha256": "7b9ba9740ec42c3a5eb2a9738ab0be55b902a9fcad71363098bcf013fadcc5c1",
+      "observation": "Memory injection, verification scope and substantial AI disclosure are legible."
+    },
+    {
+      "page": 8,
+      "image": "tmp/pdfs/c022-spe-memory-final-root/page-8.png",
+      "sha256": "1f1542bb2a603de6168b588d39f030568ff7972fac73df48e4dd959aca866872",
+      "observation": "All nine references and wrapped links are readable; no clipped entries."
+    }
+  ],
+  "layout_defects_observed": [],
+  "accepted_mathematical_files_rehashed": 22,
+  "scope": "Actual final delivered bytes viewed page by page. Supplementary root visual inspection, not a fresh mathematical or venue acceptance judgment."
+}

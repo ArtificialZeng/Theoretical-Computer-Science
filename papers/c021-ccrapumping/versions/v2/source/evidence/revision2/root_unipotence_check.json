@@ -1,0 +1,36 @@
+{
+  "scope": "Exact diagnostic controls for a proposed all-word trace test; not a fresh audit.",
+  "seed": 20261102,
+  "controls": 76,
+  "yes": 72,
+  "no": 4,
+  "bounded_word_crosschecks": 4617,
+  "no_witnesses": [
+    {
+      "control": "unipotent_generators_nonunipotent_product",
+      "word": "01",
+      "trace": "3",
+      "d": 2
+    },
+    {
+      "control": "minus_identity",
+      "word": "0",
+      "trace": "-2",
+      "d": 2
+    },
+    {
+      "control": "third_root_rotation",
+      "word": "0",
+      "trace": "-1",
+      "d": 2
+    },
+    {
+      "control": "nonunipotent_redundant_block",
+      "word": "0",
+      "trace": "3",
+      "d": 2
+    }
+  ],
+  "mismatches": [],
+  "all_passed": true
+}

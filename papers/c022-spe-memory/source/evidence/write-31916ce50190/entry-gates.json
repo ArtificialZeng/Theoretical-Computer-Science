@@ -1,0 +1,21 @@
+{
+  "job_id": "c022-spe-memory-write-31916ce50190",
+  "snapshot_digest": "8167ae363386355fe869e8109b82155be5da309379f81a3f7216041bf9acf52f",
+  "mathematical_gate": "check-math passed before manuscript authoring",
+  "all_frozen_hashes_match": true,
+  "frozen_file_count": 22,
+  "source_sha256": "9dd4ff19af8a2996db2a11e18b2a4caa65426f62647822995c446c31dd0899fe",
+  "review_job_id": "c022-spe-memory-referee-af2ba8807d2f",
+  "retained_classification": "working_paper",
+  "classification_file": "audit/stoc-assessment.json",
+  "official_class_unchanged": true,
+  "official_dtx_unchanged": true,
+  "pdf_skill_marker": {
+    "operation_kind": "create",
+    "expected_output_count": 1,
+    "output_format": "pdf",
+    "observed_exit_code": 0,
+    "runs_this_author_context": 1
+  },
+  "no_excel_bibliography_designated": true
+}

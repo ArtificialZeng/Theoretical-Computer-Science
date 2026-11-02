@@ -1,0 +1,2 @@
+runs=4 steps=1000 seed=3 time=0.9s accepted moves=3083 violations=0
+per run (|S|,|T|,l, max #rho outside Zn reached): [(3, 4, 2, 4), (3, 4, 2, 4), (3, 4, 2, 4), (5, 4, 2, 4)]

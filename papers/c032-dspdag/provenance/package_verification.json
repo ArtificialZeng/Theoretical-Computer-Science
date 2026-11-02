@@ -1,0 +1,124 @@
+{
+  "project": "c032-dspdag",
+  "actual_archive_sha256": "15f869e60bc374c3903ce18ecebcf32cd129a7e438e63f5e1e0773e955dcc4ce",
+  "actual_pdf_sha256": "04e5cdc5235be2a9327b7f80616afcc3d5854ecbab67d4f9fe5c12c23aca20f2",
+  "build_inputs_rehashed": 8,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c032-dspdag-wn4m3imf/c032-dspdag_source",
+  "pages": 8,
+  "text_matches": true,
+  "all_page_renders_match": true,
+  "finite_reproduction": [
+    {
+      "entry": "evidence/research-2/verify.py",
+      "summary": {
+        "job_id": "c032-dspdag-research-5f16f6951448",
+        "status": "passed",
+        "seed": 321502,
+        "cases": {
+          "labelled_k2": 20,
+          "labelled_k3": 25,
+          "labelled_k4": 15,
+          "labelled_k5": 10,
+          "weighted_strict": 28,
+          "weighted_endpoints_only": 28,
+          "weighted_internal_only": 28,
+          "fixture_strict": 5,
+          "fixture_endpoints_only": 5,
+          "fixture_internal_only": 5
+        },
+        "yes_weighted": {
+          "strict": 2,
+          "endpoints_only": 2,
+          "internal_only": 2
+        },
+        "fixture_results": {
+          "shared_source": {
+            "strict": false,
+            "endpoints_only": true,
+            "internal_only": true
+          },
+          "endpoint_internal": {
+            "strict": false,
+            "endpoints_only": false,
+            "internal_only": true
+          },
+          "shared_trivial": {
+            "strict": false,
+            "endpoints_only": true,
+            "internal_only": true
+          },
+          "early_completion": {
+            "strict": true,
+            "endpoints_only": true,
+            "internal_only": true
+          },
+          "shortest_conflict": {
+            "strict": false,
+            "endpoints_only": false,
+            "internal_only": false
+          }
+        },
+        "counts": {
+          "products": 1152210,
+          "padded_entries": 6160400,
+          "nodes": 1555,
+          "largest_half_width": 8,
+          "full_state_set_equalities": 145
+        },
+        "partition_combinations": {
+          "N4_k2": 16,
+          "N8_k3": 1260,
+          "N8_k4": 5376,
+          "N16_k3": 32760
+        },
+        "elapsed_seconds": 4.896003291942179,
+        "scope": "New generic-k rectangular schedule; entire reachable sets versus independent queue traversal; weighted final answers versus direct original shortest-path enumeration under three endpoint conventions. Finite tests only.",
+        "backend": "Exact naive integer rectangular product modulo a deterministically selected prime p>N, including full padding.",
+        "fast_rectangular_algorithm_implemented": false,
+        "exponent_benchmark": false,
+        "fresh_referee": false
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c032-dspdag-wn4m3imf/reproduction-0.stdout.log"
+    },
+    {
+      "entry": "audit/fresh-56b0105494de/independent_verify.py",
+      "summary": {
+        "job_id": "c032-dspdag-referee-56b0105494de",
+        "status": "passed",
+        "counts": {
+          "cross_nodes": 15854,
+          "product_batches": 1558584,
+          "complete_state_set_comparisons": 4718,
+          "exhaustive_labelled_n3_k3": 3072,
+          "exhaustive_common_n4_k3": 1536,
+          "random_labelled_k2": 30,
+          "random_labelled_k3": 50,
+          "random_labelled_k4": 20,
+          "random_labelled_k5": 10,
+          "weighted_direct_enumeration_comparisons": 360
+        },
+        "weighted_outcomes": {
+          "strict": {
+            "yes": 7,
+            "no": 113
+          },
+          "endpoints_only": {
+            "yes": 12,
+            "no": 108
+          },
+          "internal_only": {
+            "yes": 29,
+            "no": 91
+          }
+        },
+        "seed": 5610494,
+        "elapsed_seconds": 2.5182228330522776,
+        "scope": "Independent bit-mask batching versus scalar recurrence; direct original weighted shortest-path enumeration and three endpoint conventions. Finite bug checks, not an asymptotic or novelty certificate.",
+        "fast_rectangular_algorithm_implemented": false,
+        "script_sha256": "f2f315f5612ea7ec3241658ae524746bda5479552d4f2ab873273da3932dfc1c"
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c032-dspdag-wn4m3imf/reproduction-1.stdout.log"
+    }
+  ],
+  "scope": "Actual delivered archive clean build/render/reproduction; not a new math or novelty verdict."
+}

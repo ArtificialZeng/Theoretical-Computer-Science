@@ -1,0 +1,12 @@
+{
+  "job_id": "c029-vftfast-research-9df2f29ab673",
+  "assigned_research_pass": 3,
+  "max_accumulated_research_passes": 3,
+  "status": "scientific work complete; candidate and checkpoint saved",
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "records_saved_utc": "2026-11-02T05:40:20.447330+00:00",
+  "prior_checkpoint": "evidence/research3-entry-checkpoint.md",
+  "no_further_research_pass_requested": true
+}

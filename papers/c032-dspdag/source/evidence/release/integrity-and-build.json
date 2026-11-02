@@ -1,0 +1,57 @@
+{
+  "job_id": "c032-dspdag-release-5fe4e38b60c7",
+  "all_frozen_files_unchanged": true,
+  "frozen_file_count": 21,
+  "source_sha256": "bd9f92784c80f57bb9d38b0d1ec47a1127cfe421e2d2ca69776e28d431657a90",
+  "preserved_accepted_review_sha256": {
+    "audit/math.json": "dfc3c6934a68ecb1c5db4dd7cfb1c85819692a83eeb847eed594aac4fdc5c2c4",
+    "audit/math.md": "48ed39de0b77ff3058f04c89c0de79eff42f371e6cac5e7b139f0a9f9d01aebe",
+    "audit/innovation.json": "8f8db293dfb5df000bd2ea0bcdf54f7e2f0689979c2db95e8844d4aaf114d7b9",
+    "audit/stoc-assessment.json": "5ef23a9dd99ede01cdf5ef9f99f6fab0dbba5e428115ac596266eb9096f3aad2"
+  },
+  "official_template_bytes_match": {
+    "acmart.cls": true,
+    "ACM-Reference-Format.bst": true
+  },
+  "cited_keys": [
+    "AVW24",
+    "BK17",
+    "CKS26",
+    "Epp95",
+    "FGLZ07",
+    "LGU18",
+    "Str69",
+    "Val75",
+    "WXXZ24"
+  ],
+  "bib_keys": [
+    "AVW24",
+    "BK17",
+    "CKS26",
+    "Epp95",
+    "FGLZ07",
+    "LGU18",
+    "Str69",
+    "Val75",
+    "WXXZ24"
+  ],
+  "missing_keys": [],
+  "uncited_keys": [],
+  "source_files_checked": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/build.py",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "final_log_diagnostics": {
+    "evidence/release/final-build.log": [],
+    "evidence/release/final-bibtex.log": []
+  },
+  "operational_diagnostics": [
+    "PyMuPDF unavailable in system python; Poppler pdftohtml XML supplied font check instead.",
+    "Initial official template lookup omitted distribution/acmart; corrected to actual installed path. Neither event is mathematical evidence."
+  ]
+}

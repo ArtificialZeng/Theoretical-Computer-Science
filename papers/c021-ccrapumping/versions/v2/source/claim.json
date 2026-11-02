@@ -1,0 +1,30 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "disproved",
+  "statement": "The uniform R-generable EPS necessary condition in immutable source.md is not sufficient for weighted-automaton recognizable functions to be recognized by a finite-state copyless polynomial cost register automaton. Over Q the exact STACS 2026 Example 26 function f(w)=sum of the positions of the 1 symbols is weighted recognizable and, for one finitely generated subsemiring R=Z[1/2] and one m=1, every sequence f(u w^{m(n+1)} v), for all u,w,v and all n>=0, is R-generable and satisfies every characteristic-zero coefficient-sum condition; yet no deterministic finite-state polynomial Q-CCRA with any finite register count and arbitrary rational constants recognizes f. The proof allows singular, reset, merge and nonlinear updates and makes no physical-invertibility assumption. Its one-state structural lemma says that unipotent minimal weighted letter matrices of any one-state Q-CCRA commute. Strengthening the same resolution: for every rational recognizable function whose minimal weighted representation has EVERY word matrix unipotent, finite-state polynomial Q-CCRA realizability is equivalent to pairwise commutation of the minimal letter matrices, permutation invariance of the function, and being a rational polynomial in the Parikh counts. Zero is handled separately by a constant-zero machine. The all-word-unipotence property of the minimal representation is decidable in polynomial bit time from explicitly encoded rational weighted matrices, and membership in Q-CCRA is decidable in polynomial bit time inside that sector; no general membership decision outside the sector is asserted. In particular, for explicitly listed finite patterns p and binary-encoded rational coefficients c_p, f(w)=sum_p c_p [w:p] always lies in that sector, and polynomial-bit-time Q-CCRA membership is equivalent to permutation invariance. A YES input admits a polynomial-size one-state copyless construction with at most sum_p |p| registers; a NO input admits computable equal-Parikh words uabv and ubav, each of length at most 2D for D=sum_p(|p|+1), with different f-values. Empty patterns, repetitions, negative coefficients, rational cancellations, empty alphabets and the zero function are included. No polynomial-size synthesis for arbitrary compact weighted representations, positive-characteristic extension, or rectangular-length bridge is claimed.",
+  "contribution": "One combined revision of the full original resolution, not a separate marginal result. The proposed substantive mechanism is the minimum-rank copyless retraction and faithful observable-subquotient compression, followed by a commuting-unipotent obstruction. The new finite-control transfer retains the entire minimal algebra using common return blocks, polynomial unipotent roots/inverses and an actual unit prefix; this yields a whole-sector structural characterization and constructive membership for explicit scattered-pattern sums, beyond the single source witness. The pumping formula, squarefree WA translation, standard weighted minimization/commutator and trace tests, pattern counting representation, symmetrization and counter evaluation are attributed as known or routine tools. Current bounded primary comparisons found no equivalent resolution or characterization in the inspected sources; novelty and theoretical significance remain for the required new fresh referee to assess.",
+  "proposer_job_id": "c021-ccrapumping-research-b9b720512ca2",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "publication-policy.json",
+    "AGENTS.md",
+    "evidence/resolution-proof.md",
+    "evidence/research_checks.py",
+    "evidence/research-checks.json",
+    "evidence/revision2/pass2-proof.md",
+    "evidence/revision2/pass2_exact_checks.py",
+    "evidence/revision2/pass2_exact_checks.json",
+    "evidence/revision2/pass2-algorithm-check.md",
+    "evidence/revision2/pass2_algorithm_checks.py",
+    "evidence/revision2/pass2_algorithm_checks.json",
+    "evidence/revision2/root_scattered_check.py",
+    "evidence/revision2/pass2-baseline-reexecution.json",
+    "evidence/revision2/pass2-literature.md",
+    "evidence/official-p08.png",
+    "evidence/official-p13.png",
+    "intake/ccra-official-STACS2026-67.pdf",
+    "intake/ccra-2502.07356v2.pdf",
+    "intake/monomial-2410.03444v2.pdf"
+  ]
+}

@@ -1,0 +1,3 @@
+{"status": "passed", "counts": {"local_fixtures": 24, "source_paths": 816, "trace_memberships": 10495, "candidate_scores": 2816, "growth_steps": 176, "table_states": 16830, "negative_deltas": 187, "certified": 19, "uncertified": 3, "merge_nodes": 14, "invariant_checks": 10542, "all_dummy": 2}, "parameter_cases": 7}
+{"status": "passed", "counts": {"inputs": 1236, "subpaths": 35318, "localized_traces": 21850, "short_query_thresholds": 330120, "stitching_pivots": 88758, "rounded_table_entries": 2160, "aggregate_scores": 512, "compression_steps": 64, "certified_compressions": 8}}
+Both diagnostic suites reproduced their packaged scientific counts.

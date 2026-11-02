@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://criveros.sitios.ing.uc.cl/papers/jcss19.pdf",
+    "status": "unavailable",
+    "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "url": "https://fmazowiecki.github.io/papers/copyless2.pdf",
+    "status": "unavailable",
+    "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol306-mfcs2024/LIPIcs.MFCS.2024.23/LIPIcs.MFCS.2024.23.pdf",
+    "status": "unavailable",
+    "reason": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  }
+]

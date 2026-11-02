@@ -1,0 +1,22 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Release gate passed: clean eight-page PDF, all-page visual review and byte-identical source-ZIP reproduction. Retains working_paper; one disclosed journal-edition access limitation.",
+  "next_test": "Supervisor reruns check and calls publish, preserving reviewed bytes and working_paper label.",
+  "evidence": [
+    "checkpoint.md",
+    "audit/citations.json",
+    "audit/citations.md",
+    "audit/build.json",
+    "audit/build.md",
+    "audit/visual.json",
+    "audit/visual.md",
+    "audit/stoc-assessment.json",
+    "audit/manuscript-snapshot.json",
+    "evidence/release/gate-check.json",
+    "evidence/release/zip-reproduction.json",
+    "output/pdf/dspdag-working_paper.pdf",
+    "output/source/dspdag-working_paper-source.zip"
+  ]
+}

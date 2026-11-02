@@ -1,0 +1,562 @@
+\documentclass[acmsmall,11pt,nonacm,natbib=false]{acmart}
+\geometry{letterpaper,margin=1in,includehead=false,includefoot=false,heightrounded=false,footskip=24pt}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\setcopyright{none}
+\acmDOI{}
+\acmISBN{}
+\usepackage{mathtools}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\polylog}{\operatorname{polylog}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\title{Truly Subquadratic 3SUM over Every Bounded-Exponent Abelian Group}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\renewcommand{\shortauthors}{Zijian Zeng}
+\begin{document}
+\begin{abstract}
+\normalsize
+For every fixed integer $M\ge2$, we give a randomized truly subquadratic
+algorithm for three-list zero-sum matching over every compactly represented
+finite abelian group of exponent dividing $M$ and polynomial order. The
+exponent saving depends on $M$ and is independent of the polynomial order
+bound. The algorithm has a worst-case time cap, returns a verified witness,
+and succeeds with probability at least $3/4$ on every fixed positive input.
+It extends the known exponent-dividing-$p^2$ scope to all higher prime powers
+and mixed-prime products. The main step combines simultaneous profiles of
+original annihilator-coset sizes with an extremal divisor certificate. The
+certificate controls both class branching and false positives of every
+possible sum order, enabling one elementary-middle support product per
+profile. We use the existing selected-entry thin-matrix algorithm of Alman
+and Vassilevska Williams. Through Majdoddin's finite-representation reduction,
+the result gives a truly subquadratic algorithm for every fixed
+abelian-group-representable finite coordinate relation.
+\end{abstract}
+\maketitle
+\clearpage
+
+\section{The result and its mechanism}
+
+Three-list 3SUM asks whether $x_1+x_2+x_3=0$ for some $x_i$ in three given
+lists. The ambient additive group affects the available hashing: a uniform
+homomorphism can preserve a vector of order two much more often than one of
+large order. This makes an order-independent collision estimate unsuitable
+for groups with several torsion layers. We resolve the bounded-exponent
+question by adapting the hash to all order layers simultaneously.
+
+The input group is given as $G_0=\prod_{j=1}^r\Z_{m_j}$, with each
+$m_j\mid M$, and list elements are residue vectors. Trivial factors are
+discarded. For every fixed $c>0$ we allow $|G_0|\le n^c$. Costs include group
+arithmetic, construction of every auxiliary list and matrix, all queries,
+random-bit generation, and recovery of original list indices. A charged
+word has $O_{M,c}(\log n)$ bits; bit simulation contributes a polynomial
+logarithmic factor.
+
+\begin{theorem}\label{thm:main}
+Fix an integer $M\ge2$, and put
+\[
+ C=\ceil{\log_2 M},\qquad
+ \eta=\min\{1/18,1/(8C)\},\qquad
+ \gamma=63/1000,\qquad \delta_M=\eta\gamma/2.
+\]
+There is a uniform classical randomized algorithm which, for every fixed
+$c>0$, solves three-list 3SUM over every such $G_0$ of order at most $n^c$
+and lists of size at most $n$ in worst-case time
+$O_{M,c}(n^{2-\delta_M}\polylog n)$. It always rejects negative inputs,
+returns only verified witnesses, and returns a witness on each fixed
+positive input with probability at least $3/4$.
+\end{theorem}
+
+Majdoddin's Theorem 19.17 and Corollary 19.25 give deterministic algorithms
+for the entire exponent-dividing-$p^2$ class, for each fixed prime $p$;
+Open Problem 19.26 asks for the general bounded-exponent extension
+\cite{Maj26}. Theorem~\ref{thm:main} supplies that extension with randomness
+and a smaller explicit saving. For example, its scope includes arbitrary
+products of $\Z_8$, and products with different prime divisors, with ranks
+growing logarithmically with $n$.
+
+The support-product construction and its selected-entry matrix engine come
+from prior work. Alman and Vassilevska Williams supply the thin-product
+algorithm \cite{AVW26}; Majdoddin's Lemmas 19.6--19.7 organize homomorphic
+matching as support products and probes \cite{Maj26}. The contribution here
+is the simultaneous choice of quotient and row counts. We profile original
+coset occupancies for every divisor of $M$. A least feasible row count gives
+lower bounds for all divisors and an upper bound witnessed by one divisor.
+The former controls every false-positive order, while the latter controls
+the number of hash classes. The two bounds make the inherited support
+construction work for the full bounded-exponent class.
+
+The resulting tractability principle also covers every fixed finite
+coordinate relation represented by an equation in an abelian group
+(Corollary~\ref{cor:relation}). Its finite-quotient and translation arguments
+are Majdoddin's Lemmas 20.3(d) and 20.4(a); Remark 20.6 explicitly anticipates
+this consequence of the general group algorithm \cite{Maj26}. Recent work
+of Chan, Itakura, Ma and Yu gives another truly subquadratic approach to
+integer 3SUM through subset convolution \cite{CIMY26}. Our algorithm uses
+the thin-product route and its group-specific balancing argument.
+
+\paragraph{Research methodology.}
+OpenAI Codex materially contributed to the divisor-profile proof, literature
+inspection, exact finite verification code, and manuscript drafting. A fresh
+model context checked the proof and implemented separate finite checks.
+These roles affect the mathematical and algorithmic sections throughout;
+the final AI methodology statement gives further detail.
+
+\section{Normalization and original-coset profiles}\label{sec:profiles}
+
+Deduplicate each list, retaining an original index for each value. Embed
+$\Z_m$ into $\Z_M$ by $x\mapsto (M/m)x$. This is an injective
+homomorphism, so the embedded lists have exactly the same zero-sum
+witnesses. We henceforth work in $G=\Z_M^r$. Since $r\le c\log_2 n$, the
+enlarged order is at most $n^{c\log_2 M}$ and each evaluation or comparison
+of a residue vector has polynomial logarithmic cost. The trivial group and
+empty lists are handled directly.
+
+If one list has size at most $\sqrt n$, enumerate its pairs with another
+list and use a sorted lookup in the third. The cost is
+$O_{M,c}(n^{3/2}\polylog n)$. Assume below that all three original normalized
+lists $S_i$ have size greater than $\sqrt n$. We also assume $n\ge16$ and
+$R\ge M$ for the parameter $R$ defined in Section~\ref{sec:certificate}.
+For fixed $M$ the excluded values of $n$ are bounded, so exhaustive search
+on them is absorbed into the claimed bound.
+
+Let $\mathcal D=\{d\ge2:d\mid M\}$ and $L=|\mathcal D|$. For $d\in\mathcal D$
+write
+\[
+ H_d=G[d]=\{x:dx=0\}=(M/d)G.
+\]
+Reduction of coordinates modulo $M/d$ represents the quotient by $H_d$.
+For each $x\in S_i$, let $c_{i,d}(x)$ be the number of elements of the
+\emph{original} $S_i$ in $x+H_d$, and let $s_{i,d}(x)$ be the largest power
+of two not exceeding $c_{i,d}(x)$. Partition $S_i$ by the full vector
+$(s_{i,d}(x))_{d\in\mathcal D}$. Sorting computes all original coset counts
+and these profiles in $O_{M,c}(n\polylog n)$ time. There are at most
+$(1+\floor{\log_2 n})^L$ profiles per list.
+
+Process every triple of nonempty profiles, obtaining a subinstance
+$(U_1,U_2,U_3)$. Every original triple belongs to exactly one such subinstance.
+Within it, $s_{i,d}$ is constant; define $s_d=\min_i s_{i,d}$. The following
+two different uses of original occupancy are the reason the profile
+restriction is safe.
+
+\begin{lemma}\label{lem:profile}
+For a fixed subinstance and each $d\in\mathcal D$:
+\begin{enumerate}
+\item the number $T_d$ of triples in $U_1\times U_2\times U_3$ with sum in
+$H_d$ is less than $2s_d n^2$;
+\item the number of original $H_d$-cosets represented in $U_i$ is at most
+$n/s_{i,d}\le n/s_d$.
+\end{enumerate}
+Moreover $s_M>\sqrt n/2\ge n^{1/4}$.
+\end{lemma}
+\begin{proof}
+Choose a list attaining $s_d$. Fixing the two other elements determines
+one coset for its element. Any represented coset has fewer than $2s_d$
+elements in its original list, and restriction cannot increase this count.
+This proves the first assertion. For the second, each represented original
+coset contains at least $s_{i,d}$ original elements; these cosets are
+disjoint. Finally $H_M=G$, so each $s_{i,M}$ is the dyadic rounding of
+$|S_i|>\sqrt n$. The last inequality follows from $n\ge16$.
+\end{proof}
+
+A restricted coset may contain only one element, even when its original
+occupancy is large. Lemma~\ref{lem:profile} uses an upper bound on restricted
+occupancy and a lower bound on original occupancy; it never needs a lower
+bound on restricted occupancy.
+
+\section{The divisor certificate and the hash}\label{sec:certificate}
+
+For a fixed profile subinstance set
+\begin{equation}\label{eq:parameters}
+ h=\floor{\eta\log_2 n},\quad R=2^h,\quad
+ \alpha=\tfrac12-\tfrac\gamma4=\tfrac{1937}{4000},\quad
+ \sigma=\floor{R^\alpha}.
+\end{equation}
+Thus $n^\eta/2\le R\le n^\eta$ and
+$R^\alpha/2\le\sigma\le R^\alpha\le\sqrt R$.
+Choose the least nonnegative integer $\ell$ satisfying
+\begin{equation}\label{eq:lower}
+ d^\ell\sigma\ge s_dR\qquad(d\in\mathcal D).
+\end{equation}
+Because $s_M\ge n^{1/4}$ and $R/\sigma\ge1$, $\ell\ge1$.
+Minimality supplies $e\in\mathcal D$ for which the inequality fails at
+$\ell-1$, and hence
+\begin{equation}\label{eq:upper}
+ e^\ell< e s_e R/\sigma.
+\end{equation}
+This is the extremal divisor certificate: all divisors have the lower
+bound~\eqref{eq:lower}, while one divisor has the complementary upper
+bound~\eqref{eq:upper}. It is computed from the profile values in
+$O_M(\log n)$ integer-power comparisons, and $\ell=O_M(\log n)$.
+
+Choose a prime $p\mid e$, and put
+\[
+ q=\floor{\log_p R},\qquad D=p^q,\qquad k=\ell-q.
+\]
+Our large-$n$ assumptions imply $q\ge1$ and $R/M<D\le R$. Also
+\[
+ \ell\ge\tfrac14\log_M n,\qquad
+ q\le\eta\log_2 n\le\tfrac18\log_M n,
+\]
+so $k\ge0$. All parameters are exact integers. For example, rational-power
+rounding in~\eqref{eq:parameters} is implemented by integer-power comparisons
+on $O_M(\log n)$-bit numbers.
+
+Take independent uniform rows $u_1,\ldots,u_\ell\in\Z_M^r$. Define two
+homomorphisms by
+\begin{align}
+ \pi(x)&=\bigl(x+H_e,
+ (\langle u_j,x\rangle\bmod M)_{j\le k},
+ (\langle u_j,x\rangle\bmod (M/p))_{k<j\le\ell}\bigr),\label{eq:pi}\\
+ K(x)&=\bigl(x+H_e,
+ (\langle u_j,x\rangle\bmod M)_{j\le\ell}\bigr).\label{eq:K}
+\end{align}
+The value of $K$ determines $\pi$. The quotient component is stored as a
+residue vector; its entire group is never enumerated. Each evaluation has
+$O_{M,c}(\log^2 n)$ cost. If $x\in\ker\pi$, the quotient component and
+the first $k$ coordinates of $K(x)$ vanish, and each remaining coordinate
+is a multiple of $M/p$. Consequently
+\begin{equation}\label{eq:B}
+ K(\ker\pi)\subseteq
+ B=\{0\}\times\{0\}^k\times((M/p)\Z_M)^q\cong\F_p^q,
+ \qquad |B|=D.
+\end{equation}
+Using this whole explicit subgroup is sufficient, even if the actual image
+is smaller. Split its coordinates as $B=B_1\times B_2$ with dimensions
+$\ceil{q/2}$ and $\floor{q/2}$.
+
+\begin{lemma}\label{lem:blocks}
+For every choice of rows, each $U_i$ has fewer than $M^2n/\sigma$ nonempty
+$\pi$-classes. Cutting each such class into blocks of size at most $\sigma$
+gives at most $(M^2+1)n/\sigma$ blocks.
+\end{lemma}
+\begin{proof}
+On one $H_e$-coset a full row has at most $e$ values. A row reduced modulo
+$M/p$ has at most $e/p$ values, since $p\mid e$. Thus at most
+\[
+ e^k(e/p)^q=e^\ell/D
+ < e s_e R/(\sigma D)<M^2s_e/\sigma
+\]
+distinct $\pi$-labels occur in that coset. Multiply by at most $n/s_e$
+represented original cosets, using Lemma~\ref{lem:profile}. The number of
+blocks is at most the number of classes plus $|U_i|/\sigma$.
+\end{proof}
+
+\section{Controlling every sum order}\label{sec:orders}
+
+\begin{lemma}\label{lem:survival}
+If $v\in G$ has additive order $d$, a uniform row maps $v$ uniformly onto
+the subgroup of $\Z_M$ of order $d$. For nonzero $v\in H_e$,
+\begin{equation}\label{eq:survival}
+ \Prob[K(v)=0]=d^{-\ell},\qquad
+ \Prob[\pi(v)=0]=\gcd(d,p)^q d^{-\ell}\le Dd^{-\ell}.
+\end{equation}
+Vectors outside $H_e$ have survival probability zero under both maps.
+\end{lemma}
+\begin{proof}
+The map $u\mapsto\langle u,v\rangle$ is a homomorphism. Its image is the
+ideal generated by the coordinates of $v$ in $\Z_M$, of size $d$; all
+fibers have equal size. Reduction modulo $M/p$ takes that image to one of
+size $d/\gcd(d,p)$. Independence of the rows gives~\eqref{eq:survival}.
+The common quotient component excludes vectors outside $H_e$.
+\end{proof}
+
+Let $Z_0$ count true zero-sum triples in the subinstance, let $Z_\pi$ count
+triples whose sum is in $\ker\pi$, and let $F$ count triples of nonzero
+sum in $\ker K$. Every nonzero element of $H_e$ has order $d>1$ dividing
+$e$. The number of triples of exact sum-order $d$ is at most $T_d$, hence
+less than $2s_dn^2$. Lemma~\ref{lem:survival} and~\eqref{eq:lower} give
+\begin{align}
+ \E F&\le\sum_{\substack{d\mid e\\d>1}}2s_dn^2d^{-\ell}
+       \le 2L\sigma n^2/R,\label{eq:EF}\\
+ \E(Z_\pi-Z_0)&\le D\E F\le2L\sigma n^2.\label{eq:EZ}
+\end{align}
+Markov's inequality and a union bound imply that with probability at least
+$5/6$ both
+\begin{equation}\label{eq:good}
+ F\le24L\sigma n^2/R,\qquad Z_\pi-Z_0\le24L\sigma n^2
+\end{equation}
+hold. Dependence between these two random counts is harmless. Since lists
+are sets, $Z_0\le n^2$. We call~\eqref{eq:good} the good event. The counts
+in its definition are used only in the analysis. The algorithm observes
+the listing and scanning caps below instead of evaluating these counts.
+
+\section{Support products, probes, and recovery}\label{sec:support}
+
+We spell out the support construction to account for all queries and
+witness scans. The construction follows the framework of Majdoddin's
+Lemmas 19.6--19.7 \cite{Maj26}. Form the blocks in lists 2 and 3 given by
+Lemma~\ref{lem:blocks}, and choose a representative $z_b$ in every block.
+A probe is $Q=(x_1;b_2,b_3)$ with $x_1\in U_1$ and
+\[
+ \pi(x_1)+\pi(z_{b_2})+\pi(z_{b_3})=0.
+\]
+For every pair $(x_1,b_2)$, look up the compatible label of list 3 and
+enumerate its blocks. Sorted label indices implement this in polynomial
+logarithmic time per pair and output.
+
+\begin{lemma}\label{lem:probes}
+Let $C_2$ be the number of nonempty $\pi$-classes in $U_2$. The set
+$\mathcal P$ of probes satisfies
+\begin{equation}\label{eq:probes}
+ |\mathcal P|\le n C_2+2n^2/\sigma+Z_\pi/\sigma^2.
+\end{equation}
+On the good event, $|\mathcal P|\le A n^2/\sigma$ for
+$A=M^2+3+24L$.
+\end{lemma}
+\begin{proof}
+Fix $x_1$. For a compatible pair of nonempty classes of sizes $a,b$,
+the block-pair count is at most
+$(1+a/\sigma)(1+b/\sigma)$. Summing the constant term over all $x_1$
+and labels gives at most $nC_2$. The two linear terms each sum to at most
+$n^2/\sigma$: translation of labels is injective, so each class of either
+list appears at most once for a fixed $x_1$. The bilinear term sums to
+$Z_\pi/\sigma^2$. On the good event,
+$Z_\pi\le n^2+24L\sigma n^2$; use Lemma~\ref{lem:blocks} and $\sigma\ge1$.
+\end{proof}
+
+During listing, abort this subinstance if the next probe would exceed
+$\ceil{A n^2/\sigma}$. This cap is observable. The outer enumeration costs
+$O_M(n^2/\sigma)$, plus polynomial logarithmic work per stored probe.
+An aborted subinstance contributes no witness and processing continues.
+
+For a nonaborted subinstance put
+\[
+ b_0=M^2+1,\qquad g_0=M(A+b_0+3),\qquad
+ g'=\ceil{g_0n/\sigma},\qquad N=g'p^{\ceil{q/2}}.
+\]
+Left vertices are pairs $(b_2,\mu_1)$ with $\mu_1\in B_1$; right vertices
+are $(b_3,\mu_2)$ with $\mu_2\in B_2$. Pad both sides to size $N$, and use
+$B$ as a middle set. Lemma~\ref{lem:blocks} ensures sufficient room.
+Construct $0/1$ matrices $X\in\Z^{N\times D}$ and
+$Y\in\Z^{D\times N}$ by
+\begin{align}
+ X[(b_2,\mu_1),\lambda]=1
+ &\iff \exists x_2\in b_2:\
+ K(x_2)-K(z_{b_2})+(\mu_1,0)=\lambda,\label{eq:X}\\
+ Y[\lambda,(b_3,\mu_2)]=1
+ &\iff \exists x_3\in b_3:\
+ -(K(x_3)-K(z_{b_3}))-(0,\mu_2)=\lambda.\label{eq:Y}
+\end{align}
+All differences in these definitions lie in $B$, because a block lies
+within one $\pi$-class. For a probe $Q$ the element
+\[
+ w_Q=K(x_1)+K(z_{b_2})+K(z_{b_3})\in B
+\]
+has a unique decomposition $(\mu_1,\mu_2)$. Query the product at
+$((b_2,\mu_1),(b_3,\mu_2))$. Deduplicate these matrix positions while
+retaining the corresponding probe lists.
+
+\begin{lemma}\label{lem:semantics}
+The product entry for a probe is positive exactly when some pair
+$x_2\in b_2$, $x_3\in b_3$ satisfies $K(x_1+x_2+x_3)=0$.
+Every true witness has a positive probe, and at most $F$ positive probes
+contain no true witness.
+\end{lemma}
+\begin{proof}
+A positive integer product entry means that the two support equations
+\eqref{eq:X}--\eqref{eq:Y} hold for one common $\lambda$. Equating them
+gives
+\[
+ K(x_2)+K(x_3)-K(z_{b_2})-K(z_{b_3})+(\mu_1,\mu_2)=0.
+\]
+Substituting $w_Q$ yields precisely $K(x_1+x_2+x_3)=0$. Each step is
+reversible. A true witness has zero $\pi$-sum and zero $K$-sum, and thus
+gives a positive probe. A positive probe with no true witness contains
+a nonzero-sum $K$-zero triple. Distinct probes contain disjoint triples,
+since a triple determines $x_1$ and both blocks. Choosing one such triple
+per failed probe bounds their number by $F$, even if probes share a matrix
+position.
+\end{proof}
+
+Scan a positive probe by enumerating $x_2\in b_2$ and looking up
+$-x_1-x_2$ in the sorted block $b_3$. This uses original residue vectors,
+costs $O_{M,c}(\sigma\polylog n)$, and returns original indices when
+successful. Scan at most $\ceil{24L\sigma n^2/R}+1$ positive probes,
+stopping immediately on a verified witness. If all these scans fail,
+abort the subinstance. On the good event, Lemma~\ref{lem:semantics}
+ensures that a subinstance containing a witness finds one within this
+cap. A final direct sum check verifies every returned witness.
+
+\section{The legal matrix call and the total bound}\label{sec:time}
+
+We use the following existing algorithmic theorem, including its stated
+integer-input and selected-entry interface.
+
+\begin{lemma}[Alman--Vassilevska Williams, Corollary 26 \cite{AVW26}]
+\label{lem:thin}
+Let $N\ge D^{18}$, and let $X\in\Z^{N\times D}$ and
+$Y\in\Z^{D\times N}$ have entries of absolute value $N^{O(1)}$.
+They can be preprocessed deterministically in $O(N^2/D^{0.063})$ time
+and space, after which an entry of $XY$ can be queried in $O(D^{0.437})$
+time. In particular, at most $N^2/\sqrt D$ prescribed entries can be
+computed in $O(N^2/D^{0.063})$ time.
+\end{lemma}
+
+Here the entries of $X,Y$ are $0/1$. Since $\sigma\le\sqrt R$ and
+$D>R/M$,
+\[
+ N\ge g_0n\sqrt D/\sigma\ge n.
+\]
+Consequently $D\le R\le n^\eta\le N^{1/18}$. Also
+$D^{1+\gamma}\le N$, since $\eta\le1/18$ and $\gamma<1/2$.
+The listing cap is at most $(A+1)n^2/\sigma$, and
+\begin{equation}\label{eq:querybudget}
+ \frac{N^2}{\sqrt D}\ge
+ \frac{g_0^2n^2\sqrt D}{\sigma^2}\ge
+ \frac{g_0^2}{\sqrt M}\frac{n^2}{\sigma}\ge
+ (A+1)\frac{n^2}{\sigma}.
+\end{equation}
+Thus one call to Lemma~\ref{lem:thin} computes all required positions.
+
+For the cost, $p^{\ceil{q/2}}\le\sqrt{pD}$ and
+$g'\le(g_0+1)n/\sigma$. Since $D$ and $R$ differ by at most a fixed
+factor, the matrix call costs
+\begin{equation}\label{eq:matrixcost}
+ O_M(N^2/D^\gamma)=O_M(n^2R^{1-\gamma}/\sigma^2)
+ =O_M(n^2R^{-\gamma/2}).
+\end{equation}
+Initializing the two dense input matrices takes $O(ND)$ time, covered by
+this bound because $D^{1+\gamma}\le N$. Set their nonzero entries by
+enumerating each list element and all possible $\mu_i$. This costs
+$O_{M,c}(n\sqrt{pD}\polylog n)$, also covered by~\eqref{eq:matrixcost}.
+Sorting the capped probe positions and retaining their lists costs
+$O_{M,c}(n^2\sigma^{-1}\polylog n)$. This fits because
+$\alpha\ge\gamma/2$.
+
+The capped scans, including the possible final successful scan, cost
+\begin{equation}\label{eq:scancost}
+ O_{M,c}\bigl((\sigma^2n^2/R+\sigma)\polylog n\bigr)
+ =O_{M,c}(n^2R^{-\gamma/2}\polylog n).
+\end{equation}
+The equality in the dominant exponent follows from
+$2\alpha-1=-\gamma/2$. Row evaluation, class sorting, label arithmetic,
+parameter computation and recovery use $O_{M,c}(n\polylog n)$ additional
+time. Matrix dimensions are polynomial in $n$, so word sizes and their
+bit simulation add polynomial logarithmic overhead only.
+
+For completeness, uniform coefficients in $\Z_M$ are generated from
+$C$ fair bits by rejecting values at least $M$. An accepted coefficient
+needs at most two attempts in expectation. For each profile subinstance,
+cap the total number of attempts for its $r\ell$ coefficients at
+$24r\ell$, aborting the subinstance if the cap is exceeded. This cap costs
+$O_M(r\ell)$ time on every execution. Coupling with unlimited independent
+uniform generation, Markov's inequality bounds the probability of such
+an abort by $1/12$.
+
+Every subinstance therefore has cost
+$O_{M,c}(n^2R^{-\gamma/2}\polylog n)$ on every random path, whether or
+not its listing or scans abort. There are at most
+$(1+\floor{\log_2 n})^{3L}$ subinstances. As $M$ is fixed and
+$R\ge n^\eta/2$, their total cost is the bound in
+Theorem~\ref{thm:main}, with saving $\delta_M=\eta\gamma/2$ independent
+of $c$.
+
+To verify correctness, fix a witness of a positive input before any
+randomness. Its profile subinstance is deterministic. Its ideal uniform
+rows satisfy the two inequalities in~\eqref{eq:good} except with probability
+at most $1/6$. The coefficient cap has probability at most $1/12$ of
+interfering. On the complementary event the listing cap holds, and a
+positive probe containing a true witness is reached within the scan cap.
+Thus this subinstance finds a witness with probability at least $3/4$.
+If the algorithm stops earlier it has already found a verified witness.
+One may regard independent random tapes for all subinstances as sampled
+in advance, so stopping early does not require a union bound over them.
+Negative inputs always return absence because every success requires an
+original zero-sum triple. This proves Theorem~\ref{thm:main}.
+
+\section{Finite coordinate relations}\label{sec:relations}
+
+Let $\Sigma$ be a fixed finite alphabet. A relation $P\subseteq\Sigma^3$
+is abelian-group-representable if there are maps $\phi_i:\Sigma\to A$
+and $t\in A$ into an abelian group with
+\[
+ (a,b,c)\in P\quad\Longleftrightarrow\quad
+ \phi_1(a)+\phi_2(b)+\phi_3(c)=t.
+\]
+Given three lists in $\Sigma^d$, the coordinatewise problem asks for one
+triple whose coordinate triples all belong to $P$.
+
+\begin{corollary}\label{cor:relation}
+For each fixed abelian-group-representable finite relation $P$, there is
+$\delta_P>0$ such that, for every fixed $c>0$, its coordinatewise problem
+on lists of size at most $n$ and $d\le c\log n$ has a randomized witness
+algorithm of worst-case time $O_{P,c}(n^{2-\delta_P}\polylog n)$,
+with the one-sided guarantee of Theorem~\ref{thm:main}.
+\end{corollary}
+\begin{proof}
+We give the finite-quotient argument of Majdoddin's Lemma 20.3(d), followed
+by the translation of Lemma 20.4(a) \cite{Maj26}. The empty relation is
+immediate. Otherwise fix $s^0\in P$ and use the basis $e_{i,a}$ of
+$\Z^{3|\Sigma|}$. Put
+\[
+ e(s)=e_{1,s_1}+e_{2,s_2}+e_{3,s_3},\qquad
+ L_P=\operatorname{span}_{\Z}\{e(s)-e(s^0):s\in P\}.
+\]
+Any representation induces a homomorphism vanishing on $L_P$, so for
+$s\notin P$ the vector $e(s)-e(s^0)$ is outside $L_P$. In a Smith normal
+form basis, write $L_P=\bigoplus_{i\le\rho}d_i\Z e'_i$. There are only
+finitely many forbidden vectors. Choose an integer $m\ge2$ divisible by
+every $d_i$ and larger than the absolute values of all coordinates of
+these vectors. A forbidden vector $y$ remains outside
+$L_P+m\Z^{3|\Sigma|}$: either some $i\le\rho$ has $d_i\nmid y_i$, or
+some $i>\rho$ has nonzero $y_i$, which cannot be divisible by $m$.
+The finite group
+\[
+ A_P=\Z^{3|\Sigma|}/(L_P+m\Z^{3|\Sigma|})
+\]
+therefore represents exactly $P$, using $\phi_i(a)=[e_{i,a}]$ and
+$t=[e(s^0)]$. This group and its exponent depend only on $P$.
+
+For a string $x\in\Sigma^d$ define
+$\Phi_i(x)=(\phi_i(x[j]))_{j=1}^d$. Translate the third list by
+$-(t,\ldots,t)$ and leave the other two image lists unshifted. A resulting
+zero sum in $A_P^d$ is equivalent, coordinate by coordinate, to a valid
+original triple. The construction costs $O_P(nd)$; retain a preimage
+index for every image value. These indices recover a valid original
+witness even when image strings coincide. Since
+$|A_P^d|\le n^{O_P(c)}$ and its exponent is fixed, apply
+Theorem~\ref{thm:main} with $M=\max\{2,\exp(A_P)\}$ and
+$\delta_P=\delta_M$. The exponent saving is independent of $c$.
+\end{proof}
+
+This supplies the sufficient tractability direction for every representable
+relation. The argument leaves the complexity of nonrepresentable relations
+as a separate question. The prior finite-quotient reduction accounts for
+the breadth of the consequence; the group algorithm supplies the extension
+that it requires.
+
+\section{Verification and further questions}
+
+The proof gives an explicit, bounded-time reduction to the prior
+thin-product algorithm. Its finite checks supplement the algebra: the
+separate checker tested 778 full-row and 1,382 reduced-row distributions,
+4,622 profile subinstances, and 144 literal support instances containing
+45,932 matrix entries and 13,244 probes. The tests included mixed moduli,
+fragmented profiles and nonsurjective images. These are regression tests;
+the bounds for all inputs follow from the lemmas above. The thin-product
+algorithm is used as a cited theorem. A faster saving as $M$ grows and a
+deterministic replacement for the row-selection step remain useful
+directions.
+
+\bibliographystyle{alpha}
+\bibliography{references}
+
+\section*{AI methodology statement}
+OpenAI Codex generated and materially influenced the proof development,
+literature comparisons, verification programs and English exposition in
+this paper. Codex used primary-source text and web metadata for the cited
+results. A separate fresh model context reconstructed the proof and wrote
+a second exact checker; finite tests were executed locally. The manuscript
+was drafted and compiled with Codex assistance. Proof verification consisted
+of model-based mathematical reconstruction and local exact finite checks.
+The sole listed author is responsible for the paper's content.
+\end{document}

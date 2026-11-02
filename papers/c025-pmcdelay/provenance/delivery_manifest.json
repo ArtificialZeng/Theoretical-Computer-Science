@@ -1,0 +1,121 @@
+{
+  "package_schema": 5,
+  "project": "c025-pmcdelay",
+  "title": "Polynomial-Delay Enumeration of All Potential Maximal Cliques",
+  "readiness_label": "working_paper",
+  "stoc_assessment": {
+    "job_id": "c025-pmcdelay-referee-6970e98c3a2b",
+    "snapshot_digest": "9e18afcb85b19f266e11aab420e78596f90e785921128737257fbdd42a21cfbc",
+    "review_type": "fresh_internal_stoc_assessment",
+    "verdict": "working_paper",
+    "strongest_result": "One deterministic algorithm enumerates all nonempty potential maximal cliques exactly once on every finite simple undirected graph, with a fixed polynomial in n+m+1 bounding time before the first output, each inter-output interval and the final wait to termination. The zero-vertex input halts promptly; disconnected and complete inputs are included; exponential storage is permitted.",
+    "nearest_comparisons": [
+      "Bergé–Limouzy–Schivre arXiv:2610.19850v3, Theorem 1 and Section 1.4: total O(n^4 m K) time and an explicitly open polynomial-delay question. The present theorem adds prefix and final-delay guarantees using their structural seed/preimage machinery.",
+      "Kenig arXiv:2610.24856v1, Theorem 1.1: 2^{O(k^3)} n^4 log n delay for constrained PMCs of size at most k. The candidate covers all sizes with input-polynomial delay but does not offer that FPT constrained-search guarantee.",
+      "Grigoriev–Kobayashi–Tamaki–van der Zanden, IPEC 2025.21, Theorem 32 and Proposition 29: polynomial delay on triconnected plane graphs and an antecedent to the separator extension. The candidate covers arbitrary graphs; its novelty is not the extension idea.",
+      "Brosse–Conte–Limouzy–Punzi–Rucci arXiv:2402.18265v1, Proposition 1 and Lemma 4: unique lifting and output-polynomial-time polynomial-space enumeration. The candidate uses known lifting, attains polynomial delay, and retains exponential space.",
+      "Capelli–Strozecki STACS 2023.18 and Computational Complexity 35:6 (2026), DOI 10.1007/s00037-026-00287-w: incremental-linear amortization can be converted to worst-case polynomial delay. The candidate contributes the PMC prefix/termination bound, not the conversion."
+    ],
+    "criteria": {
+      "importance": {
+        "judgment": "strong",
+        "reason": "The theorem resolves exactly the all-graph polynomial-delay question expressly left open by the current output-linear primary paper. PMCs are established primitives in exact treewidth/fill-in and related graph algorithms; the IPEC planar result and current size-parameterized result confirm active interest in guarantees per output. No downstream total-time speedup beyond BLS is inferred."
+      },
+      "novelty": {
+        "judgment": "strong",
+        "reason": "The current primary comparisons do not give the theorem: total output-linear time lacks prefix control, planar delay restricts inputs, and the FPT size-bound delay is exponential at k=n. The new operation emits bounded-fiber helpers during the separator phase and couples their progress to exact recursive suspension and simultaneous output/termination bounds. Unique lifting, separator extension and FIFO regularization are prior work. Bounded searches found no equivalent; this remains a reasoned internal novelty assessment, not certified priority."
+      },
+      "technical_depth": {
+        "judgment": "uncertain",
+        "reason": "The genuinely additional work is the prefix-useful separator charge and the additive simultaneous recurrence, including finalization. They are sound and substantively change the complexity guarantee. However, the difficult graph-structural predecessor existence is inherited from BLS, and the new analysis is a compact synthesis of established tools. The packet does not establish that this new technical component has the depth expected for competitive STOC submission."
+      },
+      "breadth_or_consequence": {
+        "judgment": "uncertain",
+        "reason": "All graphs and all output sizes are a broad domain, and every output prefix now has a polynomial-time guarantee per requested solution. Nevertheless no improved treewidth exponent, polynomial-space bound, practical memory guarantee, constrained search consequence or application to another enumeration family is proved. Broad TCS consequences beyond this enumeration guarantee remain insufficiently developed."
+      },
+      "exposition_and_verifiability": {
+        "judgment": "strong",
+        "reason": "The frozen proof gives explicit graph searches, named source dependencies, exact suspension points, data-structure and bit-cost conventions, both timing invariants and all input boundaries. It directly resolves the endpoint ambiguity instead of assuming a single-source traversal theorem. A fresh standard-library verifier checked literal minimal-triangulation definitions on all 1100 labelled graphs through order five and all 29 serialized cases; those finite tests are explicitly separated from the proof. This judgment concerns the mathematical dossier; no manuscript/build/visual review is claimed."
+      }
+    },
+    "case_for_stoc": "The strongest positive case is a complete answer to an active general graph-enumeration question: replace a recent output-linear total-time theorem by worst-case polynomial delay at every output and both boundaries. The obstacle is that recursive seed computation and exponentially many unproductive separator tests can prevent prefix progress; actual bounded-fiber helper emissions plus a simultaneous invariant address it. This is a credible mathematical contribution. A strong STOC case is still unestablished because the major structural machinery is inherited and no broad algorithmic consequence or method generalization is proved. Correctness and resolving the open guarantee do not alone justify submission_ready.",
+    "remaining_weaknesses": [
+      "The new technical depth relative to BLS structural theory is uncertain at the STOC level.",
+      "The result has no established new consequence for treewidth total running time, output-count exponents, polynomial space or another enumeration family.",
+      "Exponential storage remains essential to the reviewed implementation and limits any unproved practical claim.",
+      "The novelty search is bounded and cannot establish exhaustive priority; future citation/manuscript/build/visual gates have not yet run."
+    ],
+    "label_is_not_a_venue_decision": true
+  },
+  "pages": 9,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "original_status": "proved",
+  "kind": "resolution-paper",
+  "pdf": "c025-pmcdelay_working_paper.pdf",
+  "pdf_sha256": "ff0b8c2710e0e8655e39aaaaeef6df945a006e772ebc9559845b12d5f145a80f",
+  "source_archive": "c025-pmcdelay_source_and_reproducibility.zip",
+  "source_archive_sha256": "d8cdf77a3004b949f81c73e223ad3bce6c25594c60b035e3f4f788862cee6f9a",
+  "class_file": "manuscript/acmart.cls",
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "reproduce_scripts": [
+    "audit/referee_verify.py"
+  ],
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "ff0b8c2710e0e8655e39aaaaeef6df945a006e772ebc9559845b12d5f145a80f"
+    },
+    "citation_verdict": "accept_with_citation_limitations",
+    "kind": "resolution-paper",
+    "manuscript_digest": "8502854365556ca110be34d374a6e54b8133c7e747267dea571dd218f829c685",
+    "original_status": "proved",
+    "pages": 9,
+    "pdf_digest": "ff0b8c2710e0e8655e39aaaaeef6df945a006e772ebc9559845b12d5f145a80f",
+    "provenance": {
+      "audit/build.json": "e0eae1f9a4d15e04fcc177989aff1bacdeef85122b96be94910ab42031426699",
+      "audit/build.md": "d4af8af508f0893a295a52e40c869ad21e76120650d5c11465098cafde5387ef",
+      "audit/citations.json": "8bd494e401090ef16bc3e43254040bce7a06d2c3155bf2462e33bf70f85530d3",
+      "audit/citations.md": "91a8b8c624f0f3e2f4b2e302db4075184b7bb8b8f6aed6758d57791a3d340325",
+      "audit/math.json": "ed32024ae507984b2cf73132b6bb69eae1595809f622879ba752ea0ca8ce4fd7",
+      "audit/math.md": "6e872da3ddfed1f117c47c86d38bb765171ec53a2d86d26ad858805c67e7918e",
+      "audit/visual.json": "6865afbbf4471d9f9cb30344a319bae8f526f373042658f5dc579ed06a2ddf5c",
+      "audit/visual.md": "2093d7062ba266e4e121e08c95b1355f185e863f79c5871afe9d1a88353a10de",
+      "evidence/release-reproduction/manuscript/main.log": "d738c5a40d64fff0f117021fd06faa6ca2b62dc70463c8dd10ae47ce143f23f0",
+      "jobs/c025-pmcdelay-referee-6970e98c3a2b/role.json": "9ecee4d9f08ee9b39884d851661d64be564d75d2c3a9f225f5af0ddd9ae1aeba",
+      "jobs/c025-pmcdelay-release-dfedec0715d6/role.json": "01a63c492acb0119cf59695261cc752b481444a85121e12ba6e0d25798434fe2",
+      "jobs/c025-pmcdelay-research-338d67d18097/role.json": "1155603ffefa585a8cf0c8203f4af03cad39378aec96a3bca907e8333abee388"
+    },
+    "schema": 1,
+    "snapshot_digest": "9e18afcb85b19f266e11aab420e78596f90e785921128737257fbdd42a21cfbc",
+    "unverified_citations": [
+      {
+        "key": "BBC99",
+        "limitation": "Complete WG 1999 chapter text was not obtained. Publisher metadata and abstract verified; exact polynomial-delay primitive inspected in BLS v3 Lemma 1. Official queue code only corroborates the recipe. No unsupported attribution remains."
+      }
+    ]
+  },
+  "citation_verdict": "accept_with_citation_limitations",
+  "citation_limitations": [
+    {
+      "key": "BBC99",
+      "limitation": "Complete WG 1999 chapter text was not obtained. Publisher metadata and abstract verified; exact polynomial-delay primitive inspected in BLS v3 Lemma 1. Official queue code only corroborates the recipe. No unsupported attribution remains."
+    }
+  ],
+  "excluded_third_party_text_caches": [],
+  "external_submission_performed": false
+}

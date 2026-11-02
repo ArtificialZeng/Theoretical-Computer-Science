@@ -1,0 +1,34 @@
+{
+  "title": "Optimal Deterministic Incremental--Decremental Submodular Maximization",
+  "source_files": [
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/acmart.dtx",
+    "manuscript/alphaurl.bst",
+    "manuscript/build.py",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "pdf": "manuscript/optimal-incdec-working_paper.pdf",
+  "build_command": "python3 manuscript/build.py",
+  "readiness_label": "working_paper",
+  "stoc_assessment": {
+    "path": "audit/stoc-assessment.json",
+    "job_id": "c025-incdec-referee-2ab23be91f58",
+    "snapshot_digest": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4",
+    "sha256": "4248bd9c0aff7977ce6815b5f9a49eed231464d86e36b510179a9f159c44c2c3",
+    "verdict": "working_paper",
+    "label_is_not_a_venue_decision": true
+  },
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "max_total_pages": 12,
+  "external_submission_authorized": false,
+  "writer_job_id": "c025-incdec-write-571412ddfbdf"
+}

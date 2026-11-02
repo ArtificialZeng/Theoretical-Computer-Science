@@ -1,0 +1,182 @@
+{
+  "n": 6,
+  "word": "RLLRRL",
+  "prefix_set": 6,
+  "comparison_set": 33,
+  "inequality": "f(33) <= 2*f(6)",
+  "certificate_exactly_verified": true,
+  "support": [
+    {
+      "weight": "1/2",
+      "constraint": {
+        "kind": "monotone",
+        "q": "h",
+        "A": 0,
+        "B": 22
+      }
+    },
+    {
+      "weight": "1/2",
+      "constraint": {
+        "kind": "submodular",
+        "q": "h",
+        "A": 1,
+        "B": 32
+      }
+    },
+    {
+      "weight": "1/4",
+      "constraint": {
+        "kind": "submodular",
+        "q": "h",
+        "A": 4,
+        "B": 58
+      }
+    },
+    {
+      "weight": "1/4",
+      "constraint": {
+        "kind": "submodular",
+        "q": "h",
+        "A": 6,
+        "B": 58
+      }
+    },
+    {
+      "weight": "1/4",
+      "constraint": {
+        "kind": "submodular",
+        "q": "h",
+        "A": 6,
+        "B": 60
+      }
+    },
+    {
+      "weight": "1/2",
+      "constraint": {
+        "kind": "monotone",
+        "q": "h",
+        "A": 33,
+        "B": 63
+      }
+    },
+    {
+      "weight": "1/2",
+      "constraint": {
+        "kind": "monotone",
+        "q": "g",
+        "A": 0,
+        "B": 41
+      }
+    },
+    {
+      "weight": "1/4",
+      "constraint": {
+        "kind": "submodular",
+        "q": "g",
+        "A": 3,
+        "B": 61
+      }
+    },
+    {
+      "weight": "1/2",
+      "constraint": {
+        "kind": "submodular",
+        "q": "g",
+        "A": 5,
+        "B": 57
+      }
+    },
+    {
+      "weight": "1/2",
+      "constraint": {
+        "kind": "monotone",
+        "q": "g",
+        "A": 30,
+        "B": 31
+      }
+    },
+    {
+      "weight": "1/2",
+      "constraint": {
+        "kind": "monotone",
+        "q": "g",
+        "A": 30,
+        "B": 62
+      }
+    },
+    {
+      "weight": "1/2",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 0,
+        "side": "R",
+        "competitor_side": "L",
+        "competitor_item": 0,
+        "S": 0,
+        "T": 63
+      }
+    },
+    {
+      "weight": "1/4",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 1,
+        "side": "L",
+        "competitor_side": "R",
+        "competitor_item": 1,
+        "S": 0,
+        "T": 62
+      }
+    },
+    {
+      "weight": "1/2",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 1,
+        "side": "L",
+        "competitor_side": "L",
+        "competitor_item": 5,
+        "S": 0,
+        "T": 62
+      }
+    },
+    {
+      "weight": "1/2",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 2,
+        "side": "L",
+        "competitor_side": "R",
+        "competitor_item": 2,
+        "S": 2,
+        "T": 62
+      }
+    },
+    {
+      "weight": "1/2",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 3,
+        "side": "R",
+        "competitor_side": "L",
+        "competitor_item": 5,
+        "S": 6,
+        "T": 62
+      }
+    },
+    {
+      "weight": "1/2",
+      "constraint": {
+        "kind": "chosen_gain",
+        "step": 4,
+        "side": "R",
+        "competitor_side": "L",
+        "competitor_item": 4,
+        "S": 6,
+        "T": 54
+      }
+    }
+  ],
+  "scope": "Single trace/comparison only; aggregate certificate is an aid to general proof discovery, not a general theorem."
+}

@@ -1,0 +1,82 @@
+{
+  "project": "c026-aonflow",
+  "actual_archive_sha256": "b7cc2b225daa929c056d7ccebd68a79f2a3324564602f076c6e18723c66d9ca5",
+  "actual_pdf_sha256": "50c157c4b7b471f5d2778b669efa55fde604245ebe40372a6c3cd79988c48fe4",
+  "build_inputs_rehashed": 8,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c026-aonflow-i5i94ub2/c026-aonflow_source",
+  "pages": 7,
+  "text_matches": true,
+  "all_page_renders_match": true,
+  "finite_reproduction": [
+    {
+      "entry": "evidence/research-2-check.py",
+      "summary": {
+        "job_id": "c026-aonflow-research-02dec8252283",
+        "checked_at_utc": "2026-11-02T01:02:59.029362+00:00",
+        "arithmetic": "exact fractions.Fraction",
+        "source_sha256": "7241936e887e814eebe18f891cfe9d90c883ee0298057dfc8bbdd2344501e29e",
+        "source_unchanged": true,
+        "uniformization": {
+          "sampling_outcomes": 37,
+          "cut_checks": 2278,
+          "T_results": [
+            {
+              "T": 1,
+              "pieces": 3,
+              "exact_good_event_probability": "23/32"
+            },
+            {
+              "T": 2,
+              "pieces": 3,
+              "exact_good_event_probability": "1"
+            },
+            {
+              "T": 3,
+              "pieces": 4,
+              "exact_good_event_probability": "31/32"
+            },
+            {
+              "T": 4,
+              "pieces": 4,
+              "exact_good_event_probability": "1"
+            }
+          ],
+          "tiny_mass_denominator_bits": 301
+        },
+        "dyadic_sampling": {
+          "rational_distribution_and_bit_cases": 3978,
+          "denominators": [
+            2,
+            18
+          ],
+          "bit_counts": [
+            2,
+            5,
+            9
+          ]
+        },
+        "admission_bridge": {
+          "copy_subsets": 64,
+          "old_bridge_feasible_subsets": 24,
+          "limitation": "Exact cut arithmetic, not a complete graph LP feasibility test."
+        },
+        "parameters": {
+          "parameter_cases": 18,
+          "minimal_T": 320,
+          "individual_tail_budgets_less_than": "1/64",
+          "sampling_total_variation_budget_at_most": "1/64",
+          "good_event_probability_greater_than": "61/64"
+        },
+        "all_checks_passed": true,
+        "limits": [
+          "No implementation of BJS decomposition or CKS rounding",
+          "No exhaustive graph domain; one explicit feasible path fixture",
+          "Finite diagnostics do not certify the proposed infinite theorem",
+          "Full algorithmic proof is in research-2-uniform-copy-resolution.md"
+        ]
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c026-aonflow-i5i94ub2/reproduction-0.stdout.log"
+    }
+  ],
+  "scope": "Actual delivered archive clean build/render/reproduction; not a new math or novelty verdict."
+}

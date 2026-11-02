@@ -1,0 +1,23 @@
+{
+  "job_id": "c034-group3sum-referee-f77368142a77",
+  "snapshot_digest": "15a73043f23436b1592a376f95f678e39919b724da29d1fc7773757f6a82f52a",
+  "status": "all_exact_assertions_passed",
+  "counts": {
+    "reduced_row_distributions": 1382,
+    "full_row_distributions": 778,
+    "profile_subinstances": 4622,
+    "support_instances": 144,
+    "literal_product_entries": 45932,
+    "probes_checked": 13244,
+    "failed_probes_checked": 3036
+  },
+  "mode": "root portable finite-only adapter; not a new fresh review",
+  "original_verifier_sha256": "3f35af1acdcc3169499b0d8faee516255a1e6ba16c80be2743079701b4394df2",
+  "all_finite_checks_executed": true,
+  "internal_literature_cache_hash_loop_executed": false,
+  "limitations": [
+    "Third-party paper full texts are not in the delivered archive; the original internal whole-packet integrity loop is intentionally omitted here.",
+    "The unchanged original verifier and its recorded results are included. Every finite check before its integrity-only suffix executes unchanged.",
+    "These are finite algebra/interface checks, not a fast-backend benchmark, formal proof, or a new mathematical/novelty acceptance."
+  ]
+}

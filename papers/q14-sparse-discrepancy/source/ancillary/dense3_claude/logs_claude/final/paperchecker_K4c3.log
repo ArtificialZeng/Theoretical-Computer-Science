@@ -1,0 +1,5 @@
+# Mon Nov  2 23:05:52 CST 2026 paper checker full pattern K_4 c=3
+n=4 c=3 j=1: PROVED boxes=1 time=0.0s
+n=4 c=3 j=2: PROVED boxes=1 time=0.0s
+n=4 c=3 j=3: PROVED boxes=1 time=0.0s
+n=4 c=3 j=4: PROVED boxes=13 time=0.0s

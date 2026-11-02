@@ -1,0 +1,2 @@
+cover n=6 solver=kissat: vars=8256 clauses=173056 result=UNSATISFIABLE time=5.5s
+cover n=6 solver=cadical: vars=8256 clauses=173056 result=UNSATISFIABLE time=0.1s

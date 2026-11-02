@@ -1,0 +1,717 @@
+{
+  "at_utc": "2026-11-02T17:30:12.456642+00:00",
+  "passed": true,
+  "scope": "Only the declared finite checks for primary indexed versions; not general proof verification, novelty assessment, or certification of additional expanded versions.",
+  "papers": [
+    {
+      "id": "c034-group3sum",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "research/verify_divisor_hash.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 2.845,
+          "log": "validation/unified-reproduction/c034-group3sum-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "research/reproduce_referee_finite.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 2.378,
+          "log": "validation/unified-reproduction/c034-group3sum-2.log"
+        }
+      ]
+    },
+    {
+      "id": "c034-grouptri",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/test_capped_listing.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.612,
+          "log": "validation/unified-reproduction/c034-grouptri-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/test_quotient_kernel.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 5.916,
+          "log": "validation/unified-reproduction/c034-grouptri-2.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "manuscript/verification/independent_verifier.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 8.756,
+          "log": "validation/unified-reproduction/c034-grouptri-3.log"
+        }
+      ]
+    },
+    {
+      "id": "c032-dspdag",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/research-2/verify.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 3.236,
+          "log": "validation/unified-reproduction/c032-dspdag-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "audit/fresh-56b0105494de/independent_verify.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 1.784,
+          "log": "validation/unified-reproduction/c032-dspdag-2.log"
+        }
+      ]
+    },
+    {
+      "id": "c031-detlis",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 1.612,
+          "log": "validation/unified-reproduction/c031-detlis-1.log"
+        }
+      ]
+    },
+    {
+      "id": "c029-vftfast",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/research3_full_checks.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 12.667,
+          "log": "validation/unified-reproduction/c029-vftfast-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/research3_parameter_checks.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.234,
+          "log": "validation/unified-reproduction/c029-vftfast-2.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/reproduce_referee_finite.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.3,
+          "log": "validation/unified-reproduction/c029-vftfast-3.log"
+        }
+      ]
+    },
+    {
+      "id": "c026-aonflow",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/research-2-check.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 1.958,
+          "log": "validation/unified-reproduction/c026-aonflow-1.log"
+        }
+      ]
+    },
+    {
+      "id": "c025-pmcdelay",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "audit/referee_verify.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.703,
+          "log": "validation/unified-reproduction/c025-pmcdelay-1.log"
+        }
+      ]
+    },
+    {
+      "id": "c025-incdec",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "code/verify_pass3.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 1.407,
+          "log": "validation/unified-reproduction/c025-incdec-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "code/pass3_oriented_greedy.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.201,
+          "log": "validation/unified-reproduction/c025-incdec-2.log"
+        }
+      ]
+    },
+    {
+      "id": "c022-spe-memory",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "code/check_promise_reset.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.278,
+          "log": "validation/unified-reproduction/c022-spe-memory-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "code/check_subset_memory.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.316,
+          "log": "validation/unified-reproduction/c022-spe-memory-2.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "audit/referee-checks.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.226,
+          "log": "validation/unified-reproduction/c022-spe-memory-3.log"
+        }
+      ]
+    },
+    {
+      "id": "c021-ccrapumping",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/research_checks.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 9.507,
+          "log": "validation/unified-reproduction/c021-ccrapumping-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/revision2/pass2_exact_checks.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.665,
+          "log": "validation/unified-reproduction/c021-ccrapumping-2.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/revision2/pass2_algorithm_checks.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 32.835,
+          "log": "validation/unified-reproduction/c021-ccrapumping-3.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "audit/referee_check.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 3.214,
+          "log": "validation/unified-reproduction/c021-ccrapumping-4.log"
+        }
+      ]
+    },
+    {
+      "id": "advice-matching",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.163,
+          "log": "validation/unified-reproduction/advice-matching-1.log"
+        }
+      ]
+    },
+    {
+      "id": "c002-coverage",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/research_rounding_check.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 15.214,
+          "log": "validation/unified-reproduction/c002-coverage-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "audit/referee_verify.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.29,
+          "log": "validation/unified-reproduction/c002-coverage-2.log"
+        }
+      ]
+    },
+    {
+      "id": "c009-cycle2",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/research_exact.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 1.127,
+          "log": "validation/unified-reproduction/c009-cycle2-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "audit/referee_verify.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.244,
+          "log": "validation/unified-reproduction/c009-cycle2-2.log"
+        }
+      ]
+    },
+    {
+      "id": "c012-upcycles",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "manuscript/verify.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.796,
+          "log": "validation/unified-reproduction/c012-upcycles-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/research2-witness/minimal_check.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.733,
+          "log": "validation/unified-reproduction/c012-upcycles-2.log"
+        }
+      ]
+    },
+    {
+      "id": "c015-imagebound",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/portable-check.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.073,
+          "log": "validation/unified-reproduction/c015-imagebound-1.log"
+        }
+      ]
+    },
+    {
+      "id": "c017-wheeler",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/check_membership.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 1.392,
+          "log": "validation/unified-reproduction/c017-wheeler-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/check_exact_certificates.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.577,
+          "log": "validation/unified-reproduction/c017-wheeler-2.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/research-2-check-realizability.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.268,
+          "log": "validation/unified-reproduction/c017-wheeler-3.log"
+        }
+      ]
+    },
+    {
+      "id": "coverage-sparse",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.395,
+          "log": "validation/unified-reproduction/coverage-sparse-1.log"
+        }
+      ]
+    },
+    {
+      "id": "curvature-noise",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.167,
+          "log": "validation/unified-reproduction/curvature-noise-1.log"
+        }
+      ]
+    },
+    {
+      "id": "privacy-interpolation",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 1.139,
+          "log": "validation/unified-reproduction/privacy-interpolation-1.log"
+        }
+      ]
+    },
+    {
+      "id": "q14-sparse-discrepancy",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "k3_rigorous_exact.py"
+          ],
+          "cwd": "ancillary",
+          "exit_code": 0,
+          "seconds": 6.359,
+          "log": "validation/unified-reproduction/q14-sparse-discrepancy-1.log"
+        }
+      ]
+    },
+    {
+      "id": "robust-stopping",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "manuscript/reproduce.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 34.283,
+          "log": "validation/unified-reproduction/robust-stopping-1.log"
+        }
+      ]
+    },
+    {
+      "id": "stoc1",
+      "passed": true,
+      "archive_files_verified": 66,
+      "seconds": 3.216,
+      "steps": [
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "rustc",
+            "--edition",
+            "2021",
+            "--crate-type",
+            "cdylib",
+            "-O",
+            "viable.rs",
+            "-o",
+            "libviable.dylib"
+          ],
+          "cwd": "artifact",
+          "exit_code": 0,
+          "log": "validation/unified-reproduction/stoc1-math-1.log"
+        },
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "python3",
+            "-B",
+            "verify.py"
+          ],
+          "cwd": "artifact",
+          "exit_code": 0,
+          "log": "validation/unified-reproduction/stoc1-math-2.log"
+        },
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "python3",
+            "-B",
+            "verify_blocks.py"
+          ],
+          "cwd": "artifact",
+          "exit_code": 0,
+          "log": "validation/unified-reproduction/stoc1-math-3.log"
+        }
+      ]
+    },
+    {
+      "id": "stoc2",
+      "passed": true,
+      "archive_files_verified": 11,
+      "seconds": 8.653,
+      "steps": [
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "python3",
+            "-B",
+            "research/code/verify.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "log": "validation/unified-reproduction/stoc2-math-1.log"
+        },
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "python3",
+            "-B",
+            "research/code/check_indexed.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "log": "validation/unified-reproduction/stoc2-math-2.log"
+        }
+      ]
+    },
+    {
+      "id": "stoc3",
+      "passed": true,
+      "archive_files_verified": 46,
+      "seconds": 2.075,
+      "steps": [
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "npm",
+            "ci",
+            "--ignore-scripts"
+          ],
+          "cwd": "artifact",
+          "exit_code": 0,
+          "log": "validation/unified-reproduction/stoc3-math-1.log"
+        },
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "npm",
+            "test"
+          ],
+          "cwd": "artifact",
+          "exit_code": 0,
+          "log": "validation/unified-reproduction/stoc3-math-2.log"
+        }
+      ]
+    },
+    {
+      "id": "stoc4",
+      "passed": true,
+      "archive_files_verified": 39,
+      "seconds": 1.294,
+      "steps": [
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "python3",
+            "-B",
+            "artifact/validate.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "log": "validation/unified-reproduction/stoc4-math-1.log"
+        },
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "python3",
+            "-B",
+            "artifact/audit_records.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "log": "validation/unified-reproduction/stoc4-math-2.log"
+        }
+      ]
+    },
+    {
+      "id": "stoc5",
+      "passed": true,
+      "archive_files_verified": 90,
+      "seconds": 4.896,
+      "steps": [
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "python3",
+            "-B",
+            "artifact/build_elina.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "log": "validation/unified-reproduction/stoc5-math-1.log"
+        },
+        {
+          "stage": "finite-reproduction",
+          "command": [
+            "python3",
+            "-B",
+            "artifact/replay_cases.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "log": "validation/unified-reproduction/stoc5-math-2.log"
+        }
+      ]
+    }
+  ]
+}

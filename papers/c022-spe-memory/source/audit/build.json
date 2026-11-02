@@ -1,0 +1,12 @@
+{
+  "job_id": "c022-spe-memory-release-fb6f51f9715a",
+  "snapshot_digest": "8167ae363386355fe869e8109b82155be5da309379f81a3f7216041bf9acf52f",
+  "manuscript_digest": "fda8041cddf4c1a9b3b39b3e7e551e135f79bf4f894525e547ac174a11bbfaa2",
+  "pdf_digest": "1c714b9216ce3cf89b26123c6beebf3c7a38d14b31e0b5a727dcaa214978306f",
+  "verdict": "accept",
+  "report": "audit/build.md",
+  "build_log": "manuscript/build/main.log",
+  "build_log_digest": "d10916760e73627f96a8ff190d2eb439603e2d298a8a0ae80b53f2f97b441ed1",
+  "clean_build": true,
+  "archive_reproduction": "evidence/release-fb6f51f9715a/reproduction.json"
+}

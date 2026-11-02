@@ -1,0 +1,468 @@
+\documentclass[acmsmall,11pt,screen,nonacm]{acmart}
+\setcopyright{none}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\geometry{letterpaper,margin=1in,headheight=13pt,footskip=24pt,
+          includehead=false,includefoot=false,heightrounded=false}
+\usepackage{mathtools}
+\renewcommand{\bibfont}{\normalfont\normalsize}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\OPT}{\operatorname{OPT}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prb}{\mathbb{P}}
+\newcommand{\bits}{\{0,1\}}
+\title{A Near-Logarithmic Approximation for All-or-Nothing Flow}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\city{Kuala Lumpur}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\renewcommand{\shortauthors}{Zijian Zeng}
+\begin{document}
+\begin{abstract}
+\normalsize
+The all-or-nothing flow problem asks for a largest subset of terminal pairs that
+can each send one splittable unit of flow without violating edge capacities.
+For an undirected unit-capacity graph with $k$ indexed pairs, we give a randomized
+polynomial-time approximation with factor
+$C\log(k+2)\exp(C\sqrt{\log\log(k+4)})$ for an absolute constant $C$.
+The output is always feasible, and the cardinality guarantee holds with
+probability at least $3/4$. This gives the $\log^{1+o(1)}k$ guarantee asked for
+in Conjecture~5.1 of Bansal, Jambulapati, and Saranurak.
+
+The reduction combines their integral-node-weight flow-expander decomposition
+with the established congestion-one matching rounding of Chekuri, Khanna, and
+Shepherd. A fixed family of uniformly weighted path copies permits a single
+decomposition. Original unit terminal edges are retained as bottlenecks, so a
+feasible selection of copies admits distinct original pairs. An exact
+small-parameter branch makes the final guarantee depend on $k$, even when the
+graph is much larger than the terminal set. Sampling uses a strict polynomial
+bound on random bits.
+\end{abstract}
+\maketitle
+\pagestyle{plain}
+\raggedbottom
+\clearpage
+
+\section{The result and its context}
+
+Let $G=(V,E)$ be a finite undirected graph with unit edge capacities, and let
+$(s_i,t_i)$, $i\in[k]$, be indexed terminal pairs. A feasible solution chooses
+$I\subseteq[k]$ and routes one unit between $s_i$ and $t_i$ for each $i\in I$.
+Each commodity may split among paths, but the sum of all path flows on each
+edge is at most one. The objective is $|I|$; denote its optimum by $\OPT$.
+Shared endpoints, disconnected inputs, and indexed duplicate pairs are allowed.
+A pair with coincident endpoints has a zero-edge route.
+
+Chekuri, Khanna, and Shepherd give an $O(\log^2 k)$ approximation for the
+edge-capacitated problem~\cite[Theorem~3.2]{CKS05}. Bansal, Jambulapati, and
+Saranurak obtain flow-expander decomposition with nearly logarithmic overhead,
+and explicitly ask whether a $\log^{1+o(1)}k$ approximation for all-or-nothing
+flow is possible~\cite[Conjecture~5.1]{BJS26}. Their discussion explains why
+changing between throughput and concurrent-flow subproblems prevents an
+immediate substitution into the earlier framework. The theorem below supplies
+an admission-preserving interface for a fixed flow instead.
+
+\begin{theorem}\label{thm:main}
+There is one randomized algorithm, polynomial in the explicit input bit
+length, for all the inputs above. It always returns a feasible subset and
+unit flows of congestion at most one. For an absolute constant $C$, with
+probability at least $3/4$ its cardinality is at least
+\[
+ \frac{\OPT}{C\log(k+2)\exp\!\bigl(C\sqrt{\log\log(k+4)}\bigr)}.
+\]
+Its number of random bits is polynomially bounded. Repetition and selection
+of the largest feasible output amplify the success probability.
+\end{theorem}
+
+Here and below logarithms in asymptotic bounds are natural; explicitly written
+$\log_2$ is binary. The denominator is $\log^{1+o(1)}k$ as $k\to\infty$.
+Every admitted pair receives a full unit, and there is no congestion allowance.
+
+\paragraph{What the reduction contributes.}
+Uniformization and terminal duplication already occur in
+\cite[Lemma~1.1]{CKS05}, and the decomposition and matching rounding used here
+are prior results. The reduction keeps the original unit edges for terminal
+occurrences while adding many copy terminals beyond them. These original
+edges prevent two copies of the same pair from receiving integral admission.
+A fixed feasible path family then charges decomposition losses to edges only
+once. The copy scale cancels against the rounding yield. Finally, a small-$k$
+exact branch bounds the number of copy terminals by $O(k^2)$ in the other
+branch. These steps yield the full general-input improvement, rather than
+an improvement for an auxiliary routing problem.
+
+Anand subsequently gives improved flow-expander overhead and node-weighted
+extensions~\cite[Theorems~1.4 and~5.1]{Anand26}. We use the precise
+integral-total-weight guarantee of~\cite{BJS26}; we do not infer a stronger
+$k$-dependent admission theorem from an $n$-dependent decomposition bound.
+The algorithm below uses these established primitives to obtain the stated
+admission guarantee. Codex assisted materially with the proof development,
+source comparisons, and exposition; the final section describes these roles.
+
+\section{Two established algorithmic ingredients}\label{sec:ingredients}
+
+For a nonnegative node weighting $A$, write $|A|=\sum_v A(v)$.
+An unordered-pair demand $D$ \emph{respects} $A$ if
+$\sum_{v\ne u}D(\{u,v\})\le A(u)$ for every $u$. The weighting is
+$\phi$-flow-expanding if every such demand can be routed with congestion
+at most $1/\phi$.
+
+Fix a nondecreasing, computable overhead bound
+\begin{equation}\label{eq:gamma}
+ \Gamma(a)=O\!\left(\log(a+2)
+       \exp\!\bigl(O(\sqrt{\log\log(a+4)})\bigr)\right),
+ \qquad \Gamma(a)\ge1,
+\end{equation}
+with constants sufficiently large for the following theorem. Values of
+$\Gamma$ may be taken to be integers of polynomial bit length.
+
+\begin{proposition}[Bansal--Jambulapati--Saranurak~\cite{BJS26}]
+\label{prop:bjs}
+Given an undirected unit-capacity graph, an integral node weighting $A\ge0$,
+and $\phi>0$, a polynomial-time algorithm computes $C\subseteq E$ with
+$|C|\le\phi|A|\Gamma(|A|)$. For each connected component $U$ of $G-C$,
+the restriction $A|_U$ is $\phi$-flow-expanding in the induced graph $G[U]$.
+\end{proposition}
+
+This is Theorem~3.1 of~\cite{BJS26}; zero weights are permitted. If needed,
+apply it separately to connected components with the same global $\phi$.
+Monotonicity of $\Gamma$ bounds the sum of cut costs by the displayed global
+bound. Components with total weight zero require no cut.
+
+For $q=|X|$ distinct terminals, call $X$ \emph{$\alpha$-edge-flow-linked} if
+the demand $\alpha/q$ on each unordered pair of distinct terminals is
+routable with congestion one. This is the uniform specialization of the
+weighted product-demand definition in~\cite{CKS05}.
+
+\begin{proposition}[Chekuri--Khanna--Shepherd~\cite{CKS05,CKS13}]
+\label{prop:cks}
+There is an absolute $c_0>0$ such that, for $0<\alpha\le1$, a matching $M$
+whose endpoints $X$ are $\alpha$-edge-flow-linked has a polynomial-time
+congestion-one unit routing for at least $c_0\alpha|M|$ pairs of $M$.
+\end{proposition}
+
+The general matching statement is Theorem~3.1 of~\cite{CKS05}. Its footnote
+requires strengthened clustering. Section~\ref{sec:correction} explains the
+support from the corrected journal clustering in~\cite[Section~3.4]{CKS13}
+for the leaf terminals used here. We do not apply the journal's nice-instance
+Theorem~3.8 directly to arbitrary components. The conclusion is a splittable
+unit routing, without an integral-path requirement.
+
+\section{A fixed feasible family of uniform path copies}\label{sec:copies}
+
+Admit all coincident-endpoint pairs and remove them for now. If no remaining
+pair has connected endpoints, return these free admissions. In the rest of
+the proof $k$ counts the remaining pairs; the bound for the initial $k$ is
+no smaller after increasing its absolute constant.
+
+For every terminal \emph{occurrence}, add a distinct leaf joined to its
+original vertex by a unit edge, and move that terminal occurrence to the
+leaf. Call these the \emph{original occurrence leaves and edges}. Even when
+two indexed pairs have identical endpoints, their new leaves are distinct.
+This normalization preserves $\OPT$: extend each admitted unit flow along
+its own two new edges, or project a normalized flow after removing its
+pendant segments. Simple-path decompositions suffice after cycle removal.
+
+Choose an integer $N\ge16$ at least the encoding length and the numbers of
+vertices, edges, and pairs of this normalized input. It can be chosen
+polynomially bounded in the original explicit encoding length. Set
+$b=\lceil\log_2N\rceil$. If $k\le b$, enumerate all subsets and test unit-flow
+feasibility by a compact rational multicommodity-flow linear program.
+There are $2^k\le2N$ subsets, so this branch is polynomial and returns an
+optimum solution. Henceforth assume $k>b$.
+
+Solve the fractional admission relaxation
+\[
+ \max F=\sum_i x_i,\qquad 0\le x_i\le1,
+ \qquad \text{simultaneously route $x_i$ units for pair $i$}.
+\]
+Its compact edge formulation has polynomial size. Fix an optimum rational
+solution and a polynomial-size decomposition into simple paths, cancelling
+cycles first. Since some pair is connected,
+\begin{equation}\label{eq:F}
+ 1\le F\le k,\qquad F\ge\OPT.
+\end{equation}
+
+Set
+\begin{equation}\label{eq:scale}
+ T=64\lceil\log_2(2N)\rceil,\qquad \varepsilon=\frac1{4T}.
+\end{equation}
+For commodity $i$, partition its path mass into
+$d_i=\lceil Tx_i\rceil$ positive pieces, each of mass at most $1/T$;
+take no pieces if $x_i=0$. Process the path list in order and split a path
+when a piece becomes full. If $D=\sum_i d_i$, then
+\begin{equation}\label{eq:pieces}
+ D\le TF+k\le k(T+1).
+\end{equation}
+The number of positive fragments is at most the original number of paths
+plus $D$. In particular, small positive masses do not require a number of
+copies proportional to their denominators.
+
+Independently in each piece, select one path fragment $P$ with probability
+$T$ times its mass, or select nothing with the remaining probability.
+For the moment this is the ideal rational sampling law. Let $K$ count all
+selected paths and let $Z_e$ count those that use normalized edge $e$.
+Independence across pieces and feasibility of the initial flow give
+\begin{equation}\label{eq:means}
+ \E K=TF,\qquad \E Z_e\le T.
+\end{equation}
+Each variable is a sum of independent Bernoulli variables, even when several
+pieces belong to one original pair. Chernoff bounds imply
+\begin{equation}\label{eq:chernoff}
+ \Prb(K<TF/2)\le e^{-TF/8}\le e^{-T/8},\qquad
+ \Prb(Z_e>4T)\le(e^3/4^4)^T<8^{-T}.
+\end{equation}
+For the second estimate, exponential Markov with parameter $\log4$ and
+mean at most $T$ bounds even the event $Z_e\ge4T$. Since there are at most
+$N$ normalized edges, $N\ge16$, and $T\ge320$,
+$e^{-T/8}+N8^{-T}<1/32$.
+
+\paragraph{A bounded sampler.}
+For each piece list its rational outcomes, including a null outcome. Let
+$Q$ be the sum of these list lengths and put
+$B=\lceil\log_2(64Q)\rceil$. Draw $B$ unbiased bits per piece, yielding
+$U\in\{0,\ldots,2^B-1\}$, and locate $U/2^B$ in its cumulative probability
+intervals. The probability of an interval differs from its ideal length
+by at most $2^{-B}$. Thus the total variation distance of the implemented
+joint law from the ideal independent law is at most
+$Q2^{-B}\le1/64$, by summing marginal total variation distances.
+All comparisons are rational. This sampler has strict polynomial time and
+random-bit bounds, with no rejection loop.
+
+It follows that the event
+\begin{equation}\label{eq:good}
+ \mathcal G=\{K\ge TF/2\text{ and }Z_e\le4T\text{ for every normalized edge }e\}
+\end{equation}
+has probability greater than $1-1/32-1/64=61/64$ under the implemented law.
+Check it exactly. If it fails, return any one connected original pair,
+together with the free admissions. This remains a feasible answer.
+
+On $\mathcal G$, for each selected path add a fresh source-copy leaf beyond
+its original source occurrence leaf, and a fresh sink-copy leaf beyond its
+original sink occurrence leaf. The two new edges have unit capacity. Extend
+the selected path through them and give the resulting copy path flow
+$\varepsilon$. These $K$ flows are jointly feasible: a normalized old edge
+has load $\varepsilon Z_e\le1$, and a new edge has load $\varepsilon$.
+Call the augmented graph $G^*$. The original occurrence edges remain present
+with capacity one. All copies of original pair $i$ cross its same original
+source occurrence edge.
+
+\section{One decomposition and exact admission}\label{sec:transfer}
+
+Give the $2K$ new copy terminals weight one and every other vertex weight
+zero. Let $A$ be this integral weighting. Choose
+\begin{equation}\label{eq:phi}
+ \phi=\frac{\varepsilon}{8\Gamma(2K)}
+      =\frac1{32T\Gamma(2K)}.
+\end{equation}
+Apply Proposition~\ref{prop:bjs} once. Its cut set satisfies
+\begin{equation}\label{eq:cuts}
+ |C|\le \phi(2K)\Gamma(2K)=\varepsilon K/4.
+\end{equation}
+
+\begin{lemma}\label{lem:charge}
+At least $3K/4$ copy pairs have their entire prepared path in one component
+of $G^*-C$.
+\end{lemma}
+\begin{proof}
+Call a copy hit if its fixed prepared path uses a cut edge. The prepared
+flows are feasible, so
+\[
+ \varepsilon\,\#\{\text{hit copies}\}
+ \le\sum_{e\in C}\text{(prepared load on $e$)}
+ \le |C|\le\varepsilon K/4.
+\]
+A path hit several times is only overcounted by the sum. An unhit path lies
+entirely in one component. The charge is to individual path copies, without
+discarding all copies of an original pair when just one is hit.
+\end{proof}
+
+For each component $U$, let $M_U$ be its unhit copy pairs and let $X_U$
+be their endpoints. Ignore components with $M_U=\varnothing$. Work in the
+induced graph $H_U=G^*[U]$, as promised by Proposition~\ref{prop:bjs}.
+Although this can restore cut edges internal to $U$, the graphs $H_U$ have
+disjoint edge sets for distinct components.
+
+Write $q=|X_U|$. Demand $\phi/q$ on each unordered terminal pair has
+marginal $\phi(q-1)/q\le\phi$. Dividing it by $\phi$ gives an
+$A|_U$-respecting demand, because the endpoint indicator is pointwise at
+most $A|_U$. Flow expansion and scaling therefore route the original
+product demand with congestion one. A compact rational flow LP computes
+such a routing. This argument directly uses all-demand expansion; it
+does not assume that a normalized product-demand formula stays unchanged
+when endpoints are deleted.
+
+Proposition~\ref{prop:cks} applies to matching $M_U$ with $\alpha=\phi\le1$.
+Summing its congestion-one routings over the edge-disjoint component graphs
+selects at least
+\begin{equation}\label{eq:yield}
+ c_0\phi\sum_U|M_U|
+ \ge \frac{3c_0K}{128T\Gamma(2K)}
+ \ge \frac{3c_0F}{256\Gamma(2K)}
+\end{equation}
+unit copy demands. The real lower bound concerns an integer cardinality;
+when it is smaller than a constant, one connected pair can be routed.
+
+\begin{lemma}\label{lem:distinct}
+Every congestion-one unit routing of copy pairs in $G^*$ selects at most
+one copy of each indexed original pair. Projecting it to $G$ preserves
+cardinality and feasibility.
+\end{lemma}
+\begin{proof}
+For original pair $i$, its original source occurrence edge is a bridge of
+the full augmented graph. Deleting it separates all source copies of $i$
+from all sink copies of $i$, since the original endpoints are distinct.
+Each admitted copy of $i$ sends one unit across this capacity-one cut.
+Two admitted copies would force load at least two, which is impossible.
+This cut argument applies to splittable flows. Indexed duplicates are
+separate original pairs and have separate occurrence edges.
+
+Remove cycles in the output flows and delete their copy and occurrence
+segments. The resulting unit flows join their original endpoints and
+use each original edge no more than before. Distinctness just proved
+shows that cardinality is unchanged.
+\end{proof}
+
+\paragraph{The terminal parameter and running time.}
+Since the present branch has $k>\lceil\log_2N\rceil$, we have
+$T\le64(k+2)$. Equations~\eqref{eq:pieces} and $K\le D$ imply
+$2K=O(k^2)$. Hence
+\[
+ \Gamma(2K)\le C'\log(k+2)
+       \exp\!\bigl(C'\sqrt{\log\log(k+4)}\bigr)
+\]
+for an absolute $C'$. Combine this bound with~\eqref{eq:F},
+\eqref{eq:yield}, and Lemma~\ref{lem:distinct}. The event $\mathcal G$ has
+probability greater than $3/4$, and every branch returns feasible output.
+If $z$ free pairs were removed initially, adding them preserves the
+approximation: $z+r\ge(z+\OPT)/L$ whenever $r\ge\OPT/L$ and $L\ge1$.
+The bound can be evaluated at the original number of pairs.
+
+All augmentations, LPs, path decompositions, and fragment lists have
+polynomial size and rational bit complexity. For completeness a suitable
+integer overhead bound is
+\[
+ d(a)=\lceil\log_2(a+4)\rceil,\quad
+ h(a)=\left\lceil\sqrt{\lceil\log_2(d(a)+2)\rceil}\right\rceil,\quad
+ \Gamma(a)=C_0d(a)2^{C_1h(a)},
+\]
+for sufficiently large fixed positive integers $C_0,C_1$. It has the growth
+in~\eqref{eq:gamma}, is nondecreasing, and is computed using integer bit
+lengths and square roots. Thus $\phi$ is rational of polynomial bit length;
+the constants are fixed constants of the cited decomposition, not advice
+depending on the input. The exact small-$k$ branch uses at most $2N$ LPs;
+the other branch uses the bounded sampler and the two polynomial-time
+ingredients. There is no parameter-dependent exponent in the running time.
+This completes the proof of Theorem~\ref{thm:main}.
+
+\section{The exact-congestion rounding dependency}\label{sec:correction}
+
+This section records how the strengthened clustering behind
+Proposition~\ref{prop:cks} applies to our leaf endpoints. It explains an
+established dependency, and does not assert a new nonuniform rounding theorem.
+The relevant journal results are Lemmas~3.3--3.4 and~3.9--3.14
+of~\cite{CKS13}, especially its Section~3.4, pp.~1478--1483.
+
+Suppose a matching on $q$ leaf terminals has feasible product demand
+$\alpha/q$. Give each terminal weight $\rho=\alpha/4$ and all other
+vertices weight zero. For every ordered pair of terminals $u,v$, use
+$\alpha/(4q)$ of the product flow in the corresponding direction; retain
+the diagonal amount at $u$. Each terminal sends $\rho$ to the same uniform
+distribution $\mu$ on the $q$ terminals. The two ordered directions use
+half of each unordered commodity's given routing. The combined load is
+therefore at most $1/2$ on each edge. This is the common-distribution
+conclusion of journal Lemma~3.4 needed by the congestion-one rounding.
+Its later clustering and tagging steps do not require the tree premise
+used earlier to obtain that conclusion.
+
+\paragraph{Coverage and ownership of clusters.}
+Here is the residual-coverage convention for the leaf case. Root a spanning
+tree at a zero-weight nonterminal. If total terminal weight is less than
+one, route one matching pair, which already suffices for a constant-times-
+$q\rho$ guarantee. Otherwise use the bottom-up grouping of journal
+Lemma~3.3, with threshold one. It gives connected edge-disjoint clusters
+with disjoint owned receiving sets of weight in $[1,2)$ and a residual
+tree of unowned weight less than one. Absorb that residual tree into the
+last extracted cluster, at its extraction root. Each earlier extracted
+cluster meets the subsequently remaining tree in at most its extraction
+root. Consequently there is full vertex coverage, induced clusters
+remain edge-disjoint, and pairwise intersections have at most one vertex.
+Owned masses are now in $[1,3)$. Positive-weight terminals are leaves,
+so a shared connector has weight zero; receiving mass belongs only to
+its owned set. This also ensures that every external tagging contact
+belongs to a cluster.
+
+Each cluster owns fewer than $3/\rho$ terminals. Greedily retaining a pair
+and discarding pairs incident to either of its clusters discards at most
+$6/\rho$ pairs per choice. Thus it keeps $\Omega(q\rho)$ pairs, and each
+cluster contains at most the two terminals of one retained pair. Replacing
+the usual upper mass two by three changes only an absolute constant.
+
+\paragraph{Centers and tagging.}
+We use the center, tagging, and pairing conclusions of journal
+Lemmas~3.9 and~3.11--3.14. A center spreads one unit to its cluster's
+receiving weights using at most half of each edge. A noncenter has a
+separating cluster bridge, by the single-source min-cut characterization
+in Lemma~3.12. Tag the first external contact along these separating cuts;
+edges before this contact are bridges of the whole rounding-input graph.
+Lemma~3.13 then makes the terminal a pseudocenter after joining an
+appropriate auxiliary cluster: it spreads one unit within the receiving
+weights using at most half capacity on nonbridges and at most one on
+bridges of the whole input.
+
+For clarity, the constant loss in this cited construction is independent
+of $q$ and $\rho$. After identifying the two clusters of each chosen
+pair, the tagging digraph has out-degree at most two on pair nodes.
+The pair-node graph is 4-degenerate, so a five-coloring keeps a constant
+fraction without tags to other retained pairs. Pairs whose own clusters
+are already joined can be routed inside their disjoint amalgamations.
+For the other pairs, transit clusters are unselected. Lemma~3.14 joins
+tagging contacts through a transit spanning tree with edge-disjoint paths,
+leaving at most one unmatched contact for odd degree at least three.
+At least one third of pairs have neither endpoint isolated; a further
+degree-two conflict selection keeps at least one third of those. These
+are exactly the pseudocenter amalgamations and disjoint receiving supports
+used by Lemma~3.11. A shared zero-weight vertex is a zero-edge tagging
+contact, as specified in the last paragraph of journal Section~3.4.
+
+\paragraph{Why the final congestion is one.}
+Either a constant fraction of selected pairs have both endpoints in one
+amalgamation, and have local edge-disjoint unit routes, or retain the
+unmated class. In that class, spread each endpoint's unit to its owned
+receiving support. Supports are disjoint, so the mass $\gamma(v)$ received
+at terminal $v$ is at most $\rho$. Use $\gamma(v)/\rho$ times its
+common-distribution flow constructed above. Their combined second-stage
+load is at most $1/2$ per edge. Each endpoint reaches $\mu$; couple the
+two distributions for each pair and concatenate the flows. Before cycle
+removal, the loads are at most one on nonbridges and at most $3/2$ on bridges.
+
+Journal Lemma~3.10 removes the apparent excess exactly. In a simple-path
+decomposition, a bridge is used by a unit commodity with its whole unit
+if the endpoints are separated, and with zero otherwise. Its total load
+is an integer strictly below two, hence at most one. Cycle removal only
+decreases loads elsewhere. All center tests, flow computations, grouping,
+coloring, pairing, and cycle removal are polynomial. The common-distribution
+premise, uniform owned masses, leaf connectors, and connected clusters
+required by these cited steps have all been supplied. This is the
+congestion-one dependency in Proposition~\ref{prop:cks} for our inputs.
+
+\section*{Computational scope and AI methodology}
+
+The algorithmic proof uses the cited polynomial-time decomposition and
+rounding algorithms and rational multicommodity-flow LPs. Finite exact
+rational checks accompanied development: they tested sampling marginals,
+fixed-path cut charges, dyadic probability errors, copy-bridge separation,
+and the small-parameter arithmetic on explicit fixtures. They are diagnostics,
+not exhaustive graph tests or a replacement for the proof. The complete
+Bansal--Jambulapati--Saranurak and Chekuri--Khanna--Shepherd algorithms have
+not been implemented as a combined solver in this work.
+
+OpenAI Codex was used substantially in proof development, adversarial
+checking, primary-literature comparison, diagnostic Python code, and the
+drafting and typesetting of all sections. The proof presentation and its
+checks were materially generated or influenced by this assistance. Separate
+AI-context checks do not provide formal proof certification. The named human
+author remains responsible for the mathematical content and references.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,42 @@
+{
+  "source_sha256": "407ec869e3c74ed3fea9001fc3e1afb187d4b3175fabfd78c52d40408afeb186",
+  "accepted_math_snapshot": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4",
+  "manuscript_snapshot": "d4717112b7a2b8ec108123ef8efb3e63f3f6ed5f1f6caf1810a2969f35593c6a",
+  "pages": 6,
+  "previous_rendered_pdf_sha256": "1bccbffd17b02d6383c460ebaae75935efe66a529d78e922980dbe941d4ed51b",
+  "all_six_rendered_pages_equal_to_prior": false,
+  "same_pages": [
+    true,
+    true,
+    false,
+    true,
+    true,
+    true
+  ],
+  "checked_at_utc": "2026-11-02T00:16:24.796581+00:00",
+  "reviewer": "root context, internal AI visual inspection",
+  "pages_actually_viewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "image_sha256": {
+    "page-1.png": "e92908b0b67a7f1edbef04bc3ed3af7b4f78dfb2c2d1c871f0981861380f713c",
+    "page-2.png": "e647ae22543aab582f647365baa8754201765dcff0111a6024f8259401ea1f51",
+    "page-3.png": "9a95fb8ded5ca7f541434706732ed934c1d158f59af221250dab1a99056281d4",
+    "page-4.png": "8deb6b655f1dbfe1135d7fc3c60b9b916cbe83025b63c31ac781cbf6c3bdcb6d",
+    "page-5.png": "87263038f5b571b4d0ba7a76efb6f015f0ed6e60c082bed18ddd80c09a2ff9bd",
+    "page-6.png": "d1dbd558dd99ce9814ab4af550e9cdede6556f8b21069f033d96cc0c79d35957"
+  },
+  "findings": "All SIX FINAL delivered-PDF pages actually viewed. No visible clipping, overlap, missing mathematical glyphs or out-of-margin displays. Complete proof/credited lower bound and references/end AI methodology statement fit. working_paper retained. This is not external human peer review.",
+  "actual_delivered_archive_sha256": "214088df673bb274698c3c32958c33c6f2b6a7dec3063fc39bef7097c3de95f7",
+  "final_zip_clean_build_and_all_page_equality_verified": true,
+  "finite_replay_entries": [
+    "code/verify_pass3.py",
+    "code/pass3_oriented_greedy.py"
+  ],
+  "initial_nonportable_replay_failure_preserved": "research/continuous/batches/20261101-025/incdec-initial-delivered-zip-reproduction-failure.json"
+}

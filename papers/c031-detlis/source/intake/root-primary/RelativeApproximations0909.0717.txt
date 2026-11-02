@@ -1,0 +1,1836 @@
+                                                    Relative (p, ε)-Approximations in Geometry∗
+                                                                   Sariel Har-Peled†                 Micha Sharir‡
+                                                                                 October 22, 2018
+
+
+
+
+arXiv:0909.0717v2 [cs.CG] 25 Jan 2010
+                                                                                       Abstract
+                                                    We re-examine the notion of relative (p, ε)-approximations, recently introduced in
+                                                [CKMS06], and establish upper bounds on their size, in general range spaces of finite
+                                                VC-dimension, using the sampling theory developed in [LLS01] and in several earlier
+                                                studies [Pol86, Hau92, Tal94]. We also survey the different notions of sampling, used
+                                                in computational geometry, learning, and other areas, and show how they relate to
+                                                each other. We then give constructions of smaller-size relative (p, ε)-approximations
+                                                for range spaces that involve points and halfspaces in two and higher dimensions.
+                                                The planar construction is based on a new structure—spanning trees with small rela-
+                                                tive crossing number, which we believe to be of independent interest. Relative (p, ε)-
+                                                approximations arise in several geometric problems, such as approximate range count-
+                                                ing, and we apply our new structures to obtain efficient solutions for approximate range
+                                                counting in three dimensions. We also present a simple solution for the planar case.
+
+
+                                        1       Introduction
+                                        The main problem that has motivated the study in this paper is approximate range counting.
+                                        In a typical example, one is given a set P of points in the plane, and the goal is to preprocess
+                                        P into a data structure which supports efficient approximate counting of the number of
+                                        points of P that lie inside a query halfplane. The hope is that approximate counting can be
+                                        done more efficiently than exact counting.
+                                            This is an instance of a more general and abstract setting. In general, we are given a
+                                        range space (X, R), where X is a set of n objects and R is a collection of subsets of X,
+                                        called ranges. In a typical geometric setting, X is a subset n of some infinite
+                                                                                                                     o ground set U
+                                                     d                                 d
+                                        (e.g., U = R and X is a finite point set in R ), and R = r ∩ X r ∈ RU , where RU is a
+                                            ∗
+                                             Work on this paper by Sariel Har-Peled was partially supported by an NSF CAREER award CCR-
+                                        01-32901. Work by Micha Sharir was supported by Grant 2006/194 from the U.S.-Israel Binational Science
+                                        Foundation, by NSF Grants CCF-05-14079 and CCF-08-30272, by Grants 155/05 and 338/09 from the Israel
+                                        Science Fund, and by the Hermann Minkowski–MINERVA Center for Geometry at Tel Aviv University. The
+                                        paper is available online at [HS09].
+                                           †
+                                             Department of Computer Science, University of Illinois, 201 N. Goodwin Avenue, Urbana, IL, 61801,
+                                        USA; sariel@uiuc.edu.
+                                           ‡
+                                             School of Computer Science, Tel Aviv University, Tel Aviv 69978 Israel, and Courant Institute of Math-
+                                        ematical Sciences, New York University, New York, NY 10012, USA; michas@post.tau.ac.il.
+
+                                                                                            1
+collection of subsets (ranges) of U of some simple shape, such as halfspaces, simplices, balls,
+etc. (To simplify the notation, we will use R and RU interchangeably.) The measure of a
+range r ∈ R in X is the quantity
+                                               |X ∩ r|
+                                        X(r) =         .
+                                                 |X|
+Given (X, R) as above, and a parameter 0 < ε < 1, the goal is to preprocess X into a data
+structure that supports efficient queries of the form: Given r ∈ RU , compute a number t
+such that
+                               (1 − ε)X(r) ≤ t ≤ (1 + ε)X(r) .                        (1)
+We refer to the estimate t |X| as an ε-approximate count of X ∩ r.
+    The motivation for seeking approximate range counting techniques is that exact range
+counting (i.e., computing the exact value X(r), for r ∈ R) is (more) expensive. For instance,
+consider the classical halfspace range counting problem [Mat92], which is the main application
+considered in this paper. Here, for a set P of n points in Rd , for d ≥ 2, the best known
+algorithm for exact halfspace range counting with near-linear storage takes O(n1−1/d ) time
+[Mat92]. As shown in several recent papers, if we only want to approximate the count, as in
+Eq. (1), there exist faster solutions, in which the query time is close to O(n1−1/⌊d/2⌋ ) (and is
+polylogarithmic in two and three dimensions) [AH08, AS08, KS06, KRS08a, KRS08b].
+    Notice that the problem of approximate range counting becomes more challenging as the
+size of X ∩ r decreases. At the extreme, when |X ∩ r| < 1/ε, we must produce the count
+exactly. In particular, we need to be able to detect (without any error) whether a given
+query range r is empty, i.e., satisfies X ∩ r = ∅. Thus, approximate range counting (in the
+sense defined above) is at least as hard as range emptiness detection.
+    We make the standard assumption that the range space (X, R) (or, in fact, (U, RU ))
+has finite VC-dimension δ, which is a constant independent of n. This is indeed the case
+in many geometric applications. In general, range spaces involving semi-algebraic ranges of
+constant description complexity, i.e., semi-algebraic sets defined as a Boolean combination of
+a constant number of polynomial equations and inequalities of constant maximum degree,
+have finite VC-dimension. Halfspaces, balls, ellipsoids, simplices, and boxes are examples of
+ranges of this kind; see [Cha01, HW87, Mat99, PA95] for definitions and more details.
+
+Known notions of approximations. A standard and general technique for tackling the
+approximate range counting problem is to use ε-approximations. An (absolute-error) ε-
+approximation for (X, R) is a subset Z ⊂ X such that, for each r ∈ R, Z(r) − X(r) < ε.
+In the general case, it is known1 that a random sample of size O εδ2 is an ε-approximation
+with at least some positive constant probability [LLS01, Tal94], and improved bounds are
+known in certain special cases; see below for details.
+    Another notion of approximation was introduced by Brönnimann et al. [Brö95, BCM99].
+      Z ⊆ X isa sensitive ε-approximation if for all ranges r ∈ R, we have X(r) − Z(r) ≤
+A subset
+(ε/2) X(r)1/2 + ε . Brönnimann et al. present a deterministic algorithm for computing sen-
+                                          
+sitive approximations of size O εδ2 log δε , in deterministic time O(δ)3δ (1/ε)2δ logδ (δ/ε)|X|.
+  1
+      Somewhat selectively; see below.
+
+
+
+                                               2
+    Another interesting notion of sampling, studied by Li et al. [LLS01], is a (ν, α)-sample.
+For given parameters α, ν > 0, a sample Z ⊆ X is a (ν, α)-sample if, for any range r ∈ R, we
+have dν (Z(r) , X(r)) ≤ α, where dν (x, y) = |x − y| /(x + y + ν). Li et al. gave the currently
+best known upper bound on the size of a sample which guarantees this property, showing that
+                                     1        1        1
+a random sample of X of size O α2 ν δ log ν + log q         is a (ν, α)-sample with probability
+at least 1 − q; see below for more details.
+
+Relative (p, ε)-approximation. In this paper, we consider a variant of these classical
+structures, originally proposed a few years ago by Cohen et al. [CKMS06], which provides
+relative-error approximations. Ideally, we want a subset Z ⊂ X such that, for each r ∈ R,
+we have
+                             (1 − ε)X(r) ≤ Z(r) ≤ (1 + ε)X(r) .                        (2)
+This “definition” suffers however from the same syndrome as approximate range counting;
+that is, as |X ∩ r| shrinks, the absolute precision of the approximation has to increase. At
+the extreme, when Z ∩ r = ∅, X ∩ r must also be empty; in general, we cannot guarantee
+this property, unless we take Z = X, which defeats the purpose of using small-size ε-
+approximations to speed up approximate counting.
+    For this reason, we refine the definition, introducing another fixed parameter 0 < p < 1.
+We say that a subset Z ⊂ X is a relative (p, ε)-approximation if it satisfies Eq. (2) for each
+r ∈ R with X(r) ≥ p. For smaller ranges r, the error term εX(r) in Eq. (2) is replaced
+by εp. As we will shortly observe, relative (p, ε)-approximations are equivalent to (ν, α)-
+samplings, with appropriate relations between p, ε, and ν, α (see Theorem 2.9), but this
+new notion provides a better working definition for approximate range counting and for other
+applications.
+
+Known results. As shown by Vapnik and Chervonenkis [VC71] (see also [Cha01, Mat99,
+PA95]), there always exist absolute-error ε-approximations of size εcδ2 log δε , where c is an
+absolute constant. Moreover, a random sample of this size from X is an ε-approximation
+with constant positive probability. This bound has been strengthened by Li et al.    [LLS01]
+                                                                        c          1
+(see also [Tal94]), who have shown that a random sample of size ε2 δ + log q is an ε-
+approximation with probability at least 1 − q, for a sufficiently large (absolute) constant
+c. (Interestingly, until very recently, this result, worked out in the context of machine
+learning applications, does not seem to have been known within the computational geometry
+                                         δ     δ
+literature.)
+            ε-approximations
+                             of size O ε2
+                                           log ε
+                                                  can also be constructed in deterministic time
+                 δ
+O δ 3δ ε12 log δε n [Cha04].
+    As shown in [Cha01, Cha04, MWW93], there always exist smaller (absolute-error) ε-
+approximations, of size                                        
+                                        1         b−b/(δ′ +1) 1
+                                O 2−2/(δ′ +1) log                 ,
+                                    ε                         ε
+where δ ′ is the exponent of either the primal shatter function of the range space (X, R) (and
+then b = 2) or the dual shatter function (and then b = 1). The time to construct these
+improved ε-approximations is roughly the same as the deterministic time bound of [Cha04]
+
+
+                                              3
+stated above, for the case of the dual shatter function. For the case of the primal shatter
+function, the proof is only existential.
+     Consider next relative (p, ε)-approximations. One of the contributions of this paper is to
+show that these approximations are in fact just an equivalent variant of the (ν, α)-samplings
+of Li et al. [LLS01]; see Section 2. As a consequence, the analysis of [LLS01] implies that
+there exist relative (p, ε)-approximations of size εcδ2 p log 1p , where c is an absolute constant. In
+fact, any random sample of these many elements of X is a relative (p, ε)-approximation with
+constant
+                       Success with probability at least 1 − q is guaranteed if one samples
+            probability.
+ c          1        1
+ε2 p
+      δ log p + log q elements of X, for a sufficiently large constant c [LLS01].
+     To appreciate the above bound on the size of relative (p, ε)-approximations, it is instruc-
+tive to observe that, for a given parameter p, any absolute error (εp)-approximation Z will
+approximate “large” ranges (of measure at least p) to within relative error ε, as in Eq. (2),
+as is easily checked (and the inequality for smaller ranges is also trivially satisfied), so Z is
+a relative (p, ε)-approximation. However, the Vapnik-Chervonenkis bound on the size of Z,
+namely, ε2cδp2 log εp
+                    δ
+                       , as well as the improved bound of [LLS01, Tal94], are larger by roughly a
+factor of 1/p than the improved bound stated above.
+     The existence of a relative (p, ε)-approximation Z provides a simple mechanism for ap-
+proximate range counting: Given a range r ∈ R, count Z ∩ r exactly, say, by brute force in
+O(|Z|) time, and output |Z ∩ r| · |X| / |Z| as a (relative) ε-approximate count of X ∩ r. How-
+ever, this will work only for ranges of size at least pn. Aronov and Sharir [AS08] show that
+an appropriate incorporation of relative (p, ε)-approximations into standard range searching
+data structures yields a procedure for approximate range counting that works, quite effi-
+ciently, for ranges of any size. This has recently been extended, by Sharir and Shaul [SS09],
+to approximate range counting with general semi-algebraic ranges.
+
+Our results. In this paper, we present several constructions and bounds involving relative
+(p, ε)-approximations.
+    We first consider samplings in general range spaces of finite VC-dimension, and establish
+relations between several different notions of samplings, including (ν, α)-samplings, relative
+(p, ε)-approximations, and sensitive ε-approximations. Our main observations are:
+(i) The notion of (p, ε)-approximation is equivalent to that of (ν, α)-sample, by choosing ν
+to be proportional to p and α proportional to ε; see Theorem 2.9.
+                   √
+(ii) A sensitive (ε p)-approximation is also a relative (p, ε)-approximation.
+(iii) The result of Li et al. [LLS01] is sufficiently powerful, so as to imply known bounds on
+the size of many of the different notions of samplings, including ε-nets, ε-approximations,
+sensitive ε-approximations, and, as just said, relative (p, ε)-approximations. Some of these
+connections have already been noted earlier, in [LLS01] and in [Har08]. We offer this portion
+of Section 2 as a service to the computational geometry community, which, as already noted,
+is not as aware of the results of [LLS01] and of their implications as the machine learning
+community.
+     Next, we return to geometric range spaces, and study two cases where one can construct
+relative (p, ε)-approximations of smaller size. The first case involves planar point sets and
+halfplane ranges, and the second case involves point sets in Rd , d ≥ 3, and halfspace ranges.
+
+                                                  4
+In the planar case, we show the existence, and  provide efficient
+                                                                 algorithms for the construc-
+                                                     1        1
+tion, of relative (p, ε)-approximations of size O ε4/3 p log εp . Our technique also shows in
+this case the existence of sensitive ε-approximations with improved quality of approxima-
+tion.
+   Specifically,
+                  for a planar point set X, we show that there exists a subset Z ⊆ X of size
+O ε2 log ε , such that, for any halfplane r, we have X(r) − Z(r) ≤ 21 ε3/2 X(r)1/4 + ε2 .
+    1    4/3 1
+
+
+(This new error term is indeed an improvement when X(r) > ε2 and is the same as the
+standard term otherwise.)
+    In the planar case, the construction is based on an interesting generalization of spanning
+trees with small crossing number, a result that we believe to be of independent interest.
+Specifically, we show that any finite point set P in the plane has a spanning tree with the
+following property: For any k ≤ |P | /2, any k-shallow line (a line
+                                                                 √ that has at most k points of
+P in one of the halfplanes that it bounds) crosses at most O( k log(n/k)) edges of the tree.
+In contrast, the classical construction of Welzl [Wel92] (see also √ [CW89]) only guarantees
+this property for k = n; i.e., it yields the uniform bound O( n) on the crossing number.
+We refer to such a tree as a spanning tree with low relative crossing number, and show how
+to use it in the construction of small-size relative (p, ε)-approximations.
+    Things are more complicated in three (and higher) dimensions. We were unable to extend
+the planar construction of spanning trees with low relative crossing number to R3 (nor to
+higher dimensions), and this remains an interesting open problem. (We give a counterex-
+ample that indicates why the planar construction cannot be extended “as is” to 3-space.)
+Instead, we base our construction on the shallow
+                                                    partition theorem of Matoušek [Mat91b],
+                                    1       1
+and construct a set Z of size O ε3/2 p log εp , which yields an absolute approximation error
+of at most εp for halfspaces that contain at most pn points. Note that this is the “wrong”
+inequality—to guarantee small relative error we need this to hold for all ranges with at least
+pn points. To overcome this difficulty, we construct a sequence of approximation sets, each
+capable of producing a relative ε-approximate count for ranges that have roughly a fixed
+size, where these size ranges grow geometrically, starting at pn and ending at roughly n.
+The sizes of these sets decrease geometrically,
+                                                so that the size of the first set (that caters to
+                                              1       1
+ranges with about pn points), which is O ε3/2 p log εp    , dominates asymptotically the overall
+size of all of them. We output this sequence of sets, and show how to use them to obtain an
+ε-approximate count of any range with at least pn points.
+    The situation is somewhat even more complicated in higher dimensions. The basic ap-
+proach used in the three-dimensional case can be extended to higher dimensions, using the
+appropriate version of the shallow partition theorem. However, the bounds get somewhat
+more complicated, and apply only under certain restrictions on the relationship between ε
+and p. We refer the reader to Section 4.2, where these bounds and restrictions are spelled
+out in detail.
+   The paper is organized as follows: In Section 2 we survey the sampling notions mentioned
+above, and show how they relate to each other. In Section 3, we describe how to build a
+small relative (p, ε)-approximation in the planar case, by first showing how to construct a
+spanning tree with low relative crossing number. In Section 4, we extend the result to higher
+dimensions. In Section 5, we revisit the problems of halfplane and 3-dimensional halfspace
+approximate range counting, and provide algorithms whose query time is faster than those
+
+                                                5
+in the previous algorithms.2 This section is somewhat independent of the rest of the paper,
+although we do use relative (p, ε)-approximations for the 3-dimensional case. We conclude
+in Section 6 with a brief discussion of the results and with some open problems.
+
+
+2       On the relation between some sampling notions
+In this section we study relationships between several commonly used notions of samplings
+in abstract range spaces. In particular, we show that many of these notions are variants or
+special cases of one another. Combined with the powerful result of Li et al. [LLS01], this
+allows us to establish, or re-establish, for each of these families of samplings, upper bounds
+on the size of samples needed to guarantee that they belong to the family (with constant or
+with high probability).
+
+Definitions. We begin by listing the various kinds of samplings under consideration. In
+what follows, we assume that (X, R) is an arbitrary range space of finite VC-dimension δ.
+
+Definition 2.1 For a given parameter 0 < ε < 1, a subset Z ⊆ X is an ε-net for (X, R) if
+r ∩ Z 6= ∅, for every r ∈ R such that X(r) ≥ ε.
+
+Definition 2.2 For a given parameter 0 < ε < 1, a subset Z ⊆ X is an ε-approximation
+for (X, R) if, for each r ∈ R, we have X(r) − Z(r) ≤ ε.
+
+Definition 2.3 For given parameters 0 < p, ε < 1, a subset Z ⊆ X is a relative (p, ε)-
+approximation for (X, R) if, for each r ∈ R, we have
+
+  (i) (1 − ε)X(r) ≤ Z(r) ≤ (1 + ε)X(r), if X(r) ≥ p.
+
+ (ii) X(r) − εp ≤ Z(r) ≤ X(r) + εp, if X(r) ≤ p.
+
+Definition 2.4 For a given parameter 0 < ε < 1, a subset Z ⊆ X is a sensitive
+                                                                               ε-
+                                                                   ε     1/2
+approximation for (X, R) if, for each r ∈ R, we have Z(r) − X(r) ≤ 2 X(r) + ε .
+
+    Finally, for a parameter ν > 0, consider the distance function between nonnegative real
+numbers r and s, given by
+                                                     |r − s|
+                                        dν (r, s) =          .
+                                                    r+s+ν
+dν (·, ·) satisfies the triangle inequality [LLS01], and is thus a metric (the proof is straight-
+forward albeit somewhat tedious).
+
+Definition 2.5 For given parameters 0 < α < 1 and ν > 0, a subset Z ⊆ X is a (ν, α)-
+sample for (X, R) if, for each range r ∈ R, we have dν (Z(r) , X(r)) < α.
+(Note that α ≥ 1 is uninteresting, because dν is always at most 1.)
+    2
+    These results have recently been improved by Afshani and Chan [AC09], at least in three dimensions,
+after the original preparation of the present paper.
+
+
+
+                                                  6
+Equivalence of relative (p, ε)-approximations and (ν, α)-samples. We begin the anal-
+ysis with the following easy properties. The first property is a direct consequence of the
+definition of dν .
+
+Observation 2.6 Let α, ν, m, s be non-negative real numbers, with α < 1. Then dν (m, s) <
+α if and only if
+                                                                   
+                          2α           αν              2α           αν
+               s ∈    1−          m−         , 1+            m+           .
+                         1+α          1+α             1−α         1−α
+Corollary 2.7 For any non-negative real numbers, ν, α, m, s, with α < 1, put
+                     2α     αν                       2α     αν   1+α
+             ∆ :=       m+             and ∆′ :=        m+     =     ∆.
+                    1+α    1+α                      1−α    1−α   1−α
+Then we have:
+   (i) If |s − m| ≤ ∆ then dν (m, s) < α.
+   (ii) If dν (m, s) < α then |s − m| ≤ ∆′ .
+
+Lemma 2.8 If Y ⊆ X is a (ν, α)-sample for (X, R), and Z ⊆ Y is a (ν, α)-sample for
+(Y, R), then Z is a (ν, 2α)-sample for (X, R).
+Proof: An immediate consequence of the triangle inequality for dν .
+   The following theorem is one of the main observations in this section.
+
+Theorem 2.9 Let (X, R) be a range space as above.
+ (i) If Z ⊆ X is a (ν, α)-sample for (X, R), with 0 < α < 1/4 and ν > 0, then Z is a
+     relative (ν, 4α)-approximation for (X, R).
+ (ii) If Z is a relative (ν, α)-approximation for (X, R), with 0 < α < 1 and ν > 0 then Z is
+      a (ν, α)-sample for (X, R).
+
+Proof: (i) By Corollary 2.7(ii), we have, for each r ∈ R,
+                                      2α         αν  8       4
+                    X(r) − Z(r) ≤        X(r) +     < αX(r) + αν.
+                                     1−α        1−α  3       3
+Thus, if X(r) ≥ ν then (1 − 4α)X(r) ≤ Z(r) ≤ (1 + 4α)X(r), and if X(r) ≤ ν then
+X(r) − Z(r) < 4αν, establishing the claim.
+   (ii) If X(r) ≥ ν then
+                                                    2α         αν
+                         X(r) − Z(r) ≤ αX(r) <         X(r) +     ,
+                                                   1+α        1+α
+which implies, by Corollary 2.7(i), that dν (X(r) , Z(r)) ≤ α.
+   If X(r) ≤ ν then
+                                                               
+                           X(r) − Z(r) ≤ αν ≤ α X(r) + Z(r) + ν ,
+and the claim follows.
+
+
+                                               7
+Corollary 2.10 For a range space (X, R), if Y ⊆ X is a relative (ν, α)-sample for (X, R),
+and Z ⊆ Y is a relative (ν, α)-sample for (Y, R), with 0 < α < 1/8 and ν > 0, then Z is a
+relative (ν, 8α)-approximation for (X, R).
+Proof: By Theorem 2.9(ii) and Lemma 2.8, Z is a (ν, 2α)-sample for (X, R). By Theo-
+rem 2.9(i), it is then a relative (ν, 8α)-approximation for (X, R).
+   We next recall the bound established in [LLS01], and then apply it to Theorem 2.9.
+Specifically, we have:
+
+Theorem 2.11 (i) (Li et al. [LLS01]) A random sample of X of size
+                                                  
+                               c          1      1
+                                     δ log + log     ,
+                              α2 ν        ν      q
+
+for an appropriate absolute constant c, is a (ν, α)-sample for (X, R) with probability at least
+1 − q.
+    (ii) Consequently, a random sample of X of size
+                                                        
+                                    c′         1       1
+                                         δ log + log       ,
+                                   ε2 p        p       q
+
+for another absolute constant c′ , is a relative (p, ε)-approximation for (X, R) with probability
+at least 1 − q.
+    We next observe that ε-nets and ε-approximations are special cases of (ν, α)-samples,
+where the second observation has already been made in [LLS01]. The bound on the size of
+(ν, α)-samples (Theorem 2.11(i)) then implies the known bounds on the size of ε-nets (see
+[HW87]) and of ε-approximations (see [LLS01]). Specifically, we have:
+
+Theorem 2.12 Let (X, R) be a range space, as above, and let ε > 0.
+
+ (i) For any α < 1/2 and ν = ε, a (ν, α)-sample     from X is an  ε-net for (X, R). Con-
+     sequently, a random sample of X of size O 1ε δ log 1ε + log 1q , with an appropriate
+     choice of the constant of proportionailty, is an ε-net for (X, R) with probability at least
+     1 − q.
+
+ (ii) If α ≤ ε/3 and ν ≤ 1, then a (ν, α)-sample fromX is an ε-approximation
+                                                                                for (X, R).
+                                                          1         1
+      Consequently, a random sample of X of size O ε2 δ + log q , with an appropriate
+      choice of the constant of proportionailty, is an ε-approximation for (X, R) with proba-
+      bility at least 1 − q.
+
+Proof: (i) We need to rule out the possibility that, for some range r ∈ R, we have Z(r) = 0
+and X(r) ≥ ε. Since Z is an (ε, α)-sample, we must then have
+
+                                          X(r)
+                                                  < α,
+                                         X(r) + ε
+
+                                               8
+which is impossible, since the fraction is at least 1/2.
+   (ii) With this choice of parameters, we have, for any range r ∈ R,
+                                             ε                
+                           X(r) − Z(r) <       X(r) + Z(r) + 1 ≤ ε,
+                                             3
+as desired. As noted, the bounds on the sample sizes follow Theorem 2.11(i).
+   We also note the following (weak) converse of Theorem 2.12(ii): If Z ⊆ X is an (αν)-
+approximation for (X, R) then Z is a (ν, α)-sample for (X, R). Indeed, we have already
+noted in the introduction that an (αν)-approximation for (X, R) is also a relative (ν, α)-
+approximation, so the claim follows by Theorem 2.9(ii). This is a weak implication, though,
+because, as already noted in the introduction, the bound that it implies on the size of (ν, α)-
+samples is weaker than that given in [LLS01] (see Theorem 2.11 (i)).
+
+Sensitive approximations.
+                                  We next show that the existence of sensitive ε-approximations
+of size O εδ2 log 1ε can also be established using (ν, α)-samples. The proof is slightly trickier
+than the preceding ones, because it uses the fact that a sample of an appropriate size is
+(with high probability) a (νi , αi )-sample, for an entire sequence of pairs (νi , αi ). The bound
+yielded by the following theorem is in fact (slightly) better than the bound established by
+[Brö95, BCM99], as mentioned in the introduction.
+
+Theorem 2.13 Let (X, R) be a range space, as above, and let ε > 0. A random sample
+from X of size                                  
+                                1       1       1
+                            O 2 δ log + log          ,
+                               ε        ε       q
+is a sensitive ε-approximation, with probability ≥ 1 − q.
+Proof: Put νi = iε2 /400, αi = 1/(4i)1/2 , for i = 1, . . . , M = ⌈400/ε2⌉. Note that αi2 νi =
+ε2 /800 for each i.
+    Let Z be a random sample of size
+                                                            
+                                     1          1         M
+                             m = O 2 δ log + log                 .
+                                     ε          ε           q
+
+Theorem 2.11 implies that, with an appropriate choice of the constant of proportionality, the
+following holds: For each i, Z is a (νi , αi )-sample, with probability at least 1 − δ/M. Hence,
+with probability at least 1 − δ, Z is a (νi , αi )-sample for every i.
+    Now consider any range r ∈ R, and put r = X(r), s = Z(r). Let i be the index satisfying
+(i − 1)ε2 /400 ≤ r < iε2 /400. Assume first that i > 1, so we have 21 νi ≤ r ≤ νi , and thus
+                               q                q            r                √
+                                                      √          ε 2 √      ε   r
+                 αi r ≤ αi νi = αi2 νi · νi ≤ αi2 νi 2r =              2r =       .          (3)
+                                                                800          20
+Since Z is a (νi , αi )-sample, we have
+
+                                                   |r − s|
+                                  dνi (r, s) =              < αi .
+                                                 r + s + νi
+
+                                                  9
+If s ≤ νi then this implies
+                                                   √
+                                                 3ε r   ε √    
+                              |r − s| ≤ 3νi αi ≤      <     r+ε ,
+                                                  20    2
+so sensitivity holds in this case. Otherwise, if s ≥ νi ≥ r, then
+
+                 s − r ≤ αi (r + s + νi ) ⇒ (1 − αi )(s − r) ≤ αi (2r + νi )
+                                                      αi (2r + νi )
+                                          ⇒ s−r ≤                   ≤ 2αi (2r + νi ) ,
+                                                       (1 − αi )
+
+since αi ≤ 1/2. Hence, by Eq. (3), we have
+                                                    √
+                                                   ε r   ε √    
+                              |s − r| ≤ 6αi νi ≤ 6     <     r+ε ,
+                                                    20   2
+so sensitivity holds in this case too.
+    Finally, assume i = 1, so r ≤ ε2 /400. In this case we have
+
+                                                  |r − s|
+                                 dν1 (r, s) =              < α1 = 1/2.
+                                                r + s + ν1
+If s ≤ ν1 then
+                                      3     ε2   ε √    
+                             |r − s| < ν1 <    ≤     r+ε ,
+                                      2     2    2
+as required. If s > ν1 then we have
+
+                 1                                                       ε2   ε √    
+          s − r < (r + s + ν1 ) ,       or s − r < 2r + ν1 ≤ 3ν1 <          ≤     r+ε ,
+                 2                                                       2    2
+showing that sensitivity holds in all cases.
+    It is ineresting to note that the bound on the size of sensitive ε-approximations cannot be
+improved (for general range spaces with bounded VC-dimension). This is because a sensitive
+ε-approximation is also an ε2 -net, and there exist range spaces (of any fixed VC-dimension
+δ) for which any ε2 -net must be of size Ω((δ/ε2 ) log(1/ε)) [KPW92].
+
+From sensitive to relative approximations. Our next observation is that sensitive ap-
+proximations are also relative approximations, with an appropriate calibration of parameters.
+In a way, this can be regarded as a converse of Theorem 2.13, which shows that a set which
+is simultaneously a relative approximation (i.e., a (nu, α)-sample) for an entire appropriate
+sequence of pairs of parameters is a sensitive approximation. Specifically, we have:
+                                                                         √
+Theorem 2.14 Let 0 < ε, p < 1 be given parameters, and set ε′ = ε p. Then, if Z ⊆ X is
+a sensitive ε′ -approximation for (X, R), it is also a relative (p, ε)-approximation for (X, R).
+                                                             
+Proof: We are given that X(r) − Z(r) ≤ ε2 X(r)1/2 + ε′ for each r ∈ R.
+                                              ′
+
+
+
+
+                                                    10
+    Now let r ∈ R be a range with X(r) ≥ p, that is, X(r) = αp, for some α ≥ 1. Then
+                         √                                  2       
+                        ε p √       √       ε2 p ε √         ε     ε
+        X(r) − Z(r) ≤       ( αp + ε p) =       +     αp ≤      +      αp ≤ εX(r) .
+                         2                   2     2         2     2
+
+Similarly, if X(r) ≤ p, then
+                                     √
+                                    ε p √     √     ε2 p + εp
+                      X(r) − Z(r) ≤    ( p + ε p) =           ≤ εp.
+                                     2                   2
+Hence, Z is a relative (p, ε)-approximation.
+    This observation implies that one can compute relative (p, ε)-approximations efficiently,
+in a deterministic fashion, using the algorithms in [Brö95, BCM99] for deterministic con-
+struction of sensitive approximations. We thus obtain the following result.
+
+Lemma 2.15 Let (X, R) be a range space with finite VC-dimension δ, where |X| = n, and
+let 0 < ε, p < 1 be given
+                       parameters.
+                                     Then one can construct a relative (p, ε)-approximation
+                        δ      δ
+for (X, R) of size O ε2 p log εp , in
+                               (                        δ                 )
+                                             1       δ
+                           min O(δ)3δ          2
+                                                 log          n, O(nδ+1 )
+                                            pε       ε
+
+deterministic time.
+
+
+3     Relative (p, ε)-approximations in the plane
+In this section, we present a construction of smaller-size relative (p, ε)-approximations for the
+range space involving a set of points in the plane and halfplane ranges. The key ingredient
+of the construction is the result of the following subsection, interesting in its own right.
+
+3.1    Spanning trees with small relative crossing number
+We derive a refined “weight-sensitive” version of the classical construct of spanning trees
+with small crossing number, as obtained by Chazelle and Welzl [CW89], with a simplified
+construction given in [Wel92]. We believe that this refined version is of independent interest,
+and expect it to have additional applications.
+   In accordance with standard notation used in the literature, we denote from now on the
+underlying point set by P .
+   We first recall the standard result:
+
+Theorem 3.1 ([Wel92]) Let P be a set of n points in Rd . Then there exists a straight-edge
+spanning tree T of P such that each hyperplane in Rd crosses at most O(n1−1/d ) edges of T.
+
+
+
+
+                                                 11
+    Let P be a set of n points in the plane. For a line ℓ, let wℓ+ (resp., wℓ− ) be the number
+of points of P lying above (resp., below or on) ℓ, and define the weight of ℓ, denoted by wℓ ,
+to be min{wℓ+ , wℓ− }.
+    Let Dk = D(P, k) be the intersection of all closed halfplanes that contain at least n − k
+points of P . Note that, by the centerpoint theorem (see [Mat03]), Dk is not empty for
+k < n/3. Moreover, Dk is a convex polygon, since it is equal to the intersection of a finite
+number of halfplanes. (Indeed, it is equal to the intersection of all halfplanes containing at
+least n − k points of P and bounded by lines passing through a pair of points of P .)
+    The region Dk can be interpreted as a level set of the Tukey depth induced by P ; see
+[ABET00].
+
+Lemma 3.2 Let P be a set of n points in the plane. (i) Any line ℓ that avoids the interior of
+Dk has weight wℓ ≤ 2k. (ii) Any line ℓ that intersects the interior of Dk has weight wℓ > k.
+
+
+Proof: (i) Translate ℓ in parallel until it supports Dk . The new line ℓ′ must pass through a
+vertex v of Dk which is the intersection of two lines bounding two respective closed halfplanes,
+each having k points in its complement. Thus, the union of the complements of these two
+halfplanes contains at most 2k points, and it contains ℓ′ and ℓ. Thus, ℓ has at most 2k points
+on one of its sides.
+    (ii) The second claim is easy: If the weight of ℓ were at most k then, by definition, the
+interior of Dk would be completely contained on one side of ℓ.
+
+Lemma 3.3 The set P \ Dk can be covered by pairwise openly disjoint triangles C1 , . . . , Cu ,
+each containing at most 2k points of P \Dk , such that any line intersects at most O(log(n/k))
+of these triangles. Moreover, Ci ∩ ∂Dk 6= ∅, for each i = 1, . . . , u.
+Proof: We construct polygons C     bi iteratively, as follows. Let λL and λR be the two vertical
+lines supporting Dk on its left and on its right, respectively. The polygon C       b1 (resp., Cb2 ) is the
+halfplane to the left (resp., right) of λL (resp., λR ). The construction maintains the invariant
+that the complement of the union of the polygons C        b1 , . . . , C
+                                                                       bi constructed so far is a convex
+polygon Ki that contains Dk and each edge of the boundary of Ki passes through some
+vertex of Dk , so that Ki \ Dk consists of pairwise disjoint connected “pockets”. (Initially,
+after constructing C b1 and Cb2 , we have two pockets—the regions lying respectively above and
+below Dk , between λL and λR .)
+    Each step of the construction picks a pocket3 that contains more than 2k points of P ,
+finds a line ℓ that supports Dk at a vertex of the pocket, and subdivides the pocket into two
+sub-pockets and a third piece that lies on the other side of ℓ. The line ℓ is chosen so that the
+two resulting sub-pockets contain an equal number of points of P . The third piece, which
+clearly contains at most 2k points of P (see Lemma 3.2), is taken to be the next polygon C            bi+1 ,
+and the construction continues in this manner until each pocket has at most 2k points. We
+refer to the polygons C bi constructed up to this point as non-terminal. We then terminate the
+construction, adding all the pockets to the output collection of polygons, referring to them
+as terminal polygons. Note that each non-terminal C         bi is a (possibly unbounded) triangle,
+   3
+       Apologies for the pun.
+
+
+                                                    12
+                                                ≤ 2k
+                                 λL                                    λR
+                                                            ≤ n′ /2
+                                                  p                     ≤ 2k
+                            ≤ 2k      ≤ n′ /2
+
+                                                       Dk
+
+
+
+
+                                                                  Ci
+
+
+
+             Figure 1: The polygon Dk and the decomposition of its complement.
+
+
+having a “base” whose relative interior passes through a vertex of Dk , and two other sides,
+each of which is a portion of a base of an earlier triangle. The terminal polygons are pseudo-
+triangles, each bounded by two straight edges and by a “base” which is a connected portion
+of the boundary of Dk , possibly consisting of several edges. See Figure 1.
+    We claim that each line ℓ intersects at most O(log(n/k)) polygons. For this, define the
+weight w(C  bi ) of a non-terminal polygon C   bi , for i ≥ 3, to be the number of points of P in
+the pocket that was split when C      bi was created; the weight of each terminal polygon is the
+number of k   points of P that it contains, which is at most 2k. Define the level of C            bi to be
+j
+  log2 w(Cbi ) . It is easily checked that ℓ crosses at most two terminal polygons (two if it
+crosses Dk and at most one if it misses Dk ), and it can cross both (non-base) sides of at
+most one (terminal or non-terminal) polygon. Any other polygon C              bi crossed by ℓ is such that
+ℓ enters it through its base, reaching it from another polygon whose level is, by construction,
+strictly smaller than that of C  bi . Since there are only O(log(n/k)) distinct levels, the claim
+follows.
+    It is easy to verify that the convex hulls C1 = CH(C       b1 ), . . . , Cu = CH(C  bu ) are triangles
+with pairwise disjoint interiors, which have the required properties.
+
+Lemma 3.4 Let 1 ≤ k ≤ n be a prespecified parameter. One√can construct a spanning tree
+T for P ′ = P \ Dk , such that each line intersects at most O( k log(n/k)) edges of T.
+Proof: Construct the decomposition of P \ Dk into u covering triangles C1 , . . . , Cu , using
+Lemma 3.3.
+    For each i = 1, . . . , u, construct a spanning tree Ti of P ∩ Ci with crossing number
+O(k 1/2 ), using Theorem 3.1. In addition, connect one point of P ∩ Ci to an arbitrary vertex
+of ∂Ci ∩ ∂Dk . Since CH(P ∩ Ci ) and CH(P ∩ Cj ) are disjoint, for i 6= j, it follows that no
+pair of edges of any pair of (the plane embeddings of the) trees among T1 , . . . , Tu cross each
+other.
+    Let G be the planar straight-line graph formed by the union of ∂Dk , T1 , . . . , Tu , plus the
+connecting segments just introduced, and let T ∗ be a spanning tree of G; the vertex set of
+
+                                                       13
+T ∗ contains P \ Dk .
+     Let ℓ be a line in the plane. The proof of the preceding lemma implies that ℓ intersects
+at most O(log(n/k)) of the polygons Ci . Hence, ℓ crosses at most two edges of ∂Dk , at most
+O(log(n/k)) of the connecting segments, and it can cross edges of at most O(log(n/k)) trees
+                                                   1/2
+Ti , for i = 1, . . . , u. Since
+                           √ ℓ crosses at most O(k     ) edges of each such tree, we conclude that
+                                                ∗
+ℓ crosses at most O( k log(n/k)) edges of T .
+     Finally, we get rid of the extra “Steiner vertices” of T ∗ (those not belonging to P \ Dk )
+in a straightforward manner, by making T ∗ a rooted tree, at some point of P \ Dk , and by
+replacing each path connecting a point u ∈ P \ Dk to an ancestor v ∈ P \ Dk , where all
+inner vertices of the path are Steiner points, by the straight segment uv. This produces a
+straight-edge spanning tree T of P \ Dk , whose crossing number is at most that of T ∗ .
+
+Theorem 3.5 Given a set P of n points in the plane, one can construct a spanning tree T
+                                               √
+for P such that any line ℓ crosses at most O( wℓ log(n/wℓ )) edges of T. The tree T can be
+constructed in O(n1+ε ) (deterministic) time, for any fixed ε > 0.
+Proof: We construct a sequence of subsets of P , as follows. Put P0 = P . At the ith step,
+i ≥ 1, consider the polygon Qi = D(Pi−1 , 2i ), and let Pi = Pi−1 ∩ Qi . We stop when
+Pi becomes empty. By construction, the ith step removes at least 2i points from Pi−1 , so
+|Pi | ≤ |Pi−1 | − 2i , and the process terminates in O(log n) steps.
+     For each i, construct a spanning tree Ti for Pi−1 \ Qi , using Lemma 3.4 (with k = 2i ).
+Connect the resulting trees by straight segments into a single spanning tree T of P .
+     We claim that T is the desired spanning tree. Indeed, consider an arbitrary line ℓ of
+weight k. Observe that ℓ cannot cross any of the polygons Qi , for i > U = ⌈log2 k⌉, since
+any line that crosses such a polygon must be of weight at least 2U +1 > k, by Lemma 3.2(ii).
+     Thus ℓ crosses only the first U layers of our construction. Hence, the number of edges of
+T that ℓ crosses is at most
+                                                                !
+              X U    √                    XU
+                                                √                    √
+                  O 2i log(n/2i ) = O          ( 2)i (log n − i) = O( k log(n/k)),
+            i=1                           i=1
+
+as is easily verified. This establishes the bound on the crossing number of ℓ.
+
+Running time. Computing Qi can be done in the dual plane, by constructing the convex
+hulls of the levels 2i and n − 2i in the arrangement of the lines dual to the points of Pi−1 .
+We use the algorithm
+                       of Matoušek [Mat91a], which constructs the convex hull of a level in
+O |Pi−1 | log4 n time, for a total of O(n log5 n) time. This also subsumes the time needed to
+construct Pi from Pi−1 , for all i. Next, we carry out the constructive proof of Lemma 3.3
+for Pi−1 \ Qi , which can be implemented to run in O(n logO(1) n) time. Finally, for each set
+in the cover, we apply the algorithm of [Wel92] to construct the corresponding subtree with
+low crossing number. This takes O(m1+ε ) time for a set of size m, for any fixed ε > 0. We
+continue in this fashion, as described in the first part of the proof. It is now easy to verify
+that the resulting construction takes overall O(n1+ε ) time, for any fixed ε > 0.
+
+
+
+
+                                                14
+3.1.1   The underlying partition and a counterexample in three dimensions
+The main technical step in the construction of Theorem 3.5 is the partition of the set of
+k-shallow points of P , namely, those that are contained in some halfplane with at most k
+points of P , into subsets, each containing at most 2k points, so that any line crosses the
+convex hulls of at most O(log(n/k)) of these subsets.
+   It is natural to try to extend this construction to three (or higher) dimensions. However,
+as we show next, there are examples of point sets in R3 where no such partition exists, even
+when the points are in convex position.
+   To see this, let m be an integer, and put n = m2 . Define
+                                  
+                             P = (i, j, i2 + j 2 ) | i, j = 1, . . . , m .
+
+That is, P is the set of the vertices of the m × m integer grid in the xy-plane, lifted to the
+standard (convex) paraboloid z = x2 + y 2 . Thus, all points of P are in convex position (and
+are thus 1-shallow).
+    Let k > 1 be an arbitrary parameter, and consider any partition P = {Q1 , . . . , Qu } of
+P into u = Θ(n/k) sets, where k ≤ |Qi | ≤ 2k, for i = 1, . . . , u. Let Ci denote the two-
+dimensional convex hull of the projection of Qi onto     p the xy-plane, for i = 1, . . . , u. The
+sum of the x-span and the y-span of Ci is at least |Qi | (or else there would be no room
+for Qi to contain√ all its points).
+                                  √    Hence, the total length of these spans of C1 , . . . , Cu is
+at least Ω((n/k) k) = Ω(n/ k). Consider the 2m − 2 vertical planes x = 1 + 1/2, x =
+2 + 1/2, . . . , x = m − 1 + 1/2, and y = 1 + 1/2, y = 2 + 1/2, . . . , y = m − 1 + 1/2. Clearly, the
+overall number of intersection points between the boundaries of the Ci ’s and these planes is
+proportional to the sum √ of√their x-spans and y-spans. Hence, there is a plane in this family
+that
+   pintersects Ω((n/ k)/ n) = Ω( n/k) sets among C1 , . . . , Cu , and thus it intersects the
+Ω( n/k) corresponding convex hulls among CH(Q1 ), . . . , CH(Qu ).
+    Note that a similar argument can be applied to the set of the vertices of the m1/3 ×
+m1/3 × m1/3 integer lattice. In this case, for any partition of this set of the above kind, there
+always exists a plane that crosses the convex hulls of at least Ω((n/k)2/3 ) of the subsets.
+(This matches the upper bound in the partition theorem of Matoušek [Mat92].) Of course,
+here, (most of) the points are not shallow.
+    To summarize, there exist sets P of n points in convex position in 3-space (so they are all
+1-shallow), such that p any partition of P into sets of size (roughly) k will have a plane that
+crosses at least Ω( n/k) sets in the partition. (Without the convex position, or shallowness,
+assumption, there exist sets for which this crossing number is at least Ω((n/k)2/3 ).) We do
+not know whether this lower bound is worst-case tight. That is, can a set P of n k-shallow
+points
+   p in 3-space be partitioned into Θ(n/k) subsets, so that no plane separates more than
+O( n/k) subsets? If this were the case, applying the standard construction of spanning trees
+with small crossing numbers to each subset would result in a spanning tree with crossing
+number O(n1/2 k 1/6 ).
+    Note that this still leaves open the (more modest) possibility of a partition which is
+“depth sensitive”, that is, a partition into subsets of size roughly k, with the property that
+any halfspace that contains m points crosses at most (or close to) O((m/k)2/3 ) sets in the
+partition.
+
+
+                                                 15
+3.2     Relative (p, ε)-approximations for halfplanes
+We can turn the above construction of a spanning tree with small relative crossing number
+into a construction of a relative (p, ε)-approximation for a set of points in the plane and for
+halfplane ranges, as follows.
+    Let P be a set of n points in the plane, and let T be a spanning tree of P as provided in
+Theorem 3.5. We replace T by a perfect matching M of P , with the same relative crossing
+number, √i.e., the number of pairs of M that are separated by a halfplane of weight k is at
+most O( k log(n/k)). This is done in a standard manner—we first convert T to a spanning
+path whose relative crossing number is at most twice larger than the crossing number of T,
+and then pick every other edge of the path.
+    We now construct a coloring of P with low discrepancy, by randomly coloring the points
+in each pair of M. Specifically, each pair is randomly and independently colored either
+as −1, +1 or as +1, −1, with equal probability. The standard theory of discrepancy (see
+[Cha01]) yields the following variant.
+
+Lemma 3.6 Given a set P of n points in the plane, one can construct a coloring χ : P 7→
+{−1, 1}, such that, for any halfplane h,
+
+                               χ(h ∩ P ) = O(|h ∩ P |1/4 log n).
+
+The coloring is balanced—each color class consists of exactly n/2 points of P .
+Proof: As shown√in [Mat99], if a halfplane h crosses t edges of the matching,
+                                                                           √        then its
+discrepancy is O( t log n), with high probability. As shown above, t = O( k log(n/k)),for
+                                                                   q√
+k = |h ∩ P |, so the discrepancy of h is, with high probability, O      k log(n/k) log n =
+O(k 1/4 log n).
+   We need the following fairly trivial technical lemma.
+
+Lemma 3.7 For any x ≥ 0, y > 0, and 0 < p < 1, we have xp < (x + y) /y 1−p .
+                                         x+y        x+y
+Proof: Observe that xp < (x + y)p =           1−p ≤       .
+                                      (x + y)       y 1−p
+    As we next show, the improved discrepancy bound of Lemma 3.6 leads to an improved
+bound on the size of (ν, α)-samples for our range space, and, consequently, for the size of
+relative (p, ε)-approximations.
+
+Theorem 3.8 Given a set P of n points in the plane, and parameters 0 < α < 1 and
+                                                               1
+0 < ν < 1, one can construct a (ν, α)-sample Z ⊆ P of size O α4/3 ν
+                                                                    log4/3 αν
+                                                                            1
+                                                                              .
+
+Proof: Following one of the classical constructions of ε-approximations (see [Cha01], we
+repeatedly halve P , until we obtain a subset of size as asserted in the theorem, and then
+argue that the resulting set is a (ν, α)-sample. Formally, set P0 = P , and partition Pi−1 into
+two equal halves, using Lemma 3.6; let Pi and Pi′ denote the two halves (consisting of the
+
+
+
+                                              16
+points that are colored +1, −1, respectively). We keep Pi , remove Pi′, and continue with the
+halving process. Let ni = |P | /2i denote the size of Pi . For any halfplane h, we have
+
+                             |Pi ∩ h| − |Pi′ ∩ h| ≤ c |h ∩ Pi |1/4 log ni ,
+
+where c is some appropriate constant. Recalling that
+
+                                       |h ∩ Pi |                        |h ∩ Pi′ |
+                            Pi (h) =                and Pi′ (h) =                  ,
+                                         |Pi |                            |Pi′ |
+
+and that |Pi | = |Pi′ |, this can be rewritten as
+
+                                                           Pi (h)1/4
+                                 Pi (h) − Pi′ (h)    ≤c       3/4
+                                                                       log ni .
+                                                             ni
+
+Since Pi−1 = Pi ∪ Pi′ , we have
+
+                            |h ∩ Pi−1 |   |h ∩ Pi | |h ∩ Pi′ |  1                
+               Pi−1 (h) =               =          +      ′
+                                                               = Pi (h) + Pi′ (h) .
+                              |Pi−1 |      2 |Pi |   2 |Pi |    2
+
+Since ν > 0, we have
+
+                                         Pi (h) − Pi′ (h)   cPi (h)1/4
+                     Pi−1 (h) − Pi (h) =                  =      3/4
+                                                                       log ni .
+                                                2             2ni
+
+Applying Lemma 3.7, with p = 1/4, x = Pi (h), and y = ν, the last expression is at most
+
+                    c log ni Pi (h) + ν    c log ni                        
+                        3/4
+                            ·      3/4
+                                        ≤         3/4
+                                                      Pi−1 (h) + Pi (h) + ν .
+                     2ni         ν        2(νni )
+
+                                               c log ni
+This implies that dν (Pi−1 (h) , Pi (h)) ≤                 . The triangle inequality then implies that
+                                              2(νni )3/4
+                         i                                   i
+                                                                                          !
+                         X                               c X log nk      log ni
+     dν (P (h) , Pi (h)) ≤     dν (Pk−1 (h) , Pk (h)) ≤ 3/4      3/4
+                                                                     =O                       ≤ α,
+                           k=1
+                                                       2ν   k=1 nk      (νni )3/4
+                             
+for ni = Ω να14/3 log4/3 αν1
+                               . The theorem then follows by taking Z to be the smallest Pi
+which still satisfies this size constraint.
+    Using Theorem 2.9, we thus obtain:
+
+Corollary 3.9 Given a set P of n points in the plane, and parameters       0 < ε < 1 and      
+                                                                               1        4/3 1
+0 < p < 1, one can construct a relative (p, ε)-approximation Z ⊆ P of size O ε4/3 p
+                                                                                    log     εp
+                                                                                                .
+
+
+
+
+                                                     17
+Remark: One can speed up the construction of the relative (p, ε)-approximation of Corol-
+lary 3.9, by first drawing a random sample of slightly larger size, which is guaranteed, with
+high probability, to be a relative approximation of the desired kind,and then use halving  to
+                                                                                   3 
+decimate it to the desired size. Implemented carefully, this takes O n + ε12 p log n     time,
+and
+   thus produces  a relative (p, ε)-approximation, with high probability, of the desired size
+     1      4/3 1
+O ε4/3 p log εp .
+
+    In fact, the preceding analysis leads to an improved bound for sensitive approximations
+for our range space. The improvement is in terms of the quality of the “sensitivity” of the
+approximation, which is achieved at the cost of a slight increase (by a sublogarithmic factor)
+in its size, as compared to the standard bound, provided in Theorem 2.13. That is, we have:
+
+
+Theorem 3.10 Let P be a set of n points          in the plane, and  let ε > 0 be a parameter. One
+                                                     2    4/3
+can compute a subset Z ⊆ P of size O (1/ε ) log (1/ε) , such that for any halfplane h,
+                              1  3/2                
+we have P (h) − Z(h) ≤            ε P (h)1/4 + ε2 .
+                              2
+Proof: Fix parameters 0 < α < 1 and ν > 0, and Applythe construction of Theorem 3.8
+until we get a subset Z of size m = O (1/ε2 ) log4/3 (1/ε) ; the constant of proportionality
+will be determined by the forthcoming considerations.
+    Thekey observation   is that Z is a (ν, α)-sample for any 0 < α < 1 and ν > 0 that satisfy
+           1       4/3 1
+m = Ω α4/3 ν log αν , because the construction is oblivious to the individual values of α
+and ν, and just requires that the size of the sample remains larger than the above threshold.
+    Using this observation, we proceed to show that Z satisfies the property asserted in the
+theorem. So let h be a halfplane. Suppose first that P (h) ≤ ε2 /2. By Corollary 3.9, Z
+is a relative (ε2 , 1/2)-approximation to P , with an appropriate choice of the constant of
+proportionality (note the change of roles of “p” and “ε”). This implies that Z(h) − P (h) ≤
+ε2 /2.
+                                                                      3/4
+    Suppose then that ph = P (h) > ε2 /2, and set εh = ε3/2 /ph . Observe that
+                                                                   
+                             1         4/3    1         1     4/3 1
+                                   log            = O 2 log           = O(m).
+                         εh 4/3 ph         ε h ph       ε         ε
+Thus, with an appropriate choice of the constant of proportionality for m, Z is a relative
+(ph , εh /2)-approximation, which implies that
+                                  1           ε3/2       1
+                    P (h) − Z(h) ≤ εh P (h) = 3/4 P (h) = ε3/2 P (h)1/4 ,
+                                  2          2ph         2
+as asserted.
+    This compares favorably with the result of Brönnimann et al. [Brö95, BCM99], which in
+                                                          2
+this case implies that there exists a subset
+                                          of size O((1/ε
+                                                           ) log(1/ε)) such that, for each half-
+                                              1/2
+plane h, we have P (h) − Z(h) ≤ (ε/2) P (h) + ε . Our bound is smaller when P (h) > ε2
+and is the same otherwise.
+
+                                                18
+4     Relative (p, ε)-approximations in higher dimensions
+4.1    Relative (p, ε)-approximations in R3
+The construction in higher dimensions is different from the planar one, because of our present
+inability to extend the construction of spanning trees with low relative crossing number to
+three or higher dimension. For this reason we use the following different strategy.
+   We say that a hyperplane h separates a set Q ⊆ Rd if h intersects the interior of CH(Q);
+that is, each of the open halfspaces that h bounds intersects Q.
+   The main technical step in the construction is given in the following theorem.
+
+Theorem 4.1 Let P be a set of n points in R3 , andlet 0 < ε < 1,0 < p < 1 be given
+                                                       1          1
+parameters. Then there exists a set Z ⊆ P , of size O 3/2 log3/2    , such that, for any
+                                                      ε p        εp
+halfspace h with P (h) ≤ p, we have
+
+                                       Z(h) − P (h) ≤ εp.                                     (4)
+
+Remark: Let us note right away the difference between Eq. (4) and the situation in the
+preceding sections. That is, up to now we have handled ranges of measure at least p, whereas
+Eq. (4) applies to ranges of measure at most p. This issue requires a somewhat less standard
+construction, that will culminate in a sequence of approximation sets, each catering to a
+different range of halfspace measures. Nevertheless, the overall size of these sets will satisfy
+the above bound, and the cost of accessing them will be small.
+Proof: Put k = ⌊np⌋, and apply the shallow partition theorem of Matoušek [Mat91b], to
+obtain a partition of P into s ≤ n/k = O(1/p) subsets P1 , . . . , Ps , each of size between k + 1
+and 2k, such that any k-shallow halfspace h (namely, a halfspace that contains at most k
+points of P ) separates at most c log s subsets, for some absolute constant c. (Note that if h
+meets any Pi , it has to separate it, because h is too shallow to fully contain Pi .) Without
+loss of generality, we can carry out the construction so that the size of each Pi is even.
+    We then construct, for each subset Pi , a spanning tree of Pi with crossing number
+O(k 2/3 ) [CW89, Wel92], and convert it, as in the preceding section, to a perfect match-
+ing of Pi , with the same asymptotic bound on its crossing number, which is the maximum
+number of pairs in the matching that a halfspace separates. We combine all these perfect
+matchings to a perfect matching of the entire set P .
+    We then color each matched pair independently, as above, coloring at random one of
+its points by either −1 or +1, with equal probabilities, and the other point by the opposite
+color. Let R1 be the set of points colored −1;
+                                            p we have |R1 | = n/2. With high probability, the
+discrepancy of any halfspace h is at most 6ξ(h) ln(2n), where ξ(h) is the crossing number
+of h (see [Cha01]); we may assume that the coloring does indeed have this property. (If we
+do not care about the running time, we can verify that the constructed set has the required
+property, and if not regenerate it.)                                                    
+    Hence, if h is a k-shallow halfspace, then, by construction, ξ(h) = O k 2/3 log s , because
+h separates O(log s) subsets and crosses O(k 2/3 ) edges of the spanning tree of each of them.
+Hence the discrepancy of any k-shallow halfspace h is O(k 1/3 log n).
+
+                                               19
+    We continue recursively in this manner for j steps, producing a sequence of subsets
+R0 = P, R1 , . . . , Rj , where Ri is obtained from Ri−1 by applying the partitioning of [Mat91b]
+with a different parameter ki−1 , and then by using the above coloring procedure on the
+resulting perfect matching. We take ki−1 = k min{c/2i−1 , 1}, where c is the constant derived
+in the following lemma. (The bound asserted in the lemma holds with high probability if we
+do not verify that our colorings have small discrepancy, and is worst-case if we do verify it.)
+
+
+Lemma 4.2 There exists an absolute constant c such that any pn-shallow halfspace satisfies,
+for any i ≤ j,
+                                                    cpn
+                                        |h ∩ Ri | ≤ i ,
+                                                      2
+                                              2   3/2 1
+where j is the largest index satisfying nj ≥ p ln p , where nj = |Pj | = n/2j .
+Proof: Delegated to Appendix A.1.
+   The lemma implies that h is ki -shallow in each of the subsets R1 , . . . , Rj , so we can use
+the above bound on the discrepancy of h with respect to each of these subsets. (The reader
+can note the similarity between the forthcoming analysis and the proof of Lemma 4.2.) We
+thus have
+
+                                   |h ∩ P | − 2 |h ∩ R1 |                  1/3      
+                                                            χ(h, P )         k log n
+             P (h) − R1 (h)   =                         =            =O
+                                           |P |                 n               n
+                                                                 !
+                                                  1/3
+                                 χ(h, R1 )       k log(n/2)
+            R1 (h) − R2 (h)   =            =O 1
+                                   |R1 |              n/2
+                              ..
+                               .                                            !
+                                                     j−1 1/3          j−1
+                                 χ(h, Rj−1 )       2    k j−1 log(n/2     )
+          Rj−1 (h) − Rj (h)   =               =O                              .
+                                   |Rj−1|                      n
+
+Substituting ki = k min{c/2i , 1}, for each i, and adding up the inequalities, it is easily
+checked that the last right-hand side dominates the sum (compare with the analysis in the
+proof of Theorem 3.5), so we obtain, using the triangle inequality,
+                                             2j/3 1/3            
+                                             2 k log(n/2j−1)
+                         P (h) − Rj (h) = O                         .
+                                                       n
+We choose j to be the   largest index for which this bound is at most εp ≤
+                                                                            εk/n.
+                                                                                  That
+     j        ε3/2 pn                                             nj          1
+is, 2 = O log3/2 (n/2j ) . Note that this can be rewritten as log3/2 n = Ω ε3/2 p , which
+                                                                         j
+
+implies that nj ≥ 2p ln3/2 1p , as required in Lemma 4.2, provided that ε is smaller than some
+appropriate absolute constant. Hence, since j was chosen as large as possible, the size of Rj
+is                                                     !                   
+                              n         log3/2 (n/2j )         1     3/2 1
+                   |Rj | = j = O                         = O 3/2 log          .
+                             2              ε3/2 p            ε p        εp
+Taking Z = Rj completes the proof of Theorem 4.1.
+
+                                               20
+4.1.1   How to obtain a relative approximate count.
+Construction. The preceding construction used a fixed k = pn, and assumed that the
+query halfspace is at most k-shallow. However, our goal is to construct a subset that caters
+to all halfspaces whose measure is at least some given threshold. While unable to meet this
+goal exactly, with a single subset, we almost get there, in the following manner. Let p be the
+                                                                                            t
+given threshold parameter. We consider the geometric sequence      {pt }t≥0 , where pt = 2 p; the
+last (largest) element is ≈ 1/2, and its index is tmax = O log 1p . For each t, we construct
+a relative (pt , cε)-approximation Zt for P , as in Theorem 4.1, where c is a sufficiently small
+constant, whose value will be determined later. Clearly, the overall size of all these sets is
+dominated by the size of the first set, namely, it is
+                                                         
+                                            1      3/2 1
+                                      O 3/2 log             .
+                                          ε p          εp
+We output the entire sequence Z0 , Z1 , . . ., as a substitute for a single relative (p, ε)-approximation,
+and use it as follows.
+
+Answering a query. Let h be a given halfspace, so that w = |h ∩ P | ≥ pn. Let t ≥ 1 be
+the index (initially unknown) for which pt−1 n ≤ w < pt n. Thus h is pt n-shallow, and is also
+ps n-shallow, for every s ≥ t. Hence, if we use the set Zs , for each s ≥ t, to approximate w,
+we get, by Theorem 4.1, a count Cs := Zs (h) · |P |, which satisfies |Cs − w| ≤ cεps n. In other
+words, we have
+                                Cs − cεps n ≤ w ≤ Cs + cεps n,
+for each s ≥ t.
+    To answer the query, we access the sets Ztmax , Ztmax −1 , . . ., in decreasing order, and find
+the largest index s satisfying
+                                               4
+                                      cεps n < Cs .                                             (5)
+                                               5
+We return Cs as the desired approximate count.
+
+                                                                     1
+Analysis. We claim that Eq. (5) must hold at s = t, assuming ε < 8c    . Indeed, since
+1
+  p n ≤ w < pt n, we have
+2 t
+                                                            
+                                      1                1
+                     Ct + cεpt n ≥ w ≥ pt n, or Ct ≥     − cε pt n.
+                                      2                2
+                                
+Hence, Ct − cεpt n ≥ 12 − 2cε pt n. On the other hand, Ct ≤ cεpt n + w < (1 + cε)pt n.
+Combining these two inequalities, we obtain
+                                                 1
+                                                 2
+                                                   − 2cε    1
+                                 Ct − cεpt n >          Ct > Ct ,
+                                                 1 + cε     5
+if ε < 8c1 , as assumed. Our choice of s thus satisfies s ≥ t. Moreover, we have
+                          1                                     9
+                            Cs < Cs − cεps n ≤ w ≤ Cs + cεps n < Cs .
+                          5                                     5
+                                                 21
+This determines w, up to a factor of 9, which thus determines the correct index t (up to
+±O(1)). In fact, as our query answering procedure actually does, we do not have to find
+the exact value of t, because we use a smaller value of ε in the construction of the sets Zs .
+Specifically, with an appropriate choice of c, we have pt > 2cps , so
+                                         1
+                    Cs ≤ w + cεps n < w + εpt n = w + εpt−1 n ≤ (1 + ε)w,
+                                         2
+and, similarly,
+                                         1
+                    Cs ≥ w − cεps n > w − εpt n = w − εpt−1 n ≥ (1 − ε)w,
+                                         2
+so Cs is an ε-approximate count of P ∩ h, establishing the correctness of our procedure. (The
+specific choice of c, which we do not spell out, can easily be worked out from the preceding
+analysis.)
+    Note that our structure also handles halfspaces h with w = |h ∩ P | ≤ pn. Specifically,
+if we find an index s satisfying Eq. (5) then Cs is an ε-approximate count of P ∩ h, as the
+preceding analysis shows. If no such s is found then we must have w ≤ p1 n = pn (otherwise,
+as just argued, there would exist such an s and the procedure would find it). In this case
+we have |w − C1 | ≤ εpn, and we return C1 with the guarantee that (a) w ≤ pn, and (b)
+|w − C1 | ≤ εpn.
+     Note that this constitutes a somewhat unorthodox approach—we have logarithmically
+many sets instead of a single one (although their combined size is asymptotically the same
+as that of the largest one), and we access them sequentially to find the one that gives the
+best approximation. An interesting useful feature of the construction is that, if the given
+halfspace h has weight w that satisfies pt−1 n < w ≤ pt n, then the approximate counting
+mechanism accesses sets whose overall size is only O ε3/21 pt log3/2 εp1t . That is, the larger w
+is, the faster is the procedure.
+     To summarize, we have shown:
+
+Theorem 4.3 Given a set P of n points in R3 , and two parameters 0 < ε < 1, 0 < p < 1,
+we can construct k = O log p1 subsets of P , Z0 , Z1 , . . . , Zk , of total size O ε3/2
+                                                                                      1
+                                                                                         p
+                                                                                           log3/2 εp
+                                                                                                  1
+                                                                                                     ,
+so that, given any halfspace h containing qn points of P , we can find a set Zt that satisfies
+                                             (
+                                               εP (h) , if q ≥ p
+                            Zt (h) − P (h) ≤
+                                               εp,           if q ≤ p.
+
+The (brute-force) time it takes to search for Zt and obtain the count |h ∩ Zt | is
+                                                  
+                               O 3/2 1
+                                         log 3/2 1
+                                                      , if q ≥ p
+                                                 εq
+                                   ε q             
+                               O 3/2 1
+                                         log3/2 εp1
+                                                      , if q ≤ p.
+                                     ε p
+
+
+
+
+                                                 22
+4.2     Higher dimensions
+The preceding construction can be generalized to higher dimensions, with some complica-
+tions. We first introduce the following parameters:
+                               1 − d1∗                                         2d
+                  γ = 1+               ,   where d∗ = ⌊d/2⌋, and µ =              .
+                               1 + d1                                         d+1
+Note that, for d ≥ 4, 1 < γ < 2 (and tends to 2 as d increases), and µ < 2 (and tends to 2
+as d increases).
+    The analogous version of Theorem 4.1 is:
+
+Theorem 4.4 Let P be a set of n points in Rd , d ≥ 4, andlet 0 < ε <1, 0 < p < 1 be
+                                                            dµ/2    d
+given parameters. Then there exists a set Z ⊆ P , of size O µ γ log    , such that, for
+                                                            ε p     εp
+any pn-shallow halfspace h, we have
+                                           Z(h) − P (h) ≤ εp,
+                    µ/2        
+                    d     µ/2 d
+provided that n = Ω pγ log p .
+
+Proof: As above, put k = ⌊np⌋, and apply Matoušek’s shallow partition theorem [Mat91b],
+to obtain a partition of P into s = O(1/p) subsets P1 , . . . , Ps , each of size between k + 1 and
+2k, such that any k-shallow halfspace separates at most c(n/k)β subsets, for some absolute
+constant c, where β = 1 − 1/⌊d/2⌋ = 1 − 1/d∗ . (As above, if h meets any Pi , it has to
+separate it.) Also, we may assume that the size of each Pi is even.
+    We then construct, for each subset Pi , a spanning path of Pi with crossing number
+O(k α ) [Wel92], for α = 1 − 1/d, convert it to a perfect matching of Pi , with the same
+asymptotic crossing number, and combine all these matchings to a perfect matching of P .
+    We then apply the same coloring scheme as in the three-dimensional case, and let R1 be
+the set of points colored by −1; p we have |R1 | = n/2. With high probability, the discrepancy
+of any halfspace h is at most 2dξ(h) ln 2n, where ξ(h) is the number of pairs inPthe matching        
+                                                                                           α       β
+that h separates [Cha01]. If h is k-shallow then, by construction, ξ(h) = O            i k   (n/k)     .
+Hence the discrepancy of h is
+                                √                           1                      1
+               χ(h, P ) = O( dk x ny log1/2 n), for x = (α − β) , and y = β.
+                                                            2                      2
+We continue recursively in this manner for j steps, producing, as above, a sequence of subsets
+R0 = P, R1 , . . . , Rj , where Ri is obtained from Ri−1 by applying the partitioning of [Mat91b]
+with a different parameter ki−1 , and then by using the above coloring procedure on the
+resulting perfect matching. We take ki−1 = k min{c/2i−1 , 1}, where c is the constant derived
+in the following lemma. (As in the 3-dimensional case, if we want the proof of the theorem
+to be constructive, we either verify that each half-sample has the desired low discrepancy,
+and then the bounds are worst-case, or else the bounds hold with high probability.)
+
+Lemma 4.5 There exists an absolute constant c such that any pn-shallow halfspace satisfies,
+for any i ≤ j,
+                                              cpn
+                                   |h ∩ Ri | ≤ i ,
+                                               2
+                                                  23
+                                               µ/2         
+where j is the largest index satisfying nj = Ω dpγ logµ/2 pd , where nj = |Pj | = n/2j .
+
+Proof: Delegated to Appendix A.2.
+   As in the 3-dimensional case, the lemma justifies the following chain of inequalities (note
+again the similarity between the proof of the lemma and the analysis below).
+
+                                     |h ∩ P | − 2 |h ∩ R1 |                   √                      !
+                                                                χ(h, P )          dk x ny log1/2 n
+          P (h) − R1 (h)    =                                 =          =O
+                                              |P |                 n                    n
+                                              √ x                      !
+                               χ(h, R1 )       dk1 (n/2)y log1/2 (n/2)
+         R1 (h) − R2 (h)    =            =O
+                                 |R1 |                 n/2
+                            ..
+                             .                      √ x                               !
+                               χ(h, Rj−1 )     2j−1 dkj−1   (n/2j−1)y log1/2 (n/2j−1)
+      Rj−1 (h) − Rj (h)     =              =O                                           .
+                                 |Rj−1 |                          n
+
+Substituting ki = k min{c/2i , 1}, for each i, and adding up the inequalities, the last right-
+hand side dominates, so we obtain
+                                                    √ x y 1/2          !
+                                           (1−x−y)j                j−1
+                                         2           dk n log (n/2 )
+                  P (h) − Rj (h) = O                                      .
+                                                        n
+
+Substituting k = pn and the values of x and y, this is equal to
+                                         √            !
+                                       px d log1/2 nj
+                                  O        1−α/2
+                                                        .
+                                          nj
+
+We choose the first j so that this bound is at most εp. That is,
+                                     1−α/2        √ !
+                                    nj               d
+                                      1/2
+                                            =Ω      1−x
+                                                         ,
+                                   log nj        εp
+                                                      µ/2           
+                                                      d       µ/2 d
+                                or     |Rj | = nj = Θ µ γ log          .
+                                                      ε p         εp
+We note that the choice of nj satisfies the lower bound constraint in Lemma 4.5. Hence,
+taking Z = Rj completes the proof.
+Obtaining a relative approximate count is done exactly as in the three-dimensional
+case, producing a sequence of approximations, and searching through the sequence for the
+approximation which caters for the correct range of the size of P ∩ h. We thus have the
+following result.
+
+Theorem 4.6 Given a set P of n points in Rd , and two parameters 0 < ε < 1, 0 < p < 1,
+                                                                                      µ/2
+we can construct k = O log p1 subsets of P , Z0 , Z1 , . . . , Zk , of total size O εdγ pµ logµ/2 εp
+                                                                                                  1
+                                                                                                     ,
+
+                                                     24
+so that, given any halfspace h containing qn points of P , we can find a set Zt that satisfies
+                                             (
+                                               εP (h) , if q ≥ p
+                            P (h) − Zt (h) ≤
+                                               εp,       if q ≤ p.
+
+The (brute-force) time it takes to search for Zt and obtain the count |h ∩ Zt | is
+                                                 
+                               O dγµ/2µ logµ/2 1 , if q ≥ p
+                                   ε q         εq
+                                                   
+                               O dγµ/2µ logµ/2 1 , if q ≤ p.
+                                     ε p        εp
+
+
+Discussion.
+             We have two competing constructions, the “traditional”     one, with N  =
+   d       1                                                       ′      dµ/2   µ/2 d
+Θ ε2 p log p elements (see Section 2), and the new one, with N = Θ εµ pγ log εp el-
+ements. The new construction is better, in terms of the size of the approximation, when
+
+                                  dµ/2       µ/2 d     d       1
+                                         log        <      log
+                                  ε µ pγ         εp   ε2 p     p
+(for simplicity, we ignore the constants of proportionality). For further simplicity, assume
+                                              d
+that p is not much larger than ε, so that log εp and log p1 are roughly the same, up to some
+constant factor. Then we replace the above condition by
+
+                                 dµ/2         d    d    d
+                                  µ  γ
+                                       logµ/2    < 2 log .
+                                 ε p          εp  εp    εp
+Substituting the values of γ and µ, and simplifying the expressions, this is equivalent to
+                                                                   d(1−1/d
+                                                                         1
+                        1         d      d             ε2 /d                 ∗)
+
+                      d(1−1/d∗) <   2
+                                      log ,   or p >                              .
+                    p             ε      εp          log(d/ε)
+
+This establishes a lower bound for p, above which the new construction takes over. For
+example, for d = 4, p has to be Ω(ε/ log1/2 1ε ).
+
+
+5    Approximate range counting in two and three di-
+     mensions
+In this section we slightly deviate from the main theme of the paper. Since approximate
+range counting is one of the main motivations for introducing relative (p, ε)-approximations,
+we return to this problem, and propose efficient solutions for approximate halfspace range
+counting in two and three dimensions. The solution to the 3-dimensional problem uses rela-
+tive approximations, whereas the solution to the 2-dimensional problem is simpler and does
+not require such approximations. Both solutions pass to the dual plane / space, construct
+a small subset of levels, of small overall complexity, in the arrangement of the dual lines /
+planes, and search through them with the point dual to the query halfplane / halfspace to
+retrieve the approximate count.
+
+                                               25
+    We first present two solutions for the planar case, and then consider the 3-dimensional
+case.
+    Let P be a set of n points in the plane in general position, and ε > 0 be a prescribed
+parameter. The task at hand is to preprocess P for halfplane approximate range counting;
+that is, given a query halfplane h, we wish to compute a number µ that satisfies (1 −
+ε) |h ∩ P | ≤ µ ≤ (1 + ε) |h ∩ P |. We can reformulate the problem in the dual plane, where
+the problem is to preprocess the set L of lines dual to the points of P for approximate vertical-
+ray range counting queries; that is, given a vertical ray ρ, we want to count (approximately,
+within a relative error of ε) the number of lines of L that intersect ρ. Without loss of
+generality, we only consider downward-directed rays.
+    Let Λi denote the ith level in the arrangement A(L); this is the closure of the set of all
+the points on the lines of L that have exactly i lines of L passing below them. Each Λi is
+an x-monotone polygonal curve, and its combinatorial complexity (or just complexity) is the
+number of its vertices.
+
+Lemma 5.1 For integers      x ≥ y > 0, the total complexity of the levels of A(L) in the range
+[x, x + y] is O nx1/3 y 2/3 .
+    In particular, the average complexity of a level in this range is O(n(x/y)1/3 ).
+Proof: This result is a strengthening of a similar albeit weaker bound due to Welzl [Wel86],
+and is implicit in [And00, AAHSW98]. It was recently rederived, in a more general form, in
+an unpublished M.Sc. Thesis by Kapelushnik [Kap08]. We sketch the proof for the sake of
+completeness.
+    Consider the primal setting, and connect two points u, v ∈ P by an edge, if the open
+halfplane bounded by the line through u and v and lying below that line contains exactly j
+points of P (we refer to (u, v) as a j-set), where j ∈ [x, x + y]. Let E denote the resulting
+set of edges.
+    All the edges of E that are j-sets can be decomposed into j + 1 concave chains (see, e.g.,
+[AACS98, Dey98]). Similarly, they can be decomposed into n − j convex chains. Overall,
+the edges of E can be decomposed into at most
+                      x+y
+                      X
+                 α=         (j + 1) = O((x + y)2 − x2 ) = O(y 2 + xy) = O(xy)
+                      j=x
+
+concave chains, and into at most
+                                         x+y
+                                         X
+                                    β=         (n − j) = O(ny)
+                                         j=x
+
+convex chains. Each pair of a convex and a concave chain can intersect in at most two points.
+This implies that the segments of E can cross each other at most αβ = O(nxy 2) times.
+    On the other hand, consider the (straight-edge plane embedding of the) graph G = (P, E).
+It has n vertices, and m = |E| edges. By the classical Crossing Lemma (see [PA95]), it has
+X = Ω(m3 /n2 ) crossing pairs of edges (assuming m = Ω(n)). We thus have
+                                    3
+                                      m
+                                  Ω        = X = O(nxy 2 ),
+                                      n2
+
+                                                 26
+                    
+or m = O nx1/3 y 2/3 .
+   The second claim in the lemma is an immediate consequence of this bound.
+
+Claim 5.2 (i) For each i < n/2, for 0 < ε < 1, and for any fixed positive constant c, let k
+be an integer chosen randomly and uniformly in the range [i, (1 + ε/c)i]. Then the expected
+complexity of Λk is O(n/ε1/3). This bound also holds, with an appropriate choice of the
+constant of proportionality, with probability ≥ 1/2.
+    (ii) If Λk has complexity u then it can be replaced by an x-monotone polygonal curve with
+O(u/(εk)) edges, which lies between the two curves Λk(1−ε) and Λk(1+ε) .
+Proof: The first claim is an immediate consequence of Lemma 5.1 by setting x = i and
+y = (ε/c)i. The second claim is well known: the curve is obtained by shortcutting Λk in
+“jumps” of εk vertices; see, e.g., [Mat90].
+    We present two variants of an algorithm for the problem at hand, which differ in the
+dependence of their performance on ε. The first has O(log(n/ε)) query time, but requires
+O(n/ε7/6 ) storage, while the second
+                                    one uses only O(n) storage (no dependence on ε), but
+                             1
+its query time is O log n + ε2 .
+
+5.1    Fast query time
+                                                               
+We first compute the union Γ0 of the first M = 1/ε7/6 levels of A(L). As is well known
+(see, e.g., [CS89]), the overall complexity of Γ0 is O(nM) = O(n/ε7/6 ). Next, set ni :=
+⌊M(1 + ε)i ⌋, for i = 0, . . . , u = O(log1+ε (n/M)) = O 1ε log n . Let c be a constant that
+satisfies (1 + ε/c)3 ≤ 1 + ε for 0 < ε < 1 (c = 12 would do). We pick a random level with
+index in the range ni /(1 − ε/c), . . . , ni (1 + ε/c)2 ; by Claim 5.2(i), most of these levels have
+complexity O(n/ε1/3 ). We thus assume that the chosen level has this complexity (or else we
+resample; since the probability of success is at least 1/2, this does not affect the expected
+running time). We then simplify each such level, using Claim 5.2(ii) (with ε/c instead of ε).
+The resulting polygonal curve γi is easily seen to lie (strictly) between Λni and Λni+1 , and
+its complexity is                                                  
+                                     n/ε1/3                    n
+                              O                    = O 1/6              .
+                                   M(1 + ε)i ε             ε (1 + ε)i
+                                                                      P       n
+                                                                                     
+In particular, the total complexity of the curves γ1 , . . . , γu is i O ε1/6 (1+ε)i = O(n/ε7/6 ),
+and these curves are pairwise disjoint. Together with the segments in Γ0 , they form a planar
+subdivision Q with O(n/ε7/6 ) edges, which we preprocess for efficient point location. Using
+Kirkpatrick’s algorithm [Kir83], this can be done with O(n/ε7/6 ) preprocessing time and
+storage, and a query can be answered in O(log(n/ε)) time. We also store (with no extra
+asymptotic cost) a count Ne with each edge e of Q. It is equal to the level of e if e is an edge
+of Γ0 , and to nj if e is an edge of γj . Now, given a query point q (i.e., a downward-directed
+ray emanating from q), we locate q in Q and retrieve the count Ne , where e is the edge lying
+directly below q. It is easy to verify that Ne is indeed an ε-approximation of the number of
+lines below q. We have thus shown:
+
+Theorem 5.3 Given a set P of n points in the plane, and a parameter 0 < ε < 1, one
+can build, in O((n/ε4/3 ) log2 n) expected time, a data-structure that uses O(n/ε7/6) space,
+
+                                                27
+so that, given a query halfplane h, one can approximate |h ∩ P | within relative error ε, in
+O(log(n/ε)) time.
+Proof: The construction is described above, and we only bound the running time. Computing
+the bottom M levels takes O(nM + n log n) time [ERvK96]. Computing the remaining
+randomly chosen O 1ε log n levels requires O((n/ε1/3 ) log n) time per level, using the (very
+involved) dynamic convex hull algorithm of [BJ02] (or simpler earlier algorithms with a slight
+(logarithmic or sub-logarithmic) degradation in the running time). Overall, the running time
+is O(n/ε7/6 + n log n + (n/ε4/3 ) log2 n).
+
+5.2     Linear space
+Let M be a random integer in the range [1/ε2 , 2/ε2]. By Lemma 5.1, the expected com-
+plexity of the level ΛM is O(n). By Markov’s inequality, the complexity of ΛM is O(n)
+with probability at least 1/2, with an appropriate choice of the constant of proportionality.
+Thus, redrawing the index M if necessary (without affecting the expected asymptotic run-
+ning time), we may assume that ΛM does have linear complexity. Next, we define the curves
+γ0 , γ1 , . . . , γu as above, with the new value of M as the starting index. Note that each γi is
+a shortcutting of a random level in the range [Ki , 2(1 + ε)Ki ], where Ki = (1/ε2 )(1 + ε)i−1 .
+More precisely, we can regard the random choice of the level from which γi is produced
+as a 2-step drawing, where we first draw M and then draw k in the “middle” of the range
+[M(1 + ε)i , M(1 + ε)i+1 ], as above. The combined drawing is not exactly uniform, but is close
+enough to make Lemma 5.1 and Claim 5.2 hold in this scenario too.4 Hence, the expected
+complexity of the level corresponding to γi is O(n) for each i. Thus, the overall expected
+complexity of the shortcut curves γ0 , γ1 , . . . , γu is now only
+                                                 !
+                                X        n           X  nε 
+                            O                 iε
+                                                   =     O          i
+                                                                      = O(n)
+                                  i
+                                    M(1  + ε)         i
+                                                            (1 + ε)
+
+(with a constant of proportionality independent of ε). We construct the collection of these
+curves, and assume (using resampling if necessary) that their overall complexity is indeed
+linear. We preprocess the planar map formed by these curves, and by the edges of ΛM , for
+fast point location, as above, and store with each curve γi , for i ≥ 0, the level ni that it
+approximates. In addition, we sweep ΛM from left to right, and store, with each of its edges
+e, the (fixed) set of lines passing below (any point on) e. This can be done with only O(n)
+storage, using persistence [ST86]. Now, given a query point q, we locate it in the planar
+map. If it lies above γ0 , then the index stored at the segment lying directly below q is an
+ε-approximation of the number of lines below q. If q lies below γ0 , we find the edge e of
+ΛM lying above or below q, retrieve the set of lines stored at e (using the persistent data
+structure), and search it, in O(1/ε2) time, to count (exactly) the number of lines below q.
+We thus have shown:
+
+Theorem 5.4 Given a set P of n points in the plane, and a parameter 0 < ε < 1, one
+  4
+    Technically, in Lemma 5.1 we assume y < x, and here we have y = x(1 + 2ε), but the lemma continues
+to hold in this case too, as is easily checked.
+
+
+                                                 28
+                         
+can build, in O nε log2 n time, a data-structure that uses O(n) space, so that, given a query
+halfplane h, one can approximate |h ∩ P |, within relative error ε, in O(log n + 1/ε2 ) time.
+Proof: The construction requires the computation
+                                                    of O( 1ε log n) levels, each of expected
+                                       n   2
+complexity O(n). Thus, this takes O ε log n time (or slightly worse, as in the comment
+in the preceding proof). The query time and space complexity follow from the discussion
+above.
+    Observe that Theorem 5.3 and Theorem   5.4 improve over the previous results in [AH08,
+                                    1  2
+KS06], which have query time Ω ε2 log n .
+    It would also be interesting to compare these results to the recent technique of Aronov
+and Sharir [AS08]; as presented, this technique caters only to range searching in four and
+higher dimensions, but it can be adapted to two or three dimensions too.
+
+5.3    Approximate range counting in three dimensions
+We can extend the above algorithms to three dimensions. After applying duality, the input
+is a set H of n planes in 3-space, which we want to preprocess for approximate vertical ray
+range counting. The general idea is very similar: (i) Compute a sequence of levels of A(H),
+whose indices form roughly a geometric sequence. (ii) Replace each level by a simplified
+xy-monotone polyhedral surface which approximates it well. (iii) Find the belt between two
+consecutive surfaces which contains the query point q (the apex of the query vertical ray),
+and thereby obtain the desired approximate count. Implementing step (ii) is considerably
+harder in three dimensions than in the plane, and we do it using an appropriate relative
+(p, ε)-approximation.
+    For the sake of simplicity of presentation, we do not attempt to optimize the choice of
+parameters, and just describe the general technique. Concrete and improved versions can be
+worked out by the interested reader.
+
+Approximating a specific level. Consider first the problem of approximating a specific
+level m of A(H). Consider the range space that has H as the ground set, whose ranges
+are induced by vertical downward-directed rays, where the range associate with a ray ρ
+is the subset of planes of H crossed by ρ. This range space has finite VC-dimension, so
+we can apply to it the analysis of Section 2. Put p = m/n, and construct a (p, ε/3)-
+relative approximation B ⊆ H, by taking a random sample of size O((log n)/(ε2 p)) from
+H (see Theorem 2.11 and [LLS01]); With high probability, the sample is indeed such an
+approximation. Set ν = ⌈|B| p⌉ = O(ε−2 log n). By construction, the ν th level Λν of A(B)
+is guaranteed to lie between the levels (1 − ε/3)m and (1 + ε/3)m of A(H), so it provides
+an adequate approximation to the mth level of A(H). Since ν is “small”, we can compute
+Λν in time O((n/εO(1) ) logO(1) n), using, e.g., the algorithm of [Cha00].
+
+Approximating all levels. We first compute explicitly all the 1/ε bottom levels of A(H).
+Their overall complexity is O(n/ε2) [CS89], and their construction takes O(n/ε2 + n log n)
+time [Cha00].
+   Next, we approximate each of the levels ni = (1/ε)(1 + ε)i , up to relative error of ±ε/3,
+using the algorithm described above, for i = 1, . . . , O((log n)/ε).
+
+                                             29
+    This results in a sequence of O(ε−1 log n) pairwise disjoint xy-monotone polyhedral sur-
+faces in R3 (i.e., the exact O(ε−1) bottom levels, and the additional O(ε−1 log n) approxi-
+mated levels). We need to store these surfaces so that, given a query point q, the two surfaces
+which lie directly above and below q can be found efficiently. This is done using binary search
+through the sequence of surfaces, where each step of the search is implemented by locating
+the xy-projection q ∗ of q in the xy-projection of a surface (which is a planar map), and then
+by testing q against the plane inducing the face containing q ∗ . Thus the cost of a query is
+O(log(ε−1 log n) · log(ε−1 n)). The index of the surface directly below q (namely, either its
+exact level if it is one of the first bottom ε−1 levels, or the index of the level of A(H) that it
+approximates) yields the desired approximate count.
+    The preceding analysis is easily seen to imply that the overall storage and preprocessing
+cost of the algorithm are both O((n/εO(1) ) logO(1) n). (Concrete and reasonably small values
+of the powers of the polylogarithmic factor and of the factor 1/εO(1) can be easily worked
+out, but we skip over this step.) Hence we obtain the following result.
+
+Theorem 5.5 Given a set P of n points in three dimensions and a parameter o < ε < 1,
+one can build a data-structure, in O((n/εO(1) ) logO(1) n) time and space, so that, given a
+query halfspace h, one can approximate |P ∩ h|, up to relative error of ±ε. The query time
+is O(log(ε−1 log n) · log(ε−1 n)).
+    As in the planar case, Theorem 5.5 improves over the previous results [AH08, KS06],
+which require Ω ε12 log2 n time to answer a query. However, in a subsequent work, Afshani
+and Chan [AC09] managed to obtain an improved solution. Specifically, they show that,
+with Oε (n log n) expected preprocessing time, one can build a data structure of expected
+size Oε (n) which can answer approximate 3-dimensional halfspace range counting queries in
+Oε (log(n/k ∗ )) expected time, where k ∗ is the actual value of the count, and Oε hides constant
+factors that are polynomial in 1/ε. It would also be interesting to compare our result to the
+appropriate variant of the technique of [AS08].
+
+
+6         Conclusions
+In this paper we first established connections between the (ν, α)-samples of Li et al. [LLS01]
+and relative (p, ε)-approximations (and other notions of approximations5 ). This has allowed
+us to establish sharp upper bounds on the size of relative (p, ε)-approximations in arbitrary
+range spaces of finite VC-dimension. We then turned to study geometric range spaces,
+and gave a construction of even smaller-size relative approximations for halfplane ranges,
+by revisiting the classical construction of spanning trees with low crossing number, and
+by modifying it to be “weight-sensitive”. We then gave similar constructions of “almost”
+relative approximations for halfspace ranges in three and higher dimensions, using a different
+approach. Finally, we have also revisited the approximate halfspace range-counting problem
+in two and three dimensions, and provided better algorithms than those previously known.
+    There are several interesting open problems for further research. The main one is to
+extend the construction of spanning trees with small relative crossing number to three and
+    5
+        Which we did at no extra charge!
+
+
+                                               30
+higher dimensions. Another open problem is to improve Theorem 3.5. A minor further
+improvement of Theorem 3.5 is possible by plugging the construction of Theorem 3.5 into
+the construction of Lemma 3.4. This still falls short of the desired spanning tree with crossing
+            √
+number O( wℓ ), for a line ℓ of weight wℓ . We leave this as an open problem for further
+research.
+    Interestingly, the partition of Lemma 3.3 can be interpreted as a strengthening of the
+shallow partition theorem of Matoušek [Mat91b] in two dimensions. It is quite possible that
+a similar (but probably weaker) strengthening is possible in three and higher dimensions.
+
+
+Acknowledgments
+The authors thank the anonymous referees for their insightful comments. The authors
+also thank Boris Aronov, Ken Clarkson, Edith Cohen, Haim Kaplan, Yishay Mansour and
+Shakhar Smorodinsky for useful discussions on the problems studied in this paper.
+
+
+References
+[AACS98] P. K. Agarwal, B. Aronov, T. M. Chan and M. Sharir, On levels in arrangements
+  of lines, segments, planes, and triangles, Discrete Comput. Geom. 19:315–331, 1998.
+[AC09] P. Afshani and T. M. Chan, On approximate range counting and depth, Discrete
+  Comput. Geom. 41:3–21, 2009.
+
+[ABET00] N. Amenta, M. Bern, D. Eppstein, and S.-H. Teng, Regression depth and center
+  points, Discrete Comput. Geom., 23:305–323, 2000.
+[And00] A. Andrzejak, On k-Sets and their Generalizations, Ph.D. Thesis, Inst. für Theo-
+  retische Informatik, ETH Zurich, 2000.
+[AAHSW98] A. Andrzejak, B. Aronov, S. Har-Peled, R. Seidel, and E. Welzl, Results on
+  k-sets and j-facets via continuous motion arguments, Proc. 14th Annu. ACM Sympos.
+  Comput. Geom., 1998, pages 192–199.
+[AH08] B. Aronov and S. Har-Peled, On approximating the depth and related problems,
+  SIAM J. Comput., 38:899–921, 2008.
+
+[AS08] B. Aronov and M. Sharir, Approximate halfspace range counting, SIAM J. Comput.,
+  to appear.
+[BCM99] H. Brönnimann, B. Chazelle, and J. Matoušek, Product range spaces, sensitive
+  sampling, and derandomization, SIAM J. Comput., 28:1552–1575, 1999.
+[BJ02] G. S. Brodal and R. Jacob. Dynamic planar convex hull. In Proc. 43th Annu. IEEE
+  Sympos. Found. Comput. Sci., pages 617–626, 2002.
+
+[Brö95] H. Brönnimann, Derandomization of Geometric Algorithms, Ph.D. thesis, Dept.
+  Comput. Sci., Princeton University, Princeton, NJ, May 1995.
+
+                                              31
+[Cha00] T. M. Chan, Random sampling, halfspace range reporting, and construction of
+  (≤ k)-levels in three dimensions, SIAM J. Comput., 30(2):561–575, 2000.
+
+[Cha01] B. Chazelle, The Discrepancy Method: Randomness and Complexity, Cambridge
+  University Press, New York, 2001.
+
+[Cha04] B. Chazelle, The discrepancy method in computational geometry, chapter 44, in
+  Handbook of Discrete and Computational Geometry, 2nd Edition, J.E. Goodman and J.
+  O’Rourke, Eds., CRC Press, Boca Raton, 2004, pages 983–996.
+
+[CW89] B. Chazelle and E. Welzl, Quasi-optimal range searching in spaces with finite VC-
+  dimension, Discrete Comput. Geom., 4:467–490, 1989.
+
+[CS89] K. L. Clarkson and P. W. Shor, Applications of random sampling in computational
+  geometry, II, Discrete Comput Geom. 4:387–421, 1989.
+
+[CKMS06] E. Cohen, H. Kaplan, Y. Mansour and M. Sharir, Approximations with relative
+  errors in range spaces of finite VC-dimension, manuscript, 2006.
+
+[Dey98] T. Dey, Improved bounds for planar k-sets and related problems, Discrete Comput.
+  Geom. 19:373–382, 1998.
+
+[ERvK96] H. Everett, J.-M. Robert, and M. van Kreveld. An optimal algorithm for the (≤k)-
+  levels, with applications to separation and transversal problems. Internat. J. Comput.
+  Geom. Appl., 6:247–261, 1996.
+
+[Har08] S. Har-Peled, Carnival of samplings:            nets,   approximations, rela-
+  tive and sensitive, manuscript, 2008. http://arxiv.org/abs/0908.3718 and
+  http://valis.cs.uiuc.edu/~ sariel/papers/08/sampling_survey/. Revised ver-
+  sion appears as Chapter 6, “Yet even more on sampling” in Har-Peled’s class notes.
+
+[HS09] S. Har-Peled and M. Sharir, Relative (p, ε)-approximations in geometry, Manuscript,
+  2009. Available from http://valis.cs.uiuc.edu/~ sariel/papers/06/relative.
+
+[Hau92] D. Haussler, Decision theoretic generalizations of the PAC model for neural nets
+  and other learning applications, Inform. Comput., 100:78–150, 1992.
+
+[HW87] D. Haussler and E. Welzl, Epsilon nets and simplex range queries, Discrete Comput.
+  Geom., 2:127–151, 1987.
+
+[Kap08] L. Kapelushnik, Computing the k-Centrum and the Ordered Median Hyperplane,
+  M.Sc. Thesis, School of Computer Science, Tel Aviv University, 2008.
+
+[Kir83] D. G. Kirkpatrick, Optimal search in planar subdivisions, SIAM J. Comput. 12:28–
+  35, 1983.
+
+[KRS08a] H. Kaplan, E. Ramos and M. Sharir, Range minima queries with respect to a ran-
+  dom permutation, and approximate range counting, Discrete Comput. Geom., to appear.
+  Also in http://www.math.tau.ac.il/~ michas/, 2008.
+
+                                           32
+[KRS08b] H. Kaplan, E. Ramos and M. Sharir, The overlay of minimization diagrams in a
+  randomized incremental construction, http://www.math.tau.ac.il/~ michas/, 2008.
+
+[KS06] H. Kaplan and M. Sharir, Randomized incremental construction of three-dimensional
+  convex hulls and planar Voronoi diagrams, and approximate range counting, Proc. 17th
+  ACM-SIAM Sympos. Discrete Algorithms pages 484–493, 2006.
+
+[KPW92] J. Komlós, J. Pach and G. Woeginger, Almost tight bounds for ε-nets, Discrete
+  Comput. Geom. 7:163–173, 1992.
+
+[LLS01] Y. Li, P. M. Long, and A. Srinivasan, Improved bounds on the sample complexity
+  of learning, J. Comput. Syst. Sci., 62:516–527, 2001.
+
+[Mat90] J. Matoušek, Construction of epsilon-nets, Discrete Comput. Geom., 5:427–448,
+  1990.
+
+[Mat91a] J. Matoušek, Computing the center of planar point sets, in Computational Geom-
+  etry: Papers from the DIMACS Special Year (J.E. Goodman, R. Pollack and W. Steiger,
+  eds.), AMS, Providence, RI, 1991, pages 221–230.
+
+[Mat91b] J. Matoušek, Reporting points in halfspaces, Comput. Geom. Theory Appl., 2:169–
+  186, 1991.
+
+[Mat92] J. Matoušek, Efficient partition trees, Discrete Comput. Geom., 8:315–334, 1992.
+
+[Mat99] J. Matoušek, Geometric Discrepancy, Algorithms and Combinatorics, Vol. 18,
+  Springer Verlag, Heidelberg, 1999.
+
+[Mat03] J. Matoušek, Using the Borsuk-Ulam Theorem, Universitext, Springer-Verlag,
+  Berlin, 2003, Lectures on topological methods in combinatorics and geometry, Written
+  in cooperation with Anders Björner and Günter M. Ziegler.
+
+[MWW93] J. Matoušek, E. Welzl and L. Wernisch, Discrepancy and approximations for
+  bounded VC-dimension, Combinatorica, 13:455–466, 1993.
+
+[PA95] J. Pach and P. K. Agarwal, Combinatorial Geometry, Wiley Interscience, New York,
+  1995.
+
+[Pol86] D. Pollard, Rates of uniform almost-sure convergence for empirical processes indexed
+  by unbounded classes of functions, Manuscript, 1986.
+
+[SS09] H. Shaul and M. Sharir, Semi-algebraic range reporting and emptiness searching with
+  applications, Manuscript, 2009. An earlier incomplete version in Proc. 16th ACM-SIAM
+  Sympos. Discrete Algorithms, pages 525–534, 2005.
+
+[ST86] N. Sarnak and R. E. Tarjan, Planar point location using persistent search trees,
+  Commun. ACM, 29:669–679, 1986.
+
+[Tal94] M. Talagrand, Sharper bounds for Gaussian and empirical processes, Annals Probab.
+  22:28–76, 1994.
+
+                                            33
+[VC71] V.N. Vapnik and A. Ya. Chervonenkis, On the uniform convergence of relative fre-
+  quencies of events to their probabilities, Theory of Probability and its Applications, 16:264–
+  280, 1971.
+
+[Wel86] E. Welzl, More on k-sets of finite sets in the plane, Discrete Comput. Geom. 1:95–
+  100, 1986.
+
+[Wel92] E. Welzl, On spanning trees with low crossing numbers, In Data Structures and
+  Efficient Algorithms, Final Report on the DFG Special Joint Initiative, volume 594 of
+  Lect. Notes in Comp. Sci., pages 233–249, Springer-Verlag, 1992.
+
+
+A      Proofs of some lemmas
+A.1     Proof of Lemma 4.2
+Proof: Put k = ⌊pn⌋ and let ki be as defined in the proof of Theorem 4.1. Put λi = |Ri ∩ h|,
+for i = 0, . . . , j (so λ0 = |P ∩ h|). We prove the inequality in the lemma by induction on i,
+which continues as long as ni ≥ 2p ln3/2 1p ; the induction will dictate the correct choice of c.
+The claim is trivial for i = 0, if we choose c ≥ 1. Assume then that the inequality holds for
+each t < i, and consider λi . We apply the improved discrepancy bound, given in the proof of
+Theorem 4.1, to Pt−1 , for each t = 1, . . . , i; this holds because λt−1 ≤ kt−1 , by the induction
+                                                   1/3
+hypothesis. We thus have |λt−1 − 2λt | = O(kt−1 log nt−1 ), or
+                                                                  1/3
+                                  2t−1 λt−1 − 2t λt ≤ 2t−1 ckt−1 log nt−1 ,
+
+for some absolute constant c. Adding these inequalities, for t = 1, . . . , i, we obtain (using
+the induction hypothesis)
+                                        i
+                                        X                               i−1
+                                                                        X          1/3
+                    λ0 − 2 i λi     ≤         2t−1 λt−1 − 2t λt ≤             2t ckt     log nt
+                                          t=1                           t=0
+                                           ′ 1/3 2i/3 1/3
+                                    ≤ cc       2    k       log ni ,
+
+for some absolute constant c′ . Hence, since λ0 ≤ k, we have
+
+                                          k     c′ c1/3 k 1/3 log ni  ck
+                                   λi ≤     i
+                                              +           i/3
+                                                                     ≤ i,
+                                          2             2             2
+if we choose c to be a sufficiently large constant, satisfying 1 + c′ c1/3 ≤ c, and if we assume
+that k/2i ≥ log3/2 ni , or ni / log3/2 ni ≥ 1/p, which holds, for any i ≤ j, by the assumptions
+of the lemma.
+
+A.2     Proof of Lemma 4.5
+Proof: We proceed in much the same way as in the preceding proof. That is, put λi =
+|Ri ∩ h|, for i = 0, . . . , j (so λ0 = |P ∩ h|), and use induction on i, which continues as long as
+
+
+                                                     34
+         µ/2        
+ni = Ω dpγ logµ/2 pd . The claim is trivial for i = 0, if we choose c ≥ 1. Assume then that the
+inequality holds for each t < i, and consider λi . We apply the improved discrepancy bound,
+given in the proof of Theorem 4.4, to Pt−1 , for each t = 1, . . . , i; this
+                                                                           √ holds because λt−1 ≤
+kt−1 , by the induction hypothesis. We thus have |λt−1 − 2λt | = O( dkt−1      x
+                                                                                  nyt−1 log1/2 nt−1 ),
+or                                                √ x y
+                        2t−1 λt−1 − 2t λt ≤ 2t−1 c dkt−1  nt−1 log1/2 nt−1 ,
+for some absolute constant c. Adding these inequalities, for t = 1, . . . , i, we obtain (using
+the induction hypothesis)
+                                                           i
+                                                           X
+                                    λ0 − 2 λii
+                                                      ≤          2t−1 λt−1 − 2t λt ≤
+                                                           t=1
+                   i−1
+                   X         √                       √
+                         2t c dktx nyt log1/2 nt ≤ c′ dcx 2(1−x−y)i k x ny log1/2 ni
+                   t=0
+                                                          √
+                                                      ≤ c′ dcx 2(1−α/2)i k x ny log1/2 ni ,
+
+for some absolute constant c′ . Hence, since λ0 ≤ k, we have
+                           √
+                    k    c′ dcx k x ny log1/2 ni                        ck
+               λi ≤ i +             αi/2
+                                                 , which we want to be ≤ i .
+                    2             2                                     2
+To guarantee the last inequality, we choose c to be a sufficiently large constant, satisfying
+1 + c′ cx ≤ c, and require that    √ x y 1/2
+                                    dk n log ni       k
+                                                    ≤    .
+                                        2αi/2         2i
+Substituting k = pn and the values of x, y, this amounts to requiring that
+                         √                    n 1−α/2
+                                                                     1−α/2 1−x
+                             d log1/2 ni ≤                 p1−x = ni       p     ,   or
+                                                 2i
+                             1/(2−α)                   µ/2           
+                             d            1/(2−α) d      d        µ/2 d
+                      ni = Ω          log             =Ω      log         .
+                                pγ                p       pγ          p
+This holds, for any i ≤ j, by the assumptions of the lemma.
+
+
+
+
+                                                          35
+

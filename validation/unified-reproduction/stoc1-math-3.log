@@ -1,0 +1,99 @@
+{
+  "exhaustive_nfas": 256,
+  "initial_sets_per_nfa": 4,
+  "prefix_depth_limit": 5,
+  "block_choices": [
+    1,
+    2
+  ],
+  "mask_comparisons": 258048,
+  "push_comparisons": 126976,
+  "pop_restorations": 126976,
+  "larger_classifier_comparisons": 5120,
+  "payload_rows": [
+    {
+      "block_bits": 1,
+      "groups": 8,
+      "payload_words": 64,
+      "payload_bytes": 512,
+      "query_group_lookups": 8,
+      "push_group_lookups": 8
+    },
+    {
+      "block_bits": 2,
+      "groups": 4,
+      "payload_words": 64,
+      "payload_bytes": 512,
+      "query_group_lookups": 4,
+      "push_group_lookups": 4
+    },
+    {
+      "block_bits": 3,
+      "groups": 3,
+      "payload_words": 80,
+      "payload_bytes": 640,
+      "query_group_lookups": 3,
+      "push_group_lookups": 3
+    },
+    {
+      "block_bits": 4,
+      "groups": 2,
+      "payload_words": 128,
+      "payload_bytes": 1024,
+      "query_group_lookups": 2,
+      "push_group_lookups": 2
+    },
+    {
+      "block_bits": 8,
+      "groups": 1,
+      "payload_words": 1024,
+      "payload_bytes": 8192,
+      "query_group_lookups": 1,
+      "push_group_lookups": 1
+    }
+  ],
+  "rust_allocated_mask_words": 192,
+  "rust_allocated_mask_payload_bytes": 1536,
+  "dyck_compilation_growth": [
+    {
+      "L": 1,
+      "vocabulary_size": 4,
+      "valid_classes": 3,
+      "allocated_rows": 4,
+      "words_per_row": 1,
+      "payload_bytes": 32
+    },
+    {
+      "L": 2,
+      "vocabulary_size": 20,
+      "valid_classes": 7,
+      "allocated_rows": 8,
+      "words_per_row": 1,
+      "payload_bytes": 64
+    },
+    {
+      "L": 3,
+      "vocabulary_size": 84,
+      "valid_classes": 15,
+      "allocated_rows": 16,
+      "words_per_row": 2,
+      "payload_bytes": 256
+    },
+    {
+      "L": 4,
+      "vocabulary_size": 340,
+      "valid_classes": 31,
+      "allocated_rows": 32,
+      "words_per_row": 6,
+      "payload_bytes": 1536
+    },
+    {
+      "L": 5,
+      "vocabulary_size": 1364,
+      "valid_classes": 63,
+      "allocated_rows": 64,
+      "words_per_row": 22,
+      "payload_bytes": 11264
+    }
+  ]
+}

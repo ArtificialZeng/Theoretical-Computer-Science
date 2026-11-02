@@ -1,0 +1,37 @@
+{
+  "job_id": "c029-vftfast-research-36ff17e1eeb1",
+  "role": "research",
+  "assigned_research_pass": 2,
+  "max_accumulated_research_passes": 3,
+  "dispatch_utc": "2026-11-02T05:08:31+00:00",
+  "first_clock_observed_utc": "2026-11-02T05:10:19+00:00",
+  "scientific_work_closed_utc": "2026-11-02T05:25:09.963207+00:00",
+  "main_test_deadline_utc": "2026-11-02T05:25:30.999990+00:00",
+  "finalization_deadline_utc": "2026-11-02T05:28:30.999988+00:00",
+  "original_status": "unresolved",
+  "outcome": "continue",
+  "source_unchanged": true,
+  "candidate_created": false,
+  "manuscript_or_pdf_created": false,
+  "agents_or_background_workers_started": false,
+  "runner_counters_or_scheduling_edited": false,
+  "prior_evidence_preserved": true,
+  "new_tests": [
+    "geodesic singleton-fault insertion histories",
+    "finite-field representative path DP"
+  ],
+  "operational_failures": [],
+  "evidence_hashes": {
+    "source.md": "45828a099cc88bde52aee6450b298c8b73397e4367d3911585521595f94657b8",
+    "problem.md": "154f88ebf32aef1e4373256e5dd8f7c451d0d578a218efd8190b821a7f2b0fd3",
+    "checkpoint.md": "b080d18adeb00ebb0ba7058c489b3cdfe0a7160937afd19e9c6f8546dc0f6560",
+    "evidence/research2-entry-checkpoint.md": "afce08216d577ae98f9a8517221a147947e9cf86b1f492ac96ec92bfa08ac0c8",
+    "evidence/research2-history.md": "ae2688aa785d4059ebe847b423965bcc162129cd555a27801ad437160ac32ded",
+    "evidence/research2-positive-kernel.md": "fcddd36ef34eee399a1213a67221432b4ee40c5816ff283343ae89dcd61deab1",
+    "evidence/research2-history-checks.json": "251785228dcef246f3821254880288a5d5f5dc6012ab0ebac4b3123f4552a488",
+    "evidence/research2_history_checks.py": "ed5664e06d69b6ea8847adf8f5679e19dbcc9afab91549132e6c7e9112609bee",
+    "evidence/research2-representative-checks.json": "e9fc7c3d1d683325ff10a1d2acfa6520f8a0f490480ebfd76d3aeeb5fc6669c2",
+    "evidence/research2_representative_checks.py": "cea39cb9f096993dcc40b84054dbd2ff195fc420b9d7fed0847f2e6782136372",
+    "evidence/research2-sources.md": "0403d5fc5b7966a4061d9f0c10802dca1b4a5f8833a36e0ea935351a881b57a1"
+  }
+}

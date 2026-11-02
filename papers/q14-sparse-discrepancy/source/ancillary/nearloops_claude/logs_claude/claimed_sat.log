@@ -1,0 +1,7 @@
+K4_3222_b2 m=12 levels [3, 2, 2, 2] -> UNSAT 
+fan6_b2 m=14 levels [2, 2, 2, 2, 2, 2] -> UNSAT 
+fan6_b1p m=15 levels [2, 2, 2, 2, 2, 2] -> UNSAT 
+2tree7 m=13 levels [2, 2, 2, 2, 2, 2, 2] -> UNSAT 
+K6_33333_3 m=17 levels [3, 3, 3, 3, 3, 3] -> UNSAT 
+octa_b1_level3 m=15 levels [3, 3, 3, 3, 3, 3] -> UNSAT 
+K7_level3 m=21 levels [3, 3, 3, 3, 3, 3, 3] -> UNSAT 

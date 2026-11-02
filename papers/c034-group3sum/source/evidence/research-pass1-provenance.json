@@ -1,0 +1,32 @@
+{
+  "job_id": "c034-group3sum-research-3974e7a3f8f0",
+  "phase": "research",
+  "dispatch_utc": "2026-11-02T16:05:35Z",
+  "entry_utc": "2026-11-02T16:07:36Z",
+  "research_pass_number": 1,
+  "research_pass_cap": 3,
+  "source_sha256": "f3507a3e5b20d6707750b7e703d5d1c0764d4d5b13ef6b7a4f0001d940c8e8cf",
+  "status": "completed",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "subagents_spawned": 0,
+  "outcome": "candidate",
+  "original_status_is_proposer_claim": true,
+  "accepted": false,
+  "main_test_finished_no_later_than_utc": "2026-11-02T16:21:20Z",
+  "recorded_utc": "2026-11-02T16:22:29.874999+00:00",
+  "research_passes_consumed": 1,
+  "research_passes_accumulated": 1,
+  "source_unchanged": true,
+  "manuscript_created": false,
+  "pdf_created": false,
+  "background_workers_spawned": 0,
+  "operational_diagnostics": [
+    "BeautifulSoup unavailable; extraction repaired using standard-library HTMLParser.",
+    "Initial Corollary-mention extraction did not identify the heading; corrected and inspected the heading beginning Let N."
+  ],
+  "failed_math_routes_preserved_in": [
+    "research/pass1-progress.md",
+    "evidence/research-pass1-selfcheck.md"
+  ]
+}

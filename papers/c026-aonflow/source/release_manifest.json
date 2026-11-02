@@ -1,0 +1,37 @@
+{
+  "artifacts": {
+    "main.pdf": "50c157c4b7b471f5d2778b669efa55fde604245ebe40372a6c3cd79988c48fe4"
+  },
+  "citation_verdict": "accept_with_citation_limitations",
+  "kind": "resolution-paper",
+  "manuscript_digest": "d852233f598ab85f715ccb8d53630a2f2d61b1da067c66cb20deb30f9503838c",
+  "original_status": "proved",
+  "pages": 7,
+  "pdf_digest": "50c157c4b7b471f5d2778b669efa55fde604245ebe40372a6c3cd79988c48fe4",
+  "provenance": {
+    "audit/build.json": "e392ac6095091ed1112dc467bead24117098aad28c28dd5190f025af0dcd136c",
+    "audit/build.md": "31045dcb6626f70b528f7118fcf1b1fa2bd4d0cbc1d2255e4a7812466ad10c49",
+    "audit/citations.json": "7ae5c515184e28cb17ae014a303cd8a1c7839af98e99e71a72fef6f42c49e106",
+    "audit/citations.md": "83e472b49787f7e21e69db93cd80ba1a75b5c9ce105120b7f4a25083a1a74b69",
+    "audit/math.json": "f10888a3dd42d5c9e87d7c664aa0274293825536d35a0f0881cf944c980f8e25",
+    "audit/math.md": "98cb742945e7fe2f5d6521e009824fb72e1790befe4e44c3beaa342ccc49234a",
+    "audit/visual.json": "0d31ee36e18bb283de0de6b79bc8f38bc010e75d42f4d755b56255bf3aa7f2a1",
+    "audit/visual.md": "675b1740a9ae05b53a1c2e08fe854500a33ffa77f1e4df7837e8a0584b66f997",
+    "jobs/c026-aonflow-referee-92aab2001150/role.json": "6cbbde3acca394fdff845bdc677d8d43edb28ef4bf0c6730468431dc0789fcc9",
+    "jobs/c026-aonflow-release-7db9e6fea069/role.json": "26c99356b7af5f933acaeaa5888e678e2e4ffed328de1a11c1ed644a42b835ad",
+    "jobs/c026-aonflow-research-02dec8252283/role.json": "adc34302139b079defdf325572fb72a466ca8c133aebec245b0c2c76e1bc0f34",
+    "manuscript/build/aonflow-working_paper.log": "ba03df6a5336b2d2c91de87b6b71fb44c03adbf8cfa06cc8056d3480d34ba55a"
+  },
+  "schema": 1,
+  "snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd",
+  "unverified_citations": [
+    {
+      "key": "CKS05",
+      "limitation": "Live ACM publisher endpoint HTTP 403; full author PDF and author-institution DOI/pages record checked. Only the publisher refresh remains unverified."
+    },
+    {
+      "key": "CKS13",
+      "limitation": "Live author PDF timeout and DOI endpoint HTTP 403; complete frozen published PDF/text and printed DOI checked. Only the external refresh remains unverified."
+    }
+  ]
+}

@@ -1,10 +1,14 @@
-# Uniform Pumping Does Not Characterize Copyless Cost Register Automata
+# Copyless Realizability of Unipotent Weighted Automata and a Uniform Pumping Separation
 
-[PDF](paper.pdf) · [Original source ZIP](source.zip) · [Browse source](source/) · [English index](../../README.md) · [中文](../../README.zh-CN.md) · [Deutsch](../../README.de.md) · [Français](../../README.fr.md) · [日本語](../../README.ja.md)
+**working_paper** · 11 total pages.
 
-Does the uniform pumping condition characterize functions computed by copyless polynomial cost register automata? This manuscript proves that it does not, even among rational weighted-automaton functions: summing the positions of the 1s in a binary word satisfies the condition with one pumping exponent and one finitely generated subsemiring, but no finite-state copyless polynomial cost register automaton computes it. A minimum-image retraction and a polynomial spectral projection yield a commutation obstruction; return words remove finite control. This is the released nine-page separation, not the later extended revision.
+[PDF](c021-ccrapumping_working_paper.pdf) · [Unified index](../../README.md)
 
-Scope: **resolution of the stated target**. 9 total PDF pages. Author lists and released files are preserved.
+Characterizes copyless realizability of rational weighted-automaton functions whose minimal matrices are unipotent: realizability is equivalent to commuting letter matrices, or a rational polynomial in letter counts. Exact linear algebra gives polynomial-time tests in this sector and synthesis or short negative certificates for scattered-pattern sums. The position-sum function separates uniform pumping from copyless realizability. The current verified version has 11 pages; a separate 57-page expanded manuscript on invertible series is also archived as working_paper.
+
+Classification basis: conservative_label_pending_fresh_stoc_assessment
+
+Mathematical scope: disproved
 
 From the repository root:
 
@@ -13,11 +17,6 @@ python3 scripts/reproduce.py --paper c021-ccrapumping
 python3 scripts/build_pdfs.py --paper c021-ccrapumping
 ```
 
-Or run the mathematical checks from a writable copy of `source/`:
+The original archive and expanded source are linked in the unified index. Checks run on disposable copies. Finite checks are not a full proof, formal verification, new novelty review or external peer review. Original author lists and archived files remain unchanged.
 
-```sh
-python3 evidence/research_checks.py
-python3 audit/referee-check.py
-```
-
-The checks use the Python standard library and verify their documented finite scope. Full proofs are in the manuscript. Original reproduction/build instructions remain inside `source/`. The root scripts run in temporary copies. Citation and local review limitations are preserved in `provenance/` and the archive; they are not external peer review.
+Additional version (57 pages, working_paper): [PDF](versions/expanded-invertible/c021-ccrapumping_expanded_working_paper.pdf) · [ZIP](versions/expanded-invertible/source.zip) · [Source](versions/expanded-invertible/source/). Existing expanded manuscript; no acceptance under the shared fresh all-strong STOC standard. Claims and original author lists preserved; not a new audited resolution.

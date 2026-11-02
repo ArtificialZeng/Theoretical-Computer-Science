@@ -1,0 +1,54 @@
+{
+  "job_id": "c029-vftfast-research-9df2f29ab673",
+  "field_prime": 101,
+  "coverage": [
+    {
+      "n": 2,
+      "graph_masks": 2,
+      "all_labeled_graphs": true
+    },
+    {
+      "n": 3,
+      "graph_masks": 8,
+      "all_labeled_graphs": true
+    },
+    {
+      "n": 4,
+      "graph_masks": 64,
+      "all_labeled_graphs": true
+    },
+    {
+      "n": 5,
+      "graph_masks": 10,
+      "all_labeled_graphs": false
+    },
+    {
+      "n": 6,
+      "graph_masks": 10,
+      "all_labeled_graphs": false
+    }
+  ],
+  "small_branch_cases": 3160,
+  "largest_base_n": 6,
+  "largest_augmented_n": 18,
+  "max_output_edges_observed": 15,
+  "f_range": "0..min(2,n-2)",
+  "d_range": "1..min(3,n-1)",
+  "radii": "d, d+1, 2d+1, 48*d*d (deduplicated)",
+  "counts": {
+    "d_to_r_runs": 6248,
+    "insertions": 23909,
+    "rejections": 43091,
+    "rejected_exact_fault_tests": 809892,
+    "insertion_witness_checks": 23909,
+    "distance_checks": 560240,
+    "fault_sets": 93952,
+    "mixed_runs": 3160,
+    "mixed_distance_checks": 57856,
+    "dr_runs": 1848,
+    "dr_distance_checks": 33763
+  },
+  "failures": 0,
+  "elapsed_seconds": 12.620805,
+  "limitation": "Exact finite tests; no finite check establishes asymptotic size, uniform runtime, novelty, or an infinite theorem. Small radii are stress tests beyond the packing theorem hypotheses."
+}

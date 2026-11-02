@@ -1,0 +1,11 @@
+{
+  "command": "python3 /Users/mac/.codex/skills/4prove-or-disprove-math/scripts/release_gate.py check-math PROJECT_DIR",
+  "exit_code": 0,
+  "result": {
+    "ok": true,
+    "snapshot_digest": "2b34def4196da89c592b17665c39fbf7b0b04e44c40aeac720bf40cd52fb35b4",
+    "referee_job_id": "c025-incdec-referee-2ab23be91f58"
+  },
+  "recorded_at": "2026-11-01T23:51:49.953647+00:00",
+  "meaning": "Observed successful structural and provenance check. It is not mathematical proof or a venue decision."
+}

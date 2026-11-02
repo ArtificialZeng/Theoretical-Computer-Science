@@ -1,0 +1,31 @@
+{
+  "job_id": "c021-ccrapumping-referee-a7ba97c08c76",
+  "verdict": "accept",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    {
+      "reference": "Mazowiecki, Puch and Smertnig, Pumping-Like Results for Copyless Cost Register Automata and Polynomially Ambiguous Weighted Automata, STACS 2026, DOI 10.4230/LIPIcs.STACS.2026.67; full version arXiv:2502.07356v2",
+      "verified_results": "Definition 11 and Theorem 15 give the uniform necessary condition; Section 3.2/Example 26 proposes the position-sum function without proving nonrecognizability. Appendix B.4 gives its pumping calculation; Lemma 50 gives the squarefree weighted translation.",
+      "verification": "Frozen official/full PDFs and both official page images directly inspected; current arXiv record checked and still v2."
+    },
+    {
+      "reference": "Puch and Smertnig, Factoring through monomial representations: arithmetic characterizations and ambiguity of weighted automata, arXiv:2410.03444v2",
+      "verified_results": "Theorem 3.4, Corollary 3.5 and Proposition 9.4 concern block-triangular monomial covers and ambiguity of invertible weighted representations. They do not impose global polynomial copylessness.",
+      "verification": "Exact theorem statements inspected in frozen primary PDF; current arXiv record checked and still v2."
+    },
+    {
+      "reference": "Clemente, The commutativity problem for effective varieties of formal series, and applications, LICS 2025; arXiv:2503.21697v2",
+      "verified_results": "The Introduction gives polynomial-time commutativity of rational series via their minimal matrices; Theorem 1 decides commutativity for effective prevarieties. These are commutativity decisions, not CCRA-realizability characterizations.",
+      "verification": "Current primary full text and arXiv version record directly checked."
+    },
+    {
+      "reference": "Clemente, Commutative Algebras of Series, LICS 2026, DOI 10.4230/LIPIcs.LICS.2026.29",
+      "verified_results": "Theorem 1/Corollary 2 classify bilinear associative commutative product rules; Theorem 3 gives equivalence decidability for polynomial P-automata. Section 1.2 addresses series commutativity, not existence of a copyless realization.",
+      "verification": "Current official 23-page primary PDF, theorem statements and Section 1.2 inspected."
+    }
+  ],
+  "substantive_delta": "The position-sum witness now has a full rational no-CCRA proof with arbitrary finite control, arbitrary rational constants, nonlinear copyless updates and any finite register count. A minimum-rank retraction preserves the minimal observable subquotient despite singular physical maps. The commuting-unipotent obstruction and a finite-control return-block transfer recovering the entire minimal algebra then characterize CCRA realizability throughout the all-word-unipotent minimal rational sector. This yields constructive polynomial-bit membership for explicit scattered-pattern sums. Known commutativity, minimization, trace and counter constructions are credited rather than claimed as new.",
+  "why_nonroutine": "Neither unary pumping restrictions nor monomial diagonal-block covers rule out the noncommuting unitriangular witness. The proof must normalize singular nonlinear maps and retain both invariant spaces of the observable quotient. Finite control is eliminated by common return blocks, polynomial roots and an actual unit prefix, with a proof that the generated algebra and both minimality spans are retained. The inspected primary results do not provide this realizability transfer; a bounded current search found no equivalent resolution. This is a reasoned novelty assessment, not an exhaustive priority certificate.",
+  "significance": "The result settles the exact source sufficiency question using its proposed rational witness and identifies a structural obstacle invisible to all uniform unary pumping sequences. The extension replaces an isolated separation by an infinite-sector characterization and an effective realization decision with explicit positive constructions and short negative witnesses for a natural pattern-count input class. This is substantive automata expressiveness and realizability value; no claim of venue quality or acceptance is made.",
+  "remaining_gaps": []
+}

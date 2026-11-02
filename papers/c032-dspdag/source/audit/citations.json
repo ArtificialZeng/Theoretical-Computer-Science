@@ -1,0 +1,28 @@
+{
+  "job_id": "c032-dspdag-release-5fe4e38b60c7",
+  "snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+  "manuscript_digest": "c2916fd05375010d302349b16227c74c3b9034412b631d619036c3087052fe3f",
+  "pdf_digest": "04e5cdc5235be2a9327b7f80616afcc3d5854ecbab67d4f9fe5c12c23aca20f2",
+  "reviewed_at": "2026-11-02T12:51:51.063385+00:00",
+  "verdict": "accept_with_citation_limitations",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/build.py",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "All seven publication inputs, all nine bibliography keys, rendered/extracted references, 24 fixed claim groups and accepted-proof fidelity reviewed on 2026-11-02 UTC. Primary original texts support all nearby attributions. Valiant 1975 exact journal edition could not be refreshed (403); its original 1974 report supports the actual closure attribution and official indexed publisher metadata supports the record. No user Excel/BibTeX authority was designated.",
+  "citation_audit_method": "citation-check-skill-advisory+primary-source-manual",
+  "unverified_citations": [
+    {
+      "key": "Val75",
+      "limitation": "Exact 1975 typeset journal full text not refreshed; publisher direct page returned 403. Original 1974 CMU report inspected and supports the nearby claim; official indexed metadata confirms the journal record."
+    }
+  ]
+}

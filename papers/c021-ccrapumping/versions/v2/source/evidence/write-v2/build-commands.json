@@ -1,0 +1,12 @@
+{
+  "job_id": "c021-ccrapumping-write-f8f9e1107e7a",
+  "cwd": "manuscript",
+  "commands": [
+    "latexmk -C",
+    "latexmk -pdf main.tex"
+  ],
+  "exit_code": 0,
+  "pdf": "manuscript/build/main.pdf",
+  "pages": 11,
+  "pdf_skill_marker_completed": true
+}

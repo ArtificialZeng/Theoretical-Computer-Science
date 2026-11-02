@@ -1,0 +1,19 @@
+(A1) rho=(1,1): |slice|=4 slice=[(-1, -1, -1), (-1, 1, 1), (1, -1, 1), (1, 1, -1)] near-loop=True 1-step-defect1=False
+(A1) rho=(-1,1): |slice|=8 slice=all near-loop=True 1-step-defect1=True
+(A1) rho=(1,-1): |slice|=8 slice=all near-loop=True 1-step-defect1=True
+(A1) rho=(-1,-1): |slice|=4 slice=[(-1, -1, 1), (-1, 1, -1), (1, -1, -1), (1, 1, 1)] near-loop=True 1-step-defect1=False
+(A1) Z^natural == Q_T: True;  1-step variant l-coarse (no 2-loop in complement): False
+(A1) psi odd: True, 2-Lipschitz: True
+(A2) l=2: Z^natural == Q_T: True; 2-loop variant l-coarse: False; rho=1 in 2-loop variant: False
+(A2) l=3: Z^natural == Q_T: True; 2-loop variant l-coarse: False; rho=1 in 2-loop variant: False
+(A2) l=4: Z^natural == Q_T: True; 2-loop variant l-coarse: False; rho=1 in 2-loop variant: False
+(A2) l=5: Z^natural == Q_T: True; 2-loop variant l-coarse: False; rho=1 in 2-loop variant: False
+(A3) l=2 |S_i|=1 (|S_i|>2l: False): slice at rho_i=1 contains near-loop: True; max of sum_{S_i} s on slice = -1  (so phi_h <= -q on the product)
+(A3) l=2 |S_i|=3 (|S_i|>2l: False): slice at rho_i=1 contains near-loop: True; max of sum_{S_i} s on slice = -1  (so phi_h <= -q on the product)
+(A3) l=2 |S_i|=5 (|S_i|>2l: True): slice at rho_i=1 contains near-loop: True; max of sum_{S_i} s on slice = -1  (so phi_h <= -q on the product)
+(A3) l=2 |S_i|=7 (|S_i|>2l: True): slice at rho_i=1 contains near-loop: True; max of sum_{S_i} s on slice = -1  (so phi_h <= -q on the product)
+(A3) l=3 |S_i|=1 (|S_i|>2l: False): slice at rho_i=1 contains near-loop: True; max of sum_{S_i} s on slice = -1  (so phi_h <= -q on the product)
+(A3) l=3 |S_i|=3 (|S_i|>2l: False): slice at rho_i=1 contains near-loop: True; max of sum_{S_i} s on slice = -1  (so phi_h <= -q on the product)
+(A3) l=3 |S_i|=5 (|S_i|>2l: False): slice at rho_i=1 contains near-loop: True; max of sum_{S_i} s on slice = -1  (so phi_h <= -q on the product)
+(A3) l=3 |S_i|=7 (|S_i|>2l: True): slice at rho_i=1 contains near-loop: True; max of sum_{S_i} s on slice = -1  (so phi_h <= -q on the product)
+(B) extension step: trials and failures: {'q=l_h+1': [2272, 0], 'q<=l_h': [3598, 0]}  (failures must be 0 for q<=l_h) time 5.0s

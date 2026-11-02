@@ -1,0 +1,84 @@
+{
+  "verified_at_utc": "2026-11-02T10:52:52.862052+00:00",
+  "archive": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027_continuous/c031-detlis/c031-detlis_source_and_reproducibility.zip",
+  "archive_sha256": "160e91ff5750f5d74bba73594e4ac442f7a2f1aef448e941c816a4084564182b",
+  "pdf": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027_continuous/c031-detlis/c031-detlis_working_paper.pdf",
+  "pdf_sha256": "eda5b06b35b0ffe14b99d31a0397a0e6d5668a624820594da580ab97ebe02afc",
+  "actual_final_delivered_zip_tested": true,
+  "extracted_directory": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/c031-detlis-final-delivered-zip-20261102T1058Z",
+  "archive_file_count": 40,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-I",
+        "manuscript/build.py"
+      ],
+      "exit_code": 0,
+      "output": "Clean build passed: manuscript/main.pdf; full log in manuscript/main.log.\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "manuscript/reproduce.py"
+      ],
+      "exit_code": 0,
+      "output": "{\"status\": \"passed\", \"counts\": {\"local_fixtures\": 24, \"source_paths\": 816, \"trace_memberships\": 10495, \"candidate_scores\": 2816, \"growth_steps\": 176, \"table_states\": 16830, \"negative_deltas\": 187, \"certified\": 19, \"uncertified\": 3, \"merge_nodes\": 14, \"invariant_checks\": 10542, \"all_dummy\": 2}, \"parameter_cases\": 7}\n{\"status\": \"passed\", \"counts\": {\"inputs\": 1236, \"subpaths\": 35318, \"localized_traces\": 21850, \"short_query_thresholds\": 330120, \"stitching_pivots\": 88758, \"rounded_table_entries\": 2160, \"aggregate_scores\": 512, \"compression_steps\": 64, \"certified_compressions\": 8}}\nBoth diagnostic suites reproduced their packaged scientific counts.\n"
+    }
+  ],
+  "all_commands_passed": true,
+  "compiled_pdf_byte_identical": true,
+  "compiled_pdf_text_identical": true,
+  "frozen_publication_sources_unchanged": true,
+  "outside_workspace_build_dependencies": [],
+  "all_page_renders_match": true,
+  "page_renders": [
+    {
+      "page": 1,
+      "sha256": "b7652b71ebed4d12cdab431822d56d79a7047f50e0d72324241de2825f15b367",
+      "matches_root_inspected_render": true
+    },
+    {
+      "page": 2,
+      "sha256": "0531f36e35e630b02baad2565916250049dfc1b338fd4ca53bbd5f532d7c925e",
+      "matches_root_inspected_render": true
+    },
+    {
+      "page": 3,
+      "sha256": "ce974173c4a091e9cbdea2966cddd22bc4e232e83762616fdcee91a60a153fa0",
+      "matches_root_inspected_render": true
+    },
+    {
+      "page": 4,
+      "sha256": "9119c01d8916fec9da0951f5629384224c407b97c8c6227155d45394389dd1b4",
+      "matches_root_inspected_render": true
+    },
+    {
+      "page": 5,
+      "sha256": "831a1efc744824d7540ce06c519768dcc47543d48746153abb639222ee09ae66",
+      "matches_root_inspected_render": true
+    },
+    {
+      "page": 6,
+      "sha256": "5cfafe5a6c2b17607ed2a323c1b9bf43715b27f4215b11880c98b64d523a50cf",
+      "matches_root_inspected_render": true
+    },
+    {
+      "page": 7,
+      "sha256": "8ce1f65a855c363b88cb7776d019f1f03a34e9ab113a631dffdba6c84b1bbbd1",
+      "matches_root_inspected_render": true
+    },
+    {
+      "page": 8,
+      "sha256": "907e20a77e54424e22174af6c610d66c3e3d795f44ba6f4ed4fcd93a2dfe608b",
+      "matches_root_inspected_render": true
+    },
+    {
+      "page": 9,
+      "sha256": "98fd0a5ed0e51517d6385044f763e5836c1c2330fe5fbfa908cc182567133d66",
+      "matches_root_inspected_render": true
+    }
+  ],
+  "diagnostics_scope": "Finite diagnostic programs, not a production implementation or proof of uniform bounds."
+}

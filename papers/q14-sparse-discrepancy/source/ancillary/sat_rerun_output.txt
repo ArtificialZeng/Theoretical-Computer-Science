@@ -1,0 +1,19 @@
+RESULT cycle [3, 3] 3 NOCOVER 0.0s
+RESULT cycle [4, 3] 3 NOCOVER 0.2s
+RESULT cycle [5, 3] 3 NOCOVER 3.5s
+RESULT cycle [3, 4] 3 NOCOVER 0.2s
+RESULT cycle [4, 4] 3 NOCOVER 6.6s
+RESULT complete [5, 1] 3 NOCOVER 0.0s
+RESULT complete [4, 2] 3 NOCOVER 0.2s
+RESULT complete [6, 1] 3 NOCOVER 19.8s
+RESULT wheel [5, 1, 2] 3 NOCOVER 0.7s
+n=2 m=10 D=3: NOCOVER (0.2s)
+n=2 m=11 D=3: NOCOVER (1.2s)
+n=2 m=12 D=3: NOCOVER (2.2s)
+n=3 m=3 D=3: NOCOVER (0.0s)
+n=3 m=4 D=3: NOCOVER (0.0s)
+n=3 m=5 D=3: NOCOVER (0.0s)
+n=3 m=6 D=3: NOCOVER (0.1s)
+n=3 m=7 D=3: NOCOVER (19.4s)
+k2n [4, 2] m= 16 degs [8, 8, 4, 4, 4, 4]
+RESULT k2n [4, 2] 3 NOCOVER 2.1s

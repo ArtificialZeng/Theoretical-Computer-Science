@@ -1,0 +1,4 @@
+seed 4 stats {'gen': 40, 'pa': 40, 'inv': 40, 'a_true': 40, 'a_false': 0, 'abelian': 27, 'nonabelian': 13, 'comp': 79, 'singular_letters': 32, 'nonmonomial_blocks': 31}
+minimal dimensions: min 1 max 6 hist {1: 5, 2: 5, 3: 7, 4: 5, 5: 8, 6: 10}
+control (random invertible 3x3 integer pairs): (a) fails in 20 of 20
+DONE: all assertions passed; (a) held for every invertible PA example

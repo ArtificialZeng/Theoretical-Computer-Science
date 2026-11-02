@@ -1,0 +1,37 @@
+{
+  "job_id": "c022-spe-memory-referee-af2ba8807d2f",
+  "snapshot_digest": "8167ae363386355fe869e8109b82155be5da309379f81a3f7216041bf9acf52f",
+  "checked_at_utc": "2026-11-01T19:18:02.154388+00:00",
+  "search_topics": [
+    "Reach SPE arena-independent memory",
+    "infinite-arena exact payoff compression",
+    "2026 developments",
+    "outcome-labelled weak-SPE uniformization",
+    "exponential constrained-SPE memory"
+  ],
+  "primary_sources_opened": [
+    "https://automata.exchange/25.26-memory-requirements-of-subgame-perfect-equilibria-in-reachability-games/",
+    "https://arxiv.org/abs/1806.05544",
+    "https://cris.maastrichtuniversity.nl/ws/files/72810748/flesch_2010_perfect_information_games_with_lower.pdf",
+    "https://www.sciencedirect.com/science/article/pii/S0890540126000234",
+    "https://arxiv.org/abs/2607.07151",
+    "https://arxiv.org/html/2607.07151v1",
+    "https://drops.dagstuhl.de/storage/00lipics/lipics-vol284-fsttcs2023/LIPIcs.FSTTCS.2023.1/LIPIcs.FSTTCS.2023.1.pdf",
+    "https://arxiv.org/pdf/1010.2420v2",
+    "https://drops.dagstuhl.de/storage/00lipics/lipics-vol348-concur2025/html/LIPIcs.CONCUR.2025.12/LIPIcs.CONCUR.2025.12.html",
+    "https://arxiv.org/html/2411.13296v1",
+    "https://arxiv.org/pdf/1612.01402",
+    "https://orbi.umons.ac.be/bitstream/20.500.12907/2750/1/ICArticleWSPEFinalVersion.pdf"
+  ],
+  "additional_nearest_antecedent": "Bruyere-Le Roux-Pauly-Raskin, I&C 276 (2021),104553; inspected author postprint Theorems 7 and 16, Corollary 23, and Theorem 7 proof.",
+  "access_limits": [
+    "DOI 10.1016/j.ic.2020.104594 refresh was inaccessible through web tool; its frozen primary full text was read.",
+    "KU Leuven-hosted publisher copy of I&C 2021,104553 timed out; the UMONS author postprint was accessible and inspected."
+  ],
+  "novelty_limit": "Bounded current primary-source comparison, not exhaustive priority certification.",
+  "final_checks": {
+    "all_frozen_hashes_unchanged": true,
+    "fresh_audit_schema_and_bindings_valid": true,
+    "check_math_passed": true
+  }
+}

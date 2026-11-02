@@ -1,0 +1,28 @@
+{
+  "job_id": "c034-grouptri-research-d92d3d43a90d",
+  "status": "passed",
+  "counts": {
+    "decompositions": 9784,
+    "few_exception_triangles": 95404,
+    "low_exception_triangles": 140,
+    "nonempty_high_pieces": 5013,
+    "all_materialized_pieces": 17467,
+    "exhaustive_binary_quotient_tests": 8192,
+    "kernel_instances_checked": 17467,
+    "kernel_triangle_checks": 1434118,
+    "empty_part_tests": 288,
+    "selected_structured_tests": 1632,
+    "full_recursive_tests": 40,
+    "prime_brute_leaves": 56,
+    "exact_exponent_checks": 255
+  },
+  "exhaustive_scope": "All 4096 F_2 assignments to the 12 edges of side-2 complete tripartite graphs, at s=1 and s=2; selected deterministic Z_4 kernel digits, not all Z_4 labels.",
+  "selected_scope": "Listed moduli 4,6,8,9,10,12,16,18,24,25,27,36; six listed unequal/empty/padded size triples through side 8; dimensions 1/2; seeded random, dense quotient, exact gauge, dense negative kernel patterns; s=1/2/3 as listed.",
+  "recursive_scope": "40 complete recursive semantic runs, dimension 2, side 3, moduli 8,12,16,18,24,27,32,36,48,72, four modes each.",
+  "seed": 340034,
+  "limits": "The capped detector and prime solver are brute force. These are exact finite semantic/cost-ledger checks, not fast implementation benchmarks, exhaustive arbitrary-group tests, or independent proof audits.",
+  "delta_4": "1/144000000",
+  "delta_8": "1/20736000000000",
+  "source_sha256": "5e49e9583e24af889c0aa15a1b6dcadb797e1d85f3f467028441af101a677b0e",
+  "script_sha256": "d72f1f8b4e573b993df5968e3d711ef1655df49c8206c63de2b11c8582e3e504"
+}

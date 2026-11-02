@@ -1,0 +1,22 @@
+{
+  "acmart.cls": {
+    "official_exists": true,
+    "byte_identical": true
+  },
+  "README": {
+    "official_exists": true,
+    "byte_identical": true
+  },
+  "ACM-Reference-Format.bst": {
+    "official_exists": true,
+    "byte_identical": true
+  },
+  "acmart.ins": {
+    "official_exists": true,
+    "byte_identical": true
+  },
+  "acmart.dtx": {
+    "official_exists": true,
+    "byte_identical": true
+  }
+}

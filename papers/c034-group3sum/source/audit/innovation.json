@@ -1,0 +1,37 @@
+{
+  "job_id": "c034-group3sum-referee-f77368142a77",
+  "snapshot_digest": "15a73043f23436b1592a376f95f678e39919b724da29d1fc7773757f6a82f52a",
+  "verdict": "accept",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    {
+      "reference": "Ruhollah Majdoddin, arXiv:2610.17420v1 (2026), Theorem 19.17 and Corollary 19.25; Model and Open Problem 19.26",
+      "verified_result": "The existing deterministic algorithm covers every compact abelian group of exponent dividing p^2 for each fixed prime p, uniformly in c. The stated open question concerns all bounded exponents. The explicit p^2 embedding already includes Z4^d times F2^d.",
+      "primary_url": "https://arxiv.org/abs/2610.17420v1"
+    },
+    {
+      "reference": "Majdoddin, arXiv:2610.17420v1, Lemmas 19.6 and 19.7",
+      "verified_result": "The inherited support product works for homomorphisms pi,K whenever the explicitly enumerated middle subgroup contains K(ker pi). Its probe enumeration and failed-scan bounds do not alone choose suitable homomorphisms for every exponent.",
+      "primary_url": "https://arxiv.org/abs/2610.17420v1"
+    },
+    {
+      "reference": "Josh Alman and Virginia Vassilevska Williams, arXiv:2610.06783v1 (2026), Corollary 26, Section 4.1",
+      "verified_result": "For N>=D^18 and polynomially bounded integer matrix entries, preprocessing costs O(N^2/D^0.063), and each entry query costs O(D^0.437). At most N^2/sqrt(D) prescribed entries fit the preprocessing bound.",
+      "primary_url": "https://arxiv.org/html/2610.06783v1"
+    },
+    {
+      "reference": "Majdoddin, arXiv:2610.17420v1, Lemma 20.3(d), Lemma 20.4(a), Remark 20.6",
+      "verified_result": "Every fixed abelian-group-representable finite relation has a finite-group representation, and its coordinatewise problem reduces to 3SUM over a power of that fixed group. Thus the full group theorem makes every such relation truly subquadratic uniformly in c. This reduction and corollary mechanism are prior.",
+      "primary_url": "https://arxiv.org/abs/2610.17420v1"
+    },
+    {
+      "reference": "Timothy M. Chan, Reina Itakura, Zhiyuan Ma and Yuancheng Yu, arXiv:2610.42012v1 (30 October 2026), Theorem 2.3 and Sections 2.2/3",
+      "verified_result": "The recent integer-3SUM and odd-k-SUM algorithms use random-prime scalar hashing and carry-free encodings. They do not state the all-bounded-exponent group theorem and provide no immediate torsion-compatible replacement for its missing balancing argument.",
+      "primary_url": "https://arxiv.org/html/2610.42012"
+    }
+  ],
+  "substantive_delta": "A bounded-time randomized witness algorithm now covers every fixed exponent bound M, including arbitrary higher prime powers and mixed-prime products, with delta_M=min(1/18,1/(8 ceil(log_2 M)))*(63/1000)/2 independent of the polynomial order exponent c. Simultaneous profiles based on ORIGINAL coset sizes and a least-row-count/extremal-divisor certificate control both deterministic label branching and expected survivors across every nonzero order layer.",
+  "why_nonroutine": "The prior support-product lemma requires a small middle subgroup, few classes/probes and few false positives simultaneously; applying it with a fixed hash does not achieve those conditions in non-elementary torsion groups. The frozen proof supplies a new joint selection invariant rather than assuming recursive heavy-case bounds or importing integer hashes. The certificate upper-bounds e^ell using one tight divisor while lower-bounding d^ell for all divisors, and original-coset profiles avoid fragmentation errors. This yields the full missing class and is not a routine corollary of the cited p^2 theorem or matrix primitive.",
+  "significance": "The result provides a uniform algorithmic primitive for the full bounded-exponent abelian matching class, with honest witness recovery and per-random-path cost bounds. Through the verified prior finite-representation reduction it also closes the sufficient tractability direction for every fixed group-representable finite coordinate relation. That is substantive structural and algorithmic value beyond a special case, although competitive STOC depth and broader impact remain uncertain and are assessed separately as working_paper.",
+  "remaining_gaps": []
+}

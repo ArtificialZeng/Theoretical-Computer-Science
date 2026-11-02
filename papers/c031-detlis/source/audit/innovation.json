@@ -1,0 +1,19 @@
+{
+  "job_id": "c031-detlis-referee-f280f716946c",
+  "snapshot_digest": "76aff8cb1dceada574829e417470dcca336a544f9c08e579f9c49cff43896135",
+  "verdict": "accept",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    "Karthik C. S. and Saladi Rahul, Range Longest Increasing Subsequence and its Relatives, arXiv:2404.04795v2 (2025-12-01), Theorems 1 and 5, Section 3, Section 7; ITCS 2026 article 87, DOI 10.4230/LIPIcs.ITCS.2026.87: randomized square-root-overhead 2D reporting, deterministic truncated routine, and explicit deterministic-subquadratic question.",
+    "Har-Peled and Sharir, Relative (p,epsilon)-Approximations in Geometry, arXiv:0909.0717v2, Theorem 2.11 and Lemma 2.15: established inverse-p sample size and deterministic relative approximation construction, including the dimension-two n*p^(-2) polynomial scale.",
+    "Bagchi, Chaudhary, Eppstein and Goodrich, Deterministic Sampling and Range Counting in Geometric Data Streams, SCG 2004 frozen version, Section 2, Lemma 2.2, Observations 2.3-2.4; arXiv:cs/0307027 and later TALG DOI 10.1145/1240233.1240239: subset-oracle deterministic sampling and merge/reduce.",
+    "Tao, Sheng and Pei, On k-skip Shortest Paths, SIGMOD 2011, Section 4.1, Theorem 1 and Lemmas 1-2; Section 4.2: consistent-path small covers and randomized bounded-degree construction.",
+    "Alon, Chechik and Cohen, Deterministic Combinatorial Replacement Paths and Distance Sensitivity Oracles, ICALP 2019, Lemma 2 and Section 1.3, DOI 10.4230/LIPIcs.ICALP.2019.12: standard explicit-family path hitting with critical-family construction charged separately.",
+    "Gawrychowski, Gorbachev and Kociumaka, Core-Sparse Monge Matrix Multiplication, ESA 2025, Theorem 1.3 and Section 5, DOI 10.4230/LIPIcs.ESA.2025.74: near-linear preprocessing and output-linear index-interval LIS reporting; Korogi, arXiv:2610.20983v1, Theorem 1.1: weighted index-interval reporting.",
+    "Ben-Eliezer and Even, Range Queries for Permutation Pattern Matching, arXiv:2610.25467v1, Claim 6.7 and Appendix A.2: monotone-pattern detection has 2^(O(h^2))*O(n log^(3h)n) preprocessing and (O(log n))^(3h^2) query time; this is not the unrestricted reporting bound."
+  ],
+  "substantive_delta": "A deterministic full-model uncolored 2D Range-LIS reporting algorithm with O((n+m)n^(2/3)log^30(n+m+2))+O(K) operations. The specialized new algorithmic step computes canonical-path traces against all original vertices of disjoint parent index intervals and charges O(|I|k log^2 n+k^3 polylog n) at each merge. Equal-original-size relative merging gives a long-path hitting set of O(n^(1/3)log^3 n) points in O(n^(5/3)polylog n) time, which integrates with the established short/stitching routines.",
+  "why_nonroutine": "A path on the selected vertices alone need not equal the selected trace of the actual original canonical path. Existing generic sampling statements supply neither that original-background oracle nor its charged cost. The proof constructs source trees on full original intervals, compresses them exactly, evaluates the conditional scores with bounded-word arithmetic, and sums background work using interval disjointness. These steps close a genuine implicit-input interface gap rather than assuming a free subset oracle. Generic sample rates, conditional expectation and descendant sums are prior art and are not separately credited as innovations.",
+  "significance": "The algorithm gives a fixed polynomial saving over quadratic overhead for every input of the precise 2D reporting model, answering the deterministic existence question explicitly posed in the current Range-LIS source. It covers arbitrary real ties, all optimum lengths and overlaps with additive output time. This is a substantive specialized algorithmic resolution despite being slower than the randomized benchmark; STOC-level breadth and technical depth are assessed conservatively and separately.",
+  "remaining_gaps": []
+}

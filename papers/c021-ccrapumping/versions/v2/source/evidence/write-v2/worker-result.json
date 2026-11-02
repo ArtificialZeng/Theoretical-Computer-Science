@@ -1,0 +1,23 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "disproved",
+  "summary": "Prepared, clean-built, visually inspected and froze one 11-page ACM manuscript covering the accepted full resolution and unipotent-sector characterization; ready for separate release review.",
+  "next_test": "Run fresh citation/build/visual release review on the frozen manuscript and PDF before the release gate.",
+  "evidence": [
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/build/main.pdf",
+    "publication.json",
+    "audit/manuscript-snapshot.json",
+    "evidence/write-v2/freeze-manuscript.json",
+    "evidence/write-v2/math-gate-final.json",
+    "evidence/write-v2/integrity-layout.json",
+    "evidence/write-v2/scope-map.md",
+    "evidence/write-v2/citation-map.md",
+    "evidence/write-v2/stoc-format.md",
+    "evidence/write-v2/operations.md",
+    "literature/user_bibliography_check.md",
+    "checkpoint.md"
+  ]
+}

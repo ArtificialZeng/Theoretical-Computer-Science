@@ -1,0 +1,16 @@
+{
+  "resolution_only": true,
+  "full_original_scope_required": true,
+  "substantive_innovation_required": true,
+  "sole_author": "Zijian Zeng",
+  "max_total_pdf_pages": 12,
+  "external_submission_authorized": false,
+  "stoc_quality_standard": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/research/continuous/STOC_QUALITY_STANDARD.md",
+  "fresh_stoc_competitiveness_assessment_required": true,
+  "readiness_labels": [
+    "working_paper",
+    "submission_ready"
+  ],
+  "default_readiness_label": "working_paper",
+  "submission_ready_requires_all_quality_criteria_strong": true
+}

@@ -1,0 +1,37 @@
+{
+  "job_id": "c021-ccrapumping-release-e862e3a691c8",
+  "frozen_evidence_unchanged": true,
+  "manuscript_sources_unchanged": true,
+  "source_sha256": "688e017d0cb9e92733e81d94a4b79b563f2c44592795597818c63e616df13c0c",
+  "snapshot_digest": "c56f3440ebba4e41358a93f526e776e26091d3e07c234d06ecd41eb565a274b0",
+  "manuscript_digest": "89cdee1cc05804ee0c05f8fa38374b76576021cce0f05ea93b9a7cdc0edd9fc2",
+  "pdf_digest": "a995aec21cc9daffd8f604e82c00be5cd08162aeafbc36af0feb17052d4076c1",
+  "cited_keys": [
+    "BLR24",
+    "C25",
+    "C26",
+    "MPS26",
+    "MPSfull",
+    "MR19",
+    "PS24"
+  ],
+  "database_keys": [
+    "BLR24",
+    "C25",
+    "C26",
+    "MPS26",
+    "MPSfull",
+    "MR19",
+    "PS24"
+  ],
+  "resolved_aux_keys": [
+    "BLR24",
+    "C25",
+    "C26",
+    "MPS26",
+    "MPSfull",
+    "MR19",
+    "PS24"
+  ],
+  "undefined_citations": false
+}

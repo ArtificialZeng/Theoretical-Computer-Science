@@ -1,0 +1,11 @@
+{
+  "job_id": "c022-spe-memory-write-ec7adf27a885",
+  "project_inputs_observed": [
+    "manuscript/acmart.cls",
+    "manuscript/build/main.aux",
+    "manuscript/build/main.bbl",
+    "manuscript/build/main.out",
+    "manuscript/main.tex"
+  ],
+  "note": "Auxiliary .aux/.out are regenerable build state; main.bbl is frozen along with its BibTeX inputs. Installed TeX Live packages are system dependencies, not project source files."
+}

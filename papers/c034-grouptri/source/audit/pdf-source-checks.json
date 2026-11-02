@@ -1,0 +1,16 @@
+{
+  "job_id": "c034-grouptri-referee-e6a7f319b8fe",
+  "input": "intake/primary/2610.17420v1.pdf",
+  "sha256": "a536921aea8fe16830262db76c624593c5815094ae495ef5afce8c761d1c3d2e",
+  "fresh_pdf_extraction": true,
+  "theorem_markers": {
+    "Definition 21.1": true,
+    "Theorem 21.3": true,
+    "Corollary 21.7": true,
+    "Proposition 21.9": true,
+    "Proposition 21.10": true,
+    "Open problem 21.12": true,
+    "Corollary 9.1": true
+  },
+  "limitation": "Marker checks confirm extraction and locations only; substantive statements were read and compared in the referee report."
+}

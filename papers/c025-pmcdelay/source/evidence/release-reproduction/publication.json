@@ -1,0 +1,35 @@
+{
+  "source_files": [
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/acmart.dtx",
+    "manuscript/acmart.ins",
+    "manuscript/alpha.bst",
+    "manuscript/build.py",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/template-provenance.json"
+  ],
+  "pdf": "manuscript/main.pdf",
+  "build_command": "python3 manuscript/build.py",
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "readiness_label": "working_paper",
+  "quality_assessment": {
+    "path": "audit/stoc-assessment.json",
+    "sha256": "f5e36874844c7e5b8b5338873deeb77873523fee3f1c440aec2e06ac799b81f4",
+    "job_id": "c025-pmcdelay-referee-6970e98c3a2b",
+    "snapshot_digest": "9e18afcb85b19f266e11aab420e78596f90e785921128737257fbdd42a21cfbc",
+    "verdict": "working_paper"
+  },
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "max_total_pdf_pages": 12,
+  "external_submission_authorized": false
+}

@@ -1,0 +1,16 @@
+{
+  "outcome": "continue",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Established support-sensitive integer normalization and fixed-flow paired-mass retention, plus a conditional capacity-1 composition. Full nonuniform rounding remains unproved. No candidate or manuscript; source unchanged.",
+  "next_test": "Prove or falsify interface NR by reconstructing CKS2013 Lemmas 3.11–3.14 for nonuniform owned masses, shared cluster vertices and bridges, with constant cardinality retention and polynomial rational arithmetic; then compose the algorithm and assess whether its delta is substantive rather than routine.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "evidence/research-1-interface.md",
+    "evidence/research-1-check.py",
+    "evidence/research-1-check-results.json",
+    "evidence/research-1-run.json"
+  ]
+}

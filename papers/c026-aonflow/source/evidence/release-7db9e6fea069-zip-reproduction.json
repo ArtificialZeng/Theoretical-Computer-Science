@@ -1,0 +1,44 @@
+{
+  "job_id": "c026-aonflow-release-7db9e6fea069",
+  "archive": "evidence/release-7db9e6fea069-working_paper-source.zip",
+  "archive_digest": "ace17ef4582b2810678d9864e6d38153dde46745657701cc90651482f6729908",
+  "files_checked": 20,
+  "clean_extracted_build": true,
+  "full_extracted_pdf_text_identical": true,
+  "bibliography_bytes_identical": true,
+  "standalone_finite_diagnostics_passed": true,
+  "pdf_bytes_identical": false,
+  "limitations": "PDF creation dates and trailer identifiers may differ. Reproduction checks full extracted page text, regenerated bibliography and page raster pixels separately; finite diagnostics do not certify the theorem.",
+  "all_seven_page_rasters_identical": true,
+  "raster_dpi": 105,
+  "page_comparisons": [
+    {
+      "page": 1,
+      "identical_render_png": true
+    },
+    {
+      "page": 2,
+      "identical_render_png": true
+    },
+    {
+      "page": 3,
+      "identical_render_png": true
+    },
+    {
+      "page": 4,
+      "identical_render_png": true
+    },
+    {
+      "page": 5,
+      "identical_render_png": true
+    },
+    {
+      "page": 6,
+      "identical_render_png": true
+    },
+    {
+      "page": 7,
+      "identical_render_png": true
+    }
+  ]
+}

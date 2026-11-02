@@ -1,0 +1,20 @@
+{
+  "job_id": "c022-spe-memory-write-31916ce50190",
+  "optional_diagnostic": "pdftotext -bbox",
+  "status": "failed",
+  "observed_error": "libc++abi: terminating due to uncaught exception of type std::out_of_range: basic_string",
+  "parser_followup": "Incomplete generated HTML could not be parsed; no geometric conclusion was drawn.",
+  "partial_output": "evidence/write-31916ce50190/pdf-text-boxes.html",
+  "successful_alternatives": [
+    "pdftotext -layout",
+    "pdfinfo",
+    "pdffonts",
+    "pdftoppm rendering and direct inspection of all eight pages"
+  ],
+  "optional_python_libraries_unavailable": [
+    "pypdf",
+    "pdfplumber",
+    "fitz"
+  ],
+  "mathematical_effect": "none; operational diagnostic failure only; original result, counters and frozen evidence preserved"
+}

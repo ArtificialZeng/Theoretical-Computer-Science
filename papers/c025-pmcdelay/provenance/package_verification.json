@@ -1,0 +1,37 @@
+{
+  "project": "c025-pmcdelay",
+  "actual_archive_sha256": "d8cdf77a3004b949f81c73e223ad3bce6c25594c60b035e3f4f788862cee6f9a",
+  "actual_pdf_sha256": "ff0b8c2710e0e8655e39aaaaeef6df945a006e772ebc9559845b12d5f145a80f",
+  "build_inputs_rehashed": 11,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c025-pmcdelay-kr308syc/c025-pmcdelay_source",
+  "pages": 9,
+  "text_matches": true,
+  "all_page_renders_match": true,
+  "finite_reproduction": [
+    {
+      "entry": "audit/referee_verify.py",
+      "summary": {
+        "job_id": "c025-pmcdelay-referee-6970e98c3a2b",
+        "snapshot_digest": "9e18afcb85b19f266e11aab420e78596f90e785921128737257fbdd42a21cfbc",
+        "at_utc": "2026-11-02T00:01:50.979484+00:00",
+        "status": "passed",
+        "statistics": {
+          "literal_graphs": 1100,
+          "literal_minimal_completions": 1341,
+          "connected_graphs": 772,
+          "complete_base_cases": 5,
+          "literal_separator_helpers": 1605,
+          "seed_closures": 3792,
+          "strong_preimages": 902,
+          "serialized_cases_checked": 29
+        },
+        "literal_outputs_digest": "4f16467e01cfb98531c8f30ea6fffc90f0ecc89b73eb0d22d3732b9d55126e78",
+        "elapsed_seconds": 0.555420916993171,
+        "scope": "All labelled simple graphs on 0..5 vertices: literal inclusion-minimal chordal completions versus fresh PMC criterion. Connected cases: literal helper gluing, outside witness/fiber, all-vertex lifts, seed closure, and strong endpoint-safe source-preimage witnesses. The frozen 29 serialized output sets are independently checked with the fresh global criterion.",
+        "limits": "Finite exact tests only; neither an asymptotic proof nor a priority certificate. Literal exponential oracles are confined to this verifier. No frozen file is changed."
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c025-pmcdelay-kr308syc/reproduction-0.stdout.log"
+    }
+  ],
+  "scope": "Actual delivered archive clean build/render/reproduction; not a new math or novelty verdict."
+}

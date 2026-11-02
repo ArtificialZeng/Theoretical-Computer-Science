@@ -1,0 +1,48 @@
+{
+  "job_id": "c034-grouptri-write-67970b989199",
+  "check_type": "writer_self_check_not_fresh_release_audit",
+  "mathematical_snapshot_digest": "05aa22d3dd75b43826bffb43bc7976a87898d16ab67f0597c8e4a686ca39b771",
+  "pdf": "output/pdf/bounded-exponent-exact-triangle_working_paper.pdf",
+  "pdf_sha256": "4fb95706bdfc5f4c34d47fff8cadd537c4878f4a686ec5fb0cdae7dc4993dcc1",
+  "total_pages": 8,
+  "page_limit": 12,
+  "page_size_points": [
+    612,
+    792
+  ],
+  "rendered_and_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "render_command": "pdftoppm -r 95 -png tmp/pdfs/main.pdf tmp/pdfs/page",
+  "observations": "All eight page PNGs inspected visually. No clipped text, overlapping equations, broken glyphs, or overflowing table observed. Title/author/contact, running heads, page numbers and references are legible. Title page is deliberately separate.",
+  "final_log_has_undefined_references": false,
+  "final_log_has_overfull_boxes": false,
+  "remaining_warning": "Official acmart expects an affiliation city. None was designated; no author campus was assumed.",
+  "official_class_unmodified": true,
+  "source_and_all_frozen_math_hashes_unchanged": true,
+  "readiness_label_retained": "working_paper",
+  "fresh_release_checks_pending": [
+    "citation review",
+    "clean-build review",
+    "every-page visual review",
+    "source-ZIP reproduction"
+  ],
+  "source_files": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/Makefile",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/verification/independent_verifier.py",
+    "manuscript/verification/recorded-checks.json"
+  ]
+}

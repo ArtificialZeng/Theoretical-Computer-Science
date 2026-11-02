@@ -1,0 +1,6 @@
+{
+  "python": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "implementation": "CPython",
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "command": "python3 artifact/validate.py"
+}

@@ -1,0 +1,15 @@
+{
+  "job_id": "c025-pmcdelay-release-dfedec0715d6",
+  "snapshot_digest": "9e18afcb85b19f266e11aab420e78596f90e785921128737257fbdd42a21cfbc",
+  "manuscript_digest": "8502854365556ca110be34d374a6e54b8133c7e747267dea571dd218f829c685",
+  "pdf_digest": "ff0b8c2710e0e8655e39aaaaeef6df945a006e772ebc9559845b12d5f145a80f",
+  "verdict": "accept",
+  "report": "audit/build.md",
+  "build_log": "evidence/release-reproduction/manuscript/main.log",
+  "build_log_digest": "d738c5a40d64fff0f117021fd06faa6ca2b62dc70463c8dd10ae47ce143f23f0",
+  "clean_build": true,
+  "zip_reproduction": "evidence/release-zip-reproduction.json",
+  "source_zip": "evidence/pmcdelay-working_paper-source.zip",
+  "source_zip_digest": "1bb498959f4871bf4b4d5999bc9b8cbb23710c1abe19cdf4f289253bc222d138",
+  "readiness_label": "working_paper"
+}

@@ -1,0 +1,107 @@
+{
+  "job_id": "c034-grouptri-research-e96d630c6fdd",
+  "role": "research",
+  "research_pass": 1,
+  "maximum_accumulated_passes": 3,
+  "dispatch_utc": "2026-11-02T15:35:28Z",
+  "entry_clock_utc": "2026-11-02T15:37:30Z",
+  "experiment_start_clock_utc": "2026-11-02T15:40:50Z",
+  "last_scientific_clock_utc": "2026-11-02T15:43:23Z",
+  "main_test_deadline_utc": "2026-11-02T15:52:27.999992Z",
+  "finalization_deadline_utc": "2026-11-02T15:55:27.999990Z",
+  "source_sha256": "5e49e9583e24af889c0aa15a1b6dcadb797e1d85f3f467028441af101a677b0e",
+  "outcome": "continue",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "new_evidence": [
+    {
+      "path": "evidence/capped-listing-proof.md",
+      "type": "proved-tool-conditional-on-stated-prior-backend",
+      "result": "Depth-first capped listing with legal per-edge-kind markers and cutoff b0 about n^(theta/6) returns exactly min(t_ab,ceil(n^(1-theta))+1) witnesses per pair, at charged cost O(n^(3-epsilon*theta/6) polylog n). The exponent saving is independent of c. This is a standard-tool reconstruction, not a novelty claim."
+    },
+    {
+      "path": "evidence/capped-listing-tests.json",
+      "type": "exact-finite-observation",
+      "result": "49,152 exhaustive bookkeeping tests, 9,000 selected held-out structured tests, and 2,520 exhaustive local marker tests passed; the oracle in this harness is brute force and does not test the fast backend."
+    }
+  ],
+  "proof_obligations_checked": [
+    "Counter saturation and duplicate prevention",
+    "Depth-first positive-cube/output charging",
+    "Completeness of every unsaturated pair",
+    "All complete-instance masks including padded vertices",
+    "Fixed dimension constant for all oracle calls above cutoff",
+    "Instance-construction, query, recursion, output and brute-leaf charges",
+    "Fixed-prime backend size threshold and small-n handling"
+  ],
+  "prior_work_checks": [
+    {
+      "url": "https://arxiv.org/abs/2610.17420",
+      "local_text": "intake/primary/2610.17420v1-pdf.txt",
+      "read": "Full Theorem 21.3 proof; Corollary 9.1(b) statement and its proof including the H instantiation; Definition 2.1; Section 19 model.",
+      "observation": "Actual stated deterministic elementary-group backend has saving 0.0055 independent of dimension constant; no fresh audit of every matrix dependency. Live record displays v1 only."
+    },
+    {
+      "url": "https://arxiv.org/abs/2303.14572",
+      "local_text": "intake/primary/2303.14572-primary.txt",
+      "read": "Theorem 5.1 and full proof, printed pp.18-19.",
+      "observation": "Cubic initial witness sorting cannot be charged as the fast update time. Compact pieces must be materialized before kernel calls, at their actual charged cost."
+    },
+    {
+      "url": "https://arxiv.org/abs/2608.19092",
+      "local_text": "intake/primary/2608.19092v1.txt",
+      "read": "Abstract, introduction/Section 2.3 context and query-model definitions; not a full audit of all reduction proofs.",
+      "observation": "Generic detection/all-edges/listing equivalences and exponent losses are established prior work; this reconstructed tool is not proposed as novel. Live record displays v1 only."
+    },
+    {
+      "url": "https://github.com/Swapnil-jain/threesum-derand",
+      "read": "Live README including model and Theorem 1-prime/folded residue statement.",
+      "observation": "The displayed theorem is about polynomially bounded integer weights. No bounded-exponent-group closure theorem found in this README; proofs/stacked.md fetch failed with cache miss. This failure is not mathematical evidence."
+    }
+  ],
+  "searches": {
+    "date": "2026-11-02",
+    "queries": [
+      "\"Exact Triangle\" \"abelian\" bounded exponent algorithm closure",
+      "\"group\" \"Exact Triangle\" \"21.12\"",
+      "\"triangle decomposition\" \"abelian\" \"group\"",
+      "\"Exact Triangle\" \"kernel\" quotient",
+      "\"Exact Triangle\" \"Z_4\" algorithm"
+    ],
+    "result": "No equivalent full closure theorem located in this bounded search. Many results concern triangulated categories and are irrelevant; no reliance on them or on secondary snippets. This is not exhaustive priority verification."
+  },
+  "preserved_failed_routes": [
+    {
+      "label": "proved-obstruction",
+      "scope": "Using CVX23 Theorem 5.1 stated update cost as fresh-input construction cost",
+      "evidence": "Its full proof explicitly performs cubic initial sorting. This rules out that citation shortcut only; it is not a lower bound on construction by other algorithms."
+    },
+    {
+      "label": "rejected-shortcut",
+      "scope": "Direct cubic brute force for zero-dimensional original labels on arbitrary masked graphs",
+      "evidence": "During proof checking this would not meet the claimed subcubic bound. Corrected the proof to use the same marker extension and detector for zero-dimensional labels."
+    },
+    {
+      "label": "unknown",
+      "scope": "Full original all-M quotient/kernel induction",
+      "evidence": "Not completed in this pass. Capped listing does not establish the decomposition identities, global construction cost, full recurrence or substantive independent innovation."
+    }
+  ],
+  "remaining_gaps": [
+    "Fully charged quotient decomposition and actual exceptional-triangle enumeration",
+    "Edgewise potential identities for every high-frequency piece",
+    "Sound kernel lifting, masks and materialization cost for every queried piece",
+    "Full all-M exponent induction independent of c, including uniform implementation and small n",
+    "Current equivalent-closure comparison and substantive novelty/value assessment"
+  ],
+  "next_test": "Reconstruct and adversarially verify the quotient decomposition and full kernel-lifting induction from CVX23 Theorem 5.1, charging O(s^3 polylog n) fully materialized pieces and all exception/frequency-table work; derive a positive delta_M independent of c for every fixed M or identify a precise failed obligation.",
+  "publication": "No claim.json, manuscript, PDF, mathematical acceptance, STOC label or external action. Resolution-only policy preserved.",
+  "scheduling": "Runner-owned state.json read with research_passes=1; not edited. No counters or usage entries reset. No agents, other Codex processes or background workers spawned.",
+  "closing_record_clock_utc": "2026-11-02T15:44:35Z",
+  "validation": {
+    "source_unchanged": true,
+    "all_final_evidence_paths_exist": true,
+    "worker_result_schema": "Required exact keys, types and used enum values checked directly; jsonschema package unavailable.",
+    "checkpoint_words": 508
+  }
+}

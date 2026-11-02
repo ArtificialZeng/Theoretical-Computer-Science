@@ -1,0 +1,31 @@
+{
+  "job_id": "c025-pmcdelay-write-7714292f197a",
+  "review_type": "same_context_write_visual_check",
+  "pdf": "manuscript/main.pdf",
+  "pdf_digest": "ff0b8c2710e0e8655e39aaaaeef6df945a006e772ebc9559845b12d5f145a80f",
+  "renderer": "pdftoppm -r 95 -png manuscript/main.pdf tmp/pdfs/final-page",
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "images": [
+    "tmp/pdfs/final-page-1.png",
+    "tmp/pdfs/final-page-2.png",
+    "tmp/pdfs/final-page-3.png",
+    "tmp/pdfs/final-page-4.png",
+    "tmp/pdfs/final-page-5.png",
+    "tmp/pdfs/final-page-6.png",
+    "tmp/pdfs/final-page-7.png",
+    "tmp/pdfs/final-page-8.png",
+    "tmp/pdfs/final-page-9.png"
+  ],
+  "findings": "Every final page viewed. No visible clipping, overlap, missing glyphs or broken mathematical displays. References start together on page 9 and all entries fit with the final AI methodology statement. Title-page whitespace is deliberate.",
+  "remaining_release_review": true
+}

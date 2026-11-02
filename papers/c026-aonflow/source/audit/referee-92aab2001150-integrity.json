@@ -1,0 +1,22 @@
+{
+  "job_id": "c026-aonflow-referee-92aab2001150",
+  "snapshot_digest": "573d5e72b132c0772447265073b14686ec1c85b65a6c5a6769030620d3e0eadd",
+  "digest_matches": true,
+  "file_hashes_match": {
+    "claim.json": true,
+    "evidence/research-2-check-results.json": true,
+    "evidence/research-2-check.py": true,
+    "evidence/research-2-literature.md": true,
+    "evidence/research-2-uniform-copy-resolution.md": true,
+    "intake/primary/2602.15015-expanders.pdf": true,
+    "intake/primary/2602.15015-expanders.txt": true,
+    "intake/primary/CKS2005-welllinked.pdf": true,
+    "intake/primary/CKS2005-welllinked.txt": true,
+    "intake/primary/CKS2013-AON.pdf": true,
+    "intake/primary/CKS2013-AON.txt": true,
+    "intake/source-inputs.json": true,
+    "problem.md": true,
+    "source.md": true
+  },
+  "all_match": true
+}

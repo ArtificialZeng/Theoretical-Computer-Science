@@ -1,0 +1,92 @@
+{
+  "job_id": "c034-grouptri-release-98d1e823492f",
+  "mathematical_snapshot_unchanged": true,
+  "source_md_digest": "5e49e9583e24af889c0aa15a1b6dcadb797e1d85f3f467028441af101a677b0e",
+  "source_zip": "output/source/bounded-exponent-exact-triangle_working_paper.zip",
+  "source_zip_digest": "4b815498ca6e140176c98c300ecdeeadd69bdcb3b6e20e86d1c8c6755c7b64cf",
+  "all_nine_zip_inputs_byte_equal": true,
+  "reproduction_build_success": true,
+  "reproduced_page_count": 8,
+  "text_exactly_equal": true,
+  "bbl_exactly_equal": true,
+  "local_compiler_inputs": [
+    "manuscript/acmart.cls",
+    "manuscript/main.tex",
+    "tmp/release-build/main.bbl"
+  ],
+  "publication_source_files": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/Makefile",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/verification/independent_verifier.py",
+    "manuscript/verification/recorded-checks.json"
+  ],
+  "reproduction_note": "Compiled the ZIP after extracting only its nine entries to an isolated project directory; no network or unlisted local manuscript input. PDF timestamps/IDs are not required to reproduce byte-for-byte; semantic text, bibliography, page count and rendering are checked.",
+  "readiness_label": "working_paper",
+  "all_eight_renderings_identical": true,
+  "rendered_pages": [
+    {
+      "page": 1,
+      "image": "tmp/release-build/review-page-1.png",
+      "sha256": "a0f817e48c9170e97d442b8e303086cd81262ebee0e04d796c26b6a8a660e61a",
+      "reproduced_image": "tmp/release-reproduction/review-page-1.png",
+      "identical": true
+    },
+    {
+      "page": 2,
+      "image": "tmp/release-build/review-page-2.png",
+      "sha256": "e272c4bd6520fd974a179d60d451bfd1c40450e1a89b2223c66a4bc4fa8e6ffe",
+      "reproduced_image": "tmp/release-reproduction/review-page-2.png",
+      "identical": true
+    },
+    {
+      "page": 3,
+      "image": "tmp/release-build/review-page-3.png",
+      "sha256": "9f8830ab967550bffe823ee7c75a825dcb574ecec6d94ad8f3e0a9d6df8d64a3",
+      "reproduced_image": "tmp/release-reproduction/review-page-3.png",
+      "identical": true
+    },
+    {
+      "page": 4,
+      "image": "tmp/release-build/review-page-4.png",
+      "sha256": "9874207ffe5d7468939591bd426cd353ea3ac7be70dd793a04f3cbfeb47ce0cb",
+      "reproduced_image": "tmp/release-reproduction/review-page-4.png",
+      "identical": true
+    },
+    {
+      "page": 5,
+      "image": "tmp/release-build/review-page-5.png",
+      "sha256": "cfd6bde89a6721e5b57676ab367021b46014342ec90720d95583a7a07f8b6498",
+      "reproduced_image": "tmp/release-reproduction/review-page-5.png",
+      "identical": true
+    },
+    {
+      "page": 6,
+      "image": "tmp/release-build/review-page-6.png",
+      "sha256": "fe50bf7b083736f73f6ecff2a8a17ff0b407061c9d821789ef1ab661c33d6f72",
+      "reproduced_image": "tmp/release-reproduction/review-page-6.png",
+      "identical": true
+    },
+    {
+      "page": 7,
+      "image": "tmp/release-build/review-page-7.png",
+      "sha256": "00a5c69f65bb47ad3f4e9b92fa4f766b97263e57b64db979bb2befb1d846a075",
+      "reproduced_image": "tmp/release-reproduction/review-page-7.png",
+      "identical": true
+    },
+    {
+      "page": 8,
+      "image": "tmp/release-build/review-page-8.png",
+      "sha256": "f6c904558a3046a76e184b11e44afb15ee621e658bb9991ef515f29f26666e54",
+      "reproduced_image": "tmp/release-reproduction/review-page-8.png",
+      "identical": true
+    }
+  ],
+  "snapshot_digest": "05aa22d3dd75b43826bffb43bc7976a87898d16ab67f0597c8e4a686ca39b771",
+  "pdf_digest": "e9b3d5055ad93f76865143de8acab7b3c4dc6c1f3cd1fe3b20482eb99d68cfa4",
+  "manuscript_digest": "a40f8840ae0d14f65c4af83e804cb282ac08f663f3e89dfedb04cd0efadea7ba"
+}

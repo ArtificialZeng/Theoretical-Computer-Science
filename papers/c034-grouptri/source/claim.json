@@ -1,0 +1,24 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "For every fixed integer M>=2 there is a deterministic uniform word-RAM algorithm which, for every fixed c>0 and every n, decides Exact Triangle on complete tripartite graphs with at most n vertices per part and compact product-of-cyclic labels in any finite abelian group of exponent dividing M and order at most n^c, in O_{M,c}(n^(3-delta_M) polylog(n+2)) charged operations. The saving is independent of c. One valid conservative value is delta_M=(1/1000)*(1/144000)^(Omega(M)-1), where Omega counts prime factors with multiplicity. The argument uses the stated elementary-group backend of Majdoddin arXiv:2610.17420v1, Theorem 21.3 and Corollary 21.7(a), instantiated unconditionally via Corollary 9.1(b), and proves the quotient/kernel lifting, masks, construction costs, all-M induction and edge cases in the attached dossier. This is a proposed full proof for fresh review, not an accepted result.",
+  "contribution": "A fully charged quotient/kernel extension step turns polynomially many quotient-zero frequency pieces into explicit gauge-reduced complete kernel instances. Legal capped listing replaces the cubic fresh-input witness preprocessing of CVX23 Theorem 5.1; vertex potentials cancel nonhomomorphic lift carries; three edge-kind markers guard missing edges. Finite induction resolves the full bounded-exponent question rather than a restricted p^2 case. The prior decomposition and generic listing tools are attributed as known. Fresh review must independently decide correctness, current novelty, substantive nonroutine value and theoretical significance; no acceptance or STOC readiness is asserted.",
+  "proposer_job_id": "c034-grouptri-research-d92d3d43a90d",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "evidence/capped-listing-proof.md",
+    "evidence/test_capped_listing.py",
+    "evidence/capped-listing-tests.json",
+    "evidence/quotient-kernel-proof.md",
+    "evidence/test_quotient_kernel.py",
+    "evidence/quotient-kernel-tests.json",
+    "evidence/quotient-kernel-literature.md",
+    "intake/primary/2610.17420v1.pdf",
+    "intake/primary/2610.17420v1-pdf.txt",
+    "intake/primary/2303.14572-primary.pdf",
+    "intake/primary/2303.14572-primary.txt",
+    "intake/primary/2608.19092v1.pdf",
+    "intake/primary/2608.19092v1.txt"
+  ]
+}

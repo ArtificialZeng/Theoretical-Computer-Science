@@ -1,0 +1,116 @@
+{
+  "project": "c029-vftfast",
+  "actual_archive_sha256": "5efb7b6502e0e74396ea94a1428eb16c1d43caffa2c6be55e145ef93caae3461",
+  "actual_pdf_sha256": "8f61902bb7427aec09254cd8ac7566c87a76748f4dc9eb4d9bbed9828af7a7a8",
+  "build_inputs_rehashed": 7,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c029-vftfast-h3ag4pj0/c029-vftfast_source",
+  "pages": 7,
+  "text_matches": true,
+  "all_page_renders_match": true,
+  "finite_reproduction": [
+    {
+      "entry": "evidence/research3_full_checks.py",
+      "summary": {
+        "job_id": "c029-vftfast-research-9df2f29ab673",
+        "field_prime": 101,
+        "coverage": [
+          {
+            "n": 2,
+            "graph_masks": 2,
+            "all_labeled_graphs": true
+          },
+          {
+            "n": 3,
+            "graph_masks": 8,
+            "all_labeled_graphs": true
+          },
+          {
+            "n": 4,
+            "graph_masks": 64,
+            "all_labeled_graphs": true
+          },
+          {
+            "n": 5,
+            "graph_masks": 10,
+            "all_labeled_graphs": false
+          },
+          {
+            "n": 6,
+            "graph_masks": 10,
+            "all_labeled_graphs": false
+          }
+        ],
+        "small_branch_cases": 3160,
+        "largest_base_n": 6,
+        "largest_augmented_n": 18,
+        "max_output_edges_observed": 15,
+        "f_range": "0..min(2,n-2)",
+        "d_range": "1..min(3,n-1)",
+        "radii": "d, d+1, 2d+1, 48*d*d (deduplicated)",
+        "counts": {
+          "d_to_r_runs": 6248,
+          "insertions": 23909,
+          "rejections": 43091,
+          "rejected_exact_fault_tests": 809892,
+          "insertion_witness_checks": 23909,
+          "distance_checks": 560240,
+          "fault_sets": 93952,
+          "mixed_runs": 3160,
+          "mixed_distance_checks": 57856,
+          "dr_runs": 1848,
+          "dr_distance_checks": 33763
+        },
+        "failures": 0,
+        "elapsed_seconds": 10.39437,
+        "limitation": "Exact finite tests; no finite check establishes asymptotic size, uniform runtime, novelty, or an infinite theorem. Small radii are stress tests beyond the packing theorem hypotheses."
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c029-vftfast-h3ag4pj0/reproduction-0.stdout.log"
+    },
+    {
+      "entry": "evidence/research3_parameter_checks.py",
+      "summary": {
+        "job_id": "c029-vftfast-research-9df2f29ab673",
+        "k_range": [
+          4,
+          4096
+        ],
+        "eta_values": [
+          "1/4",
+          "1/8",
+          "1/10",
+          "1/100",
+          "2/9"
+        ],
+        "parameter_cases": 20465,
+        "inequalities_per_case": 7,
+        "failures": 0,
+        "scope": "Exact finite rational tests of critical-edge scale, q/N exponents, and source triangle-inequality constants; universal justification is in the proof record."
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c029-vftfast-h3ag4pj0/reproduction-1.stdout.log"
+    },
+    {
+      "entry": "evidence/reproduce_referee_finite.py",
+      "summary": {
+        "source_referee_job": "c029-vftfast-referee-95ddbe77df2f",
+        "run_role": "offline_reproduction_not_new_referee",
+        "exact_field_prime": 11,
+        "counts": {
+          "graphs": 84,
+          "representative_instances": 2012,
+          "avoidance_comparisons": 22712,
+          "scan_instances": 1636,
+          "insertion_witnesses": 3638,
+          "rejection_fault_tests": 5866,
+          "all_length_path_distance_tests": 15624,
+          "pendant_mixed_tests": 1078
+        },
+        "failures": 0,
+        "elapsed_seconds": 0.248,
+        "coverage": "All labeled n=2,3,4 graphs and ten explicit n=5 masks; d<=3,f<=2 subject to f+d+1<=n; radii d,d+1,2d+1; independent pendant projection checks. Augmented N<=10.",
+        "limitations": "Finite checks only; no literature-cache snapshot, new mathematical/novelty review or asymptotic sparsity verification."
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c029-vftfast-h3ag4pj0/reproduction-2.stdout.log"
+    }
+  ],
+  "scope": "Actual delivered archive clean build/render/reproduction; not a new math or novelty verdict."
+}

@@ -1,0 +1,15 @@
+{
+  "outcome": "continue",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Established the capped-listing tool using the stated elementary-group backend, with legal masks, a dimension cutoff, exact completeness and a charged saving independent of c. Exact finite tests passed. The full original remains unresolved; no publication candidate was created.",
+  "next_test": "Reconstruct and adversarially verify the quotient decomposition and full kernel-lifting induction from CVX23 Theorem 5.1, charging O(s^3 polylog n) fully materialized pieces and all exception/frequency-table work; derive a positive delta_M independent of c for every fixed M or identify a precise failed obligation.",
+  "evidence": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/capped-listing-proof.md",
+    "evidence/test_capped_listing.py",
+    "evidence/capped-listing-tests.json",
+    "evidence/research-e96d630c6fdd.json"
+  ]
+}

@@ -1,0 +1,42 @@
+{"q": 42, "M": 21, "alpha": 1.0, "branch": "Z1", "selected": 1, "congestion": 1.0, "seed": 1000, "kind": "k_simple", "bound": 1.0}
+{"q": 44, "M": 22, "alpha": 1.0, "branch": "Yb", "selected": 2, "congestion": 1.0, "cases": {"alpha": 4, "beta": 0, "gamma": 0}, "seed": 1001, "kind": "k_simple", "bound": 1.0}
+{"q": 38, "M": 19, "alpha": 1.0, "branch": "Z1", "selected": 1, "congestion": 1.0, "seed": 1002, "kind": "k_simple", "bound": 1.0}
+{"q": 46, "M": 23, "alpha": 1.0, "branch": "Z1", "selected": 2, "congestion": 1.0, "seed": 1003, "kind": "k_simple", "bound": 1.0}
+{"q": 38, "M": 19, "alpha": 1.0, "branch": "Z1", "selected": 1, "congestion": 1.0, "seed": 1004, "kind": "k_simple", "bound": 1.0}
+{"q": 46, "M": 23, "alpha": 1.0, "branch": "Yb", "selected": 2, "congestion": 1.0, "cases": {"alpha": 4, "beta": 0, "gamma": 0}, "seed": 1005, "kind": "k_simple", "bound": 1.0}
+{"q": 40, "M": 20, "alpha": 1.0, "branch": "Z1", "selected": 1, "congestion": 1.0, "seed": 1006, "kind": "k_simple", "bound": 1.0}
+{"q": 48, "M": 24, "alpha": 1.0, "branch": "Yb", "selected": 2, "congestion": 1.0, "cases": {"alpha": 4, "beta": 0, "gamma": 0}, "seed": 1007, "kind": "k_simple", "bound": 1.0}
+{"q": 46, "M": 23, "alpha": 1.0, "branch": "Yb", "selected": 1, "congestion": 1.0, "cases": {"alpha": 1, "beta": 1, "gamma": 0}, "seed": 1008, "kind": "k_simple", "bound": 1.0}
+{"q": 48, "M": 24, "alpha": 1.0, "branch": "Yb", "selected": 1, "congestion": 1.0, "cases": {"alpha": 2, "beta": 0, "gamma": 0}, "seed": 1009, "kind": "k_simple", "bound": 1.0}
+{"q": 46, "M": 23, "alpha": 1.0, "branch": "Z1", "selected": 2, "congestion": 1.0, "seed": 1010, "kind": "k_simple", "bound": 1.0}
+{"q": 36, "M": 18, "alpha": 1.0, "branch": "Z1", "selected": 1, "congestion": 1.0, "seed": 1011, "kind": "k_simple", "bound": 1.0}
+{"q": 36, "M": 18, "alpha": 1.0, "branch": "Z1", "selected": 3, "congestion": 1.0, "seed": 1012, "kind": "k_simple", "bound": 1.0}
+{"q": 44, "M": 22, "alpha": 1.0, "branch": "Z1", "selected": 1, "congestion": 1.0, "seed": 1013, "kind": "k_simple", "bound": 1.0}
+{"q": 44, "M": 22, "alpha": 1.0, "branch": "Yb", "selected": 1, "congestion": 1.0, "cases": {"alpha": 1, "beta": 1, "gamma": 0}, "seed": 1014, "kind": "k_simple", "bound": 1.0}
+{"q": 40, "M": 20, "alpha": 1.0, "branch": "Z1", "selected": 1, "congestion": 1.0, "seed": 1015, "kind": "k_simple", "bound": 1.0}
+{"q": 38, "M": 19, "alpha": 1.0, "branch": "Yb", "selected": 1, "congestion": 1.0, "cases": {"alpha": 1, "beta": 1, "gamma": 0}, "seed": 1016, "kind": "k_simple", "bound": 1.0}
+{"q": 48, "M": 24, "alpha": 1.0, "branch": "Yb", "selected": 2, "congestion": 1.0, "cases": {"alpha": 3, "beta": 1, "gamma": 0}, "seed": 1017, "kind": "k_simple", "bound": 1.0}
+{"q": 42, "M": 21, "alpha": 1.0, "branch": "Z1", "selected": 2, "congestion": 1.0, "seed": 1018, "kind": "k_simple", "bound": 1.0}
+{"q": 38, "M": 19, "alpha": 1.0, "branch": "I2", "selected": 1, "congestion": 1.0, "seed": 1019, "kind": "k_simple", "bound": 1.0}
+{"q": 40, "M": 20, "alpha": 1.0, "branch": "Yb", "selected": 2, "congestion": 1.0, "cases": {"alpha": 4, "beta": 0, "gamma": 0}, "seed": 1020, "kind": "k_simple", "bound": 1.0}
+{"q": 42, "M": 21, "alpha": 1.0, "branch": "Yb", "selected": 1, "congestion": 1.0, "cases": {"alpha": 1, "beta": 1, "gamma": 0}, "seed": 1021, "kind": "k_simple", "bound": 1.0}
+{"q": 46, "M": 23, "alpha": 1.0, "branch": "Yb", "selected": 2, "congestion": 1.0, "cases": {"alpha": 4, "beta": 0, "gamma": 0}, "seed": 1022, "kind": "k_simple", "bound": 1.0}
+{"q": 38, "M": 19, "alpha": 1.0, "branch": "Yb", "selected": 2, "congestion": 1.0, "cases": {"alpha": 4, "beta": 0, "gamma": 0}, "seed": 1023, "kind": "k_simple", "bound": 1.0}
+{"q": 42, "M": 21, "alpha": 1.0, "branch": "Z1", "selected": 1, "congestion": 1.0, "seed": 1024, "kind": "k_simple", "bound": 1.0}
+{"q": 44, "M": 22, "alpha": 1.0, "branch": "Yb", "selected": 2, "congestion": 1.0, "cases": {"alpha": 4, "beta": 0, "gamma": 0}, "seed": 1025, "kind": "k_simple", "bound": 1.0}
+{"q": 48, "M": 24, "alpha": 1.0, "branch": "Z1", "selected": 2, "congestion": 1.0, "seed": 1026, "kind": "k_simple", "bound": 1.0}
+{"q": 48, "M": 24, "alpha": 0.8205128205128205, "branch": "Z1", "selected": 1, "congestion": 1.0, "seed": 1027, "kind": "k_simple", "bound": 1.0}
+{"q": 40, "M": 20, "alpha": 1.0, "branch": "Z1", "selected": 3, "congestion": 1.0, "seed": 1028, "kind": "k_simple", "bound": 1.0}
+{"q": 36, "M": 18, "alpha": 1.0, "branch": "Yb", "selected": 2, "congestion": 1.0, "cases": {"alpha": 4, "beta": 0, "gamma": 0}, "seed": 1029, "kind": "k_simple", "bound": 1.0}
+{"q": 36, "M": 18, "alpha": 1.0, "branch": "I2", "selected": 1, "congestion": 1.0, "seed": 1030, "kind": "k_simple", "bound": 1.0}
+{"q": 36, "M": 18, "alpha": 1.0, "branch": "Z1", "selected": 1, "congestion": 1.0, "seed": 1031, "kind": "k_simple", "bound": 1.0}
+{"q": 48, "M": 24, "alpha": 1.0, "branch": "Yb", "selected": 2, "congestion": 1.0, "cases": {"alpha": 4, "beta": 0, "gamma": 0}, "seed": 1032, "kind": "k_simple", "bound": 1.0}
+{"q": 42, "M": 21, "alpha": 1.0, "branch": "I2", "selected": 1, "congestion": 1.0, "seed": 1033, "kind": "k_simple", "bound": 1.0}
+{"q": 42, "M": 21, "alpha": 1.0, "branch": "Yb", "selected": 2, "congestion": 1.0, "cases": {"alpha": 4, "beta": 0, "gamma": 0}, "seed": 1034, "kind": "k_simple", "bound": 1.0}
+{"q": 40, "M": 20, "alpha": 1.0, "branch": "I2", "selected": 1, "congestion": 1.0, "seed": 1035, "kind": "k_simple", "bound": 1.0}
+{"q": 48, "M": 24, "alpha": 1.0, "branch": "Yb", "selected": 1, "congestion": 1.0, "cases": {"alpha": 1, "beta": 1, "gamma": 0}, "seed": 1036, "kind": "k_simple", "bound": 1.0}
+{"q": 44, "M": 22, "alpha": 1.0, "branch": "Z1", "selected": 2, "congestion": 1.0, "seed": 1037, "kind": "k_simple", "bound": 1.0}
+{"q": 38, "M": 19, "alpha": 1.0, "branch": "Yb", "selected": 1, "congestion": 1.0, "cases": {"alpha": 2, "beta": 0, "gamma": 0}, "seed": 1038, "kind": "k_simple", "bound": 1.0}
+{"q": 42, "M": 21, "alpha": 1.0, "branch": "Yb", "selected": 2, "congestion": 1.0, "cases": {"alpha": 4, "beta": 0, "gamma": 0}, "seed": 1039, "kind": "k_simple", "bound": 1.0}
+ALL CHECKS PASSED on 40 instances
+EXIT 0

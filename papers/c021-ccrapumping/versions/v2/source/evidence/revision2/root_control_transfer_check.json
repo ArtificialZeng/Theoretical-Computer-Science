@@ -1,0 +1,31 @@
+{
+  "verified": true,
+  "complete_binary_control_DFAs": {
+    "1": 1,
+    "2": 16,
+    "3": 729
+  },
+  "total": 746,
+  "bottom_SCC_and_rank_histogram": {
+    "(1, 1)": 207,
+    "(2, 1)": 162,
+    "(2, 2)": 81,
+    "(3, 1)": 240,
+    "(3, 2)": 30,
+    "(3, 3)": 26
+  },
+  "maxima": {
+    "semigroup": 24,
+    "e_length": 4
+  },
+  "checks": [
+    "complete finite control transformation semigroup",
+    "minimum rank and idempotent e",
+    "all return blocks fix the same image states",
+    "exact UT3 root/inverse recovery of original letters",
+    "noncommuting recovered witness matrices"
+  ],
+  "generator_only_promise_counterexample": "Two unipotent 2x2 generators have product trace3, not unipotent",
+  "scope": "Finite controls for a new unaccepted all-word-unipotent generalization. No fresh referee acceptance or all-register theorem is certified.",
+  "script_sha256": "daf471a664792a113040238e5210ca7b36acd10fc80ff50c82a3c1b90bce52a8"
+}

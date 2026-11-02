@@ -1,0 +1,2 @@
+complete [6, 1] m= 15 degs [5, 5, 5, 5, 5, 5]
+RESULT complete [6, 1] 3 NOCOVER 23.8s

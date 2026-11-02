@@ -1,0 +1,13 @@
+{
+  "job_id": "c022-spe-memory-write-ec7adf27a885",
+  "phase": "write",
+  "outcome": "ready",
+  "mathematical_snapshot": "584a7fb098fe85033ce2ffdf4ed2efe808d7dde6097b69a23cab1d6c9f6df4e9",
+  "manuscript_digest": "bf2ff6975b073ab30ef9ab28bef780cd700d4fcc4421e6a5d3d8b5c934446313",
+  "pdf_digest": "c6f0eef23829878b3d7b75daa7093c6e90063748459b352dbf74dc2737371b31",
+  "source_sha256": "9dd4ff19af8a2996db2a11e18b2a4caa65426f62647822995c446c31dd0899fe",
+  "frozen_inputs_match": true,
+  "classification": "working_paper",
+  "next_test": "Separate fresh RELEASE citation/build/all-page/ZIP-reproduction review against the frozen manuscript packet; preserve working_paper.",
+  "no_release_claim": true
+}

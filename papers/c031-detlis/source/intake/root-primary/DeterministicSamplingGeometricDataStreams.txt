@@ -1,0 +1,754 @@
+     Deterministic Sampling and Range Counting in Geometric
+                          Data Streams
+
+                     Amitabha Bagchi, Amitabh Chaudhary, David Eppstein, and Michael T. Goodrich
+                                                       School of Information and Computer Science,
+                                                   University of California, Irvine, CA 92697-3425, USA
+                                                       {bagchi,amic,eppstein,goodrich}@ics.uci.edu
+
+
+ABSTRACT                                                                             sample with the hope that information about the sample can be used
+                                                                                     to infer properties of the entire set. Naturally, such inferences come
+We present memory-efficient deterministic algorithms for construct-
+                                                                                     with an associated probability that they are inaccurate. In this pa-
+ing -nets and -approximations of streams of geometric data. Un-
+                                                                                     per, we are interested in deterministically constructing samples of a
+like probabilistic approaches, these deterministic samples provide
+                                                                                     data stream that have guaranteed approximation properties for the
+guaranteed bounds on their approximation factors. We show how
+                                                                                     original set. Moreover, because of the limited memory restriction
+our deterministic samples can be used to answer approximate on-
+                                                                                     of data streaming applications, we are interested in deterministic
+line iceberg geometric queries on data streams. We use these tech-
+                                                                                     samples that can be constructed using space that is polylogarithmic
+niques to approximate several robust statistics of geometric data
+                                                                                     in the data stream’s length.
+streams, including Tukey depth, simplicial depth, regression depth,
+the Thiel-Sen estimator, and the least median of squares. Our al-                       In addition, because much of the streaming data is coming from
+gorithms use only a polylogarithmic amount of memory, provided                       sensors and scientific instruments, we are interested in this paper in
+the desired approximation factors are inverse-polylogarithmic. We                    studying streaming algorithms for geometric data. Such data could
+also include a lower bound for non-iceberg geometric queries.                        include multi-dimensional points in the color space of astrophys-
+                                                                                     ical data or two-dimensional lines defined by a point-line duality
+Categories and Subject Descriptors: F.2.2 [Analysis of Algo-                         of a stream of points in the plane. Of particular interest, then, is
+rithms and Problem Complexity]: Nonnumerical Algorithms and                          data streaming algorithms for constructing -nets and -approxi-
+Problems—Geometrical problems and computations; G.3 [Proba-                          mations, which are general structures developed in the computa-
+bility and Statistics]: [Robust Regression]                                          tional geometry literature for deterministically sampling geometric
+                                                                                     data. Indeed, -nets and -approximations are developed in a very
+General Terms: Algorithms, Theory                                                    general context of bounded-dimensional range spaces, where we
+                                                                                     are given a ground set and a polynomial-sized family of ranges on
+Keywords:                                                                            that set (which constitute the queries or sampling statistics we are
+                                                                                     interested in). Hence, results for constructing such deterministic
+1.     Introduction                                                                  samples should have a considerable number of applications.
+With the proliferation of streams of packets on the Internet, as well
+as data streaming from embedded systems, digital monitors, sensor                    1.1 Related work on Streaming Algorithms
+networks, and scientific instruments, there is a need for new al-                    Data streaming problems have engendered a large amount of inter-
+gorithms that can compute approximations or answer approximate                       est among the algorithms community over the last few years. For a
+queries on data streams. The main challenge in these contexts is                     comprehensive survey of the work done so far and some interesting
+that the data volumes are often much larger than the memory size                     directions for the future, the reader is referred to Muthukrishnan’s
+of a typical computer. Thus, there is a considerable amount of inter-                work [30]. An earlier survey by Babcock et. al. [2] explores the
+est in methods that can process data streams using limited memory                    issues arising in building data stream systems.
+(e.g., see recent surveys by Muthukrishnan [30] and Babcock [2]).
+The model we choose to work in is the so called Time Series model                       We are not familiar with any previous work for constructing -
+in which each time instant reveals a new element of the data stream                  nets or -approximations in streaming models, although these struc-
+“signal.”                                                                            tures have been extensively studied in full-memory contexts (e.g.,
+                                                                                     see the chapter by Matoušek [29]). The closest previous work
+   A typical approach in data streaming algorithms is to maintain a
+                                                                                     is done in the iceberg query [11] framework. Manku and Mot-
+random sample of the input data and perform computations on the
+                                                                                     wani [25] provide 1 +  approximations for the frequency counts of
+                                                                                     items in a data stream that occur more than N times (which are the
+                                                                                     so-called “icebergs”). An alternative approach which requires two
+Permission to make digital or hard copies of all or part of this work for            passes but uses less space can be found in [21]. Another set of im-
+personal or classroom use is granted without fee provided that copies are            proved results for determining the top k frequency counts is given
+not made or distributed for profit or commercial advantage and that copies           in [9]. Algorithms for computing the quantiles of a data stream
+bear this notice and the full citation on the first page. To copy otherwise, to      have been given by Greenwald and Khanna [14] guaranteeing a
+republish, to post on servers or to redistribute to lists, requires prior specific   precision of N , which is similar to the guarantees that are pro-
+permission and/or a fee.
+SCG’04, June 8–11, 2004, Brooklyn, New York, USA.                                    vided by -approximations, while using O( 1 log N ) space. This
+Copyright 2004 ACM 1-58113-885-7/04/0006 ...$5.00.                                   limitation of an additive N error in every quantile is overcome by
+Gupta and Zane [15]. The latter’s method provides relative error for       A range space is a set system, i.e., a pair Σ = (X, R), where
+all quantiles but uses O(log 2 N/3 ) space and requires knowledge      X is a set and R is a set of subsets of X. We call the elements of
+of an upper bound on the stream size.                                   R the ranges of Σ, as R is typically defined in terms of some well
+   Although the area of geometric property testing has generated        structured geometry. If Y is a subset of X, we denote by R|Y the
+interest in algorithms with sublinear time complexity (see e.g. [5]),   set system induced by R on Y , i.e., {R ∩ Y |R ∈ R}1 .
+the first geometric problem to be studied in the streaming model as        We say a subset Y ⊆ X is shattered if every possible subset
+we understand it was that of finding the diameter of a set of points.   of Y is induced by R, i.e., if R|Y = 2Y . The VC-dimension
+Feigenbaum, Kannan and Zhang [12] gave an O(1/) space algo-            of Σ is the maximum size of a shattered subset of X. If there
+rithm for computing the diameter of points in two dimensions in         are shattered subsets of any size, then the VC-dimension is infi-
+the streaming model and a O( 3/2 1
+                                      · log3 N (log R + log log N +     nite. A related and simpler notion is the scaffold dimension [13]
+     1
+log(  ))) space algorithm for computing it in the sliding window       of Σ. It is based on the notion of the shatter function πR (m),
+model where R is the maximum, over all windows, of the ratio            which we define as the maximum possible number of sets in a
+of the diameter to the distance between the closest two points in       subsystem of Σ induced by an m-sized subset of X. In other
+the window. Indyk [18] gave a streaming algorithm which main-           words, it is the sup{|R|Y | : Y ⊆ X, |Y | = m}. We now de-
+tains a c-approximate diameter of points in d dimensions using          fine the scaffold dimension of (X, R) as the infimum of all num-
+           2                               2                            bers d such that πR (m) is O(md ). It turns out that the shat-
+O(dn1/(c  √
+             −1)
+                 ) space taking O(dn1/(c −1) ) time per new point,
+                                                                        ter function of a set system of VC-dimension d0 is bounded by
+for c > 2.                                                                m                                   0
+                                                                          0
+                                                                              + m 1
+                                                                                     + ··· + m  d0
+                                                                                                    = Θ(md ) [34, 37]. Thus the scaffold
+   Cormode and Muthukrishnan generalized the exponential his-                                     
+
+
+
+
+                                                                        dimension is always at most the VC-dimension. Conversely, if the
+tograms used on single dimensional data sets in earlier works on        scaffold dimension is bounded by a constant, the VC-dimension
+streaming algorithms [8, 22] and defined radial histograms [7],         too is bounded by a constant. There are, however, many natural ge-
+which allowed them to give a O(1 + ) approximation to the di-          ometric set systems of scaffold dimension strictly smaller than the
+ameter using O(1/) space. They were also able to use these struc-      VC-dimension; for instance, the scaffold dimension of a set system
+tures to approximate convex hulls in the sense that no point in the     defined by halfplanes in the plane is 2, while the VC-dimension is
+input stream is more than D outside the approximate hull, where        3. In the rest of the paper, we will always refer to the scaffold di-
+D is the diamter of the point set. Constructing an approximate hull     mension of a set system. In addition, we consider only those set
+takes them O(q/) space. Hershberger and Suri [17] improve this         systems whose scaffold dimensions are bounded by a constant.
+to give a sampling-based algorithm for approximating the convex
+                                                                           We are now ready to define -nets and -approximations. A sub-
+hull of a streaming point set, showing how to maintain an adap-
+                                                                        set S ⊆ X is an -net for (X, R) provided that S ∩R 6= ∅ for every
+tive sample of at most 2r points such that the distance between the
+                                                                        R ∈ R with |R|/|X| > . A subset A ⊆ X is an -approximation
+hull of their sample and the true convex hull is O(D/r 2 ), where D
+                                                                        for (X, R) provided that
+is the current diameter of the sample. Some of the other geomet-                                                      
+
+
+
+
+ric problems that have been studied in a streaming model include                              
+
+
+
+
+                                                                                                  |A ∩ R|   |X ∩ R|    
+
+
+
+
+                                                                                              
+
+
+
+
+                                                                                                          −         ≤ 
+
+
+
+
+                                                                                                                                             (1)
+minimum spanning tree and minimum weight matching [19] and                                    
+
+
+
+
+                                                                                                    |A|       |X|      
+
+
+
+
+certain facility location and nearest neighbour kind of queries [7].
+                                                                        for every set R ∈ R. Note that every -approximation is automat-
+                                                                        ically an -net, but the converse need not be true. A remarkable
+1.2 Our Results                                                         property about set systems of scaffold dimension d is that, for any
+                                                                         ∈ [0, 1), they admit an -approximation whose size depends only
+In this paper, we present memory-efficient deterministic algorithms
+                                                                        on d and , not on the size of X. The first basic result in this vein
+for constructing -nets and -approximations of streams of geomet-
+                                                                        is the following lemma.
+ric data. Our algorithms use a polylogarithmic amount of memory,
+provided  is at least inverse-polylogarithmic. As mentioned above,        L EMMA 2.1. For any set system (X, R), with a finite X, and
+-nets and -approximations are of interest in their own right and      a scaffold dimension at most d, where d ≥ 1, there exists, for any
+have many applications in computational geometry. We show how            ∈ [0, 1], an -net of size at most C1 −1 lg(−1 ), and an -approx-
+our deterministic samples can be used to answer online iceberg ge-      imation of size at most C2 −2 lg(−1 ). Here C1 , C2 depend on
+ometric queries on data streams, such as in multi-dimensional ice-      only d.
+berg range searching. Because the information typically of interest
+                                                                        Note that, in general, the lg(−1 ) factor cannot be removed from
+from data streams is statistical, we focus in this paper primarily
+                                                                        the bound.
+on the use of -nets and -approximations to compute approxima-
+                                                                           Matoušek [28] gave a deterministic algorithm for efficiently com-
+tions to several robust statistics of geometric data streams, includ-
+                                                                        puting small sized -approximations (and thereby, -nets) for set
+ing Tukey depth, simplicial depth, regression depth, the Thiel-Sen
+                                                                        systems with constant-bounded scaffold dimensions. Such an al-
+estimator, and the least median of squares. Thus, we additionally
+                                                                        gorithm needs that the set system to be given in a form more “com-
+give polylogarithmic-space data streaming algorithms for comput-
+                                                                        pact” than simply the listing of the elements in each set. For this
+ing approximations to these statistics. We also include a lower
+                                                                        we assume the existence of a subsystem oracle, i.e. an algorithm
+bound for non-iceberg range queries in data streams.
+                                                                        (depending on the specific geometric application) that, given any
+                                                                        subset Y ⊆ X, lists all sets of R|Y . We say that the subsystem or-
+2.    Preliminaries on -Nets and -Approxima-                          acle is of dimension at most d if it lists all sets in time O(|Y |d+1 ).
+                                                                        This corresponds to the scaffold dimension; the maximum number
+      tions                                                             of sets in R|Y is πR (|Y |), and the “+1” in the exponent accounts
+We recap certain aspects of -Nets and -approximations [37, 29]        for the fact that each output set is given by a list of size up to |Y |.
+which are part of a general framework for modelling a number of         Matoušek’s result is summarized by the following lemma.
+interesting problems in computational geometry and derandomiz-          1 Note that although many sets of R may intersect Y   in the same subset,
+ing divide-and-conquer type algorithms.                                 this intersection appears only once in R|Y .
+   L EMMA 2.2. Let (X, R) be a set system with a subsystem or-          We are now ready to state observations related to weighted merg-
+acle of dimension d, where d is a constant. Given any  ∈ [0, 1),       ing and weighted reducing — in a form that will be of use in the
+we can compute an -approximation of size O(−2 lg(−1 )) and an        streaming algorithm.
+-net of size O(−1 lg(−1 )) in time O(|X|−2d lgd (−1 )).
+                                                                           O BSERVATION 3.1 (W EIGHTED M ERGE S TEP ). Let
+We shall use the algorithm above as a sub-routine for our streaming     X1 , . . . , Xm ⊆ X be disjoint subsets (of cardinalities not nec-
+algorithm for -approximations (see Section 4). It is based on two      essarily the same) and let Ai be a weighted -approximation of
+observations that we state below. They correspond to two basic op-      (Xi , R|Xi ), i = 1, . . . , m. Then A1 ∪ . . . ∪ Am is a weighted -
+erations of our algorithm, the merge step and the reduce step. Many     approximation for the subsystem induced by R on Xi ∪ . . . ∪ Xm ,
+algorithms for computing -approximations (certainly the one Ma-        where the weights on the points remain as they were.
+toušek gave, and the one we shall give) start by partitioning X into
+small pieces, and then alternate between the two steps until they get      O BSERVATION 3.2 (W EIGHTED R EDUCE S TEP ). Let A be a
+the desired approximation.                                              weighted -approximation for (X, R) and let A0 be a δ-approxima-
+     O BSERVATION 2.3 (M ERGE S TEP ). Let X1 , . . . , Xm ⊆ X          tion for (A, R|A ), where the weights on A are used as the proba-
+be disjoint subsets of equal cardinality and let Ai be an -approxi-    bilistic measure to compute A0 . Then A0 is an ( + δ)-approxima-
+mation of cardinality b for (Xi , R|Xi ), i = 1, . . . , m. Then A1 ∪   tion for (X, R).
+. . . ∪ Am is an -approximation for the subsystem induced by R on
+Xi ∪ . . . ∪ X m .                                                      In the above observation, the probability of a set Y is defined as
+                                                                        µ(Y ) =      p∈Y γ(p), where γ(p) is the weight of point p. Also
+  O BSERVATION 2.4 (R EDUCE S TEP ). Let A be an -approxi-             recall Lemma 2.5 which talks about computing an -approximation
+mation for (X, R) and let A0 be a δ-approximation for (A, R|A ).        for a set equipped with a probabilistic measure.
+Then A0 is an ( + δ)-approximation for (X, R).
+
+  Lemma 2.2 can be extended to a weighted case, as in the follow-       4. Computing -Approximations in Geomet-
+ing result by Matoušek [28].
+                                                                           ric Streams
+   L EMMA 2.5. Let X be a finite set equipped by a probabilistic
+measure µ (given by a table) and let Σ = (X, R) be a range space        Let x1 , . . . , xn , . . . be a stream of geometric objects in the time se-
+satisfying the assumptions of Lemma 2.2. Then an -approximation        ries model. Let X be the set of all the objects in the stream that
+for Σ with respect to the measure µ can be computed with the same       have arrived till now. Let R be a set of ranges defined on X, and
+asymptotic efficiency in the running time and size of the -approxi-    Σ = (X, R) be the current range space. In addition, let d, where d
+mation in the case of uniform measure in Lemma 2.2.                     is a constant, be the scaffold dimension of Σ. In this section we de-
+                                                                        scribe our algorithm that computes an -approximation of (X, R)
+When X is associated with a probabilistic measure µ, an -approx-       that is small in size, and, provided  is at least inverse polylogarith-
+imation of (X, R) is a multi-set A such that                            mic, takes polylogarithmic space and processing time per object.
+                                                                           The main result of this paper is the following:
+                                                         
+
+
+
+
+                          
+
+
+
+
+                                  |A ∩ R|   µ(X ∩ R)      
+
+
+
+
+                          
+
+
+
+
+                                          −          ≤   
+
+
+
+
+                          
+
+
+
+
+                                    |A|       µ(X)        
+
+
+
+
+                                                                           T HEOREM 4.1. Given an algorithm for computing an -approx-
+for every R ∈ R. Though we call µ a probabilistic measure, we           imation of an n-point range space (equipped with a probabilistic
+allow µ(X) to take values other than 1; e.g., µ(X) can be |X|.          measure) of size σ() in time T (n, ) and taking space S(n, ), we
+                                                                        can compute an -approximation for a stream of objects, of which
+3.    Additional Extensions for Weighted Sets                           n have been seen, such that:
+While the extension described above is useful in our context, we           1. The size of the approximation is O(σ());
+nevertheless need some further generalizations, which will be use-
+ful in the data streaming model. In particular, we need to generalize      2. The processing time per object is O(lg n·T (s, O(/ lg c n))+
+Observations 2.3 and 2.4 for the weighted case. This allows us to             T (lg n · s, /2));
+merge -approximations of different sizes and for sets of different
+cardinalities. To the best of our knowledge, this is the first time        3. The space taken is O(lg n · s + S(s, O(/ lgc n)) + S(lg n ·
+such an observation is being made. Note that in the un-weighted               s, /2));
+case, for an -approximation A for (X, R), each element in A “rep-
+resents” |X|/|A| elements in X. This is easy to see if we write         where s = σ(O(/ lg c n)), and c > 1 is a constant.
+Requirement 1 in the following form
+                                                     
+
+
+
+
+                 
+
+
+
+
+                                      |X|             
+
+
+
+
+                                                                        The algorithm given by Matoušek [28] (see Lemmata 2.2 and 2.5)
+                 
+
+
+
+
+                         |A ∩ R|          − |X ∩ R| ≤ |X|
+                                                      
+
+
+
+
+                                                                        has σ() = O(−2 lg(−1 )),√  T (n, ) = O(n(−2 lg(−1 ))d ), and,
+                 
+
+
+
+
+                                      |A|             
+
+
+
+
+                                                                        we claim, S(n, ) = O(n + n · (−2 lg(−1 ))d ). Thus, in effect,
+Now, instead of having an element p in the -approximation A rep-       we have the following result.
+resent the same number of elements in X, we can assign it a weight
+γ(p) equal to the number of elements in X that it represents. In this      C OROLLARY 4.2. There is an algorithm for computing -app-
+generalized scenario, a subset A ⊆ X, is a weighted -approxima-        roximations for a stream of objects, of which n have been seen, with
+tion for (X, R) if p∈A γ(p) = |X|, and for every R ∈ R,                 an associated set of ranges, such that the size of the approximation
+                     
+
+
+
+
+                     
+                                                  
+
+
+
+
+                                                  
+                                                                        is O(−2 lg(−1 )), the processing time per object is O(lg n·sd+1 ),
+                                                                        and the space taken is O(lg n · s + sd+1/2 ), where s = O(−2 ·
+                              
+
+
+
+
+                                     γ(p) − |X ∩ R| ≤ |X|
+                                                 
+
+
+
+
+                                                 
+
+
+
+
+                     
+
+
+
+
+                         p∈A∩R
+                                                  
+
+
+
+
+                                                                        lg2c n(lg lg n + lg(−1 ))), and c > 1 is a constant.
+                                                            Current Output
+
+
+                                                                                                                  Past stream item
+
+                                                                                                                  Current item
+
+                                                                                                                  Available set
+
+
+                                                                                                                  Maximal set
+
+
+
+                           A0,1                                                                                   Weighted merge
+
+
+
+                                                                                                                  Merge and reduce
+
+
+                                                     time
+
+                                     Figure 1. Schematic: Computing an -approximation of a data stream
+
+
+   We now describe our streaming algorithm. It simulates the divide-         assigned a weight γ(p) = |Sj,k |/|Aj,k | for this purpose. As it
+and-conquer approach of the static algorithm in a bottom up fash-            happens, once a weight is assigned to an object, we don’t ever need
+ion. Interestingly, we do not need to know the value of n in ad-             to change it.
+vance.                                                                          We are now ready to formally specify -stream approx(). Fig-
+   We begin by imposing a hierarchy of groupings onto the stream:            ure 2 contains the specification. Assume that Aj,0 is the element
+define canonical sets Sj,k as {xi |j2k ≤ i < (j + 1)2k } for                 itself in the singleton set Sj,0 .
+j, k ≥ 0. Canonical sets are inter-related through a natural tree
+hierarchy. The children of set Sj,k , k ≥ 1, are the canonical sets           -stream approx()
+S2j,k−1 and S2j+1,k−1 . We say that a canonical set Sj,k becomes                  When the next element xn in the stream arrives
+available when the last element in it, i.e., x(j+1)2k −1 , arrives. A                For each canonical set Sj,k that becomes available,
+maximal canonical set is one that is available but whose parent is                   taken in the order of increasing k, where k ≥ 1
+                                                                                             /* Combine approximations of its children
+not yet available. Observe that when xn arrives, there are at most                               for the parent */
+lg n maximal canonical sets. Also, the union of all the maximal                              B ← A2j,k−1 ∪ A2j+1,k−1 .
+canonical sets is the set X of all elements that have arrived till now.                      /* Reduce the size of the approximation */
+   We use the following building blocks.                                                     Aj,k ← (/2 · wk /W )-approximation of B
+                                                                                                 using -approx().
+                                                                                             /* Assign weights to elements */
+   • -approx(): An algorithm for deterministically computing -                             For all p ∈ Aj,k : γ(p) ← |Sj,k |/|Aj,k |.
+     approximation of small size (see Lemma 2.2),                                    /* Combine approximations of maximal canonical sets
+                                                                                         for the stream */
+   • weighted -approx(): An algorithm for computing deter-                          A0 ← S is available Aj,k .
+                                                                                                 j,k
+                                                                                            
+
+
+
+
+     ministically -approximations of weighted items of small size                       Each element in A0 retains its weight from its orginal Aj,k .
+     (see Lemma 2.5).                                                                /* Reduce the size of the approximation */
+                                                                                     A ← (/2)-approximation of A0 using weighted -approx().
+   Note that we cannot afford to use -approx() on an input that is                  Output A.
+larger than logarithmic, as otherwise we will not remain within our
+space and time bounds.
+                                                                             Figure 2. Algorithm for computing an -approximation of a geometric
+   Our algorithm, we call it -stream approx(), follows the ba-              stream.
+sic merge and reduce technique [29] for constructing -approx-
+imations. To follow this technique we need to use a sequence                   The correctness of algorithm -stream approx(), and the anal-
+                                                  ∞
+w1 , . . . , wu , . . . with the property that W  u=1 wu = O(1).             ysis of time and space complexity are discussed in the following
+                                −c
+Here we shall use wi = i , for some c > 1.                                   proof.
+   At a high level the algorithm is as follows (see Figure 1): At              P ROOF OF T HEOREM 4.1. Observations 2.3 and 2.4 imply that
+every stage, the algorithm stores a δ-approximation for all available        Ai,j is a δ-approximation for Sj,k , where
+maximal canonical sets, where δ varies with the set, but is always
+                                                                                                              k
+at most /2. Let Aj,k be such an approximation for Sj,k . This δ-                                         
+
+
+
+
+                                                                                                               wu   
+approximation is constructed through merging the approximations                                      δ≤         ·   < .
+                                                                                                          u=1
+                                                                                                              2   W  2
+A2j,k−1 and A2j+1,k−1 which were earlier computed for Sj,k ’s
+two children. (Note that algorithm -approx(), on two different              Together with Observation 3.1, this implies that A0 is a weighted
+input sets of the same cardinality, and with the same , results in          (/2)-approximation for the set X of elements in the stream. By
+approximations that have the same size. Thus, by induction, we               Observation 3.2, it now follows that A is an -approximation of
+can see that A2j,k−1 and A2j+1,k−1 have the same cardinality, and            (X, R). The size of A is O(σ(/2)).
+by Observation 2.3 can be merged.)                                              The data structure needs to store just the ‘Aj,k ’s; all other sets
+   The -approximation of the set X at any point, the stream output,         are intermediate results that can be discarded. Denote the size of
+is determined by weighted merging. Each element p ∈ Aj,k is                  largest such set, i.e., Aj,lg n , by s, which is O(σ(/ lg c n)); recall
+that the size is determined by just the last reduction step. The size     able to compute depths of non-optimal estimates, in order to form
+of the data structure is, therefore, O(lg n · s).                         depth contours that produce a center-outward ordering of the data.
+   Consider the space and time requirements for calls to -approx()          For many of these robust statistical methods, a computationally
+(there can be at most lg n such calls per object) and weighted -         efficient streaming approximation to the depth measure can be ob-
+approx() (1 per object). Note that s is an upper bound for the            tained from an -approximation of the sample data. The deepest fit
+size of the input to -approx(), and s lg n an upper bound for the        can be approximated by a deepest fit to the -approximation, and
+size of the input to weighted -approx(). Thus, for the calls to -       this approximate fit often has similar breakdown point properties
+approx(), the time required is O(lg n · T (s, O(/ lg c n)), and the      to the non-approximate fit on which it is based. We describe below
+space required is S(s, O(/ lg c n)). For the call to weighted -         several of the methods to which this technique applies:
+approx(), the time required is T (lg n · s, /2)), and the space re-
+quired is S(lg n · s, /2)).                                              5.1 Tukey Depth
+                                                                          This quantity [10] measures the quality of fit of a center, as the min-
+                                                                          imum proportion of sample points among all halfspaces that con-
+5.    Applications: Robust Statistics                                     tain the center. The Tukey depth of a point can be computed in time
+-Nets and -approximations have a number of applications in com-         O(nd log n), where n denotes the number of sample points [33].
+putational geometry, and even other areas like learning theory —          The Tukey median is the point of maximum depth. It is known that
+see, e.g., [27]. Many of the problems in these have streaming ver-        any Tukey median has depth at least 1/(d + 1), and the break-
+sions. One basic application is range counting. In this, we are given     down point of the Tukey median as an estimate of location is also
+a set S of n points in d , and a family R (the ranges) of subsets         1/(d + 1). There are known static algorithms for finding Tukey
+of d . Each query consists of a range R ∈ R and asks for the              medians, or other points of high depth, in two or three dimen-
+number of points in it. Typical range families are axes-orthogonal        sions [20, 23, 26], but in higher dimensions only inefficient linear-
+ranges, spherical ranges (proximity queries), and simplical ranges.       programming based exact solutions are known and it is necessary
+The corresponding range spaces for these all have a bounded scaf-         to resort to more efficient approximation algorithms [6].
+fold dimension. In the streaming version, the point set S comes as           The Tukey depth is based on counting points in halfspaces. Hence
+a continuous stream, interspersed with queries. It is easy to see how     it can be approximated effectively using -approximations for half-
+our algorithm would work here: use -stream approx() to main-             space ranges [6]: the depth of a point within an -approximation of
+tain an -approximation A of the current (S, R). When queried             a sample is within an additive error of  of its depth in the original
+with range R ∈ R, output |A ∩ R| · n/|A|. This is within an               sample data. In particular, the Tukey median of an -approximation
+additive n of the true value; this is akin to the iceberg queries        has depth within  of that of the true Tukey median. The breakdown
+mentioned earlier.                                                        point of this approximate Tukey median is 1/(d + 1) − . Thus, by
+   The above technique has implications in a lot of specific applica-     using our streaming -approximation algorithm, we can efficiently
+tions. To get a flavor of this, we delve deeper into the specific area    maintain not only an approximate Tukey median of the data set, but
+of robust statistic in the next few paragraphs.                           also a space-efficient data structure from which we can compute ac-
+   Robust statistics concerns the study of statistical estimators that    curate approximations of the Tukey depth of any point.
+can tolerate high numbers of outliers, while maintaining an accu-
+racy of estimation that depends only on the remaining uncorrupted         5.2 Simplicial Depth
+data points. In contrast, ordinary least squares estimators, while
+trivial to compute even in the streaming model, can be forced to          This is another measure of quality of fit for location, introduced by
+produce estimates that are arbitrarily far from the correct model         Liu [24]. The simplicial depth of a fit point is defined to be the
+                                                                                                                       n
+even in the presence of a single outlier. The number of outliers that     proportion of simplices, among all the d+1     
+                                                                                                                            simplices formed by
+an estimator can tolerate while preserving its accuracy is called its     convex hulls of (d + 1)-tuples of sample points, that contain the
+breakdown point; in general, methods with high breakdown points           fit point. Equivalently, it is the probability that a randomly chosen
+are preferred but other criteria are also important including statisti-   (d + 1)-tuple contains the fit point in its convex hull. As we now
+cal efficiency (number of samples needed to achieve a given accu-         argue, for points in the plane, the simplicial depth in a sample set
+racy) and computational efficiency (amount of time it takes to com-       is accurately approximated by the simplicial depth of an -approx-
+pute a given estimate from a set of samples). Many robust statistical     imation for wedge ranges (that is, ranges formed by intersecting
+methods also have the advantage of being non-parametric, not re-          two halfplanes). Therefore, as for Tukey depth, we can answer
+quiring the statistician to produce a prior probability distribution or   approximate depth queries and maintain an approximate deepest
+other arbitrary parameters before producing a fit. The paradigmatic       point in a space-efficient manner for streaming data.
+example of a robust statistic is the median of one-dimensional data,          Let δ be a value to be determined later and imagine the follow-
+which, unlike the mean, is robust with a breakdown point of 21 .          ing process for measuring approximately the simplicial depth of
+Much research on streaming algorithms has gone into methods for           a fit point: first, let L be a set of 1/δ lines through the fit point,
+maintaining approximate medians or more general quantiles [14],           partitioning the plane into 2/δ wedges having the fit point as a
+and we would like to find similar methods for higher dimensional          common apex, with at most a δ fraction of the sample points in
+statistics.                                                               any wedge. Let e1 be the proportion of triangles, determined by
+   Two of the critical problems studied in robust statistics are loca-    three input points, that are not all on one side of one of a line in L.
+tion (finding a central point in a cloud of data points) and regres-      Then e1 is an overestimate of the simplicial depth, but the amount
+sion (fitting the data to a model in which a dependent variable or        by which it overestimates the depth is O(δ): the only triangles in-
+variables is a linear function of the independent variables). Many        correctly included in the estimate are ones that have two points in
+methods in this area are based on various concepts of depth, which        opposite wedges, there are O(δ 2 n3 ) such triangles per pair of op-
+measures the quality of fit of an estimate. It is natural to seek the     posite wedges, and O(1/δ) such pairs. Next, let e2 be the propor-
+estimate maximizing the depth, but it is also of importance to be         tion of triangles, determined by three points in an -approximation
+of the sample, that are not all on one side of a line in L. For the            scanning the data in a way that is unavailable to a streaming algo-
+same reasons as before, e2 is within O(δ) of the simplicial depth              rithm. Instead, we apply an approximation technique very similar
+for the -approximation. Further, e1 and e2 are within O(/δ) of               to that for simplicial depth, above.
+each other:                                                                       To begin with, suppose that we are given a query slope s, and
+                  
+                          wi
+                                   + w2i (hi − wi ) + wi hi −w i               must determine the approximate position of s within the sorted se-
+                          3                                 2
+       e1 = 1 −                                                            ,   quence of slopes, normalized by dividing the position by n2 . This
+                                                                 
+
+
+
+
+                                               n                                                                                                
+
+
+
+
+                      i                        3   
+
+
+
+
+                                                                               can be solved exactly by a reduction to computing the number of
+where wi is the number of sample points in the ith wedge and hi                inversions in a permutation, but we are interested in approxima-
+is the number of sample points in the halfplane containing the ith             tions that can be computed by a streaming algorithm that does not
+wedge on its counterclockwise boundary. Each term in the sum                   know s in advance. To do this, let δ be a parameter to be deter-
+is approximated within O() by the corresponding term where wi                 mined later, and imagine subdividing the sample points into a grid
+and hi are replaced by numbers of points in the -approximation,               by O(1/δ) lines that are vertical and parallel to s, in such a way
+and there are O(1/δ) terms, so the total difference between e1 and             that at most a δ proportion of the points lie in the slab between any
+e2 is O(/δ). Putting together the errors in going from the original           two adjacent parallel grid lines. Let e1 be an estimate of the posi-
+simplicial depth to e1 to e√2 to the simplicial depth of the approx-           tion of s, formed by summing up the normalized number of pairs
+imation, and setting δ = , we see that the√-approximation ap-                of points that form a line with lower slope than s and that are in a
+proximates the simplicial depth to within O( ).                               pair of grid cells that are separated both by a vertical line of the grid
+   As far as we are aware, this deterministic -approximation based            and by a line parallel to s from the grid. Then e1 is within O(δ)
+method for approximating simplicial depth is novel even for static,            of the true position of s since the only lines through a given point
+non-streaming data, although it is trivial to approximate simplicial           that are omitted from the count are the ones where the other point
+depth randomly in the static case by sampling triangles. It seems              determining the line is in one of the two slabs containing s, and e1
+likely that similar deterministic and streaming approximation guar-            can be expressed as a sum with O(δ −2 ) terms, each term being a
+antees, with worse dependence on , can be shown to hold also in               product of the number of points in two parallelograms. Let e2 be a
+higher dimensions.                                                             similar normalized sum, with the number of sample points in each
+                                                                               parallelogram replaced by the number of points of an -approxima-
+5.3 Regression Depth                                                           tion for parallelogram ranges, and let e3 be the normalized position
+                                                                               of s within the set of lines determined by pairs of points from the -
+This statistic was introduced by Rousseeuw and Hubert [31] as a                approximation. Then e1 differs from e2 by O(δ −2 ) and e2 differs
+measure of the quality of fit of a regression hyperplane. It is de-            from e3 by O(δ + δ −1 ). Therefore, the overall error caused by
+fined as being the minimum proportion of sample points that can be             using e3 as our approximation to the position of s is O(δ + δ −2 ).
+removed to turn the fit plane into a nonfit, that is, a hyperplane com-        Setting δ = 1/3 makes this total error equal O(1/3 ).
+binatorially equivalent to a vertical hyperplane. Amenta et al. [1]
+                                                                                  To compute an approximate Thiel-Sen estimator, we use the same
+showed that, like Tukey depth, for regression depth a fit always ex-
+                                                                               -approximation for parallelograms. We compute the median slope
+ists with depth at least 1/(d + 1), and the breakdown point of the
+                                                                               among pairs of points from the approximation, and then find a line
+maximum-depth fit is 1/(d + 1). Their proof technique shows that
+                                                                               with that median slope bisecting the approximation. The resulting
+the regression depth of a query hyperplane can be measured by per-
+                                                                               line has slope with a normalized position within O(1/3 ) of the me-
+forming a certain projective transformation of the space containing
+                                                                               dian slope, partitions the sample points within  of exact bisection,
+the sample points, and measuring the Tukey depth of a certain point
+                                                                               and has a breakdown point of 1 − 1/2 − O(1/3 ).
+in the transformed space. Due to the transformation, a halfspace in
+the transformed space may correspond to a double wedge (symmet-
+ric difference of two halfspaces) in the original space. Therefore,            5.5 Least Median of Squares (LMS)
+the same -approximation technique used for Tukey depth, but with              These methods [32] in robust statistics seek a fit that minimizes
+double wedge ranges, also applies to regression depth, and lets us             the median residual value separating the fit from the sample points.
+compute depths and maintain an approximate deepest fit with high               This is not a depth-based criterion, but it leads to fits which are
+breakdown point for streaming data. Bern and Eppstein [3] gen-                 highly robust against outliers. For location problems, the least me-
+eralized regression depth to the context of multivariate regression,           dian of squares fit is the center of the minimum radius sphere that
+in which the sample data have more than one dependent variable;                contains at least half of the sample data [16]. It has a breakdown
+in their definition, the depth of a fit is the minimum proportion of           point of 21 : if fewer than half the sample data points are outliers,
+sample data contained in any double wedge, one boundary of which               then the sphere defining the LMS fit has smaller radius than the
+contains the fit and the other of which is parallel to the dependent           circumsphere of the non-outliers, and it contains at least one non-
+coordinate axes; this is again well approximated by -approxima-               outlier, so its center must be an accurate fit. Clearly, this is the
+tions for double wedge ranges.                                                 best breakdown point possible for any location method. The natu-
+                                                                               ral type of -approximation to use for this problem is one with balls
+5.4 The Thiel-Sen Estimator                                                    as its ranges. If we form the LMS fit of such an -approximation,
+This estimator [35, 36] is a method for two-dimensional linear re-             the result may not be robust. Instead, we approximate the LMS fit
+gression, in which one first finds the median among all n2 slopes              by finding the center of the minimum radius sphere that contains at
+                                                                               least a 12 +  proportion of the points in the -approximation. Such
+                                                                       
+
+
+
+
+determined by the lines through pairs of sample points, and then
+selects a regression line having that median slope and bisecting the           a sphere must therefore contain at least half of the sample data,
+sample set. It has a breakdown point of 1 − 1/2 ≈ 0.293. This                  and has a radius at least as small as the smallest sphere containing
+has long been a testbed for geometric optimization algorithms, and             at least a 12 + 2 fraction of the sample data. It is robust with a
+several O(n log n) time static algorithms for it are known, among              breakdown point of 12 − 2.
+them one based on using -cuttings in a prune-and-search tech-                    The same LMS approach can also be applied to regression prob-
+nique [4]. However these algorithms seem to require repeatedly                 lems. The least median of squares regression hyperplane can be
+defined as the central hyperplane in a slab bounded by two parallel           • Each group i has an additional point qi = (xi + , yi + ),
+hyperplanes, with minimum vertical separation between them, that                for some  < 1/2, associated with it.
+contains at least half of the sample data; again this is robust with a
+breakdown point of 21 . As above, we can use an -approximation,             Note that this family of input sequences has the property that a
+with slab ranges, and find the slab with minimum vertical separa-         two-sided query made at (xi , yi ) should return a count of f 2 +1 and
+tion containing a 21 +  fraction of the -approximation points, to       one made at (xi + 2 , yi + 2 ) should return a count of 1. This radical
+produce an approximate LMS fit with breakdown point 21 − 2.              change in the counts will not occur between two such queries at
+                                                                          any point which is not actually (xi , yi ) for some value of i. As
+6.       A Lower Bound on Range Counting                                  an extension to this simple observation, we note that since all the
+                                                                          xi s and yi s are chosen out of the integers 1, 2, . . . n, it is possible
+We provide a simple lower bound on the space required to count            to extract the exact values of all the xi with O( n logf2
+                                                                                                                                     n
+                                                                                                                                       ) queries by
+approximately the number of items in a range that is not necessarily      using binary search.
+an iceberg. When we say that an algorithm f -approximates the                Let us see if the algorithm A can be the query mechanism which
+range counting problem we mean that if a given range contains l           we can deploy to this end. Since A is an f approximation, it should
+points, the algorithm gives us an answer which lies between l/f           return a value of at most f at (xi + 2 , yi + 2 ) and a value between
+and l · f .
+                                                                          f + 1/f and f 3 + f at (xi , yi ). This means that A can indeed act
+   The bound is stated in terms of two-sided ranges: a point (x, y)       as the oracle which identifies the locations of the groups in our set.
+is said to belong to the two sided range located at (p, q) if x ≥ p
+                                                                             Hence, using A as a subroutine we can extract θ(n/f 2 ) infor-
+and y ≥ q.
+                                                                          mation about the input set. This contradicts the assumption that A
+   T HEOREM 6.1. Any f -approximate algorithm to the two-sided            uses space o(n/f 2 ).
+range counting problem must use space Ω(n/f 2 ).                             Seen in the context of streaming algorithms, Theorem 6.1 im-
+                                                                          plies that is not possible to approximate the range counting problem
+   We begin by assuming there is an algorithm A which gives an            in polylogarithmic space. One of the implications of this, among
+f approximation to the two-sided range counting problem for a             others, is that it is not possible to count inversions in lists [15] in
+stream of points in two dimensions. Further we assume that this           the sliding window model.
+algorithm uses space o(n/f 2 ).                                           Acknowledgments. We would like to thank David Mount for help-
+   Now consider a set of n points which are grouped in n/f 2 equally      ful discussions of robust statistics in the context of the topics of this
+sized groups, we call them Gi , where 1 ≤ i ≤ n/f 2 , in the fol-         paper, and S. Muthukrishnan for helpful discussions on geometric
+lowing way (Figure 3):                                                    streaming algorithms in general.
+
+  n
+                                                                          References
+                                                    Gi (close up)          [1] N. Amenta, M. W. Bern, D. Eppstein, and S.-H. Teng. Re-
+ n−1
+                                                    ε                          gression depth and center points. Discrete & Computational
+                                                                               Geometry, 23(3):305–323, 2000. arxiv:cs.CG/9809037.
+                                                                           [2] B. Babcock, S. Babu, M. Datar, R. Motwani, and J. Widom.
+                                                            ε
+                                                                               Models and Issues in Data Stream Systems. In Proc. of the
+                                              (x i, y i)
+                                                                               22nd Annual ACM Symp. on Principles of Databases Systems,
+                                                                               2002. dbpubs.stanford.edu:8090/pub/2002-19.
+                                                                           [3] M. W. Bern and D. Eppstein. Multivariate regression depth.
+                                                                               Discrete & Computational Geometry, 28(1):1–17, July 2002.
+                                Gi                                             arxiv:cs.CG/9912013.
+     2                                                                     [4] H. Brönnimann and B. Chazelle. Optimal slope selection via
+                                                                               cuttings. Computational Geometry: Theory and Applications,
+     1                                                                         10:23–39, 1998.
+                                                                           [5] B. Chazelle, D. Liu, and A. Magen. Sublinear geometric al-
+                                                                               gorithms. In Proc. of the 35th Annual ACM Symp. on Theory
+     0      1      2                                            n−1   n        of Computing, pages 531–540, 2003.
+Figure 3. Input sequence for the lower bound on approximate range          [6] K. Clarkson, D. Eppstein, G. L. Miller, C. Sturtivant, and
+counting                                                                       S.-H. Teng. Approximating center points with iterated Radon
+                                                                               points. Intl. Journal of Computational Geometry & Applica-
+                                                                               tions, 6(3):357–377, 1996.
+      • Each point in Gi has the same x coordinate, we call it xi .        [7] G. Cormode and S. Muthukrishnan. Radial Histograms for
+        For simplicity of presentation assume that all xi values are           Spatial Streams. Technical Report 2003-11, DIMACS, 2003.
+        integers. Additionally, we require xi > xi−1 .                     [8] M. Datar, A. Gionis, P. Indyk, and R. Motwani. Maintain-
+      • All the points in Gi have y coordinates closely clustered at           ing Stream Statistics over Sliding Windows. In Proc. of the
+        a given value, we call it yi . Here too we assume that all yi          13th Annual ACM-SIAM Symp. on Discrete Algorithms, pages
+        values are integers. Formally, for every pj ∈ Gi , we say that         635–644, 2002.
+        0 ≤ y(pj ) − yi < 1/2.                                             [9] E. D. Demaine, A. López-Ortiz, and J. I. Munro. Frequency
+                                                                               estimation of internet packet streams with limited space. In
+      • Every point pj ∈ Gi has y-coordinate strictly smaller than             Proc. of the 10th Annual European Symp. on Algorithms (ESA
+        the y-coordinates of all the points in Gi−1 .                          2002), pages 348–360, 2002.
+[10] D. L. Donoho. Breakdown properties of multivariate location        [27] J. Matoušek. Epsilon-nets and computational geometry. In
+     estimators. PhD thesis, Harvard University, 1982.                       J. Pach, editor, New Trends in Discrete and Computational
+[11] M. Fang, N. Shivakumar, H. Garcia-Molina, R. Motwani, and               Geometry, volume 10 of Algorithms and Combinatorics,
+     J. D. Ullman. Computing iceberg queries efficiently. In Proc.           pages 69–89. Springer-Verlag, Heidelberg, 1993.
+     of the 1998 Intl. Conf. on Very Large Data Bases, pages 299–       [28] J. Matoušek. Approximations and optimal geometric divide-
+     310, 1998.                                                              and-conquer. J. Comput. Syst. Sci., 50:203–208, 1995.
+[12] J. Feigenbaum, S. Kannan, and J. Zhang. Computing Diame-           [29] J. Matoušek. Derandomization in computational geometry. In
+     ter in the Streaming and Sliding-Window Models. Technical               J.-R. Sack and J. Urrutia, editors, Handbook of Computa-
+     Report YALEU/DCS/TR-1245, Yale University, 2002.                        tional Geometry, pages 559–595. Elsevier Science Publishers
+[13] M. T. Goodrich and E. A. Ramos. Bounded-independence                    B.V. North-Holland, Amsterdam, 2000.
+     derandomization of geometric partitioning with applications        [30] S. Muthukrishnan. Data Streams: Algorithms and Applica-
+     to parallel fixed-dimensional linear programming. Discrete              tions. Invited talk at SODA 2003. Available on request by
+     Comput. Geom., 18:397–420, 1997.                                        email to muthu@research.att.com.
+[14] M. Greenwald and S. Khanna. Space-efficient online compu-          [31] P. J. Rousseeuw and M. Hubert. Regression depth. Journal of
+     tation of quantile summaries. In Proc. of the 2001 ACM SIG-             the American Statistical Association, 94(446):388–402, 1999.
+     MOD Intl. Conf. on Management of Data, pages 58–66, 2001.          [32] P. J. Rousseeuw and A. M. Leroy. Robust Regression and Out-
+                                                                             lier Detection. John Wiley & Sons, 1987.
+[15] A. Gupta and F. X. Zane. Counting inversions in lists. In Proc.
+                                                                        [33] P. J. Rousseeuw and A. Struyf. Computing location depth and
+     of the 14th Annual ACM-SIAM Symp. on Discrete Algorithms,
+                                                                             regression depth in higher dimensions. Statistics and Comput-
+     pages 253–254, 2003.
+                                                                             ing, 8:193–203, 1998.
+[16] S. Har-Peled and S. Mazumdar. Fast algorithms for comput-
+                                                                        [34] N. Sauer. On the density of families of sets. J. Combin. Theory
+     ing the smallest k-enclosing disc. In Proc. of the 11th Annual
+                                                                             Ser. A, 13:145–147, 1972.
+     European Symp. on Algorithms, Lecture Notes in Computer
+                                                                        [35] P. K. Sen. Estimates of the regression coefficient based on
+     Science. Springer-Verlag, 2003.
+                                                                             Kendall’s tau. Journal of the American Statistical Associa-
+[17] J. Hershberger and S. Suri. Convex hulls and related problems           tion, 63:1379–1389, 1968.
+     in data streams. In Proc. of the ACM/DIMACS Workshop on            [36] H. Thiel. A rank-invariant method of linear and polynomial
+     Management and Processing of Data Streams, 2003. Avail-                 regression analysis, part 3. Proc. of Koninalijke Nederlandse
+     able online at http://www.research.att.com/conf/mpds2003/.              Akademie van Weinenschatpen A, 53:1397–1412, 1950.
+[18] P. Indyk. Better algorithms for high-dimensional proximity         [37] V. N. Vapnik and A. Y. Chervonenkis. On the uniform conver-
+     problems via asymmetric embeddings. In Proc. of the 14th                gence of relative frequencies of events to their probabilities.
+     Annual ACM-SIAM Symp. on Discrete Algorithms, pages                     Theory Probab. Appl., 16:264–280, 1971.
+     539–545, 2003.
+[19] P. Indyk. Stream-based geometric algorithms. In Proc.
+     of the ACM/DIMACS Workshop on Management and
+     Processing of Data Streams, 2003. Available online at
+     http://www.research.att.com/conf/mpds2003/.
+[20] S. Jadhav and A. Mukhopadhyay. Computing a centerpoint
+     of a finite planar set of points in linear time. In Proc. of the
+     9th Annual ACM Symp. on Computational Geometry, pages
+     83–90, 1993.
+[21] R. M. Karp, S. Shenker, and C. H. Papadimitriou. A simple
+     algorithm for finding frequent elements in streams and bags.
+     ACM Transactions on Database Systems, 28(1):51–55, March
+     2003.
+[22] F. Korn, S. Muthukrishnan, and D. Srivastava. Reverse nearest
+     neighbour aggregates over data streams. In Proc. of the 2002
+     Intl. Conf. on Very Large Data Bases, pages 814–825, 2002.
+[23] S. Langerman and W. Steiger. Optimization in arrangements.
+     In H. Alt and M. Habib, editors, Proc. 20th Intl. Symp. Theo-
+     retical Aspects of Computer Science, number 2607 in Lecture
+     Notes in Computer Science, pages 50–61. Springer-Verlag,
+     2003.
+[24] R. Y. Liu. On a notion of data depth based on random sim-
+     plices. Annals of Statistics, 18:405–414, 1990.
+[25] G. S. Manku and R. Motwani. Approximate Frequency
+     Counts over Data Streams. In Proc. of the 2002 Intl. Conf.
+     on Very Large Data Bases, pages 346–357, 2002.
+[26] J. Matoušek. Computing the center of planar point sets. In
+     J. E. Goodman, R. Pollack, and W. Steiger, editors, Discrete
+     and Computational Geometry: Papers from the DIMACS Spe-
+     cial Year, number 6 in DIMACS Series in Discrete Mathemat-
+     ics and Theoretical Computer Science, pages 221–230. AMS,
+     1991.
+

@@ -1,0 +1,527 @@
+\documentclass[acmsmall,11pt,nonacm,natbib=false]{acmart}
+\geometry{letterpaper,margin=1in}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\setcopyright{none}
+\authorsaddresses{}
+\title[Deterministic Two-Dimensional Range LIS]{Deterministic Subquadratic Reporting for Two-Dimensional Range LIS}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\hypersetup{pdftitle={Deterministic Subquadratic Reporting for Two-Dimensional Range LIS},pdfauthor={Zijian Zeng},colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\polylog}{\operatorname{polylog}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ind}{\mathbf{1}}
+\renewcommand{\bibliofont}{\normalfont\normalsize}
+\fancypagestyle{research}{\fancyhf{}\fancyfoot[C]{\normalsize\thepage}\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}}
+\begin{document}
+\pagestyle{research}
+\hypersetup{pdfauthor={Zijian Zeng}}
+\begingroup\thispagestyle{empty}
+\centering
+\vspace*{0.7in}
+{\LARGE\bfseries Deterministic Subquadratic Reporting\par
+for Two-Dimensional Range LIS\par}
+\vspace{0.35in}
+{\large Zijian Zeng\par}
+\vspace{0.1in}
+UCSI University\par
+\href{mailto:1002266693@ucsiuniversity.edu.my}{1002266693@ucsiuniversity.edu.my}\par
+\vspace{0.2in}
+November 2, 2026\par
+\vspace{0.45in}
+\begin{minipage}{\textwidth}
+\begin{center}\textbf{Abstract}\end{center}
+Given a sequence of $n$ real values and $m$ rectangles in index--value space,
+we give a uniform deterministic algorithm reporting a longest strictly
+increasing subsequence in every rectangle in
+$O((n+m)n^{2/3}\log^{30}(n+m+2))+O(K)$ operations, where $K$ is the total
+output length. The result allows repeated values, arbitrary overlaps and all
+answer lengths. It answers the deterministic subquadratic existence question
+posed by Karthik C.~S. and Saladi Rahul for uncolored two-dimensional reporting,
+while remaining slower than their randomized square-root bound.
+
+The main step implements deterministic relative sampling for an implicit
+family of canonical longest chains. A trace on selected points must be
+computed through unselected original points; recomputing a longest chain on
+the selected points gives the wrong range space. We compute exact compressed
+source trees on original index intervals and charge their construction over
+disjoint intervals in merge/reduce. Signed descendant sums evaluate every
+conditional score, and upward-rounded integer probability tables give a
+finite-word deterministic compression. The resulting hitting set combines
+with truncated-LIS and endpoint-stitching routines, expanding only final
+witnesses. Generic relative sampling, merge/reduce, conditional expectation
+and the reporting framework are established ingredients; the contribution
+is their background-sensitive implementation and full charged integration.
+\end{minipage}
+\vfill
+\par\endgroup\clearpage
+
+\section{The problem and the algorithmic advance}
+For real values $a_1,\ldots,a_n$, identify position $i$ with the point
+$(i,a_i)$. A query $Q=[\ell,r]\times[a,b]$ asks for a longest sequence
+$i_1<\cdots<i_h$ of points in $Q$ with
+$a_{i_1}<\cdots<a_{i_h}$. The output consists of the positions themselves.
+Let $K$ be the sum of the reported lengths. Input-value comparisons and
+operations on $\Theta(\log(n+m+2))$-bit words have unit cost; arithmetic on
+more words is charged. No arithmetic on the real values is needed.
+
+\begin{theorem}\label{thm:main}
+For every $n\geq1$, every $m\geq0$, every real sequence of length $n$ and
+every family of $m$ index--value rectangles, a uniform deterministic
+algorithm reports an optimal strict increasing subsequence in each rectangle
+using
+\[
+ O\bigl((n+m)n^{2/3}\log^{30}(n+m+2)\bigr)+O(K)
+\]
+comparison and word operations. The constants are universal.
+\end{theorem}
+
+In particular, $m=\Theta(n)$ gives truly subquadratic overhead. Empty
+answers, ties, arbitrary overlaps and every optimum length are included.
+The exponent $30$ is a conservative envelope for the explicit costs below.
+Karthik C.~S. and Saladi Rahul~\cite{KR26}, Theorems 1 and 5 and Section 7
+of the full version~\cite{KRfull}, give randomized square-root-overhead
+two-dimensional reporting, a deterministic truncated-LIS routine, and the
+deterministic subquadratic question. We retain their short/long decomposition:
+solve short answers directly and hit a canonical optimum of every long
+query with a small stitching set. Our exponent is larger than their
+randomized exponent; the advance is a deterministic full-model algorithm.
+
+The sampling rate itself is established. Relative approximation bounds
+and deterministic constructions appear in~\cite{HS11}, Theorem 2.11 and
+Lemma 2.15 of its preprint. Deterministic merge/reduce and subsystem oracles
+appear in~\cite{BCEG04}, Section 2. For canonical chains, the selected trace
+depends on original points outside the selected set. Thus those generic
+results do not provide a free subset-only oracle. We implement an oracle
+costing $O(|I|s\log^2 n+s^2)$ for $s$ selected occurrences in an original
+index interval $I$. Disjoint original intervals at each merge level make
+that extra background cost affordable. Compressed-tree score aggregation
+and finite-word compression complete the implementation.
+
+Consistent-path covers and explicit-family path hitting are prior
+tools~\cite{TSP11,ACC19}; neither small-cover existence nor conditional
+expectation is claimed as a separate contribution. Strong deterministic
+index-interval LIS results~\cite{GGK25,Kor26} concern subarrays, without an
+independent value interval filtering every internal point. We make no
+improvement claim for that one-dimensional interface. The bounded literature
+comparison does not certify exhaustive priority.
+
+The research and exposition used substantial OpenAI Codex assistance for
+proof development, literature comparison, exact diagnostic code and writing;
+the final methodology statement specifies its scope. The finite computations
+are diagnostics, and the proof below supplies the universal argument.
+
+\section{Canonical paths and the full-background trace oracle}
+Write $u\prec v$ if $u<v$ and $a_u<a_v$. For comparable endpoints let
+$P(u,v)$ be a longest chain from $u$ to $v$, breaking ties by the
+lexicographically least sequence of original indices. Include singletons
+$P(u,u)$ and the empty chain; call this global family $\mathcal F$.
+
+\begin{lemma}\label{lem:consistency}
+Every subpath of $P(u,v)$ between vertices $x,y$ is $P(x,y)$. For a multiset
+$S$ of $s$ selected occurrences, every nonempty trace of $\mathcal F$ on
+$S$ is the trace of $P(x,y)$ for two selected vertices. There are at most
+$d^2$ such descriptors, where $d\leq s$ counts distinct real vertices.
+\end{lemma}
+\begin{proof}
+Replacing a subpath by a longer chain improves the entire length; replacing
+it by an equal-length lexicographically earlier chain improves its tie order.
+Each replacement stays feasible because its internal points lie strictly
+between the two endpoints in both coordinates. This proves consistency.
+For a nonempty trace take its first and last distinct selected vertices
+$x,y$. Consistency gives the asserted trace. All occurrences of a repeated
+vertex belong together. Dummy occurrences belong to no path. Empty traces
+remain empty under subsequent draws and require no descriptor.
+\end{proof}
+
+A rectangle optimum with endpoints $u,v$ can be replaced by $P(u,v)$:
+every point of that path lies in the endpoints' coordinate box, hence in the
+query. The replacement has at least the optimum length and is therefore
+optimal. Hitting all members of $\mathcal F$ of length at least $t$ suffices
+for every query with optimum at least $t$.
+
+For context this family has VC-dimension at most two. If three index-ordered
+points $x,y,z$ lie on a canonical path, every canonical path containing
+$x,z$ contains $P(x,z)$ and hence $y$. The triple and its $\{x,z\}$ subset
+cannot both be traces. If no path contains the triple, it cannot be shattered
+either. This standard observation gives no efficient oracle by itself.
+
+Suppose the real selected vertices lie in a contiguous original index
+interval $I$. Every feasible path between them stays inside $I$. Computing
+canonical paths using \emph{all original points of $I$} therefore gives the
+global paths. Computing them on the selected set alone is wrong: for values
+$(0,3,1,2,4)$, $P(1,5)=(1,3,4,5)$ has trace $\{1,5\}$ on
+$\{1,2,5\}$, whereas the selected-only longest path is $(1,2,5)$.
+
+\begin{lemma}\label{lem:oracle}
+All trace descriptors on $S$ can be represented by compressed source trees,
+with occurrence counts and constant-time membership tests, in
+$O(|I|s\log^2(n+2)+s^2)$ operations and
+$O(|I|\log(n+2)+s^2)$ working words.
+\end{lemma}
+\begin{proof}
+Give equal real values equal ranks by comparison sorting. For each distinct
+selected source $u$, sweep original positions from $u$ rightward in $I$.
+Initially only $u$ is reachable. A Fenwick structure queries ranks strictly
+smaller than the current rank and chooses a predecessor with maximum
+source-path length, then lexicographically least source path. Append the
+current vertex to the chosen predecessor. Induction over the sweep computes
+$P(u,v)$ for every reachable $v$: all feasible predecessor choices are
+considered, and appending a common endpoint preserves equal-length order.
+
+The predecessor pointers form a rooted tree. A parent always precedes its
+child, so maintain binary lifting as vertices are inserted. To compare two
+equal-length root paths, find their lowest common ancestor and compare the
+indices of the children immediately below it. These are the first unequal
+entries. This costs $O(\log(n+2))$ per comparison, making the sweep cost
+$O(|I|\log^2(n+2))$ per source, including initialization and sorting. No
+path scans, probabilistic hashes or unbounded lexicographic integers occur.
+
+Mark selected vertices. In index order record the nearest selected ancestor
+of each reachable original vertex, including itself when selected. For a
+selected $v\ne u$, its compressed parent is the nearest selected ancestor
+of its original parent. The root-to-$v$ path in this compressed tree is
+exactly the selected trace of $P(u,v)$. Discard the original source tree
+after compression; keep one at-most-$d$-vertex tree per selected source.
+Each reachable pair $(u,v)$ is a descriptor, including $(u,u)$.
+
+If $w_x$ is the occurrence multiplicity of selected vertex $x$, a traversal
+adds $w_x$ along each compressed root path, giving its input occurrence
+count. Euler entry/exit labels test whether a selected $x$ is an ancestor
+of the descriptor target in constant time; this is exactly trace membership.
+A dummy is never a member. The compressed arrays have $O(s^2)$ entries,
+and all original-tree work is charged to the $|I|$-dependent term.
+\end{proof}
+
+\section{Relative compression with rounded conditional probabilities}
+Consider $s=2k$ input occurrences and $M\leq d^2\leq4k^2$ nonempty
+descriptors from Lemma~\ref{lem:oracle}. Let $p,\eta\in(0,1]$ be rational.
+For a trace with $a$ input occurrences put $u=a/(2k)$. A sequence of $k$
+uniform independent occurrence draws is bad for this trace if
+\begin{equation}\label{eq:bad}
+ \left|\frac{c}{k}-u\right|>\eta(p+u),
+\end{equation}
+where $c$ is its output count. The tolerance uses the \emph{input sample}
+frequency, not an unavailable original frequency.
+
+\begin{lemma}\label{lem:compression}
+If $2M\exp(-k\eta^2p/3)\leq1/8$, a deterministic compression chooses $k$
+occurrences so that no descriptor is bad. In addition to constructing the
+source trees, it uses $O(k^3\polylog(n+2))$ word operations when $k<N$,
+where $N=O(n)$ and all parameter numerators and denominators have
+$O(\log(n+2))$ bits up to fixed factors.
+\end{lemma}
+\begin{proof}
+For the mean of $k$ Bernoulli variables of mean $u$, the two-tail bound is
+\[
+ \Pr[|c/k-u|>x]\leq2\exp\left(-\frac{kx^2}{2u+2x/3}\right).
+\]
+Indeed $\log\mathbb E e^{\lambda(X-u)}\leq
+u(e^\lambda-1-\lambda)\leq u\lambda^2/(2(1-\lambda/3))$ for
+$0\leq\lambda<3$. Markov's inequality with
+$\lambda=x/(u+x/3)$ gives the upper tail. The lower tail follows from
+$e^{-\lambda}-1+\lambda\leq\lambda^2/2$, with denominator $2u$;
+it is empty for $x>u$. Means zero and one are deterministic. Substituting
+$x=\eta(p+u)$ and $2u+2x/3\leq(8/3)(p+u)$ gives the relaxed bound
+$2e^{-k\eta^2p/3}$. Thus the initial expected number of bad descriptors
+is at most $1/8$.
+
+For $0\leq a\leq2k$, $0\leq h,c$ with $c+h\leq k$, let $q[a,h,c]$
+be the exact probability of~\eqref{eq:bad} after $h$ further draws.
+Its terminal value is the bad-event indicator and
+\[
+ q[a,h,c]=\frac{a q[a,h-1,c+1]+(2k-a)q[a,h-1,c]}{2k}.
+\]
+Choose a power of two $D\geq64Mk^2$ and construct the integer table
+\begin{align}
+ U[a,0,c]&=D\ind\{\text{\eqref{eq:bad} holds}\},\nonumber\\
+ U[a,h,c]&=\left\lceil
+ \frac{aU[a,h-1,c+1]+(2k-a)U[a,h-1,c]}{2k}\right\rceil.\label{eq:table}
+\end{align}
+Convex averaging and one rounding unit per level prove by induction that
+\begin{equation}\label{eq:round}
+ q[a,h,c]\leq U[a,h,c]/D\leq q[a,h,c]+h/D.
+\end{equation}
+At a prefix with $h$ draws remaining, maintain count $c_F$ for each trace.
+Choose an occurrence $x$ minimizing the integer score
+\begin{equation}\label{eq:score}
+ V_x=\sum_F U[a_F,h-1,c_F+\ind\{x\in F\}],
+\end{equation}
+breaking ties by original occurrence position, and update all counts.
+Let $Q$ be the true sum of conditional bad probabilities. Averaged over
+the $2k$ occurrences, the true next sums equal $Q$, counting multiplicities.
+By~\eqref{eq:round} the mean next upper score divided by $D$ is at most
+$Q+M(h-1)/D$. The minimum score is at most that mean, and bounds the true
+chosen next sum from above. The total possible increase in true potential
+is therefore at most
+\[
+ \sum_{h=1}^k\frac{M(h-1)}D
+ =\frac{Mk(k-1)}{2D}\leq\frac1{128}.
+\]
+The terminal potential is the integer number of bad descriptors and is
+less than $1/8+1/128<1$. It is zero. Exact monotonicity of the rounded
+scores is unnecessary. If $M=0$, all occurrences are dummy and $k$ dummy
+draws suffice without a table.
+
+It remains to compute \emph{every} candidate score efficiently. At one draw
+write $b_F=U[a_F,h-1,c_F]$,
+$\delta_F=U[a_F,h-1,c_F+1]-b_F$, and $B=\sum_F b_F$.
+Then $V_x=B+\sum_{F\ni x}\delta_F$. For each selected-source tree add
+$\delta_{(u,v)}$ at target $v$ and sum accumulators from leaves to root.
+The accumulator at $x$ is exactly the sum over descendant targets, hence
+over root-to-target traces containing $x$. Sum these values over sources.
+A real occurrence has this sum plus $B$; a dummy has score $B$. Differences
+may be negative and are stored with signs. Repeated occurrences share a
+score but retain their multiplicities in averaging and in the output.
+All descriptors, traversals, candidates and Euler-membership count updates
+take $O(k^2)$ operations per draw, hence $O(k^3)$ in total. The table also
+has $O(k^3)$ entries, including all values of $a$.
+
+For $k<N$ we have $M<4N^2$. Take the least power of two at least $64Mk^2$,
+so $D<128Mk^2$ and $\log D=O(\log N)$. Equation~\eqref{eq:round} gives
+$0\leq U\leq D+k$. Products in~\eqref{eq:table} and signed sums of
+magnitude at most $O(M(D+k))$ use a constant number of words. In our
+application $k$ is a power of two, so division by $2k$ is a shift; even
+elementary polylogarithmic arithmetic suffices. All counters, table entries
+and updates are charged, and no exact probability oracle or large-binomial
+unit-cost operation is used.
+\end{proof}
+
+\section{A deterministically constructed stitching set}
+For $n\geq2$, let $N$ be the least power of two at least $n$, padding with
+$N-n$ dummy positions. Set
+\begin{equation}\label{eq:parameters}
+ \begin{gathered}
+ t=\min\{z\in\mathbb Z_{\geq1}:z^3\geq n^2\},\qquad
+ L=\lceil\log_2(N+2)\rceil,\qquad H=L+1,\\
+ p=t/N,\qquad \eta=1/(16H),\qquad
+ k=2^{\lceil\log_2(512p^{-1}\eta^{-2}L)\rceil}.
+ \end{gathered}
+\end{equation}
+These are integer/rational calculations: find $t$ by binary search and cube
+comparisons, and $k$ by doubling and exact comparison. Thus
+$t=\Theta(n^{2/3})$ and $k=O(n^{1/3}\log^3(n+2))$. Parameter calculations
+use $O(\log(n+2))$ bits up to fixed constants. For these parameters the
+terminal bad-event test in~\eqref{eq:table} is precisely
+\[
+ 16HN|2c-a|>2kt+aN,
+\]
+so it too is an integer comparison of the stated bit length.
+
+If $k\geq N$, use every real point as the stitching set and skip compression.
+We charge this branch in Section~\ref{sec:cost}. Otherwise $k$ divides $N$.
+Partition padded index order into consecutive $k$-position blocks, represented
+initially by their exact occurrences. Merge adjacent equal-size \emph{original}
+intervals, joining their $k$ representatives into $2k$ occurrences and
+compressing to $k$ with the full original parent interval as background.
+The children have both equal original sizes and equal representative sizes.
+
+At every merge $M\leq4k^2<4N^2$ and $k\eta^2p\geq512L$. Since
+$e^L>2^L\geq N+2$, we have
+\[
+ 2M e^{-k\eta^2p/3}\leq8N^2e^{-(512/3)L}<1/8.
+\]
+Lemma~\ref{lem:compression} therefore applies uniformly, independently of
+the representatives and their multiplicities. Lemmas~\ref{lem:oracle}
+and~\ref{lem:compression} give per-merge cost
+\begin{equation}\label{eq:nodecost}
+ O\bigl(|I|k\log^2(n+2)+k^3\polylog(n+2)\bigr).
+\end{equation}
+
+\begin{lemma}\label{lem:net}
+The construction returns a set $R$ of at most $k$ real points hitting every
+canonical path of length at least $t$. On the branch $k<N$, its construction
+cost is $O(Nk\log^3(n+2)+Nk^2\log^2(n+2))$.
+\end{lemma}
+\begin{proof}
+Fix any $F\in\mathcal F$. At a node let $\phi$ be its frequency among
+original padded positions and $r$ its representative frequency. After
+$j$ compression levels we prove simultaneously for all $F$ that
+\begin{equation}\label{eq:invariant}
+ |r-\phi|\leq E_j(\phi+p),\qquad E_j=(1+\eta)^j-1.
+\end{equation}
+The base blocks are exact. At a merge both original and representative
+frequencies average their two children with equal weights. If $u$ is the
+joined representative frequency, $|u-\phi|\leq E_j(\phi+p)$.
+Lemma~\ref{lem:consistency} and the full-background oracle cover its trace;
+an empty trace stays exactly empty. Compression adds at most $\eta(p+u)$.
+Since $p+u\leq(1+E_j)(p+\phi)$, the new error is at most
+$[E_j+\eta(1+E_j)](\phi+p)=E_{j+1}(\phi+p)$. This proves the invariant,
+including repeated representatives and dummy occurrences.
+
+There are at most $H$ levels. Bounding binomial coefficients by $H^i$ gives
+$(1+1/(16H))^H<\sum_{i\geq0}16^{-i}=16/15$, so $E_H<1/15$.
+At the root, a path of length at least $t$ has $\phi\geq p$ and hence
+$r\geq\phi-(\phi+p)/15\geq13\phi/15>0$. Discard dummies and deduplicate
+only at the end. This preserves every hit and gives $|R|\leq k$.
+
+For cost, parent original intervals are disjoint at each level, so the
+background term of~\eqref{eq:nodecost} sums to $O(Nk\log^2(n+2))$ per
+level and $O(Nk\log^3(n+2))$ overall. There are $N/k-1<N/k$ merge nodes.
+The $k^3$ term sums to $O(Nk^2\log^2(n+2))$, where a squared logarithm
+more than covers elementary arithmetic on a constant number of words.
+Original source trees are processed one at a time. Working memory is
+bounded by these time charges. In particular there is no global-$n$ scan
+at every small merge and no enumeration of all global endpoint paths.
+\end{proof}
+
+Substituting~\eqref{eq:parameters} gives construction time
+$O(n^{5/3}\log^8(n+2))$. The sample scale follows the established relative
+sampling principle; the lemma supplies the additional original-background
+implementation and its global accounting. The constants are conservative
+and make no claim of practical efficiency.
+
+\section{Reporting all lengths with additive output cost}
+We give the details of the truncated-LIS and stitching integration to keep
+the full reporting guarantee explicit. Their basic framework is from
+\cite{KR26,KRfull}. All intermediate candidates will be feasible, and only
+the final winner for a query is expanded.
+
+\subsection{Short answers}
+Build a balanced binary tree on the original index order. At each split
+into children $I_L,I_R$, for $v\in I_L$ and $1\leq\alpha\leq t$ store
+$A(v,\alpha)$, the minimum last value of an $\alpha$-chain starting at
+$v$ within $I_L$. For $v\in I_R$ store $B(v,\beta)$, the maximum first
+value of a $\beta$-chain ending at $v$ within $I_R$. Infeasible states
+have separate flags, denoted $+\infty$ and $-\infty$ respectively.
+Length-one states equal $a_v$. For larger lengths the recurrences are
+\begin{align}
+ A(v,\alpha)&=\min_{\substack{w>v,\ a_w>a_v\\w\in I_L}}
+                    A(w,\alpha-1),\label{eq:shortA}\\
+ B(v,\beta)&=\max_{\substack{w<v,\ a_w<a_v\\w\in I_R}}
+                    B(w,\beta-1).\label{eq:shortB}
+\end{align}
+Separating the first or last element proves these formulas. Store an
+attaining link to a previous-length state, giving an output-linear witness.
+For each length, strict-rank Fenwick sweeps cost $O(|I|\log(n+2))$.
+Summing over all splits and levels costs $O(nt\log^2(n+2))$ and stores
+$O(nt\log(n+2))$ states; cap lengths by child size.
+
+For each split and length, store feasible $A$ records in a static
+three-dimensional range-min structure with coordinates
+$(v,a_v,A(v,\alpha))$, weight $A(v,\alpha)$ and a witness handle.
+Use range-max structures for $B$ records. Nested balanced range trees
+provide $O(\log^3(n+2))$ query time and, conservatively,
+$O(q\log^3(n+2))$ preprocessing on $q$ records: recursively decompose a
+box into canonical subsets and store an extremal record at each final
+subset. This gives $O(nt\log^4(n+2))$ total preprocessing, using only
+coordinate comparisons and stored finite extrema.
+
+Normalize query endpoints by comparison/binary search. Empty and
+single-position queries are direct. For $\ell<r$ let the lowest index-tree
+node containing both endpoints split at $s$, so $\ell\leq s<r$. For each
+positive length up to $t$ obtain
+\begin{align*}
+ L_\alpha&=\min\{A(v,\alpha):\ell\leq v\leq s,\ a\leq a_v\leq b,
+                                      \ A(v,\alpha)\leq b\},\\
+ R_\beta&=\max\{B(v,\beta):s<v\leq r,\ a\leq a_v\leq b,
+                                      \ B(v,\beta)\geq a\}.
+\end{align*}
+Every witness lies inside the query: internal indices and values lie
+between its endpoints. Conversely any feasible left $\alpha$-chain has
+last value at least the $A$ value of its start, and that minimizing witness
+satisfies the same boundaries. Thus $L_\alpha$ is exactly the minimum
+possible left peak. Similarly $R_\beta$ is the maximum possible right base.
+Two positive witnesses concatenate precisely when $L_\alpha<R_\beta$;
+query membership uses inclusive boundaries, but this join is strict.
+
+Include zero-length empty states and every feasible one-sided chain.
+The feasible $L_\alpha$ are nondecreasing with $\alpha$: drop the last
+element of any longer chain. Similarly $R_\beta$ are nonincreasing, by
+dropping the first element. Infeasible lengths form suffixes. For each
+$\alpha\leq t$ binary search the largest compatible $\beta\leq t$ and
+retain the maximum $\alpha+\beta$, also considering $\alpha=0$.
+Every candidate is feasible. If the query optimum is at most $t$, its two
+side lengths occur in this search and their extremal endpoints preserve
+compatibility; the maximum candidate is therefore optimal. For a longer
+optimum this routine still returns a feasible chain, possibly shorter.
+Only two witness handles are retained. Its total overhead is bounded by
+$O((n+m)t\log^6(n+m+2))$.
+
+\subsection{Long answers and final witnesses}
+For each $z\in R$, compute longest strict paths from $z$ to every reachable
+northeast endpoint and from every reachable southwest endpoint to $z$.
+Use strict-rank sweeps, reversed for backward paths, storing lengths and
+parent links. Any attaining deterministic tie rule suffices here; these
+trees need not be the canonical sampling trees. The cost is
+$O(n\log^2(n+2))$ per $z$. Put the endpoint coordinates, lengths and
+handles in static two-dimensional range-max structures.
+
+For a query containing $z$, maximize forward and backward lengths over
+endpoints in the query. Both paths lie in the query by endpoint-box
+containment, and strict index order makes their only common vertex $z$.
+Their concatenation is feasible and has length equal to the two lengths
+minus one. If $z$ lies on a canonical optimum, the maximized halves are
+at least its corresponding halves. Their feasible concatenation must
+therefore be optimal. Lemma~\ref{lem:net} supplies such a $z$ whenever the
+optimum is at least $t$; the short routine handles optima at most $t$.
+Take the largest feasible candidate, including the empty one. Threshold
+equality causes no gap. The stitching overhead is
+$O((n+m)|R|\log^3(n+m+2))$.
+
+Keep only lengths and constant-size candidate handles during comparison.
+Finally expand one winner per query. A stitching witness follows its two
+parent trees, reverses one list in an output-sized buffer, and suppresses
+the duplicated $z$. A short witness follows its stored length-state links.
+Expansion takes $O(K)$ overall; losing candidates are never expanded.
+
+\section{Total cost, uniformity and limitations}\label{sec:cost}
+On the branch $k<N$, the charged overhead is
+\begin{equation}\label{eq:total}
+ \begin{split}
+ O\bigl(& (n+m)t\log^6(n+m+2)+Nk\log^3(n+2)\\
+        &+Nk^2\log^2(n+2)+(n+m)k\log^3(n+m+2)\bigr).
+ \end{split}
+\end{equation}
+With $t=\Theta(n^{2/3})$, $N<2n$ and
+$k=O(n^{1/3}\log^3(n+2))$, this is within Theorem~\ref{thm:main}.
+In particular, $O(n^{5/3}\log^8(n+2))$ construction is absorbed by the
+$(n+m)n^{2/3}$ overhead with its stated logarithms.
+
+On the fallback branch $k\geq N$, take $R$ to be all real points and build
+no compression tables. All-point stitching costs
+$O((n+m)n\log^3(n+m+2))$. The branch condition gives $n\leq k$, and
+the formula for $k$ still gives $k=O(n^{1/3}\log^3(n+2))$ on this branch.
+Thus the same theorem bounds this fallback, without an uncharged finite
+threshold. The conservative constants can make the fallback apply over a
+very large finite range. For $n=1$ direct comparison costs $O(m+1+K)$;
+if $m=0$ return immediately.
+
+All sizes, addresses, counters, ranks and finite integer intermediates are
+polynomial in $n+m$. A fixed number of words accommodates constant-factor
+larger bit lengths, and the arithmetic charges in Lemma~\ref{lem:compression}
+are included in~\eqref{eq:total}. Original real values are only compared
+and stored. Equal values have equal ranks and never follow each other.
+Open or closed query boundaries are normalized by the corresponding
+comparison searches. The simultaneous hitting property is independent of
+the number, overlap or density of supplied queries. This completes the
+proof of Theorem~\ref{thm:main} in the full reporting model.
+
+Matching the randomized square-root overhead deterministically is a natural
+next quantitative goal. Extending the original-interval oracle to other range
+optimization problems is another direction.
+
+\paragraph{Computational evidence.}
+The accompanying standard-library Python programs check canonical paths,
+interval traces, rounded probabilities, signed tree sums, merge invariants
+and reporting on the finite domains documented in the source package.
+Their reports distinguish compression fixtures with certified initial potential
+from uncertified fixtures, for which only the recorded algebraic identities
+are asserted. The uniform correctness and running-time bounds follow from
+the proof above.
+
+\paragraph{AI methodology.}
+OpenAI Codex was used in problem selection, algorithm and proof development,
+literature analysis, verification code, and manuscript drafting and compilation.
+Separate Codex contexts supplied the model-assisted mathematical checks and
+additional independently written verification programs.
+
+\clearpage
+\bibliographystyle{alphaurl}
+\bibliography{references}
+\end{document}
+

@@ -1,0 +1,33 @@
+{
+  "artifacts": {
+    "main.pdf": "04e5cdc5235be2a9327b7f80616afcc3d5854ecbab67d4f9fe5c12c23aca20f2"
+  },
+  "citation_verdict": "accept_with_citation_limitations",
+  "kind": "resolution-paper",
+  "manuscript_digest": "c2916fd05375010d302349b16227c74c3b9034412b631d619036c3087052fe3f",
+  "original_status": "proved",
+  "pages": 8,
+  "pdf_digest": "04e5cdc5235be2a9327b7f80616afcc3d5854ecbab67d4f9fe5c12c23aca20f2",
+  "provenance": {
+    "audit/build.json": "9ab5d09be5d3a1fb1fb6e9fd2d52dc0e4896309cc0ec869066ce032943f82ee0",
+    "audit/build.md": "164b5753fbc9d982e3628a775cb3ce9139bad08c3d181303bf4663ca309e5078",
+    "audit/citations.json": "d5059020ac285f608c1b648fd9fc00954dcec852f8f26886b4321b865f1b3138",
+    "audit/citations.md": "05588e64e79aff3bd064156bb916b4d639584cb218fe5d2800c96206084931fe",
+    "audit/math.json": "dfc3c6934a68ecb1c5db4dd7cfb1c85819692a83eeb847eed594aac4fdc5c2c4",
+    "audit/math.md": "48ed39de0b77ff3058f04c89c0de79eff42f371e6cac5e7b139f0a9f9d01aebe",
+    "audit/visual.json": "09fa2f95c0ca6d58bfe6a2194b9dcf714345897dc73584cb6068c2c4e8fba7de",
+    "audit/visual.md": "19d745a088111a966f43f9b5a75f2e71287befddb7bc6625fa0f4a4ff09bdae7",
+    "evidence/release/final-build.log": "c2a594a2e3f9808dcb02c0d8916ced30a5ca39f455e6c4563c2d800d4e31395a",
+    "jobs/c032-dspdag-referee-56b0105494de/role.json": "dc59b57be6cf7cf7ab72f1d77df1107e8c51597f888095ba9bd49b9c9e99b4c7",
+    "jobs/c032-dspdag-release-5fe4e38b60c7/role.json": "b26018f4d6ad5849c75ce8e332111a696de1b889a96ac7e102bcecc3654df131",
+    "jobs/c032-dspdag-research-5f16f6951448/role.json": "7d57be4bc55f0691d2a49b5317ea78f844ba3cf4e890d869134df4bedeee7700"
+  },
+  "schema": 1,
+  "snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+  "unverified_citations": [
+    {
+      "key": "Val75",
+      "limitation": "Exact 1975 typeset journal full text not refreshed; publisher direct page returned 403. Original 1974 CMU report inspected and supports the nearby claim; official indexed metadata confirms the journal record."
+    }
+  ]
+}

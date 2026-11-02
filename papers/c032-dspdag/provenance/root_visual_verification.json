@@ -1,0 +1,79 @@
+{
+  "at_utc": "2026-11-02T12:57:10.596704+00:00",
+  "pdf": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027_continuous/c032-dspdag/c032-dspdag_working_paper.pdf",
+  "pdf_sha256": "04e5cdc5235be2a9327b7f80616afcc3d5854ecbab67d4f9fe5c12c23aca20f2",
+  "source_archive": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027_continuous/c032-dspdag/c032-dspdag_source_and_reproducibility.zip",
+  "source_archive_sha256": "15f869e60bc374c3903ce18ecebcf32cd129a7e438e63f5e1e0773e955dcc4ce",
+  "readiness_label": "working_paper",
+  "review_type": "actual root visual inspection of final delivered PDF, supplemental to actual release job",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "render_dpi": 110,
+  "page_images": {
+    "1": {
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/c032-dspdag-root-final/page-1.png",
+      "sha256": "2a52ab58b7abbed7f3a0034cd4e59fa64722135c8791530a4512bb0fdafeacd1",
+      "observation": "Title, sole Zijian Zeng/UCSI University attribution, 11pt abstract and contact email clear; separate title page intentional."
+    },
+    "2": {
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/c032-dspdag-root-final/page-2.png",
+      "sha256": "5127391c5119bce9d5aed4b99879841d85df057ffaeb3abd09d49a44db6aef38",
+      "observation": "Main theorem and original-weight qualification legible; factual body AI role and cited prior tools present; no equation overflow."
+    },
+    "3": {
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/c032-dspdag-root-final/page-3.png",
+      "sha256": "3c56d528e4821c54d555612aea0b4c29879a2e1391285e7e56cb97011e6d1613",
+      "observation": "Short prior-work continuation, tight-edge reduction, endpoint copies and frontier lemma readable; proof continuation is complete."
+    },
+    "4": {
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/c032-dspdag-root-final/page-4.png",
+      "sha256": "07fd12ebfb9c0222e702919888482ac48840f53bf95e6aef1902213370cc3886",
+      "observation": "Frontier induction, incoming recurrence, k output classes and rectangular dimensions fit; no clipped labels or overlapping numbering."
+    },
+    "5": {
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/c032-dspdag-root-final/page-5.png",
+      "sha256": "66f05d0dc7875d224275013f352ab99dbe11202baaab41e351f310d89b7b34d9",
+      "observation": "Primitive-dependent global sum, packing/scattering proof, square fallback and operand bounds readable."
+    },
+    "6": {
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/c032-dspdag-root-final/page-6.png",
+      "sha256": "8629157a3886758ce29959c1f754fd57b390f1dc7a08052ac4cfd4434d69bbed",
+      "observation": "Tensor definition, explicit first/third reindexing, rational interpolation, prime choice and recurrence fit within margins."
+    },
+    "7": {
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/c032-dspdag-root-final/page-7.png",
+      "sha256": "01d62c1fc1f4b1b933941a65492e13306dcbad47fa30a31d74b008b148a071ee",
+      "observation": "General-k consequence, finite diagnostic scope and actual AI methodology readable; no missing material or clipping."
+    },
+    "8": {
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/pdfs/c032-dspdag-root-final/page-8.png",
+      "sha256": "366f305974a83d4ddd53e9a8951e58025bee399aa341612c18a12208236048d3",
+      "observation": "All nine full-author references and wrapped links legible at11pt; no overlap or clipped identifiers."
+    }
+  },
+  "ordinary_abstract_body_references_at_least11pt": true,
+  "official_class_unchanged": true,
+  "actual_final_archive_clean_build": true,
+  "all_final_archive_page_renders_match": true,
+  "finite_reproduction_entries": [
+    "evidence/research-2/verify.py",
+    "audit/fresh-56b0105494de/independent_verify.py"
+  ],
+  "generic_latexmk_rebuild_pdf_sha256": "3fdbabc1938b25b0af7801b07232f2a3426dc5a5ad80d0243a0c7f8fe93564da",
+  "generic_rebuild_byte_identical": false,
+  "citation_limitations": [
+    {
+      "key": "Val75",
+      "limitation": "Exact 1975 typeset journal full text not refreshed; publisher direct page returned 403. Original 1974 CMU report inspected and supports the nearby claim; official indexed metadata confirms the journal record."
+    }
+  ],
+  "scope": "All8actualfinalpages seen. Finite checkers validate their declared bounded cases only; fast rectangular routine not implemented. No new math/novelty or venue verdict, external peer review, submission or upload."
+}

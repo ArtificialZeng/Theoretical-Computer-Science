@@ -1,0 +1,50 @@
+{
+  "checked_at_utc": "2026-11-02T01:03:56.438945+00:00",
+  "actual_delivered_pdf_sha256": "50c157c4b7b471f5d2778b669efa55fde604245ebe40372a6c3cd79988c48fe4",
+  "actual_delivered_source_archive_sha256": "b7cc2b225daa929c056d7ccebd68a79f2a3324564602f076c6e18723c66d9ca5",
+  "pages_actually_viewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "render_dpi": 115,
+  "viewed_pdf_is_byte_identical_to_delivered_pdf": true,
+  "viewed_copy": "/Users/mac/Documents/ChatGPT/STOC理论计算机/research/continuous/batches/20261101-026/root-release-preview/review-copy.pdf",
+  "page_image_sha256": {
+    "1": "efdd6314b462bbbe57296856d719b3d5df13c779ec938942308bc6ad84bb8355",
+    "2": "98c43239dabcd61ce7edb0d1de1f964bc22562a59723ebae882719a824b5c0ff",
+    "3": "6727240b8648d478721ffe11046f720b80d5259b37c438a61875573737a82240",
+    "4": "b59a6990470182acca4342095248f467b3d0865fc21c6873829abb2d2ea53741",
+    "5": "6619c988ced51c0397bcf7b1e4a4a34e86a11e4d34595478285775dd1cfb7544",
+    "6": "d85e3a64c68d43f99348233ae8306ab66bd2099adfa65028642494cc7e0be0cf",
+    "7": "d690068800d4b77c3179eb653ec7951ff296b64dd773b5be1bc5f66f4a5a9952"
+  },
+  "page_findings": {
+    "1": "Distinct title/author/abstract page, email readable, no clipping.",
+    "2": "Main theorem, context and integral-weight primitive readable; no overlap.",
+    "3": "Rounding premise, normalization and sampling preparation readable; polynomial encoding-growth correction present.",
+    "4": "Chernoff/dyadic bounds, cut charge and component demands readable.",
+    "5": "Original-admission bridge proof, k dependence and integer overhead bound readable.",
+    "6": "Residual coverage and corrected rounding dependency readable; no clipped equations.",
+    "7": "Computational scope, substantial AI roles and four references readable."
+  },
+  "clipping_or_overlap_observed": false,
+  "actual_delivered_zip_clean_build_verified": true,
+  "all_page_renders_match_rebuilt_zip_pdf": true,
+  "readiness_label": "working_paper",
+  "citation_limitations": [
+    {
+      "key": "CKS05",
+      "limitation": "Live ACM publisher endpoint HTTP 403; full author PDF and author-institution DOI/pages record checked. Only the publisher refresh remains unverified."
+    },
+    {
+      "key": "CKS13",
+      "limitation": "Live author PDF timeout and DOI endpoint HTTP 403; complete frozen published PDF/text and printed DOI checked. Only the external refresh remains unverified."
+    }
+  ],
+  "scope": "Actual root every-page visual inspection, bound by identical PDF bytes to this final delivery; actual ZIP compilation and exact diagnostics also completed. No new mathematical or venue certification."
+}

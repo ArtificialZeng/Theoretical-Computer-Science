@@ -1,0 +1,14 @@
+{
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Full original target is precise and open-supported by inspected primary sources. The streaming proposal warrants bounded research; correctness, novelty and STOC significance remain unverified.",
+  "next_test": "Verify the witnessed separator-to-PMC charging map and complete source seeds, then prove or refute the simultaneous emission/termination bounds with an additive polynomial recurrence and polynomial initial/final buffered delay, using actual polynomial primitives.",
+  "evidence": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/triage-validation.md",
+    "evidence/triage-record.json",
+    "intake/source-inputs.json"
+  ]
+}

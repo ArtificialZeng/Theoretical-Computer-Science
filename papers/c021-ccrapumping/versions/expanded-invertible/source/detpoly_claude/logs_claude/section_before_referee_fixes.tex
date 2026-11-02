@@ -1,0 +1,355 @@
+% Drop-in subsection for sec_polytime.tex (to be placed after Section "Bit complexity",
+% i.e. after Remark rem:polytime).  Uses only macros of main.tex.
+\subsection{Polynomial heights: a deterministic polynomial-time algorithm}\label{ssec:detpoly}
+
+We prove the conjectured polynomial bound on $B_f$. Together with Theorem~\ref{thm:polytime}(2)
+this shows that the algorithm of Section~\ref{ssec:layers}, unchanged, runs in deterministic
+polynomial time on all invertible series. Only the analysis is new.
+
+\begin{theorem}\label{thm:detpoly}
+There is a polynomial $p$ such that, for every invertible series $f$ satisfying~(a), the Lie algebra
+$\fu$ of $U=R_u(\cG)$ is spanned by matrices whose entries, in the adapted basis of step~1, have bit
+length at most $p(d,k,\sigma)$. Consequently $\operatorname{ht}(\fu_j)\le p'(d,k,\sigma)$ for all
+$j$, for a polynomial $p'$; in particular $B_f\le p'(d,k,\sigma)$, and CCRA-computability of
+invertible series is decidable in deterministic polynomial time.
+\end{theorem}
+
+\paragraph{Conventions.} Throughout, (a) holds and $S:=H^\circ$, a $\Q$-split torus contained in
+$L_P$. A rational matrix or vector has \emph{polynomial size} if the bit lengths of its entries are
+bounded by a fixed polynomial in $d,k,\sigma$ (independent of $f$); the polynomial may change from
+line to line, finitely many times. We use three standard facts. (F1) A subspace of $\Q^N$ spanned by
+vectors of bit length $\le\beta$ has height at most $\operatorname{poly}(N)\,(\beta+1)$ (Cramer's rule
+and Hadamard's bound). (F2) If $V_0\subseteq\Q^N$ is spanned by vectors of bit length $\le\beta$ and
+$A_1,\ldots,A_s$ are $N\times N$ matrices with entries of bit length $\le\beta$, then the smallest
+subspace containing $V_0$ and stable under all $A_i$ is spanned by the vectors $A_{i_1}\cdots
+A_{i_r}v$ with $r<N$ and $v$ from the spanning set, which have bit length $O(N(\beta+\log N))$.
+(F3) If $V\subseteq\fu_P$ is spanned by matrices of bit length $\le\beta$, the Lie algebra generated
+by $V$ is spanned by the left-normed brackets of fewer than $m$ of them (brackets of length $m$
+vanish), which have bit length $O(m(\beta+\log d))$; if $V$ is stable under a family of Lie algebra
+automorphisms or derivations of $\fu_P$, so is the Lie algebra it generates.
+
+\paragraph{Weight basis.} The algebra $C=\Q[H^\circ]=\Q[S]$ is computed in Lemma~\ref{lem:atest}; it
+is commutative, split and block diagonal, and its primitive idempotents $\varepsilon_\chi$ (one for
+each weight $\chi$ of $S$ on $\Q^d$) are obtained from a generic element of $C$ by rational root
+finding, with polynomial size. Refining the adapted basis on each $E_p$ by bases of the
+$\varepsilon_\chi E_p$ changes the basis by a block diagonal matrix of polynomial size; we work in
+this refined basis and transform back at the end, which preserves polynomial size of spanning sets.
+Let $X_S$ be the set of weights, $V_\chi=\varepsilon_\chi\Q^d$ and $n_\chi=\dim V_\chi$; each basis
+vector lies in some $V_\chi$, and $S$ is contained in the diagonal torus
+$D=\{\sum_\chi x_\chi\varepsilon_\chi\}\cong\mathbb G_m^{X_S}$. Write $\mathfrak z\subseteq\fu_P$ for
+the span of the elementary matrices $E_{rc}\in\fu_P$ with $r,c$ in the same weight space, and
+$\fu_P^{\ne0}$ for the span of the other elementary matrices in $\fu_P$. These are the sums of the
+zero and of the nonzero weight spaces of $\operatorname{Ad}(S)$ on $\fu_P$; both are graded by distance,
+$\mathfrak z$ is an associative subalgebra, $Z:=C_{U_P}(S)=I+\mathfrak z=\exp\mathfrak z$, and
+$\operatorname{Ad}(h)$ preserves $\mathfrak z$ and $\fu_P^{\ne0}$ for $h\in H$, because $H$ normalizes $S$ and
+hence permutes the $V_\chi$. For $h\in H$ write $\pi_h$ for the induced permutation of $X_S$,
+$hV_\chi=V_{\pi_h\chi}$. Every element of $H$ is semisimple, since a power lies in the torus $S$.
+
+An element $Y=\sum_\chi y_\chi\varepsilon_\chi\in\operatorname{Lie}(S)$ is \emph{regular} if
+$y_\chi\ne y_\psi$ whenever $\chi\ne\psi$ and $\fu_P$ contains an elementary matrix $E_{rc}$ with
+$r\in V_\chi$, $c\in V_\psi$. Then $\operatorname{ad}(Y)$ acts on $E_{rc}$ by $y_\chi-y_\psi$, so it is invertible on
+$\fu_P^{\ne0}$ and zero on $\mathfrak z$, and a matrix $v\in U_P$ commutes with $Y$ iff $v\in Z$, that is,
+\begin{equation}\label{eq:regcent}
+C_{U_P}(Y)=Z\qquad\text{for regular }Y.
+\end{equation}
+If $Y$ is regular, so is $\operatorname{Ad}(h)Y$ for $h\in H$. Since $\chi-\psi$ is a nontrivial character of
+$S$ for $\chi\ne\psi$, its differential is a nonzero linear form on $\operatorname{Lie}(S)$; so the regular elements
+form the complement of at most $d^2$ hyperplanes of $\operatorname{Lie}(S)$.
+
+\begin{lemma}[Tame iterations]\label{lem:iter}
+Let $\fu_P^{(t)}$ denote the matrices supported at distances $\ge t$.
+\begin{enumerate}
+\item Let $h\in L_P(\Q)$ be semisimple and $g\in hU_P(\Q)$, both of polynomial size. There is
+$u\in U_P(\Q)$ of polynomial size with $u^{-1}gu\in h\,C_{U_P}(h)$. Consequently $g_s=uhu^{-1}$ and the
+closure of $\langle g_s\rangle$ is $u\,\overline{\langle h\rangle}\,u^{-1}$.
+\item Let $Y\in\operatorname{Lie}(S)$ be regular and $X\in Y+\fu_P$, both of polynomial size. There is
+$u\in U_P(\Q)$ of polynomial size with $\operatorname{Ad}(u^{-1})X\in Y+\mathfrak z$. Consequently
+$X_s=\operatorname{Ad}(u)Y$.
+\item The map $\mu:\exp(\fu_P^{\ne0})\times Z\to U_P$, $(e^y,z)\mapsto e^yz$, is an isomorphism of
+varieties defined over $\Q$, and if $w\in U_P(\Q)$ has polynomial size, so does the $y$ with
+$w\in e^yZ$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+All three are proved by an iteration over $t=1,\ldots,m-1$ that, at step $t$, removes an unwanted
+distance-$t$ component without changing components at smaller distances. We use repeatedly that for
+$A\in\fu_P^{(t)}$ and $B\in\fu_P$ every Lie bracket involving $A$ and at least one further factor
+from $\fu_P$ lies in $\fu_P^{(t+1)}$, and the Baker--Campbell--Hausdorff formula, which is finite on
+$\fu_P$.
+
+(1) Since $h$ is semisimple and preserves each $\mathfrak v_t$, we have
+$\mathfrak v_t=\ker(1-\operatorname{Ad}(h^{-1}))\oplus\operatorname{im}(1-\operatorname{Ad}(h^{-1}))$ on $\mathfrak v_t$. Start with $u=I$. At
+step $t$ let $R=\log(h^{-1}u^{-1}gu)\in\fu_P$ and suppose that its components at distances $<t$ lie in
+the kernels. Let $Q_t$ be the component of $R_t$ in the image, choose $Z_t\in\mathfrak v_t$ with
+$(1-\operatorname{Ad}(h^{-1}))Z_t=-Q_t$, and replace $u$ by $ue^{Z_t}$. The new element is
+$h^{-1}e^{-Z_t}u^{-1}gue^{Z_t}=e^{-\operatorname{Ad}(h^{-1})Z_t}e^{R}e^{Z_t}$, whose logarithm is
+$R+(1-\operatorname{Ad}(h^{-1}))Z_t$ modulo $\fu_P^{(t+1)}$. Thus the components at distances $<t$ are
+unchanged and the distance-$t$ component now lies in the kernel. After step $m-1$ we have
+$u^{-1}gu=he^R$ with $\operatorname{Ad}(h)R=R$, so $h$ and $e^R$ commute; this is the Jordan decomposition of
+$u^{-1}gu$, whence $g_s=uhu^{-1}$.
+
+(2) Start with $u=I$. At step $t$ let $R=\operatorname{Ad}(u^{-1})X-Y\in\fu_P$, suppose that its components at
+distances $<t$ lie in $\mathfrak z$, let $Q_t$ be the component of $R_t$ in $\fu_P^{\ne0}$, let
+$Z_t\in\mathfrak v_t\cap\fu_P^{\ne0}$ be the solution of $[Z_t,Y]=Q_t$ (entrywise division by the nonzero
+numbers $y_\psi-y_\chi$), and replace $u$ by $ue^{Z_t}$. Then
+$\operatorname{Ad}(e^{-Z_t})(Y+R)=Y+R-[Z_t,Y]-[Z_t,R]+\tfrac12[Z_t,[Z_t,Y+R]]-\cdots$, which is
+$Y+R-Q_t$ modulo $\fu_P^{(t+1)}$. After step $m-1$, $\operatorname{Ad}(u^{-1})X=Y+N$ with $N\in\mathfrak z$
+nilpotent and $[Y,N]=0$, so $X_s=\operatorname{Ad}(u)Y$.
+
+(3) Start with $y=0$. At step $t$ let $R=\log(e^{-y}w)$, suppose that its components at distances
+$<t$ lie in $\mathfrak z$, and replace $y$ by $y+Q_t$, where $Q_t$ is the component of $R_t$ in
+$\fu_P^{\ne0}$. Since $\log(e^{-y-Q_t}e^{y})\equiv-Q_t$ modulo $\fu_P^{(t+1)}$, the new logarithm is
+$R-Q_t$ modulo $\fu_P^{(t+1)}$. At the end $\log(e^{-y}w)\in\mathfrak z$, i.e.\ $e^{-y}w\in Z$; so $\mu$
+is onto, with an inverse given by polynomials. It is injective: if $e^{y}z=e^{y'}z'$ with $y\ne y'$,
+let $t$ be the least distance with $y_t\ne y'_t$; then $\log(e^{-y'}e^{y})\equiv y-y'$ modulo
+$\fu_P^{(t+1)}$ has the nonzero distance-$t$ component $y_t-y'_t\in\fu_P^{\ne0}$, but it lies in
+$\log Z=\mathfrak z$.
+
+\emph{Sizes.} Each iteration consists of $m-1<d$ steps, each a bounded number of the operations
+covered by the tame calculus in the proof of Lemma~\ref{lem:sizes}: products and sums,
+$\exp(X)-1$, $\log(1+X)$, $(1+X)^{-1}-1$, conjugation by the block diagonal matrices $h^{\pm1}$, products
+with the diagonal matrix $Y$, projection onto a distance component or onto a set of coordinates, and
+application on $\mathfrak v_t$ of a fixed linear map whose matrix has polynomial size (the inverse of
+$1-\operatorname{Ad}(h^{-1})$ on its image, with the kernel component set to zero, which has polynomial size by
+Cramer's rule; and the entrywise division by the $y_\psi-y_\chi$). With $\delta$ the product of $m!$
+and of the denominators and numerators of the fixed matrices involved, each operation maps a
+$(c,\kappa)$-tame matrix to a $(c+2,F\kappa)$-tame one with $\log F$ polynomial, exactly as in that
+proof. After $O(m)$ operations we get $(O(m),F^{O(m)}\kappa_0)$-tameness, and an entry at distance
+$s\le m$ of a $(c,\kappa)$-tame matrix has bit length at most $2cs\log\delta+s\log\kappa+2$, which is
+polynomial.
+\end{proof}
+
+\paragraph{The torus from short words.} For a word $w$ in the letters $M_a^{\pm1}$ write $M_w$ for its
+matrix, $|w|$ for its length, and $S_w$ for the identity component of the closure of
+$\langle b(M_w)\rangle$; it is a subtorus of $S$, since $b(M_w)^e\in S$ for $e=|H/S|$.
+
+For a subgroup $\Delta$ of $D(\Q)$ let $\Lambda(\Delta)\subseteq\Q^{X_S}$ be the span of the vectors
+$(v_p(t_\chi))_{\chi\in X_S}$ over all $t=\sum_\chi t_\chi\varepsilon_\chi\in\Delta$ and all primes $p$,
+where $v_p$ is the $p$-adic valuation. The identity component of the closure of $\Delta$ is cut out in
+$D$ by the characters $x\mapsto\prod_\chi x_\chi^{a_\chi}$ ($a\in\Z^{X_S}$) that take root-of-unity
+values, i.e.\ the values $\pm1$, on $\Delta$~\cite[8.2, 8.12]{Bor91}, and $\prod_\chi t_\chi^{a_\chi}=\pm1$
+iff $\sum_\chi a_\chi v_p(t_\chi)=0$ for all $p$. Hence, identifying $y\in\Q^{X_S}$ with
+$\sum_\chi y_\chi\varepsilon_\chi$,
+\begin{equation}\label{eq:lietorus}
+\operatorname{Lie}\bigl(\overline\Delta^{\,\circ}\bigr)=\Lambda(\Delta).
+\end{equation}
+
+\begin{lemma}[Short words generate the torus]\label{lem:torus}
+$\operatorname{Lie}(S)=\sum_w\operatorname{Lie}(S_w)$, the sum over the words of length at most $2d^2+2d$. For each such
+word, $\operatorname{Lie}(S_w)$ is spanned by vectors of polynomial size.
+\end{lemma}
+\begin{proof}
+For $g\in b(\Gamma)$ and $\chi\in X_S$ let $g_\chi:V_{\pi_g^{-1}\chi}\to V_\chi$ be the restriction
+of $g$, a square matrix in the weight basis. Let $\mathcal P$ be the finite set of primes dividing a
+numerator or denominator of some $\det((b_a^{\pm1})_\chi)$. For $g\in b(\Gamma)$ define
+$c(g)\in\mathsf P:=\Q^{X_S}\otimes\Q^{\mathcal P}$ by $c(g)_{\chi,p}=v_p(\det g_\chi)$. Since
+$(gh)_\chi=g_\chi h_{\pi_g^{-1}\chi}$, we have the cocycle identity $c(gh)=c(g)+\pi_gc(h)$, where
+$(\pi_gu)_\chi=u_{\pi_g^{-1}\chi}$; in particular every $\det g_\chi$ is a product of the generator
+determinants, so its valuations outside $\mathcal P$ vanish, and $|c(b(M_w))_{\chi,p}|\le|w|\beta_0$, where
+$\beta_0=O(d(\sigma+\log d))$ bounds the bit lengths of these determinants. For
+$t\in S$ we have $\det t_\chi=t_\chi^{n_\chi}$, so with $\mathsf N=\operatorname{diag}(n_\chi)$,
+\begin{equation}\label{eq:cval}
+\bigl(v_p(t_\chi)\bigr)_\chi=\mathsf N^{-1}c(t)_{\cdot,p}\qquad(t\in S\cap b(\Gamma)).
+\end{equation}
+Let $K=\{g\in\Gamma:\pi_{b(g)}=1\}$, a normal subgroup of finite index on which $g\mapsto c(b(g))$ is
+a homomorphism, and $W=\spn\{c(b(g)):g\in K\}$. For $g\in K$ some power $g^e$ has $b(g^e)\in S$ and
+$c(b(g^e))=e\,c(b(g))$; conversely $S\cap b(\Gamma)\subseteq b(K)$. For $u\in\mathsf P$ let
+$\operatorname{col}(u)\subseteq\Q^{X_S}$ be the span of the vectors $u_{\cdot,p}$ ($p\in\mathcal P$), and for a
+subspace $W'$ let $\operatorname{col}(W')=\sum_{u\in W'}\operatorname{col}(u)$. Since $S\cap b(\Gamma)$ is dense in $S$
+(Lemma~\ref{lem:monoid}), \eqref{eq:lietorus} and \eqref{eq:cval} give
+$\operatorname{Lie}(S)=\operatorname{col}(\mathsf N^{-1}W)$. Similarly, for a word $w$ let $n_w$ be the order of
+$\pi_{b(M_w)}$ and $\nu_w:=c(b(M_w)^{n_w})=\sum_{i<n_w}\pi_{b(M_w)}^ic(b(M_w))$; as
+$S_w$ is the identity component of the closure of $\langle b(M_w)^{n_we}\rangle$ and
+$c(b(M_w)^{n_we})=e\nu_w$, we get $\operatorname{Lie}(S_w)=\operatorname{col}(\mathsf N^{-1}\nu_w)$. Its spanning vectors
+have entries of absolute value at most $n_w|w|\beta_0$ with $n_w\le d!$, hence polynomial size. Moreover, for
+words $x,w$, using $c(g^{-1})=-\pi_g^{-1}c(g)$ and $\pi_{b(M_w)^{n_w}}=1$,
+\begin{equation}\label{eq:conjnu}
+\nu_{xwx^{-1}}=c\bigl(b(M_x)\,b(M_w)^{n_w}\,b(M_x)^{-1}\bigr)=\pi_{b(M_x)}\nu_w .
+\end{equation}
+
+Let $W'$ be the span of the $\pi_{b(M_x)}\nu_w$ with $|w|\le2d-1$ and $|x|\le d^2$. Then
+$W'\subseteq W$, because $M_w^{n_w}\in K$. The span of $\{\pi_g u:g\in b(\Gamma)\}$ for a fixed $u$ is
+reached by words $x$ of length less than its dimension, which is at most
+$\dim\spn\{\pi_g\}\le|X_S|^2\le d^2$; so $W'$ is stable under all $\pi_g$. We claim $W'=W$. Otherwise
+let $\mathsf Q$ be a $\pi$-stable complement of $W'$ in $\mathsf P$ (the $\pi_g$ form a finite group) and
+$q$ the equivariant projection onto $\mathsf Q$ along $W'$. Then $\bar c=q\circ c$ is again a cocycle
+with values in the permutation module $\mathsf P$, and $q(W)\ne0$. Unwinding the cocycle identity,
+for $g_i=b(M_{a_i}^{\eps_i})$,
+\[
+\bar c(g_1\cdots g_s)_\chi=\sum_{i=1}^s\bar c(g_i)_{\chi_{i-1}},\qquad\chi_0=\chi,\quad
+\chi_i=\pi_{g_i}^{-1}\chi_{i-1}.
+\]
+Let $\Omega$ be the graph with vertex set $X_S$ and, for each letter $a$ and each $\chi$, an edge from
+$\chi$ to $\pi_{b_a}^{-1}\chi$ labelled $\bar c(b_a)_\chi\in\Q^{\mathcal P}$. Since
+$\bar c(b_a^{-1})_\chi=-\bar c(b_a)_{\pi_{b_a}\chi}$, the letter $a^{-1}$ traverses an edge backwards
+with the opposite label. Thus words correspond to walks, $\bar c(b(M_w))_\chi$ is the label of the walk
+of $w$ from $\chi$, and $w\in K$ iff all these walks are closed. As $q(W)\ne0$, some $g\in K$ and some $\chi$
+give a closed walk with nonzero label. The label of a closed walk is an integer combination of the labels
+of the fundamental cycles of a spanning forest of $\Omega$, so some fundamental cycle has nonzero
+label. Read from the root $r$ of its tree, it is a closed walk of length at most $2(|X_S|-1)+1\le2d-1$,
+i.e.\ the walk from $r$ of a word $w$ with $|w|\le2d-1$ and $\pi_{b(M_w)}r=r$. Then
+$q(\nu_w)_r=\sum_{i<n_w}\bar c(b(M_w))_{\pi^{-i}_{b(M_w)}r}=n_w\,\bar c(b(M_w))_r\ne0$, so
+$\nu_w\notin W'$, a contradiction.
+
+Hence $\operatorname{Lie}(S)=\operatorname{col}(\mathsf N^{-1}W')=\sum_{x,w}\operatorname{col}(\mathsf N^{-1}\nu_{xwx^{-1}})
+=\sum_{x,w}\operatorname{Lie}(S_{xwx^{-1}})$ by~\eqref{eq:conjnu}, where $|xwx^{-1}|\le2d^2+2d-1$.
+\end{proof}
+
+\begin{lemma}[A maximal torus of polynomial size]\label{lem:v0}
+There are a regular $Y\in\operatorname{Lie}(S)$ and $v_0\in U_P(\Q)$, both of polynomial size, such that
+$v_0Sv_0^{-1}\subseteq\cG^\circ$.
+\end{lemma}
+\begin{proof}
+Let $w$ be a word with $|w|\le2d^2+2d$. Lemma~\ref{lem:iter}(1), applied to $h=b(M_w)$ and $g=M_w$,
+gives $u_w\in U_P(\Q)$ of polynomial size with $(M_w)_s=u_wb(M_w)u_w^{-1}$. Hence the torus
+$\Theta_w$, the identity component of the closure of $\langle(M_w)_s\rangle$, equals $u_wS_wu_w^{-1}$;
+it lies in $\cG^\circ$, because $(M_w)_s\in\cG$ (A2) and $\Theta_w$ is connected. So
+$\operatorname{Ad}(u_w)\operatorname{Lie}(S_w)\subseteq\operatorname{Lie}(\cG^\circ)$. Let $Y_{w,1},Y_{w,2},\ldots$ be spanning vectors of
+$\operatorname{Lie}(S_w)$ of polynomial size (Lemma~\ref{lem:torus}); altogether they span $\operatorname{Lie}(S)$, say $n$ of
+them. For each of the at most $d^2$ pairs $(\chi,\psi)$ in the definition of regularity,
+$c\mapsto(y_\chi-y_\psi)\bigl(\sum c_{w,i}Y_{w,i}\bigr)$ is a nonzero linear form on $\Q^n$, which
+vanishes on at most $(d^2+1)^{n-1}$ points of the box $\{0,\ldots,d^2\}^n$. So some $c$ in the box
+avoids all of them. Put $Y=\sum c_{w,i}Y_{w,i}$, which is regular, and
+$X=\sum c_{w,i}\operatorname{Ad}(u_w)Y_{w,i}\in\operatorname{Lie}(\cG^\circ)$. Both have polynomial size, and $b(X)=Y$, because
+$\operatorname{Ad}(u)Z-Z\in\fu_P$ for $u\in U_P$ and block diagonal $Z$. Lemma~\ref{lem:iter}(2) gives
+$v_0\in U_P(\Q)$ of polynomial size with $X_s=\operatorname{Ad}(v_0)Y$.
+
+It remains to show $v_0Sv_0^{-1}\subseteq\cG^\circ$. Let $T'$ be a maximal torus of $\cG^\circ$. Then
+$b(T')=b(\cG^\circ)=H^\circ=S$ (A2), since $\cG^\circ=T'U$ and $b(U)=1$. The tori $T'$ and $S$ are maximal
+tori of the connected solvable group $b^{-1}(S)=S\ltimes U_P$, so $T'=vSv^{-1}$ for some $v\in U_P$
+\cite[10.6]{Bor91}. Put $\fu'=\operatorname{Ad}(v^{-1})\fu$ and $X'=\operatorname{Ad}(v^{-1})X$. As
+$\operatorname{Lie}(\cG^\circ)=\operatorname{Lie}(T')\oplus\fu$, we have $X'\in\operatorname{Lie}(S)\oplus\fu'$, and comparing images under $b$
+gives $X'=Y+N$ with $N\in\fu'$. Now $\fu'$ is $\operatorname{Ad}(S)$-stable, so it is the sum of its intersections
+with $\mathfrak z$ and with $\fu_P^{\ne0}$, and $\operatorname{ad}(Y)$ maps $\fu'\cap\fu_P^{\ne0}$ bijectively onto itself.
+If the component $N^{\ne0}$ of $N$ in $\fu_P^{\ne0}$ lies in $\fu_P^{(t)}$, let $Z\in\fu'\cap\fu_P^{\ne0}$
+with $[Z,Y]=N^{\ne0}$; then $Z\in\fu_P^{(t)}$, since $\operatorname{ad}(Y)$ preserves distances, and
+$\operatorname{Ad}(e^{-Z})(Y+N)=Y+N-N^{\ne0}+R$ with $R=-[Z,N]+\frac12[Z,[Z,Y+N]]-\cdots$, which lies in
+$\fu'\cap\fu_P^{(t+1)}$. After fewer than $m$ such steps we obtain $u'\in\exp(\fu')=v^{-1}Uv$ with
+$\operatorname{Ad}(u'^{-1})X'\in Y+\mathfrak z$, so $X'_s=\operatorname{Ad}(u')Y$ as in Lemma~\ref{lem:iter}(2). Thus
+$v''=vu'\in U_P$ satisfies $\operatorname{Ad}(v'')Y=X_s$, and
+$v''Sv''^{-1}=(vu'v^{-1})T'(vu'v^{-1})^{-1}\subseteq\cG^\circ$, as $vu'v^{-1}\in U$. Finally
+$\operatorname{Ad}(v_0)Y=\operatorname{Ad}(v'')Y$, so $v''^{-1}v_0\in C_{U_P}(Y)=Z$ by~\eqref{eq:regcent}, and $Z$ centralizes $S$;
+hence $v_0Sv_0^{-1}=v''Sv''^{-1}\subseteq\cG^\circ$.
+\end{proof}
+
+From now on we conjugate by $v_0$: we replace $M_a$ by $v_0^{-1}M_av_0$, and $\cG$, $U$, $\fu$ by their
+conjugates. This changes neither the $b_a$ nor polynomial size, and now $S\subseteq\cG^\circ$.
+
+\begin{lemma}[Moving the generators into the normalizer of $S$]\label{lem:xhat}
+For each $a$ there is $\hat x_a\in U(\Q)$ of polynomial size such that $m_a:=\hat x_a^{-1}M_a$ normalizes
+$S$. Moreover $m_a\in\cG$, $m_a$ has polynomial size, and $b(m_a)=b_a$.
+\end{lemma}
+\begin{proof}
+As $S\subseteq\cG$ normalizes $U$, the Lie algebra $\fu$ is $\operatorname{Ad}(S)$-stable, so
+$\fu=\fu^0\oplus\fu^{\ne0}$ with $\fu^0=\fu\cap\mathfrak z$ and $\fu^{\ne0}=\fu\cap\fu_P^{\ne0}$, and
+$C_U(S)=\exp(\fu^0)$, since $e^X$ commutes with $s\in S$ iff $\operatorname{Ad}(s)X=X$. We claim
+$U=\mu\bigl(\exp(\fu^{\ne0})\times C_U(S)\bigr)$. The set $\mu^{-1}(U)$ is closed and irreducible of dimension
+$\dim U$, because $\mu$ is an isomorphism (Lemma~\ref{lem:iter}(3)). It contains
+$\exp(\fu^{\ne0})\times\exp(\fu^0)$, which is closed and irreducible of dimension
+$\dim\fu^{\ne0}+\dim\fu^0=\dim U$; so the two sets are equal.
+
+The torus $S$ is a maximal torus of $\cG^\circ$, since the maximal tori of $\cG^\circ$ map isomorphically onto
+$b(\cG^\circ)=S$. As $\cG^\circ$ is normal in $\cG$, $M_aSM_a^{-1}$ is a maximal torus of $\cG^\circ$ too, so
+$M_aSM_a^{-1}=xSx^{-1}$ for some $x\in U$ \cite[10.6]{Bor91}. Write $x=e^yz$ with $y\in\fu^{\ne0}$ and
+$z\in C_U(S)$, and put $\hat x_a=e^y\in U$. Then $\hat x_aS\hat x_a^{-1}=M_aSM_a^{-1}$, so
+$m_a=\hat x_a^{-1}M_a\in\cG$ normalizes $S$. Let $Y$ be as in Lemma~\ref{lem:v0} and $Y_a=\operatorname{Ad}(b_a)Y$,
+which is regular. The element $\operatorname{Ad}(m_a)Y$ lies in $\operatorname{Lie}(S)$, and elements of $\operatorname{Lie}(S)$ are determined by
+their images under $b$; so $\operatorname{Ad}(m_a)Y=Y_a$, i.e.\ $\operatorname{Ad}(\hat x_a)Y_a=\operatorname{Ad}(M_a)Y$. By~\eqref{eq:regcent}
+and the injectivity of $\mu$, $\hat x_a$ is the only element of $\exp(\fu_P^{\ne0})$ with this property.
+The linear system $(I+N)Y_a=\operatorname{Ad}(M_a)Y\,(I+N)$ in $N\in\fu_P$ has coefficients of polynomial size and the
+solution $\hat x_a-I$. Let $w_a$ be $I$ plus its reduced echelon solution, which is rational of
+polynomial size. Then $w_a\in\hat x_aC_{U_P}(Y_a)=\hat x_aZ$ by~\eqref{eq:regcent}, so $\hat x_a=e^y$ with
+$y$ the component of $w_a$ given by Lemma~\ref{lem:iter}(3). Hence $\hat x_a$ is rational of polynomial
+size, and so is $m_a$. Finally $b(m_a)=b(M_a)=b_a$, because $\hat x_a\in U_P$.
+\end{proof}
+
+\begin{lemma}[The part of $U$ centralizing $S$]\label{lem:Upp}
+Let $N'$ be the closure of the group generated by $S$ and $m_1,\ldots,m_k$, and $U''=N'\cap U_P$.
+Then $U''\subseteq C_U(S)$, and $\operatorname{Lie}(U'')$ is spanned by matrices of polynomial size.
+\end{lemma}
+\begin{proof}
+$N'\subseteq\cG$ normalizes $S$. An element $u\in U_P$ normalizing $S$ centralizes it, because
+$usu^{-1}\in S$ and $b(usu^{-1})=s$; so $U''\subseteq U\cap Z=C_U(S)$.
+
+The algebra $C(S)=\bigoplus_\chi\operatorname{End}(V_\chi)$ (the centralizer of $S$ in $M_d(\Q)$) is stable under
+conjugation by $b(\Gamma)$, and $S$ acts trivially on it. Let $\Psi$ be the group of these conjugation
+operators. It is finite, as its kernel contains $S\cap b(\Gamma)$, which has finite index in $b(\Gamma)$.
+By Lemma~\ref{lem:finite}(2), applied to the generators $\operatorname{Ad}(b_a)|_{C(S)}$ in dimension $\le d^2$,
+$|\Psi|\le(2d^2+1)^{d^4}$, and the elements of $\Psi$ have entries of polynomial bit length with a common
+denominator of polynomial bit length. The centralizer of $C(S)$ in $\GL_d$ is $D$, so $\operatorname{Ad}(b(g))$ is
+trivial on $C(S)$ iff $b(g)\in D$.
+
+Let $Y_N=\{g\in N':b(g)\in D\}$ and $\varphi(g)=b(g)^{-1}g$ for $g\in Y_N$. For $g\in Y_N$ the element
+$n=b(g)^{-1}g\in U_P$ normalizes $S$, since $g$ and $b(g)$ do; so $n\in Z\subseteq C(S)$, and $n$ commutes
+with $b(g)$, which is central in $C(S)$. As $b(g)$ is semisimple and $n$ unipotent, $g_s=b(g)$ and $g_u=n$,
+and both lie in $N'$ (A2). Hence $\varphi(g)\in N'\cap U_P=U''$. Moreover $\varphi$ is a homomorphism:
+$\varphi(gh)=b(h)^{-1}\varphi(g)b(h)\varphi(h)=\varphi(g)\varphi(h)$, as $\varphi(g)\in Z\subseteq C(S)$ commutes with
+$b(h)\in D$. Since $U''\subseteq Y_N$ and $\varphi$ is the identity on $U''$, $U''=\varphi(Y_N)$.
+
+Let $\Gamma''=\langle m_1,\ldots,m_k\rangle$, let $N'_0$ be its closure, and let $K''=\Gamma''\cap Y_N$, the kernel of
+$\Gamma''\to\Psi$, $g\mapsto\operatorname{Ad}(b(g))|_{C(S)}$; it has index at most $|\Psi|$. The product $N'_0S$ is a closed
+subgroup containing $\Gamma''$ and $S$, so $N'=N'_0S$, and $Y_N=(N'_0\cap Y_N)S$ as $S\subseteq Y_N$. Since
+$\varphi(S)=1$, $U''=\varphi(N'_0\cap Y_N)$. The closure of $K''$ is a closed subgroup of finite index in
+$N'_0\cap Y_N$, so its image under $\varphi$ is a closed subgroup of finite index of the connected group $U''$,
+hence equal to $U''$. Thus $U''$ is the closure of the group generated by $\varphi(K'')$, and so by the
+$\varphi(\varsigma)$ for the Schreier generators $\varsigma=r_\psi m_ar_{\psi'}^{-1}$ of $K''$, where $r_\psi$ is a
+shortest positive word in the $m_a$ mapping to $\psi\in\Psi$. These are words of length $s<2|\Psi|$ in the
+$m_a^{\pm1}$. As in the proof of Lemma~\ref{lem:apriori}, a word
+$\varsigma=m_{a_1}^{\eps_1}\cdots m_{a_s}^{\eps_s}$ factors as $\varsigma=b(\varsigma)\prod_{i=1}^s(1+x_i)$ with
+$1+x_i=\beta_i^{-1}\,b(m_{a_i}^{\eps_i})^{-1}m_{a_i}^{\eps_i}\,\beta_i$ and
+$\beta_i=b(m_{a_{i+1}}^{\eps_{i+1}}\cdots m_{a_s}^{\eps_s})\in b(\Gamma)$. Here
+$b(m_a)^{-1}m_a=b_a^{-1}m_a$ and $b_am_a^{-1}$ lie in $Z$, so $x_i$ is the image under an element of $\Psi$ of a
+matrix in $\mathfrak z$ of polynomial size. Hence the $x_i$ are strictly block upper triangular with entries
+in $\Delta^{-1}\Z$ of absolute value at most $2^{p_0}$, for some $\Delta$ and $p_0$ of polynomial bit length.
+Products of $m$ of them vanish, so $\varphi(\varsigma)=\prod_i(1+x_i)$ is a sum of at most $ms^{m-1}$ products of
+fewer than $m$ factors $x_i$, and has bit length $O(m\log s+mp_0+m\log\Delta)$, which is polynomial since
+$\log|\Psi|$ is. The same holds for $\log\varphi(\varsigma)$. Finally, the closure of the group generated by
+unipotent elements $u_i\in U_P$ is $\exp\mathfrak l$, where $\mathfrak l$ is the Lie algebra generated by the
+$\log u_i$: $\exp\mathfrak l$ is a closed subgroup (Baker--Campbell--Hausdorff) containing the $u_i$, and the
+closure contains $\exp(\tau\log u_i)$ for all $\tau$ (A3), so its Lie algebra contains $\mathfrak l$. By (F3),
+$\operatorname{Lie}(U'')$ is spanned by matrices of polynomial size.
+\end{proof}
+
+\begin{proposition}\label{prop:ugen}
+Let $V$ be the smallest subspace of $\fu_P$ that contains $\log\hat x_1,\ldots,\log\hat x_k$ and
+$\operatorname{Lie}(U'')$ and is stable under $\operatorname{Ad}(m_a)^{\pm1}$ ($1\le a\le k$) and under $\operatorname{ad}(Y')$ for $Y'\in\operatorname{Lie}(S)$.
+Then $\fu$ is the Lie algebra generated by $V$.
+\end{proposition}
+\begin{proof}
+Let $\mathfrak n$ be the Lie algebra generated by $V$. By (F3) it is stable under the automorphisms
+$\operatorname{Ad}(m_a)^{\pm1}$ and the derivations $\operatorname{ad}(Y')$, hence under $\operatorname{Ad}(S)$ ($S$ is connected) and under
+$\operatorname{Ad}(N')$, since stabilizing a subspace is a closed condition. Since $\hat x_a\in U$, $U''\subseteq U$, and
+$N'\subseteq\cG$ normalizes $U$, we have $\mathfrak n\subseteq\fu$. Conversely, $\mathcal N=\exp\mathfrak n$ is a closed
+connected unipotent subgroup normalized by $N'$, so $N'\mathcal N$ is a closed subgroup. It contains
+$M_a=\hat x_am_a$, hence $\cG$. If $g=n'n\in U=\cG\cap U_P$ with $n'\in N'$ and $n\in\mathcal N\subseteq U_P$, then
+$n'\in N'\cap U_P=U''=\exp\operatorname{Lie}(U'')\subseteq\mathcal N$, so $g\in\mathcal N$. Thus $U\subseteq\mathcal N$ and
+$\fu\subseteq\mathfrak n$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:detpoly}]
+By Lemmas~\ref{lem:torus}, \ref{lem:xhat} and \ref{lem:Upp}, the generators of $V$ in
+Proposition~\ref{prop:ugen} are spanned by matrices of polynomial size, and the operators $\operatorname{Ad}(m_a)^{\pm1}$ and
+$\operatorname{ad}(Y')$ ($Y'$ in a spanning set of $\operatorname{Lie}(S)$ of polynomial size) have polynomial size. By (F2) and (F3),
+$\fu$ is spanned by matrices of polynomial size, in the weight basis conjugated by $v_0$. Undoing the
+conjugation by $v_0$ and the block diagonal change of basis, both of polynomial size, gives the first
+claim in the adapted basis. Projecting these spanning matrices onto the distances $\le j$ gives spanning sets
+of $\fu_j=\pi_j(\fu)$ of polynomial size, so $\operatorname{ht}(\fu_j)$ is polynomial by (F1), and so is $B_f$. By
+Theorem~\ref{thm:polytime}(2) the algorithm of Section~\ref{ssec:layers} then runs in deterministic polynomial
+time on every invertible series.
+\end{proof}
+
+\begin{remark}\label{rem:detpoly}
+(i) The algorithm is unchanged; only its analysis is new. The proof is constructive except for the spanning set
+of $\operatorname{Lie}(U'')$, which uses Schreier generators of a subgroup of possibly exponential index. That set is used
+only to bound heights, in the same way as in Lemma~\ref{lem:apriori}, which is the case $S=1$ of the argument
+(then $Y=0$, $v_0=I$, $\hat x_a=I$, $m_a=M_a$ and $U''=U$).
+
+(ii) Remark~\ref{rem:polytime}(ii) shows that unipotent parts of words of length $\le n$ may all be trivial in
+dimension $n+2$. Lemma~\ref{lem:torus} shows that the torus behaves better: $\operatorname{Lie}(H^\circ)$ is always spanned by
+the Lie algebras of the closures of the $b(M_w)$ with $|w|\le2d^2+2d$. For the affine Weyl group of type
+$\tilde A_n$ in its multiplicative form of Remark~\ref{rem:polytime}(ii), words of length at most $n$ have
+finite order, so length $n+1$ is necessary; in our exact experiments ($n\le3$) it was also sufficient.
+
+(iii) Theorem~\ref{thm:polytime}(3) is superseded: no randomness is needed. The random-prime argument there is
+still valid.
+\end{remark}

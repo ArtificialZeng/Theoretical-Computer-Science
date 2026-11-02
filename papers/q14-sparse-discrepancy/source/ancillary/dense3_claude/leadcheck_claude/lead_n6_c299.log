@@ -1,0 +1,7 @@
+checker: /Users/mac/Documents/ChatGPT/STOC理论计算机/claude_stoc2027_claude/q14paper_claude/ancillary/small_n_check/cover_bnb.py
+lead_n6_j1.txt: 2 patterns, 2 boxes, not proved 0, 0.0s
+lead_n6_j2.txt: 7 patterns, 7 boxes, not proved 0, 0.0s
+lead_n6_j3.txt: 23 patterns, 23 boxes, not proved 0, 0.0s
+lead_n6_j4.txt: 76 patterns, 78 boxes, not proved 0, 0.0s
+lead_n6_j5.txt: 245 patterns, 281 boxes, not proved 0, 0.4s
+lead_n6_j6.txt: 782 patterns, 1232 boxes, not proved 0, 34.6s

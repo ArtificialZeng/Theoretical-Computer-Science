@@ -1,0 +1,6 @@
+n=6 s=1 levels=1,2,2,2,2,2 j=1: TOTAL patterns 4 boxes 4 uncleared 0 dfsnodes 4 skipped 0
+n=6 s=1 levels=1,2,2,2,2,2 j=2: TOTAL patterns 17 boxes 17 uncleared 0 dfsnodes 22 skipped 0
+n=6 s=1 levels=1,2,2,2,2,2 j=3: TOTAL patterns 68 boxes 70 uncleared 0 dfsnodes 145 skipped 0
+n=6 s=1 levels=1,2,2,2,2,2 j=4: TOTAL patterns 265 boxes 315 uncleared 0 dfsnodes 1552 skipped 0
+n=6 s=1 levels=1,2,2,2,2,2 j=5: TOTAL patterns 977 boxes 1689 uncleared 0 dfsnodes 30355 skipped 0
+n=6 s=1 levels=1,2,2,2,2,2 j=6: TOTAL patterns 3424 boxes 11715 uncleared 0 dfsnodes 13864521 skipped 33

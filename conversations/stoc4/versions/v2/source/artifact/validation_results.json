@@ -1,0 +1,54 @@
+{
+  "revision": "treeflow-v2",
+  "seed": 20261031,
+  "lower_bounds": {
+    "matrix_vector_cases": 4164,
+    "graph_answers": 12420,
+    "fact_answers": 12420,
+    "stack_answers": 12420,
+    "selector_bit_transitions": 12420
+  },
+  "treeflow": {
+    "edits": 108,
+    "pair_answers": 24696,
+    "circuit_edits": 300,
+    "circuit_outputs": 9600
+  },
+  "recursion": [
+    {
+      "base": true,
+      "summary_a": true,
+      "summary_b": true,
+      "rounds": 3
+    },
+    {
+      "base": false,
+      "summary_a": false,
+      "summary_b": false,
+      "rounds": 1
+    },
+    {
+      "base": true,
+      "summary_a": true,
+      "summary_b": true,
+      "rounds": 3
+    }
+  ],
+  "sharing": {
+    "edits": 24,
+    "maximum_affected": 72
+  },
+  "scope": "finite correctness checks, not repository performance measurements",
+  "record_counts": {
+    "lower_row": 12420,
+    "selector": 12420,
+    "bag_init": 3,
+    "bag_edit": 108,
+    "bag_answer": 24696,
+    "circuit_init": 3,
+    "circuit_edit": 300,
+    "circuit_answer": 9600,
+    "recursion": 3,
+    "sharing": 24
+  }
+}

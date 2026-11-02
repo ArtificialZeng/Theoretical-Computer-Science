@@ -1,0 +1,36 @@
+{
+  "source_files": [
+    "evidence/research-bf90b0105355-check.py",
+    "evidence/research-bf90b0105355-checks.json",
+    "intake/root-diagnostics/check_fenwick_trace_oracle.py",
+    "intake/root-diagnostics/check_localized_net.py",
+    "literature/user_bibliography_check.md",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/alphaurl.bst",
+    "manuscript/build.py",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/repro/independent_check.py",
+    "manuscript/repro/independent_reference.json",
+    "manuscript/reproduce.py"
+  ],
+  "pdf": "manuscript/main.pdf",
+  "build_command": "python3 manuscript/build.py",
+  "reproduction_command": "python3 manuscript/reproduce.py",
+  "readiness_label": "working_paper",
+  "readiness_assessment": "audit/stoc-assessment.json",
+  "accepted_snapshot_digest": "76aff8cb1dceada574829e417470dcca336a544f9c08e579f9c49cff43896135",
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "max_total_pdf_pages": 12,
+  "external_submission_authorized": false,
+  "official_class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "stage": "write; separate release audit required"
+}

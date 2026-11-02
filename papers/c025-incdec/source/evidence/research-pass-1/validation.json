@@ -1,0 +1,43 @@
+{
+  "job_id": "c025-incdec-research-393eb62fad16",
+  "role": "research",
+  "assigned_pass": 1,
+  "configured_pass_cap": 3,
+  "dispatch_at_utc": "2026-11-01T23:03:51+00:00",
+  "entry_clock_utc": "2026-11-01T23:05:54+00:00",
+  "recorded_at_utc": "2026-11-01T23:17:47.793407+00:00",
+  "source_sha256": "12956c470e37f8a548f510c7eb1781eda7b961999c5fa1163df43b56513b45a4",
+  "source_unchanged": true,
+  "source_manifest_checks": [
+    {
+      "path": "intake/primary/incremental-decremental-2026.pdf",
+      "manifest_match": true
+    },
+    {
+      "path": "intake/primary/incremental-decremental-2026.txt",
+      "manifest_match": true
+    }
+  ],
+  "exact_cases": 255,
+  "permutation_enumerated_cases": 195,
+  "reachable_local_dead_end_inputs": 10,
+  "reachable_local_dead_end_sets": 122,
+  "numerical_general_function_lp_n3_to_n6_calls": 4688,
+  "numerical_n7_partial_calls": 2435,
+  "n7_complete": false,
+  "rational_dual_scope": "One prescribed six-item trace/comparator only, two separately constructed certificates.",
+  "mathematical_status": "unresolved",
+  "candidate_kind": "none",
+  "worker_result_schema_checked": true,
+  "runner_counters_modified": false,
+  "agents_spawned": false,
+  "manuscript_or_pdf_created": false,
+  "acceptance_or_stoc_assessment_created": false,
+  "operational_failures_recorded": "route-status.md",
+  "scope_limitations": [
+    "Coverage sample is not exhaustive over function classes.",
+    "LP nonfindings are numerical, not certified general bounds.",
+    "No full algorithm guarantee is proved.",
+    "One-trace dual does not settle arbitrary n or traces."
+  ]
+}

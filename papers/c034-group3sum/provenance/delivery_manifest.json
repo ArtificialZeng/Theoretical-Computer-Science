@@ -1,0 +1,111 @@
+{
+  "package_schema": 5,
+  "project": "c034-group3sum",
+  "title": "Truly Subquadratic 3SUM over Every Bounded-Exponent Abelian Group",
+  "readiness_label": "working_paper",
+  "stoc_assessment": {
+    "job_id": "c034-group3sum-referee-f77368142a77",
+    "snapshot_digest": "15a73043f23436b1592a376f95f678e39919b724da29d1fc7773757f6a82f52a",
+    "review_type": "fresh_internal_stoc_assessment",
+    "verdict": "working_paper",
+    "strongest_result": "For every fixed M>=2, let eta=min(1/18,1/(8 ceil(log_2 M))) and delta_M=eta*(63/1000)/2. Three-list zero-sum detection and witness recovery over every compact finite abelian group of exponent dividing M and order <=n^c, for every fixed c>0, has a uniform classical randomized algorithm of worst-case cost O_(M,c)(n^(2-delta_M) polylog(n)). It never returns a false witness, always rejects negative instances, and succeeds on each fixed positive input with probability at least 3/4. This resolves the entire frozen original question.",
+    "nearest_comparisons": [
+      "Majdoddin, arXiv:2610.17420v1, Theorem 19.17/Corollary 19.25: deterministic exponent-dividing-p^2 algorithms already exist. The accepted theorem covers all fixed M, but is randomized and does not improve the existing p^2 exponent guarantee.",
+      "Majdoddin, Lemmas 19.6-19.7 and Section 19.7: support products, probes and a proposed layer-induction direction are prior. The new part is simultaneous original-coset profiles plus the extremal divisor certificate, which avoids a recursive layer construction and balances every order in one call.",
+      "Alman-Vassilevska Williams, arXiv:2610.06783v1, Corollary 26: the thin selected-entry matrix algorithm is inherited in full. This work expands its group-theoretic applicability; it supplies no new matrix exponent, integer-3SUM exponent or APSP improvement.",
+      "Majdoddin, Lemma 20.3(d), Lemma 20.4(a), Remark 20.6: the accepted group theorem implies uniform truly subquadratic algorithms for every fixed abelian-group-representable finite coordinate relation. Those reduction lemmas are prior; no classification of the remaining nonrepresentable relations follows.",
+      "Chan-Itakura-Ma-Yu, arXiv:2610.42012v1, Theorem 2.3/Sections 2-3: recent integer-3SUM and odd-k-SUM results use scalar prime hashing and carry-free convolution. They do not settle this torsion-group scope, but demonstrate that the wider area is moving quickly beyond the original matrix route."
+    ],
+    "criteria": {
+      "importance": {
+        "judgment": "strong",
+        "reason": "The actual theorem closes the whole bounded-exponent algebraic class, with a saving independent of c, instead of one p^3 example. Together with the verified finite-representation reduction it establishes a general sufficient tractability principle for coordinate relations. This is a concrete consequence, not significance inferred solely from an open-problem label."
+      },
+      "novelty": {
+        "judgment": "strong",
+        "reason": "The nearest verified group theorem is confined to exponent dividing p^2. The simultaneous original-coset divisor profiles and extremal row-count certificate are absent from the inspected prior proof and are the substantive mechanism enabling the full extension. A fresh bounded primary search found no equivalent, with priority limits disclosed."
+      },
+      "technical_depth": {
+        "judgment": "uncertain",
+        "reason": "The certificate is a nontrivial and effective new balancing argument, especially its simultaneous control of class branching and every torsion order despite profile fragmentation. However, the support construction and the expensive matrix algorithm are prior, and the source already anticipated the qualitative bounded-layer extension. The present audit establishes substantive innovation but does not establish that this compact replacement for the anticipated induction has sufficiently broad conceptual depth for a competitive STOC paper."
+      },
+      "breadth_or_consequence": {
+        "judgment": "strong",
+        "reason": "The algorithm handles all higher prime powers and mixed products, and the verified prior Lemmas 20.3(d)/20.4(a) imply uniform subquadratic algorithms for every fixed group-representable finite relation. This is a real generic consequence. It leaves nonrepresentable relations, full dichotomies, stronger counting, integer exponents and APSP untouched."
+      },
+      "exposition_and_verifiability": {
+        "judgment": "strong",
+        "reason": "The frozen proof explicitly handles original-profile fragmentation, all sum orders, matrix call dimensions/query budgets, one-sided error, exact parameter computation, worst-case execution caps and witnesses. The independent verifier checks literal support matrices and failed-probe charging on serialized deterministic test families. The mathematical argument is inspectable without relying on the proposer confidence or on computational fitting; manuscript presentation and release audits have not yet occurred."
+      }
+    },
+    "case_for_stoc": "The positive case is a complete algebraic tractability theorem beyond the prior p^2 boundary, proved by a compact simultaneous balancing certificate, with a broad consequence for every fixed group-representable coordinate relation. This connects fine-grained algorithms and finite algebra in a reusable way. The critical limitation is that most of the infrastructure and the qualitative extension goal are inherited; the current record does not yet demonstrate a compelling STOC-level conceptual impact beyond completing that extension. Mathematical correctness and substantive novelty pass, but technical-depth uncertainty prevents submission_ready under the required all-strong rule. The actual classification is working_paper.",
+    "remaining_weaknesses": [
+      "The review does not establish that the new certificate, relative to the source's already suggested layer program, has sufficient conceptual depth for a competitive STOC submission.",
+      "The generic representable-relation consequence is important but follows by prior reductions; no new hardness classification or consequence for nonrepresentable relations is proved.",
+      "The randomized saving deteriorates with M, while known p^2 algorithms remain deterministic and stronger in their existing scope. The qualitative full-class advance, not an exponent improvement, must carry the impact case.",
+      "The current primary-literature screen is bounded in a fast-developing area and cannot certify universal priority.",
+      "No manuscript, clean build, final citation audit or rendered-page verification has yet been performed; this assessment binds the mathematical snapshot only."
+    ],
+    "label_is_not_a_venue_decision": true
+  },
+  "pages": 8,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "original_status": "proved",
+  "kind": "resolution-paper",
+  "pdf": "c034-group3sum_working_paper.pdf",
+  "pdf_sha256": "4b4f3ebf15ef2108bc9e85219b4a16f7bd7f19b9e209052cd53785818350513b",
+  "source_archive": "c034-group3sum_source_and_reproducibility.zip",
+  "source_archive_sha256": "648737941d6d01c29f022526dadf67d0fc13f390107d7c50054b5084aa6d933d",
+  "class_file": "manuscript/acmart.cls",
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "reproduce_scripts": [
+    "research/verify_divisor_hash.py",
+    "research/reproduce_referee_finite.py"
+  ],
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "4b4f3ebf15ef2108bc9e85219b4a16f7bd7f19b9e209052cd53785818350513b"
+    },
+    "kind": "resolution-paper",
+    "manuscript_digest": "b3fb8002c2d047475286116eba50f1d26f407044ad1fabec0d9b739f50e07d32",
+    "original_status": "proved",
+    "pages": 8,
+    "pdf_digest": "4b4f3ebf15ef2108bc9e85219b4a16f7bd7f19b9e209052cd53785818350513b",
+    "provenance": {
+      "audit/build.json": "842c0dd2058176c1ddc1f47c549a7379acbfd17fd408bf541da653d505399ebb",
+      "audit/build.md": "009480e8abba9945cb93960427cc0ea9317491208a796232adf9f4d207f2e9dd",
+      "audit/citations.json": "d2380dbb92b091512d695d24d861b779bd7055466a54871108b4db8098ef8835",
+      "audit/citations.md": "896c5670489a5c49f7d647ab00218e74bd366ea9b3fa2132d5afb5ecec64a1f1",
+      "audit/math.json": "ea3948f645360b132105c987fcd1e1212bb5304a0fc930acb06270f086e1b66b",
+      "audit/math.md": "91d8d3dfa0ed4954a6bd40fad9a296d308d209324d87e3bb85e79d3af580fb60",
+      "audit/visual.json": "441dc53c00c523d73abe5db69c34d451d6638ebc353aa85c829a5c99fde99208",
+      "audit/visual.md": "c854d0600ebc1bb2daf181925beb2a76f39b06b3b76404bc7702c45f4070f88e",
+      "jobs/c034-group3sum-referee-f77368142a77/role.json": "fcde0cbe21b076c4fb2cf130e67b37ea4565682174db702e0895fc75f89269da",
+      "jobs/c034-group3sum-release-5f0540aba52c/role.json": "2b76f9915be62e9170af7ea837701e4e137f5543d5bb5f2e3765218a768cec05",
+      "jobs/c034-group3sum-research-3974e7a3f8f0/role.json": "d37ceb9613ef200b91deeb5cf47e476b6f0db66091e212af1fb7bbb69fc196f6",
+      "manuscript/build/main.log": "580169fa4a32e2c137a9d6143688d4fa89b29691146ea4bf8bf73e5240ea0922"
+    },
+    "schema": 1,
+    "snapshot_digest": "15a73043f23436b1592a376f95f678e39919b724da29d1fc7773757f6a82f52a"
+  },
+  "citation_verdict": "accept",
+  "citation_limitations": [],
+  "excluded_third_party_text_caches": [],
+  "external_submission_performed": false
+}

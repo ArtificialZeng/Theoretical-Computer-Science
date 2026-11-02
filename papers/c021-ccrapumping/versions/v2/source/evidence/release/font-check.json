@@ -1,0 +1,96 @@
+[
+  {
+    "page": 1,
+    "samples": []
+  },
+  {
+    "page": 2,
+    "samples": [
+      {
+        "text": "A cost register automaton reads a word from left to right, updating finitely many registers and finally",
+        "font": {
+          "id": "2",
+          "size": "11",
+          "family": "OLXBNF+LinLibertineT",
+          "color": "#000000"
+        }
+      }
+    ]
+  },
+  {
+    "page": 3,
+    "samples": [
+      {
+        "text": "For a subsemiring",
+        "font": {
+          "id": "2",
+          "size": "11",
+          "family": "OLXBNF+LinLibertineT",
+          "color": "#000000"
+        }
+      }
+    ]
+  },
+  {
+    "page": 4,
+    "samples": []
+  },
+  {
+    "page": 5,
+    "samples": []
+  },
+  {
+    "page": 6,
+    "samples": []
+  },
+  {
+    "page": 7,
+    "samples": []
+  },
+  {
+    "page": 8,
+    "samples": [
+      {
+        "text": "OpenAI Codex materially assisted proof development, primary-literature comparison,",
+        "font": {
+          "id": "2",
+          "size": "11",
+          "family": "OLXBNF+LinLibertineT",
+          "color": "#000000"
+        }
+      }
+    ]
+  },
+  {
+    "page": 9,
+    "samples": [
+      {
+        "text": "Filip Mazowiecki, Antoni Puch, and Daniel Smertnig. 2026. Pumping-Like Results for Copyless Cost",
+        "font": {
+          "id": "2",
+          "size": "11",
+          "family": "OLXBNF+LinLibertineT",
+          "color": "#000000"
+        }
+      },
+      {
+        "text": "Filip Mazowiecki, Antoni Puch, and Daniel Smertnig. 2026. Pumping-Like Results for Copyless Cost",
+        "font": {
+          "id": "2",
+          "size": "11",
+          "family": "OLXBNF+LinLibertineT",
+          "color": "#000000"
+        }
+      },
+      {
+        "text": "Filip Mazowiecki and Cristian Riveros. 2019. Copyless Cost-Register Automata: Structure, Expressive-",
+        "font": {
+          "id": "2",
+          "size": "11",
+          "family": "OLXBNF+LinLibertineT",
+          "color": "#000000"
+        }
+      }
+    ]
+  }
+]

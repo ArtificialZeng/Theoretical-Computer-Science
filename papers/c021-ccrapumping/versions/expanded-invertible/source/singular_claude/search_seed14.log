@@ -1,0 +1,7 @@
+control g        dim 3  affine context found: ('', '', '0', '1', [Fraction(0, 1), Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1)], [Fraction(-1, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(-1, 1)])
+control g^r      dim 3  affine context found: None
+control h        dim 3  affine context found: ('', '', '0', '1', [Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(5, 1)], [Fraction(-1, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(-1, 1), Fraction(-1, 1)])
+control h^r      dim 3  affine context found: None
+control mps f    dim 4  affine context found: None
+control mps f^r  dim 4  affine context found: ('', '', '0', '01', [Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(5, 1)], [Fraction(-1, 1), Fraction(-2, 1), Fraction(-3, 1), Fraction(-4, 1), Fraction(-5, 1)])
+{'singular-d4': 4, 'singular-d9': 4, 'invertible-d1': 1, 'singular-d6': 7, 'singular-d3': 7, 'singular-d7': 7, 'singular-d2': 3, 'singular-d8': 3, 'invertible-d2': 2, 'invertible-d3': 1, 'invertible-d7': 1}

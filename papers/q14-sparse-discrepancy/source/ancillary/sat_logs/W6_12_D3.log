@@ -1,0 +1,2 @@
+wheel [6, 1, 2] m= 18 degs [4, 4, 4, 4, 4, 4, 12]
+RESULT wheel [6, 1, 2] 3 NOCOVER 43.9s

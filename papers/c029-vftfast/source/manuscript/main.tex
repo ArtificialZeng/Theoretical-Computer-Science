@@ -1,0 +1,510 @@
+\documentclass[acmsmall,11pt,screen,nonacm]{acmart}
+\geometry{letterpaper,margin=1in,includehead=false,includefoot=false,footskip=24pt}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\setcopyright{none}
+\renewcommand{\bibfont}{\normalfont\normalsize}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\Ot}{\widetilde{O}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\cP}{\mathcal{P}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\title{Polynomial-Time Construction of Vertex-Fault-Tolerant Mixed-Stretch Spanners}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\date{}
+\begin{document}
+\begin{abstract}
+\normalsize
+Parter, Popova and Tzalik construct vertex-fault-tolerant spanners with
+$(O_\delta(\sqrt{k}),O_\delta(k))$ stretch and
+$\widetilde{O}_\delta(f^{1+\delta}n^{1+1/k})$ edges, for every fixed
+$\delta\in(0,1)$. Their construction at this tradeoff enumerates short
+paths and has running time about $fn^{\sqrt{k}}$.
+We give a deterministic polynomial-time construction at the same tradeoff,
+uniformly over the fault and stretch parameters. More precisely, the edge
+bound is $\widetilde{O}_\delta((f+1)^{1+\delta}n^{1+1/k})$, including $f=0$;
+the polynomial exponent depends only on $\delta$.
+
+The algorithm uses established representative-family machinery to retain
+short paths against every fault set, and a protected-path version of the
+length-bounded-cut test of Dinitz and Robelle. This computation costs
+$n^{O(1)}(f+d+1)^{O(d+1)}$ for path length $d$.
+After capping $k$ at $O(\log n)$, it is polynomial when
+$f^{\eta d}<n$, where $d=\lfloor\sqrt{k}\rfloor$ and
+$\eta=\min\{\delta/2,1/4\}$. In the complementary regime, the known
+multiplicative construction of Dinitz and Robelle already meets the desired
+density bound. We verify that the insertion-witness analysis of Parter,
+Popova and Tzalik applies to the resulting partial path scan and track its
+parameter factors explicitly. Pendant-path reductions then give the
+guarantee simultaneously for every surviving pair and fault set.
+The resulting algorithm realizes the full mixed-stretch tradeoff in
+deterministic polynomial time.
+\end{abstract}
+\maketitle
+\clearpage
+
+\section{The construction gap and its resolution}
+
+Let $G=(V,E)$ be an undirected unweighted simple graph on $n$ vertices.
+For $F\subseteq V$, the graph $G-F$ deletes $F$ and its incident edges.
+A subgraph $H\subseteq G$ is an $f$-vertex-fault-tolerant
+$(\alpha,\beta)$-spanner if, for every $|F|\le f$ and $u,v\notin F$ with
+finite $\dist_{G-F}(u,v)$,
+\[
+ \dist_{H-F}(u,v)\le \alpha\dist_{G-F}(u,v)+\beta.
+\]
+Thus the fault set is chosen after the subgraph, and one subgraph must
+handle all faults simultaneously.
+
+Parter, Popova and Tzalik~\cite{PPT26} establish an almost-linear dependence
+on $f$ for sublinear multiplicative stretch: their Theorem~1.4 gives
+$\Ot_\delta(f^{1+\delta}n^{1+1/k})$ edges and
+$(O_\delta(\sqrt{k}),O_\delta(k))$ stretch. Their introduction identifies
+improving this construction's running time as a remaining problem. Its
+short-path enumeration takes about $fn^{\sqrt{k}}$ time. Their polynomial
+construction with a larger polynomial dependence on $f$ has a different
+tradeoff. Here we make the almost-linear-fault tradeoff polynomial-time
+constructible, without requiring either $f$ or $k$ to be fixed.
+
+\begin{theorem}\label{thm:main}
+For every fixed rational $\delta\in(0,1)$ there are constants
+$C_\delta,b_\delta>0$ and a deterministic algorithm, polynomial in the
+explicit input length, that takes $G$ and binary integers $f\ge0,k\ge1$
+and returns an $f$-vertex-fault-tolerant
+$(C_\delta\sqrt{k},C_\delta k)$-spanner with at most
+\[
+ C_\delta(f+1)^{1+\delta}n^{1+1/k}\log(n+2)^{b_\delta}
+\]
+edges. The running-time exponent depends only on $\delta$.
+\end{theorem}
+
+Every fixed real $\delta\in(0,1)$ follows by choosing a smaller positive
+rational exponent. Throughout, $\Ot_\delta$ suppresses only a bounded
+power of $\log(n+2)$ and constants depending on $\delta$; it does not
+suppress a factor exponential in $\sqrt{k}$.
+
+\paragraph{Why complementary regimes help.}
+The algorithm's more expensive branch computes fault-representative paths
+of length $d=\lfloor\sqrt{k}\rfloor$. Standard exterior-algebra reduction
+gives a cost of $n^{O(1)}(f+d+1)^{O(d+1)}$; it does not by itself give a
+uniform polynomial-time algorithm. Set $\eta=\min\{\delta/2,1/4\}$ and
+cap $k$ at $O(\log n)$. If $f^{\eta d}<n$, this cost becomes polynomial
+with exponent depending only on $\eta$. If $f^{\eta d}\ge n$, a known
+$(2d-1)$-multiplicative spanner with
+$O(df^{1-1/d}n^{1+1/d})$ edges already has the required density. The
+larger allowed fault factor pays for its larger vertex-density exponent.
+This switch, together with a proof that the actual partial scan retains
+the source packing bound, supplies the complete construction.
+
+\paragraph{Prior tools and the precise delta.}
+Dinitz and Robelle~\cite{DR20} give a deterministic multiplicative
+construction and an elementary length-bounded-cut approximation. We use
+their Theorems~2 and~9 for size and time, and adapt their cut test by
+protecting all vertices of a candidate path. Bodwin, Dinitz and
+Robelle~\cite{BDR21} give optimal-size polynomial-time multiplicative
+spanners; the simpler construction suffices here because a factor
+polynomial in $k$ is allowed. Neither multiplicative theorem alone supplies
+the mixed-stretch tradeoff in every regime.
+
+Fomin, Lokshtanov, Panolan and Saurabh~\cite{FLPS16} develop the
+representative-family algebra and its path dynamic-programming
+applications. We give the elementary uniform-matroid specialization needed
+here. Fault-avoiding short-path coverings are also established machinery:
+Karthik C.~S. and Parter~\cite{KP23} include a vertex-fault variant;
+the more recent replacement-path-covering results
+of~\cite{BCCCS26,BCCS26} improve covering bounds in edge-fault settings.
+These works supply the established short-path-covering tools. The sparsity
+analysis relies on the path systems, spread families and robust-sunflower
+counting of Parter, Popova and Tzalik~\cite{PPT26}. The additional work
+here is their use for the partial scan below, with uniform parameter
+accounting, and the complementary-regime construction theorem.
+
+\section{Exact fault-representative paths}\label{sec:represent}
+
+Fix an $N$-vertex graph $J$, a length $d<N$, and $f\ge0$. We compute a
+family for each pair $x,y$ with the following property: whenever a simple
+length-$d$ $x$--$y$ path avoids a fault set of size at most $f$, some
+retained length-$d$ $x$--$y$ path also avoids that set.
+
+Put $T=\min\{N,f+d+1\}$. Choose a prime $p\in[N,2N)$ by trial division
+and distinct elements $\alpha_v\in\F_p$ for the vertices. This takes
+polynomial time in $N$. Let $a_v=(1,\alpha_v,\ldots,\alpha_v^{T-1})^\top$.
+Any at most $T$ distinct columns are independent by the Vandermonde
+determinant. For an $h$-set $A$, let $w(A)$ be the exterior product of its
+columns, in vertex-label order, represented by all $h$-row minors. Its
+dimension is $\binom{T}{h}$.
+
+\begin{lemma}[Standard representative reduction]\label{lem:basis}
+For a family $\mathcal A$ of $h$-sets, retain actual members whose vectors
+form a basis of $\operatorname{span}\{w(A):A\in\mathcal A\}$. The retained
+family has size at most $\binom{T}{h}$. For every $Y$ of size at most $T-h$,
+if some member of $\mathcal A$ avoids $Y$, a retained member avoids $Y$.
+\end{lemma}
+\begin{proof}
+If $A\cap Y=\varnothing$, independence of the at-most-$T$ columns gives
+$w(A)\wedge w(Y)\ne0$. Expressing $w(A)$ in the retained basis shows that
+at least one retained vector has nonzero product with $w(Y)$. Its actual
+support avoids $Y$, since a repeated column would give zero. This is an
+exact finite-field argument, a specialization of~\cite{FLPS16}.
+\end{proof}
+
+For each start $x$, store the path $(x)$ at $x$, with empty families at
+other endpoints. At each stage append a neighbor to every stored path,
+discard repetitions, and apply Lemma~\ref{lem:basis} separately at each
+new endpoint. Always keep actual paths, not only their vectors.
+
+\begin{lemma}\label{lem:paths}
+After stage $i$, the endpoint family represents all simple $i$-edge paths
+from $x$ against sets of size at most $T-i-1$. In particular the final
+families have the stated fault-avoidance property. All families, for all
+starts, can be computed in
+\[
+ N^{O(1)}(f+d+1)^{O(d+1)}
+\]
+bit operations, with absolute constants in the $O$ exponents.
+\end{lemma}
+\begin{proof}
+The invariant holds at stage zero. Suppose a path extended to $v$ avoids
+$Y$, where $|Y|\le T-i-2$. Apply the stage-$i$ invariant to
+$Y\cup\{v\}$: a stored parent avoids this set, can be extended to $v$
+without repetition, and avoids $Y$. Basis reduction preserves that
+property. This proves the induction.
+
+At the final stage, if $T=f+d+1$, the avoidance budget is $f$. If $T=N$,
+any fault set disjoint from a $(d+1)$-vertex path has size at most
+$N-d-1=T-d-1$, so this rank cap loses no necessary query. In an undirected
+graph it suffices to retain the orientation from the smaller endpoint.
+
+Let $L=\max_{1\le h\le d+1}\binom{T}{h}\le(f+d+1)^{d+1}$. There are at
+most $L$ stored paths per endpoint. A stage has at most $N^2L$ candidate
+extensions per start. Computing minors by elimination and reducing their
+vectors takes a fixed polynomial in $N,d,L,\log N$; for example
+$O(N^3(d+1)^4L^3)$ field operations suffices for all starts and stages.
+Field elements have $O(\log N)$ bits. This proves the bound without
+enumerating all simple paths or fault sets.
+\end{proof}
+
+\section{A protected-path scan}\label{sec:scan}
+
+Fix an integer $r\ge d$ and start with the empty subgraph $H$ of $J$.
+Scan each retained path $P$ once, in a fixed computable order. With endpoints
+$x,y$ and protected set $S=V(P)$, perform the following test.
+Initialize $C=\varnothing$. For $j=0,\ldots,f$, run BFS in $H-C$.
+If its shortest $x$--$y$ path has length greater than $r$ (including
+infinite distance), return $C$ and insert all edges of $P$.
+Otherwise choose such a shortest path $Q$ and set $B=V(Q)\setminus S$.
+If $B=\varnothing$ or $j=f$, reject $P$. In every other case replace
+$C$ by $C\cup B$ and continue.
+
+\begin{lemma}\label{lem:scan}
+Every insertion has a witness $C$ disjoint from $P$, with
+$|C|\le(r-1)f$ and $\dist_{H-C}(x,y)>r$ immediately before insertion.
+Every rejection certifies that
+\[
+ \dist_{H-F}(x,y)\le r
+ \quad\text{for all } |F|\le f,\ F\cap V(P)=\varnothing.
+\]
+The final graph satisfies this distance bound for every pair admitting a
+length-$d$ path in $J-F$.
+\end{lemma}
+\begin{proof}
+All collected vertices lie outside $S$. Each short $Q$ has at most $r-1$
+unprotected vertices, since its two endpoints lie in $S$. Before any return
+at most $f$ sets were collected. The final BFS supplies the witness.
+An insertion adds a new edge: otherwise $P$ itself would survive $C$ in
+the previous graph and have length $d\le r$.
+
+If $B$ is empty, $Q$ survives every fault set disjoint from $S$. Otherwise
+a rejection on the last round produces $f+1$ nonempty sets $B$. They are
+pairwise disjoint because later BFS paths avoid the earlier collected
+sets. Any fault set outside $S$ destroying every short path must intersect
+each $B$, impossible with at most $f$ vertices. This proves the rejection
+certificate, the protected version of the cut argument in~\cite{DR20}.
+
+Now fix $F$ and a length-$d$ path avoiding it. Lemma~\ref{lem:paths}
+gives a retained path avoiding $F$. If inserted it survives in the output;
+if rejected, the certificate gives a short route in the graph at that
+time. Edge insertions preserve the route. Since this argument fixes
+arbitrary $F$, it proves the simultaneous guarantee.
+\end{proof}
+
+The tests cost at most $O(N^2L(f+1)(N+|E(J)|))$ in addition to the
+representative computation. Denote the inserted paths by $P_1,\ldots,P_m$
+and the witnesses by $C_1,\ldots,C_m$. With $H_i=\bigcup_{j<i}P_j$,
+\begin{equation}\label{eq:witness}
+ C_i\cap V(P_i)=\varnothing,\qquad |C_i|\le(r-1)f,\qquad
+ \dist_{H_i-C_i}(\operatorname{ends}(P_i))>r.
+\end{equation}
+We next count this actual sequence. There is no containment assertion
+between its output and a different complete greedy run.
+
+\section{Transferring the insertion-witness count}\label{sec:packing}
+
+The following consequence uses the deep counting machinery of~\cite{PPT26}.
+We supply the transfer and parameter accounting, and identify the precise
+prior results used; we do not reprove their park or robust-sunflower theorems.
+
+\begin{proposition}\label{prop:packing}
+Fix $0<\eta\le1/4$, $k\ge4$, $d=\lfloor\sqrt{k}\rfloor$ and
+$r=\lceil12k/\eta\rceil$, with $k=O(\log(N+2))$ and an absolute constant
+in this last bound. For any sequence of simple $d$-edge paths with
+disjoint insertion witnesses as in~\eqref{eq:witness}, but with
+$|C_i|\le q$ for any integer $q\ge1$, their union has
+\[
+ \Ot_\eta(q^{1+\eta}N^{1+1/k})
+\]
+edges. The logarithmic exponent is bounded independently of $q,k,N$.
+\end{proposition}
+\begin{proof}
+If $q\ge N$, simplicity gives $|E(H)|\le N^2\le qN$, so suppose $q<N$.
+Put
+\[
+ a=\sqrt{k},\quad t=\lceil a\rceil,\quad
+ R=\lceil a/\eta\rceil,\quad s=2R-1,\quad
+ D=\left\lceil12C's^3q^{1+\eta}N^{1/k}\right\rceil,
+\]
+where $C'\ge2$ is the fixed absolute constant required in
+\cite[Lemma 5.14]{PPT26}. In particular $D\ge4s^2q$.
+The rounding bounds needed below are
+\begin{equation}\label{eq:rounding}
+ ds+2R\le4k/\eta,\qquad 2R+d\le3a/\eta,\qquad
+ (2t-1)(2R+d)\le8k/\eta.
+\end{equation}
+They follow from $R\le a/\eta+1$, $d\le a$, $t\le a+1$, $a\ge2$ and
+$\eta\le1/4$. Thus $ds\le r$.
+
+Call an edge $uv$ on $P_i$ $s$-critical if
+$\dist_{H_i-C_i}(u,v)>s$. Such an edge exists: otherwise concatenate
+the $d$ detours to contradict~\eqref{eq:witness}. This is exactly the
+argument of~\cite[Claim 4.3]{PPT26}. In particular this edge is absent
+from $H_i$ and both its endpoints avoid $C_i$.
+
+\paragraph{Why the analytical path system still applies.}
+Run Algorithm~2 of~\cite{PPT26} analytically, with parameter $q$, on these
+critical edges and witnesses. It is not a step of our implementation.
+The induction in its Lemma~4.12 takes the existing path system, a critical
+edge, a compatible fault set, and the prepend/filter update. Its invariants
+I1--I7 assert containment in $H_i$, collective bounds on paths through
+vertex sets, the pairwise park property, bounded total size, progress per
+boost, and a bounded number of boosts. The path-exchange Lemma~4.16 is for
+an arbitrary graph and critical pair. These statements and their induction
+use no rejected or omitted paths, no completeness of an endpoint scan,
+and no shortestness assumption on the inserted path. The critical edge's
+absence supplies distinct first-neighbor insertions exactly as in that
+induction. Consequently its local/global partition applies to our sequence.
+By its Theorem~4.5, the number of local rounds is
+\begin{equation}\label{eq:local}
+ O(NDs)=O_\eta(s^4q^{1+\eta}N^{1+1/k}).
+\end{equation}
+
+\paragraph{Centers with uniform factors.}
+Proposition~4.14 and Appendix~A of~\cite{PPT26} freeze the first full
+$R$-path family at each vertex and obtain a center set $S$. Every global
+round has two nonempty families of length-$R$ paths in $H_i$ from middle
+vertices of $P_i$ to $S$. Each is $C'sq$-spread: for a family
+$\mathcal A$ based at $v$ and every $U\subseteq V\setminus\{v\}$,
+\[
+ |\{Q\in\mathcal A:U\subseteq V(Q)\}|\le
+ |\mathcal A|(C'sq)^{-|U|}.
+\]
+The same proposition bounds the prefix and suffix distances along $P_i$
+in $H_i-C_i$ by their respective lengths times $s$.
+Its proof uses the analytical path system and the present witnesses, so
+the transfer just verified supplies its hypotheses.
+
+It is necessary to keep the constants in its sampling bound. With
+\[
+ M=\log(100\cdot2^{R+2}D^RN),\qquad
+ p=\min\{11(10C'sq/D)^RM,1\},
+\]
+Lemma~A.1 and the proof of Proposition~4.14 give
+\begin{equation}\label{eq:centers}
+ |S|\le22M q^{-\eta R}N^{1-R/k}.
+\end{equation}
+Indeed,
+\[
+ 10C'sq/D\le (5/(6s^2))q^{-\eta}N^{-1/k}.
+\]
+The factor $(5/(6s^2))^R$ can be dropped because it is at most one.
+If the probability is capped at one, the uncapped expression is at least
+one, so the same bound permits taking all $N$ vertices as centers.
+Since $q<N$, $\log D=O_\eta(\log(N+2))$ and
+$M=O_\eta(\log(N+2)^{3/2})$. Thus no positive factor exponential in
+$\sqrt{k}$ has been absorbed into logarithmic notation. The sampled
+centers are existential witnesses for counting, not randomness in the
+construction algorithm.
+
+\paragraph{Global rounds.}
+Observation~5.8 and Lemma~5.9 of~\cite{PPT26} convert these families into
+an evolving virtual multigraph: each virtual edge has a realizing path
+in $H_{i+1}$ avoiding $C_i$, and its prior virtual distance under $C_i$
+exceeds $2t-1$. Their distance contradictions remain valid by
+\eqref{eq:rounding} and $r\ge12k/\eta$. Lemma~5.14 converts the spread
+families into the robust sunflower whose kernel is the middle subpath
+of $P_i$. Its size is at most $w=d+1$. This step uses the spreadness and
+compatibility conditions already stated. Theorem~5.15, which counts
+arbitrary iterative robust cluster-fault-tolerant inputs, then bounds
+the number of global rounds by
+\[
+ O(wq^w|S|^{1+1/t}).
+\]
+Substituting~\eqref{eq:centers}, the exponents satisfy
+\[
+ w-\eta R(1+1/t)\le1,\qquad
+ (1-R/k)(1+1/t)\le1.
+\]
+The first uses $\eta R\ge a\ge d$, and the second uses
+$R/k\ge1/(t+1)$. Also $1+1/t\le3/2$, so the positive factor
+$(22M)^{1+1/t}$ remains polylogarithmic. Hence the global count is
+$\Ot_\eta(wqN)$. If $S$ is empty there are no global rounds, since their
+families must be nonempty. Combining this count with~\eqref{eq:local},
+and charging at most $d$ edges per round, proves the proposition. All
+remaining factors in $s,d,w$ are polynomial in $k=O(\log(N+2))$.
+\end{proof}
+
+For the scan, take $q=(r-1)f$ when $f\ge1$, and $q=1$ when $f=0$.
+Empty witnesses are admissible with the larger analytical budget. Thus
+its output has
+\begin{equation}\label{eq:dtor-size}
+ \Ot_\eta\bigl((1+(r-1)f)^{1+\eta}N^{1+1/k}\bigr)
+\end{equation}
+edges. The difficult combinatorial ingredients of this bound remain
+the cited results of Parter, Popova and Tzalik; the transfer checks why
+their hypotheses hold for the construction actually used here.
+
+\section{All distances and simultaneous vertex faults}\label{sec:scales}
+
+For $\ell=0,\ldots,d-1$, form $J_\ell$ by attaching a private
+$\ell$-edge pendant chain to every vertex of the base graph $G$.
+It has $N_\ell=(\ell+1)n\le dn$ vertices. Run the scan on each augmented
+graph with the same $d,r,f$, retain its edges with both endpoints in
+$V(G)$, and let $H$ be the union of these projections. This is the
+pendant reduction of~\cite[Appendix B]{PPT26}; we spell out its fault
+quantifiers.
+
+Fix $F\subseteq V(G)$ with $|F|\le f$. If $u,v$ have surviving base
+distance $b=d-\ell\ge1$, the pendant tip $v'$ at $v$ in $J_\ell-F$ has
+distance exactly $b+\ell=d$ from $u$. Pendant chains give no shortcuts.
+Lemma~\ref{lem:scan} supplies a route of length at most $r$ in the augmented
+output minus this same $F$. A shortest such route is simple. It must reach
+$v$ and traverse the private chain, and cannot make excursions into other
+pendant chains. Its base segment is therefore a route in the projection
+minus $F$, of length at most $r-\ell$. The augmented fault guarantee
+includes $F$ itself; no additional or substituted faults are needed.
+
+Segment a shortest $G-F$ path into $d$-edge pieces and a final remainder
+of length $b<d$. Every piece is geodesic in $G-F$. The $\ell=0$ projection
+routes full pieces within $r$; for $b>0$ use $\ell=d-b$ to route the
+remainder within $r-(d-b)\le r$. Thus, for all surviving pairs,
+\begin{equation}\label{eq:stretch}
+ \dist_{H-F}(u,v)\le(r/d)\dist_{G-F}(u,v)+r.
+\end{equation}
+By~\eqref{eq:dtor-size} the total number of edges is at most
+\begin{equation}\label{eq:scales-size}
+ d\,\Ot_\eta\bigl((1+(r-1)f)^{1+\eta}(dn)^{1+1/k}\bigr).
+\end{equation}
+Only base edges remain, so this is an unweighted subgraph spanner.
+
+\section{Uniform running time and boundary cases}\label{sec:switch}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+For $n\le2$, return $G$. Otherwise cap $f$ at $n-2$. This loses no
+requirement for distinct surviving pairs: a fault set with two surviving
+vertices already has size at most $n-2$. Cap the input $k$ at
+$K=\lceil\log_2(n+2)\rceil$. For an original $k>K$, a construction at
+$K$ changes the density factor by at most two since $n^{1/K}\le2$;
+its stretch terms only improve. Below, $k$ denotes the capped parameter.
+Reading and capping arbitrarily large binary integers is polynomial in
+the explicit input length.
+
+Set $\eta=\min\{\delta/2,1/4\}$. We use the following deterministic
+theorem of Dinitz and Robelle~\cite[Theorems 2 and 9]{DR20}: for
+integers $t\ge1$ and $g\ge1$ there is a $g$-VFT $(2t-1)$-spanner with
+\[
+ O(tg^{1-1/t}n^{1+1/t})\ \text{edges},\qquad
+ O(mt g^{2-1/t}n^{1+1/t})\ \text{construction time}.
+\]
+For $k\le3$, use it with $t=k$ and $g=\max\{1,f\}$.
+The density meets the requested bound, $2k-1\le3\sqrt{k}$ in this
+range, and the runtime is polynomial. In particular $f=0$ does not
+justify returning a dense graph in this branch.
+
+Suppose $k\ge4$, and put $d=\lfloor\sqrt{k}\rfloor$,
+$r=\lceil12k/\eta\rceil$. If $f\ge1$ and
+\begin{equation}\label{eq:switch}
+ f^{\eta d}\ge n,
+\end{equation}
+use the multiplicative construction with $t=d,g=f$. From
+$n^{1/d}\le f^\eta$, its edge count is
+\[
+ O(df^{1-1/d}n^{1+1/d})
+ \le O(df^{1+\eta-1/d}n)
+ \le O(d(f+1)^{1+\delta}n^{1+1/k}).
+\]
+The factor $d\le\sqrt K$ is logarithmic slack. Its stretch is
+$2d-1\le2\sqrt{k}$, and its time is polynomial since $f\le n$,
+$d\le\sqrt K$ and $m\le n^2$. The switch is exact: if
+$\eta=A/B$ in lowest terms, compare the integers $f^{Ad}$ and $n^B$.
+
+Otherwise use the pendant construction of Section~\ref{sec:scales}.
+Here $f=0$ or $\log f<\log n/(\eta d)$. Since
+$f+d+1\le(f+1)(d+1)$,
+\begin{align*}
+ (d+1)\log(f+d+1)
+ &\le(d+1)\log(f+1)+(d+1)\log(d+1)\\
+ &=O_\eta(\log(n+2)).
+\end{align*}
+For $f\ge1$ this uses $\log(f+1)\le\log2+\log f$ and
+$(d+1)/d\le2$. For $f=0$ the first term vanishes. In both cases
+$(d+1)\log(d+1)\le2d^2\le2K$, with natural logarithms.
+Lemma~\ref{lem:paths} and the scan cost are consequently polynomial in
+$n$, with exponent depending only on $\eta$. There are at most
+$d\le\sqrt K$ augmented graphs, each with $N\le dn\le n^2$;
+the switch uses the base $n$. BFS introduces only polynomial factors.
+In particular no fault enumeration occurs in the algorithm.
+
+In~\eqref{eq:scales-size}, all positive factors in $d,k,r$ are
+polylogarithmic in $n$, because $r=O_\eta(k)$ and $k\le K$.
+The edge count is therefore
+$\Ot_\eta((f+1)^{1+\eta}n^{1+1/k})$, which meets the $\delta$ bound.
+Also $d\ge\sqrt{k}/2$ for $k\ge4$, so~\eqref{eq:stretch} has
+$r/d=O_\eta(\sqrt{k})$ and $r=O_\eta(k)$.
+The construction is deterministic on every input; no expected-time or
+random-success qualification is needed. Restoring the original capped
+parameters proves all claims.
+\end{proof}
+
+\section{Verification and limitations}
+
+Exact finite checks supplement the proof. A reference implementation
+constructed representative families, ran the protected scan, and projected
+all pendant scales. It tested every labeled graph on $n=2,3,4$ and ten
+fixed graph masks each on $n=5,6$, for
+$d\le\min\{3,n-1\}$, $f\le\min\{2,n-2\}$ and distinct radii among
+$d,d+1,2d+1,48d^2$. All 3,160 mixed constructions passed, including
+6,248 individual scans, 23,909 insertion-witness checks, 809,892
+rejection-certificate checks and 57,856 final mixed-distance comparisons.
+The largest augmented graph had 18 vertices. Separately, 20,465 rational
+parameter cases checked the displayed packing inequalities. A separate
+implementation checked representative avoidance and distances on 84 small
+graphs, with no failures. The proofs establish the asymptotic guarantees,
+while the scripts check these finite instances. OpenAI Codex materially
+assisted development of the algorithm and proofs and implementation and
+checking of these finite verifications.
+
+The algorithm realizes the full mixed-stretch tradeoff in deterministic
+polynomial time using the prior tools credited above. The polynomial
+exponent is unoptimized and can grow as $\delta$ decreases.
+
+\section*{AI methodology}
+OpenAI Codex materially assisted all sections through literature comparison,
+algorithm and proof development, implementation, checking and writing.
+Separate Codex contexts reviewed the argument and primary sources; the
+accompanying scripts perform the finite verification described above.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\end{document}

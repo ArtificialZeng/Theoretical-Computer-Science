@@ -1,0 +1,56 @@
+{
+  "job_id": "c022-spe-memory-write-ec7adf27a885",
+  "review_type": "writer_visual_inspection_not_fresh_release_audit",
+  "pdf": "output/pdf/spe-memory-working_paper.pdf",
+  "pdf_digest": "c6f0eef23829878b3d7b75daa7093c6e90063748459b352dbf74dc2737371b31",
+  "manuscript_digest": "bf2ff6975b073ab30ef9ab28bef780cd700d4fcc4421e6a5d3d8b5c934446313",
+  "all_pages_inspected": true,
+  "pages": 7,
+  "render_command": "pdftoppm -r 110 -png output/pdf/spe-memory-working_paper.pdf tmp/pdfs/final-spe-memory",
+  "page_checks": [
+    {
+      "page": 1,
+      "image": "evidence/write/pages/page-1.png",
+      "image_sha256": "492ddf06edf4e230b044f21b522d6c9d93878d23148e84122380304f8151702d",
+      "observed": "Separate title page: complete title, one human author, authorized university/email, readable abstract; no clipping."
+    },
+    {
+      "page": 2,
+      "image": "evidence/write/pages/page-2.png",
+      "image_sha256": "463db06a327a5964b99d89403a0693bd858e3fda7cd7a3bd6613e839a7a720ef",
+      "observed": "Introduction/theorem: single-column text, correct sole-author running header, precise scope and prior-work citations; no overlap."
+    },
+    {
+      "page": 3,
+      "image": "evidence/write/pages/page-3.png",
+      "image_sha256": "47bb59362af740ab777c4e942e2fa517ac8735f520816afd249cc0473199f1f9",
+      "observed": "Definitions/labels: vertex-update convention, equations and local-credibility statement legible; no missing symbols."
+    },
+    {
+      "page": 4,
+      "image": "evidence/write/pages/page-4.png",
+      "image_sha256": "c2a0c8cb4289a08cedbaa4faa38bb650a276d0da458150e95984ea16d04be01f",
+      "observed": "Progress proof/machine: finite-distance definition, memory count and reset formulas fit within text width."
+    },
+    {
+      "page": 5,
+      "image": "evidence/write/pages/page-5.png",
+      "image_sha256": "cc7ac57906be6b6f3116125a7ab9294c435f951ad729dd5fd85552d55f93cf15",
+      "observed": "Realization/deviation proof: equations and losing-bit argument legible; no clipping or overflowing lines."
+    },
+    {
+      "page": 6,
+      "image": "evidence/write/pages/page-6.png",
+      "image_sha256": "0d0f633f036939c8bb033fec278414bb49028343a1c43e0621e5b23581b1f743",
+      "observed": "Corollary/limits/AI: required-subset implication and substantial AI-use statement visible; no invented human review."
+    },
+    {
+      "page": 7,
+      "image": "evidence/write/pages/page-7.png",
+      "image_sha256": "33cd1c511fec75211a1838f9fd6df52723d60c973467af45516a7bbf2d1c0940",
+      "observed": "Bibliography: all five references readable, direct URLs wrap inside margins, alphanumeric labels and accents render correctly."
+    }
+  ],
+  "unresolved_visual_defects": [],
+  "fresh_release_review_pending": true
+}

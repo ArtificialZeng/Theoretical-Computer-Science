@@ -1,0 +1,15 @@
+{
+  "job_id": "c032-dspdag-write-4528226e5001",
+  "phase": "write",
+  "outcome": "ready",
+  "accepted_snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+  "manuscript_digest": "9613c4f7e8e5406dc2e3312cf341dbd6f33414ee5f66cff719cff192b02bc4b9",
+  "pdf_digest": "3c9ff8313644bb68153b83ada65abc821d682fe5c994d68157178d20444a0799",
+  "readiness_label": "working_paper",
+  "fresh_release_review_pending": true,
+  "all_listed_evidence_exists": true,
+  "frozen_manuscript_bytes_match": true,
+  "no_external_submission": true,
+  "no_agents_spawned": true,
+  "research_passes_preserved": true
+}

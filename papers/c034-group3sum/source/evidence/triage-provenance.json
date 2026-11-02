@@ -1,0 +1,22 @@
+{
+  "job_id": "c034-group3sum-triage-7cb7e5c1a226",
+  "phase": "triage",
+  "entry_utc": "2026-11-02T16:01:53Z",
+  "dispatch_utc": "2026-11-02T15:59:52Z",
+  "main_test_deadline_utc": "2026-11-02T16:03:51.999993Z",
+  "finalization_deadline_utc": "2026-11-02T16:05:51.999989Z",
+  "source_sha256": "f3507a3e5b20d6707750b7e703d5d1c0764d4d5b13ef6b7a4f0001d940c8e8cf",
+  "primary_sha256": "a536921aea8fe16830262db76c624593c5815094ae495ef5afce8c761d1c3d2e",
+  "source_status": "open-supported",
+  "research_passes_observed": 0,
+  "research_passes_consumed": 0,
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "status": "completed",
+  "outcome": "advance",
+  "recorded_utc": "2026-11-02T16:05:09.745995+00:00",
+  "source_unchanged": true,
+  "manuscript_created": false,
+  "pdf_created": false,
+  "subagents_spawned": 0
+}

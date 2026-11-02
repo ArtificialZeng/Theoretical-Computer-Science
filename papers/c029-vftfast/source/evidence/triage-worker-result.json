@@ -1,0 +1,13 @@
+{
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "The current primary source supports an open uniform polynomial-time target with substantive potential payoff. Nearest polynomial-time results do not provide its combined sparsity/stretch tradeoff; no resolution is claimed. Source and primary-input hashes are preserved.",
+  "next_test": "In the first bounded research pass, prove or diagnose the joint path-and-fault gap separator in problem.md, including path protection, completeness, and preservation of the source packing bound, without n^sqrt(k) enumeration.",
+  "evidence": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/triage-sources.md",
+    "evidence/triage-integrity.json"
+  ]
+}

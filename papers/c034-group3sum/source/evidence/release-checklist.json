@@ -1,0 +1,31 @@
+{
+  "job_id": "c034-group3sum-release-5f0540aba52c",
+  "snapshot_digest": "15a73043f23436b1592a376f95f678e39919b724da29d1fc7773757f6a82f52a",
+  "manuscript_digest": "b3fb8002c2d047475286116eba50f1d26f407044ad1fabec0d9b739f50e07d32",
+  "pdf_digest": "4b4f3ebf15ef2108bc9e85219b4a16f7bd7f19b9e209052cd53785818350513b",
+  "source_unchanged": true,
+  "mathematical_snapshot_unchanged": true,
+  "official_class_unchanged": true,
+  "all_three_audit_job_ids_match": true,
+  "citation_sources_exact_sorted_list": true,
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "clean_build": true,
+  "build_log_digest_matches": true,
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "source_zip_reproduction": true,
+  "readiness_label": "working_paper",
+  "assessment_unmodified": true,
+  "source_archive": "manuscript/bounded-exponent-3sum-sources-working_paper.zip",
+  "source_archive_digest": "18af105bd46abbb88e692264aa8fa993366a1b8eeb971ea73bebb769a502362c",
+  "external_submission": false
+}

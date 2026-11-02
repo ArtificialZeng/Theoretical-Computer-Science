@@ -1,0 +1,15 @@
+{
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Full bounded-exponent target is precise and open-supported by the current primary source. The p-squared theorem already covers the misleading mixed Z4/F2 example. A fully charged layer-composition algorithm has plausible substantive payoff; no resolution or candidate is claimed. Research passes remain 0/3.",
+  "next_test": "Derive a generic layer-extension invariant, using Z8 diagnostically, that controls block counts, false positives, computable potentials, total subinstance costs and witness recovery, and test composition across all prime-power and mixed-prime layers without narrowing the original target.",
+  "evidence": [
+    "problem.md",
+    "evidence/triage.md",
+    "evidence/triage-provenance.json",
+    "checkpoint.md",
+    "intake/primary/2610.17420v1-pdf.txt",
+    "intake/Majdoddin-groups-current-README.md"
+  ]
+}

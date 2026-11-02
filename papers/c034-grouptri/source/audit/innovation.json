@@ -1,0 +1,16 @@
+{
+  "job_id": "c034-grouptri-referee-e6a7f319b8fe",
+  "snapshot_digest": "05aa22d3dd75b43826bffb43bc7976a87898d16ab67f0597c8e4a686ca39b771",
+  "verdict": "accept",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    "R. Majdoddin, arXiv:2610.17420v1, Theorem 21.3 and Corollary 21.7(a): deterministic elementary-group Exact Triangle with fixed positive saving independent of the group-order exponent; Corollary 9.1(b) and Section 16 instantiate H(1/14,0.077). Verified against the frozen full primary text and live arXiv v1 record.",
+    "R. Majdoddin, arXiv:2610.17420v1, Remark 21.8, Propositions 21.9--21.10 and Open Problem 21.12: only few-quotient-zero or limited-residue-diversity non-elementary instances are handled, and unrestricted bounded exponent, first Z_4^d, remains open in the inspected version.",
+    "T. M. Chan, V. Vassilevska Williams and Y. Xu, arXiv:2303.14572v1, Theorem 5.1, pp. 18--19: disjoint zero-triangle decomposition into O-tilde(s^3) pieces and O-tilde(n^3/s) exceptions, with cubic initial construction; its high-frequency equations already supply the edgewise potentials. Verified by reading the full construction and proof.",
+    "N. Sheffield, V. Vassilevska Williams and Z. Xi, arXiv:2608.19092v1, introduction and Section 2.3: generic detection/all-edge/listing reductions are prior tools; the candidate's conservative capped routine is not accepted as a new tight generic reduction."
+  ],
+  "substantive_delta": "A fully charged extension algorithm combines input-sensitive capped witness acquisition with the prior frequency decomposition, converts its edgewise quotient gauges into genuine complete kernel instances despite nonhomomorphic lift carries, and closes a finite induction for every fixed exponent M with a saving independent of c. This resolves the full source question without a sparse-triangle, small-dimension, residue-degree or preprocessed-universe promise.",
+  "why_nonroutine": "The literal prior decomposition has cubic fresh-input initialization and therefore cannot simply be cited as a subcubic algorithm; the elementary backend alone does not distinguish kernel obstructions. The new closure step jointly removes that construction bottleneck, uses actual assigned quotient witnesses to obtain edgewise potentials, cancels carries before kernel division, and pays for all complete instances throughout induction. These operations establish a new algorithmic extension principle on arbitrary inputs, not merely the elementary group isomorphism or an isolated consequence of the restricted p^2 theorems. Its components remain attributed prior work, and its novelty is assessed as a combined extension theorem rather than as a new decomposition or listing theorem.",
+  "significance": "The result removes the elementary-versus-non-elementary limitation for the entire bounded-exponent Exact Triangle class, including the unrestricted logarithmic-dimensional Z_4 case and all higher or mixed fixed exponents. Its reusable quotient/kernel mechanism supplies substantive qualitative algorithmic value. The exponents are extremely small, no practical advantage is claimed, and competitive STOC significance is separately uncertain: the venue label is working_paper.",
+  "remaining_gaps": []
+}

@@ -1,0 +1,1 @@
+n=5: near-loop-free W: 418801, W whose complement has >=2 G_S-components: 0, max #components of complement: 1, splits: 837602, near-dichotomy violations: 0, both near-thick: 0, time 19.1s

@@ -1,0 +1,29 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "For every fixed integer k>=3, prescribed vertex-disjoint shortest-path detection in every positive-weight DAG on n vertices and m edges is deterministic in O_k(m+n+n^(k+0.3)) time under the immutable AVW source original-weight addition/comparison model, with all new algebraic operands bounded to O_k(log(n+2)) bits and their elementary arithmetic charged. In particular k=3 and delta=7/10 positively resolve the full existential question in source.md. The proof also establishes the exact rectangular-Boolean-primitive schedule and an explicit O_k(m+n+n^(k-2+log_2(7))) source-word fallback. Original-graph shortestness, prescribed labels, endpoint conventions, all preprocessing and unrestricted DAG instances are retained. Arbitrary input-weight bit cost and unbounded parallel-arc scan cost remain explicit; reporting is not claimed.",
+  "contribution": "An exact k-class output-minimum partition permits chronological labelled-frontier reachability to be batched into b-by-b times b-by-b^(k-1) Boolean products with a global dyadic data-movement charge. A proved rational-degeneration/interpolation/prime-specialization bridge applies established rectangular multiplication to give a polynomial dense exponent saving for all fixed k>=3, fully resolving the original already at k=3. Generic recursion, multiplication algorithms and shortest-path filtering are attributed prior tools; current novelty and significance require actual fresh review.",
+  "proposer_job_id": "c032-dspdag-research-5f16f6951448",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "evidence/research-2/proof.md",
+    "evidence/research-2/verify.py",
+    "evidence/research-2/validation.json",
+    "evidence/research-2/validation-initial.json",
+    "evidence/research-2/literature.md",
+    "evidence/research-2/review-targets.md",
+    "intake/primary/DSP-linear2404.15916.pdf",
+    "intake/primary/DSP-linear2404.15916.txt",
+    "intake/primary/DSP-full2509.14588.pdf",
+    "intake/primary/DSP-full2509.14588.txt",
+    "intake/primary/DirectedDSP2017.pdf",
+    "intake/primary/DirectedDSP2017.txt",
+    "intake/rectangular-upgrade/RectangularLGU1708.05622.pdf",
+    "intake/rectangular-upgrade/RectangularLGU1708.05622.txt",
+    "intake/rectangular-upgrade/RectangularMM2307.07970.pdf",
+    "intake/rectangular-upgrade/RectangularMM2307.07970.txt",
+    "intake/rectangular-upgrade/Valiant-contextfree1974.pdf",
+    "intake/rectangular-upgrade/Valiant-contextfree1974.txt"
+  ]
+}

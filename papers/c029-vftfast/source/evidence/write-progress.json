@@ -1,0 +1,18 @@
+{
+  "job_id": "c029-vftfast-write-7567570a6950",
+  "phase": "write",
+  "started_utc": "2026-11-02T05:56:00Z",
+  "check_math": "pass",
+  "snapshot_digest": "b1495a4cbeb794181b64a2bc9a00b637d90f0a7a7fdf654844a24036b4029e66",
+  "readiness_label": "working_paper",
+  "source_sha256": "45828a099cc88bde52aee6450b298c8b73397e4367d3911585521595f94657b8",
+  "status": "ready for separate release review",
+  "finished_utc": "2026-11-02T06:13:13.007364+00:00",
+  "manuscript_digest": "7e28f729eb7f2234aa10abc7de8172036addb82ab9269cd132f9e0c336fc1247",
+  "pdf_digest": "3489530d8f29e5851151a68c1def490c4305b44012f70751fd647ea8692b5a89",
+  "pages": 7,
+  "freeze_manuscript": "passed",
+  "source_unchanged": true,
+  "no_external_submission": true,
+  "validation_file": "evidence/write-validation.json"
+}

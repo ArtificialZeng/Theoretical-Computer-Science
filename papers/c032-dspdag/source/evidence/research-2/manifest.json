@@ -1,0 +1,30 @@
+{
+  "job_id": "c032-dspdag-research-5f16f6951448",
+  "research_pass": 2,
+  "accumulated_pass_cap": 3,
+  "at_utc": "2026-11-02T12:02:42.547871+00:00",
+  "candidate_kind": "resolution-paper",
+  "status": "proposed_full_resolution_awaiting_fresh_referee",
+  "new_proof": "evidence/research-2/proof.md",
+  "test_runs": [
+    {
+      "path": "evidence/research-2/validation-initial.json",
+      "rectangular_products": 1070895,
+      "elapsed_seconds": 3.1748246250208467
+    },
+    {
+      "path": "evidence/research-2/validation.json",
+      "rectangular_products": 1152210,
+      "elapsed_seconds": 3.904310000129044
+    }
+  ],
+  "source_unchanged": true,
+  "prior_frozen_files_unchanged": true,
+  "new_acceptance_created": false,
+  "manuscript_created": false,
+  "stoc_label": "working_paper",
+  "stoc_label_basis": "Conservative pending actual fresh assessment; previous assessment is not transferred.",
+  "remaining_test": "Fresh correctness, original-scope, current novelty/value and venue assessment of the new frozen packet.",
+  "snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+  "handoff_integrity": "evidence/research-2/handoff-check.json"
+}

@@ -1,0 +1,13 @@
+{
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Original existential DAG exponent question validated; bounded current primary-source checks support provisional open status and a substantive algorithmic payoff. No resolution claimed. Source and all twelve input hashes preserved; model and endpoint caveats recorded.",
+  "next_test": "For k=3, formalize the labelled vertex-disjoint frontier recurrence and one exact matrix-batching invariant; validate against tiny weighted-DAG path enumeration, then prove a charged O(n^(4-delta)) schedule or identify the violated invariant.",
+  "evidence": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/triage-validation.json",
+    "evidence/literature-triage.md"
+  ]
+}

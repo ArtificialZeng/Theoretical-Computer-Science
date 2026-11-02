@@ -1,0 +1,20 @@
+{
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Proposed full resolution: endpoint-oriented actual-objective greedy achieves deterministic ratio 2 with O(n^2) oracle queries for every original pair and all cardinalities, matching the existing structural lower bound. Complete proof and exact checks are preserved; fresh review is pending.",
+  "next_test": "Fresh referee: independently audit the full proof, direction reversal, oracle scope and matching lower bound; check additive-nonmonotonicity antecedents and assess substantive novelty and STOC significance.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "claim.json",
+    "evidence/research-pass-3/oriented-greedy-proof.md",
+    "evidence/research-pass-3/literature.md",
+    "evidence/research-pass-3/exact-verification.json",
+    "evidence/research-pass-3/oriented-greedy-exact.json",
+    "evidence/research-pass-3/oriented-greedy-lp.json",
+    "evidence/research-pass-3/research-progress.md",
+    "evidence/research-pass-3/validation.json"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "job_id": "c026-aonflow-release-7db9e6fea069",
+  "unmodified_copies": [
+    {
+      "path": "manuscript/acmart.cls",
+      "sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+      "matches_official": true
+    },
+    {
+      "path": "manuscript/ACM-Reference-Format.bst",
+      "sha256": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04",
+      "matches_official": true
+    },
+    {
+      "path": "manuscript/acmart.dtx",
+      "sha256": "e29efd327f5c759f3d1f2e99dc8588c6a05b734c142f89c3e348161b893e44ff",
+      "matches_official": true
+    },
+    {
+      "path": "manuscript/acmart.ins",
+      "sha256": "fa7daaa9375775ce699f33f909667bdb83c0408fd8d67606926df86c346c4044",
+      "matches_official": true
+    },
+    {
+      "path": "manuscript/README",
+      "sha256": "5f4b13963e839e1df1783d70495d1ea485e58facf936cfea27841fad6bdda863",
+      "matches_official": true
+    }
+  ]
+}

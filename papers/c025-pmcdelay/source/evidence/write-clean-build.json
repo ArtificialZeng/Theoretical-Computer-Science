@@ -1,0 +1,13 @@
+{
+  "job_id": "c025-pmcdelay-write-7714292f197a",
+  "command": "python3 tmp/write-clean/build.py",
+  "clean_start": "Copied only listed source inputs, excluding the generated main.bbl; no aux/log/PDF or prior build cache was copied.",
+  "exit_code": 0,
+  "text_and_pagination_match": true,
+  "pages": 9,
+  "output_pdf": "tmp/write-clean/main.pdf",
+  "log": "evidence/write-clean-build.log",
+  "byte_identity_expected": false,
+  "byte_identity_note": "Build timestamps and PDF IDs are not fixed; this receipt compares extracted layout text and page count, not PDF bytes.",
+  "release_review": false
+}

@@ -1,0 +1,40 @@
+{
+  "job_id": "c025-pmcdelay-write-7714292f197a",
+  "checked_at_utc": "2026-11-01T23:45:21.456007+00:00",
+  "source": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html",
+  "access": "Live primary CFP opened through web tool in this WRITE context.",
+  "rules": {
+    "anonymous": false,
+    "title_page": "Title, author names and affiliations, abstract",
+    "single_column": true,
+    "minimum_font_pt": 11,
+    "paper": "US Letter",
+    "margins": "approximately 1 inch",
+    "reference_labels": "alphanumeric preferred",
+    "ai_disclosure": "Substantive AI use disclosed at end and material methodological roles also in body"
+  },
+  "actual": {
+    "class": "unchanged official acmart v2.20",
+    "options": [
+      "acmsmall",
+      "12pt",
+      "screen",
+      "nonacm"
+    ],
+    "single_column": true,
+    "single_spaced": true,
+    "paper_points": [
+      612,
+      792
+    ],
+    "margin_in": 1,
+    "pages_total": 9,
+    "sole_author": "Zijian Zeng",
+    "affiliation": "UCSI University",
+    "email": "1002266693@ucsiuniversity.edu.my",
+    "ai_statement": "Last section; no invented claim of independent human verification"
+  },
+  "user_total_page_cap": 12,
+  "quality_label": "working_paper",
+  "not_external_submission": true
+}

@@ -1,0 +1,15 @@
+{
+  "job_id": "c034-grouptri-research-e96d630c6fdd",
+  "status": "passed",
+  "exhaustive_relation_tests": 49152,
+  "exhaustive_domain": "All 256 Boolean relations on [2]^3, all 16 outer-pair masks, caps 1/2/3, cutoffs 1/2, both child orders",
+  "total_outputs_in_exhaustive_tests": 90112,
+  "brute_detector_calls_in_exhaustive_tests": 215760,
+  "held_out_tests": 9000,
+  "held_out_domain": "All 125 part-size triples in {0,1,2,3,4}^3 with four specified structured relations, three caps/cutoffs and both child orders",
+  "marker_tests": 2520,
+  "marker_domain": "Every one-coordinate weight triple and every 3-bit presence pattern for moduli 2,3,4,6",
+  "limits": "Finite tests exercise bookkeeping and markers; the detector is brute force. They do not validate the asymptotic backend or prove an infinite theorem.",
+  "source_sha256": "5e49e9583e24af889c0aa15a1b6dcadb797e1d85f3f467028441af101a677b0e",
+  "script_sha256": "5e60f0864015a62917bcea48083bb4041ab10fbccb794dc4cfa5c6489ad9f829"
+}

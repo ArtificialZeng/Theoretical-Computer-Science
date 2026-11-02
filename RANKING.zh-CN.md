@@ -1,3 +1,5 @@
+> Historical comparison of an earlier snapshot. For current manuscript categories and versions, use [the unified index](README.md). This older comparison neither ranks every current topic nor determines submission_ready status.
+
 # STOC 综合比较与问题规模排序
 
 [English](RANKING.md) · [中文](RANKING.zh-CN.md)

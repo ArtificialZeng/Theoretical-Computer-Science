@@ -1,0 +1,28 @@
+{
+  "job_id": "c032-dspdag-referee-56b0105494de",
+  "snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+  "status": "complete",
+  "mathematical_verdict": "accept",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "stoc_label": "working_paper",
+  "frozen_files_unchanged": true,
+  "check_math_passed": true,
+  "evidence": [
+    "audit/math.md",
+    "audit/math.json",
+    "audit/innovation.json",
+    "audit/stoc-assessment.json",
+    "audit/fresh-56b0105494de/integrity.json",
+    "audit/fresh-56b0105494de/literature.md",
+    "audit/fresh-56b0105494de/independent_verify.py",
+    "audit/fresh-56b0105494de/verification.json",
+    "audit/fresh-56b0105494de/check-math.json"
+  ],
+  "limitations": [
+    "bounded priority screen",
+    "no fast rectangular implementation or exponent benchmark",
+    "no manuscript or PDF authored",
+    "no external submission or contact"
+  ]
+}

@@ -1,0 +1,1949 @@
+                                           Range Longest Increasing Subsequence and its Relatives
+
+                                                             Karthik C. S.∗                              Saladi Rahul†
+                                                           Rutgers University                     Indian Institute of Science
+                                                        karthik.cs@rutgers.edu                       saladi@iisc.ac.in
+
+
+
+                                                                                         Abstract
+
+
+
+
+arXiv:2404.04795v2 [cs.DS] 1 Dec 2025
+                                                 Longest increasing subsequence (LIS) is a classical textbook problem which is still actively
+                                              studied in various computational models. In this work, we present a few results for the
+                                              range longest increasing subsequence problem (Range -LIS ) and its variants. The input to
+                                              Range -LIS is a sequence S of n real numbers and a collection Q of m query ranges and for
+                                              each query in Q, the goal is to report the LIS of the sequence S restricted to that query. Our
+                                              two main results are for the following generalizations of the Range -LIS problem:
+
+                                              2D Range Queries: In this variant of the Range -LIS problem, each query is a pair of
+                                                  ranges, one of indices and the other of values, and we provide a randomized algorithm
+                                                  with running time1 O(mn
+                                                                       e     1/2 + n3/2 ) + O(k), where k is the cumulative length of the
+
+                                                  m output subsequences. This improves on the elementary e     O(mn) runtime algorithm
+                                                                 √
+                                                  when m = Ω( n). Previously, the only known result breaking the quadratic barrier
+                                                  was of Tiskin [SODA’10] which could only handle 1D range queries (i.e., each query was
+                                                  a range of indices) and also just outputted the length of the LIS (instead of reporting
+                                                  the subsequence achieving that length). Subsequent to our paper, Gawrychowski,
+                                                  Gorbachev, and Kociumaka in a preprint have extended Tiskin’s approach to handle
+                                                  reporting 1D range queries in O(n(log n)3 + m + k) time.
+                                              Colored Sequences: In this variant of the Range -LIS problem, each element in S is col-
+                                                  ored and for each query in Q, the goal is to report a monochromatic LIS contained in the
+                                                  sequence S restricted to that query. For 2D queries, we provide a randomized algorithm
+                                                  for this colored version with running time e  O(mn2/3 + n5/3 ) + O(k). Moreover, for 1D
+                                                  queries, we provide an improved algorithm with running time O(mne     1/2 +n3/2 )+O(k).
+
+                                                  Thus, we again improve on the elementary e     O(mn) runtime algorithm. Additionally,
+                                                  we prove that assuming the well-known Combinatorial Boolean Matrix Multiplica-
+                                                  tion Hypothesis, that the runtime for 1D queries is essentially tight for combinatorial
+                                                  algorithms.
+
+                                                  Our algorithms combine several tools such as dynamic programming (to precompute
+                                              increasing subsequences with some desirable properties), geometric data structures (to effi-
+                                              ciently compute the dynamic programming entries), random sampling (to capture elements
+                                              which are part of the LIS), classification of query ranges into large LIS and small LIS, and
+                                              classification of colors into light and heavy. We believe that our techniques will be of interest
+                                              to tackle other variants of LIS problem and other range-searching problems.
+
+                                          ∗
+                                             This work was supported by the National Science Foundation under Grant CCF-2313372 and by the Simons
+                                        Foundation, Grant Number 825876, Awardee Thu D. Nguyen.
+                                           †
+                                             This work supported in part by the Walmart Center for Tech Excellence at IISc (CSR Grant WMGT-23-
+                                        0001).
+                                           1
+                                             The notation O
+                                                          e hides polylogarithmic factors in n and m.
+1        Introduction
+
+In the longest increasing subsequence (LIS) problem, the input is a sequence of n real numbers
+S = (a1 , a2 , . . . , an ) and the goal is to report indices 1 ⩽ i1 < i2 < · · · < it ⩽ n, for the largest
+possible value of t, such that ai1 < ai2 < · · · < ait . The length of the LIS is then defined to be t.
+For simplicity of discussion, we will assume that all the real numbers in the sequence are distinct.
+A standard dynamic programming algorithm reports the LIS in O(n2 ) time, which can be
+improved to O(n log n) by performing patience sort [Mal62, Mal63, Arg03, Fre75] or by suitably
+augmenting a binary search tree which computes each entry in the dynamic programming table
+in O(log n) time.
+     In many applications, such as time-series data analysis, the user might not be interested
+in the LIS of the entire sequence. Instead they would like to focus their attention only on a
+“range” of indices in the sequence. Here are a few examples to illustrate this point.
+
+        • Consider a stock X in the trading market. Let the sequence represent the daily price of
+          stock X from 1950 till 2022. Instead of querying for the LIS of the entire sequence, the
+          user might gain more insights [JMA07, LZZZ17] about the trends of the stock by querying
+          for the LIS in a range of dates (or time-windows) such as Jan 2020 till March 2020 or Feb
+          2018 till Dec 2018.
+
+        • In modern times, social media platforms are the major source for generating enormous
+          content on the Internet on a minute-to-minute basis. Consider a time-series data with
+          statistics at a fine-grained level (of each minute of the day) about the number of Google
+          searches, number of Tweets posted, number of Amazon purchases, or the number of
+          Instagram posts. Monitoring the LIS under time-window constraints on such datasets
+          can lead to more insights in understanding the social media usage trends and can also
+          help in detecting abnormalities.
+
+        • Popular genome sequencing algorithms identify high scoring segment pairs (HSPs) be-
+          tween a query transcript sequence and a long reference genomic sequence in order to
+          obtain a global alignment, and this amounts to computing the LIS in the reference
+          genome [AGM+ 90, Zha03, AGH+ 04]. Typically many queries are made (corresponding
+          to various transcripts/proteins) w.r.t. the same reference genomic sequence, and this can
+          be modeled as range queries to compute the LIS.
+
+     Recently, in the theoretical computer science community, there has been a lot of interest
+in the dynamic LIS problem [MS20, KS21, GJ21b], where the goal is to maintain exact or ap-
+proximate LIS under insertion and deletion of elements. Interestingly, an important subroutine
+which shows up is the computation of LIS of a given range of elements in the sequence. For
+example, Gawrychowski and Janczewski [GJ21b] design a dynamic algorithm to quickly com-
+pute the approximate LIS for any range of indices in S. In fact, Gawrychowski and Janczewski
+go further and design a dynamic algorithm which maintains the approximate LIS for a special
+class of dyadic rectangles where the query2 is an axis-aligned rectangle in 2D and the goal is
+to compute the approximate LIS of the 2D points (from the above mapping) which lie inside
+the rectangle.
+     Motivated by this, in this paper we study several natural variants of the LIS problem where
+the 1D queries impose restriction on the range of the indices and the 2D queries impose range
+    2
+        Consider mapping the ith element ai ∈ S to a 2D point (i, ai ), to contextualize the notion of 2D queries.
+
+
+                                                           1
+restriction on both the indices and the values in the sequence. For each of these variants of the
+LIS problem there is a data structure counterpart that can be studied as well, and these results
+are later listed in Table 2.
+
+
+Vanilla Problem: One dimensional range LIS problem. The first problem is the 1D
+range longest increasing subsequence problem (1D -Range -LIS ). In the 1D -Range -LIS prob-
+lem, we are given as input a sequence S = (a1 , a2 , . . . , an ) of n real numbers and a collection Q
+of m query ranges, where each q ∈ Q is a range (or an interval) [x1 , x2 ] ⊆ [1, n]. For each q =
+[x1 , x2 ] ∈ Q, the goal is to report the LIS of the sequence S∩[x1 , x2 ] = (ax1 , ax1 +1 . . . , ax2 −1 , ax2 )
+(i.e., the output must be the longest increasing subsequence in S ∩ [x1 , x2 ]). The length of the
+LIS of the sequence S ∩ q is denoted by LIS(S ∩ q). Throughout the paper, we abuse notation for
+simplicity by using LIS to refer to both the subsequence and its length. We clarify the intended
+meaning wherever it may be unclear.
+     A straightforward approach to solve the 1D -Range -LIS problem would involve no prepro-
+cessing: for each range [x1 , x2 ] in Q, we will retrieve the elements ax1 , ax1 +1 . . . , ax2 −1 , ax2 and
+report their LIS. This would require Ω(mn log n) time in the worst-case (for instance when
+many of the ranges in Q are of Ω(n) length). In a remarkable work, Tiskin [Tis08a, Tis08b,
+Tis10] broke the quadratic barrier, by designing an O((n + m) log n) time algorithm, albeit for
+the computationally easier length version of the 1D -Range -LIS problem, in which for all q ∈ Q,
+the goal is to only output the length of the LIS in the range q (i.e., LIS(S ∩ q)). While the algo-
+rithm designed by Tiskin is tailored to handle the length version of the 1D -Range -LIS problem,
+in a subsequent work to the current paper, Gawrychowski, Gorbachev, and Kociumaka [GGK24]
+extend Tiskin’s algorithm to handle the reporting version as well by providing an algorithm
+which answers the reporting version of the 1D -Range -LIS problem in O(n(log n)3 + m + k)
+time.
+     Since the vanilla version of the range LIS problem is completely understood (up to log
+factors), we focus on the following three variants.
+
+
+Problem-I: Two dimensional range LIS problem. The next problem is the 2D range
+longest increasing subsequence problem (2D -Range -LIS ) which is a natural generalization of
+the 1D -Range -LIS problem. As before, we are given as input a sequence S = (a1 , a2 , . . . , an ).
+Consider a mapping where the ith element ai ∈ S is mapped to a 2D point pi = (i, ai ). Let
+P = {p1 , p2 , . . . , pn } be a collection of these n points. We are also given as input a collection Q
+of m query ranges, where each range in Q is an axis-aligned rectangle in 2D. For each q ∈ Q,
+the goal is to report the LIS of P ∩ q, i.e., the points of P lying inside q. See Figure 1(a) for an
+example.
+     Once again the naive approach to solve the problem would take O(mn log n) time, where
+for each range q ∈ Q, we will scan the points in P to filter out the points lying inside q
+and then compute their LIS. One might be tempted to use orthogonal range searching data
+structures [AAL09, AE98, CLP11, NR23, BCKO08] to efficiently report P ∩ q, but in the worst-
+case we could have many queries with |P∩q| = Ω(n). In this paper, even for the 2D -Range -LIS
+problem, we succeed to improve on the basic quadratic runtime algorithm when m is roughly
+   √
+Ω( n). We obtain the following result where the O(·)
+                                                  e notation hides polylog factors.
+
+Theorem 1. There is a randomized algorithm to answer the reporting version of
+                            √
+2D -Range -LIS problem in e
+                          O( n · (m + n)) + O(k) time, where k is the cumulative length
+
+
+                                                       2
+                                   q1                                                     q2
+                         e                                                      e
+   9                                                j       9                                          j
+
+                     d                                                      d
+   7                                                        7
+                 c                                                      c                      i
+                                            i
+   5                                                        5
+           b                       g                                b                     g
+
+   3                                                        3
+       a                       f                                a                     f
+
+   1                                    h                   1                                  h
+       1         3       5         7            9               1       3       5         7        9
+                         (a)                                                    (b)
+
+
+Figure 1: (a) Each element in the sequence S = (3, 5, 7, 8, 10, 2, 4, 1, 6, 9) is mapped to a 2D point.
+For example, the element 7 is mapped to c = (3, 7). The 2D -Range -LIS of the points lying in-
+side q1 is (b, c, d). (b) The same input sequence S = (3, 5, 7, 8, 10, 2, 4, 1, 6, 9) is shown here. The
+set of colors C = {orange, yellow, red}. Points b, d and h have orange color, points a, c and e
+have yellow color, and points f, g, i and j have red color. The Colored -2D -Range -LIS of the
+points lying inside q2 (the shaded region) is red color realized by the sequence (f, g, i).
+
+
+of the m output subsequences. The bound on the running time and the correctness of the
+solution holds with high probability.
+
+
+Problem-II: Colored 1D range LIS problem. In the geometric data structures literature,
+colored range searching [KN11, NV13, PTS+ 14, Mut02, LPS08, KSV06, BKMT95, AGM02,
+GJS95, JL93, LP12, Nek14, SJ05, GJRS18] is a well-studied generalization of traditional range
+searching problems. In the colored setting, the geometric objects are partitioned into disjoint
+groups (or colors), and given a query region q, the typical goal is to efficiently report [CHN20,
+CN20, CH21, LvW13], or count [KRSV07], or approximately count [Rah17] the number of colors
+intersecting q, or find the majority color inside q [CDL+ 14, KMS05].
+     In the same spirit, we study the colored 1D range longest increasing subsequence prob-
+lem (Colored -1D -Range -LIS ). In addition to the sequence S and 1D range queries Q given
+as input to the 1D -Range -LIS problem, in the Colored -1D -Range -LIS problem we are ad-
+ditionally given a coloring of S using the color set C. Each element ai ∈ S has a color chosen
+from C (the corresponding 2D point pi also has the same color). For all c ∈ C, let Pc ⊆ P
+denote the set of points with color c and for any q ∈ Q, with a slight abuse of notation, we will
+use LIS(Pc ∩ q) to denote the length of the LIS of Pc ∩ q. Moreover, we say a subsequence is
+monochromatic, if all the elements in the subsequence have the same color. For each q ∈ Q,
+the goal is then to report the longest monochromatic increasing subsequence whose length is
+equal to max LIS(Pc ∩ q). See Figure 1(b) for an example in 2D. We obtain the following result.
+           c∈C
+
+Theorem 2. There is a randomized algorithm to answer the reporting version of the
+                                   e √n · (m + n)) + O(k) time, where k is the cumulative
+Colored -1D -Range -LIS problem in O(
+
+                                                        3
+length of the m output subsequences. The bound on the running time and the correctness
+of the solution holds with high probability.
+
+    We complement the above result with a conditional lower bound that indicates that the
+above runtime for Colored -1D -Range -LIS might be (near) optimal.
+
+Theorem 3. Assuming the Combinatorial Boolean Matrix Multiplication Hypothesis, for
+every ε > 0 and C ∈ N, there is no combinatorial algorithm to answer the reporting
+version of the Colored -1D -Range -LIS problem in k/2 + C · n0.5−ε · (m + n) time, where k
+is the cumulative size of the m outputs. The lower bound continues to hold even when we
+are only required to report the color of the longest monochromatic increasing subsequence
+for each range query.
+
+     The Combinatorial Boolean Matrix Multiplication Hypothesis (CBMMH) roughly asserts
+                                           √       √
+that Boolean matrix multiplication of two n × n matrices cannot be computed by any
+combinatorial algorithm running in time n1.5−ε , for any constant ε > 0 (see Definition 3 for
+a formal statement). Here “combinatorial algorithm” is typically defined as “non-Strassen-like
+algorithm” (as defined in [BDHS13]), and this captures all known fast matrix multiplication
+algorithms.
+     While CBMMH is widely explored since the 1990s [Sat94, Lee02], there is no strong consen-
+sus in the computer science community about its plausibility. In a recent breakthrough, Abboud
+et al. [AFK+ 24], have come tantalizingly close to even refuting it. All that said, CBMMH re-
+mains a widely used hypothesis for proving conditional lower bounds [RZ11, AW14, HKNS15].
+At the very least, Theorem 3 provides evidence that any algorithm for Colored -1D -Range -LIS
+that is significantly faster than the runtime given in Theorem 2, must be highly non-trivial.
+    The proof of Theorem 3 follows as a simple consequence of a CBMMH based conditional
+lower bound in [CDL+ 14] for computing the mode of a sequence subject to range queries.
+
+
+Problem-III: Colored 2D range LIS problem. The most general problem that we
+study in this paper is the colored 2D range longest increasing subsequence problem
+(Colored -2D -Range -LIS ). The queries in Q will be axis-aligned rectangles. For each q ∈ Q,
+the goal is then to report the longest monochromatic increasing subsequence which attains
+max LIS(Pc ∩ q). See Figure 1(b) for an example. We obtain the following result.
+c∈C
+
+Theorem 4. There is a randomized algorithm to answer the reporting version of the
+Colored -2D -Range -LIS problem in O(n
+                                    e 2/3 ·(m+n))+O(k) time, where k is the cumulative
+length of the m output subsequences. The bound on the running time and the correctness
+of the solution holds with high probability.
+
+      We remark that the conditional lower bound of Theorem 3 continues to hold here too.
+     In Table 1, we have summarized the state-of-the-art upper and (conditional) lower bounds
+for the various variants of Range -LIS discussed in this paper.
+
+
+Data Structure Counterpart of the Three Variants of LIS Problem. A natural data
+structure counterpart question to the aforementioned four problems is to design a data struc-
+ture for these problems and measure the tradeoff in the time needed for preprocessing the
+input sequence versus the time needed to answer a single range query. In Table 2, we have
+
+
+                                              4
+                   Problem                    Upper Bound                       Lower Bound
+
+                                          O(n(log n)3 + m + k)                Ω(m + n + k)
+               1D-Range LIS
+                                      (Theorem 5.13 in [GGK24])                   (Trivial)
+                                        e √n · (m + n)) + O(k)
+                                       O(                                     Ω(m + n + k)
+               2D-Range LIS
+                                            (Theorem 1)                           (Trivial)
+                                          √
+                                                                        Ω n1/2−o(1) (m + n) + k
+                                                                                                   
+                                        O( n · (m + n)) + O(k)
+                                        e
+           Colored 1D-Range LIS
+                                               (Theorem 2)                      (Theorem 3)
+                                        O(n2/3 · (m + n)) + O(k)        Ω n1/2−o(1) (m + n) + k
+                                                                                                   
+                                        e
+           Colored 2D-Range LIS
+                                               (Theorem 4)                      (Theorem 3)
+
+
+Table 1: State-of-the-art upper and lower bounds are listed for the variants of Range -LIS problem considered
+in this paper. In the table, all upper bounds from this paper are randomized, and all lower bounds from this
+paper are conditional and only against combinatorial algorithms. Also, recall that n is the length of input
+sequence, m is the number of range queries, and k is the cumulative size of the m outputs.
+
+
+                   Problem              Preprocessing Time          Query time          Reference
+
+                1D-Range LIS                O(n(log n)3 )              O(kq )            [GGK24]
+                2D-Range LIS                  e 3/2 )
+                                              O(n                e 1/2 ) + O(kq )
+                                                                 O(n                    This Paper
+           Colored 1D-Range LIS               e 3/2 )
+                                              O(n                e 1/2 ) + O(kq )
+                                                                 O(n                    This Paper
+           Colored 2D-Range LIS               e 5/3 )
+                                              O(n                e 2/3 ) + O(kq )
+                                                                 O(n                    This Paper
+
+
+Table 2:      State-of-the-art upper bounds are listed for the data structure variants of Range -LIS problems
+considered in this paper. In the table, all the bounds are randomized. Also, kq is the length of the output of a
+single query.
+
+
+summarized the preprocessing and query time bounds that can be derived from the proofs of
+Theorems 1, 2, and 4.
+     Finally, we note that the proof of Theorem 3 also implies that assuming CBMMH, for ev-
+ery ε > 0, there is no data structure for the reporting version of the Colored -1D -Range -LIS
+problem (or the Colored -2D -Range -LIS problem) which can be preprocessed using a combina-
+torial algorithm in O(n1.5−ε ) time such that each query can be answered using a combinatorial
+               k
+algorithm in 2q + O(n0.5−ε ) time.
+
+
+1.1    Related Works
+
+LIS in popular settings and models. To the best of our knowledge, there is not much prior
+work on the reporting version of Range -LIS . The results of Tiskin [Tis08a, Tis08b, Tis10] on
+the length version of 1D -Range -LIS were later adapted to the reporting version in [GGK24],
+subsequent to our work. Therefore, for the rest of this subsection, we list works on the LIS
+problem in some popular settings/models.
+     In the Dynamic LIS problem we need to maintain the length of LIS of an array under in-
+sertion and deletion. The LIS problem in the dynamic setting was initiated by Mitzenmacher
+
+
+                                                       5
+and Seddighin [MS20]. In [GJ21b], an algorithm running in O(ε−5 (log n)11 ) time and pro-
+viding (1 + ε)-approximation was presented (this approximation algorithm can be adapted to
+approximate the Range -LIS problem in the dynamic setting), and in [KS21] a randomized
+exact algorithm with the update and query time e  O(n2/3 ) was provided. Finally, in [GJ21a],
+the authors provide conditional polynomial lower bounds for exactly solving Range -LIS in the
+dynamic setting.
+      In the streaming model, computing the LIS requires Ω(n) bits of space [GJKK07], so
+it is natural to resort to approximation algorithms. In [GJKK07] is a deterministic (1 + ε)-
+approximation in O( n/ε) space for LIS problem, and this was shown to be optimal [EJ08,
+                      p
+
+GG10]. We remark here that the LIS problem has also been implicitly studied in the streaming
+algorithms literature as estimating the sortedness of an array [AJKS02, LNVZ06, GJKK07,
+SW07].
+     In the setting of sublinear time algorithms, the authors of [SS17] showed how to approx-
+imate the length of the LIS to within an additive error of ε · n, for an arbitrary ε ∈ (0, 1),
+with (1/ε)1/ε · (log n)O(1) queries. Denoting the length of LIS by ℓ, in [RSSS19] the authors
+designed a non-adaptive O(λ−3 )-multiplicative factor approximation algorithm, where λ = ℓ/n,
+        √
+with O( n/λ7 ) queries (and also obtained different tradeoff between the dependency on λ and
+n). In [NV21], the authors proved that adaptivity is essential in obtaining polylogarithmic
+query complexity for the LIS problem. Recently, for any λ = o(1), in [ANSS22] a (randomized)
+non-adaptive 1/λo(1) -multiplicative factor approximation algorithm was provided with no(1) /λ
+running time.
+     In the read-only random access model, the authors of [KOO+ 18] showed how to find the
+                                                                             √
+length of LIS in O((n2 /s) log n) time and only O(s) space, for any parameter n ⩽ s ⩽ n.
+
+
+Range-aggregate queries. Range-aggregate queries have traditionally been well-studied
+in the database community and the computational geometry community. See the survey pa-
+pers [AE98, RT19, GJRS18]. In a typical range-aggregate query, the input is a collection of
+points in a d-dimensional space, and the user specifies a range query (such as an axis-aligned
+rectangle, or a disk, or a halfspace), and the goal is to compute an informative summary
+of the subset of points which lie inside the range query, such as the top-k points [Bro16,
+RT15, RT16, ABZ11, BFGLO09], a random subset of k points [Tao22, HQT14], reporting or
+counting colors or groups [CN20, CHN20, Rah21], statistics such as mode, min [BDR10], me-
+dian [BGJS11], or sum, the closest pair of points [Xue19, XLRJ20, XLRJ22], and the skyline
+points [BL14, BT11, RJ12].
+     In an orthogonal range-max problem, the input is a set P of n points in d-dimensional
+space. Each point in P has a weight associated with it. Preprocess P into a data structure, so
+that given an axis-parallel box q, the goal is to report the point in P ∩ q with the largest weight.
+In this work, we will use vanilla range trees from the textbook [BCKO08] to answer range-max
+queries (since the goal of this work is not to shave polylogarithmic factors). The preprocessing
+time to build a vanilla range tree is O(n logd−1 n) and the query time is O(logd n).
+
+
+1.2   Our first technique: Handling small LIS
+
+We design a general technique to obtain all our upper bounds. We note that throughout the
+paper, there is ample scope to shave logarithmic factors in the runtime of our various algorithms
+and subroutines. However, that is not the focus of this paper.
+
+                                                 6
+     For the sake of simplicity, we provide an overview of the general technique for the simplest
+case of 1D -Range -LIS which is in 1D and does not involve colors. Our strategy to solve the
+1D -Range -LIS problem is the following. Consider an integer parameter τ ∈ [1, n]. For the
+                                       √
+1D -Range -LIS problem, τ is set to n. We will design two different techniques. The first
+technique is deterministic and reports the correct answer if LIS(S ∩ q) ⩽ τ. If LIS(S ∩ q) > τ,
+then correctness is not guaranteed. The second technique is randomized and reports the correct
+answer with high probability if LIS(S ∩ q) ⩾ τ. As such, for each q ∈ Q, w.h.p., the correct
+result is obtained by one of the two algorithms.
+     In this subsection, we will give an overview of the first technique for 1D -Range -LIS . In
+our discussion we will use the terms element and point interchangeably. As discussed before,
+the ith element in sequence S is equivalent to the 2D point (i, ai ) in P. Consider the special
+case where there is a vertical line with x-coordinate x∗ such that each query range in Q contains
+x∗ (we will show later in Section 2 how to remove the assumption).
+
+
+Idea-1: Lowest peaks and highest bases. Please refer to Figure 2(i) where eighteen points
+are shown. Chain C1 and chain C2 are increasing sequences to the left of x∗ and both have
+length four. Our first observation is that if we are allowed to store either C1 or C2 , then it
+would be wiser to store C2 . The reason is that C2 can “stitch” itself with chain C3 and C4 ,
+to form an increasing subsequence of length six and eight, respectively. On the other hand,
+C1 cannot stitch itself with C3 or C4 to form a larger increasing subsequence. Analogously,
+between chains C4 and C5 , we will prefer C4 since it can stitch with C2 , whereas C5 cannot
+stitch with any chain to the left of x∗ . In fact, the LIS of the eighteen points is realised by the
+chain C2 ∪ C4 with length eight. This motivates the definition of lowest peak and highest base.
+
+
+                                                                           d                                j
+               C1            C3                                                                                 R[x2 ][1]
+                                                       L[x1 ][3]
+                                                                                   e
+
+                               C4                                                                   h
+                                                                                                                R[x2 ][2]
+                                                                                                        i
+                                                                                                                R[x2 ][3]
+                C2            C5                                                            f
+                                                     L[x1 ][2]                 c
+                                                                   a
+                                                                                                g
+       x1             x∗             x2             L[x1 ][1]          b
+
+                                                              x1                       x∗                       x2
+
+                       (i)                                                              (ii)
+
+
+
+Figure 2: (i) An example with eighteen points and five chains is shown. (ii) An example with
+ten points. The query is the range [x1 , x2 ]. In the range [x1 , x∗ ], the sequence with the lowest
+peak of length one is (b), of length two is (b, c) or (a, c), of length three is (b, c, e) or (a, c, e).
+In the range [x∗ , x2 ], the sequence with the highest base of length one is (j), of length two is
+(h, j), of length three (f, h, j) or (f, i, j). The LIS of points in the range [x1 , x2 ] is five and the
+corresponding compatible pair is (L[x1 ][2], R[x2 ][3]).
+
+     For an increasing subsequence S ∈ S, we define peak (resp., base) to be the last (resp.,
+
+
+                                                   7
+first) element in S. The algorithm will store two 2-dimensional arrays:
+
+Array L: For all integers 1 ⩽ x1 ⩽ x∗ and for all 1 ⩽ α ⩽ τ, among all increasing subsequences
+    of length α in the range [x1 , x∗ ], let S be the subsequence with the lowest peak. Then
+    L[x1 ][α] stores the value of the last element in S.
+
+Array R: For all integers x∗ < x2 ⩽ n and for all 1 ⩽ β ⩽ τ, among all increasing sequences
+    of length β in the range (x∗ , x2 ], let S be the subsequence with the highest base. Then
+    R[x2 ][β] stores the value of the first element in S.
+
+    For example, in Figure 2(i), for the range [x1 , x∗ ] and α = 4, the chain C2 is the subsequence
+with the lowest peak; and for (x∗ , x2 ] and α = 4, chain C4 is the subsequence with the highest
+base. Efficient computation of the O(nτ) entries in arrays L and R will be discussed later.
+     A pair (L[x1 ][α], R[x2 ][β]) is defined to be compatible if L[x1 ][α] < R[x2 ][β], i.e., it is possible
+to “stitch” the sequences corresponding to L[x1 ][α] and R[x2 ][β] to obtain an increasing sequence
+of length α + β. For a query range q = [x1 , x2 ], our goal is to find the compatible pair
+(L[x1 ][α], R[x2 ][β]) which maximizes the value of α + β, i.e.,
+
+                         LIS(S ∩ [x1 , x2 ]) = max{α + β | L[x1 ][α] < R[x2 ][β]}.
+                                               α,β
+
+
+Idea-2: Monotone property of peaks and bases. For a given query q = [x1 , x2 ], a naive
+approach is to inspect all pairs of the form (L[x1 ][α], R[x2 ][β]), for all 1 ⩽ α, β ⩽ τ, and then
+pick a compatible pair which maximizes the value of α + β. The number of pairs inspected is
+Θ(τ2 ) which we cannot afford. However, the following monotone property will help in reducing
+the number of pairs inspected to O(τ log τ):
+
+   • For a fixed value of x1 , the value of L[x1 ][α] increases as the value of α increases, i.e., for
+     any 1 ⩽ α ⩽ α ′ ⩽ τ, we have L[x1 ][α] ⩽ L[x1 ][α ′ ].
+
+   • Analogously, for a fixed value of x2 , the value of R[x2 ][β] decreases as the value of β
+     increases, i.e., for any 1 ⩽ β ⩽ β ′ ⩽ τ, we have R[x2 ][β] ⩾ R[x2 ][β ′ ].
+
+See Figure 2(ii) for an example where L[x1 ][α] values are increasing with increase in α and
+R[x2 ][β] values are decreasing with increase in β. For each 1 ⩽ i ⩽ τ, the largest βi for which
+(L[x1 ][i], R[x2 ][βi ]) is compatible can be found in O(log τ) time by doing a binary search on the
+monotone sequence (R[x2 ][1], R[x2 ][2], . . . , R[x2 ][τ]). Finally, report maxi (i + βi ) as the length
+of the LIS for S ∩ q. Overall, the time taken to answer the m query ranges will be O(mτ log τ).
+
+
+Idea-3: Pivot points and dynamic programming. Now the key task is to design a pre-
+processing algorithm which can quickly compute each entry in the two-dimensional arrays L
+and R. We will look at R and an analogous discussion will hold for L. Assume that we have
+computed the value of R[x2 − 1][β] and would like to next compute R[x2 ][β]. Let px2 = (x2 , ax2 )
+be the point with x-coordinate x2 which is encountered when we move the vertical line from
+x2 − 1 to x2 .
+     Formally, we claim that the value of R[x2 ][β] is higher than R[x2 − 1][β] if and only if there
+is an increasing subsequence with the following three properties: (i) the subsequence length is
+β, (ii) the base of the subsequence is higher than R[x2 − 1][β], and (iii) the last point in the
+subsequence is px2 . Please refer to Figure 3 for an example.
+
+                                                     8
+                             px2
+                                                                       px2
+              S1                                         S1                                   S1
+      b                                          b                                    b                     px2
+                   S2                                         S2                                   S2
+          c                                          c                                    c
+      a                                          a                                    a
+
+ x∗                      x2 −1              x∗                      x2 −1        x∗                      x2 −1
+              (a)                                             (b)                                  (c)
+
+
+
+Figure 3: Two sequences S1 and S2 lie to the left of the vertical line x2 −1. The value of R[x2 −1][5]
+is realized by the y-coordinate of point a. In (a) and (b), we have R[x2 ][5] > R[x2 − 1][5], and
+in (c), we have R[x2 ][5] = R[x2 − 1][5]. In case (a), point px2 stitches with S1 to obtain a
+subsequence of length five with with higher base than a. In case (b), by stitching point px2
+with S2 and removing point a, we obtain a subsequence of length five and it has a higher base
+than a.
+
+    We define px2 to be a pivot point. Now to efficiently compute R[x2 ][β], we will need the
+support of another two-dimensional array B defined as follows: among all increasing subse-
+quences of length β in the range (x∗ , x2 ] containing pivot point px2 as the last element, let S
+be the subsequence with the highest base. Then B[x2 ][β] is defined to be the value of the first
+element in S. In Figure 3(a) and Figure 3(b), B[x2 ][5] is realized by the y-coordinate of b and c,
+respectively. As a result, we can succinctly encode the three properties stated above as follows:
+
+                                      R[x2 ][β] ← max{R[x2 −1][β], B[x2 ][β]}.
+
+In other words, an increasing sequence of length β in the interval (x∗ , x2 ] with the highest base
+will either contain the pivot element px2 or not. The first term (i.e., R[x2 −1][β]) captures the
+case where px2 is not included, whereas the second term (i.e., B[x2 ][β]) captures the case where
+px2 is included. As such, the task of efficiently computing R has been reduced to the task of
+efficiently computing B.
+
+
+Idea-4: 2D range-max data structure. The final step is to compute each entry in B in
+polylogarithmic time. The entries will be computed in increasing values of β. Assume that
+the entries corresponding to sequences of length at most β−1 have been computed. Then the
+entries B[x2 ][β]’s can be reduced to entries of B[·][β − 1]’s as follows:
+                         
+                         
+                         ax2 , if β = 1;
+                         
+                   B[x2 ][β] =     −∞, if ai > ax2 for all x∗ < i < x2 ;
+                                 
+                                 
+                                 max{B[i][β−1] | x∗ < i < x and a < a },         otherwise.
+                                                            2      i     x2
+
+
+We will efficiently compute B[x2 ][β]’s by constructing a data structure which can answer 2D
+range-max queries. In a 2D range-max query, we are given n weighted points P in 2D. Each
+point is associated with a weight. For each point pi = (i, ai ) ∈ P, given a query region of the
+form q ′ = (−∞, i) × (−∞, ai ), the goal is to report the point in P ∩ q ′ with the maximum
+weight. The 2D range-max problem can be solved in O(n log n) time (via reduction to the
+so-called 2D orthogonal point location problem [ST86]).
+      Now with each point pi ∈ P, we associate the weight B[i][β − 1] and build a 2D range-max
+
+
+                                                               9
+data structure. For each point px2 = (x2 , ax2 ) ∈ P, the point in P ∩ (−∞, x2 ) × (−∞, ax2 ) with
+the maximum weight is reported. If point pi is reported, then set B[x2 ][β] = B[i][β − 1]. The
+correctness follows from the third case in the above dynamic programming. Since β ⩽ τ, the
+time taken to construct B is O(τ) × O(n log n) = O(nτ log n).
+   Therefore, the overall time taken by this technique to answer 1D -Range -LIS will be
+                     e √n + n√n) + O(k) by setting τ ← √n.
+O(mτ + nτ) + O(k) = O(m
+e
+
+
+Idea-5: Generalizing L and R to handle 2D -Range -LIS . We briefly describe the chal-
+lenge arising while handling 2D -Range -LIS where the queries are axis-parallel rectangles. The
+definition of highest bases and lowest peak fail to be directly useful. For example, see Figure 4,
+where LIS(P ∩ q) is equal to five, and is realized by stitching S2 and S3 . However, L[x1 ][3] will
+correspond to the sequence S1 and R[x2 ][2] will correspond to the sequence S4 , both of which
+lie completely outside q.
+                                                x1    x = x∗ x2
+                                                            S4
+
+
+                                                     S2         S3
+
+
+                                                      S1             q
+
+
+
+        Figure 4: Four increasing subsequences lying in the range [x1 , x2 ] × (−∞, +∞).
+
+     The key observation in the 2D setting is that for an increasing subsequence S and a query
+rectangle q = [x1 , x2 ] × [y1 , y2 ], if the first and the last point of S lie inside q, then all the points
+of S lie inside q. Accordingly, we generalize the definitions of L and R. Specifically, in the 2D
+setting, R takes two arguments, the query q and an integer β, and is defined as follows:
+
+                    R(q, β) ←     max         {B[i][β] | pi ∈ q, i > x∗ and B[i][β] > y1 }.
+                                pi =(i,ai )
+
+For example, in Figure 4, the new definition of R(q, 2) ensures that the sequence S3 gets cap-
+tured instead of S4 . We construct L analogously. Note that in the 1D setting, L and R were
+explicitly computed. However, in the 2D setting, the number of combinatorially different axis-
+parallel rectangles is significantly more than our time budget. Therefore, L and R cannot be
+precomputed and stored. Instead, for all 1 ⩽ α ⩽ τ (resp., 1 ⩽ β ⩽ τ), we will compute L(q, α)
+(resp., R(q, β)) during the query algorithm in O(τ · polylog n) time.
+
+
+1.3    Our second technique: Handling large LIS
+
+Now we give an overview of our second technique for the 1D -Range -LIS problem (which we
+show in Theorem 7 extends to the 2D -Range -LIS problem as well). If LIS(S ∩ q) ⩾ τ, then
+this technique will report the answer correctly with high probability.
+
+
+Idea-1: Stitching elements. One challenge with the LIS problem is that it is not decom-
+posable. Consider a query range q = [x1 , x2 ] × (−∞, +∞) and an x∗ such that x1 < x∗ < x2 .
+
+
+                                                           10
+                                                                 p11
+                               p2                                                 p15
+                                                p7                     p13
+              N W (p8 )                                                                 N E(p8 )
+                                                           p9
+                                                                      p12
+                                                      p8
+                                     p4                         p10
+                                               p6                           p14
+              SW (p8 )                                                                  SE(p8 )
+                                          p5
+                          p1
+                                    p3
+
+
+Figure 5: A collection of fifteen elements. Given a query range q = [2, 14]×(−∞, +∞), suppose
+an oracle reveals that p8 lies in the LIS of P ∩ q. Then observe that we can discard the points
+in SE(p8 ) and NW(p8 ) which are shown as shaded regions. The LIS of P ∩ q ∩ NE(p8 ) will be
+(p8 , p9 , p13 ) and and the LIS of P ∩ q ∩ SW(p8 ) will be (p3 , p5 , p6 , p8 ). Therefore, LIS of P ∩ q
+will be (p3 , p5 , p6 , p8 , p9 , p13 ).
+
+
+Let qℓ = [x1 , x∗ ] × (−∞, +∞) and qr = (x∗ , x2 ] × (−∞, +∞) such that q = qℓ ∪ qr . Then the
+LIS of P ∩ q need not be the concatenation of the LIS of P ∩ qℓ and the LIS of P ∩ qr , since the
+rightmost point in the LIS of P ∩ qℓ might have a larger value than the leftmost point in the
+LIS of S ∩ qr .
+     However, suppose an oracle reveals that point pi ∈ P lies in the LIS of range q = [x1 , x2 ] ×
+(−∞, +∞). Then we claim that the problem becomes decomposable. We will define some
+notation before proceeding. For a point pi = (i, ai ) ∈ P corresponding to an element ai ∈ S,
+define the north-east region of pi as NE(pi ) = {(x, y) | x ⩾ i and y ⩾ ai }. Analogously,
+define the north-west, the south-west and the south-east region of pi which are denoted by
+NW(pi ), SW(pi ) and SE(pi ), respectively. Then it is easy to observe that,
+
+                  LIS(P ∩ q) = LIS(P ∩ q ∩ NE(pi )) + LIS(P ∩ q ∩ SW(pi )) − 1.                      (1)
+
+See Figure 5 for an example. In other words, knowing that pi belongs to the LIS decomposes
+the original LIS problem into two LIS sub-problems which can be computed independently. In
+such a case, we refer to point pi as a stitching element, which is formally defined below.
+
+Definition 1. (Stitching element) For a range q, fix any LIS of P ∩ q and call it S. Then
+each element in S is defined to be a stitching element w.r.t. q.
+
+     The goal of our algorithm is to:
+
+    Construct a small-sized set R ⊆ P such that, for any q ∈ Q, at least one stitching
+                         element w.r.t. q is contained in R ∩ q.
+
+     For each pi ∈ R, in the preprocessing phase, the two terms on the right hand side of equa-
+tion 1 can be computed in O(n log n) time for all possible queries. Therefore, the preprocessing
+time will be O(|R|n log n).
+
+
+Idea-2: Random sampling. By using the fact that LIS(P∩q) ⩾ τ, it is possible to construct
+                                 √
+a set R of size roughly n log
+                           τ
+                              n
+                                ≈ n log n via random sampling. For each 1 ⩽ i ⩽ n, sample
+
+                                                     11
+pi ∈ P independently with probability c log n
+                                         τ , where c is a sufficiently large constant. Let R ⊆ P
+be the set of sampled points. Then we can establish the following connection between R and
+the stitching elements.
+
+Lemma 1. For all ranges q such that LIS(P ∩ q) ⩾ τ, if Sq is one of the LIS of P ∩ q, then
+with high probability |R ∩ Sq | = Ω(log n).
+
+    This ensures that the preprocessing time will be O(|R|n log n) = O(n3/2 log2 n). To answer
+any range q, first scan R to identify the points which lie inside q. For each element pi ∈ R ∩ q,
+compute the right hand side of equation 1 in O(log n) time. Finally, report the largest value
+                                                                                 √
+computed. Therefore, the query time is bounded by O(|Q| · |R| · log n) = O(m n log2 n).
+
+
+1.4   Our third technique: Handling small cardinality colors
+
+A naive approach. The Colored -2D -Range -LIS problem is more challenging than the
+2D -Range -LIS problem. Firstly, the result of Theorem 1 does not really help in answering
+Colored -2D -Range -LIS since it completely ignores the information about the colors. Secondly,
+there might be a temptation to solve the problem “independently” for each color class. For ex-
+ample, consider a setting where each color class has roughly equal number of points, i.e., n/|C|
+points. Consider a color c and build an instance of Theorem 1 based on the points of color c.
+Then, for each query q ∈ Q, we have the value of LIS(Pc ∩ q). Repeat this for each color in C.
+Finally, for each query q ∈ Q, report the color c for which LIS(Pc ∩ q) is maximized.
+    Now lets (informally) analyze this algorithm. The running time bound of Theorem 1 has
+three terms. For now, lets ignore the second term and the third term, which represent the time
+taken to build the data structure and the time taken to report the output of the m queries.
+                                                                             √
+The first term is the time taken to answer m queries (which is roughly n time per query).
+Adding the first term for each color class, we get
+                     X
+                                c|
+                                  1/2                   1/2
+                                                                    p
+                         O(m|P
+                         e            ) ⩽ O(|C|m(n/|C|)
+                                          e                 ) = O(m
+                                                                e     n|C|),
+                      c
+
+                                             1+ε       √
+which is e
+         O(mn) when |C| = Θ(n) and e   O(mn 2 ) ≫ m n when |C| = nε , for any 0 < ε ⩽ 1.
+Therefore, in the worst-case this approach does not help achieve our target query time bound.
+
+
+A technique to handle small cardinality colors. We will design a third technique which
+will be helpful to answer Colored -1D -Range -LIS and Colored -2D -Range -LIS . The key idea
+is to handle all the colors in a “combined” manner. The technique will work well when all the
+colors have small cardinality. Given a parameter ∆, assume that for each color c, the value of
+|P|c ⩽ ∆. The key observations made by the algorithm are the following:
+
+   • Bounding the number of output subsequences. For a query q, let the output LIS be S
+     of color c. Let pi ∈ Pc (resp., pj ∈ Pc ) be the first (resp., last) point on S. Call this a
+     pair (i, j). As such, whenever color c is the output, the number of distinct pairs will be
+     O(|Pc |2 ). Adding up over all the colors, the total number of distinct pairs will be:
+
+                              X                      X
+                                                              !
+                                  O(|Pc |2 ) ⩽ O ∆       |Pc | = O(n∆).
+                               c                     c
+
+
+
+
+                                               12
+                                      pj                          pj
+
+
+                                                                       Rc (i, j)
+
+
+                        pi                       pi
+
+Figure 6: On the left is an increasing subsequence of length four with all four points being of
+color c. On the right is the corresponding rectangle Rc (i, j). The LIS of color c inside Rc (i, j)
+is four (the other two points of color c do not participate in the LIS). Therefore, the weight
+associated with Rc (i, j) is four.
+
+
+      If ∆ ≪ n, then this is a significant improvement over the naive bound of O(n2 ) distinct
+      pairs (or distinct output subsequences).
+
+   • Reduction to an uncolored problem. For each possible output subsequence S of color
+     c with pi ∈ Pc (resp., pj ∈ Pc ) as the first (resp., last) point point on S, we construct
+     an axis-aligned rectangle Rc (i, j) with pi (resp., pj ) as the bottom-left (resp., top-right)
+     corner. A weight w(Rc (i, j)) is associated with rectangle Rc (i, j) which is equal to LIS(Pc ∩
+     Rc (i, j)). See Figure 6. Let R be the collection of O(n∆) such weighted rectangles. As
+     a result, the problem of Colored -2D -Range -LIS is now reduced to the rectangle range-
+     max problem, where given an axis-parallel rectangle q, among all the rectangles in R
+     which lie completely inside q, the goal is to report the rectangle with the largest weight.
+      It is crucial to note that the colored problem has been reduced to a problem on uncol-
+      ored rectangles for which an efficient data structure exists: the rectangle range-max data
+      structure can be constructed in O(|R|)
+                                         e     = O(n∆)
+                                                   e      time and the m range queries can be
+      answered in O(m) + O(k) time.
+                    e
+
+
+
+1.5   Putting all the pieces together
+
+As an illustration we will consider the Colored -2D -Range -LIS problem and put together all
+the three techniques discussed in the previous subsections in a specific manner.
+
+
+Light and heavy colors. Define a parameter ∆ which will be set later. A color c is classified
+as light if |Pc | ⩽ ∆, otherwise, it is classified as heavy. We will design different algorithms to
+handle light colors and heavy colors. The advantage with a light color, say c, is that we can
+precompute the LIS for O(|Pc |2 ) 2D axis-parallel ranges and still be within the time budget.
+On the other hand, the advantage with heavy colors is that there can be only O(n/∆) heavy
+colors.
+
+
+Handling light colors. Let Pℓ ⊆ P be the set of points which belong to a light color. We
+will use the third technique to answer Colored -2D -Range -LIS on Pℓ and queries Q. From
+Section 4, it follows that the running time is O(m
+                                               e   + n∆) + O(k).
+
+
+Handling heavy colors and small LIS queries. Let Ph ⊆ P be the set of points which
+belong to a heavy color. In Section 2, we will prove that for an arbitrary value of τ, the
+
+
+                                                13
+running time of the first technique will be e
+                                            O(mτ + nτ). The first technique as described above
+only handles uncolored points. In Section 2, we will “generalize” the first technique to answer
+Colored -2D -Range -LIS problem as well. The  running time of this generalized first technique
+on colored pointset Ph and queries Q will be O e mτn + n2 τ + O(k), where the number of
+                                                    ∆      ∆
+heavy colors is O(n/∆).
+
+
+Handling heavy colors and large LIS queries. In Section 3,         we will prove that for
+                                                                            n2
+an arbitrary τ, the running time of the second technique will be O τ + τ + O(k) for
+                                                                  e  mn
+
+2D -Range -LIS problem. In fact, we will generalize this algorithm to the large LIS case of
+Colored -2D -Range -LIS with the same running time (ignoring polylogarithmic factors). The
+generalized algorithm will answer Colored -2D -Range -LIS on Ph and queries Q.
+      Combining all the three subroutines, the total running time will be:
+                                                                  
+                             mn mτn  e n2                   n2 τ
+                     O m+
+                      e           +         +O        + n∆ +         +O (k)
+                        |      τ{z    ∆ }          τ           ∆
+                                              |         {z         }
+                              query time             preprocessing time
+
+
+We set the parameters τ ← n1/3 and ∆ ← n2/3 in the above expression to obtain a running
+time of O(mn
+        e    2/3
+                 + n5/3 ) + O(k).
+
+
+Organization of the paper. The rest of the paper is organized as follows. In Section 2, we
+will discuss our first technique for handling queries in Q which have small LIS. In Section 3, we
+will discuss our second technique for handling queries in Q which have large LIS. In Section 4,
+we will discuss our final technique for handling colors in P which are light (cardinality is small).
+In Section 5, we will put all the techniques together in different ways to derive all the upper
+bounds. Next, in Section 6 we present our conditional lower bound. Finally, in Section 7, we
+present some open problems for future research.
+
+
+2     First technique: Handling small LIS
+
+In this section, we describe a technique which efficiently handles queries with small LIS. Con-
+sider a parameter τ ∈ [1, n] whose value will be set later.
+
+
+2.1    2D Range LIS problem
+
+We will illustrate the technique by first looking at the 2D -Range -LIS problem. The following
+result is obtained.
+
+Theorem 5. There is an algorithm for 2D -Range -LIS problem with running time O(mτ log3 n+
+nτ log4 n + k), where k is the cumulative length of all the output subsequences. For all
+queries q ∈ Q with LIS(P ∩ q) ⩽ τ, the algorithm returns the correct solution. For queries
+q ∈ Q with LIS(P ∩ q) > τ, correctness is not guaranteed.
+
+      The preprocessing phase of the algorithm consists of the following steps.
+
+
+Lowest peaks and highest bases. Consider the special case where there is a vertical line
+with x-coordinate x∗ such that each query range in Q intersects x∗ . Let P⩽ ⊆ P (resp., P> ⊆ P)
+
+                                                14
+be the set of points with x-coordinate less than or equal to (resp., greater than) to x∗ . For an
+increasing subsequence S ∈ P, we define peak (resp., base) to be the last (resp., first) element
+in S. We will now define two arrays A and B as follows:
+
+   • For all pi ∈ P⩽ and for all 1 ⩽ α ⩽ τ, among all increasing subsequences of length α
+     in the range [i, x∗ ] which have pi as the first element, let S be the subsequence with the
+     lowest peak. Then A(pi , α) stores the value of the last element in S.
+
+   • For all pi ∈ P> and for all 1 ⩽ β ⩽ τ, among all increasing subsequences of length β
+     in the range (x∗ , i] which have pi as the last element, let S be the subsequence with the
+     highest base. Then B(pi , β) stores the value of the first element in S.
+
+
+Efficient computation of B. The next step is to compute each entry in B in polylogarithmic
+time (analogous discussion holds for A). The entries will be computed in increasing values of β.
+Assume that the entries corresponding to sequences of length at most β−1 have been computed.
+Then the entries B(pi , β)’s can be reduced to entries of B(·, β − 1)’s as follows:
+                        
+                        
+                               if β = 1;
+                         ai ,
+            B(pi , β) =     −∞, if β > 1 and aj > ai for all P> ∩ (x∗ , i);
+                          
+                          
+                          max{B(p , β−1) | x∗ < j < i and a < a }, otherwise.
+                                     j                         j    i
+
+
+We will reduce the problem of computing B(pi , β) to the problem of constructing a data struc-
+ture which can efficiently answer 2D range-max queries. In a 2D range-max problem, we are
+given n weighted points P> in 2D. Each point p is associated with a weight. For each point
+pi = (i, ai ) ∈ P> , given a query region of the form q ′ = (−∞, i)×(−∞, ai ), the goal is to report
+the point in P> ∩ q ′ with the maximum weight. The 2D range-max problem can be solved in
+O(n log n) time (via reduction to the so-called 2D orthogonal point location problem [ST86]).
+     Now with each point pj ∈ P> , we associate weight B(pj , β − 1) and build a 2D range-max
+data structure. For each point pi = (i, ai ) ∈ P> , the point in P> ∩ ((−∞, i) × (−∞, ai )) with
+the maximum weight is reported. If point pj is reported, then set B(pi , β) = B(pj , β − 1). The
+correctness follows from the third case in the above dynamic programming. Since β ⩽ τ, the
+time taken to construct B is O(τ) × O(n log n) = O(nτ log n).
+
+
+Data structures to compute L and R. During the query algorithm, we will need to compute
+some of the entries in two-dimensional arrays L and R which are defined as follows:
+
+Array L: For any q ∈ Q and for any 1 ⩽ α ⩽ τ, among all increasing subsequences of length
+    α in P⩽ ∩ q, let S be the subsequence with the lowest peak. Then L(q, α) is the value of
+    the last element in S.
+
+Array R: For any q ∈ Q and for any 1 ⩽ β ⩽ τ, among all increasing sequences of length β in
+    P> ∩ q, let S be the subsequence with the highest base. Then R(q, β) is the value of the
+    first element in S.
+
+    Each entry in R is connected to entries in B as follows:
+
+                   R(q, β) ← max{B(pi , β) | pi ∈ P> ∩ q and B(pi , β) > y1 }.
+                                pi
+
+
+
+
+                                                15
+Analogously, each entry in L is connected to entries in A as follows:
+
+                    L(q, α) ← max{A(pi , α) | pi ∈ P⩽ ∩ q and A(pi , α) < y2 }.
+                                pi
+
+
+      Fix a value of β. We will now build a data structure to efficiently compute R(q, β)’s.
+For each point pi = (i, ai ) ∈ P> , map it to a point pi′ = (i, ai , B(pi , β)) with weight w(pi′ ) ←
+B(pi , β). Let P>′ be the collection of mapped 3D points. Build a 3D vanilla range tree [BCKO08]
+
+on P> ′ . Given a query q ∈ Q, it is transformed to a 3D cuboid q ′ = q × (y , +∞) and the point
+                                                                                1
+
+with the maximum weight in P> ∩ q is reported efficiently. The time taken to construct the
+                                   ′     ′
+
+range tree is O(n log3 n). We will repeat this procedure for all values of β ∈ [1, τ]. Therefore,
+the total construction time will be O(nτ log3 n). Analogously, construct a data structure to
+efficiently compute L(q, α)’s.
+
+
+Recursion. Let D be the data structure built above to handle queries in Q which intersect
+the vertical line with x-coordinate x∗ . We will handle the general case via recursion. Let
+x∗ = n/2, and let P⩽ ⊆ P (resp., P> ⊆ P) be the set of points with x-coordinate less than or
+equal to (resp., greater than) x∗ . Recursively build data structure D⩽ (resp., D> ) based on
+pointset P⩽ (resp., P> ). The base case of |P| = 1 can be handled trivially. Let T (n) be the
+total preprocessing time. Then,
+
+                                 T (n) ⩽ 2 · T (n/2) + O(nτ log3 n),
+
+which solves to T (n) = O(nτ log4 n).
+
+Lemma 2. The preprocessing time of the algorithm is O(nτ log4 n).
+
+
+Query algorithm. The query algorithm consists of the following steps. Let Qx∗ ⊆ Q be the
+set of queries which intersect the vertical line with x-coordinate x∗ = n/2. We will first handle
+Qx∗ . For each q ∈ Qx∗ , compute R(q, β), for all 1 ⩽ τ ⩽ β, by querying the corresponding 3D
+range trees. Analogously, compute L(q, α) for all 1 ⩽ τ ⩽ α.
+     A pair (L(q, α), R(q, β)) is defined to be compatible if L(q, α) < R(q, β), i.e., it is possible
+to “stitch” the sequences corresponding to L(q, α) and R(q, β) to obtain an increasing sequence
+of length α+β. For a 2D query range q, our goal is to find the compatible pair (L(q, α), R(q, β))
+which maximizes the value of α + β, i.e.,
+
+                           LIS(P ∩ q) = max{α + β | L(q, α) < R(q, β)}.                            (2)
+                                          α,β
+
+
+     To efficiently compute LIS(P ∩ q), we will use the monotonicity property of R: for a fixed
+query q, the value of R(q, β) decreases as the value of β increases, i.e., for any 1 ⩽ β ⩽ β ′ ⩽ τ,
+we have R(q, β) ⩾ R(q, β ′ ). For each 1 ⩽ i ⩽ τ, the largest βi for which (L(q, i), R(q, βi )) is
+compatible can be found in O(log τ) time by doing a binary search on the monotone sequence
+(R(q, 1), R(q, 2), . . . , R(q, τ)). Finally, report maxi (i + βi ) as the length of the LIS for P ∩ q.
+By appropriate bookkeeping, the corresponding LIS can be reported in time proportional to its
+length.
+     Let Q< ⊆ Q (resp., Q> ⊆ Q) be the set of queries which lie completely to the left (resp.,
+right) of the vertical line with x-coordinate x∗ . Finally, recurse on pointset P⩽ and query set
+Q< , and recurse on pointset P> and query set Q> .
+
+
+                                                  16
+Lemma 3. The time taken answer the query ranges in O(mτ log3 n + k).
+
+Proof. Fix a query range q ∈ Q. Querying the 3D range trees takes O(log3 n) time. As such,
+the time taken to compute R(q, β)’s and L(q, α)’s will be O(τ log3 n). Next, computing the
+compatible pair which achieves the quantity maxi (i + βi ) takes O(τ log τ) time. Therefore, the
+time spent per query is O(τ log3 n + τ log τ) = O(τ log3 n).
+    Assigning queries in Q to appropriate nodes in the recursion tree takes only O(m log n)
+time and is not the dominating term.
+
+
+2.2   Colored 2D Range LIS problem
+
+The solution for Colored -2D -Range -LIS is obtained by solving the 2D -Range -LIS prob-
+lem independently for each color. Specifically, for each color c ∈ C, solve the (uncolored)
+2D -Range -LIS problem for Pc using Theorem 5. The length version of the 2D -Range -LIS
+problem will output for each q ∈ Q and each c ∈ C, the value of LIS(Pc ∩ q). Then for each
+q ∈ Q, report the color cq which maximizes the value of LIS(Pcq ∩ q) and the corresponding
+LIS. Ignoring the k term, the running time of the algorithm is |C| times the running time of the
+2D -Range -LIS problem.
+Theorem 6. There is an algorithm for Colored -2D -Range -LIS problem with running
+time O(mτ|C| log3 n + nτ|C| log4 n + k), where k is the cumulative length of all the output
+subsequences. For all queries q ∈ Q with LIS(Pcq ∩q) ⩽ τ, the algorithm returns the correct
+solution. For queries q ∈ Q with LIS(Pcq ∩ q) > τ, correctness is not guaranteed.
+
+
+3     Second technique: Handling large LIS
+
+In this section, we describe a technique which efficiently handles queries with large LIS.
+
+
+3.1   2D Range LIS problem
+
+We will first consider the 2D -Range -LIS problem. Consider a parameter τ ∈ [1, n] whose value
+will be set later. The following result is obtained.
+
+Theorem    7. There is an algorithm    for the 2D -Range -LIS problem with running time
+                n2
+                           
+    mn    5           4
+O τ log n + τ log n + k , where k is the cumulative length of all the output subse-
+quences. The bound on the running time holds with high probability. For all queries
+q ∈ Q with LIS(P ∩ q) ⩾ τ, with high probability, the algorithm returns the correct solution.
+
+
+Idea-1: Stitching elements. Suppose an oracle reveals that point pi ∈ P lies in the LIS
+of range q = [x1 , x2 ] × [y1 , y2 ]. Then we claim that the problem becomes decomposable. We
+will define some notation before proceeding. For a point pi = (i, ai ) ∈ P corresponding to an
+element ai ∈ S, define the north-east region of pi as NE(pi ) = {(x, y) | x ⩾ i and y ⩾ ai }.
+Analogously, define the north-west, the south-west and the south-east region of pi which are
+denoted by NW(pi ), SW(pi ) and SE(pi ), respectively. Then it is easy to observe that,
+
+                 LIS(P ∩ q) = LIS(P ∩ q ∩ NE(pi )) + LIS(P ∩ q ∩ SW(pi )) − 1.               (3)
+
+
+
+                                               17
+                                                                                  p11
+                                   p2                                                             p15
+
+              N W (p8 )                                       p7                                        N E(p8 )
+                                                                                            p13
+                                                                         p9
+                                                                                      p12
+                                                                                                           q
+                                                                    p8
+                                             p4                                 p10
+                                                             p6                             p14
+              SW (p8 )                                                                                  SE(p8 )
+                                                        p5
+                              p1        p3
+
+
+
+Figure 7: A collection of fifteen elements. Given a query range q (shown in pink), suppose an
+oracle reveals that p8 lies in the LIS of P ∩ q. Then observe that we can discard the points in
+SE(p8 ) and NW(p8 ) which are shown as shaded regions. The LIS of P ∩ q ∩ NE(p8 ) will be
+(p8 , p9 , p13 ) and and the LIS of P ∩ q ∩ SW(p8 ) will be (p3 , p5 , p6 , p8 ). Therefore, LIS of P ∩ q
+will be (p3 , p5 , p6 , p8 , p9 , p13 ).
+
+
+See Figure 7 for an example. In other words, knowing that pi belongs to the LIS decomposes
+the original LIS problem into two LIS sub-problems which can be computed independently. In
+such a case, we refer to point pi as a stitching element, which is formally defined below.
+
+Definition 2. (Stitching element) For a range q, fix any LIS of P ∩ q and call it S. Then
+each element in S is defined to be a stitching element w.r.t. q.
+
+     The goal of our algorithm is to:
+
+    Construct a small-sized set R ⊆ P such that, for any q ∈ Q, at least one stitching
+                         element w.r.t. q is contained in R ∩ q.
+
+
+Idea-2: Random sampling.          By using the fact that LIS(P ∩ q) ⩾ τ, it is possible to con-
+                           n log n
+struct a set R of size O      τ      via random sampling. For each 1 ⩽ i ⩽ n, sample pi ∈ P
+independently with probability c log n
+                                  τ , where c is a sufficiently large constant. Let R ⊆ P be
+the set of sampled points. Then we can establish the following connection between R and the
+stitching elements.
+
+Lemma 1. For all ranges q such that LIS(P ∩ q) ⩾ τ, if Sq is one of the LIS of P ∩ q, then
+with high probability |R ∩ Sq | = Ω(log n).
+
+Proof. Fix a range q ∈ Q. For each point e ∈ Sq , let Xe be an indicator random variable which
+is one if e ∈ R, otherwise it is zero. Next, define another random variable X = |R ∩ Sq |. Then,
+                                        X                                       c log n
+                          E   [X] =               E   [Xe ] = |Sq | · p ⩾ τ ·           = c log n,
+                                                                                   τ
+                                        e∈Sq
+
+
+where we used the fact |Sq | ⩾ τ. Next, for a sufficiently large constant c ′ , we observe that
+                                                       
+                               c log n               E[X]         E[X]   1
+                    Pr   X<              ⩽ Pr X <            ⩽ e− 8 ⩽ c ′ ,
+                                  2                    2                n
+
+                                                                   18
+                                                              4
+                                                   3
+                                                         3
+                                               2
+                                                         2
+                                         1
+                                          pi
+
+Figure 8: pi is a point in R and NE(pi ) has six points. The weight computed for each point
+by Equation 4 is shown besides each point.
+
+where the second inequality follows by setting δ = 1/2 in the following version of Chernoff
+                                  2
+bound: Pr(X < (1 − δ)E[X]) ⩽ e−δ E[X]/2 , for 0 < δ < 1. Via a straightforward application of
+the union bound, with high probability none of the ranges q ∈ QL can have less than c log2
+                                                                                           n
+
+elements in R ∩ Sq (when c ≫ 16).
+
+
+Computing restricted-LIS’s efficiently. For each query q ∈ Q, if pi ∈ R lies inside q, then
+we want to efficiently compute the quantities LIS(P ∩ q ∩ NE(pi )) and LIS(P ∩ q ∩ SW(pi ))
+(as shown in equation 3). To enable that, we will now compute restricted-LIS’s between some
+specifically chosen pairs of points.
+    Consider a point pi = (i, ai ) ∈ R. Scan the points P ∩ NE(pi ) in increasing order of their
+x-coordinate value. We will assign a weight w(pj ) for each point encountered. As a base case,
+we will assign w(pi ) ← 1. At a general step, if we encounter point pj , then we
+
+               w(pj ) ← 1 +            max              {w(pα ) | α < j and aα < aj }.            (4)
+                              pα =(α,aα )∈(P∩NE(pi ))
+
+See Figure 8 for an example. Repeat this process for each point in R. Now we claim the
+following.
+
+Lemma 4. For a given query q ∈ Q, let pi ∈ R ∩ q.                         Then LIS(P ∩ q ∩ NE(pi )) ←
+maxp ∈(P∩q∩NE(p )) {w(pj )}.
+    j          i
+
+
+Proof. The correctness follows from the fact that w(pj ) captures the length of the LIS which
+has pi (resp., pj ) as the first (resp., last) point.
+
+Lemma 5. The computation of restricted-LIS’s, i.e., computation of w(pj ), for all pj ∈
+P ∩ NE(pi ) can be done in O(n log n) time.
+
+Proof. Perform a linear scan of P to identify the points lying in P ∩ NE(pi ). Then any standard
+O(n log n) time algorithm to compute LIS can be run on P ∩ NE(pi ) to compute w(pj )’s.
+
+Lemma 6. There is an algorithm, which with high probability, computes restricted-LIS’s
+                           2
+for all points in R in O nτ log2 n time.
+
+Proof. For all 1 ⩽ i ⩽ n, let Xi be the random variable which is one if pi ∈ R, otherwise it is
+zero. Let T be the random variable which is the time taken to compute restricted-LIS’s, for all
+points in R. Then, by Lemma 5, we have
+
+                                                       X
+                                                       n
+                                 T = O(n log n) ·            Xi + O(n).
+                                                       i=1
+
+
+                                                   19
+                                                        P                         Pn
+Now consider the random variable X which is equal to n    i=1 Xi . Then E[X] = E[ i=1 Xi ] =
+ τ log n. Let c be a sufficiently large constant. By using an appropriate version of Chernoff
+cn             ′
+
+bound, we observe that
+                                    
+                            2cn                                         1
+                 Pr   X>        log n   ⩽ Pr(X > 2E[X]) < e−Ω(E[X]) < c ′ ,
+                             τ                                         n
+
+where the last inequality used the trivial fact that E[X] ⩾ c log n. Therefore, with high proba-
+                            n2
+                                     
+bility T is bounded by O τ log n .2
+
+
+
+
+    We will perform an analogous procedure for computing LIS(P ∩ q ∩ SW(pi )), for each
+pi ∈ R.
+
+
+Representing restricted-LISs as rectangles. Consider a point pi ∈ R. For each point
+pj ∈ P ∩ NE(pi ), let Bij be an axis-parallel rectangle with pi as the lower-left corner and pj
+as the top-right corner, with an associated weight of w(pj ). Let Bi the collection of these
+rectangles.
+      In a rectangle range-max query, the input is a set Bi of weighted axis-aligned rectangles
+in 2D. Given a query rectangle q, among all the rectangles in Bi which lie completely inside q,
+the goal is to report the rectangle with the largest weight. We will use (vanilla) 4D range trees
+as our data structure [BCKO08]. The data structure can be constructed in O(|Bi | log3 |Bi |)
+time and the rectangle range-max query can be answered in O(log4 |Bi |) = O(log4 n) time. The
+bounds hold with high probability.
+                                                                 2         
+Lemma 7. The preprocessing time of the algorithm is O nτ log4 n . The bound holds
+with high probability.
+                                                                           2        
+Proof. By Lemma 6, construction of all the restricted-LIS’s takes O nτ log2 n time. The
+preprocessing time is dominated by the construction time  2of sets Bi , for all pi ∈ R, which is
+P
+   pi ∈R O(|Bi | log |Bi |) = O τ log n · O(n log n) = O    τ log n .
+                                n                          n
+                    3
+                                                3               4
+
+
+
+
+                              2        
+Remark. The bound of O nτ log4 n in the above lemma can be improved by one or two
+log factors by using more sophisticated data structures. However, as pointed out in the Intro-
+duction, optimizing the log factors is not the focus of this paper.
+    The following lemma establishes the connection between Lemma 4 and set Bi .
+
+Lemma 8. For a given query q ∈ Q, let pi ∈ R ∩ q. Then LIS(P ∩ q ∩ NE(pi )) is equal to
+the weight of the largest weighted rectangle in Bi which lies completely inside q ∩ NE(pi ).
+
+Proof. The proof follows from the fact that a point pj belongs to P ∩ q ∩ NE(pi ) if and only if
+rectangle Bij lies completely inside q.
+
+
+Query algorithm. Consider any range q ∈ Q. Scan R to identify the points which lie inside
+q. If |R ∩ q| = ∅, then we do not proceed further for q. Otherwise, for each element pi ∈ R ∩ q,
+we want to compute
+
+                        LIS(P ∩ q ∩ NE(pi )) + LIS(P ∩ q ∩ SW(pi )) − 1.
+
+
+
+                                               20
+To compute LIS(P ∩ q ∩ NE(pi )), we use Lemma 8 and pose a rectangle range-max query on
+Bi with query q ∩ NE(pi ). Analogously, we compute LIS(P ∩ q ∩ SW(pi )). Finally, report the
+largest value computed. By Lemma 1, we claim that the answer is correct with high probability
+if LIS(P ∩ q) ⩾ τ. Repeat this procedure for each q ∈ Q. The query time will be O(|Q||R| log4 n)
+which will be O mn  τ log n with high probability. By appropriate bookkeeping, reporting the
+                          5
+                             
+
+LIS of P ∩ q, for all q ∈ Q can be done in O(k) time.
+
+Lemma 9. The query time of the algorithm is O mn             5
+                                                                    
+                                                        τ log n + k . With high probability,
+the correctness and the bound on the running time holds.
+
+      This finishes the proof of Theorem 7.
+
+
+3.2    Colored 2D range LIS problem
+
+In the Colored -2D -Range -LIS problem, for each q ∈ Q, let cq ∈ C be the color for which
+LIS(Pcq ∩ q) is maximized. The algorithm for Colored -2D -Range -LIS requires two modifi-
+cations to the algorithm for 2D -Range -LIS . The first modification is the precise connection
+between R and the stitching elements.
+
+Lemma 10. For all ranges q such that LIS(Pcq ∩ q) ⩾ τ, if Sq is one of the LIS of Pcq ∩ q,
+then with high probability |R ∩ Sq | = Ω(log n).
+
+Proof. The proof follows directly from the proof of Lemma 1 by replacing P with Pcq .
+
+    Let pi ∈ R have color c. Next, we modify Equation 4 by replacing P with Pc . Specifically,
+we do the following:
+
+                w(pj ) ← 1 +             max               {w(pα ) | α < j and aα < aj }.     (5)
+                               pα =(α,aα )∈(Pc ∩NE(pi ))
+
+
+     The remaining preprocessing steps and the query algorithm of 2D -Range -LIS can be
+trivially adapted for the Colored -2D -Range -LIS problem. The final result is summarized
+below.
+
+Theorem  8. There is an          for the Colored -2D -Range -LIS problem with running
+                         algorithm
+          mn   5     n2   4
+time O τ log n + τ log n + k , where k is the cumulative length of all the output
+subsequences. The bound on the running time holds with high probability. For all queries
+q ∈ Q with LIS(Pcq ∩ q) ⩾ τ, with high probability, the algorithm returns the correct
+solution.
+
+
+4     Third technique: Handling small cardinality colors
+
+In this section we will discuss a technique to handle colored Range -LIS problems. The algo-
+rithm is efficient when each color class has a small cardinality. We will prove the following two
+results.
+
+Theorem 9. Fix a parameter ∆. Then there is a deterministic algorithm to answer
+Colored -2D -Range -LIS problem in O(m log n + n∆ log n + k) time, where for each color
+                                                   4              4
+
+
+
+c ∈ C, we have |Pc | ⩽ ∆, and k is the cumulative length of the m output subsequences.
+
+
+                                                  21
+                                         pj                               4
+                                                                              pj
+                                                                3
+                                                                      3            Rc (i, j)
+                                                            2
+                                                                      2
+                                                    1
+                         pi
+                                                     pi
+                                   (a)                              (b)
+
+Figure 9: (a) An increasing subsequence of length four with all four points being of color c.
+(b) The weight computed by Equation 6 is shown besides each point. The LIS of color c inside
+Rc (i, j) is four (the other two points of color c do not participate in the LIS). Therefore, the
+weight associated with Rc (i, j) is four.
+
+
+Theorem 10. Fix a parameter ∆. Then there is a deterministic algorithm to answer
+Colored -1D -Range -LIS problem in O(m log n + n∆ log2 n + k) time, where for each color
+c ∈ C, we have |Pc | ⩽ ∆, and k is the cumulative length of the m output subsequences.
+
+     We will first consider the Colored -2D -Range -LIS problem. Fix a color c. For a query
+q, consider the LIS of points of Pc ∩ q. Let pi ∈ Pc (resp., pj ∈ Pc ) be the first (resp., last)
+point in the LIS. Call this a pair (i, j). As such, the number of distinct pairs of color c will be
+O(|Pc |2 ). Adding up over all the colors, the total number of distinct pairs will be:
+
+                            X                      X
+                                                            !
+                                O(|Pc |2 ) ⩽ O ∆       |Pc | = O(n∆).
+                               c                       c
+
+For each color c and for each of its pair (i, j), we will precompute and store the length of the
+LIS starting with pi and ending with pj . See Figure 9 for an example.
+
+
+Constructing the set R. Consider a color c and a point pi = (i, ai ) ∈ Pc . Define NE(pi )
+to be set of points in 2D which lie in the north-east region of pi , i.e., NE(pi ) = {(px , py ) |
+px > i and py > ai }. Consider the points Pc ∩ NE(pi ) in increasing order of their x-coordinate
+value. We will assign a weight w(pj ) for each point encountered. As a base case, we will assign
+w(pi ) ← 1. At a general step, if we encounter point pj , then we
+
+                w(pj ) ← 1 +             max               {w(pα ) | α < j and aα < aj }.         (6)
+                               pα =(α,aα )∈(Pc ∩NE(pi ))
+
+See Figure 9 where pj is assigned a weight of four. Construct an axis-aligned rectangle Rc (i, j)
+with pi (resp., pj ) as the bottom-left (resp., top-right) corner. A weight of w(pj ) is associated
+with Rc (i, j). The intuition is that w(pj ) is equal to the LIS of the points of color c lying inside
+Rc (i, j), i.e., LIS(Pc ∩ Rc (i, j)).
+     The computation of w(pj ), for all pj ∈ Pc ∩ NE(pi ) can be done in O(|Pc | log2 |Pc |) time.
+Construct a vanilla 2D range-tree [BCKO08] based on the points Pc ∩ NE(pi ). Set the weight of
+pi equal to one and the weight of remaining points to −∞. Whenever a point pj is encountered,
+then query the range tree with query rectangle q ′ = (−∞, j) × (−∞, aj ) and report the point
+in Pc ∩ NE(pi ) ∩ q ′ with the maximum weight. The query time is O(log2 |Pc |). If pα is the
+point reported, update the range tree with the new weight of w(pj ) ← 1 + w(pα ). The update
+takes O(log2 |Pc |) amortized time.
+    Repeat this procedure for each point in Pc . This takes O(|Pc |2 log2 |Pc |) time. Define Rc ←
+
+                                                  22
+    (i,j) Rc (i, j) and R ←   c Rc which is a collection of rectangles corresponding to the distinct
+S                             S
+                                                              P
+pairs (i, j). The total time taken to construct R will be      c O(|Pc |
+                                                                       2
+                                                                           log
+                                                                                 2
+                                                                                     |Pc |) = O(n∆ log2 n).
+
+
+Rectangle range-max structure. In a rectangle range-max query, the input is a set R
+of weighted axis-aligned rectangles in 2D. Given a query rectangle q, among all the rectangles
+in R which lie completely inside q, the goal is to report the rectangle with the largest weight.
+Note that in the rectangle range-max query, the color of the rectangles does not matter. We are
+dealing with uncolored rectangles and as a result, we can use vanilla 4D range trees as our data
+structure [BCKO08]. The data structure can be constructed in O(|R| log4 |R|) = O(n∆ log4 n)
+time and the rectangle range-max query can be answered in O(log4 |R|) = O(log4 n) time.
+     Coming back to our Colored -2D -Range -LIS problem, for a query range q ∈ Q, we first
+query the rectangle range-max data structure. Let cq be the color corresponding to the reported
+rectangle. We claim that cq is the color for which LIS(Pcq ∩q) is maximized. Overall, answering
+m range queries in Q requires only O(m log4 n) time. By appropriate bookkeeping, reporting
+the LIS of Pcq ∩ q, for all q ∈ Q can be done in O(k) time. This finishes the proof of Theorem 9.
+
+
+Shaving log factors in 1D. To answer Colored -1D -Range -LIS the rectangle range-max
+data structure can be replaced by interval range-max data structure. For each rectangle
+R ∈ R, let I be the projection of R onto the x-axis. The weight of I is equal to the weight of R,
+for all R ∈ R. Let I ← R∈R I be the collection of weighted intervals. In an interval range-max
+                        S
+
+query, the input is a set I of weighted intervals on the real line. Given a query range q, among
+all the intervals in I which lie completely inside q, the goal is to report the interval with the
+largest weight.
+    The interval range max data structure can be constructed in O(|I| log |I|) = O(n∆ log n)
+time (via reduction to 2D orthogonal point location problem [ST86]) and the query can be
+answered in O(log |I|) = O(log n) time. This finishes the proof of Theorem 10.
+
+
+5      Putting all the techniques together
+
+Finally, in this section we will put together all the three techniques to obtain our upper bound
+results.
+
+
+5.1     2D Range LIS problem
+
+The algorithm for 2D -Range -LIS applies the first technique on P and Q, and then applies
+the second technique on P and Q. For each query q ∈ Q, with high probability, the cor-
+rect solution is returned by one of them. Using Theorem 5, the running time of the first
+technique is O(mτ
+                 log n + nτ2log n + k). Using Theorem√ 7, the running time of the second
+                       3         4
+
+
+
+technique is O mn τ log n + τ log n + k . Setting τ ←     n, we obtain a total running time
+                         5    n    4
+
+
+        √             √
+of O(m n log n + n n log +k). This proves Theorem 1.
+              5             4
+
+
+
+
+5.2     Colored 1D range LIS problem
+
+The algorithm consists of the following steps.
+
+
+
+                                                  23
+                                                                        √
+Light and heavy colors. Define a parameter ∆ which is set to n. A color c is classified
+as light if |Pc | ⩽ ∆, otherwise, it is classified as heavy. We will design different algorithms to
+handle light colors and heavy colors.
+
+
+Querying light colors simultaneously. Let Pℓ ⊆ P be the set of points having light color.
+We will use the third technique to answer Colored -1D -Range -LIS on Pℓ . By Theorem 10, the
+                              √
+running time is O(m log n + n n log2 n + k).
+
+
+Query heavy colors independently. For each heavy color, we build Tiskin’s structure and
+the structure of Gawrychowski, Gorbachev, and Kociumaka [GGK24] to answer the length
+version and the reporting version of 1D -Range -LIS , respectively. Given a query q ∈ Q, we
+query the length structure of each heavy color and find the color cq for which LIS(Pcq ∩ q) is
+maximized. Finally, query the reporting structure of color cq to report the LIS of Pcq ∩ q.
+     The preprocessing time (dominated by the construction of reporting structures) is O(n log3 n).
+                                        √                                              √
+Since the number of heavy colors is O( n), querying the length structure takes O( n log n)
+time per query, and querying the reporting structure takes O(1 + kq ) time per query, where kq
+is the length of the LIS reported. As such, the time taken to answer all the m queries will be
+     √
+O(m n log n + k).
+
+
+Overall algorithm. For each query q ∈ Q, after querying the light colors and the heavy
+colors, report the larger among the two sequences reported. The overall running time of the
+                  √           √
+algorithm is O(m n log n + n n log2 n + k). This proves Theorem 2.
+
+
+5.3   Colored 2D range LIS problem
+
+The algorithm for Colored -2D -Range -LIS is slightly more nuanced than Colored -1D -Range -LIS .
+
+
+Light and heavy colors. Define a parameter ∆ which will be set later. As before, a color
+c is classified as light if |Pc | ⩽ ∆, otherwise, it is classified as heavy. We will design different
+algorithms to handle light colors and heavy colors.
+
+
+Handling light colors. Let Pℓ ⊆ P be the set of points which belong to a light color. We
+will use the third technique on Pℓ and queries Q. Using Theorem 9, it follows that the running
+time is O(m log4 n + n∆ log4 n + k).
+
+
+Handling heavy colors and small LIS queries. Let Ph ⊆ P be the set of points which
+belong to a heavy color. We will use
+                                   the first technique in Section
+                                                                2 on Ph and queries Q
+                                                  n2 τ
+(Theorem 6). The running time is O ∆ log n + ∆ log n + k .
+                                     mτn    3           4
+
+
+
+
+Handling heavy colors and large LIS queries. We will use the second technique in Sec-
+                                                                         n2
+                                                                                     
+tion 3 on Ph and queries Q (Theorem 8). The running time is O mn
+                                                               τ
+                                                                    5
+                                                                 log n +
+                                                                         τ  log n + k .
+                                                                               4
+
+
+
+
+                                                 24
+Overall algorithm. For each query q ∈ Q, after querying each of the above three subroutines,
+report the largest among the three sequences reported. Combining all the three subroutines,
+the total running time will be:
+                                               2                                
+                mn     5
+                              mτn    3
+                                              n     4           4
+                                                                      n2 τ    4
+  O m log4 n +       log n +      log n + O       log n + n∆ log n +       log n    +O (k)
+  |               τ {z          ∆       } |     τ                      ∆
+                                                             {z                   }
+                   query time                                preprocessing time
+
+
+We set the parameters τ ← n1/3 and ∆ ← n2/3 in the above expression to obtain a running
+time of O(mn2/3 log5 n + n5/3 log4 n + k). This proves Theorem 4.
+
+
+6    Conditional Lower Bound
+
+In this section we prove Theorem 3. Before we do so, we first recall the Combinatorial Boolean
+Matrix Multiplication Hypothesis (CBMMH) and a conditional lower bound of [CDL+ 14] on
+computing mode for range queries.
+
+Definition 3 (Combinatorial Boolean Matrix Multiplication conjecture). The Combinatorial
+Boolean Matrix Multiplication conjecture asserts that for every ε > 0, no combinatorial
+                                                            √      √
+algorithm running in time n1.5−ε can given as input two n × n Boolean matrices,
+compute their product.
+
+
+Computing Mode for Range Queries. A mode of a multiset S is an element a ∈ S of
+maximum multiplicity; that is, a occurs at least as frequently as any other element in S. Given
+a sequence T of n elements and set of m range queries Q, for each query q ∈ Q, the goal is to
+answer the mode of T ∩ q.
+
+Theorem 11 (Chan et al. [CDL+ 14]). Suppose there is an algorithm that takes as input a
+sequence of n elements and set of m range queries, runs in time O(nc · (m + n)) (for some
+c ⩾ 0), and outputs the mode for all range queries, then Boolean matrix multiplication on
+    √     √
+two n × n matrices can be solved in time O(n1+c ).
+
+    We are now ready to prove Theorem 3.
+
+Proof of Theorem 3. Suppose there is some ε > 0, C ∈ N, and a combinatorial algorithm A e to
+answer the reporting version of the Colored -1D -Range -LIS problem in k/2 +C·n1/2−ε
+                                                                                     ·(m+n)
+time. Then, we construct an algorithm to refute CBMMH in the following way.
+     Given as input a sequence T := (z1 , . . . , zn ) of n elements and set of m mode range queries
+Q, we construct an instance (S := (a1 , . . . , an ), c : S → [n], Q) of Colored -1D -Range -LIS as
+follows. Without loss of generality, we assume all elements in T are in [n]. For every i ∈ [n],
+let fi be the number of times the zi has appeared in T at an index less than i. Then, we define
+ai := zi + (fi · n). Note that we can compute S from T in O(n log n) time. Moreover, we define
+the color of ai , i.e., c(ai ) to simply be zi .
+     We will now use A    e to answer the mode range queries in Q in 3C · n1/2−ε · (m + n) time as
+follows (and this would contradict CBMMH from Theorem 11).
+     We feed (S, c, Q) to A
+                          e and obtain in k/2 + C · n1/2−ε · (m + n) + O(n log n) time, for
+every q ∈ Q, the longest monochromatic increase subsequence Sq in S ∩ q. The answer to the
+mode range query q in T is then simply the color of any element in Sq . Note that since the
+
+                                                25
+output is of size k and we are running in k/2 + C · n1/2−ε · (m + n) time (which includes the
+time needed to output), this means that k ⩽ 2C · n1/2−ε · (m + n). Thus, the total runtime is
+k/2 + C · n1/2−ε · (m + n) + O(n log n) ⩽ 3C · n1/2−ε · (m + n) for large enough n.
+     Note that the lower bound continues to hold even when we are only required to report the
+color of the longest monochromatic increasing subsequence for each range query, as the color
+corresponds to the mode.
+
+
+7    Open Problems
+
+We conclude the paper with a few open problems.
+
+    • Is it possible to extend the algorithm in [GGK24] for the 1D -Range -LIS problem to solve
+      the 2D -Range -LIS problem in O(n polylog n + k) time? Or, is there a (conditional)
+      hardness result which makes obtaining the upper bound unlikely?
+
+    • Another interesting research direction is to design a deterministic algorithm which runs
+      in sub-quadratic time. Specifically, can the construction of stitching set be efficiently
+      derandomized?
+
+    • For the Colored -2D -Range -LIS problem, can we bridge the gap between the upper bound
+      and the (conditional) lower bound. We conjecture that the upper bound can be further
+      improved.
+
+    • Can we extend our algorithmic technique to beat the quadratic barrier for the weighted
+      version of 1D -Range -LIS ?
+
+    • Finally, it would be interesting to explore the Range -LIS in the dynamic model.
+
+
+Acknowledgments
+
+We thank the anonymous reviewers for several helpful comments that improved the presentation
+of our results.
+
+
+References
+
+[AAL09]      Peyman Afshani, Lars Arge, and Kasper Dalgaard Larsen. Orthogonal range re-
+             porting in three and higher dimensions. In Proceedings of Annual IEEE Sym-
+             posium on Foundations of Computer Science (FOCS), pages 149–158, 2009.
+
+[ABZ11]      Peyman Afshani, Gerth Stolting Brodal, and Norbert Zeh. Ordered and unordered
+             top-k range reporting in large data sets. In Proceedings of the Annual ACM-
+             SIAM Symposium on Discrete Algorithms (SODA), pages 390–400, 2011.
+
+[AE98]       Pankaj K. Agarwal and Jeff Erickson. Geometric range searching and its relatives.
+             Advances in Discrete and Computational Geometry, pages 1–56, 1998.
+
+[AFK+ 24]    Amir Abboud, Nick Fischer, Zander Kelley, Shachar Lovett, and Raghu Meka. New
+             graph decompositions and combinatorial boolean matrix multiplication algorithms.
+             In STOC, 2024. To appear.
+
+                                              26
+[AGH+ 04]   Michael H Albert, Alexander Golynski, Angèle M Hamel, Alejandro López-Ortiz,
+            S Srinivasa Rao, and Mohammad Ali Safari. Longest increasing subsequences in
+            sliding windows. Theoretical Computer Science, 321(2-3):405–414, 2004.
+
+[AGM+ 90] Stephen F Altschul, Warren Gish, Webb Miller, Eugene W Myers, and David J Lip-
+          man. Basic local alignment search tool. Journal of molecular biology, 215(3):403–
+          410, 1990.
+
+[AGM02]     Pankaj K. Agarwal, Sathish Govindarajan, and S. Muthukrishnan. Range searching
+            in categorical data: Colored range searching on grid. In Proceedings of European
+            Symposium on Algorithms (ESA), pages 17–28, 2002.
+
+[AJKS02]    Miklós Ajtai, TS Jayram, Ravi Kumar, and D Sivakumar. Approximate counting
+            of inversions in a data stream. In Proceedings of ACM Symposium on Theory
+            of Computing (STOC), pages 370–379, 2002.
+
+[ANSS22]    Alexandr Andoni, Negev Shekel Nosatzki, Sandip Sinha, and Clifford Stein. Esti-
+            mating the longest increasing subsequence in nearly optimal time. In Proceedings
+            of Annual IEEE Symposium on Foundations of Computer Science (FOCS),
+            pages 708–719, 2022.
+
+[Arg03]     Lars Arge. The buffer tree: A technique for designing batched external data struc-
+            tures. Algorithmica, 37(1):1–24, 2003.
+
+[AW14]      Amir Abboud and Virginia Vassilevska Williams. Popular conjectures imply strong
+            lower bounds for dynamic problems. In 2014 IEEE 55th Annual Symposium on
+            Foundations of Computer Science, pages 434–443. IEEE, 2014.
+
+[BCKO08]    Mark de Berg, Otfried Cheong, Marc van Kreveld, and Mark Overmars. Compu-
+            tational Geometry: Algorithms and Applications. Springer-Verlag, 3rd edition,
+            2008.
+
+[BDHS13]    Grey Ballard, James Demmel, Olga Holtz, and Oded Schwartz. Graph expansion
+            and communication costs of fast matrix multiplication. Journal of the ACM
+            (JACM), 59(6):1–23, 2013.
+
+[BDR10]     Gerth Stølting Brodal, Pooya Davoodi, and S. Srinivasa Rao. On space efficient
+            two dimensional range minimum data structures. In Proceedings of European
+            Symposium on Algorithms (ESA), pages 171–182, 2010.
+
+[BFGLO09] Gerth Stølting Brodal, Rolf Fagerberg, Mark Greve, and Alejandro Lopez-Ortiz.
+          Online sorted range reporting. In International Symposium on Algorithms and
+          Computation (ISAAC), pages 173–182, 2009.
+
+[BGJS11]    Gerth Stølting Brodal, Beat Gfeller, Allan Gronlund Jorgensen, and Peter Sanders.
+            Towards optimal range medians. Theoretical Computer Science, 412(24):2588–
+            2601, 2011.
+
+[BKMT95] Panayiotis Bozanis, Nectarios Kitsios, Christos Makris, and Athanasios K. Tsaka-
+         lidis. New upper bounds for generalized intersection searching problems. In Pro-
+         ceedings of International Colloquium on Automata, Languages and Program-
+         ming (ICALP), pages 464–474, 1995.
+
+                                             27
+[BL14]      Gerth Stølting Brodal and Kasper Green Larsen. Optimal planar orthogonal sky-
+            line counting queries. In Scandinavian Symposium and Workshops on Algo-
+            rithm Theory (SWAT), pages 110–121, 2014.
+
+[Bro16]     Gerth Stolting Brodal. External memory three-sided range reporting and top-k
+            queries with sublogarithmic updates. In Proceedings of Symposium on Theo-
+            retical Aspects of Computer Science (STACS), volume 47, pages 23:1–23:14.
+            2016.
+
+[BT11]      Gerth Stolting Brodal and Konstantinos Tsakalidis. Dynamic planar range maxima
+            queries. In Proceedings of International Colloquium on Automata, Languages
+            and Programming (ICALP), pages 256–267, 2011.
+
+[CDL+ 14]   Timothy M Chan, Stephane Durocher, Kasper Green Larsen, Jason Morrison, and
+            Bryan T Wilkinson. Linear-space data structures for range mode query in arrays.
+            Theory of Computing Systems, 55(4):719–741, 2014.
+
+[CH21]      Timothy M. Chan and Zhengcheng Huang. Dynamic colored orthogonal range
+            searching. In Proceedings of European Symposium on Algorithms (ESA), vol-
+            ume 204, pages 28:1–28:13, 2021.
+
+[CHN20]     Timothy M. Chan, Qizheng He, and Yakov Nekrich. Further results on colored
+            range searching. In International Symposium on Computational Geometry
+            (SoCG), pages 28:1–28:15, 2020.
+
+[CLP11]     Timothy M. Chan, Kasper Green Larsen, and Mihai Patrascu. Orthogonal range
+            searching on the ram, revisited. In Proceedings of Symposium on Computational
+            Geometry (SoCG), pages 1–10, 2011.
+
+[CN20]      Timothy M. Chan and Yakov Nekrich. Better data structures for colored orthogonal
+            range reporting. In Proceedings of the Annual ACM-SIAM Symposium on
+            Discrete Algorithms (SODA), pages 627–636, 2020.
+
+[EJ08]      Funda Ergun and Hossein Jowhari. On distance to monotonicity and longest in-
+            creasing subsequence of a data stream. In Proceedings of the Annual ACM-SIAM
+            Symposium on Discrete Algorithms (SODA), pages 730–736, 2008.
+
+[Fre75]     Michael L Fredman. On computing the length of longest increasing subsequences.
+            Discrete Mathematics, 11(1):29–35, 1975.
+
+[GG10]      Anna Gál and Parikshit Gopalan. Lower bounds on streaming algorithms for
+            approximating the length of the longest increasing subsequence. SIAM Journal
+            on Computing, 39(8):3463–3479, 2010.
+
+[GGK24]     Pawel Gawrychowski, Egor Gorbachev, and Tomasz Kociumaka. Core-sparse
+            monge matrix multiplication: Improved algorithm and applications. CoRR,
+            abs/2408.04613, 2024.
+
+[GJ21a]     Paweł Gawrychowski and Wojciech Janczewski. Conditional lower bounds for vari-
+            ants of dynamic LIS. arXiv preprint arXiv:2102.11797, 2021.
+
+
+
+
+                                            28
+[GJ21b]     Pawel Gawrychowski and Wojciech Janczewski. Fully dynamic approximation of
+            LIS in polylogarithmic time. In Proceedings of ACM Symposium on Theory of
+            Computing (STOC), pages 654–667, 2021.
+
+[GJKK07]    Parikshit Gopalan, T. S. Jayram, Robert Krauthgamer, and Ravi Kumar. Estimat-
+            ing the sortedness of a data stream. In Proceedings of the Annual ACM-SIAM
+            Symposium on Discrete Algorithms (SODA), pages 318–327, 2007.
+
+[GJRS18]    Prosenjit Gupta, Ravi Janardan, Saladi Rahul, and Michiel H. M. Smid. Compu-
+            tational geometry: Generalized (or colored) intersection searching. In Handbook
+            of Data Structures and Applications, CRC Press, 2nd edition, page 1042–1057,
+            2018.
+
+[GJS95]     Prosenjit Gupta, Ravi Janardan, and Michiel H. M. Smid. Further results on gen-
+            eralized intersection searching problems: Counting, reporting, and dynamization.
+            Journal of Algorithms, 19(2):282–317, 1995.
+
+[HKNS15]    Monika Henzinger, Sebastian Krinninger, Danupon Nanongkai, and Thatchaphol
+            Saranurak. Unifying and strengthening hardness for dynamic problems via the on-
+            line matrix-vector multiplication conjecture. In Proceedings of the forty-seventh
+            annual ACM symposium on Theory of computing, pages 21–30, 2015.
+
+[HQT14]     Xiaocheng Hu, Miao Qiao, and Yufei Tao. Independent range sampling. In Pro-
+            ceedings of ACM Symposium on Principles of Database Systems (PODS),
+            pages 246–255, 2014.
+
+[JL93]      Ravi Janardan and Mario A. Lopez. Generalized intersection searching problems.
+            International Journal of Computational Geometry and Applications, 3(1):39–
+            69, 1993.
+
+[JMA07]     Ruoming Jin, Scott McCallen, and Eivind Almaas. Trend motif: A graph mining
+            approach for analysis of dynamic complex networks. In Proceedings of Interna-
+            tional Conference on Management of Data (ICDM), pages 541–546, 2007.
+
+[KMS05]     Danny Krizanc, Pat Morin, and Michiel H. M. Smid. Range mode and range
+            median queries on lists and trees. Nordic Journal of Computing, 12(1):1–17,
+            2005.
+
+[KN11]      Marek Karpinski and Yakov Nekrich. Top-k color queries for document retrieval.
+            In Proceedings of the Annual ACM-SIAM Symposium on Discrete Algorithms
+            (SODA), pages 401–411, 2011.
+
+[KOO+ 18] Masashi Kiyomi, Hirotaka Ono, Yota Otachi, Pascal Schweitzer, and Jun Tarui.
+          Space-efficient algorithms for longest increasing subsequence. In Proceedings of
+          Symposium on Theoretical Aspects of Computer Science (STACS), 2018.
+
+[KRSV07]    Haim Kaplan, Natan Rubin, Micha Sharir, and Elad Verbin. Counting colors
+            in boxes. In Proceedings of the Annual ACM-SIAM Symposium on Discrete
+            Algorithms (SODA), pages 785–794, 2007.
+
+[KS21]      Tomasz Kociumaka and Saeed Seddighin. Improved dynamic algorithms for longest
+            increasing subsequence. In Proceedings of ACM Symposium on Theory of Com-
+            puting (STOC), pages 640–653, 2021.
+
+                                             29
+[KSV06]    Haim Kaplan, Micha Sharir, and Elad Verbin. Colored intersection searching via
+           sparse rectangular matrix multiplication. In Proceedings of Symposium on Com-
+           putational Geometry (SoCG), pages 52–60, 2006.
+
+[Lee02]    Lillian Lee. Fast context-free grammar parsing requires fast boolean matrix mul-
+           tiplication. Journal of the ACM (JACM), 49(1):1–15, 2002.
+
+[LNVZ06]   David Liben-Nowell, Erik Vee, and An Zhu. Finding longest increasing and com-
+           mon subsequences in streaming data. Journal of Combinatorial Optimization,
+           11:155–175, 2006.
+
+[LP12]     Kasper Green Larsen and Rasmus Pagh. I/O-efficient data structures for colored
+           range and prefix reporting. In Proceedings of the Annual ACM-SIAM Sympo-
+           sium on Discrete Algorithms (SODA), pages 583–592, 2012.
+
+[LPS08]    Ying Kit Lai, Chung Keung Poon, and Benyun Shi. Approximate colored range
+           and point enclosure queries. Journal of Discrete Algorithms, 6(3):420–432, 2008.
+
+[LvW13]    Kasper Green Larsen and Freek van Walderveen. Near-optimal range reporting
+           structures for categorical data. In Proceedings of the Annual ACM-SIAM Sym-
+           posium on Discrete Algorithms (SODA), pages 265–276, 2013.
+
+[LZZZ17]   Youhuan Li, Lei Zou, Huaming Zhang, and Dongyan Zhao. Longest increasing sub-
+           sequence computation over streaming sequences. IEEE Transactions on Knowl-
+           edge and Data Engineering (TKDE), 30(6):1036–1049, 2017.
+
+[Mal62]    Colin L Mallows. Patience sorting. SIAM Review, 4(2):148–149, 1962.
+
+[Mal63]    Colin L Mallows. Patience sorting. SIAM Review, 5(4):375, 1963.
+
+[MS20]     Michael Mitzenmacher and Saeed Seddighin. Dynamic algorithms for LIS and
+           distance to monotonicity. In Proceedings of ACM Symposium on Theory of
+           Computing (STOC), pages 671–684, 2020.
+
+[Mut02]    S. Muthukrishnan. Efficient algorithms for document retrieval problems. In
+           Proceedings of the Annual ACM-SIAM Symposium on Discrete Algorithms
+           (SODA), pages 657–666, 2002.
+
+[Nek14]    Yakov Nekrich. Efficient range searching for categorical and plain data. ACM
+           Transactions on Database Systems (TODS), 39(1):9, 2014.
+
+[NR23]     Yakov Nekrich and Saladi Rahul. 4d range reporting in the pointer machine model
+           in almost-optimal time. In Proceedings of the Annual ACM-SIAM Symposium
+           on Discrete Algorithms (SODA), pages 1862–1876, 2023.
+
+[NV13]     Yakov Nekrich and Jeffrey Scott Vitter. Optimal color range reporting in one
+           dimension. In Proceedings of European Symposium on Algorithms (ESA), pages
+           743–754, 2013.
+
+[NV21]     Ilan Newman and Nithin Varma. New sublinear algorithms and lower bounds
+           for LIS estimation. In Proceedings of International Colloquium on Automata,
+           Languages and Programming (ICALP), pages 100:1–100:20, 2021.
+
+
+                                           30
+[PTS+ 14]   Manish Patil, Sharma V. Thankachan, Rahul Shah, Yakov Nekrich, and Jef-
+            frey Scott Vitter. Categorical range maxima queries. In Proceedings of ACM
+            Symposium on Principles of Database Systems (PODS), pages 266–277, 2014.
+
+[Rah17]     Saladi Rahul. Approximate range counting revisited. In 33rd International Sym-
+            posium on Computational Geometry (SoCG), volume 77, pages 55:1–55:15,
+            2017.
+
+[Rah21]     Saladi Rahul. Approximate range counting revisited. Journal of Computational
+            Geometry, 12(1):40–69, 2021.
+
+[RJ12]      Saladi Rahul and Ravi Janardan. Algorithms for range-skyline queries. In Pro-
+            ceedings of ACM Symposium on Advances in Geographic Information Systems
+            (GIS), pages 526–529, 2012.
+
+[RSSS19]    Aviad Rubinstein, Saeed Seddighin, Zhao Song, and Xiaorui Sun. Approximation
+            algorithms for lcs and LIS with truly improved running times. In Proceedings
+            of Annual IEEE Symposium on Foundations of Computer Science (FOCS),
+            pages 1121–1145, 2019.
+
+[RT15]      Saladi Rahul and Yufei Tao. On top-k range reporting in 2d space. In Proceedings
+            of ACM Symposium on Principles of Database Systems (PODS), pages 265–
+            275, 2015.
+
+[RT16]      Saladi Rahul and Yufei Tao. Efficient top-k indexing via general reductions. In
+            Proceedings of ACM Symposium on Principles of Database Systems (PODS),
+            pages 277–288, 2016.
+
+[RT19]      Saladi Rahul and Yufei Tao. A guide to designing top-k indexes. SIGMOD Record,
+            48(2):6–17, 2019.
+
+[RZ11]      Liam Roditty and Uri Zwick. On dynamic shortest paths problems. Algorithmica,
+            61:389–401, 2011.
+
+[Sat94]     Giorgio Satta. Tree-adjoining grammar parsing and boolean matrix multiplication.
+            Computational linguistics, 20(2):173–191, 1994.
+
+[SJ05]      Qingmin Shi and Joseph JáJá. Optimal and near-optimal algorithms for general-
+            ized intersection reporting on pointer machines. Information Processing Letters
+            (IPL), 95(3):382–388, 2005.
+
+[SS17]      Michael Saks and C Seshadhri. Estimating the longest increasing sequence in
+            polylogarithmic time. SIAM Journal of Computing, 46(2):774–823, 2017.
+
+[ST86]      Neil Sarnak and Robert Endre Tarjan. Planar point location using persistent search
+            trees. Communications of the ACM (CACM), 29(7):669–679, 1986.
+
+[SW07]      Xiaoming Sun and David P Woodruff. The communication and streaming complex-
+            ity of computing the longest common and increasing subsequences. In Proceedings
+            of the Annual ACM-SIAM Symposium on Discrete Algorithms (SODA), pages
+            336–345, 2007.
+
+
+
+                                             31
+[Tao22]    Yufei Tao. Algorithmic techniques for independent query sampling. In Proceedings
+           of ACM Symposium on Principles of Database Systems (PODS), pages 129–
+           138, 2022.
+
+[Tis08a]   Alexander Tiskin. Semi-local longest common subsequences in subquadratic time.
+           Journal of Discrete Algorithms, 6(4):570–581, 2008.
+
+[Tis08b]   Alexandre Tiskin. Semi-local string comparison: Algorithmic techniques and ap-
+           plications. Math. Comput. Sci., 1(4):571–603, 2008.
+
+[Tis10]    Alexander Tiskin. Fast distance multiplication of unit-monge matrices. In Proceed-
+           ings of the Annual ACM-SIAM Symposium on Discrete Algorithms (SODA),
+           pages 1287–1296, 2010.
+
+[XLRJ20]   Jie Xue, Yuan Li, Saladi Rahul, and Ravi Janardan. Searching for the closest-pair
+           in a query translate. Journal of Computational Geometry, 11(2):26–61, 2020.
+
+[XLRJ22]   Jie Xue, Yuan Li, Saladi Rahul, and Ravi Janardan. New bounds for range closest-
+           pair problems. Discrete & Computational Geometry, 68(1):1–49, 2022.
+
+[Xue19]    Jie Xue. Colored range closest-pair problem under general distance functions. In
+           Proceedings of the Annual ACM-SIAM Symposium on Discrete Algorithms
+           (SODA), pages 373–390, 2019.
+
+[Zha03]    Hongyu Zhang. Alignment of blast high-scoring segment pairs based on the longest
+           increasing subsequence algorithm. Bioinformatics, 19(11):1391–1396, 2003.
+
+
+
+
+                                            32
+

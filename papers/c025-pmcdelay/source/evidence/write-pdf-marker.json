@@ -1,0 +1,10 @@
+{
+  "job_id": "c025-pmcdelay-write-7714292f197a",
+  "operation_kind": "create",
+  "expected_output_count": 1,
+  "output_format": "pdf",
+  "tool": "node",
+  "script": "/Users/mac/.codex/plugins/cache/openai-primary-runtime/pdf/26.1017.22136/skills/pdf/container_tools/mark_artifact_operation_started.mjs",
+  "exit_code": 0,
+  "timing": "Executed once immediately before the first manuscript authoring command. The complete tool call and result were observed in this writing context."
+}

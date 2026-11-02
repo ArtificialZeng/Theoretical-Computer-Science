@@ -1,0 +1,6 @@
+# Mon Nov  2 23:05:49 CST 2026 paper checker (cover_bnb_paper_copy_claude.py) via indep_check_claude.py, n=6 c=299/100
+file pat_n6_j1.txt: 2 patterns, 2 boxes, not proved 0, 0.0s
+file pat_n6_j2.txt: 7 patterns, 7 boxes, not proved 0, 0.0s
+file pat_n6_j3.txt: 23 patterns, 23 boxes, not proved 0, 0.0s
+file pat_n6_j4.txt: 76 patterns, 78 boxes, not proved 0, 0.0s
+file pat_n6_j5.txt: 245 patterns, 281 boxes, not proved 0, 0.2s

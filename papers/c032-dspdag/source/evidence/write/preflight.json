@@ -1,0 +1,69 @@
+{
+  "job_id": "c032-dspdag-write-4528226e5001",
+  "review_type": "writer_preflight_not_fresh_release_audit",
+  "accepted_snapshot_digest": "df4def35c3d991745cbd37b3e8238b49c3edeedc07c6350a8a195b3092c3ad02",
+  "frozen_files_verified": 21,
+  "frozen_files_unchanged": {
+    "claim.json": true,
+    "evidence/research-2/literature.md": true,
+    "evidence/research-2/proof.md": true,
+    "evidence/research-2/review-targets.md": true,
+    "evidence/research-2/validation-initial.json": true,
+    "evidence/research-2/validation.json": true,
+    "evidence/research-2/verify.py": true,
+    "intake/primary/DSP-full2509.14588.pdf": true,
+    "intake/primary/DSP-full2509.14588.txt": true,
+    "intake/primary/DSP-linear2404.15916.pdf": true,
+    "intake/primary/DSP-linear2404.15916.txt": true,
+    "intake/primary/DirectedDSP2017.pdf": true,
+    "intake/primary/DirectedDSP2017.txt": true,
+    "intake/rectangular-upgrade/RectangularLGU1708.05622.pdf": true,
+    "intake/rectangular-upgrade/RectangularLGU1708.05622.txt": true,
+    "intake/rectangular-upgrade/RectangularMM2307.07970.pdf": true,
+    "intake/rectangular-upgrade/RectangularMM2307.07970.txt": true,
+    "intake/rectangular-upgrade/Valiant-contextfree1974.pdf": true,
+    "intake/rectangular-upgrade/Valiant-contextfree1974.txt": true,
+    "problem.md": true,
+    "source.md": true
+  },
+  "official_template_bytes_match": {
+    "acmart.cls": true,
+    "ACM-Reference-Format.bst": true
+  },
+  "pdf": "output/pdf/dspdag-working_paper.pdf",
+  "pdf_sha256": "3c9ff8313644bb68153b83ada65abc821d682fe5c994d68157178d20444a0799",
+  "total_pages": 8,
+  "user_total_page_cap": 12,
+  "paper_size": "letter",
+  "layout": "11pt single column single spacing one-inch margins",
+  "final_tex_warnings": [],
+  "final_bibtex_warnings": [],
+  "undefined_reference_marker_found": false,
+  "writer_render_inspection": {
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "rendered_images": [
+      "tmp/pdfs/verified-page-1.png",
+      "tmp/pdfs/verified-page-2.png",
+      "tmp/pdfs/verified-page-3.png",
+      "tmp/pdfs/verified-page-4.png",
+      "tmp/pdfs/verified-page-5.png",
+      "tmp/pdfs/verified-page-6.png",
+      "tmp/pdfs/verified-page-7.png",
+      "tmp/pdfs/verified-page-8.png"
+    ],
+    "rendered_pdf_sha256": "3c9ff8313644bb68153b83ada65abc821d682fe5c994d68157178d20444a0799",
+    "defects_remaining": []
+  },
+  "readiness_label": "working_paper",
+  "fresh_release_review_still_required": true,
+  "external_submission_performed": false
+}
