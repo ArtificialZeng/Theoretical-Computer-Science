@@ -1,0 +1,16 @@
+{
+  "job_id": "c042-strongrsp-research-266844093669",
+  "source_sha256": "93e36d243f9b6fec1df5dda18aacab258ad91c62c8465d0a010fddadbb319aa7",
+  "all_checks_passed": true,
+  "fixtures": 25,
+  "cases": 600,
+  "totals": {
+    "reference_policy_evaluations": 17820,
+    "reference_nonterminating_policies": 240,
+    "settled_states": 3600,
+    "bellman_residual_checks": 6864,
+    "value_and_policy_comparisons": 3600,
+    "strict_rounding_inflations": 603
+  },
+  "scope": "Specified rational q=2 finite fixtures with all active vertex subsets and b=5,8,12. Policy enumeration is the prior reference implementation, not an independent referee. No full RSP or conservative Poisson construction claim. This checker tests rounded static values, policies and residuals; rounded offline composition is a proof extension, not experimentally implemented here."
+}

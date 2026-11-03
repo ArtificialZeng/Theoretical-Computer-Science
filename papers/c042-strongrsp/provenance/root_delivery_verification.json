@@ -1,0 +1,138 @@
+{
+  "utc": "2026-11-03T05:07:21.269655+00:00",
+  "project": "c042-strongrsp",
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "readiness_label": "working_paper",
+  "pages": 9,
+  "pdf_sha256": "2714f0ab95d08c01d19aeacd5bf39597123d9cca31658ade6773a1bba658e703",
+  "source_archive_sha256": "3664805a58e6bef948d8daac04d2dc385fbeb6a8099b9453e5b1f8ca8c2606be",
+  "fresh_math_job": "c042-strongrsp-referee-5010e06f0ba2",
+  "fresh_release_job": "c042-strongrsp-release-8a7cb8c2de68",
+  "mathematical_snapshot": "b8a4224397c4874b51af65e8b82a4b17fef250e6e90513e63334f9d6b3b5e4e9",
+  "manuscript_digest": "80de7a1953cf2134fbcf45bdbab2b636aba6fb432d64e347ae0d2bbbc1c528f1",
+  "all_mathematical_snapshot_files_unchanged": true,
+  "actual_root_pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "root_visual_observations": "All9 final page images actually opened at original resolution. Separatecover; readable11pt prose andreferences; no clipping/overlap/missingglyphs; equations withinmargins. Normal proof/inline storage expression continuation onpages4-5 remains readable. Final deliveredPDF byte-identical to inspectedPDF, ZIP rebuilt pagepixels identical.",
+  "inspected_page_image_sha256": {
+    "1": "6560e0557cf72d9151ea7452f71a6378ee6a460e612766b007b8760675098ba9",
+    "2": "84f1357ee90e02573d66946a810c532480980a0a33e12ae68d6985ca618200cc",
+    "3": "1273b5e50133cdb9b9495aa8f069132dcb648cbd938ecf11b08340b5c6fd2a56",
+    "4": "5ee735b2343b1f8535a46dab4e5c245d48cd0fb198e3ed2dcae4100e3e0224fb",
+    "5": "cfd973e707797ffe495a5d7b74dd7d03d0649b35b606b4d16e6d42f1660528bd",
+    "6": "b6314f4f01a8541509874ffe24f19004be78ccdc84bdb0cf6099602c13578c3c",
+    "7": "796bc7f240828b6d99c59aa11672934e4e108065cacbd801cab31b3a761d571d",
+    "8": "7182569bc2929fce754baa0e7ad540ff4738a4f6c8433aa2460c42313ff1d2d4",
+    "9": "f20f8d4e604056a2d8027caf1b3dafb95f00931a4759fd82bd41d28ce3998e46"
+  },
+  "actual_zip_clean_build": true,
+  "actual_zip_all9_renders_identical": true,
+  "actual_zip_all5_finite_reproduction_passed": true,
+  "verification": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027_continuous/c042-strongrsp/package_verification.json",
+  "xmp_creators": [
+    "Zijian Zeng"
+  ],
+  "official_class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "official_vendor_sources": [
+    {
+      "member": "c042-strongrsp_source/vendor/acmart/acmart.dtx",
+      "matches_original": true,
+      "sha256": "e29efd327f5c759f3d1f2e99dc8588c6a05b734c142f89c3e348161b893e44ff"
+    },
+    {
+      "member": "c042-strongrsp_source/vendor/acmart/acmart.ins",
+      "matches_original": true,
+      "sha256": "fa7daaa9375775ce699f33f909667bdb83c0408fd8d67606926df86c346c4044"
+    },
+    {
+      "member": "c042-strongrsp_source/vendor/acmart/README",
+      "matches_original": true,
+      "sha256": "5f4b13963e839e1df1783d70495d1ea485e58facf936cfea27841fad6bdda863"
+    }
+  ],
+  "original_five_pdf_zip_integrity": [
+    {
+      "paper": 1,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027/paper1/paper1_submission.pdf",
+      "expected": "a1fb1c406f6c59c5196dbe1481bb9ea12e5528d261f6be3fe228ee9d3f8d1bca",
+      "actual": "a1fb1c406f6c59c5196dbe1481bb9ea12e5528d261f6be3fe228ee9d3f8d1bca",
+      "unchanged": true
+    },
+    {
+      "paper": 1,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027/paper1/paper1_source_and_reproducibility.zip",
+      "expected": "15c6e43066ef6f93af8220da721b8fd9f32d6a096307cc1547f427fea44c679a",
+      "actual": "15c6e43066ef6f93af8220da721b8fd9f32d6a096307cc1547f427fea44c679a",
+      "unchanged": true
+    },
+    {
+      "paper": 2,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027/paper2/paper2_submission.pdf",
+      "expected": "8ec2d595f7e1285ce79dc26f46caadf881d9065bce1928a7865f9d81d91b2d43",
+      "actual": "8ec2d595f7e1285ce79dc26f46caadf881d9065bce1928a7865f9d81d91b2d43",
+      "unchanged": true
+    },
+    {
+      "paper": 2,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027/paper2/paper2_source_and_reproducibility.zip",
+      "expected": "dfea246476d1a5b57a549ea309c146872017e8ee7c65f0cb96f136bc7631342a",
+      "actual": "dfea246476d1a5b57a549ea309c146872017e8ee7c65f0cb96f136bc7631342a",
+      "unchanged": true
+    },
+    {
+      "paper": 3,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027/paper3/paper3_submission.pdf",
+      "expected": "750891c12b44b7761c1c8c96968e8005e68e4b8b7f3f4299a8a5fe80fd96ce84",
+      "actual": "750891c12b44b7761c1c8c96968e8005e68e4b8b7f3f4299a8a5fe80fd96ce84",
+      "unchanged": true
+    },
+    {
+      "paper": 3,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027/paper3/paper3_source_and_reproducibility.zip",
+      "expected": "feedbf5adb3b34ce65942ee8a08c0544f32c33a2c534a5dfe516eee9e006c8a2",
+      "actual": "feedbf5adb3b34ce65942ee8a08c0544f32c33a2c534a5dfe516eee9e006c8a2",
+      "unchanged": true
+    },
+    {
+      "paper": 4,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027/paper4/paper4_submission.pdf",
+      "expected": "2a3b071bfdd103f2e2bbbde6f590ea75ee26229a96b46b0c79b3e02d754cf012",
+      "actual": "2a3b071bfdd103f2e2bbbde6f590ea75ee26229a96b46b0c79b3e02d754cf012",
+      "unchanged": true
+    },
+    {
+      "paper": 4,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027/paper4/paper4_source_and_reproducibility.zip",
+      "expected": "18ee55050ceb21213f3c8376efab377d5103dc95bbb83ec718a0b370737d79fd",
+      "actual": "18ee55050ceb21213f3c8376efab377d5103dc95bbb83ec718a0b370737d79fd",
+      "unchanged": true
+    },
+    {
+      "paper": 5,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027/paper5/paper5_submission.pdf",
+      "expected": "97f90509d1413691ce7cb13e0c7dc8bc0ee2a2b1f133131cc43a2ed9cea6ffa2",
+      "actual": "97f90509d1413691ce7cb13e0c7dc8bc0ee2a2b1f133131cc43a2ed9cea6ffa2",
+      "unchanged": true
+    },
+    {
+      "paper": 5,
+      "path": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027/paper5/paper5_source_and_reproducibility.zip",
+      "expected": "ca90273f18980b5ac5cdb96b22ef6585bf958b1b56ac26183a3f0d75f2d585fb",
+      "actual": "ca90273f18980b5ac5cdb96b22ef6585bf958b1b56ac26183a3f0d75f2d585fb",
+      "unchanged": true
+    }
+  ],
+  "citation_limitations": [],
+  "external_submission_or_upload_performed": false,
+  "scope": "Actual local delivery verification. Mathematical/innovation acceptance and conservative venue label are internal reviews, not external peer review or a STOC decision. Finite scripts do not certify the universal theorem."
+}

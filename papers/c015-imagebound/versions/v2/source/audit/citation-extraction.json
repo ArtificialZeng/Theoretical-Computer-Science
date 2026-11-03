@@ -1,0 +1,135 @@
+{
+  "claims": [
+    {
+      "claim_id": "C01",
+      "claim": "Kiefer and Ryzhikov use the all-word k-image-bounded model and incompleteness means existence of a mortal word.",
+      "type": "Attribution",
+      "location": "Section 1, definitions"
+    },
+    {
+      "claim_id": "C02",
+      "claim": "Kiefer and Ryzhikov give M_k(n)<=n^(k+1) and ask whether the bound is tight.",
+      "type": "Attribution + Statistic",
+      "location": "Abstract; Section 1; Section 5"
+    },
+    {
+      "claim_id": "C03",
+      "claim": "For every k>=2 and every n>=2k+2A_k k!, the binary strongly connected construction has mortality at least k! n^(k+1)/(2A_k)^(k+1), hence M_k(n)=Theta_k(n^(k+1)).",
+      "type": "Existence + Statistic",
+      "location": "Abstract; Theorem 1"
+    },
+    {
+      "claim_id": "C04",
+      "claim": "The unrestricted subset bound is 2^n-1, ruling out a jointly tight n^(k+1) estimate for growing k.",
+      "type": "Existence + Comparative",
+      "location": "Section 1 after Theorem 1"
+    },
+    {
+      "claim_id": "C05",
+      "claim": "The quadratic order at k=1 is known; Ryzhikov Section 4 recalls sharp unrestricted-alphabet n(n+1)/2 and attributes it to Rystsov.",
+      "type": "Attribution + Statistic",
+      "location": "Section 1.1"
+    },
+    {
+      "claim_id": "C06",
+      "claim": "Ryzhikov Section 4 gives a binary deterministic queue and physical delay path; the queue action here agrees up to indexing.",
+      "type": "Attribution + Comparative",
+      "location": "Section 1.1"
+    },
+    {
+      "claim_id": "C07",
+      "claim": "Ryzhikov unrestricted NFA exponential lower bounds do not impose the global k-image promise.",
+      "type": "Attribution",
+      "location": "Section 1.1"
+    },
+    {
+      "claim_id": "C08",
+      "claim": "Ananichev Section 2 Lemma 2.1 reproduces Vorel appended-tail lemma: under almost-permutation and divisibility conditions, h extra states add rh to reset threshold.",
+      "type": "Attribution + Statistic",
+      "location": "Section 1.1"
+    },
+    {
+      "claim_id": "C09",
+      "claim": "The shared k-clock packet has period L=lcm(ell_i) using sum ell_i clock states; coprime lengths permit fixed-k order n^k.",
+      "type": "Existence + Statistic",
+      "location": "Section 1.1; Section 4"
+    },
+    {
+      "claim_id": "C10",
+      "claim": "Every singleton image is empty, singleton or a single packet; least global image bound is exactly k and the graph is strongly connected.",
+      "type": "Existence",
+      "location": "Proposition 2; Lemma 3"
+    },
+    {
+      "claim_id": "C11",
+      "claim": "After the first b, the global image is P union S and V=m+1.",
+      "type": "Existence + Statistic",
+      "location": "Lemma 4, equation (5)"
+    },
+    {
+      "claim_id": "C12",
+      "claim": "Every b-boundary has form T union E_eta and V_old-V_new=eta-epsilon; each unit drop requires L dividing t+1.",
+      "type": "Existence",
+      "location": "Lemma 4, equation (6)"
+    },
+    {
+      "claim_id": "C13",
+      "claim": "Every mortal word costs at least 1+(m+1)L.",
+      "type": "Existence + Statistic",
+      "location": "Lemma 4"
+    },
+    {
+      "claim_id": "C14",
+      "claim": "An explicit mortal word has length at most 1+(m+1)L+m^2, without a condition on gcd(m,L).",
+      "type": "Existence + Statistic",
+      "location": "Proposition 2; Lemma 5"
+    },
+    {
+      "claim_id": "C15",
+      "claim": "The displayed parameter choice gives exactly n states, m>=M>=n/(2A), pairwise-coprime ell_i and L>=k! M^k for every n>=N_k.",
+      "type": "Existence + Statistic",
+      "location": "Section 4"
+    },
+    {
+      "claim_id": "C16",
+      "claim": "Successive killing of original rows gives at most nD<=n^(k+1) letters.",
+      "type": "Existence + Statistic",
+      "location": "Section 5"
+    },
+    {
+      "claim_id": "C17",
+      "claim": "The b^(2r) relation has k^r paths from p_0 to itself; endpoints merge.",
+      "type": "Existence + Statistic",
+      "location": "Scope paragraph"
+    },
+    {
+      "claim_id": "C18",
+      "claim": "A separately implemented verifier covered 22 finite instances, including repeated and noncoprime clock lengths.",
+      "type": "Statistic",
+      "location": "Computational checks paragraph"
+    },
+    {
+      "claim_id": "C19",
+      "claim": "KR2025 bibliographic record: Kiefer and Ryzhikov; MFCS 2025, LIPIcs 345, 62:1-62:19, DOI 10.4230/LIPIcs.MFCS.2025.62.",
+      "type": "Attribution",
+      "location": "Reference 2"
+    },
+    {
+      "claim_id": "C20",
+      "claim": "R2024 record: Ryzhikov; RP 2024, LNCS 15050, pp104-119, DOI 10.1007/978-3-031-72621-7_8; corrected arXiv v4 15 June 2025.",
+      "type": "Attribution + Temporal",
+      "location": "Reference 3"
+    },
+    {
+      "claim_id": "C21",
+      "claim": "A2017 record: D. S. Ananichev, A New Lower Bound for Reset Threshold of Synchronizing Automata with Sink State, arXiv:1701.07954v1 (2017).",
+      "type": "Attribution + Temporal",
+      "location": "Reference 1"
+    }
+  ],
+  "job_id": "c015-imagebound-release-b1a7d726335d",
+  "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+  "manuscript_digest": "5ae9b29ebb33f83bef87cb0ff1d33997e8bf05741cfd88f6086d02fb05f2a360",
+  "pdf_digest": "0abeb3c8720795bb730d6501ea49669b8e9f1006bc34b0e0d9578051921c4d19",
+  "checked_utc": "2026-11-01T09:23:11.371609+00:00"
+}

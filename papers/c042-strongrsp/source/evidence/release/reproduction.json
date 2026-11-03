@@ -1,0 +1,58 @@
+{
+  "job_id": "c042-strongrsp-release-8a7cb8c2de68",
+  "archive": "evidence/release/source-package-working_paper.zip",
+  "archive_digest": "86c98fd34a59279317577873a51dab62a6badba0f42fb8fb2eca68262615ac92",
+  "files": {
+    "manuscript/ACM-Reference-Format.bst": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04",
+    "manuscript/README.md": "4ff3ac77b43e8dc8d38bd379d9a4b8451923213051a3c2e5824c200da8897580",
+    "manuscript/acmart.cls": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+    "manuscript/build.sh": "c6d55d0574386f019dba0ff7e22c041d61df0837ad8f4c96b7e6e668d7aa4b12",
+    "manuscript/main.bbl": "91d6a24ad77c50305af82f5a3e9e83d27c4e5a0b8a64c4af0a7147fdd45e04ea",
+    "manuscript/main.tex": "d576eda45ca7dfa0ec901df11f81fff8e53ed01a4180e24156a95cc8fb1190c9",
+    "manuscript/references.bib": "66eb5b3829b9a0c2733a1105006375d70ff1e49d80b66fe226b9c4f86c063033",
+    "publication.json": "7b2a0333b8fdbc5f1249f948346620ecb399313773f7ff05bba739583136af5c"
+  },
+  "clean_source_rebuild": true,
+  "text_identical": true,
+  "pages": 9,
+  "page_comparisons": [
+    {
+      "page": 1,
+      "pixels_identical": true
+    },
+    {
+      "page": 2,
+      "pixels_identical": true
+    },
+    {
+      "page": 3,
+      "pixels_identical": true
+    },
+    {
+      "page": 4,
+      "pixels_identical": true
+    },
+    {
+      "page": 5,
+      "pixels_identical": true
+    },
+    {
+      "page": 6,
+      "pixels_identical": true
+    },
+    {
+      "page": 7,
+      "pixels_identical": true
+    },
+    {
+      "page": 8,
+      "pixels_identical": true
+    },
+    {
+      "page": 9,
+      "pixels_identical": true
+    }
+  ],
+  "pdf_bytes_identical": false,
+  "note": "PDF creation dates and object identifiers may differ; every rendered page and extracted text must match."
+}

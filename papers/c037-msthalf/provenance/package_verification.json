@@ -1,0 +1,48 @@
+{
+  "project": "c037-msthalf",
+  "actual_archive_sha256": "09c2542fdb61a65445ece333d11dbe4a503bb38a7a47bea11fe6d757a2207564",
+  "actual_pdf_sha256": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+  "build_inputs_rehashed": 9,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c037-msthalf-h28xlmsb/c037-msthalf_source",
+  "pages": 7,
+  "text_matches": true,
+  "all_page_renders_match": true,
+  "finite_reproduction": [
+    {
+      "entry": "evidence/interval_packing_check.py",
+      "summary": {
+        "metric_witnesses": 160,
+        "feasibility_calls": 28118,
+        "repair_masks": 33866
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c037-msthalf-h28xlmsb/reproduction-0.stdout.log"
+    },
+    {
+      "entry": "evidence/verify_interval_packing.py",
+      "summary": {
+        "job_id": "c037-msthalf-research-d39900f29f79",
+        "metric_witnesses": 160,
+        "nonultrametric_witnesses": 160,
+        "exact_rectangles_checked": 2802752,
+        "expensive_edges_checked": 778,
+        "largest_observed_interval_overlap": 4,
+        "repair_masks_checked": 33866,
+        "checks": [
+          "all metric triangles",
+          "full disjoint r-by-r rectangles",
+          "interval integral identity and closed-endpoint overlap",
+          "general metric transfer inequality",
+          "benchmark mask enumeration output"
+        ],
+        "limitations": [
+          "General metric families/orders/weights sampled, not exhaustive.",
+          "Coordinate descent has no global optimization guarantee.",
+          "Finite verification does not prove the universal theorem.",
+          "No fresh referee or novelty/STOC acceptance."
+        ]
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c037-msthalf-h28xlmsb/reproduction-1.stdout.log"
+    }
+  ],
+  "scope": "Actual delivered archive clean build/render/reproduction; not a new math or novelty verdict."
+}

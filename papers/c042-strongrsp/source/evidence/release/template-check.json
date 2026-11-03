@@ -1,0 +1,7 @@
+{
+  "official_source": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/templates/acm-official/distribution/acmart",
+  "byte_identical": {
+    "acmart.cls": true,
+    "ACM-Reference-Format.bst": true
+  }
+}

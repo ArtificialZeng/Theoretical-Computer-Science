@@ -1,0 +1,22 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Release gate passed for the nine-page working_paper. Publication preflight repairs, primary-source citation audit, clean build, all-page visual inspection and identical-page source ZIP reproduction are complete; frozen mathematics and venue assessment are preserved.",
+  "next_test": "Supervisor runs release_gate.py publish on the unchanged validated state and retains the working_paper label.",
+  "evidence": [
+    "checkpoint.md",
+    "audit/citations.json",
+    "audit/citations.md",
+    "audit/build.json",
+    "audit/build.md",
+    "audit/visual.json",
+    "audit/visual.md",
+    "audit/manuscript-snapshot.json",
+    "audit/stoc-assessment.json",
+    "evidence/release/gate-check.json",
+    "evidence/release/reproduction.json",
+    "evidence/release/source-package-working_paper.zip",
+    "manuscript/main.pdf"
+  ]
+}

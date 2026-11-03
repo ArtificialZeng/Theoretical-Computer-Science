@@ -1,0 +1,64 @@
+{
+  "job_id": "c040-mstdecfull-research-e695ca56645f",
+  "recorded_utc": "2026-11-03T00:50:53.769967+00:00",
+  "source_sha256": "09b52cf01e6e36d50f3090211c0313cda0f436865507abd6c00493d5583fe9a7",
+  "accumulated_research_pass": 2,
+  "pass_cap": 3,
+  "claim_contract_valid": true,
+  "evidence_files_exist": true,
+  "evidence_hashes": {
+    "source.md": "09b52cf01e6e36d50f3090211c0313cda0f436865507abd6c00493d5583fe9a7",
+    "problem.md": "4919e8c0082dcf9dc14ed9f8a35eca4e30c658bfb33e39dc816e3df09d7f7147",
+    "research/quadratic-resolution-proof.md": "b7d8fb0c67aa1eff9b64dc96ba611f63aa9b0107828d7b9d0b2c8aff47bfac23",
+    "research/quadratic-prior-comparison.md": "545b95efdcb7145ad57bbdbec5972206bab2a79e69da659e74655158b525bde0",
+    "research/quadratic-research-checklist.md": "3c7084c9ce18f7ce784c7acda5423dbc3c837d64900bf892b38238213781872f",
+    "research/check_outlier_charges_pass2.py": "557bbac50441dd1ae2034f5563e3e71aefe6ed7c8057f44e937754cc7b0458cd",
+    "evidence/outlier-charges-pass2.json": "9cdf26ecff98627e6b2d3ccc0d608853d25444085e394eb6e9b03f64bd28782d",
+    "evidence/research-pass2-literature.json": "d4530142582babe2f6f9495f00abe062889bfce309c6f0e3c3c1289d29625354",
+    "intake/primary/2610.40594v1.txt": "87b59b34ec5003f181493bb3e434d288edf22c6ed9cf9316d1175acddc41c92e",
+    "intake/primary/bateni24a-COLT2024.txt": "7f3cd1e9433790df7b63c42ed51c41eedaad547b8a3870850dab281a0f0538df",
+    "intake/quiet-planting-source-correction.json": "23cd2b31492ba89a71b9198dadb72b357b49b3d619a140a1e4a9ac15a860512c",
+    "intake/adjacent-soda-primary-access.json": "f12a9c9191e021a5957e6a94c90a664196c066af91f78c5adef2c3e654e1a869",
+    "intake/source-positioning-seed-disjointness.md": "67ffbc5980a4055b56c384db2e6a4afdb374276f0d96c90d0e6e7593376fbfcd",
+    "intake/oracle-primary-model-comparison.md": "6d8ad643da688e19d3b27803cf7c35231e15f547b3cbca3cdb08a4d2fd1bdbbb"
+  },
+  "claim_sha256": "db68bc6640a99cd884fdd1686defb1c9f0569edca5d037eae7dc9091f129ae65",
+  "protected_entry_files_unchanged": {
+    "source.md": true,
+    "problem.md": true,
+    "research/full-resolution-proof.md": true,
+    "audit/snapshot.json": true,
+    "audit/math.json": true,
+    "audit/math.md": true,
+    "audit/innovation.json": true,
+    "audit/stoc-assessment.json": true,
+    "intake/outlier-sensitive-log2.md": true,
+    "history/cubic-pass1-20261103T004138Z/preservation.json": true
+  },
+  "old_snapshot_digest": "bf8c82fd54c9793b5c068f18f7bb44944417a41c982a27be96486504558d316f",
+  "old_acceptance_applies_to_current_claim": false,
+  "old_snapshot_claim_mismatch_expected_after_strengthening": true,
+  "new_freeze_or_acceptance_written_by_researcher": false,
+  "finite_test": {
+    "passed": true,
+    "hierarchies": 84,
+    "core_assignments": 2016,
+    "ordered_cases": 12096,
+    "edges": 105408
+  },
+  "arithmetic_constant_check": {
+    "coefficient": 13246464000,
+    "claimed_constant": 1000000000000000,
+    "margin_positive": true
+  },
+  "limitations": [
+    "Structural checks and finite computation do not certify the all-n proof.",
+    "No fresh referee or STOC assessment of the stronger packet has occurred.",
+    "Adjacent SODA full proof access remains unavailable in the inspected ordinary routes.",
+    "No manuscript, authored PDF, external submission or contact."
+  ],
+  "decision": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "meaning": "Proposed full proof for fresh review, not an acceptance."
+}

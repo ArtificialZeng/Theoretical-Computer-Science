@@ -1,0 +1,79 @@
+{
+  "job_id": "c042-strongrsp-research-a3a11d57c4b5",
+  "all_checks_passed": true,
+  "series_cases": 10,
+  "guard_cases": 2,
+  "records": [
+    {
+      "z": "15/16",
+      "k": 0,
+      "mean": "0",
+      "branch": "bounded-series",
+      "decimal_upper_gap": "4.68167635469219832715584941385868E-97"
+    },
+    {
+      "z": "15/16",
+      "k": 0,
+      "mean": "1/4",
+      "branch": "bounded-series",
+      "decimal_upper_gap": "4.68167635469219832715584941385868E-97"
+    },
+    {
+      "z": "15/16",
+      "k": 1,
+      "mean": "1/4",
+      "branch": "bounded-series",
+      "decimal_upper_gap": "4.681676354692198327155849413858676E-97"
+    },
+    {
+      "z": "15/16",
+      "k": 3,
+      "mean": "8",
+      "branch": "bounded-series",
+      "decimal_upper_gap": "4.68167635469219832715584941385867E-97"
+    },
+    {
+      "z": "15/16",
+      "k": 7,
+      "mean": "32",
+      "branch": "bounded-series",
+      "decimal_upper_gap": "4.68167635469219832715584941385866E-97"
+    },
+    {
+      "z": "63/64",
+      "k": 0,
+      "mean": "0",
+      "branch": "bounded-series",
+      "decimal_upper_gap": "4.68167635469219832715584941385868E-97"
+    },
+    {
+      "z": "63/64",
+      "k": 0,
+      "mean": "1/4",
+      "branch": "bounded-series",
+      "decimal_upper_gap": "4.68167635469219832715584941385867E-97"
+    },
+    {
+      "z": "63/64",
+      "k": 1,
+      "mean": "1/4",
+      "branch": "bounded-series",
+      "decimal_upper_gap": "4.681676354692198327155849413858677E-97"
+    },
+    {
+      "z": "63/64",
+      "k": 3,
+      "mean": "8",
+      "branch": "bounded-series",
+      "decimal_upper_gap": "4.68167635469219832715584941385868E-97"
+    },
+    {
+      "z": "63/64",
+      "k": 7,
+      "mean": "32",
+      "branch": "bounded-series",
+      "decimal_upper_gap": "4.68167635469219832715584941385867E-97"
+    }
+  ],
+  "scope": "Exact rational bounded-precision arithmetic under test; 130-digit Decimal exp/log is numerical reference, NOT a certified interval or proof. Universal enclosure/error/operation bounds are mathematical obligations in the proof record."
+}

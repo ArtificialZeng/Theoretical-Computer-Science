@@ -1,0 +1,16 @@
+{
+  "at_utc": "2026-11-03T21:36:05.699170+00:00",
+  "archive_sha256": "3b7ce3716e7c676ef4ac429a3d6bfc65148b32325a781bc16eeeeae62d2dacda",
+  "safe_members": 35,
+  "all_manifest_hashes_match": true,
+  "five_language_readme_links_passed": true,
+  "cpp_clean_builds_requested": 2,
+  "declared_finite_checkers": 8,
+  "clean_zip_reproduction_exit_code": 0,
+  "passed": true,
+  "stdout": "research-67929c1f9552-flow-test.py: PASS\nresearch-67929c1f9552-return-test.py: PASS\nresearch-c6b2b0ea3f71-core-test.py: PASS\nresearch-2396269cbd5d-energy-test.py: PASS\nresearch-2396269cbd5d-sharing-test.py: PASS\nresearch-2396269cbd5d-independent-check.py: PASS\nresearch-960416a85f25-selector-test.py: PASS\nresearch-960416a85f25-certificate-test.py: PASS\n{\n  \"passed\": true,\n  \"original_status\": \"unresolved\",\n  \"declared_finite_checks_only\": true,\n  \"cpp_clean_builds\": 2,\n  \"operational_deadline_adapter\": {\n    \"original_source_sha256\": \"d588ed92931171afb4ea689f633acaaf50f6882cf7a50a7108b5caabd2e60c38\",\n    \"temporary_source_sha256\": \"4e1ea3c917022023c4d3d355b91e41ce7720a4c317c049af1ca8e49f9a67cfb4\",\n    \"removed_operational_assertions\": 1,\n    \"mathematical_assertions_retained\": 4\n  },\n  \"checks\": [\n    {\n      \"script\": \"research-67929c1f9552-flow-test.py\",\n      \"exit_code\": 0\n    },\n    {\n      \"script\": \"research-67929c1f9552-return-test.py\",\n      \"exit_code\": 0\n    },\n    {\n      \"script\": \"research-c6b2b0ea3f71-core-test.py\",\n      \"exit_code\": 0\n    },\n    {\n      \"script\": \"research-2396269cbd5d-energy-test.py\",\n      \"exit_code\": 0\n    },\n    {\n      \"script\": \"research-2396269cbd5d-sharing-test.py\",\n      \"exit_code\": 0\n    },\n    {\n      \"script\": \"research-2396269cbd5d-independent-check.py\",\n      \"exit_code\": 0\n    },\n    {\n      \"script\": \"research-960416a85f25-selector-test.py\",\n      \"exit_code\": 0\n    },\n    {\n      \"script\": \"research-960416a85f25-certificate-test.py\",\n      \"exit_code\": 0\n    }\n  ]\n}\n",
+  "stderr": "",
+  "operational_only_adapter_disclosed": true,
+  "scope": "Actual ZIP portability/clean C++ builds and unchanged mathematical assertions/finite cases. Exactly one expired operational deadline is removed only from a hash-bound temporary copy. No expanded search/new research pass/fresh acceptance/original proof/manuscript/upload.",
+  "archival_note": "Initial packaging failure retained locally; the operational-only adapter is disclosed in the archive and reproduction instructions."
+}

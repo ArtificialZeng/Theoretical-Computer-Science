@@ -1,0 +1,23 @@
+{
+  "job_id": "c042-strongrsp-write-c0bda549b267",
+  "phase": "write",
+  "snapshot_digest": "b8a4224397c4874b51af65e8b82a4b17fef250e6e90513e63334f9d6b3b5e4e9",
+  "check_math": "passed",
+  "readiness_label": "working_paper",
+  "label_basis": "audit/stoc-assessment.json",
+  "source_sha256": "93e36d243f9b6fec1df5dda18aacab258ad91c62c8465d0a010fddadbb319aa7",
+  "research_passes_preserved": 3,
+  "artifact_marker": {
+    "operation": "create",
+    "format": "pdf",
+    "count": 1,
+    "exit_code": 0
+  },
+  "status": "ready_for_separate_release_review",
+  "pages": 9,
+  "source_unchanged": true,
+  "official_acmart_identical": true,
+  "finished_utc": "2026-11-03T04:45:55.078029+00:00",
+  "manuscript_digest": "6e0a7b49dd4614e0dc03828363dc4794fb971c53afcc740a049fd3ccfa1ffd4b",
+  "pdf_digest": "0701106e5fbcc948ec972d3e042e5c342711638ad2c1feda6228872d0d1e6e59"
+}

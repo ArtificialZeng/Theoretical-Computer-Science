@@ -1,0 +1,21 @@
+{
+  "outcome": "continue",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Pass 2 established local offline composition and finite-rank rounding bounds, supported by exact policy comparisons. Full original RSP remains unresolved; one research pass remains. Source and prior evidence preserved; no manuscript or candidate.",
+  "next_test": "In final pass 3, construct and exactly test a conservative bounded-bit Poisson-CDF/event compiler: prove tail/normalization error, monotonicity across the upward mean grid, finite operation and encoding bounds, path-level probability gap and edge-local scale coverage; integrate with the rounded offline engine.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "evidence/research-pass2-offline.md",
+    "evidence/check_offline_composition.py",
+    "evidence/offline-composition-results.json",
+    "evidence/research-pass2-rounding.md",
+    "evidence/check_rounded_oracle.py",
+    "evidence/rounded-oracle-results.json",
+    "evidence/research-pass2-literature.md",
+    "evidence/research-pass2-run.json",
+    "evidence/research-pass1-checkpoint-preserved.md"
+  ]
+}

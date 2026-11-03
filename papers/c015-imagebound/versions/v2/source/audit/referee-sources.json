@@ -1,0 +1,81 @@
+{
+  "job_id": "c015-imagebound-referee-c91c0d194005",
+  "checked_date": "2026-11-01",
+  "method": "Fresh web searches followed by inspection of primary publisher/arXiv text. No external messages or submissions.",
+  "queries": [
+    "\"image-bounded\" \"mortal\" automata",
+    "\"k-image-bounded\" tight bound mortality",
+    "\"The Complexity of Reachability Problems in Strongly Connected Finite Automata\"",
+    "\"On shortest products for nonnegative matrix mortality\"",
+    "\"k-image-bounded\" lower",
+    "\"image bounded\" \"mortality\"",
+    "\"bounded row\" \"mortal\" automata",
+    "automata \"bounded image\" \"mortal word\"",
+    "\"row support\" \"mortality\" matrices",
+    "\"image-bounded\" \"tight\" -site:mensskull.com",
+    "automata mortality \"bounded nondeterminism\"",
+    "automata \"mortality\" \"k-valued\"",
+    "\"image-bounded\" automata lower bound 2026"
+  ],
+  "primary_sources": [
+    {
+      "title": "The Complexity of Reachability Problems in Strongly Connected Finite Automata",
+      "authors": "Stefan Kiefer and Andrew Ryzhikov",
+      "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol345-mfcs2025/html/LIPIcs.MFCS.2025.62/LIPIcs.MFCS.2025.62.html",
+      "doi": "10.4230/LIPIcs.MFCS.2025.62",
+      "checked": "Sections 2, 7 and 9, also against the frozen local primary.txt. The global all-word definition and upper bound match the packet. Section 9 asks tightness without specifying fixed-k quantifiers.",
+      "version_record": "https://arxiv.org/abs/2504.13784",
+      "current_version_observed": "v2, 2025-07-23"
+    },
+    {
+      "title": "On shortest products for nonnegative matrix mortality",
+      "authors": "Andrew Ryzhikov",
+      "url": "https://arxiv.org/html/2405.19622v4",
+      "doi": "10.1007/978-3-031-72621-7_8",
+      "checked": "Sections 2.2, 3, 4 and 5. Section 4 gives the explicit binary deterministic queue/tail transition rule and quadratic mortality order. The general NFA exponential bounds lack the fixed global image promise. Section 4 attributes the n(n+1)/2 deterministic upper bound to Rystsov 1997; that original proof was not separately inspected."
+    },
+    {
+      "title": "A new lower bound for reset threshold of synchronizing automata with sink state",
+      "authors": "D. S. Ananichev",
+      "url": "https://arxiv.org/pdf/1701.07954",
+      "checked": "v1, Section 2, definitions of appended physical tails and almost permutation automata, and Lemma 2.1 with proof. An h-state tail for h divisible by the permutation order adds n*h to the reset threshold. This is deterministic and does not provide the proposed compressed packet."
+    },
+    {
+      "title": "A new lower bound for reset threshold of binary synchronizing automata with sink",
+      "authors": "Dmitry Ananichev and Vojtech Vorel",
+      "url": "https://jalc.de/issues/2019/issue_24_2-4/abs-153.pdf",
+      "doi": "10.25596/jalc-2019-153",
+      "checked": "Publisher first page confirms joint authors, title, journal pages 153-164 and deterministic sink reset scope. Full journal text was not obtained; no journal lemma number is asserted."
+    },
+    {
+      "title": "The Asymptotic Size of Finite Irreducible Semigroups of Rational Matrices",
+      "authors": "Stefan Kiefer and Andrew Ryzhikov",
+      "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol364-stacs2026/html/LIPIcs.STACS.2026.60/LIPIcs.STACS.2026.60.html",
+      "doi": "10.4230/LIPIcs.STACS.2026.60",
+      "checked": "Introduction, hypotheses, and Theorem 29: finite ordinary rational matrix semigroups. The candidate's b matrix has unbounded powers and so does not meet this hypothesis."
+    },
+    {
+      "title": "Quadratic bounds for uncompletable words and matrix mortality",
+      "authors": "Rahul Chandelkar and Samrath Singh Chadha",
+      "url": "https://arxiv.org/html/2609.30817v2",
+      "checked": "Abstract and Theorem 1.2: joint spectral radius at most one and a cycle hub in every support component. Both fail for the candidate. This theorem's full proof and claimed Lean development were not audited."
+    },
+    {
+      "title": "Andrew Ryzhikov: Research",
+      "url": "https://sites.google.com/site/ryzandrew/research",
+      "checked": "Current author's list for mortality/image-bound follow-ups, including the STACS 2026 paper; no full hierarchy resolution was identified."
+    },
+    {
+      "title": "Agentic Conjectures: Mortal words in small image-bounded NFAs",
+      "url": "https://github.com/umaia1234/agentic-conjectures/blob/main/problems/nfa-mortal-words/README.md",
+      "checked": "Primary public record of its own finite enumeration claims: binary 2-image-bounded NFAs through four states. It explicitly limits its scope and leaves general asymptotic tightness unresolved. Its enumeration was not rerun and is not used in the proof."
+    }
+  ],
+  "access_failures": [
+    {
+      "url": "https://raw.githubusercontent.com/umaia1234/agentic-conjectures/main/problems/nfa-mortal-words/README.md",
+      "observed": "Web tool cache miss; GitHub rendered README then opened successfully. This has no mathematical significance."
+    }
+  ],
+  "screen_result": "No equivalent full fixed-k hierarchy theorem was found in the checked primary records and terminology searches. This bounded screen supports the stated novelty assessment; it does not prove exhaustive priority."
+}

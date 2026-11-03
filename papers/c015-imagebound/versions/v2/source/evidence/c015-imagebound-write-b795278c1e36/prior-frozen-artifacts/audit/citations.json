@@ -1,0 +1,20 @@
+{
+  "job_id": "c015-imagebound-release-b1a7d726335d",
+  "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+  "manuscript_digest": "5ae9b29ebb33f83bef87cb0ff1d33997e8bf05741cfd88f6086d02fb05f2a360",
+  "pdf_digest": "0abeb3c8720795bb730d6501ea49669b8e9f1006bc34b0e0d9578051921c4d19",
+  "verdict": "accept",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/acmart.cls",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "All five sorted publication source files, final extracted/rendered references, three primary bibliographic records and cited passages, accepted-claim scope, bounded current novelty comparison, and complete local dependencies checked on 2026-11-01. No Excel bibliography designated. Corrected arXiv v4 supplies accessible R2024 text; no unresolved citation limitation. Bounded search does not establish exhaustive priority.",
+  "citation_audit_method": "citation-check-skill-advisory-and-primary-source-manual",
+  "checked_utc": "2026-11-01T09:23:11.371609+00:00"
+}

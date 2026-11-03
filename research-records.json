@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "records": [
+    {
+      "id": "c049-dualpreserve",
+      "title": "Dual-fault pairwise reachability preservers: unresolved research records",
+      "kind": "unresolved-research-record",
+      "original_status": "unresolved",
+      "research_passes": 4,
+      "has_pdf": false,
+      "candidate_kind": "none",
+      "source_archive": "notes/c049-dualpreserve/source.zip",
+      "source_archive_sha256": "3b7ce3716e7c676ef4ac429a3d6bfc65148b32325a781bc16eeeeae62d2dacda",
+      "source_directory": "notes/c049-dualpreserve/source",
+      "archive_prefix": "c049-unresolved-v2/",
+      "readme": "notes/c049-dualpreserve/README.md",
+      "reproduction_command": [
+        "python3",
+        "-B",
+        "notes/c049-dualpreserve/source/reproduce.py"
+      ],
+      "scope": "A family-specific 8t+p-edge certificate and exact finite diagnostics; the original general-graph target remains unresolved."
+    }
+  ],
+  "scope": "Research records are not manuscript entries or readiness upgrades."
+}

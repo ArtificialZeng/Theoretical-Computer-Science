@@ -1,0 +1,53 @@
+{
+  "job_id": "c040-mstdecfull-write-8ed1f11b8bf8",
+  "utc": "2026-11-03T01:14:05.305280+00:00",
+  "type": "writer_build_and_visual_evidence_not_release_audit",
+  "clean_build_command": "cd manuscript && latexmk -C main.tex && latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex",
+  "clean_build_exit_code": 0,
+  "pages": 8,
+  "paper": "US Letter",
+  "source_intact": true,
+  "official_class_and_bst_unmodified": true,
+  "pdf_sha256": "3b5c4f06347b3a901bbc69231d7629b7516841a1cb1ea6a92fb608cc71e3e6cd",
+  "source_file_sha256": {
+    "manuscript/main.tex": "c60792e4b6fb74975ff7e14a97a4b3df7127b53195444572add606c86f8ee919",
+    "manuscript/references.bib": "e032b928833291da9e1c0dfe6531da389824cd2bd3900a87d3b4fb9a821342d5",
+    "manuscript/main.bbl": "fb6385d367dcc1bcbd5a982f9229ea0c89cbf1a247d9137cede8433058d6d349",
+    "manuscript/acmart.cls": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+    "manuscript/ACM-Reference-Format.bst": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04",
+    "manuscript/README.md": "bf701a243301c50683eca22a23fd08e046a6871d1e2844f1c4e5a1c2babaf1a1"
+  },
+  "unresolved_references": false,
+  "overfull_or_underfull_boxes": false,
+  "build_warnings": [
+    "Class acmart Warning: No city present for an affiliation."
+  ],
+  "bibliography_warnings": [
+    "Warning--empty address in bateni2024",
+    "Warning--empty address in fletcher2026"
+  ],
+  "warning_assessment": "Optional city and publisher-address metadata are absent; no fabricated city/address was added. These warnings do not affect compilation or reference resolution.",
+  "visual": {
+    "all_eight_pages_inspected": true,
+    "final_pages_1_2": "Directly inspected final PNGs after clean build.",
+    "final_pages_3_to_8": "Final PNGs are byte-identical to the already individually inspected earlier rendering.",
+    "observations": "Legible equations, consistent single-column layout and page numbering, complete references, no clipping or overlap. Title/abstract page follows inspected CFP.",
+    "render_files": {
+      "evidence/write-8ed1f11b8bf8/rendered/page-1.png": "4fb71106802d3133837001830ab25210f56277b25e04d3b1451da1aa39f8d4cf",
+      "evidence/write-8ed1f11b8bf8/rendered/page-2.png": "80f9972d0bf09c8c3074054f5bf6f0ab45a6a9fc240fd6fdbdb78f6cbd44c766",
+      "evidence/write-8ed1f11b8bf8/rendered/page-3.png": "5ac49a054ada5a749d72d9ce314667bafdf88c0109bfd00d397b05c18d40a59b",
+      "evidence/write-8ed1f11b8bf8/rendered/page-4.png": "fa7d693952a9c8aba56276a6b86cd8a8ec6a291a664153bcbb033cb0c9ef840d",
+      "evidence/write-8ed1f11b8bf8/rendered/page-5.png": "fafe402d4da9ec4e0d64e8366094813408b30ac7c8b65e759d4660d650a75c02",
+      "evidence/write-8ed1f11b8bf8/rendered/page-6.png": "74168082b5f9f0be7ef51cfe732c9becfe121ae325c82ffb396815785c9b8669",
+      "evidence/write-8ed1f11b8bf8/rendered/page-7.png": "ddc5e68d58b0f773d345e5c4fc50cad0fca0aad48e59db00fd9eeb8743069243",
+      "evidence/write-8ed1f11b8bf8/rendered/page-8.png": "8c9cab70563a0985cd3501df25430ef00abb3bbad0458076d7f76270920a17b9"
+    }
+  },
+  "classification": "working_paper",
+  "assessment_sha256": "60a013cc2ee44dd3e3536e305a098c5317254bac73bbfe2b8b1e398b6ead6bc9",
+  "remaining_release_gates": [
+    "Separate fresh citation audit",
+    "Separate build/visual release audit and ZIP reproduction",
+    "Script-controlled release; no release declaration in WRITE"
+  ]
+}

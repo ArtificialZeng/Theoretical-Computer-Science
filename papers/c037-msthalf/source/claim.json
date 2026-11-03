@@ -1,0 +1,20 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "For every fixed real p in [0,1/2), an explicit finite deterministic algorithm using only n, p and the symmetric corrupted observation matrix, with no true-distance queries, returns a spanning tree whose expected true metric cost is at most C_p max(1,ln n) MST(d), uniformly over every n>=2, every finite n-point metric d and every omniscient post-mask adversary assigning arbitrary finite replacement values to independently p-marked unordered pairs, exactly as in immutable source.md. The proof establishes the all-metric deterministic transfer bound sum_i d(v_i,v_{i+1}) <= (320r/eta)(W+MST(d)) from nonnegative order weights of total W and a dominated graph with density at least eta in every disjoint rectangle with both sides of size at least r.",
+  "contribution": "Proposed full resolution of the frozen below-half information-theoretic threshold question. An observable rectangle-domination certificate and a metric-star interval overlap argument extend the verified p<1/4 upper bound to every p<1/2, matching the boundary of the prior p>=1/2 linear lower bound. The all-scale integral avoids an additional logarithmic loss and applies to all metrics and aspect ratios. The benchmark repair mechanism is credited to prior work and independently reconstructed for the all-n expectation. This requests fresh correctness, current novelty, substantive-value and STOC assessment; it asserts no acceptance, efficient runtime or new lower bound.",
+  "proposer_job_id": "c037-msthalf-research-d39900f29f79",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "evidence/research-pass3-full-proof.md",
+    "evidence/research-pass3-literature.md",
+    "evidence/research-pass3-adversarial-review.md",
+    "evidence/interval_packing_check.py",
+    "evidence/verify_interval_packing.py",
+    "evidence/interval-packing-check.json",
+    "evidence/interval-packing-validation.json",
+    "intake/primary/2610.40594v1.html",
+    "intake/primary/2610.40594v1.txt"
+  ]
+}

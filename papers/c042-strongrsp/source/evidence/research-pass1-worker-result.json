@@ -1,0 +1,17 @@
+{
+  "outcome": "continue",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Established a costed vertex-block boundary oracle with nontermination-as-failure, tick monotonicity and first-hit comparison. Exact q=2 and held-out q=3 tests pass. The full aspect-independent all-target RSP algorithm remains unresolved; research pass 1/3 is preserved.",
+  "next_test": "Prove and exactly test offline composition on monotone rational clock-event sequences: depth-error propagation, tick-compatible time envelopes, nested whole-vertex activation, and aggregate active-vertex/incident-edge work without global scans.",
+  "evidence": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/research-pass1-boundary.md",
+    "evidence/check_boundary_oracle.py",
+    "evidence/boundary-oracle-results.json",
+    "evidence/check_boundary_oracle_heldout.py",
+    "evidence/boundary-oracle-heldout-results.json",
+    "evidence/research-pass1-literature.md"
+  ]
+}

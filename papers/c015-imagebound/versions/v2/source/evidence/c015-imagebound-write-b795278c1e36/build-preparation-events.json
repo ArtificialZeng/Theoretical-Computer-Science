@@ -1,0 +1,7 @@
+[
+  {
+    "event": "local preservation assertion expected ten mathematical environments; actual count is nine",
+    "mathematical_evidence": false,
+    "recovery": "Count the actual one theorem, one proposition, three lemmas and four proof environments; compare all nine byte-for-byte. No mathematics was changed."
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "job_id": "c015-imagebound-write-9f5b77760f77",
+  "operation": "freeze-manuscript",
+  "exit_code": 0,
+  "stdout": "{\"ok\":true,\"manuscript_digest\":\"f6dc6040f47ee7c554243dc509b1e29fd89433d20d254bd3a1eb60cf940a1337\",\"pdf_digest\":\"7572a3bc325f516a8b9c0e791226dd1f5553a376e56ddb5fd784381c2cd0f03d\",\"snapshot_digest\":\"cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e\",\"changed\":true}",
+  "stderr": ""
+}

@@ -1,0 +1,97 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{4}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter does
+%%% not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+\makeatletter
+\@ifundefined{NAT@parse@date}{}{\let\NAT@parse@date@orig\NAT@parse@date}
+\@ifundefined{NAT@parse@date}{}{\def\NAT@parse@date#1#2#3#4#5#6@@{\NAT@parse@date@orig#1#2#3#4#5#6@@\def\NAT@tempyear{0000}\def\NAT@tempexlab{{?}}\ifx\NAT@year\NAT@tempyear\ifx\NAT@exlab\NAT@tempexlab\def\NAT@date{[n.\,d.]}\else\edef\NAT@date{[n.\,d.]\NAT@exlab}\fi\fi}}
+\makeatother
+
+\bibitem[Ashvinkumar(2026)]%
+        {A26}
+\bibfield{author}{\bibinfo{person}{Vikrant Ashvinkumar}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{A Deterministic Near-Linear Time Approximation
+  Algorithm for Restricted Shortest Paths in Directed Graphs}.
+\newblock
+\href{https://doi.org/10.48550/arXiv.2610.18337}{doi:\nolinkurl{10.48550/arXiv.2610.18337}}
+\newblock
+\shownote{arXiv:2610.18337v2, revised 29 October 2026}.
+
+
+\bibitem[Ashvinkumar et~al\mbox{.}(2024)]%
+        {ABK24}
+\bibfield{author}{\bibinfo{person}{Vikrant Ashvinkumar}, \bibinfo{person}{Aaron
+  Bernstein}, {and} \bibinfo{person}{Adam Karczmarz}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{Faster Approximation Algorithms for Restricted
+  Shortest Paths in Directed Graphs}.
+\newblock
+\href{https://doi.org/10.48550/arXiv.2410.17179}{doi:\nolinkurl{10.48550/arXiv.2410.17179}}
+\newblock
+\shownote{arXiv:2410.17179v1; SODA 2025 paper}.
+
+
+\bibitem[G{\'o}rkiewicz and Karczmarz(2025)]%
+        {GK25}
+\bibfield{author}{\bibinfo{person}{Adam G{\'o}rkiewicz} {and}
+  \bibinfo{person}{Adam Karczmarz}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{On Incremental Approximate Shortest Paths in Directed
+  Graphs}.
+\newblock
+\href{https://doi.org/10.48550/arXiv.2502.10348}{doi:\nolinkurl{10.48550/arXiv.2502.10348}}
+\newblock
+\shownote{arXiv:2502.10348v1}.
+
+
+\bibitem[McCauley et~al\mbox{.}(2025)]%
+        {MMNNS25}
+\bibfield{author}{\bibinfo{person}{Samuel McCauley}, \bibinfo{person}{Benjamin
+  Moseley}, \bibinfo{person}{Aidin Niaparast}, \bibinfo{person}{Helia
+  Niaparast}, {and} \bibinfo{person}{Shikha Singh}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Incremental Approximate Single-Source Shortest
+  Paths with Predictions}. In \bibinfo{booktitle}{\emph{52nd International
+  Colloquium on Automata, Languages, and Programming (ICALP 2025)}}
+  \emph{(\bibinfo{series}{Leibniz International Proceedings in Informatics
+  (LIPIcs)}, Vol.~\bibinfo{volume}{334})}. \bibinfo{publisher}{Schloss Dagstuhl
+  -- Leibniz-Zentrum f{\"u}r Informatik}, \bibinfo{address}{Dagstuhl, Germany},
+  \bibinfo{pages}{117:1--117:20}.
+\newblock
+\href{https://doi.org/10.4230/LIPIcs.ICALP.2025.117}{doi:\nolinkurl{10.4230/LIPIcs.ICALP.2025.117}}
+
+
+\end{thebibliography}

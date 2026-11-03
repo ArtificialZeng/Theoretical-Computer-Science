@@ -1,0 +1,778 @@
+{
+  "job_id": "c042-strongrsp-referee-5010e06f0ba2",
+  "snapshot_digest": "b8a4224397c4874b51af65e8b82a4b17fef250e6e90513e63334f9d6b3b5e4e9",
+  "all_checks_passed": true,
+  "cases": 64,
+  "state_checks": 624,
+  "seed": 5010,
+  "records": [
+    {
+      "q": 2,
+      "fixture": 0,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "q": 2,
+      "fixture": 0,
+      "active_mask": 1,
+      "max_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "q": 2,
+      "fixture": 0,
+      "active_mask": 3,
+      "max_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "q": 2,
+      "fixture": 0,
+      "active_mask": 7,
+      "max_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "q": 2,
+      "fixture": 1,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "q": 2,
+      "fixture": 1,
+      "active_mask": 1,
+      "max_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "q": 2,
+      "fixture": 1,
+      "active_mask": 3,
+      "max_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "q": 2,
+      "fixture": 1,
+      "active_mask": 7,
+      "max_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "q": 2,
+      "fixture": 2,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "q": 2,
+      "fixture": 2,
+      "active_mask": 1,
+      "max_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "q": 2,
+      "fixture": 2,
+      "active_mask": 3,
+      "max_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "q": 2,
+      "fixture": 2,
+      "active_mask": 7,
+      "max_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "q": 2,
+      "fixture": 3,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "q": 2,
+      "fixture": 3,
+      "active_mask": 1,
+      "max_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "q": 2,
+      "fixture": 3,
+      "active_mask": 3,
+      "max_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "q": 2,
+      "fixture": 3,
+      "active_mask": 7,
+      "max_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "q": 2,
+      "fixture": 4,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "q": 2,
+      "fixture": 4,
+      "active_mask": 1,
+      "max_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "q": 2,
+      "fixture": 4,
+      "active_mask": 3,
+      "max_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "q": 2,
+      "fixture": 4,
+      "active_mask": 7,
+      "max_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "q": 2,
+      "fixture": 5,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "q": 2,
+      "fixture": 5,
+      "active_mask": 1,
+      "max_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "q": 2,
+      "fixture": 5,
+      "active_mask": 3,
+      "max_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "q": 2,
+      "fixture": 5,
+      "active_mask": 7,
+      "max_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "q": 2,
+      "fixture": 6,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "q": 2,
+      "fixture": 6,
+      "active_mask": 1,
+      "max_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "q": 2,
+      "fixture": 6,
+      "active_mask": 3,
+      "max_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "q": 2,
+      "fixture": 6,
+      "active_mask": 7,
+      "max_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "q": 2,
+      "fixture": 7,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "q": 2,
+      "fixture": 7,
+      "active_mask": 1,
+      "max_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "q": 2,
+      "fixture": 7,
+      "active_mask": 3,
+      "max_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "q": 2,
+      "fixture": 7,
+      "active_mask": 7,
+      "max_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "q": 3,
+      "fixture": 0,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 7
+    },
+    {
+      "q": 3,
+      "fixture": 0,
+      "active_mask": 1,
+      "max_rank": 3,
+      "rank_bound": 14
+    },
+    {
+      "q": 3,
+      "fixture": 0,
+      "active_mask": 3,
+      "max_rank": 3,
+      "rank_bound": 21
+    },
+    {
+      "q": 3,
+      "fixture": 0,
+      "active_mask": 7,
+      "max_rank": 3,
+      "rank_bound": 28
+    },
+    {
+      "q": 3,
+      "fixture": 1,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 7
+    },
+    {
+      "q": 3,
+      "fixture": 1,
+      "active_mask": 1,
+      "max_rank": 3,
+      "rank_bound": 14
+    },
+    {
+      "q": 3,
+      "fixture": 1,
+      "active_mask": 3,
+      "max_rank": 3,
+      "rank_bound": 21
+    },
+    {
+      "q": 3,
+      "fixture": 1,
+      "active_mask": 7,
+      "max_rank": 3,
+      "rank_bound": 28
+    },
+    {
+      "q": 3,
+      "fixture": 2,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 7
+    },
+    {
+      "q": 3,
+      "fixture": 2,
+      "active_mask": 1,
+      "max_rank": 3,
+      "rank_bound": 14
+    },
+    {
+      "q": 3,
+      "fixture": 2,
+      "active_mask": 3,
+      "max_rank": 3,
+      "rank_bound": 21
+    },
+    {
+      "q": 3,
+      "fixture": 2,
+      "active_mask": 7,
+      "max_rank": 5,
+      "rank_bound": 28
+    },
+    {
+      "q": 3,
+      "fixture": 3,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 7
+    },
+    {
+      "q": 3,
+      "fixture": 3,
+      "active_mask": 1,
+      "max_rank": 3,
+      "rank_bound": 14
+    },
+    {
+      "q": 3,
+      "fixture": 3,
+      "active_mask": 3,
+      "max_rank": 3,
+      "rank_bound": 21
+    },
+    {
+      "q": 3,
+      "fixture": 3,
+      "active_mask": 7,
+      "max_rank": 3,
+      "rank_bound": 28
+    },
+    {
+      "q": 3,
+      "fixture": 4,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 7
+    },
+    {
+      "q": 3,
+      "fixture": 4,
+      "active_mask": 1,
+      "max_rank": 2,
+      "rank_bound": 14
+    },
+    {
+      "q": 3,
+      "fixture": 4,
+      "active_mask": 3,
+      "max_rank": 3,
+      "rank_bound": 21
+    },
+    {
+      "q": 3,
+      "fixture": 4,
+      "active_mask": 7,
+      "max_rank": 3,
+      "rank_bound": 28
+    },
+    {
+      "q": 3,
+      "fixture": 5,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 7
+    },
+    {
+      "q": 3,
+      "fixture": 5,
+      "active_mask": 1,
+      "max_rank": 2,
+      "rank_bound": 14
+    },
+    {
+      "q": 3,
+      "fixture": 5,
+      "active_mask": 3,
+      "max_rank": 3,
+      "rank_bound": 21
+    },
+    {
+      "q": 3,
+      "fixture": 5,
+      "active_mask": 7,
+      "max_rank": 3,
+      "rank_bound": 28
+    },
+    {
+      "q": 3,
+      "fixture": 6,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 7
+    },
+    {
+      "q": 3,
+      "fixture": 6,
+      "active_mask": 1,
+      "max_rank": 3,
+      "rank_bound": 14
+    },
+    {
+      "q": 3,
+      "fixture": 6,
+      "active_mask": 3,
+      "max_rank": 3,
+      "rank_bound": 21
+    },
+    {
+      "q": 3,
+      "fixture": 6,
+      "active_mask": 7,
+      "max_rank": 4,
+      "rank_bound": 28
+    },
+    {
+      "q": 3,
+      "fixture": 7,
+      "active_mask": 0,
+      "max_rank": 0,
+      "rank_bound": 7
+    },
+    {
+      "q": 3,
+      "fixture": 7,
+      "active_mask": 1,
+      "max_rank": 3,
+      "rank_bound": 14
+    },
+    {
+      "q": 3,
+      "fixture": 7,
+      "active_mask": 3,
+      "max_rank": 4,
+      "rank_bound": 21
+    },
+    {
+      "q": 3,
+      "fixture": 7,
+      "active_mask": 7,
+      "max_rank": 4,
+      "rank_bound": 28
+    }
+  ],
+  "offline": {
+    "cases": 4,
+    "state_checks": 576,
+    "records": [
+      {
+        "fixture": 0,
+        "activations": [
+          {
+            "interval": [
+              0,
+              8
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              0,
+              4
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              0,
+              2
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              2,
+              4
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              4,
+              8
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              4,
+              6
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              6,
+              8
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "fixture": 1,
+        "activations": [
+          {
+            "interval": [
+              0,
+              8
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              0,
+              4
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              0,
+              2
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              2,
+              4
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              4,
+              8
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              4,
+              6
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              6,
+              8
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "fixture": 2,
+        "activations": [
+          {
+            "interval": [
+              0,
+              8
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              0,
+              4
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              0,
+              2
+            ],
+            "active": [
+              3
+            ]
+          },
+          {
+            "interval": [
+              2,
+              4
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              4,
+              8
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              4,
+              6
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "interval": [
+              6,
+              8
+            ],
+            "active": [
+              1,
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "fixture": 3,
+        "activations": [
+          {
+            "interval": [
+              0,
+              8
+            ],
+            "active": [
+              2
+            ]
+          },
+          {
+            "interval": [
+              0,
+              4
+            ],
+            "active": [
+              2
+            ]
+          },
+          {
+            "interval": [
+              0,
+              2
+            ],
+            "active": [
+              2
+            ]
+          },
+          {
+            "interval": [
+              2,
+              4
+            ],
+            "active": [
+              2
+            ]
+          },
+          {
+            "interval": [
+              4,
+              8
+            ],
+            "active": [
+              2
+            ]
+          },
+          {
+            "interval": [
+              4,
+              6
+            ],
+            "active": [
+              2
+            ]
+          },
+          {
+            "interval": [
+              6,
+              8
+            ],
+            "active": [
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "scope": "Four monotone finite two-clock sequences; fresh clipped rounded recursion compared to fresh synchronous Bellman reference; tests values, time/tick envelopes, and nested activity, not production persistence or total runtime."
+  },
+  "scope": "Fresh exact synchronous finite-horizon DP versus fresh ordered oracle; q=2,3, n=4; arbitrary rational joint laws, zero closed classes, self loops, a 2^-40 mass, whole-vertex boundaries, rounded policy/payoff/rank/residual checks. No universal theorem or full production execution is certified."
+}

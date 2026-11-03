@@ -1,0 +1,132 @@
+{
+  "package_schema": 6,
+  "project": "c040-mstdecfull",
+  "title": "Deterministic Quasipolynomial MST Approximation under Decrease-Only Corruption",
+  "readiness_label": "working_paper",
+  "stoc_assessment": {
+    "job_id": "c040-mstdecfull-referee-8513177dc0bb",
+    "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+    "review_type": "fresh_internal_stoc_assessment",
+    "verdict": "working_paper",
+    "strongest_result": "For every fixed p<1 and hardwired rational 0<q<=1-p, a deterministic zero-query algorithm always outputs a spanning path and has E[cost_d(P)]<=10^15 q^-5 max(1,log_2 n)^2 MST(d) against every omniscient decrease-only adversary in source.md. Every execution uses n^(a_q max(1,log_2 n)) exact arithmetic/comparison and control-bit operations independently of aspect ratio. Also cost(P)<=2 beta H+12 beta Omega for every compatible DFS leaf order of any hierarchy satisfying the stated hidden-core conditions. This proves the entire original fourth-power assertion.",
+    "nearest_comparisons": [
+      "Anand, Gupta, Jayaram, Lee and Vakilian, Approximating Minimum Spanning Trees in Metrics under Semi-Random Corruptions, arXiv:2610.40594v1, Theorem 1.2: unrestricted-time O_p(log n) for every fixed p<1; Theorem 1.3: n^O(log n)-time expected O(log^4 n) for p<=0.1. The candidate is deterministic n^O_q(log n)-time expected O_q(log^2 n) for every fixed p<1, with every-execution aspect-independent operations.",
+      "The same primary, Definition 6.1, Theorem 6.2 and Algorithms 1-3: hidden-core hierarchy, future-seed carving and random physical leaders with O(log n log Delta) extraction overhead. The candidate retains this architecture but uses an all-density rectangle bootstrap, high quantiles, a compatible DFS leaf path, and actual-outlier charging cost<=2 beta H+12 beta Omega.",
+      "Bateni, Dharangutte, Jayaram and Wang, Metric Clustering and MST with Strong and Weak Distance Oracles, COLT2024, PMLR247:498-550, Theorems 4-6. The square-root-log upper theorem assumes metric weak observations; it does not cover arbitrary nonmetric decreasing observations.",
+      "Fletcher and Hershkowitz, Spanning Tree Embeddings Are Not Much Harder than Hierarchical Partitions, SODA2026:5344-5373, DOI10.1137/1.9781611978971.193: publisher abstract states constant-distortion graph-spanning embeddings when level diameters grow by Omega(log n). Its output/objective differ; full proof and possible equivalent auxiliary lemmas were not inspected."
+    ],
+    "criteria": {
+      "importance": {
+        "judgment": "uncertain",
+        "reason": "The theorem eliminates a genuine computational-noise-range restriction and two logarithmic approximation factors relative to the primary Theorem 1.3. However, its unrestricted-time Theorem 1.2 already handles all fixed p<1 with O_p(log n), and the candidate remains quasipolynomial and loses another logarithm. The record does not show that this precise refinement is a central obstacle for the broader TCS community."
+      },
+      "novelty": {
+        "judgment": "strong",
+        "reason": "The complete theorem and the direct final-leaf-path extraction are substantive differences from the verified arXiv:2610.40594v1 statements and Section 6 proof. Extending its low quantiles to majority corruption requires a new seed concentration argument, not a parameter renaming. The bounded live search found no equivalent complete theorem. This judgment is bounded to inspected primary results and does not certify priority; the adjacent SODA2026 auxiliary-lemma comparison remains limited by full-text access."
+      },
+      "technical_depth": {
+        "judgment": "uncertain",
+        "reason": "The global first-absorption invariant, all-density quantile analysis and nonnested-core DFS promotion argument are sound and useful. Much of the architecture is inherited from primary Section 6, and the new mechanisms are short elementary structural/charging arguments. There is no verified evidence that they overcome a major established barrier, yield an optimal approximation, or constitute a broadly transformative method."
+      },
+      "breadth_or_consequence": {
+        "judgment": "uncertain",
+        "reason": "The hidden-core outlier-sensitive extraction lemma is abstract and reusable, but this packet demonstrates only its MST application. It does not establish a consequence for general increase/decrease noise, graph-spanning distance embeddings, other optimization problems, or polynomial-time computation. Such consequences cannot be inferred from the adjacent SODA2026 abstract or from the topic alone."
+      },
+      "exposition_and_verifiability": {
+        "judgment": "strong",
+        "reason": "The frozen dossier gives an explicit observable algorithm, rank conventions, complete all-n invariant and extraction proofs, metric normalization, unconditional expectation, boundary branches and every-execution operation accounting. This fresh review reconstructed those steps and independently checked 268560 exhaustive five-point compatible path/core cases using exact integer constraint metrics. Finite tests are explicitly supplementary; no manuscript layout or final publication artifact has yet been assessed."
+      }
+    },
+    "case_for_stoc": "The favorable case is an all-noise-range deterministic algorithm improving a recent quasipolynomial log^4 small-noise theorem to log^2, with a clean outlier-sensitive leaf-path extraction mechanism. This addresses an actual algorithmic question posed in the primary, rather than an isolated subsidiary counterexample. The critical limitation is that the central hierarchy already exists, the high-noise extension and loss removal are elementary once identified, and no wider consequence or major barrier resolution is demonstrated. Those limitations prevent an all-strong competitive-STOC assessment. The complete innovative theorem passes the mathematical/publication gate, while the justified venue label remains working_paper.",
+    "remaining_weaknesses": [
+      "Importance relative to the primary all-p unrestricted logarithmic theorem and small-p quasipolynomial theorem is not yet compelling at the broader STOC level.",
+      "Runtime remains quasipolynomial and the approximation is still a logarithm above the unrestricted benchmark; no optimality or polynomial-time consequence is proved.",
+      "The inherited hierarchy/future-consistency architecture accounts for much of the technical development; an unusually strong depth case for the new short mechanisms has not been established.",
+      "No second substantial application of the abstract extraction lemma is demonstrated.",
+      "The adjacent Fletcher-Hershkowitz SODA2026 full proof was unavailable by the inspected ordinary route, so equivalent auxiliary lemmas there have not been excluded. The bounded search is not a priority certificate.",
+      "Final manuscript exposition, citation/build/visual gates and release artifacts have not been reviewed in this referee-only job."
+    ],
+    "label_is_not_a_venue_decision": true
+  },
+  "pages": 8,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "original_status": "proved",
+  "kind": "resolution-paper",
+  "pdf": "c040-mstdecfull_working_paper.pdf",
+  "pdf_sha256": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660",
+  "source_archive": "c040-mstdecfull_source_and_reproducibility.zip",
+  "source_archive_sha256": "0c833eb2891c3d7b9b560be8a02f83feef60ebef97bb3edb293a7598afb24044",
+  "class_file": "manuscript/acmart.cls",
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "reproduce_scripts": [
+    "research/check_outlier_charges_pass2.py",
+    "audit/referee-8513177dc0bb-check.py"
+  ],
+  "compile_layout": {
+    "entry": "manuscript/main.tex",
+    "directory": "manuscript",
+    "filename": "main.tex",
+    "jobname": "main",
+    "relative_output": "../output/pdf",
+    "back_to_root": "..",
+    "rebuilt_pdf": "output/pdf/main.pdf"
+  },
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660"
+    },
+    "citation_verdict": "accept_with_citation_limitations",
+    "kind": "resolution-paper",
+    "manuscript_digest": "203aa4452ff612d76a7e2cf95734dfb62d168580ad5fa1fe30831cf086035682",
+    "original_status": "proved",
+    "pages": 8,
+    "pdf_digest": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660",
+    "provenance": {
+      "audit/build.json": "9c1f7cc2c4ae25db5a6a9d0283ddb5bafe42221bae18306eef3a9bfa1f046ca2",
+      "audit/build.md": "1e28e38b232bc29384ea06b2afc59cd11bf59235f57544a5f73365635c4deb57",
+      "audit/citations.json": "e738330216b5c89aa1305d312b219d03036451c7df58170812d71a4ef63bf6a4",
+      "audit/citations.md": "eeb8e64e9ec8d406a1bc6b841658058315e69fa240be640fbd877ce8be9213eb",
+      "audit/math.json": "87dbebb103b91f40d9ddcc8b879a392685412c70eeace2dc5a0a5903d1e6d996",
+      "audit/math.md": "f72aba5a8e9d9fb011d141cd220d24696caa672d9c1d62f2f10c9a9a61178ed0",
+      "audit/visual.json": "5919cb934322f52ad050426bc7f178ad15db7dc2978a8d0398e771cbb235a1e1",
+      "audit/visual.md": "42714b4441bd4083937556a82f1bb580dd52fc4682c95aa516ab3b2bd8a1c131",
+      "jobs/c040-mstdecfull-referee-8513177dc0bb/role.json": "d2b0ea5f8651d0a711a79b73d1b6b63a4d218bad041e0c9ede8ad8eb580596ab",
+      "jobs/c040-mstdecfull-release-2ca818aceb48/role.json": "698f91e55acc3e8da8d26c5f53fce314147274501367e1854d20ae1060138a7c",
+      "jobs/c040-mstdecfull-research-e695ca56645f/role.json": "cb8c9d4d596163de51b41a52933a1625e255fde675f174631ae9a59eeb1ebd70",
+      "manuscript/main.log": "d17727b8f8ec473b052fe1689ca049ad0b1170f8730d269c4cac17b6e0f9d9e6"
+    },
+    "schema": 1,
+    "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+    "unverified_citations": [
+      {
+        "citation": "fletcher2026",
+        "limitation": "Publisher metadata and stated abstract theorem verified; full proof and exclusion of equivalent auxiliary lemmas unverified due full-text access limitation. Manuscript makes only abstract-supported comparison."
+      }
+    ]
+  },
+  "citation_verdict": "accept_with_citation_limitations",
+  "citation_limitations": [
+    {
+      "citation": "fletcher2026",
+      "limitation": "Publisher metadata and stated abstract theorem verified; full proof and exclusion of equivalent auxiliary lemmas unverified due full-text access limitation. Manuscript makes only abstract-supported comparison."
+    }
+  ],
+  "excluded_third_party_text_caches": [],
+  "external_submission_performed": false
+}

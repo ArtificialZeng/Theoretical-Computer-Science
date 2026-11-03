@@ -1,0 +1,37 @@
+{
+  "job_id": "c015-imagebound-release-2bbd673a9c35",
+  "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+  "manuscript_digest": "0b0a26f7526dc9b1387c6717bfb131d92f985b87e259fd50d4c89f0e27da96de",
+  "pdf_digest": "b2c1af7888a6e47966549882d4c977cefcaf4527cea394aaf4d57d8b62eabefb",
+  "checked_at": "2026-11-02T22:19:26.321777+00:00",
+  "initial_files_unchanged": {
+    "audit/innovation.json": true,
+    "audit/manuscript-snapshot.json": true,
+    "audit/math.json": true,
+    "audit/math.md": true,
+    "audit/snapshot.json": true,
+    "audit/stoc-assessment.json": true,
+    "claim.json": true,
+    "manuscript/c015-imagebound-write-b795278c1e36/ACM-Reference-Format.bst": true,
+    "manuscript/c015-imagebound-write-b795278c1e36/acmart.cls": true,
+    "manuscript/c015-imagebound-write-b795278c1e36/main.tex": true,
+    "manuscript/c015-imagebound-write-b795278c1e36/references.bib": true,
+    "manuscript/c015-imagebound-write-b795278c1e36/working_paper.bbl": true,
+    "manuscript/c015-imagebound-write-b795278c1e36/working_paper.pdf": true,
+    "publication.json": true,
+    "source.md": true
+  },
+  "all_snapshot_files_match": true,
+  "source_digest": "7cf4a0de6b28019b0fa2f5e92ea04bee150c74cb9db945e382c75d8379326aa7",
+  "readiness_label": "working_paper",
+  "stoc_assessment_digest": "baf2370c199ab3efa36d5eb0ce3ef6f1901c6fbc15c5a0dac8c02cbe5fb31cf6",
+  "metadata_author_and_contact_match": true,
+  "portable_pages_directly_opened_and_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "utc": "2026-11-03T01:33:17.816276+00:00",
+  "pdf_sha256": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660",
+  "archive_sha256": "0c833eb2891c3d7b9b560be8a02f83feef60ebef97bb3edb293a7598afb24044",
+  "pages": 8,
+  "root_actually_inspected_all_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "raster_dpi": 130,
+  "raster_sha256": {
+    "1": "6607736b280e2f18566bd9d95a3ce3f7a1e09605f9be83de3d803e520ded5e78",
+    "2": "7b46e9915d00c24b7f8aa370d254d832c62e5dca65b43be637462a27b0bf44d4",
+    "3": "566702ddb838a2a56a8c8a7dfaa11f48ceb540daabcbbc33406e6abc81de0b47",
+    "4": "b037100b7b1a995f7b29ae2833ea64f169fbc58690554351dc960149cc4a55d5",
+    "5": "4fd8eb1f20b4afa8ff607e43c14d2c3f18ac96929afc16f0dc9b979a1e93efd9",
+    "6": "e5a226a6084f1eff036132e57f768b9e0e48d96bef15a576e82868de32d1f43b",
+    "7": "196e8ef4b813f3dd360bac1baae587bf96a21afd58fbfc43d03c33b86a2a03d4",
+    "8": "57139b3669324704687275889a6cc71860d85d0cf645c215da966738bfac8eaf"
+  },
+  "manual_visual_result": "No clipped text, overlapping equations, missing glyphs or unreadable bibliography found. Separate title/abstract page matches official CFP. Main result, algorithm, complete proof and concise truthful AI statement are legible.",
+  "official_vendor_sources_match_downloaded_zip": {
+    "acmart.dtx": true,
+    "acmart.ins": true,
+    "README": true
+  },
+  "archive_class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "official_class_regeneration_receipt": "research/continuous/batches/20261103-040/official-template-fresh-docstrip-verification.json",
+  "all_build_inputs_rehashed": 7,
+  "actual_final_zip_clean_build_text_and_all_page_rasters_match": true,
+  "actual_final_zip_finite_reproduction": [
+    {
+      "entry": "research/check_outlier_charges_pass2.py",
+      "passed": true,
+      "counts": {
+        "hierarchies": 84,
+        "repeated_cluster_occurrences": 2642,
+        "core_assignments": 2016,
+        "empty_core_occurrences": 80286,
+        "changing_repeated_cores": 4357,
+        "edges": 105408,
+        "immediate_edges": 53663,
+        "ordered_cases": 12096,
+        "late_edges": 51745
+      }
+    },
+    {
+      "entry": "audit/referee-8513177dc0bb-check.py",
+      "passed": true,
+      "counts": {
+        "nested_partition_chains": 358,
+        "core_assignments": 8951,
+        "path_edges": 1074240,
+        "immediate_edges": 621120,
+        "ordered_cases": 268560,
+        "late_edges": 453120
+      }
+    }
+  ],
+  "math_snapshot": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+  "math_frozen_mismatches": [],
+  "label": "working_paper",
+  "actual_stoc_review_job": "c040-mstdecfull-referee-8513177dc0bb",
+  "citation_limitations": [
+    {
+      "citation": "fletcher2026",
+      "limitation": "Publisher metadata and stated abstract theorem verified; full proof and exclusion of equivalent auxiliary lemmas unverified due full-text access limitation. Manuscript makes only abstract-supported comparison."
+    }
+  ],
+  "author": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "external_submission_or_upload": false,
+  "limits": "Internal model-context review and actual file/computation checks; no external peer review, formal all-n certification or venue acceptance."
+}

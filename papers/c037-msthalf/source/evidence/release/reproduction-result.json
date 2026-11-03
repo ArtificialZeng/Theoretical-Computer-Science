@@ -1,0 +1,24 @@
+{
+  "job_id": "c037-msthalf-release-aff0d39d4223",
+  "clean_build_exit_code": 0,
+  "extracted_text_identical": true,
+  "bbl_identical": true,
+  "page_count": 7,
+  "all_page_rasters_identical": true,
+  "pages_compared": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "source_zip_digest": "f22fedcff329dcad32a90b39171046b07fe1f3744861f1ae1a349c3985c98b5e",
+  "reproduction_pdf_digest": "740a672b8479239bd4fc58abd3f68fe2355285c57b7d586fd4cbc230d8d7f266",
+  "reviewed_pdf_digest": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+  "binary_pdf_identical": false,
+  "snapshot_digest": "d0a2fbd366a632f17366053e75f1a37a1254cc80a92e14c60a7d14734548277b",
+  "pdf_digest": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+  "manuscript_digest": "21d0504817983aa84f21573d2ff6560239183353573fc2cc1d767e3501675427"
+}

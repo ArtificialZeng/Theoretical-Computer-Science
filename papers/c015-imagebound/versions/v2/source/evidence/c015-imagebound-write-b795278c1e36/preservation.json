@@ -1,0 +1,29 @@
+{
+  "job_id": "c015-imagebound-write-b795278c1e36",
+  "files": {
+    "audit/build.json": "ff775b56f1973c936286999314f5fcd156c0f1711df369ea1d195fb3a6e7bf56",
+    "audit/build.md": "c53da828e467101e030f7782fb686895f0f23f4a02d5024865c747cc222d1127",
+    "audit/citations.json": "a044a473680422ce7009cded2b5a17a78a8fe04f089f7890412dafcba4870b69",
+    "audit/citations.md": "8693f09755a20dbe9f401563d071f00d620b5aae4984b3d4509acea2a379de59",
+    "audit/innovation.json": "bc306cc418128a57ac164648a769dc849f94faed2c414939852233cc3cc430e4",
+    "audit/manuscript-snapshot.json": "4603600f54492d7134dbefc5bef1cc2110359725e1d14df998da6130fa1042d3",
+    "audit/math.json": "5b3baf84e1291e7616567b792df5d0de7c00f618f61e4864531da767b44991e5",
+    "audit/math.md": "38266073f3a8cf4ad4cf481ef81a754524dee898e5f68d77091a942e052c7894",
+    "audit/stoc-assessment.json": "baf2370c199ab3efa36d5eb0ce3ef6f1901c6fbc15c5a0dac8c02cbe5fb31cf6",
+    "audit/visual.json": "cb03572e0bcaba41a2ddb82d9b3061718156801aae703cfc5a932a70561a946b",
+    "audit/visual.md": "ed7d3325d03524d6889ba437e737faa3a29c70742bda62c2b6a482dd7115251f",
+    "checkpoint.md": "4a9a4e939d2df5ccd89c1d2bccb58ce370d4d1e548eea0bdcbb0f8abbf2ba1b3",
+    "manuscript/ACM-Reference-Format.bst": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04",
+    "manuscript/acmart.cls": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+    "manuscript/main.bbl": "650ec513518dbc6aa842293241841c44a9cbb3d90b3e1e8a8357b1fe2a445adc",
+    "manuscript/main.log": "560d6208506502f84b9b4d983088688aa6726c0af024f3d4fb2b5e54e52276c1",
+    "manuscript/main.pdf": "0abeb3c8720795bb730d6501ea49669b8e9f1006bc34b0e0d9578051921c4d19",
+    "manuscript/main.tex": "1035f52ee03db9131dd69edc40de86051e7f7f4c5749e3c354b64512e2af86e7",
+    "manuscript/references.bib": "1aaa57c35d95d31eb46877c9ecd1772dfb026e1a08593a57be41d8c8068171d7",
+    "publication.json": "7ca6a92a2dfce5fa2045f5632db62a4eadd762b5f7c26bbd90315e5a34b226e6",
+    "release/main.pdf": "0abeb3c8720795bb730d6501ea49669b8e9f1006bc34b0e0d9578051921c4d19",
+    "release/manifest.json": "e54ae3eb8b71cb4f6729aa165ba4eaf7742336a989a62cb35ccfd3779a1c7254"
+  },
+  "archive_prefix": "evidence/c015-imagebound-write-b795278c1e36/prior-frozen-artifacts",
+  "original_files_retained": true
+}

@@ -1,0 +1,12 @@
+{
+  "job_id": "c015-imagebound-referee-e7492ff4cfbd",
+  "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+  "frozen_integrity": "pass",
+  "status": "completed: full resolution accepted; STOC working_paper; structural check passed",
+  "prior_reviews_preserved_without_using_their_contents": {
+    "audit/c015-imagebound-referee-e7492ff4cfbd/prior-active-audits/math.md": "bb491ac06e305ec8fe28a2ce77be527efb55f29b32020f36b468cf4c1c2a0e1f",
+    "audit/c015-imagebound-referee-e7492ff4cfbd/prior-active-audits/math.json": "ee36ba5957a72026c5c773c6797d4a3a70102cee20fc3334e73a419f971b2f9d",
+    "audit/c015-imagebound-referee-e7492ff4cfbd/prior-active-audits/innovation.json": "6347c2c3f7dbd0257ce4f722d7c7a0959fba012f759374284a711b77f9bb5e1a"
+  },
+  "completed_at": "2026-11-02T22:02:48.690628+00:00"
+}

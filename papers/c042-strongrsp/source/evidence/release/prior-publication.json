@@ -1,0 +1,34 @@
+{
+  "title": "Strongly Polynomial Near-Linear Preprocessing for All-Target Restricted Shortest Paths",
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "pdf": "manuscript/main.pdf",
+  "source_files": [
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/main.bbl",
+    "manuscript/acmart.cls",
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/build.sh",
+    "manuscript/README.md"
+  ],
+  "figure_files": [],
+  "build_command": "./manuscript/build.sh",
+  "clean_build_log": "evidence/write/build-final.log",
+  "pages": 9,
+  "max_total_pages": 12,
+  "readiness_label": "working_paper",
+  "readiness_assessment": "audit/stoc-assessment.json",
+  "readiness_assessment_sha256": "1c873d853ccb839cda5795fefd3384c1ac98aaa5e7873ed3f17a92c95a9edd73",
+  "accepted_snapshot_digest": "b8a4224397c4874b51af65e8b82a4b17fef250e6e90513e63334f9d6b3b5e4e9",
+  "writer_job_id": "c042-strongrsp-write-c0bda549b267",
+  "release_audits": "pending separate release phase",
+  "external_submission_authorized": false
+}

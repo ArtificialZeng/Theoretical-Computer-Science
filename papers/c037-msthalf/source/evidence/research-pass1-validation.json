@@ -1,0 +1,26 @@
+{
+  "job_id": "c037-msthalf-research-82a59cd9a4af",
+  "source_sha256": "d45cd6730fe3f8685cb796b9d75ebe8e7926c1584021d045a282021749e45128",
+  "source_unchanged": true,
+  "worker_result_schema_checked": true,
+  "evidence_files_exist_nonempty": true,
+  "runner_state_research_passes_observed": 1,
+  "candidate_created": false,
+  "manuscript_created": false,
+  "subagents_spawned": 0,
+  "checks_completed": [
+    "Exact cluster enumeration and witness verification",
+    "Exact multiscale enumeration and witness verification",
+    "Small-side complete color-count certificates",
+    "Written two-level proof checked against its stated hypotheses",
+    "JSON syntax, worker fields and evidence paths",
+    "Source immutability and preserved prior checkpoint"
+  ],
+  "limits": [
+    "No fresh referee",
+    "No general metric or arbitrary ultrametric theorem",
+    "Finite searches optimize only uniform order weights",
+    "No publication or STOC-quality acceptance"
+  ],
+  "latest_clock_observed_utc": "2026-11-02T20:47:40Z"
+}

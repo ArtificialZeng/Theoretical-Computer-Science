@@ -1,0 +1,16 @@
+{
+  "job_id": "c040-mstdecfull-referee-c896e1b53be0",
+  "snapshot_digest": "bf8c82fd54c9793b5c068f18f7bb44944417a41c982a27be96486504558d316f",
+  "verdict": "accept",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    "Anand, Gupta, Jayaram, Lee and Vakilian, arXiv:2610.40594v1 (2026-10-29), Theorem 1.2: expected O_p(log n) decrease-only MST approximation for every fixed p<1, without the required quasipolynomial guarantee; verified in live primary text and frozen full text.",
+    "Same primary, Theorem 1.3 and its small-p footnote: n^O(log n)-time expected O(log^4 n) approximation for p<=0.1; verified in the primary theorem statement.",
+    "Same primary, Definition 6.1 and Theorem 6.2: random physical-leader extraction with O(log n log Delta) factor relative to hierarchy cost, using promotion/intersection and level-summed expected degree; full proof verified.",
+    "Same primary, Definitions 6.4-6.6, Algorithms 2-3 and Section 6.3: seed quantiles, future-seed consistency, hierarchical carving and observable aspect normalization are inherited mechanisms, not new contributions."
+  ],
+  "substantive_delta": "The exact frozen algorithm is deterministic, zero-query and worst-execution quasipolynomial for every fixed p<1, with expected O_q(log^3 n) true MST cost and constants independent of aspect ratio. It both extends the complete computational noise range and removes one logarithmic factor. The abstract lemma gives beta(2+12B) times hierarchy cost for every DFS leaf order under the stated hidden-core assumptions.",
+  "why_nonroutine": "Two separately checked changes are needed. A uniform unmarked-rectangle event bootstraps a merely q-fraction neighbor set in an observed clique into an almost-full radius-two core even near p=1; the old low-p corrupted-degree estimate cannot supply this by substituting constants. High quantiles then have simultaneous lower comparison and exceptional-set soundness. Directly charging DFS leaf-path edges replaces the inherited physical-leader degree sum by degree two and one right exit per child interval, yielding a generic depth-free extraction bound with unknown nonnested cores. Future admissibility and promotion themselves are inherited. Supporting overlaps are definitional completeness, not inflated as the central innovation. The complete algorithmic result is therefore more than a restatement, elementary corollary of a quoted theorem, or isolated finite example.",
+  "significance": "The theorem closes the frozen full-range quasipolynomial algorithm question for all finite metrics against omniscient decrease-only adversaries, while strengthening the logarithmic exponent and eliminating private randomness. Its extraction guarantee is reusable at the level of abstract small-outlier hierarchies, though no additional application is established here. This is substantive follow-up mathematical value relative to the verified primary baseline; it is not by itself a strong venue-level consequence. The separate fresh STOC assessment remains working_paper because technical depth and breadth are uncertain.",
+  "remaining_gaps": []
+}

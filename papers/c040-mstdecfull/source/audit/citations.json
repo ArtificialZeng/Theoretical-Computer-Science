@@ -1,0 +1,28 @@
+{
+  "job_id": "c040-mstdecfull-release-2ca818aceb48",
+  "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+  "manuscript_digest": "203aa4452ff612d76a7e2cf95734dfb62d168580ad5fa1fe30831cf086035682",
+  "pdf_digest": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660",
+  "reviewed_at": "2026-11-03T01:23:11.061168+00:00",
+  "verdict": "accept_with_citation_limitations",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "All publication sources, three resolved references, exact primary theorem/model attributions, accepted-proof scope and finite-count transcription, current bounded literature comparison, complete FLS local dependency scope, extracted/rendered bibliography checked. No Excel/BibTeX record designated authoritative. SIAM comparison verified against abstract only; full proof/equivalent auxiliary lemmas unverified. arXiv DOI supplied by primary record with pending-registration qualification. Existing working_paper label retained.",
+  "citation_audit_method": "citation-check-skill plus primary-source-manual",
+  "metadata_basis": "verified_primary_records",
+  "unverified_citations": [
+    {
+      "citation": "fletcher2026",
+      "limitation": "Publisher metadata and stated abstract theorem verified; full proof and exclusion of equivalent auxiliary lemmas unverified due full-text access limitation. Manuscript makes only abstract-supported comparison."
+    }
+  ]
+}

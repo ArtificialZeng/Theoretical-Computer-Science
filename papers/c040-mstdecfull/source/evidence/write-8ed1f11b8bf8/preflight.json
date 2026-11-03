@@ -1,0 +1,35 @@
+{
+  "job_id": "c040-mstdecfull-write-8ed1f11b8bf8",
+  "utc": "2026-11-03T01:10:28.572592+00:00",
+  "official_cfp": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html",
+  "inspected_primary_pages": [
+    "https://arxiv.org/abs/2610.40594",
+    "https://proceedings.mlr.press/v247/bateni24a.html",
+    "https://epubs.siam.org/doi/10.1137/1.9781611978971.193"
+  ],
+  "format": {
+    "anonymous": false,
+    "columns": 1,
+    "body_pt": 11,
+    "paper": "US Letter",
+    "margins_inch": 1,
+    "separate_title_abstract_page": true,
+    "user_max_total_pages": 12,
+    "observed_draft_pages": 8
+  },
+  "official_class": {
+    "version": "2.20",
+    "source": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/templates/acm-official/distribution/acmart/acmart.cls",
+    "unmodified": true,
+    "sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a"
+  },
+  "notes": [
+    "CFP full-version submission format differs from its camera-ready sigconf instructions.",
+    "CFP asks for title page; the otherwise unneeded forced title break follows that instruction.",
+    "Initial manuscript-mode build failed because acmart protects its one-and-a-half spacing. The failed log is preserved; the unmodified class acmsmall option provides single-column single spacing without defeating that check.",
+    "No external submission, upload, email or contact performed.",
+    "Working-paper assessment retained unchanged.",
+    "No Excel bibliography designated.",
+    "SIAM abstract and metadata inspected; adjacent full proof not inspected."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "job_id": "c042-strongrsp-triage-931c32b4b93a",
+  "checked_utc": "2026-11-03T03:23:22.387431+00:00",
+  "source_sha256": "93e36d243f9b6fec1df5dda18aacab258ad91c62c8465d0a010fddadbb319aa7",
+  "test": "common bottleneck scale applicability, not the original algorithm-existence assertion",
+  "graph": {
+    "vertices": [
+      "s",
+      "u",
+      "v"
+    ],
+    "edges": [
+      {
+        "from": "s",
+        "to": "u",
+        "length": 1,
+        "cost": 1
+      },
+      {
+        "from": "s",
+        "to": "v",
+        "length": 16,
+        "cost": 1
+      }
+    ],
+    "budget": 1
+  },
+  "exact_optima": {
+    "u": 1,
+    "v": 16
+  },
+  "common_gamma_required_interval": {
+    "lower": "16/3",
+    "upper": "1"
+  },
+  "common_gamma_exists": false,
+  "interpretation": "The single-target gamma reduction cannot be reused with one common gamma for these two targets. This neither excludes per-target batching nor resolves the original question.",
+  "research_passes_consumed": 0
+}

@@ -1,0 +1,286 @@
+\documentclass[acmsmall,11pt,screen,nonacm]{acmart}
+\geometry{letterpaper,margin=1in,headheight=13pt,headsep=12pt,footskip=24pt}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\setcopyright{none}
+\citestyle{acmnumeric}
+\usepackage{mathtools}
+\newcommand{\OPT}{\operatorname{OPT}}
+\newcommand{\TV}{\operatorname{TV}}
+\newcommand{\Pois}{\operatorname{Pois}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prb}{\mathbb{P}}
+\newcommand{\ceilg}[2]{\lceil #1\rceil_{#2}}
+\newcommand{\floorg}[2]{\lfloor #1\rfloor_{#2}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\title[All-Target Restricted Shortest Paths]{Strongly Polynomial Near-Linear Preprocessing for All-Target Restricted Shortest Paths}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\date{}
+\hypersetup{pdfauthor={Zijian Zeng}}
+\begin{document}
+\renewcommand{\bibfont}{\normalfont\normalsize}
+\begin{abstract}
+\normalsize
+Given a directed graph with nonnegative lengths and costs, a source, and a cost budget, restricted shortest paths asks for a shortest budget-feasible path to every target. We give a deterministic bicriteria approximation with near-linear preprocessing whose arithmetic-operation count is independent of all numerical magnitudes, aspect ratios, and input precision. For accuracy $\varepsilon$, the representation reports a finite length bound and recovers an actual path of cost at most $(1+\varepsilon)C$ and length at most $(1+\varepsilon)\OPT_C(t)$ for every feasible target. The construction combines a stopped two-clock boundary oracle with clipped offline activation and edge-local scale events. Whole-vertex activation and positive failure prices allow one first-hit approximation factor per recursive level. Finite-rank policies control rounding error, and conservative dyadic clock laws and bounded-space deterministic decoding implement the construction without exponential or arbitrary-weight logarithm oracles. The parameter dependence is deliberately loose; the result concerns strong polynomiality rather than practical efficiency.
+\end{abstract}
+\maketitle
+\clearpage
+
+\section{The result and its context}
+A single-target reduction can remove numerical-aspect dependence by locating a feasible bottleneck edge and searching an interval of ratio $n$. Doing this separately for every target introduces an unwanted factor of $n$. The difficulty addressed here is sharing the work over all target-specific scales.
+
+Ashvinkumar's deterministic clock algorithm \cite{A26}, Theorem~1, gives all-target bicriteria restricted shortest paths (RSP) in $\widetilde O(m\log(nW)/\varepsilon^9)$ time, where $W$ is the positive-length aspect ratio. The paragraph after its Theorem~2 explicitly distinguishes the strongly polynomial all-target question from the single-target consequence. The earlier work of Ashvinkumar, Bernstein, and Karczmarz \cite{ABK24}, Lemma~C.1 and the open-problem discussion, makes the same distinction. We remove the numerical-aspect factor with a larger polynomial dependence on accuracy.
+
+\begin{theorem}\label{thm:main}
+There are an absolute $K$ and a uniform deterministic algorithm with the following guarantee. Let $G$ be a directed adjacency-list graph with $n\ge2$ labeled vertices, $m$ edges, arbitrary finite nonnegative real lengths $\ell$ and costs $c$, source $s$, budget $C>0$, and rational $0<\varepsilon\le1/2$. In at most
+\[
+ K(m+n)\log(n+2)^{20}\varepsilon^{-100}
+\]
+elementary operations and space, the algorithm constructs an all-target representation. Every target admitting a path of cost at most $C$ is represented by a finite bound $B_t$ and compact witness data. A deterministic query recovers an actual path $P_t$ satisfying
+\[
+ c(P_t)\le(1+\varepsilon)C,\qquad
+ \ell(P_t)\le B_t\le(1+\varepsilon)\OPT_C(t).
+\]
+A target without a $C$-feasible path may be unavailable or represented by an actual path satisfying the relaxed cost bound. Unreachable targets have no fabricated witness. Queries take polynomial time in $n,\log(n+2),1/\varepsilon$ plus output size, independently of numerical aspects, and use space within the displayed bound.
+\end{theorem}
+The model charges exact real $+,-,\times,/$, comparisons, and ordinary graph, control, and index operations. There is no primitive logarithm or floor of an arbitrary input weight, exponential evaluation, random sampling, or policy-synthesis oracle. For rational inputs, all intermediate encodings have polynomial bit length in the input encoding and $n,m,\log(1/\varepsilon)$. Arithmetic-operation bounds are not bit-time bounds for reading arbitrarily long numbers. Control indices have $O(\log(n+m+1/\varepsilon))$ bits up to an absolute factor. Parallel edges, zero resources, disconnected graphs, equal weights, and zero optima are included. Nonnegative walks may be cycle-erased.
+
+The clock dynamic program and conditional-expectation witness potential originate in \cite{A26}, Sections~4 and~6. Recursive offline activation and multiplicative counting have ordinary-SSSP precedents in G\'orkiewicz and Karczmarz \cite{GK25}, Section~6, and McCauley, Moseley, Niaparast, Niaparast, and Singh \cite{MMNNS25}, Theorem~1. Those additive-distance results do not provide a stopped stochastic boundary contract. Our additional ingredient is a costed nonadditive oracle compatible with whole-vertex activation, clipping, and finite-precision error; local events then cover all scales without a numerical-aspect scan.
+
+\paragraph{Research methodology.}
+OpenAI Codex materially assisted the algorithm and proof development, diagnostic computations, literature checks, and exposition throughout this paper. The end-of-paper AI methodology statement details these roles.
+
+\section{A stopped clock oracle}\label{sec:oracle}
+Fix an integer $q\ge2$, $\rho>0$, and $F=1+\rho$. A state is $(v,i,j)$, $0\le i,j<q$. An original edge $uv$ is a backwards action from $v$ to $u$ adding nonnegative integer increments $(a,b)$ drawn from a finite law $p_e$. Either coordinate reaching $q$ pays $F$; source states immediately pay $\rho$. Nontermination also pays $F$. A voluntary tick increments either coordinate by one. Let $X$ be the infimum expected payment. Thus $X=\rho+$ optimal failure probability. Extra initial ticks cannot help: simulate the same physical actions while tracking virtual larger clocks. Hence $X$ is nondecreasing in $i,j$ and belongs to $[\rho,F]$.
+
+Activate a set $A$ of whole vertices excluding $s$. Every inactive vertex is terminal with a clock-monotone table $B_v\in[\rho,F]$, and the source remains exact. A nonmonotone supplied upper bound can be replaced by its upper-orthant minimum in $O(q^2)$ operations per encountered vertex. If $X\le B\le\beta X$, this closure retains both inequalities, since $X$ is clock-monotone.
+
+\begin{lemma}\label{lem:oracle}
+Assume $X\le B\le\beta X$. The stopped optimum $Y$ on $A$ is computable using only incident edges in
+\[
+ O((|A|+d_A)q^4\log(|A|+2)+(|A|+d_A)q^2H)
+\]
+operations, where $d_A$ counts adjacency incidences at active vertices and $H$ is a boundary-coordinate access cost. Moreover $X\le Y\le\beta X$. It has an optimal pointer policy terminating on every trajectory within $(2q+1)(|A|+1)$ decisions.
+\end{lemma}
+\begin{proof}
+Process clock layers in decreasing $i+j$, with any order within a sum. At $(i,j)$, seed each active vertex with its smaller one-tick value, using $F$ at overflow, and with the expected payoff of every edge having an inactive predecessor. Maintain a min-heap on active vertices. On popping $u$, fix its value $Z(u,i,j)$ and relax every edge $uv$ whose head is still unsettled, using
+\begin{equation}\label{eq:update}
+ p_{\rm over}F+\sum_{a<q-i,\,b<q-j}p_e(a,b)Z(u,i+a,j+b).
+\end{equation}
+Store the improving seed or action; ties keep the existing choice. Positive-increment terms are already known. Initial tick seeds imply that every higher-clock value at $u$ is at least $Z(u,i,j)$. Thus a relaxed candidate is a convex combination of values at least the popped value, including $F$, and heap removals are nondecreasing.
+
+For each action the final table satisfies $Z\le\E Z_{\rm next}$. Inactive predecessors were seeded; earlier-settled active predecessors were relaxed. For a later-settled predecessor, every term is at least its popped value and hence at least the current value. Self-loops have the same property. Tick inequalities follow from seeding. Iterating these inequalities for any policy, charging $F$ to trajectories still active after $k$ steps, gives an expected payment at least $Z$. Bounded convergence, including the stipulated payment on nontermination, gives $Z\le Y$.
+
+The chosen policy realizes $Z$. A zero-increment chosen edge points to an earlier pop rank at the same layer. A positive increment or a tick increases $i+j$. There are fewer than $2q$ unit advances before overflow, so every trajectory terminates within $(2q+1)(|A|+1)$ decisions. Backwards substitution gives expected payoff exactly $Z$, proving $Y=Z$. In particular a closed zero-increment class receives $F$ through tick seeds rather than an artificial smaller Bellman fixed point.
+
+For the comparison, replace the first inactive terminal by a nearly optimal full continuation to obtain $X\le Y$. Conversely stop a nearly optimal full policy at its first inactive visit. Its conditional continuation payment dominates $X$, whereas $B\le\beta X$. Source, overflow, and nontermination payments are at most $\beta$ times themselves. Taking limits gives $Y\le\beta X$, with one factor per trajectory.
+
+Build both adjacency directions once. A call enumerates active vertices and only their incidences; inactive tables are fetched and cached only at encountered predecessors. Each of $q^2$ layers has a heap and $O(q^2)$ work per edge expectation. Timestamps or local dictionaries avoid clearing a global array. Local space is $O((|A|+d_A)q^2)$ apart from external tables.
+\end{proof}
+
+For a dyadic mesh $h_0$, round every edge candidate upward before comparison. Assume terminal values and $\rho,F$ are on the mesh. Causality, tick monotonicity, and the chosen-policy rank remain valid. Put $N=(2q+1)(n+1)$. The rounded table satisfies
+\begin{equation}\label{eq:round}
+ Y\le Z\le Y+Nh_0.
+\end{equation}
+Indeed the selected action has $\E Z_{\rm next}\le Z$. Every action has $Z\le\E Z_{\rm next}+h_0$: for a later predecessor the stronger unrounded inequality holds. Apply this residual inequality along the exact oracle's finite-rank optimal policy, of horizon at most $N$. This proves the upper bound without an absorption-time assumption on arbitrary policies.
+
+\section{Clipped offline activation}\label{sec:offline}
+Suppose there are $E$ ordered snapshots, with edge increments stochastically nonincreasing in time. A monotone coupling and virtual-clock simulation imply that exact full values $X_t$ are nonincreasing in time. Fix
+\[
+ D=\max(1,\lceil\log_2\max(1,E-1)\rceil),\quad
+ \zeta=\frac1{16(2D+1)},\quad \alpha=1+\zeta,
+\]
+and dyadic $h_0\le\min(\zeta\rho/N,1/(2^{20}N))$. Integer logarithms here and below are computed by bounded doubling.
+
+Solve the two endpoints with the rounded oracle. Set $U_{E-1}=Z_{E-1}$ and $U_0=\max(Z_0,Z_{E-1})$ coordinatewise; both lie between $X$ and $\alpha X$ and are ordered. For an interval $[l,r]$ with an interior midpoint $t$, activate $v$ exactly when some clock entry satisfies $U_l(v)>\alpha U_r(v)$. At the midpoint use $U_l$ as the inactive boundary, solve active vertices by the rounded oracle, and set
+\begin{equation}\label{eq:clip}
+ U_t=\max\{U_r,\min\{U_l,Z\}\}
+\end{equation}
+on active entries, retaining $U_l$ on inactive entries. Recurse on both halves. For one or two snapshots only endpoint solves are needed.
+
+\begin{lemma}\label{lem:offline}
+Every stored estimate is clock-monotone, globally nonincreasing in time, and satisfies
+\begin{equation}\label{eq:approx}
+ X_t\le U_t\le\alpha^{2D+1}X_t\le(16/15)X_t.
+\end{equation}
+Each vertex is active at $O(q^2D^2)$ calls. With $M$ supplied edges, per-edge snapshot lookup cost $H$, and $h_0=2^{-b_0}$, total work, excluding coefficient preparation, is
+\begin{equation}\label{eq:offlinework}
+ O\big(E+(M+n)(1+q^2D^2)q^4[H+\log(n+2)+b_0]\big),
+\end{equation}
+\end{lemma}
+\begin{proof}
+At depth $d$, suppose endpoints have factor $\beta_d=\alpha^{2d+1}$. For an inactive entry,
+$X_t\le U_l\le\alpha U_r\le\alpha\beta_dX_t$.
+The first-hit lemma and \eqref{eq:round} therefore bound the raw midpoint by $X_t\le Z\le\alpha^2\beta_dX_t$. Clipping preserves this bound because both endpoints dominate $X_t$ and $U_r\le\beta_dX_t$. Minima and maxima preserve clock monotonicity, and $U_l\ge U_t\ge U_r$. Induction proves \eqref{eq:approx}; the last inequality follows by bounding the binomial expansion by the geometric series of ratio $1/16$. Clipped labels are estimates, not realizing policies.
+
+A vertex inactive at a parent remains inactive in every descendant, since the earlier endpoint only decreases and the later endpoint only increases. Test only parent-active vertices in child calls, after the root scan. At a fixed depth, intervals have disjoint interiors. For each vertex-clock entry, time monotonicity telescopes the product of endpoint ratios to at most $F/\rho$. Thus this entry witnesses at most $\log(F/\rho)/\log\alpha$ active intervals. Union over $q^2$ entries and $D$ depths gives $O(q^2D^2)$ calls for fixed $\rho$. The same bound weighted by adjacency degree charges incident-edge scans, including parallel edges.
+
+Store each $q^2$ vertex block as a leaf in a persistent balanced tree on vertex labels. Access costs $O(\log(n+2))$; updating a block copies $O(\log(n+2))$ nodes and its $q^2$ entries. At a midpoint inherit the earlier version and update only active blocks. Cache boundary blocks at incident endpoints and reuse static scratch depth first. This proves \eqref{eq:offlinework}, including bounded-comparison rounding. Persistent space is
+$O(nq^2+E+nq^2D^2[q^2+\log(n+2)])$, plus graph, coefficient, and incident-boundary scratch. A root pointer per snapshot allows binary search for a target's first threshold crossing in $O(\log(E+2)\log(n+2))$ accesses.
+\end{proof}
+
+\section{Finite clock laws and local scale events}\label{sec:compiler}
+Throughout the remainder set
+\begin{equation}\label{eq:parameters}
+ \eta=\varepsilon/1000,\quad \rho=1/32,\quad C'=(1+2\eta)C,\quad
+ q=2^{\lceil\log_2(2^{20}\eta^{-2})\rceil},\quad U=4q.
+\end{equation}
+All rounded integers are located by binary comparisons on an explicitly bounded interval. Thus rounding on a mesh $h=2^{-b}$ inside $[0,A]$ costs $O(b+\log(A+2))$ operations; this is not a floor primitive on unbounded inputs.
+
+\begin{lemma}\label{lem:compiler}
+For a dyadic mean $0<\mu\le U$, there is a finite dyadic law on $0,\ldots,q$ ($q$ denotes overflow) whose CDF $L_\mu(j)$ satisfies
+\[
+ 0\le\Prb[\Pois(\mu)\le j]-L_\mu(j)\le\tau\quad(0\le j<q),
+ \qquad \tau\le\frac1{2^{20}Nq}.
+\]
+For an increasing list of means these laws can be made stochastically increasing. Their distance in total variation from truncated Poisson is at most $q\tau$, and for $0<z<1$,
+\begin{equation}\label{eq:pgf}
+ \sum_{k<q}p_\mu(k)z^k\le\exp((z-1)\mu).
+\end{equation}
+Construction uses polynomially bounded dyadic precision and finite arithmetic, without evaluating an exponential.
+\end{lemma}
+\begin{proof}
+Put $r=1+\lceil\log_2(n+2)\rceil+\lceil\log_2(q+2)\rceil$, $b=64r$, $h=2^{-b}$, and $H=2U+b+2$. Locate $k_0=\lfloor\mu\rfloor$ by comparisons against integers in $[0,U]$. Relative Poisson weights $R(k)=\Prb[\Pois(\mu)=k]/\Prb[\Pois(\mu)=k_0]$ obey $R(k_0)=1$, downward recurrence $R(k-1)=R(k)k/\mu$, and upward recurrence $R(k+1)=R(k)\mu/(k+1)$. Every multiplier away from the mode is at most one. Compute these recurrences through $0,\ldots,H$, rounding downward to $h$ after each step, to obtain $w(k)$. Then $0\le R(k)-w(k)\le Hh$. Beyond $2U$, ratios are at most $1/2$, so the omitted tail after $H$ is at most $h$.
+
+For $S=\sum_{k\ge0}R(k)\ge1$, define
+\[
+ S_-=\sum_{k=0}^Hw(k),\qquad A=((H+1)^2+1)h,\qquad S_+=S_-+A.
+\]
+Then $S_-\le S\le S_+$. Set $L_\mu(j)=\floorg{\sum_{k\le j}w(k)/S_+}{h}$. Numerator deficit, normalization error, and final rounding give CDF deficit at most $\tau=2A+h$. Since $H+1\le2^{r+7}$ and $Nq\le2^{3r+3}$, $b=64r$ implies the displayed bound on $\tau$.
+
+For means $\mu_1<\cdots<\mu_J$, replace each CDF by its prefix minimum over mean indices. Each earlier true CDF dominates the current one, so the error bound survives. CDFs remain increasing in $j$ and decreasing in mean. Their differences, with the remaining mass at overflow, are normalized nonnegative dyadics. Telescoping the CDF deficits bounds total variation by $q\tau$. Stochastic dominance applied to the decreasing function $z^k$ for $k<q$ and zero at overflow proves \eqref{eq:pgf}; its ideal expectation is at most the full Poisson generating function. At mean zero use the exact point mass at zero.
+
+Per mean, work is $O((H+q)(b+\log(H+2)))$ and storage is $O(q)$. Recurrence temporaries have $O(b+\operatorname{bits}(\mu)+\log(H+2))$ bits, and dyadic summation adds only logarithmic precision. Exact long products of relative weights are never stored.
+\end{proof}
+
+Choose dyadic $\delta\in(\eta/(200n),\eta/(100n)]$ and mesh $h_\mu\le\eta\delta/100$. Generate means from $\delta$ by multiplying by $1+\eta/4$ and rounding upward to $h_\mu$, clipping the last point to $U$ before bounded rounding. Successive ratios are at most $1+\eta/2$ and, except possibly the last, at least $1+\eta/4$. There are $J=O(\eta^{-1}\log(nq/\eta))$ means, with $O(\log(nq/\eta))$-bit encodings. Zero stays zero; a positive raw mean rounds upward to the first grid point, or is blocked above $U$. For an unblocked raw mean $x$,
+\begin{equation}\label{eq:mean}
+ x\le\widehat x\le(1+\eta/2)x+\delta.
+\end{equation}
+Compile these means using Lemma~\ref{lem:compiler}.
+
+For an edge of positive length $a$, length-clock changes occur precisely at
+\begin{equation}\label{eq:event}
+ L=\frac{qa}{(1+4\eta)\mu_j}.
+\end{equation}
+At equality the new smaller mean applies; below its first event the edge is blocked, and after its last event it uses $\delta$. Zero length uses mean zero. Sort the union of these finite edge-local lists and merge equal events. Each edge keeps its global event indices, so its law at a snapshot is found by predecessor search in $O(\log(J+2))$ comparisons. Laws decrease stochastically in time. No global exponent of an input weight is computed.
+
+\section{Preprocessing and completeness}\label{sec:complete}
+First delete edges with $c(e)>C$. Bucket normalized costs $c(e)/C$ into zero, a tiny bucket $(0,\delta_c]$ with dyadic $\delta_c\in(\eta/(2n),\eta/n]$, and a rounded geometric grid to $1$. Use the preceding grid procedure with starting point $\delta_c$, factor $1+\eta/4$, and mesh at most $\eta\delta_c/100$. The $J_c=O(\eta^{-1}\log(n/\eta))$ positive buckets have ratios at most $1+\eta/2$. For each ordered endpoint pair and bucket retain a minimum-length original edge, breaking ties by input order. A balanced map on at most $n^2(J_c+1)$ keys processes arbitrary $m$ in $O(m[\log(n+2)+\log(J_c+2)])$ operations, avoiding an $m\log m$ cost. Let $M\le\min(m,n^2(J_c+1))$ denote the retained count.
+
+Each edge has a representative $e'$ with
+\begin{equation}\label{eq:compression}
+ \ell(e')\le\ell(e),\qquad c(e')\le(1+\eta)c(e)+\eta C/n.
+\end{equation}
+For a simple $C$-feasible path, replacement preserves its vertex sequence and gives cost at most $C'$. Nonnegative cycles may be removed, so optimum paths can be chosen simple. Original edge identifiers are retained for output.
+
+Run ordinary cost SSSP on retained zero-length edges. Every vertex with distance at most $C'$ gets bound zero and an SSSP-tree witness. This covers every original zero optimum. Standard label-setting tie rules choose a tree even with zero cycles. The source gets its empty path.
+
+For all remaining targets, use raw cost mean $qc(e)/((1+4\eta)C')$ and raw length mean $q\ell(e)/((1+4\eta)L)$. Round upward and compile independent clocks as above. There are $E\le MJ$ merged events. If $E=0$, all retained edges have zero length, so the previous branch covers every feasible target and the others may be unavailable. Otherwise apply Section~\ref{sec:offline} with its specified $h_0$. For each remaining target $v$, binary-search the first snapshot index $\tau$ with
+\begin{equation}\label{eq:accept}
+ U_\tau(v,0,0)-\rho\le1/16.
+\end{equation}
+If it exists, store its scale $L_v$ and bound $B_v=(1+8\eta)L_v$; otherwise report unavailable.
+
+To prove completeness, fix an original feasible target not covered by the zero branch. Let $L_*$ be the optimum in the retained graph at budget $C'$. It is positive, attained by a simple path, and at most $\OPT_C(t)$. Its largest edge $a$ lies in $[L_*/n,L_*]$. At $L_*$ that edge's raw mean is strictly inside $[\delta,U]$. Take the largest grid mean no greater than this raw mean. Its event satisfies
+\begin{equation}\label{eq:cover}
+ L_*\le L\le(1+\eta/2)L_*\le(1+\eta)\OPT_C(t).
+\end{equation}
+Using the retained optimum here is essential: representatives may be much shorter than the original optimum.
+
+At this event, all edges on that path are unblocked. On either clock, \eqref{eq:mean} bounds the total ideal Poisson mean by
+\[
+ (1+\eta/2)q/(1+4\eta)+n\delta\le q(1-2\eta).
+\]
+For total mean at most $q(1-d)$, Chernoff's exponential-moment calculation gives tail at $q$ at most
+$\exp(-q[-\log(1-d)-d])\le\exp(-qd^2/2)$.
+With $d\ge2\eta$ and \eqref{eq:parameters}, the two tails sum to less than $1/512$. Coupling compiled clocks to ideal clocks on at most $n$ path edges adds at most $2nq\tau\le2^{-19}$. Thus the compiled system can follow this fixed path with failure $f\le1/512+2^{-19}$. By \eqref{eq:approx},
+\[
+ U(t,0,0)-\rho\le(16/15)(\rho+f)-\rho<1/16.
+\]
+The first accepted event therefore exists and has $L_t\le L$. This is an analysis using ideal random variables; the algorithm never samples them.
+
+\section{Actual witnesses with bounded numerical work}\label{sec:witness}
+At a queried accepted scale, run one full rounded static solve on the retained graph and keep its pointers. This is query work, not a separate preprocessing run for each target. Its labels satisfy $X\le Z\le X+Nh_0$. Define $V=Z-\rho$, with source value zero and overflow value one. At the initial target,
+\[
+ V\le1/16+2^{-20},\qquad \E[V_{\rm next}]\le V
+\]
+under the chosen pointer. Every pointer trajectory has at most $N$ decisions.
+
+Set $z=(1+4\eta)/(1+8\eta)$ and $d=1-z$, and initialize two dyadic variables $H_\ell=H_c=1/8$. Choose mesh $h=2^{-b_d}$, with
+$b_d\ge32+4\lceil\log_2(q+2)\rceil$ and $h\le1/(2^{20}N)$.
+At a selected edge with rounded means $\mu_\ell,\mu_c$, surviving increments $(k,l)$ propose the analytic updates
+\begin{equation}\label{eq:H}
+ H_\ell'=H_\ell e^{k\log z+d\mu_\ell},\qquad
+ H_c'=H_c e^{l\log z+d\mu_c}.
+\end{equation}
+Give an overflow outcome potential one, omitting the $H$ terms, and a surviving outcome potential $\Phi=V+H_\ell+H_c$. Equation~\eqref{eq:pgf} implies that the expected proposed potential is at most the current one. Independence lets one drop the other clock's survival restriction when bounding each $H$ contribution. A tick multiplies the corresponding $H$ by $z$.
+
+The finite routine below computes an upper value for each proposed $H$ with excess at most $2h$, or certifies it greater than two. Enumerate surviving increment pairs and choose the least upper score, omitting certified-large pairs. When $\Phi<1$, some surviving outcome has true score at most $\Phi$, since overflow has score one. Such an outcome is not omitted while $\Phi+4h<3/4$. A tick is rounded upward with excess at most $h$. Inductively,
+\begin{equation}\label{eq:potential}
+ \Phi\le1/16+2^{-20}+1/4+4Nh<3/4.
+\end{equation}
+Chosen outcomes never overflow and the pointer rank reaches the source within $N$ decisions. Reverse the backward actual-edge walk, omit ticks, and cycle-erase with a vertex stack.
+
+Upward enclosures preserve
+$H_\ell\ge(1/8)z^{\text{used length ticks}}\exp(d\sum\mu_\ell)$,
+including voluntary ticks, and similarly for cost. If physical length exceeded $(1+8\eta)L_t$, the raw-mean lower bound would give $\sum\mu_\ell>q/z$. Since fewer than $q$ ticks were used,
+\[
+ H_\ell>(1/8)\exp\{q[\log z+d/z]-\log z\}>1.
+\]
+Indeed $\log(1-d)+d/(1-d)\ge d^2/2$ by its power series, $d\ge8\eta/3$, and $q(8\eta)^2/18>\log8$. This contradicts \eqref{eq:potential}. The identical cost argument gives $c(P_t)\le(1+8\eta)C'$. Therefore \eqref{eq:cover} and the first-event choice give
+\[
+ B_t\le(1+8\eta)(1+\eta)\OPT_C(t)\le(1+\varepsilon)\OPT_C(t),
+ \quad c(P_t)\le(1+8\eta)(1+2\eta)C\le(1+\varepsilon)C.
+\]
+Cycle erasure preserves both bounds. This also supplies a witness for any accepted originally infeasible target; an unreachable target cannot yield such a path. All represented paths satisfy their actual reported bounds.
+
+\subsection{Finite upper enclosures for the witness update}\label{sec:exp}
+Here $b=b_d\ge32$, $a=\lceil\log_2(q+2)\rceil$, and $0<d\le1/4$. Form the exact rational sum
+\[
+ L_0=-\sum_{r=1}^{16(b+a+1)}d^r/r,\qquad x_0=kL_0+d\mu.
+\]
+For $x=k\log z+d\mu$ and $k<q$, the geometric logarithm-tail bound gives $0\le x_0-x\le2^{-32b}$. Stored $H$ belongs to $[h,1]$. If $x_0\ge b+3$, then $He^x>2$; reject this component. If $x_0\le-b-3$, return $h$, an upper enclosure of excess at most $h$.
+
+Otherwise choose a power of two $R$ with $8(b+4)\le R<16(b+4)$, put $B=100(b+a+1)$, $h'=2^{-B}$, and $y=\floorg{x_0/R}{h'}$. Thus $|y|<1/7$. Evaluate the degree $K=16b$ exponential polynomial by the rounded Horner recursion
+\[
+ A=1;\qquad A\leftarrow\floorg{1+yA/r}{h'}\quad(r=K,K-1,\ldots,1).
+\]
+Each Horner value is between zero and two. Rounding contributes less than $2h'$, rounding the argument less than $2h'$, and the Taylor tail at most $2\cdot7^{-K-1}\le2^{-32b-1}$. Hence
+\[
+ |A-e^{x_0/R}|\le4h'+2^{-32b-1}.
+\]
+Square $\log_2R$ times, rounding down to $h'$ each time. All intermediates are bounded by $2^{2b+16}$. In relative error, a squaring step satisfies
+$r_j\le2r_{j-1}+r_{j-1}^2+h'e^{b+3}$.
+For $r_j\le2^{-b}$, the amplification over these steps is at most $2R$, since $(2+2^{-b})^{\log_2R}\le2R$. Using $e^{b+3}<2^{2b+6}$ and $R<2^b$ yields the loose absolute-error bound
+\[
+ 2^{5b+32}(5h'+2^{-32b-1})\le2^{-26b+1}.
+\]
+The same estimates at earlier stages are smaller than $2^{-b}$ in relative error, verifying the bootstrap. Replacing $x_0$ by $x$ adds at most $2^{2b+8}2^{-32b}$, so final exponential error is below $2^{-20b}$. Add $2^{-10b}$ to obtain an upper enclosure, multiply by $H\le1$, and round upward to $h$. The total excess is at most $2h$, as required in \eqref{eq:potential}.
+
+Every rounding search has an explicit bounded domain; negative arguments are shifted before binary search. The exact logarithm sum has $O(b+a)$ terms and polynomial rational encoding length. Later arithmetic uses $O(B+b)$-bit dyadics. In particular no unrounded rational power with exponent of order $1/\eta$ is stored, and neither exponential nor logarithm is an algorithmic primitive.
+
+\section{Operation count, storage, and scope}\label{sec:resources}
+Put $p=1+\lceil\log_2(n+2)\rceil+\lceil\log_2(1/\eta+2)\rceil$. Then $q=O(\eta^{-2})$, $J,J_c=O(\eta^{-1}p)$, $M\le\min(m,n^2(J_c+1))$, $E\le MJ$, and $D=O(p)$. Cost buckets and the bounded-key map cost $O((m+n)p^2)$. Zero-length SSSP costs $O((M+n)p)$. Event creation and sorting cost $O(MJp)$. The shared compiler costs $O(J(q+p)p)$ operations and $O(Jq)$ storage.
+
+DP labels use $b_0=O(p)$ bits. A joint-law candidate has at most $q^2+1$ terms: dyadic products and sums temporarily have $O(p+\log q)$ bits before rounding. Thus $p^2$ conservatively covers snapshot lookup, rounding, and bounded numeric overhead in \eqref{eq:offlinework}. The preprocessing bound is
+\[
+ O\big(E+(M+n)(1+q^2D^2)q^4[p^2+\log(n+2)]\big).
+\]
+Persistent storage is bounded as in Lemma~\ref{lem:offline}, plus graph, shared probability tables, and $O(Mq^2)$ reused static scratch. Searching the threshold for all targets adds $O(np\log(n+2))$ work and $O(n)$ records, without $n$ full static solves. Every term is at most $O((m+n)\eta^{-12}p^8)$. Absorbing powers of $\log(1/\eta)$ into extra powers of $1/\varepsilon$ gives the stated universal exponents $20,100$ after increasing an absolute constant.
+
+A query performs one static solve on $M=\operatorname{poly}(n,1/\varepsilon)$ edges, then at most $N$ decisions with at most $q^2$ surviving candidates per edge decision and polynomial-$p$ enclosure work per candidate. It is polynomial in the required parameters independently of all weight aspects. Static scratch, an $O(nq)$ output walk, and a cycle-erasure stack fit the larger preprocessing-space bound even while the persistent representation is retained.
+
+For rational inputs, event values, original-edge comparisons, and SSSP sums have polynomial encoding length in the input and $n,m$. Grid indices and stored DP values use $O(p)$ bits. Rounding before reuse prevents denominator growth across recursive levels. The query's finite logarithm series has polynomial encoding length in the input encoding and $p$, followed by fixed-precision arithmetic. Control integers have $O(\log(n+m+1/\varepsilon))$ bits up to an absolute factor. This completes Theorem~\ref{thm:main}. If $C=0$ is requested separately, delete positive-cost edges and solve ordinary length SSSP.
+
+\paragraph{Limits and computational checks.}
+The construction has intentionally large constants and accuracy exponents; no practical speedup is claimed. The established scope is the two-resource all-target theorem above. Exact rational tests exercised boundary values, closed classes, clipping, rounded Bellman residuals, finite ranks, and compiled CDFs on small instances. Separate high-precision decimal checks exercised the witness enclosure routine. These are diagnostic checks, not exhaustive executions at the prescribed $q$, formal verification, or proofs of the universal bounds; the arguments above supply the latter.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\section*{AI methodology}
+OpenAI Codex materially assisted the construction and proofs in all sections, counterexample searches, literature inspection, exact-arithmetic diagnostic code, numerical checks, and drafting of the entire manuscript. It also assisted internal critical checks of proofs and primary-source comparisons. These checks are neither independent human review nor formal verification.
+\end{document}

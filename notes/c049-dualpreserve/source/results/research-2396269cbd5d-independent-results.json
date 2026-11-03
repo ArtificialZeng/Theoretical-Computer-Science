@@ -1,0 +1,201 @@
+{
+  "job_id": "c049-dualpreserve-research-2396269cbd5d",
+  "status": "all independent declared checks passed",
+  "saved_extremizer": {
+    "n": 4,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    "demands": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "p_min": 2,
+    "energy": 31,
+    "load": [
+      3,
+      3,
+      2,
+      3
+    ],
+    "heads": [
+      1,
+      2,
+      3,
+      0,
+      2,
+      3,
+      0,
+      1,
+      3,
+      0,
+      1
+    ],
+    "ratio_energy_over_n_p_plus_1": "31/12"
+  },
+  "direct_failure_sets_tested_per_demand": 67,
+  "direct_failure_tested_demands": 12,
+  "minimum_demand_cardinality_independently_verified": 2,
+  "mandatory_edge_witnesses": {
+    "8": {
+      "pair": [
+        2,
+        3
+      ],
+      "failures": [
+        2,
+        5
+      ]
+    },
+    "5": {
+      "pair": [
+        2,
+        3
+      ],
+      "failures": [
+        2,
+        8
+      ]
+    },
+    "2": {
+      "pair": [
+        2,
+        3
+      ],
+      "failures": [
+        5,
+        8
+      ]
+    },
+    "7": {
+      "pair": [
+        2,
+        3
+      ],
+      "failures": [
+        6,
+        8
+      ]
+    },
+    "6": {
+      "pair": [
+        2,
+        3
+      ],
+      "failures": [
+        7,
+        8
+      ]
+    },
+    "4": {
+      "pair": [
+        3,
+        2
+      ],
+      "failures": [
+        1
+      ]
+    },
+    "1": {
+      "pair": [
+        3,
+        2
+      ],
+      "failures": [
+        4
+      ]
+    },
+    "10": {
+      "pair": [
+        3,
+        2
+      ],
+      "failures": [
+        9
+      ]
+    },
+    "9": {
+      "pair": [
+        3,
+        2
+      ],
+      "failures": [
+        10
+      ]
+    },
+    "0": {
+      "pair": [
+        3,
+        2
+      ],
+      "failures": [
+        1,
+        10
+      ]
+    },
+    "3": {
+      "pair": [
+        3,
+        2
+      ],
+      "failures": [
+        4,
+        9
+      ]
+    }
+  },
+  "orientation_checked_by_all_orientations_and_flow": true,
+  "generic_density_inequality_exact_nonempty_graph_checks": 1094,
+  "maximum_observed_energy_over_density_on_this_finite_range": "2",
+  "limits": "Saved n=4 extremizer only for direct failures. Density check covers all nonempty simple undirected graphs n=2..5. This is same-worker deterministic verification, not a fresh referee or an asymptotic critical-graph theorem.",
+  "code_sha256": "e032296840c301791c6feefab9b342c91ac1b915a512982e5a15f91f395ced2a"
+}

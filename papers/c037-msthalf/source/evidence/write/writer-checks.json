@@ -1,0 +1,41 @@
+{
+  "job_id": "c037-msthalf-write-510ed992820b",
+  "checked_at_utc": "2026-11-02T21:36:55.357180+00:00",
+  "check_type": "writer_self_check_not_fresh_release_audit",
+  "build_command": "sh manuscript/build.sh",
+  "build_completed": true,
+  "final_log": "manuscript/build/main.log",
+  "command_log": "evidence/write/build-command.log",
+  "first_failed_build_preserved": "evidence/write/build-first-failed.log",
+  "undefined_citations": false,
+  "undefined_references": false,
+  "overfull_boxes": false,
+  "pages": 7,
+  "pages_visually_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "render_files": [
+    "tmp/pdfs/msthalf-1.png",
+    "tmp/pdfs/msthalf-2.png",
+    "tmp/pdfs/msthalf-3.png",
+    "tmp/pdfs/msthalf-4.png",
+    "tmp/pdfs/msthalf-5.png",
+    "tmp/pdfs/msthalf-6.png",
+    "tmp/pdfs/msthalf-7.png"
+  ],
+  "visual_observations": "All seven final pages were opened and inspected. No clipped or overlapping text, missing glyphs, broken equations, or unreadable references. Title page, author/contact line, numbered pages and section transitions are legible. Bibliography uses the normal body font.",
+  "remaining_nonfatal_diagnostics": [
+    "acmart: no city present for affiliation (only the authorized institution and country are printed).",
+    "BibTeX: empty address in BDJW24 (the primary PMLR metadata does not supply an address)."
+  ],
+  "pdf_sha256": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+  "source_scope_changed": false,
+  "readiness_label_retained": "working_paper",
+  "release_status": "Pending separate fresh citation/build/visual review and script release gate."
+}

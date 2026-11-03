@@ -1,0 +1,14 @@
+{
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Precisely stated new computational refinement: the inspected current primary result gives quasipolynomial O(log^4 n) only for p<=0.1. The full decrease-only p<1 target has plausible payoff and a concrete proof program; correctness, substantive innovation and STOC significance remain unestablished. No manuscript/PDF.",
+  "next_test": "In the first bounded RESEARCH pass, reconstruct the first-absorption/all-future-seed invariant including overlapping/identical seeds, then close separated counts, weighted charging, aspect-independent worst-execution runtime, bad-mask expectation and finite-bit sampling.",
+  "evidence": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/triage-entry.json",
+    "evidence/triage-literature.json",
+    "evidence/triage-assessment.md"
+  ]
+}

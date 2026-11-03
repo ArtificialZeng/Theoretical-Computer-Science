@@ -1,0 +1,87 @@
+{
+  "job_id": "c015-imagebound-write-b795278c1e36",
+  "checked_utc": "2026-11-02T22:08:48.913670+00:00",
+  "stage": "write-pre-freeze",
+  "clean_build": true,
+  "build_directory_started_without_auxiliaries": true,
+  "build_exit_code": 0,
+  "build_log": "manuscript/c015-imagebound-write-b795278c1e36/working_paper.log",
+  "build_log_digest": "9b30eadcee993d979938d5ee5b6b60e927b74b70f143ce35010875740feef605",
+  "warnings": [],
+  "pages": 6,
+  "max_total_pages": 12,
+  "rendered_pages_actually_inspected": [
+    {
+      "page": 1,
+      "path": "evidence/c015-imagebound-write-b795278c1e36/pages/page-1.png",
+      "sha256": "286bb4835b6d28b6b78ec84f1b6ac083ce40e0b67d97160e3b122695158dcce2"
+    },
+    {
+      "page": 2,
+      "path": "evidence/c015-imagebound-write-b795278c1e36/pages/page-2.png",
+      "sha256": "7e7a41e276d5178edc1dd2b200f3c3cfa2fa838f580e0a80c4489edc8041e2f2"
+    },
+    {
+      "page": 3,
+      "path": "evidence/c015-imagebound-write-b795278c1e36/pages/page-3.png",
+      "sha256": "f1e39af9e77fa2a2215ef88ceabfaba8d86535ed1699510f1cb3db418769aa2c"
+    },
+    {
+      "page": 4,
+      "path": "evidence/c015-imagebound-write-b795278c1e36/pages/page-4.png",
+      "sha256": "249d6535307f743909d9891ddd779e575f3624a157b671daab692fa2702b9364"
+    },
+    {
+      "page": 5,
+      "path": "evidence/c015-imagebound-write-b795278c1e36/pages/page-5.png",
+      "sha256": "756f846692167eaa053f23f9b89b17cff6554ef22b75e0e69f90dec93449a5c4"
+    },
+    {
+      "page": 6,
+      "path": "evidence/c015-imagebound-write-b795278c1e36/pages/page-6.png",
+      "sha256": "21c627b2a59cac03ceeeabd443f471b76dc40d30a15e43bf3d9465989f1466b5"
+    }
+  ],
+  "page_inspection_result": "No overlap, clipping, missing glyphs or unreadable text; theorem statements, proofs, author details, references and AI disclosure legible.",
+  "source_files": [
+    "manuscript/c015-imagebound-write-b795278c1e36/ACM-Reference-Format.bst",
+    "manuscript/c015-imagebound-write-b795278c1e36/acmart.cls",
+    "manuscript/c015-imagebound-write-b795278c1e36/main.tex",
+    "manuscript/c015-imagebound-write-b795278c1e36/references.bib",
+    "manuscript/c015-imagebound-write-b795278c1e36/working_paper.bbl"
+  ],
+  "stable_project_inputs_from_fls": [
+    "manuscript/c015-imagebound-write-b795278c1e36/acmart.cls",
+    "manuscript/c015-imagebound-write-b795278c1e36/main.tex",
+    "manuscript/c015-imagebound-write-b795278c1e36/working_paper.bbl"
+  ],
+  "source_dependency_scope_complete": true,
+  "pdf": "manuscript/c015-imagebound-write-b795278c1e36/working_paper.pdf",
+  "pdf_digest": "b2c1af7888a6e47966549882d4c977cefcaf4527cea394aaf4d57d8b62eabefb",
+  "original_source_sha256": "7cf4a0de6b28019b0fa2f5e92ea04bee150c74cb9db945e382c75d8379326aa7",
+  "frozen_mathematical_packet_unchanged": true,
+  "prior_artifacts_preserved": 22,
+  "unchanged_historical_files": [
+    "audit/build.json",
+    "audit/build.md",
+    "audit/citations.json",
+    "audit/citations.md",
+    "audit/innovation.json",
+    "audit/math.json",
+    "audit/math.md",
+    "audit/stoc-assessment.json",
+    "audit/visual.json",
+    "audit/visual.md",
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/acmart.cls",
+    "manuscript/main.bbl",
+    "manuscript/main.log",
+    "manuscript/main.pdf",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "state_sha256": "7758f575908de022d56bf96b58c489667406741347c7e6112ee5b21042cb90a9",
+  "readiness_label": "working_paper",
+  "assessment_sha256": "baf2370c199ab3efa36d5eb0ce3ef6f1901c6fbc15c5a0dac8c02cbe5fb31cf6",
+  "separate_release_review_pending": true
+}

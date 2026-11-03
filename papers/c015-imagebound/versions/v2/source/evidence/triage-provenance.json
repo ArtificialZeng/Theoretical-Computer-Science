@@ -1,0 +1,10 @@
+{
+  "job_id": "c015-imagebound-triage-104fc05d5d7d",
+  "role": "triage",
+  "date": "2026-11-01",
+  "source_sha256_before": "7cf4a0de6b28019b0fa2f5e92ea04bee150c74cb9db945e382c75d8379326aa7",
+  "research_passes_observed": 0,
+  "status": "in progress; no mathematical resolution or candidate",
+  "supervisor_baseline_files": "outer-root-note names batch015 files that are absent inside this project; inspect proof and independently reproduce local controls",
+  "registry_comparison": "No registry-named file found at research or queue root; compared c003-compress/source.md read-only; complete deterministic pair compression differs from NFA mortality"
+}

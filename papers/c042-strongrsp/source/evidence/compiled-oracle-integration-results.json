@@ -1,0 +1,21 @@
+{
+  "job_id": "c042-strongrsp-research-a3a11d57c4b5",
+  "all_checks_passed": true,
+  "state_checks": 32,
+  "records": [
+    {
+      "fixture": 0,
+      "states": 16,
+      "max_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 1,
+      "states": 16,
+      "max_rank": 5,
+      "rank_bound": 20
+    }
+  ],
+  "scope": "Finite compiler-to-static-rounded-oracle integration on two q=2 graphs including zero cycles and self-loop. Exact rational Poisson CDF enclosures give ordered reference laws. Prior oracle implementation reused; not independent review or full algorithm execution.",
+  "reproduction": "evidence/check_compiled_oracle_integration.py"
+}

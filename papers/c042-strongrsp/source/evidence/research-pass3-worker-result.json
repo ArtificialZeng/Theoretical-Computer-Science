@@ -1,0 +1,20 @@
+{
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Proposed full positive resolution of the immutable all-target strongly polynomial RSP assertion. Added bounded-bit conservative clock compilation, complete preprocessing/error/event integration and a bounded-space deterministic numerical witness decoder. Exact finite compiler/integration checks pass; exponential spot checks are numerical. This requests fresh review, not acceptance. No manuscript/PDF created.",
+  "next_test": "Freeze claim.json and its listed packet; obtain fresh critical review of full original-scope correctness, numerical enclosure constants, offline/static composition, operation/query-space bounds, current novelty and significance.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "claim.json",
+    "checkpoint.md",
+    "evidence/research-pass3-full-proof.md",
+    "evidence/research-pass3-compiler.md",
+    "evidence/research-pass3-literature.md",
+    "evidence/compiled-poisson-results.json",
+    "evidence/compiled-oracle-integration-results.json",
+    "evidence/bounded-exponential-results.json",
+    "evidence/research-pass3-run.json"
+  ]
+}

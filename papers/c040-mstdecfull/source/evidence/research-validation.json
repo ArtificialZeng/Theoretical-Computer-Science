@@ -1,0 +1,32 @@
+{
+  "job_id": "c040-mstdecfull-research-9063bf54df79",
+  "validated_utc": "2026-11-03T00:25:22.175323+00:00",
+  "research_passes_used_by_this_job": 1,
+  "source_sha256": "09b52cf01e6e36d50f3090211c0313cda0f436865507abd6c00493d5583fe9a7",
+  "source_unchanged": true,
+  "claim_kind": "resolution-paper",
+  "proposer_job_id": "c040-mstdecfull-research-9063bf54df79",
+  "claim_evidence_exists": true,
+  "original_and_precise_reading_bound": true,
+  "finite_test_passed": true,
+  "known_mathematical_gap_list": [],
+  "mathematics_status": "Complete proposed proof; candidate requests actual fresh review, not acceptance.",
+  "scientific_test_complete_utc": "2026-11-03T00:25:22.176284+00:00",
+  "no_manuscript_or_pdf_authored": true,
+  "no_independent_review_invented": true,
+  "no_counters_reset": true,
+  "worker_result_fields_validated": true,
+  "finalized_utc": "2026-11-03T00:26:02.719077+00:00",
+  "scientific_test_completed_before_main_cutoff": true,
+  "all_claim_evidence_sha256": {
+    "source.md": "09b52cf01e6e36d50f3090211c0313cda0f436865507abd6c00493d5583fe9a7",
+    "problem.md": "4919e8c0082dcf9dc14ed9f8a35eca4e30c658bfb33e39dc816e3df09d7f7147",
+    "research/full-resolution-proof.md": "402a70aefa4ca873f813db680c89ccac93fbf6a7c9b22eca87f0192781bb4f53",
+    "research/prior-comparison.md": "498b9e6c0dc373fff3217439e9d9e7312ccc1a91ab4cd0d7db06b96e3b1f8740",
+    "research/research-checklist.md": "4b320a570d619ccb446299d3b773755f164f6b2c62e61ac8759d1c5dc269c729",
+    "intake/primary/2610.40594v1.txt": "87b59b34ec5003f181493bb3e434d288edf22c6ed9cf9316d1175acddc41c92e",
+    "evidence/research-literature.json": "fca35ba8acbd1750295f3a1ebe479b34e18b03fa2b5233f8a9f69a2dbb13624a",
+    "research/check_dfs_hierarchies.py": "fe68cca46938bf87aa94d500308a03d7b373ac82405cc07450814444a915147f",
+    "evidence/dfs-exhaustive-check.json": "6b726cac31b14580f856bb2442dac892edb6f7917483dd2ff1296525e650fa73"
+  }
+}

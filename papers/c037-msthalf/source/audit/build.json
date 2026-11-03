@@ -1,0 +1,20 @@
+{
+  "job_id": "c037-msthalf-release-aff0d39d4223",
+  "snapshot_digest": "d0a2fbd366a632f17366053e75f1a37a1254cc80a92e14c60a7d14734548277b",
+  "manuscript_digest": "21d0504817983aa84f21573d2ff6560239183353573fc2cc1d767e3501675427",
+  "pdf_digest": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+  "verdict": "accept",
+  "report": "audit/build.md",
+  "build_log": "manuscript/build/main.log",
+  "build_log_digest": "6bb194b50532010522e01ccf2c34e7ff953e2470117aea06ff175bd22798aa68",
+  "clean_build": true,
+  "reproduction_build_log": "evidence/release/reproduction/manuscript/build/main.log",
+  "reproduction_build_log_digest": "63d28f5f54c3e0249475ae52990e8da185a7101e2847a852a90f9c40f1d83bc5",
+  "reproduction_result": "evidence/release/reproduction-result.json",
+  "source_package": "evidence/release/source-package.zip",
+  "source_package_digest": "f22fedcff329dcad32a90b39171046b07fe1f3744861f1ae1a349c3985c98b5e",
+  "warnings": [
+    "Optional acmart affiliation city absent",
+    "Optional BibTeX publisher address absent in BDJW24"
+  ]
+}

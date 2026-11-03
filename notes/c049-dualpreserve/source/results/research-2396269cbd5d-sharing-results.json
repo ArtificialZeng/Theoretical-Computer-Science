@@ -1,0 +1,825 @@
+{
+  "job_id": "c049-dualpreserve-research-2396269cbd5d",
+  "status": "declared finite sharing tests complete",
+  "rows": [
+    {
+      "k": 2,
+      "matching_count": 19,
+      "matching_size": 4,
+      "groups": 19,
+      "shared_left": true,
+      "shared_right": true,
+      "n": 190,
+      "m": 342,
+      "all_core_witnesses": 76,
+      "witness_checks_until_first_failure": 76,
+      "all_specified_core_witnesses_survive": true,
+      "first_failed_witness": null,
+      "energy_when_computed": 646,
+      "energy_over_n_p_plus_1": "17/100",
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": "152"
+    },
+    {
+      "k": 2,
+      "matching_count": 19,
+      "matching_size": 4,
+      "groups": 9,
+      "shared_left": true,
+      "shared_right": false,
+      "n": 160,
+      "m": 322,
+      "all_core_witnesses": 76,
+      "witness_checks_until_first_failure": 2,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 1,
+        "core_edge_index": 1,
+        "source": 38,
+        "target": 45,
+        "failed_edge_indices": [
+          86,
+          85
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 2,
+      "matching_count": 19,
+      "matching_size": 4,
+      "groups": 9,
+      "shared_left": false,
+      "shared_right": true,
+      "n": 160,
+      "m": 322,
+      "all_core_witnesses": 76,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 38,
+        "target": 45,
+        "failed_edge_indices": [
+          84
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 2,
+      "matching_count": 19,
+      "matching_size": 4,
+      "groups": 9,
+      "shared_left": true,
+      "shared_right": true,
+      "n": 130,
+      "m": 302,
+      "all_core_witnesses": 76,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 38,
+        "target": 45,
+        "failed_edge_indices": [
+          84
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 2,
+      "matching_count": 19,
+      "matching_size": 4,
+      "groups": 4,
+      "shared_left": true,
+      "shared_right": false,
+      "n": 145,
+      "m": 312,
+      "all_core_witnesses": 76,
+      "witness_checks_until_first_failure": 2,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 1,
+        "core_edge_index": 1,
+        "source": 38,
+        "target": 45,
+        "failed_edge_indices": [
+          86,
+          85
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 2,
+      "matching_count": 19,
+      "matching_size": 4,
+      "groups": 4,
+      "shared_left": false,
+      "shared_right": true,
+      "n": 145,
+      "m": 312,
+      "all_core_witnesses": 76,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 38,
+        "target": 45,
+        "failed_edge_indices": [
+          84
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 2,
+      "matching_count": 19,
+      "matching_size": 4,
+      "groups": 4,
+      "shared_left": true,
+      "shared_right": true,
+      "n": 100,
+      "m": 282,
+      "all_core_witnesses": 76,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 38,
+        "target": 45,
+        "failed_edge_indices": [
+          84
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 2,
+      "matching_count": 19,
+      "matching_size": 4,
+      "groups": 1,
+      "shared_left": true,
+      "shared_right": false,
+      "n": 136,
+      "m": 306,
+      "all_core_witnesses": 76,
+      "witness_checks_until_first_failure": 2,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 1,
+        "core_edge_index": 1,
+        "source": 38,
+        "target": 45,
+        "failed_edge_indices": [
+          86,
+          85
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 2,
+      "matching_count": 19,
+      "matching_size": 4,
+      "groups": 1,
+      "shared_left": false,
+      "shared_right": true,
+      "n": 136,
+      "m": 306,
+      "all_core_witnesses": 76,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 38,
+        "target": 45,
+        "failed_edge_indices": [
+          84
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 2,
+      "matching_count": 19,
+      "matching_size": 4,
+      "groups": 1,
+      "shared_left": true,
+      "shared_right": true,
+      "n": 82,
+      "m": 270,
+      "all_core_witnesses": 76,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 38,
+        "target": 45,
+        "failed_edge_indices": [
+          84
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 3,
+      "matching_count": 55,
+      "matching_size": 8,
+      "groups": 55,
+      "shared_left": true,
+      "shared_right": true,
+      "n": 990,
+      "m": 2090,
+      "all_core_witnesses": 440,
+      "witness_checks_until_first_failure": 440,
+      "all_specified_core_witnesses_survive": true,
+      "first_failed_witness": null,
+      "energy_when_computed": 4950,
+      "energy_over_n_p_plus_1": "5/56",
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": "1760"
+    },
+    {
+      "k": 3,
+      "matching_count": 55,
+      "matching_size": 8,
+      "groups": 27,
+      "shared_left": true,
+      "shared_right": false,
+      "n": 794,
+      "m": 1922,
+      "all_core_witnesses": 440,
+      "witness_checks_until_first_failure": 2,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 1,
+        "core_edge_index": 1,
+        "source": 110,
+        "target": 125,
+        "failed_edge_indices": [
+          458,
+          457
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 3,
+      "matching_count": 55,
+      "matching_size": 8,
+      "groups": 27,
+      "shared_left": false,
+      "shared_right": true,
+      "n": 794,
+      "m": 1922,
+      "all_core_witnesses": 440,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 110,
+        "target": 125,
+        "failed_edge_indices": [
+          456
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 3,
+      "matching_count": 55,
+      "matching_size": 8,
+      "groups": 27,
+      "shared_left": true,
+      "shared_right": true,
+      "n": 598,
+      "m": 1754,
+      "all_core_witnesses": 440,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 110,
+        "target": 125,
+        "failed_edge_indices": [
+          456
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 3,
+      "matching_count": 55,
+      "matching_size": 8,
+      "groups": 13,
+      "shared_left": true,
+      "shared_right": false,
+      "n": 696,
+      "m": 1838,
+      "all_core_witnesses": 440,
+      "witness_checks_until_first_failure": 2,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 1,
+        "core_edge_index": 1,
+        "source": 110,
+        "target": 125,
+        "failed_edge_indices": [
+          458,
+          457
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 3,
+      "matching_count": 55,
+      "matching_size": 8,
+      "groups": 13,
+      "shared_left": false,
+      "shared_right": true,
+      "n": 696,
+      "m": 1838,
+      "all_core_witnesses": 440,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 110,
+        "target": 125,
+        "failed_edge_indices": [
+          456
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 3,
+      "matching_count": 55,
+      "matching_size": 8,
+      "groups": 13,
+      "shared_left": true,
+      "shared_right": true,
+      "n": 402,
+      "m": 1586,
+      "all_core_witnesses": 440,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 110,
+        "target": 125,
+        "failed_edge_indices": [
+          456
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 3,
+      "matching_count": 55,
+      "matching_size": 8,
+      "groups": 1,
+      "shared_left": true,
+      "shared_right": false,
+      "n": 612,
+      "m": 1766,
+      "all_core_witnesses": 440,
+      "witness_checks_until_first_failure": 2,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 1,
+        "core_edge_index": 1,
+        "source": 110,
+        "target": 125,
+        "failed_edge_indices": [
+          458,
+          457
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 3,
+      "matching_count": 55,
+      "matching_size": 8,
+      "groups": 1,
+      "shared_left": false,
+      "shared_right": true,
+      "n": 612,
+      "m": 1766,
+      "all_core_witnesses": 440,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 110,
+        "target": 125,
+        "failed_edge_indices": [
+          456
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 3,
+      "matching_count": 55,
+      "matching_size": 8,
+      "groups": 1,
+      "shared_left": true,
+      "shared_right": true,
+      "n": 234,
+      "m": 1442,
+      "all_core_witnesses": 440,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 110,
+        "target": 125,
+        "failed_edge_indices": [
+          456
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 4,
+      "matching_count": 163,
+      "matching_size": 16,
+      "groups": 163,
+      "shared_left": true,
+      "shared_right": true,
+      "n": 5542,
+      "m": 12714,
+      "all_core_witnesses": 2608,
+      "witness_checks_until_first_failure": 2608,
+      "all_specified_core_witnesses_survive": true,
+      "first_failed_witness": null,
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": "20864"
+    },
+    {
+      "k": 4,
+      "matching_count": 163,
+      "matching_size": 16,
+      "groups": 81,
+      "shared_left": true,
+      "shared_right": false,
+      "n": 4312,
+      "m": 11566,
+      "all_core_witnesses": 2608,
+      "witness_checks_until_first_failure": 2,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 1,
+        "core_edge_index": 1,
+        "source": 326,
+        "target": 357,
+        "failed_edge_indices": [
+          2642,
+          2641
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 4,
+      "matching_count": 163,
+      "matching_size": 16,
+      "groups": 81,
+      "shared_left": false,
+      "shared_right": true,
+      "n": 4312,
+      "m": 11566,
+      "all_core_witnesses": 2608,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 326,
+        "target": 357,
+        "failed_edge_indices": [
+          2640
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 4,
+      "matching_count": 163,
+      "matching_size": 16,
+      "groups": 81,
+      "shared_left": true,
+      "shared_right": true,
+      "n": 3082,
+      "m": 10418,
+      "all_core_witnesses": 2608,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 326,
+        "target": 357,
+        "failed_edge_indices": [
+          2640
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 4,
+      "matching_count": 163,
+      "matching_size": 16,
+      "groups": 40,
+      "shared_left": true,
+      "shared_right": false,
+      "n": 3697,
+      "m": 10992,
+      "all_core_witnesses": 2608,
+      "witness_checks_until_first_failure": 2,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 1,
+        "core_edge_index": 1,
+        "source": 326,
+        "target": 357,
+        "failed_edge_indices": [
+          2642,
+          2641
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 4,
+      "matching_count": 163,
+      "matching_size": 16,
+      "groups": 40,
+      "shared_left": false,
+      "shared_right": true,
+      "n": 3697,
+      "m": 10992,
+      "all_core_witnesses": 2608,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 326,
+        "target": 357,
+        "failed_edge_indices": [
+          2640
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 4,
+      "matching_count": 163,
+      "matching_size": 16,
+      "groups": 40,
+      "shared_left": true,
+      "shared_right": true,
+      "n": 1852,
+      "m": 9270,
+      "all_core_witnesses": 2608,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 326,
+        "target": 357,
+        "failed_edge_indices": [
+          2640
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 4,
+      "matching_count": 163,
+      "matching_size": 16,
+      "groups": 1,
+      "shared_left": true,
+      "shared_right": false,
+      "n": 3112,
+      "m": 10446,
+      "all_core_witnesses": 2608,
+      "witness_checks_until_first_failure": 2,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 1,
+        "core_edge_index": 1,
+        "source": 326,
+        "target": 357,
+        "failed_edge_indices": [
+          2642,
+          2641
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 4,
+      "matching_count": 163,
+      "matching_size": 16,
+      "groups": 1,
+      "shared_left": false,
+      "shared_right": true,
+      "n": 3112,
+      "m": 10446,
+      "all_core_witnesses": 2608,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 326,
+        "target": 357,
+        "failed_edge_indices": [
+          2640
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    },
+    {
+      "k": 4,
+      "matching_count": 163,
+      "matching_size": 16,
+      "groups": 1,
+      "shared_left": true,
+      "shared_right": true,
+      "n": 682,
+      "m": 8178,
+      "all_core_witnesses": 2608,
+      "witness_checks_until_first_failure": 1,
+      "all_specified_core_witnesses_survive": false,
+      "first_failed_witness": {
+        "matching": 0,
+        "position": 0,
+        "core_edge_index": 0,
+        "source": 326,
+        "target": 357,
+        "failed_edge_indices": [
+          2640
+        ],
+        "reachable_before": true,
+        "reachable_after_removing_core_edge": true
+      },
+      "energy_when_computed": null,
+      "energy_over_n_p_plus_1": null,
+      "compulsory_core_energy_lower_bound_if_all_witnesses_survive": null
+    }
+  ],
+  "limits": "Only specified periodic same-position identifications and inherited witnesses tested. Failure of an inherited witness does not prove that core edge is no longer compulsory by some other witness. No asymptotic obstruction or preserver result.",
+  "elapsed_seconds": 1.5362172911409289,
+  "code_sha256": "3ed6d45d676b81df2f5c7ae2f1b2427b5ced014f75116a24a98be76f42865c0a"
+}

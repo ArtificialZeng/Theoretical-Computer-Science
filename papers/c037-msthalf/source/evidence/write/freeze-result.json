@@ -1,0 +1,12 @@
+{
+  "job_id": "c037-msthalf-write-510ed992820b",
+  "command": "python /Users/mac/.codex/skills/4prove-or-disprove-math/scripts/release_gate.py freeze-manuscript PROJECT",
+  "ok": true,
+  "manuscript_digest": "21d0504817983aa84f21573d2ff6560239183353573fc2cc1d767e3501675427",
+  "pdf_digest": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+  "snapshot_digest": "d0a2fbd366a632f17366053e75f1a37a1254cc80a92e14c60a7d14734548277b",
+  "final_source_and_pdf_hashes_verified": true,
+  "all_mathematical_frozen_inputs_unchanged": true,
+  "checked_at_utc": "2026-11-02T21:37:50.301470+00:00",
+  "release_declared": false
+}

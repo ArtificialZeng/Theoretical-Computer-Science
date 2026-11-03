@@ -1,0 +1,79 @@
+{
+  "job_id": "c042-strongrsp-research-266844093669",
+  "source_sha256": "93e36d243f9b6fec1df5dda18aacab258ad91c62c8465d0a010fddadbb319aa7",
+  "seed": 2026110302,
+  "all_checks_passed": true,
+  "fixtures": 18,
+  "totals": {
+    "incidence_inspections": 7808,
+    "edge_transfers": 2944,
+    "boundary_blocks": 270,
+    "recursion_nodes": 259,
+    "activation_vertex_tests": 482,
+    "validation_global_vertex_checks": 1016,
+    "upper_envelope_clips": 0,
+    "lower_envelope_clips": 0,
+    "validation_state_comparisons": 4364,
+    "validation_potential_checks": 496,
+    "strictly_inflated_entries": 288,
+    "reference_policy_evaluations": 30060,
+    "reference_nonterminating_policies": 2232
+  },
+  "inherited_endpoint_clipping_attacks": [
+    {
+      "direction": "upper",
+      "active": [
+        2
+      ],
+      "witness_vertices": [
+        2
+      ],
+      "left": {
+        "0": "1/32",
+        "1": "153/256",
+        "2": "17/32"
+      },
+      "right": {
+        "0": "1/32",
+        "1": "153/256",
+        "2": "9/32"
+      },
+      "raw": {
+        "2": "153/256"
+      },
+      "clipped": {
+        "0": "1/32",
+        "1": "153/256",
+        "2": "17/32"
+      }
+    },
+    {
+      "direction": "lower",
+      "active": [
+        2
+      ],
+      "witness_vertices": [
+        2
+      ],
+      "left": {
+        "0": "1/32",
+        "1": "17/32",
+        "2": "25/32"
+      },
+      "right": {
+        "0": "1/32",
+        "1": "17/32",
+        "2": "81/256"
+      },
+      "raw": {
+        "2": "9/32"
+      },
+      "clipped": {
+        "0": "1/32",
+        "1": "17/32",
+        "2": "81/256"
+      }
+    }
+  ],
+  "scope": "Specified finite rational monotone two-clock sequences only; exact policy reference. Not Poisson laws, a bit-complexity result, independent audit, or full RSP resolution. Global scans occur only in separately marked validation/reference code; the local production interface reads indexed active incidences. Tiny checker uses scan-min queues; the algorithmic proof uses heaps."
+}

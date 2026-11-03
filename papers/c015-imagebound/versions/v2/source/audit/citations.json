@@ -1,0 +1,20 @@
+{
+  "verdict": "accept",
+  "job_id": "c015-imagebound-release-2bbd673a9c35",
+  "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+  "manuscript_digest": "0b0a26f7526dc9b1387c6717bfb131d92f985b87e259fd50d4c89f0e27da96de",
+  "pdf_digest": "b2c1af7888a6e47966549882d4c977cefcaf4527cea394aaf4d57d8b62eabefb",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/c015-imagebound-write-b795278c1e36/ACM-Reference-Format.bst",
+    "manuscript/c015-imagebound-write-b795278c1e36/acmart.cls",
+    "manuscript/c015-imagebound-write-b795278c1e36/main.tex",
+    "manuscript/c015-imagebound-write-b795278c1e36/references.bib",
+    "manuscript/c015-imagebound-write-b795278c1e36/working_paper.bbl"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "Complete active TeX/BibTeX/BBL/class/style dependency scope; three primary references checked for existence, metadata, version, hypotheses and nearby support; bounded current novelty comparison; all rendered/extracted reference entries resolved. No user-designated workbook exists. Accessible corrected author text supports the RP reference; Rystsov is explicitly cited through Ryzhikov. Mathematical scope matched to accepted frozen evidence. Existing working_paper label retained.",
+  "citation_audit_method": "citation-check-skill advisory plus primary-source-manual",
+  "unverified_citations": []
+}

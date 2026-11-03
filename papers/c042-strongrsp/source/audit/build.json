@@ -1,0 +1,15 @@
+{
+  "verdict": "accept",
+  "job_id": "c042-strongrsp-release-8a7cb8c2de68",
+  "snapshot_digest": "b8a4224397c4874b51af65e8b82a4b17fef250e6e90513e63334f9d6b3b5e4e9",
+  "manuscript_digest": "80de7a1953cf2134fbcf45bdbab2b636aba6fb432d64e347ae0d2bbbc1c528f1",
+  "pdf_digest": "2714f0ab95d08c01d19aeacd5bf39597123d9cca31658ade6773a1bba658e703",
+  "report": "audit/build.md",
+  "build_log": "evidence/release/compiler-final.log",
+  "build_log_digest": "69a0875502c74537a6acdafd4344199ca7bcbc7bf82ab5411a7cb0b2443bcedb",
+  "clean_build": true,
+  "clean_build_transcript": "evidence/release/build-clean.log",
+  "source_reproduction": "evidence/release/reproduction.json",
+  "pages": 9,
+  "readiness_label": "working_paper"
+}

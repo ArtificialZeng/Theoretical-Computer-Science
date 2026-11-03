@@ -1,0 +1,30 @@
+{
+  "job_id": "c037-msthalf-release-aff0d39d4223",
+  "snapshot_digest": "d0a2fbd366a632f17366053e75f1a37a1254cc80a92e14c60a7d14734548277b",
+  "manuscript_digest": "21d0504817983aa84f21573d2ff6560239183353573fc2cc1d767e3501675427",
+  "pdf_digest": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+  "date_utc": "2026-11-02",
+  "queries_executed": [
+    "Anand 2026 Approximating Minimum Spanning",
+    "\"Approximating Minimum Spanning Trees in Metrics under Semi-Random Corruptions\" site:semanticscholar.org OR site:arxiv.org",
+    "Anand 2026 SODA minimum spanning corruptions",
+    "doi:10.48550/arXiv.2610.40594",
+    "arxiv:2610.40594",
+    "Bateni 2024 Metric Clustering and",
+    "\"Metric Clustering and MST with Strong and Weak Distance Oracles\" site:semanticscholar.org OR site:arxiv.org",
+    "Bateni 2024 Conference on Learning Theory",
+    "\"minimum spanning\" \"semi-random\" \"one half\"",
+    "\"2610.40594\" \"1/2\" improvement",
+    "\"minimum spanning trees\" \"rectangle\" \"corruption\"",
+    "arxiv:2310.15863"
+  ],
+  "primary_records": [
+    "https://arxiv.org/abs/2610.40594",
+    "https://arxiv.org/html/2610.40594v1",
+    "https://proceedings.mlr.press/v247/bateni24a.html",
+    "https://proceedings.mlr.press/v247/bateni24a/bateni24a.pdf",
+    "https://arxiv.org/abs/2310.15863"
+  ],
+  "result": "Both cited records and theorem passages verified through primary web text. Bounded searches found no primary equivalent for the full below-half upper bound; this is not exhaustive priority verification. Irrelevant search hits were not used as evidence.",
+  "operational_limit": "Direct urllib downloads failed local DNS lookup; web primary text access succeeded. This is not mathematical evidence or an unverified citation. No workbook was designated."
+}

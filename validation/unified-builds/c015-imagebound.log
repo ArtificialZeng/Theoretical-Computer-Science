@@ -233,7 +233,7 @@ LaTeX Warning: Reference `eq:global' on page 5 undefined on input line 344.
 LaTeX Warning: Reference `thm:main' on page 6 undefined on input line 361.
 
 
-LaTeX Warning: Reference `lem:image' on page 6 undefined on input line 369.
+LaTeX Warning: Reference `lem:image' on page 6 undefined on input line 372.
 
 No file main.bbl.
 
@@ -273,9 +273,9 @@ ic/newtx/txexs.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx
 /txmiaX.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txsym.
 pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
 Output written on /private/var/folders/kh/3l44w5_56q36j9p6cyg1fgy00000gq/T/tcs-
-build-becppojv/source/.sync-clean-build/main.pdf (6 pages, 454592 bytes).
+build-fl12q2qz/source/.sync-clean-build/main.pdf (6 pages, 455060 bytes).
 Transcript written on /private/var/folders/kh/3l44w5_56q36j9p6cyg1fgy00000gq/T/
-tcs-build-becppojv/source/.sync-clean-build/main.log.
+tcs-build-fl12q2qz/source/.sync-clean-build/main.log.
 Latexmk: Getting log file '/private<temporary>/source/.sync-clean-build/main.log'
 Latexmk: Examining '/private<temporary>/source/.sync-clean-build/main.fls'
 Latexmk: Examining '/private<temporary>/source/.sync-clean-build/main.log'
@@ -295,11 +295,11 @@ Category 'other':
 ------------
 Run number 1 of rule 'bibtex /private<temporary>/source/.sync-clean-build/main'
 ------------
-====== ENV{BSTINPUTS} changed to '/private<temporary>/source/manuscript:.//:/private<temporary>/source/manuscript:'
+====== ENV{BSTINPUTS} changed to '/private<temporary>/source/manuscript/c015-imagebound-write-b795278c1e36:.//:/private<temporary>/source/manuscript/c015-imagebound-write-b795278c1e36:'
 Latexmk: Change directory to '/private<temporary>/source/.sync-clean-build/'.
 To assist finding of files in document directory, I set
-  BIBINPUTS='/private<temporary>/source/manuscript:/private<temporary>/source/.sync-clean-build:'
-  BSTINPUTS='/private<temporary>/source/manuscript:.//:/private<temporary>/source/manuscript:'.
+  BIBINPUTS='/private<temporary>/source/manuscript/c015-imagebound-write-b795278c1e36:/private<temporary>/source/.sync-clean-build:'
+  BSTINPUTS='/private<temporary>/source/manuscript/c015-imagebound-write-b795278c1e36:.//:/private<temporary>/source/manuscript/c015-imagebound-write-b795278c1e36:'.
 ------------
 Running 'bibtex  "main.aux"'
 ------------
@@ -307,7 +307,7 @@ This is BibTeX, Version 0.99e (TeX Live 2026)
 The top-level auxiliary file: main.aux
 The style file: ACM-Reference-Format.bst
 Database file #1: references.bib
-Latexmk: Change directory back to '/private<temporary>/source/manuscript'
+Latexmk: Change directory back to '/private<temporary>/source/manuscript/c015-imagebound-write-b795278c1e36'
 Latexmk: applying rule 'pdflatex'...
 Rule 'pdflatex':  Reasons for rerun
 Changed files or newly in use/created:
@@ -519,9 +519,9 @@ ic/newtx/txexs.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx
 /txmiaX.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txsym.
 pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
 Output written on /private/var/folders/kh/3l44w5_56q36j9p6cyg1fgy00000gq/T/tcs-
-build-becppojv/source/.sync-clean-build/main.pdf (6 pages, 462804 bytes).
+build-fl12q2qz/source/.sync-clean-build/main.pdf (6 pages, 463043 bytes).
 Transcript written on /private/var/folders/kh/3l44w5_56q36j9p6cyg1fgy00000gq/T/
-tcs-build-becppojv/source/.sync-clean-build/main.log.
+tcs-build-fl12q2qz/source/.sync-clean-build/main.log.
 Latexmk: Getting log file '/private<temporary>/source/.sync-clean-build/main.log'
 Latexmk: Examining '/private<temporary>/source/.sync-clean-build/main.fls'
 Latexmk: Examining '/private<temporary>/source/.sync-clean-build/main.log'
@@ -540,11 +540,11 @@ Changed files or newly in use/created:
 ------------
 Run number 2 of rule 'bibtex /private<temporary>/source/.sync-clean-build/main'
 ------------
-====== ENV{BSTINPUTS} changed to '/private<temporary>/source/manuscript:.//:/private<temporary>/source/manuscript:'
+====== ENV{BSTINPUTS} changed to '/private<temporary>/source/manuscript/c015-imagebound-write-b795278c1e36:.//:/private<temporary>/source/manuscript/c015-imagebound-write-b795278c1e36:'
 Latexmk: Change directory to '/private<temporary>/source/.sync-clean-build/'.
 To assist finding of files in document directory, I set
-  BIBINPUTS='/private<temporary>/source/manuscript:/private<temporary>/source/.sync-clean-build:'
-  BSTINPUTS='/private<temporary>/source/manuscript:.//:/private<temporary>/source/manuscript:'.
+  BIBINPUTS='/private<temporary>/source/manuscript/c015-imagebound-write-b795278c1e36:/private<temporary>/source/.sync-clean-build:'
+  BSTINPUTS='/private<temporary>/source/manuscript/c015-imagebound-write-b795278c1e36:.//:/private<temporary>/source/manuscript/c015-imagebound-write-b795278c1e36:'.
 ------------
 Running 'bibtex  "main.aux"'
 ------------
@@ -552,7 +552,7 @@ This is BibTeX, Version 0.99e (TeX Live 2026)
 The top-level auxiliary file: main.aux
 The style file: ACM-Reference-Format.bst
 Database file #1: references.bib
-Latexmk: Change directory back to '/private<temporary>/source/manuscript'
+Latexmk: Change directory back to '/private<temporary>/source/manuscript/c015-imagebound-write-b795278c1e36'
 Latexmk: applying rule 'pdflatex'...
 Rule 'pdflatex':  Reasons for rerun
 Changed files or newly in use/created:
@@ -727,9 +727,9 @@ st/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texlive/2026/texmf-dist/font
 s/type1/public/newtx/txsym.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/
 public/newtx/txsys.pfb>
 Output written on /private/var/folders/kh/3l44w5_56q36j9p6cyg1fgy00000gq/T/tcs-
-build-becppojv/source/.sync-clean-build/main.pdf (6 pages, 386343 bytes).
+build-fl12q2qz/source/.sync-clean-build/main.pdf (6 pages, 386596 bytes).
 Transcript written on /private/var/folders/kh/3l44w5_56q36j9p6cyg1fgy00000gq/T/
-tcs-build-becppojv/source/.sync-clean-build/main.log.
+tcs-build-fl12q2qz/source/.sync-clean-build/main.log.
 Latexmk: Getting log file '/private<temporary>/source/.sync-clean-build/main.log'
 Latexmk: Examining '/private<temporary>/source/.sync-clean-build/main.fls'
 Latexmk: Examining '/private<temporary>/source/.sync-clean-build/main.log'

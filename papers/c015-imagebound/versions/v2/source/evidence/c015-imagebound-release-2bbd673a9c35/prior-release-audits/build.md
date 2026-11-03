@@ -1,0 +1,11 @@
+# Build audit
+
+Job: c015-imagebound-release-b1a7d726335d. Verdict: accept. Final manuscript and PDF are bound by audit/build.json.
+
+The release job ran latexmk -C, then latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex successfully. A final prose-only correction was recompiled successfully and freeze-manuscript rerun. All final theorem, proposition, lemma and proof environments are byte-identical to the pre-release manuscript. Frozen mathematical evidence and original source remain unchanged. The final compiler log is manuscript/main.log; the BibTeX log is manuscript/main.blg. Actual logs contain no LaTeX/natbib/acmart warnings, undefined references or citations, overfull/underfull boxes, fatal errors or missing glyph warnings. BibTeX's warning$ -- 0 is an internal zero counter. Package descriptions containing the word error are not diagnostics. Build stdout and clean receipt are retained in manuscript/build.stdout.txt and manuscript/clean.stdout.txt.
+
+pdfinfo and pdftotext succeed on the final PDF: six total letter-size pages, PDF 1.7, unencrypted, 386343 bytes, nonempty ordinary text extraction. The visible title/sole author/contact match publication.json and authors.json. The metadata title is correct; pdfinfo does not expose an Author field under this nonacm class, and no metadata author verification is inferred from that omission. The class-generated XMP and visible named authorship are retained. All 15 listed font subsets are embedded. No figures or image-only text occurs.
+
+All five source dependencies are listed in publication.json, including main.bbl. The supplied acmart.cls and ACM-Reference-Format.bst were freshly compared byte-for-byte with the official downloaded inputs and remain unchanged. Current official STOC 2027 CFP was inspected: named separate title page, >=11pt single column, single spacing, one-inch letter-paper margins. The actual class options and visible output conform, and six total pages satisfy the stricter twelve-total-page project cap. Substantial AI roles remain disclosed. No external action is authorized or performed.
+
+Fresh freeze-manuscript succeeded (audit/release-freeze-gate.json). All current evidence, source and PDF hashes were recomputed and match the frozen records. This checks compilation/provenance; accepted mathematics is recorded separately.

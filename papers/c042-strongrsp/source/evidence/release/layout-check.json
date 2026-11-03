@@ -1,0 +1,78 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "long_prose_font_sizes": [
+        "11"
+      ],
+      "min_left": 71.0,
+      "max_right": 542.0
+    },
+    {
+      "page": 2,
+      "long_prose_font_sizes": [
+        "11"
+      ],
+      "min_left": 72.0,
+      "max_right": 542.0
+    },
+    {
+      "page": 3,
+      "long_prose_font_sizes": [
+        "11"
+      ],
+      "min_left": 72.0,
+      "max_right": 542.0
+    },
+    {
+      "page": 4,
+      "long_prose_font_sizes": [
+        "11"
+      ],
+      "min_left": 72.0,
+      "max_right": 542.0
+    },
+    {
+      "page": 5,
+      "long_prose_font_sizes": [
+        "11"
+      ],
+      "min_left": 72.0,
+      "max_right": 542.0
+    },
+    {
+      "page": 6,
+      "long_prose_font_sizes": [
+        "11"
+      ],
+      "min_left": 72.0,
+      "max_right": 542.0
+    },
+    {
+      "page": 7,
+      "long_prose_font_sizes": [
+        "11"
+      ],
+      "min_left": 71.0,
+      "max_right": 542.0
+    },
+    {
+      "page": 8,
+      "long_prose_font_sizes": [
+        "11"
+      ],
+      "min_left": 71.0,
+      "max_right": 541.0
+    },
+    {
+      "page": 9,
+      "long_prose_font_sizes": [
+        "11"
+      ],
+      "min_left": 72.0,
+      "max_right": 542.0
+    }
+  ],
+  "units": "points at zoom 1; integer font sizes rounded by Poppler",
+  "abstract_and_reference_prose": "11pt confirmed from text/fontspec mapping"
+}

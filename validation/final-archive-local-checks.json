@@ -1,0 +1,88 @@
+{
+  "at_utc": "2026-11-03T22:29:08.169978+00:00",
+  "scope": "Final archival delivery; c049 remains unresolved",
+  "manuscript_topics": 29,
+  "working_paper": 29,
+  "submission_ready": 0,
+  "unresolved_research_records": 1,
+  "all_indexed_pdf_zip_expanded_source_bytes_verified": true,
+  "previous_public_pdf_zip_files_preserved": 95,
+  "new_or_updated_package_validations": [
+    {
+      "id": "c015-imagebound",
+      "kind": "builds",
+      "report": "validation/unified-builds/summary-c015-imagebound.json",
+      "report_sha256": "5373b785e874512ce98164a7d0cc218ae4cddaa5f250b4b0418440d514c502e3",
+      "pdf_sha256": "b2c1af7888a6e47966549882d4c977cefcaf4527cea394aaf4d57d8b62eabefb",
+      "source_archive_sha256": "f956abcf3b9d2ba50c4831fd2c1292469f1334d27da887ce263ea8f872474f78"
+    },
+    {
+      "id": "c015-imagebound",
+      "kind": "reproduction",
+      "report": "validation/unified-reproduction/summary-c015-imagebound.json",
+      "report_sha256": "364414a86ec2046b6ce88c0bbd72422f8b79a51076cb70173596ffd688dba7b2",
+      "pdf_sha256": "b2c1af7888a6e47966549882d4c977cefcaf4527cea394aaf4d57d8b62eabefb",
+      "source_archive_sha256": "f956abcf3b9d2ba50c4831fd2c1292469f1334d27da887ce263ea8f872474f78"
+    },
+    {
+      "id": "c037-msthalf",
+      "kind": "builds",
+      "report": "validation/unified-builds/summary-c037-msthalf.json",
+      "report_sha256": "2d84ad810f0a6e68854730d69b6ac5f45524e733048153f36a969eafc09d77c5",
+      "pdf_sha256": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+      "source_archive_sha256": "09c2542fdb61a65445ece333d11dbe4a503bb38a7a47bea11fe6d757a2207564"
+    },
+    {
+      "id": "c037-msthalf",
+      "kind": "reproduction",
+      "report": "validation/unified-reproduction/summary-c037-msthalf.json",
+      "report_sha256": "dbae661048ae87bc61f3e1684a8de5f1e4b5b3e49abb85f47ff24836e7c07786",
+      "pdf_sha256": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+      "source_archive_sha256": "09c2542fdb61a65445ece333d11dbe4a503bb38a7a47bea11fe6d757a2207564"
+    },
+    {
+      "id": "c040-mstdecfull",
+      "kind": "builds",
+      "report": "validation/unified-builds/summary-c040-mstdecfull.json",
+      "report_sha256": "b790bd2810f1bb7d4f13ffe23d7a58557ab164c40c798665d4692f016190f635",
+      "pdf_sha256": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660",
+      "source_archive_sha256": "0c833eb2891c3d7b9b560be8a02f83feef60ebef97bb3edb293a7598afb24044"
+    },
+    {
+      "id": "c040-mstdecfull",
+      "kind": "reproduction",
+      "report": "validation/unified-reproduction/summary-c040-mstdecfull.json",
+      "report_sha256": "4751657165b5307d1e05fb9262af92de4d2c8af5c8445a551ebfd8f14dd7322c",
+      "pdf_sha256": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660",
+      "source_archive_sha256": "0c833eb2891c3d7b9b560be8a02f83feef60ebef97bb3edb293a7598afb24044"
+    },
+    {
+      "id": "c042-strongrsp",
+      "kind": "builds",
+      "report": "validation/unified-builds/summary-c042-strongrsp.json",
+      "report_sha256": "23862e5ee8701644fbba5d24d532ab5d1a864cfc9b9c6960e56bce47316acaf3",
+      "pdf_sha256": "2714f0ab95d08c01d19aeacd5bf39597123d9cca31658ade6773a1bba658e703",
+      "source_archive_sha256": "3664805a58e6bef948d8daac04d2dc385fbeb6a8099b9453e5b1f8ca8c2606be"
+    },
+    {
+      "id": "c042-strongrsp",
+      "kind": "reproduction",
+      "report": "validation/unified-reproduction/summary-c042-strongrsp.json",
+      "report_sha256": "3a3c085bfb89ded11ef319a0d09ced954152ac7c316c88060b9474a092a13dbd",
+      "pdf_sha256": "2714f0ab95d08c01d19aeacd5bf39597123d9cca31658ade6773a1bba658e703",
+      "source_archive_sha256": "3664805a58e6bef948d8daac04d2dc385fbeb6a8099b9453e5b1f8ca8c2606be"
+    }
+  ],
+  "readme_languages": [
+    "en",
+    "zh-CN",
+    "de",
+    "fr",
+    "ja"
+  ],
+  "github_gfm_collapsed_groups_per_language": 2,
+  "entrypoint_relative_links_checked": 1424,
+  "c049_zip_clean_reproduction_passed": true,
+  "c049_operational_only_reproduction_adapter_disclosed": true,
+  "verification_scope": "Byte integrity and declared finite/clean-build checks; no new proof, novelty review or readiness upgrade."
+}

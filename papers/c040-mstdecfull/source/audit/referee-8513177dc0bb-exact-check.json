@@ -1,0 +1,45 @@
+{
+  "job_id": "c040-mstdecfull-referee-8513177dc0bb",
+  "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+  "passed": true,
+  "n": 5,
+  "levels": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "b_B_choices": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "counts": {
+    "nested_partition_chains": 358,
+    "core_assignments": 8951,
+    "path_edges": 1074240,
+    "immediate_edges": 621120,
+    "ordered_cases": 268560,
+    "late_edges": 453120
+  },
+  "empty_core_occurrences": 70615,
+  "repeated_cluster_occurrences": 22582,
+  "changed_repeated_core_occurrences": 2630,
+  "maximum_cost_to_bound_numerator_denominator": [
+    26,
+    182
+  ],
+  "script_sha256": "240428e30bd88ad18691e69ee2d6e1332427821f5387d911f3d1c9bdba618afc",
+  "elapsed_seconds": 3.0300327909644693,
+  "scope": "All nested partitions at two intermediate levels on five labels, all admissible core subsets for the two stated budgets, all compatible leaf permutations; beta=1 maximal exact integer constraint metrics.",
+  "limitations": [
+    "Finite extraction-lemma audit only, not an all-n proof.",
+    "Does not execute the all-p carving algorithm or its very large constants.",
+    "The proposer checker was inspected but was not imported or rerun."
+  ]
+}

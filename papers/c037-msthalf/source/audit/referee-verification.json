@@ -1,0 +1,156 @@
+{
+  "job_id": "c037-msthalf-referee-9071a36d85a3",
+  "snapshot_digest": "d0a2fbd366a632f17366053e75f1a37a1254cc80a92e14c60a7d14734548277b",
+  "arithmetic": "exact integers and rational numbers",
+  "saved_metrics": {
+    "metric_witnesses": 160,
+    "metric_triangle_checks": 680960,
+    "disjoint_r_by_r_rectangles": 2802752,
+    "expensive_edges": 778,
+    "largest_interval_overlap": 4
+  },
+  "repair": {
+    "masks": 33866,
+    "parameter_checks": 20,
+    "results": [
+      {
+        "n": 2,
+        "masks": 2,
+        "checks": [
+          {
+            "p": "0",
+            "failure": "0",
+            "expected_walk_cost_on_F": "1"
+          },
+          {
+            "p": "1/3",
+            "failure": "1/3",
+            "expected_walk_cost_on_F": "2/3"
+          },
+          {
+            "p": "2/5",
+            "failure": "2/5",
+            "expected_walk_cost_on_F": "3/5"
+          },
+          {
+            "p": "49/100",
+            "failure": "49/100",
+            "expected_walk_cost_on_F": "51/100"
+          }
+        ]
+      },
+      {
+        "n": 3,
+        "masks": 8,
+        "checks": [
+          {
+            "p": "0",
+            "failure": "0",
+            "expected_walk_cost_on_F": "101"
+          },
+          {
+            "p": "1/3",
+            "failure": "7/27",
+            "expected_walk_cost_on_F": "2828/27"
+          },
+          {
+            "p": "2/5",
+            "failure": "44/125",
+            "expected_walk_cost_on_F": "11817/125"
+          },
+          {
+            "p": "49/100",
+            "failure": "242501/500000",
+            "expected_walk_cost_on_F": "9719937/125000"
+          }
+        ]
+      },
+      {
+        "n": 4,
+        "masks": 64,
+        "checks": [
+          {
+            "p": "0",
+            "failure": "0",
+            "expected_walk_cost_on_F": "103"
+          },
+          {
+            "p": "1/3",
+            "failure": "17/81",
+            "expected_walk_cost_on_F": "120800/729"
+          },
+          {
+            "p": "2/5",
+            "failure": "992/3125",
+            "expected_walk_cost_on_F": "95499/625"
+          },
+          {
+            "p": "49/100",
+            "failure": "2406274997/5000000000",
+            "expected_walk_cost_on_F": "38975914773/312500000"
+          }
+        ]
+      },
+      {
+        "n": 5,
+        "masks": 1024,
+        "checks": [
+          {
+            "p": "0",
+            "failure": "0",
+            "expected_walk_cost_on_F": "10103"
+          },
+          {
+            "p": "1/3",
+            "failure": "9689/59049",
+            "expected_walk_cost_on_F": "222403120/19683"
+          },
+          {
+            "p": "2/5",
+            "failure": "2723728/9765625",
+            "expected_walk_cost_on_F": "101287399563/9765625"
+          },
+          {
+            "p": "49/100",
+            "failure": "23403625911426477101/50000000000000000000",
+            "expected_walk_cost_on_F": "410109656444165417420781/50000000000000000000"
+          }
+        ]
+      },
+      {
+        "n": 6,
+        "masks": 32768,
+        "checks": [
+          {
+            "p": "0",
+            "failure": "0",
+            "expected_walk_cost_on_F": "10106"
+          },
+          {
+            "p": "1/3",
+            "failure": "1748939/14348907",
+            "expected_walk_cost_on_F": "89009216576/4782969"
+          },
+          {
+            "p": "2/5",
+            "failure": "7192564352/30517578125",
+            "expected_walk_cost_on_F": "110494278928998/6103515625"
+          },
+          {
+            "p": "49/100",
+            "failure": "443353926119397511259324179351/1000000000000000000000000000000",
+            "expected_walk_cost_on_F": "5953486276756390534930934725977/400000000000000000000000000"
+          }
+        ]
+      }
+    ]
+  },
+  "constants": {
+    "exact_constant_checks": 150
+  },
+  "limitations": [
+    "Saved metric families are finite samples, not exhaustive.",
+    "Repair masks are exhaustive only for n=2,...,6 at four rational p values.",
+    "The universal theorem is assessed by its written proof, not these tests."
+  ]
+}

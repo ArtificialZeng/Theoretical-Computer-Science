@@ -1,0 +1,170 @@
+{
+  "job_id": "c040-mstdecfull-release-2ca818aceb48",
+  "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+  "manuscript_digest": "203aa4452ff612d76a7e2cf95734dfb62d168580ad5fa1fe30831cf086035682",
+  "pdf_digest": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660",
+  "reviewed_at": "2026-11-03T01:23:11.061168+00:00",
+  "stage": "pass_2_verification_only",
+  "fixed_extraction": "evidence/release-2ca818aceb48/citation-extraction.json",
+  "claims": [
+    {
+      "id": "C01",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C02",
+      "status": "Verified within stated evidence scope",
+      "confidence": "paraphrase",
+      "support": "Official PMLR metadata and frozen primary full text Theorems4-6; observed metricity stated explicitly in Theorem4."
+    },
+    {
+      "id": "C03",
+      "status": "Verified within stated evidence scope",
+      "confidence": "paraphrase",
+      "support": "Live arXiv record/html and frozen primary text: Theorems1.2/1.3 and Section6 Definitions6.1,6.4-6.6, Theorem6.2 and Algorithms1-3."
+    },
+    {
+      "id": "C04",
+      "status": "Verified within stated evidence scope",
+      "confidence": "paraphrase",
+      "support": "Live arXiv record/html and frozen primary text: Theorems1.2/1.3 and Section6 Definitions6.1,6.4-6.6, Theorem6.2 and Algorithms1-3."
+    },
+    {
+      "id": "C05",
+      "status": "Verified within stated evidence scope",
+      "confidence": "paraphrase",
+      "support": "SIAM publisher abstract and metadata, directly inspected; claim explicitly limited to stated theorem. Full proof and possible equivalent auxiliary lemmas remain unverified."
+    },
+    {
+      "id": "C06",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C07",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C08",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C09",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C10",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C11",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C12",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C13",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C14",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C15",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C16",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C17",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C18",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C19",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C20",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C21",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C22",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Accepted proof Section8 and direct integer multiplication 100352*11000*3*4=13246464000."
+    },
+    {
+      "id": "C23",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Frozen accepted proof research/quadratic-resolution-proof.md and exact accepted claim; manuscript statements preserve all reviewed hypotheses and operation model. Release checks transcription/scope, not a new mathematical certification."
+    },
+    {
+      "id": "C24",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "audit/referee-8513177dc0bb-exact-check.json and audit/math.md; exact counts agree, including 268560*4=1074240. Existing script was inspected but not rerun because it writes the prior accepted audit file."
+    },
+    {
+      "id": "C25",
+      "status": "Verified within stated evidence scope",
+      "confidence": "exact",
+      "support": "Scope and limitations in the exact-check JSON and actual script: extraction-only finite cases; no all-n or full-carving execution claim."
+    },
+    {
+      "id": "C26",
+      "status": "Verified within stated evidence scope",
+      "confidence": "paraphrase",
+      "support": "Accepted research/referee/writing provenance and disclosures in the actual reports; no human-verification assertion introduced."
+    }
+  ],
+  "verified_claim_groups": 26,
+  "unsupported_or_contradicted_claims": [],
+  "new_mathematical_certification": false
+}

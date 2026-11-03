@@ -1,0 +1,67 @@
+{
+  "job_id": "c015-imagebound-release-2bbd673a9c35",
+  "checked_at": "2026-11-02T22:18:01.832438+00:00",
+  "mode": "search verification",
+  "primary_sources": [
+    {
+      "key": "KR2025",
+      "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.MFCS.2025.62",
+      "text": "intake/primary.txt",
+      "location": "Sections 2, 7 pp.62:14-15, and 9 p.62:16",
+      "support": "All-word endpoint definition, mortality/incompleteness terminology, upper exponent and original tightness question. Bibliographic fields match the publisher."
+    },
+    {
+      "key": "R2024",
+      "url": "https://arxiv.org/html/2405.19622v4",
+      "metadata_url": "https://link.springer.com/chapter/10.1007/978-3-031-72621-7_8",
+      "version_url": "https://arxiv.org/abs/2405.19622v4",
+      "location": "Section 4 displayed two-block DFA transitions and preceding mortality survey; Section 3 model; Introduction subset upper bound",
+      "support": "The queue permutation and physical delay path are prior work. The deterministic bound is reported as a secondary attribution to Rystsov, exactly as the manuscript says. Publisher/author record confirms venue, pages, DOI, and corrected v4 on 2025-06-15."
+    },
+    {
+      "key": "A2017",
+      "url": "https://arxiv.org/pdf/1701.07954v1",
+      "metadata_url": "https://arxiv.org/abs/1701.07954v1",
+      "location": "Section 2, Lemma 2.1, PDF page 6; tail definition PDF pages 4-5",
+      "support": "The source credits Vorel and proves an increase r*h under almost-permutation and order-divisibility hypotheses. The manuscript states these restrictions and does not apply it as an NFA theorem. Title-page initials, year, arXiv ID, and repository DOI match."
+    }
+  ],
+  "mandatory_queries_run": {
+    "KR2025": [
+      "Kiefer 2025 The Complexity of Reachability",
+      "\"The Complexity of Reachability Problems in Strongly Connected Finite Automata\" site:semanticscholar.org OR site:arxiv.org",
+      "Kiefer 2025 MFCS",
+      "doi:10.4230/LIPIcs.MFCS.2025.62",
+      "arxiv:2504.13784"
+    ],
+    "R2024": [
+      "Ryzhikov 2024 On Shortest Products",
+      "\"On shortest products for nonnegative matrix mortality\" site:semanticscholar.org OR site:arxiv.org",
+      "Ryzhikov 2024 Reachability Problems RP",
+      "doi:10.1007/978-3-031-72621-7_8",
+      "arxiv:2405.19622"
+    ],
+    "A2017": [
+      "Ananichev 2017 A new lower",
+      "\"A New Lower Bound for Reset Threshold of Synchronizing Automata with Sink State\" site:semanticscholar.org OR site:arxiv.org",
+      "Ananichev 2017 arXiv",
+      "doi:10.48550/arXiv.1701.07954",
+      "arxiv:1701.07954"
+    ]
+  },
+  "bibliography_basis": "No user workbook or authoritative metadata table designated; relevant primary records used.",
+  "subsequent_primary_sources": [
+    {
+      "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol364-stacs2026/html/LIPIcs.STACS.2026.60/LIPIcs.STACS.2026.60.html",
+      "location": "Theorem 29",
+      "scope_difference": "Requires finite ordinary rational matrix semigroup. Here the b^(2r) return entry equals k^r, so the ordinary semigroup is infinite for k>=2."
+    },
+    {
+      "url": "https://arxiv.org/html/2609.30817v2",
+      "location": "Theorem 1.2",
+      "scope_difference": "Requires joint spectral radius <=1 and cycle hubs. The present b matrix has spectral radius sqrt(k)>1; disjoint a-cycles also exclude a cycle hub."
+    }
+  ],
+  "novelty_limit": "No equivalent full fixed-k hierarchy theorem found in this bounded current screen; not exhaustive priority certification.",
+  "optional_access_limits": "Publisher chapter full text is paywalled; the explicitly cited corrected author version is openly available and was inspected. Rystsov original and revised 2019 journal tail text were not independently inspected; no direct attribution to an uninspected theorem is made."
+}

@@ -1,0 +1,9 @@
+{
+  "job_id": "c037-msthalf-triage-ccc346c3da4e",
+  "phase": "triage",
+  "entry_utc": "2026-11-02T20:29:59Z",
+  "source_sha256": "d45cd6730fe3f8685cb796b9d75ebe8e7926c1584021d045a282021749e45128",
+  "research_passes_observed": 0,
+  "source_status_provisional": "open-supported inferred threshold question; current-version check underway",
+  "manuscript_created": false
+}

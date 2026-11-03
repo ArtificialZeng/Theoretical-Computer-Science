@@ -1,0 +1,52 @@
+{
+  "title": "Deterministic Quasipolynomial MST Approximation under Decrease-Only Corruption",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "writer_job_id": "c040-mstdecfull-write-8ed1f11b8bf8",
+  "source_files": [
+    "manuscript/main.tex",
+    "manuscript/references.bib",
+    "manuscript/main.bbl",
+    "manuscript/acmart.cls",
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/README.md"
+  ],
+  "pdf": "manuscript/main.pdf",
+  "build": {
+    "working_directory": "manuscript",
+    "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex",
+    "clean_command": "latexmk -C main.tex"
+  },
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "readiness_label": "working_paper",
+  "classification_basis": {
+    "assessment": "audit/stoc-assessment.json",
+    "job_id": "c040-mstdecfull-referee-8513177dc0bb",
+    "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+    "retained_verbatim": true,
+    "label_is_not_a_venue_decision": true
+  },
+  "format": {
+    "official_unmodified_class": "acmart v2.20",
+    "class_option": "acmsmall,11pt,nonacm",
+    "submission_cfp": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html",
+    "anonymous": false,
+    "columns": 1,
+    "paper": "US Letter",
+    "margins_inch": 1,
+    "max_total_pages": 12,
+    "title_abstract_page": "separate, following the inspected CFP"
+  },
+  "bibliography_basis": "literature/user_bibliography_check.md",
+  "citation_limitations": [
+    "Fletcher-Hershkowitz SODA 2026 full proof not inspected; only official metadata/abstract comparisons are asserted. No exhaustive auxiliary-lemma priority claim is made."
+  ],
+  "external_submission_authorized": false,
+  "release_status": "pending separate citation, build and visual review"
+}

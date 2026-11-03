@@ -1,0 +1,27 @@
+{
+  "kind": "resolution-paper",
+  "title": "Tight Mortality Bounds for Image-Bounded Nondeterministic Automata",
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "source_files": [
+    "manuscript/c015-imagebound-write-b795278c1e36/ACM-Reference-Format.bst",
+    "manuscript/c015-imagebound-write-b795278c1e36/acmart.cls",
+    "manuscript/c015-imagebound-write-b795278c1e36/main.tex",
+    "manuscript/c015-imagebound-write-b795278c1e36/references.bib",
+    "manuscript/c015-imagebound-write-b795278c1e36/working_paper.bbl"
+  ],
+  "pdf": "manuscript/c015-imagebound-write-b795278c1e36/working_paper.pdf",
+  "build_command": "cd manuscript/c015-imagebound-write-b795278c1e36 && latexmk -pdf -jobname=working_paper -interaction=nonstopmode -halt-on-error main.tex",
+  "max_total_pages": 12,
+  "external_submission_authorized": false,
+  "format": "STOC 2027 initial submission: single-column, 11pt, 1in margins; six total pages including separate title page and references",
+  "readiness_label": "working_paper",
+  "stoc_assessment": "audit/stoc-assessment.json",
+  "stoc_assessment_job_id": "c015-imagebound-referee-e7492ff4cfbd",
+  "stoc_assessment_snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e"
+}

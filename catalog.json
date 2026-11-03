@@ -1,7 +1,175 @@
 {
   "schema": 2,
-  "snapshot_date": "2026-11-02",
+  "snapshot_date": "2026-11-04",
   "papers": [
+    {
+      "id": "c042-strongrsp",
+      "title": "Strongly Polynomial Near-Linear Preprocessing for All-Target Restricted Shortest Paths",
+      "pages": 9,
+      "pdf": "papers/c042-strongrsp/c042-strongrsp_working_paper.pdf",
+      "pdf_sha256": "2714f0ab95d08c01d19aeacd5bf39597123d9cca31658ade6773a1bba658e703",
+      "source_archive": "papers/c042-strongrsp/source.zip",
+      "source_archive_sha256": "3664805a58e6bef948d8daac04d2dc385fbeb6a8099b9453e5b1f8ca8c2606be",
+      "source_directory": "papers/c042-strongrsp/source",
+      "archive_prefix": "c042-strongrsp_source/",
+      "provenance": "papers/c042-strongrsp/provenance",
+      "readiness_label": "working_paper",
+      "assessment_basis": "fresh_internal_stoc_assessment",
+      "kind": "resolution-paper",
+      "mathematical_status": "proved",
+      "readme": "papers/c042-strongrsp/README.md",
+      "reproduction_commands": [
+        [
+          "evidence/check_compiled_poisson.py"
+        ],
+        [
+          "evidence/check_compiled_oracle_integration.py"
+        ],
+        [
+          "evidence/check_rounded_oracle.py"
+        ],
+        [
+          "evidence/check_offline_composition.py"
+        ],
+        [
+          "evidence/check_bounded_exponential.py"
+        ]
+      ],
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/check_compiled_poisson.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/check_compiled_oracle_integration.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/check_rounded_oracle.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/check_offline_composition.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/check_bounded_exponential.py"
+          ]
+        }
+      ],
+      "build_directory": "manuscript",
+      "tex_entry": "main.tex"
+    },
+    {
+      "id": "c037-msthalf",
+      "title": "Minimum Spanning Trees under Semi-Random Corruptions below One Half",
+      "pages": 7,
+      "pdf": "papers/c037-msthalf/c037-msthalf_working_paper.pdf",
+      "pdf_sha256": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+      "source_archive": "papers/c037-msthalf/source.zip",
+      "source_archive_sha256": "09c2542fdb61a65445ece333d11dbe4a503bb38a7a47bea11fe6d757a2207564",
+      "source_directory": "papers/c037-msthalf/source",
+      "archive_prefix": "c037-msthalf_source/",
+      "provenance": "papers/c037-msthalf/provenance",
+      "readiness_label": "working_paper",
+      "assessment_basis": "fresh_internal_stoc_assessment",
+      "kind": "resolution-paper",
+      "mathematical_status": "proved",
+      "readme": "papers/c037-msthalf/README.md",
+      "reproduction_commands": [
+        [
+          "evidence/interval_packing_check.py"
+        ],
+        [
+          "evidence/verify_interval_packing.py"
+        ]
+      ],
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/interval_packing_check.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/verify_interval_packing.py"
+          ]
+        }
+      ],
+      "build_directory": "manuscript",
+      "tex_entry": "main.tex"
+    },
+    {
+      "id": "c040-mstdecfull",
+      "title": "Deterministic Quasipolynomial MST Approximation under Decrease-Only Corruption",
+      "pages": 8,
+      "pdf": "papers/c040-mstdecfull/c040-mstdecfull_working_paper.pdf",
+      "pdf_sha256": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660",
+      "source_archive": "papers/c040-mstdecfull/source.zip",
+      "source_archive_sha256": "0c833eb2891c3d7b9b560be8a02f83feef60ebef97bb3edb293a7598afb24044",
+      "source_directory": "papers/c040-mstdecfull/source",
+      "archive_prefix": "c040-mstdecfull_source/",
+      "provenance": "papers/c040-mstdecfull/provenance",
+      "readiness_label": "working_paper",
+      "assessment_basis": "fresh_internal_stoc_assessment",
+      "kind": "resolution-paper",
+      "mathematical_status": "proved",
+      "readme": "papers/c040-mstdecfull/README.md",
+      "reproduction_commands": [
+        [
+          "research/check_outlier_charges_pass2.py"
+        ],
+        [
+          "audit/referee-8513177dc0bb-check.py"
+        ]
+      ],
+      "reproduction_steps": [
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "research/check_outlier_charges_pass2.py"
+          ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "audit/referee-8513177dc0bb-check.py"
+          ]
+        }
+      ],
+      "build_directory": "manuscript",
+      "tex_entry": "main.tex"
+    },
     {
       "source_archive": "papers/c034-group3sum/source.zip",
       "source_directory": "papers/c034-group3sum/source",
@@ -663,19 +831,22 @@
       "status": "proved",
       "kind": "resolution-paper",
       "pages": 6,
-      "pdf": "papers/c015-imagebound/c015-imagebound_working_paper.pdf",
-      "source_archive": "papers/c015-imagebound/source.zip",
-      "source_directory": "papers/c015-imagebound/source",
-      "pdf_sha256": "0abeb3c8720795bb730d6501ea49669b8e9f1006bc34b0e0d9578051921c4d19",
-      "source_archive_sha256": "248b548066b31fff764c541e9f74ee6cca52231bb368e4423350dc6c9a7fafbd",
+      "pdf": "papers/c015-imagebound/versions/v2/c015-imagebound_working_paper.pdf",
+      "source_archive": "papers/c015-imagebound/versions/v2/source.zip",
+      "source_directory": "papers/c015-imagebound/versions/v2/source",
+      "pdf_sha256": "b2c1af7888a6e47966549882d4c977cefcaf4527cea394aaf4d57d8b62eabefb",
+      "source_archive_sha256": "f956abcf3b9d2ba50c4831fd2c1292469f1334d27da887ce263ea8f872474f78",
       "reproduction_commands": [
         [
           "evidence/portable-check.py"
+        ],
+        [
+          "evidence/portable-reassessment-check.py"
         ]
       ],
       "archive_prefix": "c015-imagebound_source/",
       "readiness_label": "working_paper",
-      "assessment_basis": "Conservative classification: no explicit fresh review under the new STOC standard.",
+      "assessment_basis": "fresh_internal_stoc_assessment",
       "mathematical_status": "proved",
       "readme": "papers/c015-imagebound/README.md",
       "reproduction_steps": [
@@ -686,8 +857,24 @@
             "-B",
             "evidence/portable-check.py"
           ]
+        },
+        {
+          "cwd": ".",
+          "argv": [
+            "python3",
+            "-B",
+            "evidence/portable-reassessment-check.py"
+          ]
         }
-      ]
+      ],
+      "provenance": "papers/c015-imagebound/versions/v2/provenance",
+      "earlier_version": {
+        "pdf": "papers/c015-imagebound/c015-imagebound_working_paper.pdf",
+        "source_archive": "papers/c015-imagebound/source.zip",
+        "pages": 6
+      },
+      "build_directory": "manuscript/c015-imagebound-write-b795278c1e36",
+      "tex_entry": "main.tex"
     },
     {
       "id": "c017-wheeler",
@@ -999,5 +1186,6 @@
     }
   ],
   "index_convention": "One unified topic index; only submission_ready and working_paper are display groups. Ordering within a group is navigation, not an acceptance ranking.",
-  "status_convention": "Readiness is an internal evidence-based classification, not an external review, acceptance decision or probability. Historical partial manuscripts retain their unresolved scope."
+  "status_convention": "Readiness is an internal evidence-based classification, not an external review, acceptance decision or probability. Historical partial manuscripts retain their unresolved scope.",
+  "archival_scope": "29 manuscript topics plus separately indexed unresolved c049 research records."
 }

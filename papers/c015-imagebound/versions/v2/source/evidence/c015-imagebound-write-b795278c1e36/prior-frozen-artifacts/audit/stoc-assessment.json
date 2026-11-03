@@ -1,0 +1,43 @@
+{
+  "job_id": "c015-imagebound-referee-e7492ff4cfbd",
+  "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+  "review_type": "fresh_internal_stoc_assessment",
+  "verdict": "working_paper",
+  "strongest_result": "For every fixed integer k>=2, with A_k=1+k(k+1)/2, N_k=2k+2A_k*k! and c_k=k!/(2A_k)^(k+1), every integer n>=N_k admits a binary strongly connected incomplete n-state NFA satisfying |q.w|<=k for all q and w and having mortality threshold at least c_k*n^(k+1). Together with the known upper bound this proves M_k(n)=Theta_k(n^(k+1)) in the full immutable source interpretation.",
+  "nearest_comparisons": [
+    "Kiefer and Ryzhikov, MFCS 2025, DOI 10.4230/LIPIcs.MFCS.2025.62, Sections 7 and 9: same global endpoint-support model and n^(k+1) upper bound; the candidate supplies matching fixed-k lower-bound order across the entire hierarchy. The source's main open complexity question about unambiguous completeness remains different and unresolved here.",
+    "Ryzhikov, RP 2024, DOI 10.1007/978-3-031-72621-7_8, arXiv:2405.19622v4 Section 4, and Ananichev, arXiv:1701.07954v1 Lemma 2.1: prior binary deterministic queue/tail delay mechanisms. The new ingredient shares compressed simultaneous clocks and proves global support compatibility and unavoidable repeated delays.",
+    "Kiefer and Ryzhikov, STACS 2026, DOI 10.4230/LIPIcs.STACS.2026.60, Theorem 29, and Chandelkar and Chadha, arXiv:2609.30817v2 Theorem 1.2: respectively require finite ordinary rational matrix semigroups or joint spectral radius at most one plus cycle hubs. The candidate's b matrix has k^r returns under b^(2r), excluding those hypotheses for k>=2."
+  ],
+  "criteria": {
+    "importance": {
+      "judgment": "uncertain",
+      "reason": "The result fully answers an explicit extremal question for a natural endpoint-support restriction and does so for every fixed k. However, the verified record does not establish this secondary 2025 open question as a major bottleneck for broad TCS. It does not resolve the source's principal unambiguous-completeness complexity gap. Open-problem status by itself is insufficient for a strong STOC importance assessment."
+    },
+    "novelty": {
+      "judgment": "strong",
+      "reason": "Relative to the checked primary results, the all-k tight exponent with two letters and strong connectivity is a distinct theorem. The specific new step is a shared clock packet whose support remains globally bounded while a collision-free potential forces a linear number of lcm delays. The known queue, deterministic tail, CRT arithmetic and upper bound are explicitly credited and excluded from the novelty claim. The bounded refreshed literature screen found no equivalent theorem; it is not exhaustive worldwide priority certification."
+    },
+    "technical_depth": {
+      "judgment": "uncertain",
+      "reason": "The packet-closure invariant and exact charging identity solve a real compatibility issue: failed attempts and simultaneous replacement must not bypass progress costs. This supports substantive mathematical innovation. The rest is a constructive descent, standard coprimality arithmetic and a known upper argument. The frozen work does not demonstrate a wider lower-bound framework, a structural theorem for all such automata, or a major barrier overcome beyond this tailored construction. A short elementary proof can be deep, but the available evidence does not justify a strong venue-level depth claim."
+    },
+    "breadth_or_consequence": {
+      "judgment": "weak",
+      "reason": "Coverage of all fixed k and the binary strongly connected strengthening are meaningful within the extremal question. No consequence for decision/search complexity, algorithmic running-time lower bounds, unambiguous mortality, coding bounds or a different model is proved. Witness-length lower bounds are not computational lower bounds. No general-purpose application of the compressed delay method is established in the frozen packet."
+    },
+    "exposition_and_verifiability": {
+      "judgment": "strong",
+      "reason": "The frozen proof states all quantifiers, explicit transitions, the exact potential, a mortality procedure and a construction for every sufficiently large n. Its finite evidence is separated from its all-parameter proof. A new verifier reproduced all 18 frozen cases, checked nine serialized certificates and 43 additional cases, and checked all 277168 abstract potential transitions across those cases, including replacement events. This assesses the proof packet; future manuscript, citation, build and page-layout gates remain separate."
+    }
+  },
+  "case_for_stoc": "The positive case is a clean and fully sharp exponent hierarchy in a natural restricted-nondeterminism model, obtained by sharing clock states across repeated expensive events while preserving an all-word promise. The central insight is more than a CRT witness or an application of a deterministic tail lemma. Nevertheless, the concrete theorem currently has a specialized extremal payoff, and the packet does not establish broad consequences or a strong case that its technical insight changes a substantial area. Correctness and novelty pass, but importance and depth remain uncertain and demonstrated breadth is weak. The justified label is working_paper, not submission_ready.",
+  "remaining_weaknesses": [
+    "No strong evidence of broad TCS importance beyond settling this particular mortality hierarchy.",
+    "No proved general transfer method, algorithmic complexity consequence, or application outside the frozen extremal construction.",
+    "The technical core is a useful tailored invariant; the record does not yet establish a major conceptual or technical advance by STOC standards.",
+    "Current literature checking is bounded, and the full revised 2019 journal tail paper was not independently inspected; the relevant original arXiv tail lemma and later explicit DFA construction were checked.",
+    "This is a proof-packet assessment. No future manuscript or PDF has received citation, build, reproduction or visual acceptance in this job."
+  ],
+  "label_is_not_a_venue_decision": true
+}

@@ -1,0 +1,34 @@
+{
+  "job_id": "c015-imagebound-write-b795278c1e36",
+  "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+  "referee_job_id": "c015-imagebound-referee-e7492ff4cfbd",
+  "original_source_sha256": "7cf4a0de6b28019b0fa2f5e92ea04bee150c74cb9db945e382c75d8379326aa7",
+  "mathematical_blocks_unchanged": 9,
+  "edits": [
+    "State witness-length and unambiguous-model limitations explicitly.",
+    "Update exact finite-check counts from the actual fresh accepted referee."
+  ],
+  "readiness_label": "working_paper",
+  "assessment_unchanged": true,
+  "pdf_skill_marker": {
+    "operation": "create",
+    "count": 1,
+    "exit_code": 0,
+    "command": "node /Users/mac/.codex/plugins/cache/openai-primary-runtime/pdf/26.1017.22136/skills/pdf/container_tools/mark_artifact_operation_started.mjs --operation-kind create --expected-output-count 1 --output-format pdf"
+  },
+  "templates": [
+    {
+      "official_input": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/templates/acm-official/distribution/acmart/acmart.cls",
+      "copy": "manuscript/c015-imagebound-write-b795278c1e36/acmart.cls",
+      "sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+      "unchanged": true
+    },
+    {
+      "official_input": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/templates/acm-official/distribution/acmart/ACM-Reference-Format.bst",
+      "copy": "manuscript/c015-imagebound-write-b795278c1e36/ACM-Reference-Format.bst",
+      "sha256": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04",
+      "unchanged": true
+    }
+  ],
+  "bibliography_basis": "literature/user_bibliography_check.md: no user Excel designated; retain three relevant primary sources."
+}

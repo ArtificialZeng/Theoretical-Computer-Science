@@ -1,0 +1,35 @@
+{
+  "at_utc": "2026-11-03T16:36:55.957198+00:00",
+  "passed": true,
+  "scope": "Only the declared finite checks for primary indexed versions; not general proof verification, novelty assessment, or certification of additional expanded versions.",
+  "papers": [
+    {
+      "id": "c040-mstdecfull",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "research/check_outlier_charges_pass2.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.946,
+          "log": "validation/unified-reproduction/c040-mstdecfull-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "audit/referee-8513177dc0bb-check.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 2.78,
+          "log": "validation/unified-reproduction/c040-mstdecfull-2.log"
+        }
+      ]
+    }
+  ]
+}

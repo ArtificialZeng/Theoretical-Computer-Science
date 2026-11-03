@@ -1,0 +1,43 @@
+{
+  "job_id": "c040-mstdecfull-research-9063bf54df79",
+  "checked_utc": "2026-11-03T00:22:56.265221+00:00",
+  "primary_record": "https://arxiv.org/abs/2610.40594",
+  "primary_text": "https://arxiv.org/html/2610.40594v1",
+  "observed_versions": [
+    "v1, 2026-10-29 17:49:41 UTC"
+  ],
+  "verified_positions": [
+    "Theorems 1.2 and 1.3, including small-p footnote",
+    "Definition 6.1; Theorem 6.2 and random-leader charging proof",
+    "Definitions 6.4-6.6 and Algorithms 1-3"
+  ],
+  "local_primary": "intake/primary/2610.40594v1.txt",
+  "queries": [
+    "\"Approximating Minimum Spanning Trees in Metrics under Semi-Random Corruptions\" \"hierarchical\"",
+    "\"outlier\" \"hierarchical partition\" \"spanning\" \"depth first\"",
+    "\"2610.40594\" \"depth\" \"path\"",
+    "\"semi-random\" \"spanning trees\" \"log^3\"",
+    "\"minimum spanning\" \"hierarchical\" \"outliers\" deterministic",
+    "\"Spanning Tree Embeddings Are Not Much Harder than Hierarchical Partitions\" arxiv",
+    "\"2610.40594\" \"quasipolynomial\"",
+    "\"semi-random corruptions\" \"deterministic\" MST"
+  ],
+  "adjacent_primary": {
+    "title": "Spanning Tree Embeddings Are Not Much Harder than Hierarchical Partitions",
+    "authors": [
+      "Willem Fletcher",
+      "D Ellis Hershkowitz"
+    ],
+    "venue": "SODA 2026",
+    "doi": "10.1137/1.9781611978971.193",
+    "inspected": "Publisher primary abstract only",
+    "url": "https://epubs.siam.org/doi/10.1137/1.9781611978971.193"
+  },
+  "result": "No equivalent full-range quasipolynomial cubic-log algorithm or exact robust-DFS lemma identified in this bounded search. This is not a priority certificate.",
+  "limitations": [
+    "Adjacent full paper not inspected; referee should compare exact structural lemma.",
+    "Substantive novelty and STOC competitiveness require actual fresh assessment.",
+    "No use of nonprimary snippets as mathematical authority."
+  ],
+  "comparison": "research/prior-comparison.md"
+}

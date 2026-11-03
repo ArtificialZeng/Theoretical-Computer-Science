@@ -1,0 +1,248 @@
+{
+  "job_id": "c015-imagebound-release-2bbd673a9c35",
+  "pass": 2,
+  "extraction_file": "evidence/c015-imagebound-release-2bbd673a9c35/citation-extraction.json",
+  "extraction_digest": "9c20959d726cd8156a7c82c31aeb2a08f6e9638d4309c8ff1ca4cfe2f327f932",
+  "claims": [
+    {
+      "id": "C01",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "KR2025",
+      "location": "Section 9, p.62:16",
+      "basis": "fresh primary-source comparison"
+    },
+    {
+      "id": "C02",
+      "status": "Verified",
+      "confidence": "exact",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Abstract; Theorem 1; Section 4",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C03",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Section 1 paragraph before Theorem 1",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C04",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "R2024",
+      "location": "Introduction subset bound, with shortest subset-path argument",
+      "basis": "fresh primary-source comparison"
+    },
+    {
+      "id": "C05",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "R2024",
+      "location": "Section 4 deterministic quadratic upper/lower orders",
+      "basis": "fresh primary-source comparison"
+    },
+    {
+      "id": "C06",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "R2024",
+      "location": "Section 4 displayed transitions; queue relabelling q_(j+1)=p_j",
+      "basis": "fresh primary-source comparison"
+    },
+    {
+      "id": "C07",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "R2024",
+      "location": "Section 4 paragraph defining mt_d and attributing the result to Rystsov",
+      "basis": "fresh primary-source comparison"
+    },
+    {
+      "id": "C08",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "R2024",
+      "location": "Section 3 unrestricted NFA model and lower-bound constructions",
+      "basis": "fresh primary-source comparison"
+    },
+    {
+      "id": "C09",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "A2017",
+      "location": "Lemma 2.1 with stated hypotheses",
+      "basis": "fresh primary-source comparison"
+    },
+    {
+      "id": "C10",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Section 1.1 paragraph 3",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C11",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Abstract; Section 1.1 paragraph 3",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C12",
+      "status": "Verified",
+      "confidence": "exact",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Section 2 after equations (2)-(3)",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C13",
+      "status": "Verified",
+      "confidence": "exact",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Proposition 2",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C14",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Lemma 3 and proof",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C15",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Lemma 3 proof",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C16",
+      "status": "Verified",
+      "confidence": "exact",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Section 3; Lemma 4 proof equation (5)",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C17",
+      "status": "Verified",
+      "confidence": "exact",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Lemma 4 proof equation (6)",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C18",
+      "status": "Verified",
+      "confidence": "exact",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Lemma 4 proof",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C19",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Lemma 4 proof end",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C20",
+      "status": "Verified",
+      "confidence": "exact",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Lemma 5 and proof",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C21",
+      "status": "Verified",
+      "confidence": "exact",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Section 4 proof",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C22",
+      "status": "Verified",
+      "confidence": "exact",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Section 4 proof end",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C23",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Section 5 paragraphs 1-3",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C24",
+      "status": "Verified",
+      "confidence": "exact",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Section 5 paragraph 4",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C25",
+      "status": "Verified",
+      "confidence": "exact",
+      "source": "evidence/research-proof.md and accepted frozen claim",
+      "location": "Scope paragraph",
+      "basis": "manuscript scope and argument match to accepted proof; this release is not a new mathematical referee verdict"
+    },
+    {
+      "id": "C26",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "KR2025",
+      "location": "Section 2 completeness definition",
+      "basis": "fresh primary-source comparison"
+    },
+    {
+      "id": "C27",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "KR2025",
+      "location": "Publisher primary record and PDF title page",
+      "basis": "fresh primary-source comparison"
+    },
+    {
+      "id": "C28",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "R2024",
+      "location": "Publisher primary record plus arXiv v4 history",
+      "basis": "fresh primary-source comparison"
+    },
+    {
+      "id": "C29",
+      "status": "Verified",
+      "confidence": "paraphrase",
+      "source": "A2017",
+      "location": "Repository record and PDF title page; Lemma 2.1",
+      "basis": "fresh primary-source comparison"
+    }
+  ],
+  "summary": {
+    "total": 29,
+    "verified": 29,
+    "numerical_error": 0,
+    "unverified": 0,
+    "misleading": 0,
+    "hallucination": 0
+  }
+}

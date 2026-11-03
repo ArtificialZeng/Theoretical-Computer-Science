@@ -1,0 +1,29 @@
+{
+  "job_id": "c037-msthalf-referee-9071a36d85a3",
+  "snapshot_digest": "d0a2fbd366a632f17366053e75f1a37a1254cc80a92e14c60a7d14734548277b",
+  "phase": "referee",
+  "started_at_utc": "2026-11-02 21:20:29 UTC",
+  "checks_completed": [
+    "frozen hashes and canonical snapshot digest verified",
+    "full source quantifiers compared to claimed algorithm",
+    "interval matching/star/empty-rectangle argument reconstructed from definitions",
+    "mask concentration and data-dependent domination reconstructed",
+    "repair coefficient and failure expectation reconstructed",
+    "primary arXiv current version and theorem scopes inspected",
+    "COLT 2024 metric-only oracle theorem distinguished",
+    "fresh independent metric/rectangle/repair-mask computations passed",
+    "written mathematical and innovation acceptance completed",
+    "fresh STOC assessment saved as working_paper",
+    "release_gate.py check-math passed with actual referee job provenance",
+    "audit JSON field/provenance and final frozen-file integrity checks passed"
+  ],
+  "checks_pending": [],
+  "verdict": "accept",
+  "source_unchanged": true,
+  "finished_at_utc": "2026-11-02 21:27:42 UTC",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "stoc_readiness": "working_paper",
+  "structural_check_math": "passed",
+  "mathematical_gaps": []
+}

@@ -1,0 +1,35 @@
+{
+  "job_id": "c040-mstdecfull-referee-8513177dc0bb",
+  "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+  "checked_utc": "2026-11-03T01:01:28.695161+00:00",
+  "primary_records": [
+    {
+      "url": "https://arxiv.org/abs/2610.40594",
+      "checked": "Live submission history lists v1 only, dated 29 October 2026 17:49:41 UTC."
+    },
+    {
+      "url": "https://arxiv.org/html/2610.40594v1",
+      "checked": "Theorems 1.2/1.3, Definition 2.1, hierarchy and extraction in Section 6, and exact Theorem 7.2 reduction; frozen local text used for detailed proof comparison."
+    },
+    {
+      "url": "https://proceedings.mlr.press/v247/bateni24a.html",
+      "checked": "Official record confirmed; local frozen full text inspected at Theorems 4-6 and model. Metric weak observations are a strictly additional assumption of its upper theorem."
+    },
+    {
+      "url": "https://epubs.siam.org/doi/10.1137/1.9781611978971.193",
+      "checked": "Publisher abstract and bibliographic record inspected; ordinary View PDF click redirected to abstract/access page. Full proof and auxiliary-lemma equivalence not checked."
+    }
+  ],
+  "queries": [
+    "\"2610.40594\" \"quadratic\"",
+    "\"minimum spanning\" \"corruptions\" \"quasi-polynomial\"",
+    "\"Spanning Tree Embeddings Are Not Much Harder than Hierarchical Partitions\" pdf",
+    "\"semi-random corruptions\" \"spanning\"",
+    "\"hierarchical\" \"outlier\" \"spanning path\" metric",
+    "\"hidden cores\" \"spanning\" path",
+    "\"semi-random corruptions\" \"minimum spanning\" \"log\" site:arxiv.org",
+    "\"minimum spanning trees\" \"decrease-only\""
+  ],
+  "bounded_conclusion": "No equivalent complete all-p deterministic quasipolynomial quadratic-log theorem identified in inspected primary records and focused search. Only primary results are relied on; secondary search snippets were not treated as mathematical evidence. This is not comprehensive absence, proof of priority, or an external review.",
+  "source_correction": "Theorem 7.2 is a quiet planted-colorability separation implication, with low-degree evidence. No Planted Clique implication, universal polynomial-time lower bound or genuine-metric hardness transfer is asserted or needed."
+}

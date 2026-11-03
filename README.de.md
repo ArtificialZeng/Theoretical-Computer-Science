@@ -2,11 +2,13 @@
 
 [English](README.md) · [中文](README.zh-CN.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [日本語](README.ja.md)
 
-Forschung in theoretischer Informatik: Algorithmen, Komplexität, Kombinatorik, Automaten, Optimierung und Programmanalyse. Jedes Thema bietet eine Zusammenfassung, Manuskript-PDFs, originale Quellarchive und einsehbaren Code. **26 Themen: 0 submission_ready, 26 working_paper.**
+Forschung in theoretischer Informatik: Algorithmen, Komplexität, Kombinatorik, Automaten, Optimierung und Programmanalyse. Jedes Thema bietet eine Zusammenfassung, Manuskript-PDFs, originale Quellarchive und einsehbaren Code. **29 Themen: 0 submission_ready, 29 working_paper.**
 
 Alle Themen verwenden dieselben zwei Kategorien, unabhängig von ihrer Herkunft. submission_ready erfordert eine neue, begründete starke Bewertung von Bedeutung, Neuheit, technischer Tiefe, Reichweite und Überprüfbarkeit sowie bestandene Artefaktprüfungen. working_paper umfasst Ergebnisse unterhalb dieser Schwelle und vorhandene Entwürfe mit offenen Fragen oder fehlender Bewertung. Die Einordnung ist ein internes Urteil, keine Konferenzentscheidung; der mathematische Geltungsbereich steht beim jeweiligen Thema. Siehe [Qualitätsstandard](QUALITY_STANDARD.md).
 
 Eine Gruppe anklicken, um das gesamte Verzeichnis und die Zusammenfassungen aufzuklappen.
+
+**c049 bleibt in diesen Aufzeichnungen ungelöst.** [Forschungsdossier aus vier Durchläufen](notes/c049-dualpreserve/README.de.md) · [Code](notes/c049-dualpreserve/source/code/) · [Quellarchiv](notes/c049-dualpreserve/source.zip). Eine dünne Konstruktion ist für eine Familie geteilter Selektoren bewiesen; das ursprüngliche Problem für allgemeine Graphen bleibt offen. Dies sind archivierte Forschungsaufzeichnungen ohne Manuskript-PDF.
 
 <details>
 <summary><strong>STOC-Niveau · submission_ready (0)</strong></summary>
@@ -16,10 +18,13 @@ Derzeit erfüllt kein Manuskript den gemeinsamen submission_ready-Standard.
 </details>
 
 <details>
-<summary><strong>Arbeitspapiere · working_paper (26)</strong></summary>
+<summary><strong>Arbeitspapiere · working_paper (29)</strong></summary>
 
 | Thema | Seiten | Dateien |
 |---|---:|---|
+| Strongly Polynomial Near-Linear Preprocessing for All-Target Restricted Shortest Paths (`c042-strongrsp`) | 9 | [PDF](papers/c042-strongrsp/c042-strongrsp_working_paper.pdf) · [ZIP](papers/c042-strongrsp/source.zip) · [Code](papers/c042-strongrsp/source/) · [Reproduktion](papers/c042-strongrsp/README.md) |
+| Minimum Spanning Trees under Semi-Random Corruptions below One Half (`c037-msthalf`) | 7 | [PDF](papers/c037-msthalf/c037-msthalf_working_paper.pdf) · [ZIP](papers/c037-msthalf/source.zip) · [Code](papers/c037-msthalf/source/) · [Reproduktion](papers/c037-msthalf/README.md) |
+| Deterministic Quasipolynomial MST Approximation under Decrease-Only Corruption (`c040-mstdecfull`) | 8 | [PDF](papers/c040-mstdecfull/c040-mstdecfull_working_paper.pdf) · [ZIP](papers/c040-mstdecfull/source.zip) · [Code](papers/c040-mstdecfull/source/) · [Reproduktion](papers/c040-mstdecfull/README.md) |
 | Truly Subquadratic 3SUM over Every Bounded-Exponent Abelian Group (`c034-group3sum`) | 8 | [PDF](papers/c034-group3sum/c034-group3sum_working_paper.pdf) · [ZIP](papers/c034-group3sum/source.zip) · [Code](papers/c034-group3sum/source/) · [Reproduktion](papers/c034-group3sum/README.md) |
 | Truly Subcubic Exact Triangle over Bounded-Exponent Abelian Groups (`c034-grouptri`) | 8 | [PDF](papers/c034-grouptri/c034-grouptri_working_paper.pdf) · [ZIP](papers/c034-grouptri/source.zip) · [Code](papers/c034-grouptri/source/) · [Reproduktion](papers/c034-grouptri/README.md) |
 | Rectangular Batching for Disjoint Shortest Paths on DAGs (`c032-dspdag`) | 8 | [PDF](papers/c032-dspdag/c032-dspdag_working_paper.pdf) · [ZIP](papers/c032-dspdag/source.zip) · [Code](papers/c032-dspdag/source/) · [Reproduktion](papers/c032-dspdag/README.md) |
@@ -34,7 +39,7 @@ Derzeit erfüllt kein Manuskript den gemeinsamen submission_ready-Standard.
 | A Size-Independent Discrepancy Bound for Sparse Coverage Functions (`c002-coverage`) | 7 | [PDF](papers/c002-coverage/c002-coverage_working_paper.pdf) · [ZIP](papers/c002-coverage/source.zip) · [Code](papers/c002-coverage/source/) · [Reproduktion](papers/c002-coverage/README.md) |
 | A Global Sidorenko Inequality for 2-Subdivided Alternating Cycles (`c009-cycle2`) | 6 | [PDF](papers/c009-cycle2/c009-cycle2_working_paper.pdf) · [ZIP](papers/c009-cycle2/source.zip) · [Code](papers/c009-cycle2/source/) · [Reproduktion](papers/c009-cycle2/README.md) |
 | A Universal Partial Cycle with Three Wildcards per Window (`c012-upcycles`) | 5 | [PDF](papers/c012-upcycles/c012-upcycles_working_paper.pdf) · [ZIP](papers/c012-upcycles/source.zip) · [Code](papers/c012-upcycles/source/) · [Reproduktion](papers/c012-upcycles/README.md) |
-| Tight Mortality Bounds for Image-Bounded Nondeterministic Automata (`c015-imagebound`) | 6 | [PDF](papers/c015-imagebound/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/source.zip) · [Code](papers/c015-imagebound/source/) · [Reproduktion](papers/c015-imagebound/README.md) |
+| Tight Mortality Bounds for Image-Bounded Nondeterministic Automata (`c015-imagebound`) | 6 | [PDF](papers/c015-imagebound/versions/v2/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/versions/v2/source.zip) · [Code](papers/c015-imagebound/versions/v2/source/) · [Reproduktion](papers/c015-imagebound/README.md) |
 | Deciding Membership and Realizability for Wheeler Transducers (`c017-wheeler`) | 10 | [PDF](papers/c017-wheeler/c017-wheeler_working_paper.pdf) · [ZIP](papers/c017-wheeler/source.zip) · [Code](papers/c017-wheeler/source/) · [Reproduktion](papers/c017-wheeler/README.md) |
 | Coverage Correlation Gaps under Graph-Constrained Pairwise Independence (`coverage-sparse`) | 8 | [PDF](papers/coverage-sparse/coverage-sparse_working_paper.pdf) · [ZIP](papers/coverage-sparse/source.zip) · [Code](papers/coverage-sparse/source/) · [Reproduktion](papers/coverage-sparse/README.md) |
 | A Sparse-Cardinality Curvature Bound under Persistent Adversarial Noise (`curvature-noise`) | 6 | [PDF](papers/curvature-noise/curvature-noise_working_paper.pdf) · [ZIP](papers/curvature-noise/source.zip) · [Code](papers/curvature-noise/source/) · [Reproduktion](papers/curvature-noise/README.md) |
@@ -46,6 +51,24 @@ Derzeit erfüllt kein Manuskript den gemeinsamen submission_ready-Standard.
 | Is Quadratic Subtyping Optimal? Conditional Hardness on Shared Acyclic Type Graphs (`stoc3`) | 18 | [PDF](conversations/stoc3/stoc3_working_paper.pdf) · [ZIP](conversations/stoc3/source.zip) · [Code](conversations/stoc3/source/) · [Reproduktion](conversations/stoc3/README.md) |
 | Fully Dynamic Interprocedural Dataflow Analysis: OMv Barriers and Summary-Local TreeFlow Updates (`stoc4`) | 10 | [PDF](conversations/stoc4/stoc4_working_paper.pdf) · [ZIP](conversations/stoc4/versions/v2/source.zip) · [Code](conversations/stoc4/versions/v2/source/) · [Reproduktion](conversations/stoc4/README.md) |
 | Octagons Are APSP-Complete: Fine-Grained Complexity of Weakly Relational Abstract Domains (`stoc5`) | 19 | [PDF](conversations/stoc5/stoc5_working_paper.pdf) · [ZIP](conversations/stoc5/source.zip) · [Code](conversations/stoc5/source/) · [Reproduktion](conversations/stoc5/README.md) |
+
+### Strongly Polynomial Near-Linear Preprocessing for All-Target Restricted Shortest Paths
+
+**Zusammenfassung.** Untersucht gerichtete restringierte kürzeste Wege mit nichtnegativen Längen und Kosten, einer Quelle und festem Kostenbudget. Nach nahezu linearer Vorverarbeitung mit polynomialer Abhängigkeit von der inversen Genauigkeit liefert eine deterministische Darstellung für jedes erreichbare Ziel eine bikriterielle (1+epsilon)-Approximation. Die Zahl arithmetischer Operationen ist unabhängig von Gewichtsgrößen, Distanzverhältnissen und Präzision; die Rekonstruktion von Zeugen besitzt eine separate deterministische polynomielle Zeitschranke. Die Konstruktion verbindet ein gestopptes Zwei-Uhren-Verfahren, Offline-Aktivierung, konservative Rundung und speicherbeschränkte Dekodierung. Die Genauigkeitsabhängigkeit ist bewusst großzügig.
+
+[PDF](papers/c042-strongrsp/c042-strongrsp_working_paper.pdf) · [ZIP](papers/c042-strongrsp/source.zip) · [Code](papers/c042-strongrsp/source/) · [Reproduktion](papers/c042-strongrsp/README.md)
+
+### Minimum Spanning Trees under Semi-Random Corruptions below One Half
+
+**Zusammenfassung.** Untersucht minimale Spannbäume bei semizufälliger Korruption: Jede metrische Paardistanz wird unabhängig mit Wahrscheinlichkeit p markiert; ein Gegner kennt Metrik und Markierungen und darf markierte Werte beliebig ersetzen. Für jedes feste p<1/2 erreicht ein endliches deterministisches Verfahren allein aus der beobachteten Matrix erwartete wahre Kosten O_p(log n) mal Optimum. Es vervollständigt die Schwelle unterhalb einer Hälfte. Das Verfahren verwendet vollständige Suche; der neue Kern ist eine skalenübergreifende metrische Transferungleichung von Rechteckdichte zu Pfadkosten.
+
+[PDF](papers/c037-msthalf/c037-msthalf_working_paper.pdf) · [ZIP](papers/c037-msthalf/source.zip) · [Code](papers/c037-msthalf/source/) · [Reproduktion](papers/c037-msthalf/README.md)
+
+### Deterministic Quasipolynomial MST Approximation under Decrease-Only Corruption
+
+**Zusammenfassung.** Gibt einen deterministischen quasipolynomiellen Algorithmus für metrische MST-Approximation bei ausschließlich verkleinerten Beobachtungswerten, für jede feste Markierungswahrscheinlichkeit p<1. Der Gegner kennt Metrik und unabhängig gewählte Markierungen. Aus den korrumpierten Daten wird ein Spannpfad mit erwarteten wahren Kosten O_p(log^2 n) mal MST-Optimum berechnet. Die Schranke n^{O_p(log n)} für Arithmetik und Vergleiche ist unabhängig vom Distanzverhältnis. Die Analyse verbindet quantilbasiertes Ausschneiden verborgener Kerne mit einer Tiefensuche-Blattordnung, deren Kosten von der tatsächlichen Ausreißermasse abhängen.
+
+[PDF](papers/c040-mstdecfull/c040-mstdecfull_working_paper.pdf) · [ZIP](papers/c040-mstdecfull/source.zip) · [Code](papers/c040-mstdecfull/source/) · [Reproduktion](papers/c040-mstdecfull/README.md)
 
 ### Truly Subquadratic 3SUM over Every Bounded-Exponent Abelian Group
 
@@ -141,7 +164,9 @@ Frühere Fassung (9 Seiten): [PDF](papers/c021-ccrapumping/paper.pdf) · [ZIP](p
 
 **Zusammenfassung.** Ist die bekannte obere Schranke für Mortalität bei k-bildbeschränkten nichtdeterministischen Automaten scharf? Für jedes feste k≥2 wird die maximale Länge eines kürzesten tödlichen Wortes als Θk(n^(k+1)) bestimmt. Die untere Schranke gilt für alle hinreichend großen n auch bei binärem Alphabet und stark zusammenhängenden Automaten. Eine Warteschlange mit zyklischen Uhren erzeugt die Verzögerung; eine globale Bildinvariante erhält die Beschränkung für jedes Wort.
 
-[PDF](papers/c015-imagebound/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/source.zip) · [Code](papers/c015-imagebound/source/) · [Reproduktion](papers/c015-imagebound/README.md)
+[PDF](papers/c015-imagebound/versions/v2/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/versions/v2/source.zip) · [Code](papers/c015-imagebound/versions/v2/source/) · [Reproduktion](papers/c015-imagebound/README.md)
+
+Frühere Fassung (6 Seiten): [PDF](papers/c015-imagebound/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/source.zip).
 
 ### Deciding Membership and Realizability for Wheeler Transducers
 
@@ -229,6 +254,12 @@ cd Theoretical-Computer-Science
 python3 scripts/verify_artifacts.py
 python3 scripts/reproduce.py --all
 python3 scripts/build_pdfs.py --all
+```
+
+Für die gesonderten c049-Aufzeichnungen sind Python 3.10+ und ein C++17-Compiler erforderlich:
+
+```sh
+python3 -B notes/c049-dualpreserve/source/reproduce.py
 ```
 
 catalog.json ist das einheitliche maschinenlesbare Verzeichnis; readiness.json enthält die beiden Kategorien. Bisherige Datei-URLs bleiben gültig. Aktuelle PDF-Namen tragen die Einordnung, originale PDFs und ZIPs bleiben erhalten. Ältere Vergleiche sind auf [Englisch](RANKING.md) und [Chinesisch](RANKING.zh-CN.md) verfügbar; sie bewerten einen früheren Stand und bestimmen nicht die aktuelle Einordnung.

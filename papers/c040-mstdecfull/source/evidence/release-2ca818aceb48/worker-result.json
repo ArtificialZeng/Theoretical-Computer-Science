@@ -1,0 +1,15 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Release gate passed for the eight-page accepted full-resolution working paper. Fresh citation, clean-build, every-page visual and ZIP reproduction audits completed. Abstract-only SIAM comparison and full-text limitation disclosed; working_paper label retained.",
+  "next_test": "Supervisor runs release_gate.py publish and verifies the released PDF digest, preserving working_paper classification.",
+  "evidence": [
+    "audit/citations.json",
+    "audit/build.json",
+    "audit/visual.json",
+    "evidence/release-2ca818aceb48/gate-check.json",
+    "evidence/release-2ca818aceb48/zip-reproduction.json",
+    "checkpoint.md"
+  ]
+}

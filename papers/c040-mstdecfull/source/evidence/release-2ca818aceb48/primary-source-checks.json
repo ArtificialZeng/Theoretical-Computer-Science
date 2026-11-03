@@ -1,0 +1,69 @@
+{
+  "job_id": "c040-mstdecfull-release-2ca818aceb48",
+  "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+  "manuscript_digest": "203aa4452ff612d76a7e2cf95734dfb62d168580ad5fa1fe30831cf086035682",
+  "pdf_digest": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660",
+  "reviewed_at": "2026-11-03T01:23:11.061168+00:00",
+  "search_date": "2026-11-03",
+  "citation_audit_method": "citation-check-skill plus primary-source-manual",
+  "queries": [
+    "Anand 2026 Approximating Minimum Spanning",
+    "\"Approximating Minimum Spanning Trees in Metrics under Semi-Random Corruptions\" site:semanticscholar.org OR site:arxiv.org",
+    "Anand 2026 arXiv minimum spanning corruptions",
+    "doi:10.48550/arXiv.2610.40594",
+    "arxiv:2610.40594",
+    "Bateni 2024 Metric Clustering and",
+    "\"Metric Clustering and MST with Strong and Weak Distance Oracles\" site:semanticscholar.org OR site:arxiv.org",
+    "Bateni 2024 Conference Learning Theory MST",
+    "Fletcher 2026 Spanning Tree Embeddings",
+    "\"Spanning Tree Embeddings Are Not Much Harder than Hierarchical Partitions\" site:semanticscholar.org OR site:arxiv.org",
+    "Fletcher 2026 SODA",
+    "doi:10.1137/1.9781611978971.193",
+    "\"minimum spanning\" \"decrease-only\" \"quasipolynomial\" \"2026\"",
+    "\"Spanning Tree Embeddings Are Not Much Harder than Hierarchical Partitions\" Fletcher Hershkowitz"
+  ],
+  "sources": [
+    {
+      "key": "anand2026",
+      "url": "https://arxiv.org/abs/2610.40594v1",
+      "text_url": "https://arxiv.org/html/2610.40594v1",
+      "local": "intake/primary/2610.40594v1.txt",
+      "metadata": "Five authors/title/2026/v1 match primary record; history lists v1 dated 2026-10-29. DOI 10.48550/arXiv.2610.40594 is printed by arXiv with pending-registration qualification. No completed-registration assertion made.",
+      "passages": "Theorems 1.2 and 1.3; Section 6 Definition 6.1, Theorem 6.2, Definitions 6.4-6.6 and Algorithms 1-3.",
+      "claims": [
+        "C03",
+        "C04"
+      ],
+      "support": "Exact noise ranges, expected approximation exponents and quasipolynomial/unrestricted runtime distinction match; inherited framework accurately credited."
+    },
+    {
+      "key": "bateni2024",
+      "url": "https://proceedings.mlr.press/v247/bateni24a.html",
+      "local": "intake/primary/bateni24a-COLT2024.txt",
+      "metadata": "Author/title/COLT2024/PMLR247/pages498-550 match official BibTeX.",
+      "passages": "Theorems 4-6, printed pp.5-6 (volume pp.502-503); local text lines252-286. Theorem4 explicitly assumes metric weak oracle.",
+      "claims": [
+        "C02"
+      ],
+      "support": "Square-root-log/no-strong-query statement qualified by observed metricity, unlike arbitrary nonmetric decreases."
+    },
+    {
+      "key": "fletcher2026",
+      "url": "https://epubs.siam.org/doi/10.1137/1.9781611978971.193",
+      "metadata": "Willem Fletcher and D Ellis Hershkowitz, exact title, SODA2026 pp.5344-5373, DOI verified on publisher page; publication date 2026-01-07.",
+      "passages": "Publisher abstract, hierarchy-to-graph-spanning tree constant distortion with Omega(log n) level-diameter growth.",
+      "claims": [
+        "C05"
+      ],
+      "support": "Manuscript expressly attributes this comparison to the publisher abstract; total metric-closure path objective and dyadic scale differ. Full proof uninspected; equivalent auxiliary lemmas not excluded."
+    }
+  ],
+  "official_cfp": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html",
+  "cfp_checked": "Nonanonymous, separate title/abstract page, single-column >=11pt, single spacing, 1-inch margins, US Letter; local 8 total pages obey stricter 12-total-page user cap.",
+  "bibliography_authority": "No user-designated Excel/BibTeX table; metadata_basis=verified_primary_records.",
+  "access_limits": [
+    "SIAM full chapter proof not inspected; only abstract-supported comparison.",
+    "arXiv-issued DOI marked pending registration by primary record; metadata record and paper text are accessible."
+  ],
+  "priority_limit": "Bounded search identifies no equivalent complete theorem; no exhaustive absence, priority or venue-readiness certificate."
+}

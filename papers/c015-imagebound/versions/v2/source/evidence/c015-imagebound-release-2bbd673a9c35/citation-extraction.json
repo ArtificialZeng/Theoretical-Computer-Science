@@ -1,0 +1,211 @@
+{
+  "job_id": "c015-imagebound-release-2bbd673a9c35",
+  "pass": 1,
+  "method": "citation-check-skill extraction only; methodology descriptions excluded by skill rules",
+  "document": "manuscript/c015-imagebound-write-b795278c1e36/main.tex",
+  "claims": [
+    {
+      "id": "C01",
+      "type": "Attribution",
+      "claim": "The incomplete globally k-image-bounded mortality upper bound is n^(k+1), and Kiefer/Ryzhikov ask whether it is tight.",
+      "location": "Abstract; Section 1; Section 5",
+      "expected_support": "KR2025 Section 9"
+    },
+    {
+      "id": "C02",
+      "type": "Existence",
+      "claim": "For every fixed k>=2 and every n>=2k+2A_k*k!, the exact constants yield a binary strongly connected n-state example of threshold at least c_k*n^(k+1), hence Theta_k(n^(k+1)).",
+      "location": "Abstract; Theorem 1; Section 4",
+      "expected_support": "accepted claim and proof"
+    },
+    {
+      "id": "C03",
+      "type": "Existence",
+      "claim": "The maximum M_k(n) exists because there are finitely many letter relations and duplicates do not change shortest lengths.",
+      "location": "Section 1 paragraph before Theorem 1",
+      "expected_support": "finite relation argument"
+    },
+    {
+      "id": "C04",
+      "type": "Existence",
+      "claim": "The general subset bound is 2^n-1.",
+      "location": "Section 1 after Theorem 1",
+      "expected_support": "shortest subset path argument"
+    },
+    {
+      "id": "C05",
+      "type": "Attribution",
+      "claim": "The quadratic order at k=1 is known.",
+      "location": "Section 1 after Theorem 1",
+      "expected_support": "R2024 Section 4"
+    },
+    {
+      "id": "C06",
+      "type": "Attribution",
+      "claim": "Ryzhikov gives a binary deterministic cyclic queue and physical delay path; this queue action is known up to indexing.",
+      "location": "Section 1.1 paragraph 1",
+      "expected_support": "R2024 Section 4 construction"
+    },
+    {
+      "id": "C07",
+      "type": "Attribution",
+      "claim": "Ryzhikov recalls the sharp arbitrary-alphabet deterministic mortality bound n(n+1)/2, attributed there to Rystsov.",
+      "location": "Section 1.1 paragraph 1",
+      "expected_support": "R2024 Introduction and Section 4"
+    },
+    {
+      "id": "C08",
+      "type": "Attribution",
+      "claim": "The unrestricted NFA exponential lower bounds in Ryzhikov do not impose the global endpoint promise.",
+      "location": "Section 1.1 paragraph 1",
+      "expected_support": "R2024 NFA constructions"
+    },
+    {
+      "id": "C09",
+      "type": "Attribution",
+      "claim": "Ananichev Section 2 Lemma 2.1 reproduces Vorel appended-tail lemma: under its hypotheses, h new states increase reset threshold by r*h.",
+      "location": "Section 1.1 paragraph 2",
+      "expected_support": "A2017 Lemma 2.1"
+    },
+    {
+      "id": "C10",
+      "type": "Existence",
+      "claim": "The packet period is lcm(ell_i), realized using sum(ell_i) states; pairwise coprime lengths give order n^k at fixed k.",
+      "location": "Section 1.1 paragraph 3",
+      "expected_support": "accepted proof and parameter choice"
+    },
+    {
+      "id": "C11",
+      "type": "Existence",
+      "claim": "Repeated failures, replacements, and resets cannot bypass the linear number of full delay events; global endpoint support stays bounded.",
+      "location": "Abstract; Section 1.1 paragraph 3",
+      "expected_support": "accepted closure and potential proof"
+    },
+    {
+      "id": "C12",
+      "type": "Existence",
+      "claim": "The b-action restricts to a permutation on P minus p_0, including the m=2 case.",
+      "location": "Section 2 after equations (2)-(3)",
+      "expected_support": "explicit transitions"
+    },
+    {
+      "id": "C13",
+      "type": "Existence",
+      "claim": "The construction is strongly connected, globally k-image-bounded with least bound exactly k, and incomplete with threshold in [1+(m+1)L,1+(m+1)L+m^2].",
+      "location": "Proposition 2",
+      "expected_support": "accepted proof"
+    },
+    {
+      "id": "C14",
+      "type": "Existence",
+      "claim": "Every singleton image is empty, singleton, or packet; this family is closed under a,b for every word.",
+      "location": "Lemma 3 and proof",
+      "expected_support": "accepted proof"
+    },
+    {
+      "id": "C15",
+      "type": "Existence",
+      "claim": "Every queue/clock state can reach p_0 and p_0 can reach every state.",
+      "location": "Lemma 3 proof",
+      "expected_support": "explicit directed paths"
+    },
+    {
+      "id": "C16",
+      "type": "Existence",
+      "claim": "At b-boundaries the image uniquely equals T union E_eta; Q.b=P union S and first potential is m+1.",
+      "location": "Section 3; Lemma 4 proof equation (5)",
+      "expected_support": "accepted proof"
+    },
+    {
+      "id": "C17",
+      "type": "Existence",
+      "claim": "The disjoint injective queue action gives V(new)=|T|+epsilon and drop eta-epsilon for all intervals a^t b.",
+      "location": "Lemma 4 proof equation (6)",
+      "expected_support": "accepted exact potential identity"
+    },
+    {
+      "id": "C18",
+      "type": "Existence",
+      "claim": "A drop occurs exactly on a present packet with all clocks terminal; L divides t+1 and interval costs >=L, including replacement events.",
+      "location": "Lemma 4 proof",
+      "expected_support": "accepted proof"
+    },
+    {
+      "id": "C19",
+      "type": "Existence",
+      "claim": "Deleting initial/trailing a-runs leaves a mortal word; exactly m+1 disjoint unit drops prove the lower bound.",
+      "location": "Lemma 4 proof end",
+      "expected_support": "accepted proof"
+    },
+    {
+      "id": "C20",
+      "type": "Existence",
+      "claim": "Repeated a^(L-1)b decreases potential, preliminary forks cost <=m and occur <=m times; the procedure kills globally within the upper bound.",
+      "location": "Lemma 5 and proof",
+      "expected_support": "accepted proof"
+    },
+    {
+      "id": "C21",
+      "type": "Existence",
+      "claim": "The parameter formulas produce m>=M>=n/(2A), M>=2, exact state count n, pairwise coprime ell_i, and L>=k!*M^k for every n>=N_k.",
+      "location": "Section 4 proof",
+      "expected_support": "accepted arithmetic argument"
+    },
+    {
+      "id": "C22",
+      "type": "Existence",
+      "claim": "The Section 4 construction reaches lower bound k!/(2A_k)^(k+1)*n^(k+1), retaining binary and strong connectivity.",
+      "location": "Section 4 proof end",
+      "expected_support": "accepted proof"
+    },
+    {
+      "id": "C23",
+      "type": "Existence",
+      "claim": "Shortest killing continuations have <=D nonempty subset visits and length <=D; killing n original rows sequentially gives <=nD.",
+      "location": "Section 5 paragraphs 1-3",
+      "expected_support": "accepted upper proof; KR2025"
+    },
+    {
+      "id": "C24",
+      "type": "Existence",
+      "claim": "Padding the increasing subset list by its maximum injects nonempty size<=k subsets into Q^k, so D<=n^k.",
+      "location": "Section 5 paragraph 4",
+      "expected_support": "accepted elementary injection"
+    },
+    {
+      "id": "C25",
+      "type": "Existence",
+      "claim": "There are k b^2 paths and k^r b^(2r) paths from p_0 to itself; the endpoints merge.",
+      "location": "Scope paragraph",
+      "expected_support": "explicit transitions and independent multiplication"
+    },
+    {
+      "id": "C26",
+      "type": "Attribution",
+      "claim": "The original source uses incomplete to mean existence of a mortal word rather than merely a missing transition.",
+      "location": "Section 1 definition paragraph",
+      "expected_support": "KR2025 Section 2"
+    },
+    {
+      "id": "C27",
+      "type": "Attribution",
+      "claim": "KR2025 bibliography authors/title/year/venue/pages/DOI and editor metadata.",
+      "location": "Reference [2]",
+      "expected_support": "publisher primary record"
+    },
+    {
+      "id": "C28",
+      "type": "Attribution",
+      "claim": "R2024 bibliography authors/title/year/venue/pages/DOI and corrected v4 date 15 June 2025.",
+      "location": "Reference [3]",
+      "expected_support": "arXiv primary record and publisher"
+    },
+    {
+      "id": "C29",
+      "type": "Attribution",
+      "claim": "A2017 bibliography author/title/year/arXiv v1/DOI and Vorel-lemma note.",
+      "location": "Reference [1]",
+      "expected_support": "arXiv primary record/PDF"
+    }
+  ]
+}

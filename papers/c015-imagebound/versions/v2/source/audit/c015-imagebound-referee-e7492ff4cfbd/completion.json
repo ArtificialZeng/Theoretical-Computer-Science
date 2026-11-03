@@ -1,0 +1,31 @@
+{
+  "job_id": "c015-imagebound-referee-e7492ff4cfbd",
+  "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+  "completed_at": "2026-11-02T22:02:48.690628+00:00",
+  "mathematical_verdict": "accept",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "stoc_readiness": "working_paper",
+  "gate_command": [
+    "python3",
+    "/Users/mac/.codex/skills/4prove-or-disprove-math/scripts/release_gate.py",
+    "check-math",
+    "."
+  ],
+  "gate_exit_code": 0,
+  "gate_stdout": "{\"ok\":true,\"snapshot_digest\":\"cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e\",\"referee_job_id\":\"c015-imagebound-referee-e7492ff4cfbd\"}",
+  "frozen_files_unchanged": true,
+  "prior_reviews_preserved": true,
+  "checkpoint_or_state_edited": false,
+  "agents_or_background_workers_spawned": 0,
+  "new_manuscripts_or_pdfs_created": false,
+  "audit_hashes": {
+    "audit/math.md": "38266073f3a8cf4ad4cf481ef81a754524dee898e5f68d77091a942e052c7894",
+    "audit/math.json": "5b3baf84e1291e7616567b792df5d0de7c00f618f61e4864531da767b44991e5",
+    "audit/innovation.json": "bc306cc418128a57ac164648a769dc849f94faed2c414939852233cc3cc430e4",
+    "audit/stoc-assessment.json": "baf2370c199ab3efa36d5eb0ce3ef6f1901c6fbc15c5a0dac8c02cbe5fb31cf6",
+    "audit/c015-imagebound-referee-e7492ff4cfbd/literature.md": "17e11ab4571471edb4f4734348393f69155543f238b9781cac87cf74c6c38604",
+    "audit/c015-imagebound-referee-e7492ff4cfbd/verify.py": "2e87827177cc119cc58e211f0b2431e757af1247e8144414fb9d5da0961313f5",
+    "audit/c015-imagebound-referee-e7492ff4cfbd/verification.json": "c644db51511fd136b74e4a13b3416d13bf5f73b3d8950708ce9f17b26dd0673b"
+  }
+}

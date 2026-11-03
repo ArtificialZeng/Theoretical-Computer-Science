@@ -1,0 +1,17 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Prepared, clean-built and froze the accepted full-resolution manuscript: 8 pages, sole requested author, full proofs and AI disclosure. All pages checked; source and official ACM inputs unchanged. Retained working_paper; separate release review remains required.",
+  "next_test": "Perform the separate fresh citation/build/visual and ZIP-reproduction release checks on the frozen manuscript without promoting its working_paper label.",
+  "evidence": [
+    "manuscript/main.pdf",
+    "publication.json",
+    "audit/manuscript-snapshot.json",
+    "evidence/write-8ed1f11b8bf8/freeze-receipt.json",
+    "evidence/write-8ed1f11b8bf8/final-validation.json",
+    "evidence/write-8ed1f11b8bf8/scope-coverage.md",
+    "literature/user_bibliography_check.md",
+    "checkpoint.md"
+  ]
+}

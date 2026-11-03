@@ -1,0 +1,33 @@
+{
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "statement": "The entire assertion frozen verbatim in source.md, interpreted without restriction by problem.md: a uniform deterministic classical strongly polynomial near-linear all-target bicriteria restricted-shortest-path preprocessing algorithm for every directed adjacency-list graph with arbitrary parallel edges and finite nonnegative real lengths/costs, all zero/degenerate cases, total operations and space K(m+n)log(n+2)^a epsilon^(-b), compact reported actual length bounds and deterministic polynomial-time aspect-independent bounded-space witness queries, with precisely the frozen arithmetic, encoding, feasibility and output semantics. The constructive proof supplies universal exponents a=20,b=100 and an absolute K. This is a proposed positive resolution for fresh audit, not acceptance.",
+  "contribution": "Remove all numerical-aspect dependence for ALL targets by integrating a whole-vertex nonadditive stochastic boundary oracle, clipped persistent offline activation with finite-rank upward rounding, and edge-local scale coverage. Supply complete parallel/zero-edge, finite-probability and bounded-space deterministic witness implementations. Clock DP/potential and ordinary-SSSP offline activation precedents are explicitly credited; substantive novelty and significance require fresh critical review.",
+  "proposer_job_id": "c042-strongrsp-research-a3a11d57c4b5",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "evidence/research-pass3-full-proof.md",
+    "evidence/research-pass3-compiler.md",
+    "evidence/research-pass3-literature.md",
+    "evidence/research-pass1-boundary.md",
+    "evidence/research-pass2-offline.md",
+    "evidence/research-pass2-rounding.md",
+    "evidence/check_compiled_poisson.py",
+    "evidence/compiled-poisson-results.json",
+    "evidence/check_bounded_exponential.py",
+    "evidence/bounded-exponential-results.json",
+    "evidence/check_compiled_oracle_integration.py",
+    "evidence/compiled-oracle-integration-results.json",
+    "evidence/check_boundary_oracle.py",
+    "evidence/check_rounded_oracle.py",
+    "intake/check_first_hit_boundaries.py",
+    "evidence/boundary-oracle-results.json",
+    "evidence/boundary-oracle-heldout-results.json",
+    "evidence/rounded-oracle-results.json",
+    "evidence/offline-composition-results.json",
+    "intake/primary/2610.18337.pdf",
+    "intake/primary/2502.10348.pdf",
+    "intake/primary/2410.17179.pdf"
+  ]
+}

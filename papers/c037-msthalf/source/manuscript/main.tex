@@ -1,0 +1,255 @@
+\documentclass[acmlarge,screen,nonacm,11pt]{acmart}
+\geometry{letterpaper,margin=1in,includehead=false,includefoot=false,twoside=true}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\setcopyright{none}
+\AtBeginDocument{\pagestyle{plain}}
+\renewcommand{\bibfont}{\normalfont\normalsize}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\MST}{\operatorname{MST}}
+\newcommand{\cost}{\operatorname{cost}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prb}{\mathbb{P}}
+\newcommand{\ind}{\mathbf{1}}
+\title{Minimum Spanning Trees under Semi-Random Corruptions below One Half}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\date{}
+\begin{document}
+\begin{abstract}
+An unknown metric on $n$ points is observed after each unordered pair is independently marked with probability $p$. An adversary that knows both the metric and the entire marked set may replace the marked entries by arbitrary finite values. We prove that, for every fixed $p<1/2$, an explicit finite deterministic procedure using only the corrupted matrix returns a spanning tree of expected true cost at most $C_p\max\{1,\ln n\}\MST(d)$. The observations need not satisfy the triangle inequality, and the procedure makes no queries to true distances. No efficient running time is claimed.
+
+Anand, Gupta, Jayaram, Lee, and Vakilian established the same logarithmic upper bound for $p<1/4$ and a linear obstruction at $p\geq 1/2$. Our upper bound covers the entire interval below that obstruction. The central step is a deterministic transfer inequality: positive edge density in every sufficiently large disjoint rectangle, together with domination by a nonnegative weighted order, bounds the true cost of that order. A metric star among short overlapping intervals excludes one endpoint of every longer matching edge; integrating the resulting overlap bound controls all distance scales at once. We combine this inequality with an observable tree certificate and the prior all-unmarked repair benchmark. All proofs, including an unconditional expectation bound handling every $n\geq2$, are given here.
+\end{abstract}
+\maketitle
+\thispagestyle{plain}
+\clearpage
+
+\section{The threshold question and the result}
+Let $V=[n]$, $n\geq2$, and let $d$ be a metric on $V$, with positive distances between distinct points. Write
+\[
+ M=\MST(d)=\min_{T\text{ spanning tree on }V}\sum_{uv\in E(T)}d(u,v).
+\]
+Independently for each unordered pair $uv$, a mark is sampled with probability $p$. After seeing $d$ and the whole marked set, an adversary assigns arbitrary finite replacement values to the marked pairs. Unmarked observations equal $d(u,v)$, and the observed matrix $y$ is symmetric. There is no triangle-inequality assumption on $y$. Negative observations can be replaced by zero without changing any unmarked entry; henceforth $y\geq0$. The goal is a tree of small \emph{true} cost, rather than small observed cost, without queries to $d$.
+
+\begin{theorem}\label{thm:main}
+For every fixed real $0\leq p<1/2$, there exist a finite deterministic algorithm $A_p$ and a finite constant $C_p$ such that, for every $n\geq2$, every metric $d$ on $[n]$, and every adversary described above, the output $T$ satisfies
+\[
+ \E\!\left[\sum_{uv\in E(T)}d(u,v)\right]
+ \leq C_p\max\{1,\ln n\}\MST(d).
+\]
+The algorithm receives only $y,n,p$ and makes no true-distance queries. It is explicit in the exact-arithmetic model, with no computational efficiency guarantee. The expectation is over the independent marks; the conclusion also covers randomized replacement rules.
+\end{theorem}
+
+\paragraph{Context and precise advance.}
+The strong and weak distance-oracle model was studied by Bateni, Dharangutte, Jayaram, and Wang~\cite{BDJW24}. Their no-strong-query $O(\sqrt{\log n})$ MST theorem assumes that the weak observations themselves form a metric; that hypothesis is unavailable here. Their Appendix~F.2.2, Theorem~32, also gives a logarithmic obstruction in the arbitrary-corruption model at $p=1/3$.
+
+The closest upper bound is that of Anand, Gupta, Jayaram, Lee, and Vakilian~\cite[Theorems~1.4 and~5.3]{AGJLV26}: an information-theoretic $O_p(\log n)$ approximation under arbitrary replacements for $p<1/4$. Their Theorem~1.5 gives an $\Omega(n)$ obstruction at $p\geq1/2$. Theorem~\ref{thm:main} extends the same upper-bound objective to every fixed $p<1/2$, closing the corruption-threshold gap relative to those results. We claim neither a new lower bound nor a constant approximation. At $p=1/3$, the upper bound has the order of the logarithmic obstruction just cited; this statement does not assert an identical lower bound at every $p$.
+
+The repair benchmark, certificate minimization, and preorder output build on~\cite[Lemma~3.2 and Section~5]{AGJLV26}. The different structural step is Lemma~\ref{lem:transfer}. The common-good-neighbor argument in their Lemma~5.6 needs a good-pair fraction exceeding one half. Our certificate only yields a positive fraction, possibly arbitrarily small as $p$ approaches one half. We use that density on \emph{every large disjoint rectangle}, rather than attempting to force a common neighbor for the original edge. A star among short edges and endpoint exclusion on long edges produce an empty rectangle, which is impossible. A single interval integral then avoids a separate logarithmic charge for each scale.
+
+\paragraph{Scope and organization.}
+Theorem~\ref{thm:main} is uniform over all finite metrics, all aspect ratios, and all post-mask adversaries. Its dependence on $p$ is not optimized. Section~\ref{sec:transfer} proves the deterministic inequality; Section~\ref{sec:repair} reconstructs the credited repair mechanism with explicit all-$n$ bounds. Sections~\ref{sec:algorithm} and~\ref{sec:expectation} give the observable procedure and its expected-cost proof. Proof development and consistency computations used substantial AI assistance, detailed at the end.
+
+\clearpage
+\section{From rectangle density to metric path cost}\label{sec:transfer}
+For an order $v_1,\ldots,v_n$ of $V$ and weights $w_i\geq0$, define
+\[
+ t_1=0,\qquad t_j=\sum_{i<j}w_i,\qquad W=t_n,
+ \qquad q(v_i,v_j)=|t_i-t_j|.
+\]
+Distinct vertices may have equal coordinates. For a graph $H$ and disjoint sets $A,B$, let $e_H(A,B)$ denote the number of edges with one endpoint in each set.
+
+\begin{lemma}[Rectangle-to-path transfer]\label{lem:transfer}
+Let $r\geq1$ be an integer and $0<\eta\leq1$. Suppose an undirected simple graph $H$ on $V$ satisfies
+\begin{align}
+ e_H(A,B)&\geq\eta|A||B|&&\text{for disjoint }A,B\text{ with }|A|,|B|\geq r,\label{eq:density}\\
+ d(u,v)&\leq q(u,v)&&\text{for every }uv\in E(H).\label{eq:domination}
+\end{align}
+Then
+\begin{equation}\label{eq:transfer}
+ \sum_{i=1}^{n-1}d(v_i,v_{i+1})
+ \leq\frac{320r}{\eta}W+\frac{8r}{\eta}M
+ \leq\frac{320r}{\eta}(W+M).
+\end{equation}
+The statement also applies when $2r>n$, so that~\eqref{eq:density} is vacuous.
+\end{lemma}
+
+\begin{proof}
+We first extract a star from hereditary density. Fix $S\subseteq V$ of size $m\geq2r$, and sample uniformly an ordered pair of disjoint $r$-subsets $A,B$ of $S$. Each edge in $H[S]$ crosses from $A$ to $B$ with probability $2r^2/(m(m-1))$. Averaging~\eqref{eq:density} gives
+\[
+ |E(H[S])|\geq\frac{\eta m(m-1)}2.
+\]
+Thus $H[S]$ contains a vertex of degree at least $\eta(m-1)$. Put $L=\lceil2r/\eta\rceil$. Every $2L$-vertex set therefore contains a star with $r$ distinct leaves, since $\eta(2L-1)\geq4r-\eta\geq r$.
+
+Write $D_i=d(v_i,v_{i+1})$. The edges with $D_i\leq64w_i$ contribute at most $64W$. For each remaining edge, called expensive, attach the closed interval
+\[
+ I_i=[t_i-D_i/64,\ t_i+D_i/64].
+\]
+Its length is $D_i/32$. If $x\in I_i$, then $|t_i-x|\leq D_i/64$ and
+\[
+ |t_{i+1}-x|\leq D_i/64+w_i<D_i/32.
+\]
+Consequently both endpoints of that edge have coordinates strictly within $D_i/32$ of $x$, including at interval boundaries and when $w_i=0$.
+
+Suppose that at least $2(L+r)$ intervals contain some $x$. At least $L+r$ corresponding path edges have the same index parity, so they are pairwise vertex-disjoint. Keep $L+r$ such edges and sort them by nondecreasing $D_i$, breaking ties arbitrarily. Call the first $L$ edges bottom edges and the remaining $r$ top edges, and let $D_0$ be the largest bottom length.
+
+The $2L$ bottom endpoints form a set $S$, all of whose coordinates are strictly within $D_0/32$ of $x$. Choose a star in $H[S]$ with center $z$ and $r$ leaves $B$. For any $b,b'\in B$, domination on its spokes and the true triangle inequality give
+\begin{equation}\label{eq:leaves}
+ d(b,b')\leq d(b,z)+d(z,b')
+ \leq q(b,z)+q(z,b')<D_0/8.
+\end{equation}
+This also holds for $b=b'$. Now consider a top edge $aa'$ of length $D\geq D_0$. Each of its endpoints is strictly within $D/32$ of $x$, so for every $b\in B$,
+\begin{equation}\label{eq:top}
+ q(a,b),q(a',b)<(D+D_0)/32\leq D/16.
+\end{equation}
+If both $a$ and $a'$ had an $H$-neighbor in $B$, say $b$ and $b'$ (possibly equal), then~\eqref{eq:leaves},~\eqref{eq:top}, and~\eqref{eq:domination} would imply
+\[
+ D\leq d(a,b)+d(b,b')+d(b',a')
+ <D/16+D_0/8+D/16\leq D/4,
+\]
+a contradiction. Therefore one endpoint of each top edge has \emph{no} $H$-neighbor anywhere in $B$. Choose one such endpoint from each top edge. The resulting $r$-set $A$ is disjoint from $B$, because the selected edges form a matching. Its rectangle with $B$ is empty, contradicting~\eqref{eq:density} and $\eta>0$.
+
+It follows that interval multiplicity is everywhere less than $2(L+r)$ and hence at most $8r/\eta$: indeed $L\leq2r/\eta+1$, $r\geq1$, and $\eta\leq1$. This argument considers every expensive length together.
+
+Let $D_{\max}=\max_i D_i$. All expensive intervals lie in
+$[-D_{\max}/64,W+D_{\max}/64]$. Integrating their multiplicity gives
+\[
+ \sum_{i\text{ expensive}}\frac{D_i}{32}
+ \leq\frac{8r}{\eta}\left(W+\frac{D_{\max}}{32}\right).
+\]
+Any true metric distance is at most the length of its connecting path in a true MST, so $D_{\max}\leq\operatorname{diam}(d)\leq M$. Adding the cheap-edge contribution $64W$, and using $r/\eta\geq1$, proves~\eqref{eq:transfer}. If there are no expensive edges the same conclusion is immediate. If $2r>n$, the contrary matching configuration cannot occur; the proof requires no nonvacuity assumption.
+\end{proof}
+
+\section{An all-unmarked comparison tree}\label{sec:repair}
+The following is the repair mechanism of~\cite[Lemma~3.2]{AGJLV26}, with an unconditional indicator-weighted expectation to handle small $n$ explicitly. The benchmark depends on hidden information and is used only in analysis.
+
+\begin{lemma}[Repair benchmark]\label{lem:repair}
+Let $0\leq p<1$, $\alpha=(1-p)^2$, and $\beta=1-\alpha$. There is an event $F$ such that on $F$ an all-unmarked spanning tree $T_0$ exists, with
+\begin{equation}\label{eq:repair}
+ \Prb(F^c)\leq(n-1)\beta^{n-2},\qquad
+ \E[X]\leq B_pM,\qquad B_p=2(1+4/\alpha),
+\end{equation}
+where $X=\cost_d(T_0)$ on $F$ and $X=0$ otherwise. Use $0^0=1$ in the failure bound.
+\end{lemma}
+
+\begin{proof}
+Fix a true MST and a deterministic Euler tour of its doubled edges. Let $u_1,\ldots,u_n$ be the order of first appearances. For $i<n$, let $a_i$ be the true length of the tour segment between the first appearances of $u_i$ and $u_{i+1}$. Then $\sum_i a_i\leq2M$, and the true distance between two ordered vertices is at most the sum of the intervening $a_i$.
+
+For each marked consecutive pair $u_iu_{i+1}$, seek a vertex $u_k$ outside its endpoints with both $u_iu_k$ and $u_{i+1}u_k$ unmarked. Choose a successful $k$ minimizing its distance in order positions to $\{i,i+1\}$, breaking ties by a fixed rule. For a fixed consecutive pair, different candidate vertices test disjoint unordered pairs, each succeeding with probability $\alpha$, independently of the other candidates and the original pair. Let $F$ be the event that every marked consecutive pair has a successful candidate. A union bound gives the failure estimate in~\eqref{eq:repair}, including $n=2$.
+
+On $F$, retain the unmarked consecutive pairs and replace each marked one by its chosen unmarked two-edge path. This is a connected all-unmarked graph. Delete duplicate edges and then cycles by a fixed rule to obtain $T_0$.
+
+Bound the length of each retained or replacement path using its walk along the weighted order with edge lengths $a_i$. Source pair $i$ pays $a_i$ once. A repair extending beyond that edge pays twice for each additional order edge it crosses. Fix an order edge $j$. For a source pair $i<j$ to pay $a_j$ additionally, its chosen candidate must lie strictly beyond edge $j$. In particular none of $u_{i+2},\ldots,u_j$ can be successful: each would be closer than that chosen candidate. The probability of this necessary event is $\beta^{j-i-1}$. For $i>j$ the analogous bound is $\beta^{i-j-1}$.
+
+These implications hold on $F$; we bound their indicator probabilities without conditioning on $F$. The expected coefficient of $a_j$ in the repaired walk cost times $\ind_F$ is at most
+\[
+ 1+2\sum_{h\geq1}\beta^{h-1}
+   +2\sum_{h\geq1}\beta^{h-1}=1+4/\alpha.
+\]
+Cycle and duplicate deletion decrease nonnegative cost. Summing over $j$ and using $\sum_j a_j\leq2M$ proves the expectation estimate. No independence between different repairs is needed.
+\end{proof}
+
+\section{The observable finite procedure}\label{sec:algorithm}
+Fix $p<1/2$. Choose and hardcode a rational $\pi$ with $p\leq\pi<1/2$, and define
+\begin{equation}\label{eq:parameters}
+ \epsilon=\frac{1-2\pi}{8},\qquad
+ \eta=1-2\pi-2\epsilon>0,\qquad
+ R=\lceil20\epsilon^{-2}\rceil,\qquad
+ r=R\lceil\log_2 n\rceil.
+\end{equation}
+For example, $\pi=1/2-2^{-k}$ works for a sufficiently large integer $k\geq1$. Because the theorem quantifies separately over $A_p$ for each fixed real $p$, no computation of a rational approximation from an arbitrary-real representation of $p$ is required. All subsequent parameters are rational or integral, and $\lceil\log_2 n\rceil$ can be computed by integer doubling.
+
+For any tree $S$ give each edge its clipped observed weight $y(u,v)$, let $y_S(u,v)$ be its unique weighted path distance, and set $\cost_y(S)=\sum_{uv\in E(S)}y(u,v)$. Say that $S$ \emph{qualifies} if, for every pair of disjoint sets $A,B$ with $|A|,|B|\geq r$,
+\begin{equation}\label{eq:qualify}
+ \bigl|\{(u,v)\in A\times B:y(u,v)\leq y_S(u,v)\}\bigr|
+ \geq(1-\pi-\epsilon)|A||B|.
+\end{equation}
+
+The procedure is as follows.
+\begin{enumerate}
+\item Clip negative off-diagonal observations to zero.
+\item Enumerate all labeled spanning trees and test~\eqref{eq:qualify} by enumerating all disjoint set pairs of the indicated sizes.
+\item If at least one tree qualifies, choose a minimum-$\cost_y$ qualifying tree, breaking ties lexicographically by sorted edge list. Root it at vertex $1$, traverse children in increasing label order, and output the path through the vertices in first-appearance order of its Euler tour.
+\item If no tree qualifies, output the increasing-label Hamiltonian path.
+\end{enumerate}
+All searches are finite; a minimum over a nonempty finite family exists even when observations include zeros. If $2r>n$, qualification is vacuous, which causes no undefined operation. The output is always a spanning path and hence a spanning tree on $V$. The procedure never observes the marks, $d$, the comparison tree, or the graph used below.
+
+\section{Uniform concentration and the expected cost}\label{sec:expectation}
+We now prove Theorem~\ref{thm:main}. Let $E$ be the event that every disjoint rectangle of sizes $a,b\geq r$ has at most $(\pi+\epsilon)ab$ marked pairs. For a fixed rectangle its $ab$ unordered pairs have independent marks, and $p\leq\pi$. The bounded-variable concentration inequality gives failure probability at most $\exp(-2\epsilon^2ab)$. Since
+\[
+ ab\geq r(a+b)/2,\qquad r\geq20\epsilon^{-2}\ln n,
+\]
+and there are at most $n^{a+b}$ pairs of sets of these sizes, a union bound gives
+\begin{equation}\label{eq:uniform}
+ \Prb(E^c)\leq\sum_{a,b\geq r}n^{-19(a+b)}
+ =\frac{n^{-38r}}{(1-n^{-19})^2}\leq n^{-12}.
+\end{equation}
+Here extending the sums to all larger integers only increases them. The final inequality follows from $n\geq2,r\geq1$, $(1-2^{-19})^{-2}<2$, and $2n^{-38}\leq n^{-12}$. If no qualifying rectangle exists, $E$ holds surely. This is a single mask-only event, uniform over every later choice of replacement values and tree.
+
+Let $F,T_0,X$ be as in Lemma~\ref{lem:repair}. On $E\cap F$, $T_0$ qualifies. Indeed every unmarked pair satisfies
+\[
+ y(u,v)=d(u,v)\leq d_{T_0}(u,v)=y_{T_0}(u,v),
+\]
+and at least a $1-\pi-\epsilon$ fraction of each rectangle is unmarked. Thus a qualifying tree exists and the selected tree $S$ has $\cost_y(S)\leq X$.
+
+Define $H$ to contain precisely the unmarked pairs satisfying $y(u,v)\leq y_S(u,v)$. On $E\cap F$, each rectangle has at least $(1-\pi-\epsilon)ab$ qualifying pairs, and at most $(\pi+\epsilon)ab$ marked pairs. Hence
+\[
+ e_H(A,B)\geq(1-2\pi-2\epsilon)ab=\eta ab.
+\]
+For its edges, $d(u,v)=y(u,v)\leq y_S(u,v)$. This graph is an analysis object, never an input to the procedure.
+
+Write $v_1,\ldots,v_n$ for the selected preorder and $w_i$ for the observed length of the Euler segment between the first appearances of $v_i$ and $v_{i+1}$. These weights are nonnegative and
+\[
+ W=\sum_iw_i\leq2\cost_y(S)\leq2X.
+\]
+For any two order vertices, the intervening Euler walk contains their unique tree path; with nonnegative weights, $y_S(u,v)\leq q(u,v)$. Thus $H$ satisfies both hypotheses of Lemma~\ref{lem:transfer}. Let $Y$ be the true cost of the output. Pointwise on $E\cap F$,
+\[
+ Y\leq\frac{320r}{\eta}(2X+M).
+\]
+Applying the unconditional bound on $X$ and using nonnegativity yields
+\begin{equation}\label{eq:good}
+ \E[Y\ind_{E\cap F}]\leq\frac{320r}{\eta}(2B_p+1)M.
+\end{equation}
+No independence between the selected tree, $H$, $E$, $F$, or the adversarial values is used.
+
+Every possible output tree, irrespective of observations, has true cost at most $(n-1)\operatorname{diam}(d)\leq(n-1)M$. Consequently~\eqref{eq:repair} and~\eqref{eq:uniform} give
+\begin{align}
+ \E[Y\ind_{(E\cap F)^c}]
+ &\leq\bigl[(n-1)n^{-12}+(n-1)^2\beta^{n-2}\bigr]M\notag\\
+ &\leq(1+2/\alpha^3)M.\label{eq:bad}
+\end{align}
+For the last bound, the second term is at most $n(n-1)\beta^{n-2}$ and hence at most the nonnegative sum
+\[
+ \sum_{m=2}^{\infty}m(m-1)\beta^{m-2}
+ =\frac{2}{(1-\beta)^3}=\frac{2}{\alpha^3}.
+\]
+The formula remains valid for $\beta=0$ with $0^0=1$.
+
+Finally,
+\[
+ r\leq R(1+1/\ln2)\max\{1,\ln n\}.
+\]
+Combining~\eqref{eq:good} and~\eqref{eq:bad} proves the theorem, for example with
+\[
+ C_p=\frac{320R}{\eta}(1+1/\ln2)(2B_p+1)+1+2/\alpha^3.
+\]
+All its parameters are finite for fixed $p<1/2$. They are independent of the metric, its aspect ratio, $n$, and replacement magnitudes. The argument is pointwise in the replacement values for each mask, so averaging also permits randomized adversarial rules. The algorithm needs no internal randomness.\hfill$\square$
+
+\section{Boundary, verification, and limitations}
+\paragraph{Why one half is a meaningful boundary.}
+The obstruction of~\cite[Theorem~1.5]{AGJLV26} also applies to strictly positive metrics by the following standard regularization of its two-cluster construction. Choose a uniformly random balanced partition into parts of sizes $a=\lfloor n/2\rfloor$ and $b=\lceil n/2\rceil$. Give within-part pairs distance $\delta>0$ and cross-part pairs distance $1$, with $\delta\leq1$. For $1/2\leq p<1$, output observation $1$ on marked within-part pairs; on marked cross-part pairs output $\delta$ with probability $(1-p)/p$, independently. Each observed pair equals $\delta$ with probability $1-p$ and $1$ otherwise, independently of the partition. Thus any tree selected from these observations and independent algorithmic randomness has expected number $2ab/n$ of cross-part edges. Its expected true cost is at least $2ab/n$, whereas $M=1+(n-2)\delta$. Taking $\delta=n^{-2}$ gives an $\Omega(n)$ ratio. Averaging over partitions implies a worst-case metric, and the same guarantee would have to hold against a randomized adversary if it held against every deterministic replacement rule. This credits and explains the prior boundary; it is not a new lower-bound contribution.
+
+\paragraph{Computation is auxiliary.}
+The proof above does not rely on a numerical search. Exact rational consistency checks used 160 integer metric instances from line, cycle, $\ell_1$, and graph shortest-path metrics at $n=8,12,16,24$, including nonuniform order weights and zeros. They checked 2,802,752 disjoint rectangles and the transfer inequalities. Separate exhaustive checks enumerated all 33,866 pair masks for $n=2,\ldots,6$, comparing repair failure and indicator-weighted cost at $p\in\{0,1/3,2/5,49/100\}$. A separate model context reconstructed the proof and recomputed these finite checks with a different implementation. These are finite implementation checks, not exhaustive metric coverage, formal verification, or external peer review.
+
+\paragraph{Limitations.}
+The procedure enumerates all labeled trees and all qualifying rectangles. We establish finite computability, not a polynomial or quasi-polynomial running time. The logarithmic approximation order and the repair mechanism are inherited objectives and tools; the contribution is the full below-half upper bound via the rectangle-to-path inequality. The constants deteriorate near one half. Efficient algorithms, improved parameter dependence, and applications of the deterministic inequality beyond this MST problem remain unproved. The prior-work comparison concerns the primary versions cited here and does not certify exhaustive priority.
+
+\section*{AI methodology}
+OpenAI Codex was used extensively for proof development and reconstruction, generation of exact checking programs, primary-literature comparisons, and preparation of this manuscript. This use materially affected all technical sections and the exposition. A separate Codex context performed an internal proof reconstruction and implemented independent finite consistency checks; this was model-assisted checking, not external peer review or a formal proof certificate. The displayed mathematical arguments, rather than those computations or model judgments, support the theorem. The sole named human author is responsible for the accuracy, originality, and integrity of the paper.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\end{document}

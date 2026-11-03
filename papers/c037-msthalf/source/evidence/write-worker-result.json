@@ -1,0 +1,18 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Wrote, compiled, visually checked all seven pages, and froze the accepted full-resolution manuscript. Retained the actual working_paper assessment; separate release review remains pending.",
+  "next_test": "Separate RELEASE review of citations, source reproduction, clean build and every frozen PDF page; then the script release gate, retaining working_paper.",
+  "evidence": [
+    "manuscript/msthalf_working_paper.pdf",
+    "manuscript/main.tex",
+    "publication.json",
+    "audit/manuscript-snapshot.json",
+    "audit/stoc-assessment.json",
+    "literature/user_bibliography_check.md",
+    "evidence/write/writer-checks.json",
+    "evidence/write/freeze-result.json",
+    "checkpoint.md"
+  ]
+}

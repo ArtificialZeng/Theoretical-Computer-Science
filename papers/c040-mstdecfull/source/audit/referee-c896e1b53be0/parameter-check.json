@@ -1,0 +1,17 @@
+{
+  "job_id": "c040-mstdecfull-referee-c896e1b53be0",
+  "scope": "Exact rational diagnostic of the displayed parameter/strict-count inequalities at six q values and ell=1..100; not proof for all q. All-q inequalities are checked algebraically in math.md.",
+  "q_values": [
+    "1",
+    "1/2",
+    "1/10",
+    "1/100",
+    "2/3",
+    "7/11"
+  ],
+  "cases": 600,
+  "passed": true,
+  "good_mask_constant_coefficient": 2145927168000,
+  "claimed_coefficient": 1000000000000000,
+  "source_preserved": true
+}

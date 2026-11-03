@@ -1,0 +1,68 @@
+{
+  "at_utc": "2026-11-03T16:37:03.827425+00:00",
+  "passed": true,
+  "scope": "Only the declared finite checks for primary indexed versions; not general proof verification, novelty assessment, or certification of additional expanded versions.",
+  "papers": [
+    {
+      "id": "c042-strongrsp",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/check_compiled_poisson.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.501,
+          "log": "validation/unified-reproduction/c042-strongrsp-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/check_compiled_oracle_integration.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.061,
+          "log": "validation/unified-reproduction/c042-strongrsp-2.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/check_rounded_oracle.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.942,
+          "log": "validation/unified-reproduction/c042-strongrsp-3.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/check_offline_composition.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 1.465,
+          "log": "validation/unified-reproduction/c042-strongrsp-4.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/check_bounded_exponential.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 0.712,
+          "log": "validation/unified-reproduction/c042-strongrsp-5.log"
+        }
+      ]
+    }
+  ]
+}

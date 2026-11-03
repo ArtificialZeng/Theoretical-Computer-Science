@@ -1,0 +1,11 @@
+{
+  "job_id": "c040-mstdecfull-research-e695ca56645f",
+  "completed_utc": "2026-11-03T00:51:49.234335+00:00",
+  "outcome": "candidate",
+  "worker_result_schema_valid": true,
+  "all_result_evidence_paths_exist": true,
+  "source_unchanged": true,
+  "main_test_and_records_completed_before_deadline": true,
+  "new_acceptance_or_venue_label_claimed": false,
+  "manuscript_or_authored_pdf_created": false
+}

@@ -1,0 +1,399 @@
+{
+  "job_id": "c037-msthalf-research-82a59cd9a4af",
+  "arithmetic": "exact rational",
+  "n": 7,
+  "metric_families": [
+    "line",
+    "balanced-base-2",
+    "comb-base-2",
+    "balanced-base-10",
+    "comb-base-10"
+  ],
+  "all_orders_per_metric": 5040,
+  "orders_checked": 25200,
+  "rectangle_order_tests": 4410000,
+  "scope_limit": "Five explicit metrics only; uniform order weights only. Threshold h corresponds to density h/r^2; relevant p densities require h=1 for r=2 and h=1,2,3 for r=3.",
+  "maxima": [
+    {
+      "metric": "line",
+      "r": 2,
+      "required_good_pairs": 1,
+      "order": [
+        2,
+        5,
+        0,
+        3,
+        6,
+        1,
+        4
+      ],
+      "minimum_uniform_step": "1",
+      "path_true_cost": 22,
+      "true_mst": 6,
+      "ratio_cost_over_W_plus_MST": "11/6",
+      "minimum_good_pairs_reverified": 1
+    },
+    {
+      "metric": "line",
+      "r": 3,
+      "required_good_pairs": 1,
+      "order": [
+        2,
+        5,
+        0,
+        3,
+        6,
+        1,
+        4
+      ],
+      "minimum_uniform_step": "1/3",
+      "path_true_cost": 22,
+      "true_mst": 6,
+      "ratio_cost_over_W_plus_MST": "11/4",
+      "minimum_good_pairs_reverified": 1
+    },
+    {
+      "metric": "line",
+      "r": 3,
+      "required_good_pairs": 2,
+      "order": [
+        1,
+        5,
+        2,
+        6,
+        0,
+        3,
+        4
+      ],
+      "minimum_uniform_step": "1/2",
+      "path_true_cost": 21,
+      "true_mst": 6,
+      "ratio_cost_over_W_plus_MST": "7/3",
+      "minimum_good_pairs_reverified": 2
+    },
+    {
+      "metric": "line",
+      "r": 3,
+      "required_good_pairs": 3,
+      "order": [
+        2,
+        4,
+        0,
+        5,
+        1,
+        6,
+        3
+      ],
+      "minimum_uniform_step": "1",
+      "path_true_cost": 23,
+      "true_mst": 6,
+      "ratio_cost_over_W_plus_MST": "23/12",
+      "minimum_good_pairs_reverified": 3
+    },
+    {
+      "metric": "balanced-base-2",
+      "r": 2,
+      "required_good_pairs": 1,
+      "order": [
+        0,
+        4,
+        1,
+        5,
+        2,
+        6,
+        3
+      ],
+      "minimum_uniform_step": "8/3",
+      "path_true_cost": 48,
+      "true_mst": 22,
+      "ratio_cost_over_W_plus_MST": "24/19",
+      "minimum_good_pairs_reverified": 1
+    },
+    {
+      "metric": "balanced-base-2",
+      "r": 3,
+      "required_good_pairs": 1,
+      "order": [
+        0,
+        4,
+        1,
+        5,
+        2,
+        6,
+        3
+      ],
+      "minimum_uniform_step": "8/5",
+      "path_true_cost": 48,
+      "true_mst": 22,
+      "ratio_cost_over_W_plus_MST": "120/79",
+      "minimum_good_pairs_reverified": 1
+    },
+    {
+      "metric": "balanced-base-2",
+      "r": 3,
+      "required_good_pairs": 2,
+      "order": [
+        0,
+        4,
+        1,
+        2,
+        5,
+        3,
+        6
+      ],
+      "minimum_uniform_step": "2",
+      "path_true_cost": 44,
+      "true_mst": 22,
+      "ratio_cost_over_W_plus_MST": "22/17",
+      "minimum_good_pairs_reverified": 2
+    },
+    {
+      "metric": "balanced-base-2",
+      "r": 3,
+      "required_good_pairs": 3,
+      "order": [
+        0,
+        4,
+        1,
+        5,
+        2,
+        6,
+        3
+      ],
+      "minimum_uniform_step": "8/3",
+      "path_true_cost": 48,
+      "true_mst": 22,
+      "ratio_cost_over_W_plus_MST": "24/19",
+      "minimum_good_pairs_reverified": 4
+    },
+    {
+      "metric": "comb-base-2",
+      "r": 2,
+      "required_good_pairs": 1,
+      "order": [
+        0,
+        3,
+        1,
+        4,
+        6,
+        2,
+        5
+      ],
+      "minimum_uniform_step": "32/3",
+      "path_true_cost": 192,
+      "true_mst": 126,
+      "ratio_cost_over_W_plus_MST": "96/95",
+      "minimum_good_pairs_reverified": 1
+    },
+    {
+      "metric": "comb-base-2",
+      "r": 3,
+      "required_good_pairs": 1,
+      "order": [
+        0,
+        3,
+        5,
+        1,
+        6,
+        2,
+        4
+      ],
+      "minimum_uniform_step": "16/5",
+      "path_true_cost": 216,
+      "true_mst": 126,
+      "ratio_cost_over_W_plus_MST": "180/121",
+      "minimum_good_pairs_reverified": 1
+    },
+    {
+      "metric": "comb-base-2",
+      "r": 3,
+      "required_good_pairs": 2,
+      "order": [
+        0,
+        3,
+        5,
+        1,
+        6,
+        2,
+        4
+      ],
+      "minimum_uniform_step": "16/3",
+      "path_true_cost": 216,
+      "true_mst": 126,
+      "ratio_cost_over_W_plus_MST": "108/79",
+      "minimum_good_pairs_reverified": 2
+    },
+    {
+      "metric": "comb-base-2",
+      "r": 3,
+      "required_good_pairs": 3,
+      "order": [
+        0,
+        3,
+        6,
+        1,
+        4,
+        5,
+        2
+      ],
+      "minimum_uniform_step": "8",
+      "path_true_cost": 216,
+      "true_mst": 126,
+      "ratio_cost_over_W_plus_MST": "36/29",
+      "minimum_good_pairs_reverified": 3
+    },
+    {
+      "metric": "balanced-base-10",
+      "r": 2,
+      "required_good_pairs": 1,
+      "order": [
+        0,
+        4,
+        1,
+        5,
+        2,
+        6,
+        3
+      ],
+      "minimum_uniform_step": "1000/3",
+      "path_true_cost": 6000,
+      "true_mst": 1230,
+      "ratio_cost_over_W_plus_MST": "600/323",
+      "minimum_good_pairs_reverified": 1
+    },
+    {
+      "metric": "balanced-base-10",
+      "r": 3,
+      "required_good_pairs": 1,
+      "order": [
+        0,
+        4,
+        1,
+        5,
+        2,
+        6,
+        3
+      ],
+      "minimum_uniform_step": "200",
+      "path_true_cost": 6000,
+      "true_mst": 1230,
+      "ratio_cost_over_W_plus_MST": "200/81",
+      "minimum_good_pairs_reverified": 1
+    },
+    {
+      "metric": "balanced-base-10",
+      "r": 3,
+      "required_good_pairs": 2,
+      "order": [
+        0,
+        4,
+        1,
+        2,
+        5,
+        3,
+        6
+      ],
+      "minimum_uniform_step": "250",
+      "path_true_cost": 5100,
+      "true_mst": 1230,
+      "ratio_cost_over_W_plus_MST": "170/91",
+      "minimum_good_pairs_reverified": 2
+    },
+    {
+      "metric": "balanced-base-10",
+      "r": 3,
+      "required_good_pairs": 3,
+      "order": [
+        0,
+        4,
+        1,
+        5,
+        2,
+        6,
+        3
+      ],
+      "minimum_uniform_step": "1000/3",
+      "path_true_cost": 6000,
+      "true_mst": 1230,
+      "ratio_cost_over_W_plus_MST": "600/323",
+      "minimum_good_pairs_reverified": 4
+    },
+    {
+      "metric": "comb-base-10",
+      "r": 2,
+      "required_good_pairs": 1,
+      "order": [
+        0,
+        3,
+        4,
+        1,
+        6,
+        2,
+        5
+      ],
+      "minimum_uniform_step": "100000/3",
+      "path_true_cost": 2121000,
+      "true_mst": 1111110,
+      "ratio_cost_over_W_plus_MST": "212100/131111",
+      "minimum_good_pairs_reverified": 1
+    },
+    {
+      "metric": "comb-base-10",
+      "r": 3,
+      "required_good_pairs": 1,
+      "order": [
+        0,
+        3,
+        5,
+        1,
+        6,
+        2,
+        4
+      ],
+      "minimum_uniform_step": "2000",
+      "path_true_cost": 2211000,
+      "true_mst": 1111110,
+      "ratio_cost_over_W_plus_MST": "73700/37437",
+      "minimum_good_pairs_reverified": 1
+    },
+    {
+      "metric": "comb-base-10",
+      "r": 3,
+      "required_good_pairs": 2,
+      "order": [
+        0,
+        3,
+        1,
+        5,
+        2,
+        6,
+        4
+      ],
+      "minimum_uniform_step": "2500",
+      "path_true_cost": 2202000,
+      "true_mst": 1111110,
+      "ratio_cost_over_W_plus_MST": "73400/37537",
+      "minimum_good_pairs_reverified": 2
+    },
+    {
+      "metric": "comb-base-10",
+      "r": 3,
+      "required_good_pairs": 3,
+      "order": [
+        0,
+        3,
+        1,
+        5,
+        2,
+        6,
+        4
+      ],
+      "minimum_uniform_step": "5000",
+      "path_true_cost": 2202000,
+      "true_mst": 1111110,
+      "ratio_cost_over_W_plus_MST": "73400/38037",
+      "minimum_good_pairs_reverified": 3
+    }
+  ],
+  "conclusion": "Finite tests only; no proof or disproof of arbitrary multiscale transfer or the immutable source question."
+}

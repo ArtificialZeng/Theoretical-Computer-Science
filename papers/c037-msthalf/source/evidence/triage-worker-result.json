@@ -1,0 +1,13 @@
+{
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Advance the full threshold question. Current primary v1 confirms the source model, logarithmic approximation below p=1/4, and linear hardness at p>=1/2; bounded follow-up searches found no gap-closing result. Lemma 5.6 identifies a method-specific quarter-threshold bottleneck. Full resolution has plausible substantive value; no mathematical or STOC acceptance is claimed. Source preserved; research passes remain 0.",
+  "next_test": "In the first bounded research pass, test the large-rectangle metric-agreement certificate in problem.md: derive uniform mask feasibility, then seek exact cost-transfer failures on 2-6 cluster metrics with unbounded scale at p=1/3, 2/5 and 49/100. Address small-side cuts, data-dependent tree selection and expected true cost; certificate failure alone does not refute the original.",
+  "evidence": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/triage-entry.json",
+    "evidence/triage-literature.md"
+  ]
+}

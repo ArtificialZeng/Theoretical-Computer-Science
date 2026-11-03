@@ -1,0 +1,12 @@
+{
+  "job_id": "c040-mstdecfull-triage-eda4a5236bcc",
+  "validated_utc": "2026-11-03T00:12:17.787436+00:00",
+  "source_sha256": "09b52cf01e6e36d50f3090211c0313cda0f436865507abd6c00493d5583fe9a7",
+  "source_unchanged": true,
+  "evidence_paths_exist": true,
+  "worker_result_fields_validated": true,
+  "research_passes_used_by_this_job": 0,
+  "scientific_test": "Source/model/nearest-theorem comparison and bounded literature screening; no proof research or numerical experiment",
+  "scientific_test_completed_before_main_cutoff": true,
+  "no_mathematical_acceptance": true
+}

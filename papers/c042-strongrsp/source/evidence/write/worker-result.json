@@ -1,0 +1,19 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Prepared, clean-built, inspected all nine pages, and froze the accepted full-scope manuscript. The actual STOC classification remains working_paper; release review is pending. Frozen mathematical evidence and source.md are unchanged.",
+  "next_test": "Separate RELEASE audit of citations, clean build and source-package reproduction, every-page visuals, and release gates; retain working_paper.",
+  "evidence": [
+    "manuscript/main.pdf",
+    "manuscript/main.tex",
+    "publication.json",
+    "audit/manuscript-snapshot.json",
+    "evidence/write/freeze-manuscript.json",
+    "evidence/write/validation.json",
+    "evidence/write/build-final.log",
+    "literature/user_bibliography_check.md",
+    "audit/stoc-assessment.json",
+    "checkpoint.md"
+  ]
+}

@@ -2,11 +2,13 @@
 
 [English](README.md) · [中文](README.zh-CN.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [日本語](README.ja.md)
 
-理論計算機科学の研究：アルゴリズム、計算量、組合せ論、オートマトン、最適化、プログラム解析。各課題に概要、論文PDF、元のソースアーカイブ、閲覧可能なコードを添える。**全26課題：submission_ready 0件、working_paper 26件。**
+理論計算機科学の研究：アルゴリズム、計算量、組合せ論、オートマトン、最適化、プログラム解析。各課題に概要、論文PDF、元のソースアーカイブ、閲覧可能なコードを添える。**全29課題：submission_ready 0件、working_paper 29件。**
 
 出所にかかわらず、全課題を同じ二分類で示す。submission_ready には重要性、新規性、技術的深さ、波及範囲、検証可能性のすべてについて根拠のある強い新規評価と、成果物検査の通過が必要である。working_paper はその水準に届かない結果や、未解決範囲・未評価部分が残る既存稿を含む。分類は内部判断であり、会議の採否ではない。数学的範囲は課題ごとに記す。[品質基準](QUALITY_STANDARD.md)も参照。
 
 各分類をクリックすると、全目次と各課題の概要が展開される。
+
+**本記録で c049 は未解決である。** [四回の研究記録](notes/c049-dualpreserve/README.ja.md) · [コード](notes/c049-dualpreserve/source/code/) · [ソースZIP](notes/c049-dualpreserve/source.zip)。共有セレクターの特定の族では疎な構成を証明したが、一般グラフ上の元問題は未解決である。論文PDFを伴わない研究記録として保存する。
 
 <details>
 <summary><strong>STOC 水準 · submission_ready (0)</strong></summary>
@@ -16,10 +18,13 @@
 </details>
 
 <details>
-<summary><strong>ワーキングペーパー · working_paper (26)</strong></summary>
+<summary><strong>ワーキングペーパー · working_paper (29)</strong></summary>
 
 | 課題 | ページ | ファイル |
 |---|---:|---|
+| Strongly Polynomial Near-Linear Preprocessing for All-Target Restricted Shortest Paths (`c042-strongrsp`) | 9 | [PDF](papers/c042-strongrsp/c042-strongrsp_working_paper.pdf) · [ZIP](papers/c042-strongrsp/source.zip) · [コード](papers/c042-strongrsp/source/) · [再現手順](papers/c042-strongrsp/README.md) |
+| Minimum Spanning Trees under Semi-Random Corruptions below One Half (`c037-msthalf`) | 7 | [PDF](papers/c037-msthalf/c037-msthalf_working_paper.pdf) · [ZIP](papers/c037-msthalf/source.zip) · [コード](papers/c037-msthalf/source/) · [再現手順](papers/c037-msthalf/README.md) |
+| Deterministic Quasipolynomial MST Approximation under Decrease-Only Corruption (`c040-mstdecfull`) | 8 | [PDF](papers/c040-mstdecfull/c040-mstdecfull_working_paper.pdf) · [ZIP](papers/c040-mstdecfull/source.zip) · [コード](papers/c040-mstdecfull/source/) · [再現手順](papers/c040-mstdecfull/README.md) |
 | Truly Subquadratic 3SUM over Every Bounded-Exponent Abelian Group (`c034-group3sum`) | 8 | [PDF](papers/c034-group3sum/c034-group3sum_working_paper.pdf) · [ZIP](papers/c034-group3sum/source.zip) · [コード](papers/c034-group3sum/source/) · [再現手順](papers/c034-group3sum/README.md) |
 | Truly Subcubic Exact Triangle over Bounded-Exponent Abelian Groups (`c034-grouptri`) | 8 | [PDF](papers/c034-grouptri/c034-grouptri_working_paper.pdf) · [ZIP](papers/c034-grouptri/source.zip) · [コード](papers/c034-grouptri/source/) · [再現手順](papers/c034-grouptri/README.md) |
 | Rectangular Batching for Disjoint Shortest Paths on DAGs (`c032-dspdag`) | 8 | [PDF](papers/c032-dspdag/c032-dspdag_working_paper.pdf) · [ZIP](papers/c032-dspdag/source.zip) · [コード](papers/c032-dspdag/source/) · [再現手順](papers/c032-dspdag/README.md) |
@@ -34,7 +39,7 @@
 | A Size-Independent Discrepancy Bound for Sparse Coverage Functions (`c002-coverage`) | 7 | [PDF](papers/c002-coverage/c002-coverage_working_paper.pdf) · [ZIP](papers/c002-coverage/source.zip) · [コード](papers/c002-coverage/source/) · [再現手順](papers/c002-coverage/README.md) |
 | A Global Sidorenko Inequality for 2-Subdivided Alternating Cycles (`c009-cycle2`) | 6 | [PDF](papers/c009-cycle2/c009-cycle2_working_paper.pdf) · [ZIP](papers/c009-cycle2/source.zip) · [コード](papers/c009-cycle2/source/) · [再現手順](papers/c009-cycle2/README.md) |
 | A Universal Partial Cycle with Three Wildcards per Window (`c012-upcycles`) | 5 | [PDF](papers/c012-upcycles/c012-upcycles_working_paper.pdf) · [ZIP](papers/c012-upcycles/source.zip) · [コード](papers/c012-upcycles/source/) · [再現手順](papers/c012-upcycles/README.md) |
-| Tight Mortality Bounds for Image-Bounded Nondeterministic Automata (`c015-imagebound`) | 6 | [PDF](papers/c015-imagebound/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/source.zip) · [コード](papers/c015-imagebound/source/) · [再現手順](papers/c015-imagebound/README.md) |
+| Tight Mortality Bounds for Image-Bounded Nondeterministic Automata (`c015-imagebound`) | 6 | [PDF](papers/c015-imagebound/versions/v2/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/versions/v2/source.zip) · [コード](papers/c015-imagebound/versions/v2/source/) · [再現手順](papers/c015-imagebound/README.md) |
 | Deciding Membership and Realizability for Wheeler Transducers (`c017-wheeler`) | 10 | [PDF](papers/c017-wheeler/c017-wheeler_working_paper.pdf) · [ZIP](papers/c017-wheeler/source.zip) · [コード](papers/c017-wheeler/source/) · [再現手順](papers/c017-wheeler/README.md) |
 | Coverage Correlation Gaps under Graph-Constrained Pairwise Independence (`coverage-sparse`) | 8 | [PDF](papers/coverage-sparse/coverage-sparse_working_paper.pdf) · [ZIP](papers/coverage-sparse/source.zip) · [コード](papers/coverage-sparse/source/) · [再現手順](papers/coverage-sparse/README.md) |
 | A Sparse-Cardinality Curvature Bound under Persistent Adversarial Noise (`curvature-noise`) | 6 | [PDF](papers/curvature-noise/curvature-noise_working_paper.pdf) · [ZIP](papers/curvature-noise/source.zip) · [コード](papers/curvature-noise/source/) · [再現手順](papers/curvature-noise/README.md) |
@@ -46,6 +51,24 @@
 | Is Quadratic Subtyping Optimal? Conditional Hardness on Shared Acyclic Type Graphs (`stoc3`) | 18 | [PDF](conversations/stoc3/stoc3_working_paper.pdf) · [ZIP](conversations/stoc3/source.zip) · [コード](conversations/stoc3/source/) · [再現手順](conversations/stoc3/README.md) |
 | Fully Dynamic Interprocedural Dataflow Analysis: OMv Barriers and Summary-Local TreeFlow Updates (`stoc4`) | 10 | [PDF](conversations/stoc4/stoc4_working_paper.pdf) · [ZIP](conversations/stoc4/versions/v2/source.zip) · [コード](conversations/stoc4/versions/v2/source/) · [再現手順](conversations/stoc4/README.md) |
 | Octagons Are APSP-Complete: Fine-Grained Complexity of Weakly Relational Abstract Domains (`stoc5`) | 19 | [PDF](conversations/stoc5/stoc5_working_paper.pdf) · [ZIP](conversations/stoc5/source.zip) · [コード](conversations/stoc5/source/) · [再現手順](conversations/stoc5/README.md) |
+
+### Strongly Polynomial Near-Linear Preprocessing for All-Target Restricted Shortest Paths
+
+**概要.** 非負の長さと費用、単一の始点、固定された費用予算を持つ有向制約付き最短路を扱う。精度の逆数に多項式依存するほぼ線形の前処理後、決定的な表現が各実行可能な終点に二基準 (1+epsilon) 近似を与える。算術操作回数は重みの大きさ、最大最小比、精度に依存しない。経路の復元には別途、決定的な多項式時間上界がある。停止された二つの時計、オフライン活性化、保守的な丸め、有界空間の復号を組み合わせ、精度依存の上界は余裕を持たせている。
+
+[PDF](papers/c042-strongrsp/c042-strongrsp_working_paper.pdf) · [ZIP](papers/c042-strongrsp/source.zip) · [コード](papers/c042-strongrsp/source/) · [再現手順](papers/c042-strongrsp/README.md)
+
+### Minimum Spanning Trees under Semi-Random Corruptions below One Half
+
+**概要.** 各点対の距離を確率 p で独立に選び、真の距離と選択集合を知る敵対者が選ばれた値を任意に変更する半ランダム汚染モデルで、最小全域木を研究する。固定 p<1/2 に対し、観測行列だけを使う有限の決定的手続きで、真の費用の期待値を最適値の O_p(log n) 倍に抑える。これにより二分の一未満の閾値を埋める。手続きは全探索を用い、技術の核は全距離スケールで矩形密度から経路費用を制御する不等式である。
+
+[PDF](papers/c037-msthalf/c037-msthalf_working_paper.pdf) · [ZIP](papers/c037-msthalf/source.zip) · [コード](papers/c037-msthalf/source/) · [再現手順](papers/c037-msthalf/README.md)
+
+### Deterministic Quasipolynomial MST Approximation under Decrease-Only Corruption
+
+**概要.** 観測された距離が減少する方向にだけ汚染されるモデルで、任意の固定 p<1 に対する決定的な準多項式時間の最小全域木近似を与える。敵対者は真の距離と独立な選択集合を知る。アルゴリズムは汚染観測だけから、真の費用の期待値が最適値の O_p(log^2 n) 倍となる全域経路を返す。算術・比較回数 n^{O_p(log n)} は距離の最大最小比に依存しない。分位点を用いた隠れた核の階層分割と、実際の外れ値の質量で費用を評価する深さ優先の葉順序を組み合わせる。
+
+[PDF](papers/c040-mstdecfull/c040-mstdecfull_working_paper.pdf) · [ZIP](papers/c040-mstdecfull/source.zip) · [コード](papers/c040-mstdecfull/source/) · [再現手順](papers/c040-mstdecfull/README.md)
 
 ### Truly Subquadratic 3SUM over Every Bounded-Exponent Abelian Group
 
@@ -141,7 +164,9 @@
 
 **概要.** k-image-bounded 非決定性有限オートマトンの死亡語長の既知上界が最適であることを示す。固定した任意の k≥2 について、最短死亡語長の最大値は Θk(n^(k+1)) となる。十分大きいすべての n に対し、二文字アルファベットと強連結性を要求しても下界が成立する。待ち行列と巡回時計による構成が遅延を生み、全入力語に対する像集合の制限を保つ。
 
-[PDF](papers/c015-imagebound/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/source.zip) · [コード](papers/c015-imagebound/source/) · [再現手順](papers/c015-imagebound/README.md)
+[PDF](papers/c015-imagebound/versions/v2/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/versions/v2/source.zip) · [コード](papers/c015-imagebound/versions/v2/source/) · [再現手順](papers/c015-imagebound/README.md)
+
+以前の版 (6 ページ): [PDF](papers/c015-imagebound/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/source.zip).
 
 ### Deciding Membership and Realizability for Wheeler Transducers
 
@@ -229,6 +254,12 @@ cd Theoretical-Computer-Science
 python3 scripts/verify_artifacts.py
 python3 scripts/reproduce.py --all
 python3 scripts/build_pdfs.py --all
+```
+
+c049 の研究記録は別途再現する。Python 3.10+ と C++17 コンパイラが必要：
+
+```sh
+python3 -B notes/c049-dualpreserve/source/reproduce.py
 ```
 
 catalog.json が統一機械可読目次、readiness.json が二分類の記録である。既存URLを維持し、現行PDF名に分類を付け、元のPDFとZIPを保存する。以前の比較は[英語](RANKING.md)と[中国語](RANKING.zh-CN.md)で参照できるが、旧時点を対象とし現行分類を決定しない。

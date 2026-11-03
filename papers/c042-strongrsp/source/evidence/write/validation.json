@@ -1,0 +1,37 @@
+{
+  "job_id": "c042-strongrsp-write-c0bda549b267",
+  "record_type": "writer_checks_not_release_audit",
+  "pdf": "manuscript/main.pdf",
+  "pdf_sha256": "0701106e5fbcc948ec972d3e042e5c342711638ad2c1feda6228872d0d1e6e59",
+  "pages": 9,
+  "pages_visually_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "renders": [
+    "tmp/pdfs/review-1.png",
+    "tmp/pdfs/review-2.png",
+    "tmp/pdfs/review-3.png",
+    "tmp/pdfs/review-4.png",
+    "tmp/pdfs/review-5.png",
+    "tmp/pdfs/review-6.png",
+    "tmp/pdfs/review-7.png",
+    "tmp/pdfs/review-8.png",
+    "tmp/pdfs/review-9.png"
+  ],
+  "visual_observation": "All final pages inspected: readable text and equations; no clipping, overlap, missing glyphs or unresolved references observed.",
+  "clean_build_log": "evidence/write/build-final.log",
+  "clean_build_exit_code": 0,
+  "build_warning": "acmart reports no affiliation city; no city was supplied by the user, and none was invented. Affiliation and email are present.",
+  "official_class_and_bst_unmodified": true,
+  "text_checks": "evidence/write/text-checks.json",
+  "readiness_label": "working_paper",
+  "fresh_release_audits_pending": true
+}

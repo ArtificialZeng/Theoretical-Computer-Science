@@ -1,0 +1,9 @@
+# All-target restricted shortest paths
+
+This is a local working paper, with mathematical scope accepted in the project dossier. The fresh internal STOC assessment is working_paper, with actual unresolved venue-level uncertainties. This folder does not indicate conference acceptance, submission, or release-audit completion.
+
+Build with `./build.sh` from this folder (or `./manuscript/build.sh` from the project root). It requires an installed TeX distribution with latexmk, pdfLaTeX, BibTeX, and the dependencies loaded by the official acmart v2.20 class. No system packages are installed by this script. The local acmart.cls and ACM-Reference-Format.bst are unmodified official inputs copied from the user-designated ACM template. The source uses single-column acmsmall mode, 11pt, letter paper, single spacing, and one-inch margins to match the current STOC submission layout; sigconf is the proceedings layout. The complete local article is nine pages, under the user's 12-total-page cap.
+
+The sole author is Zijian Zeng, UCSI University, 1002266693@ucsiuniversity.edu.my. The end-of-paper AI methodology statement discloses extensive substantive Codex use; no independent human verification is claimed. The separate title page contains the abstract at body font size; references also use 11pt. Four directly relevant primary references are included. There was no designated Excel bibliography.
+
+The complete proof is in main.tex; references.bib is the editable bibliography and main.bbl its generated typesetting input. No external figure files are needed. The project evidence directory contains small diagnostic checkers and the accepted proof dossier; finite checks are not substituted for the proof. A separate release worker must still audit citations, rebuild, inspect every page, and reproduce the source package before local release.

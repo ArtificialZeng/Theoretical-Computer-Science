@@ -1,0 +1,12 @@
+{
+  "job_id": "c040-mstdecfull-release-2ca818aceb48",
+  "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+  "manuscript_digest": "203aa4452ff612d76a7e2cf95734dfb62d168580ad5fa1fe30831cf086035682",
+  "pdf_digest": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660",
+  "stage": "ready; actual release gate passed; supervisor publish pending",
+  "finished_at": "2026-11-03T01:23:58.337624+00:00",
+  "readiness_label": "working_paper",
+  "research_passes_unchanged": 2,
+  "source_sha256": "09b52cf01e6e36d50f3090211c0313cda0f436865507abd6c00493d5583fe9a7",
+  "no_post_gate_manuscript_pdf_edits": true
+}

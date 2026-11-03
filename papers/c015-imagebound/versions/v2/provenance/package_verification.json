@@ -1,0 +1,367 @@
+{
+  "project": "c015-imagebound",
+  "actual_archive_sha256": "f956abcf3b9d2ba50c4831fd2c1292469f1334d27da887ce263ea8f872474f78",
+  "actual_pdf_sha256": "b2c1af7888a6e47966549882d4c977cefcaf4527cea394aaf4d57d8b62eabefb",
+  "build_inputs_rehashed": 6,
+  "clean_directory": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c015-imagebound-gkfrbkc6/c015-imagebound_source",
+  "pages": 6,
+  "text_matches": true,
+  "all_page_renders_match": true,
+  "finite_reproduction": [
+    {
+      "entry": "evidence/portable-check.py",
+      "summary": {
+        "finite_automata": 22,
+        "shortest_mortal_lengths": [
+          48,
+          91,
+          181,
+          63,
+          123,
+          243,
+          78,
+          155,
+          301,
+          7,
+          21,
+          21,
+          7,
+          21,
+          80,
+          37,
+          45,
+          843,
+          19,
+          13,
+          27,
+          13
+        ],
+        "all_quotient_potential_checks": 19392,
+        "parameter_arithmetic_cases": 1212,
+        "full_singleton_closure_checked": true,
+        "full_global_subset_bfs_checked": true,
+        "strong_connectivity_checked": true,
+        "scope": "Finite reproduction only; the all-parameter theorem is justified by the written proof.",
+        "cases": [
+          {
+            "m": 2,
+            "lengths": [
+              3,
+              5
+            ],
+            "states": 10,
+            "shortest": 48,
+            "reachable_global_sets": 65,
+            "singleton_images": 26,
+            "all_quotient_potential_checks": 240,
+            "strongly_connected": true
+          },
+          {
+            "m": 2,
+            "lengths": [
+              2,
+              3,
+              5
+            ],
+            "states": 12,
+            "shortest": 91,
+            "reachable_global_sets": 125,
+            "singleton_images": 43,
+            "all_quotient_potential_checks": 240,
+            "strongly_connected": true
+          },
+          {
+            "m": 2,
+            "lengths": [
+              3,
+              4,
+              5
+            ],
+            "states": 14,
+            "shortest": 181,
+            "reachable_global_sets": 245,
+            "singleton_images": 75,
+            "all_quotient_potential_checks": 480,
+            "strongly_connected": true
+          },
+          {
+            "m": 3,
+            "lengths": [
+              3,
+              5
+            ],
+            "states": 11,
+            "shortest": 63,
+            "reachable_global_sets": 129,
+            "singleton_images": 27,
+            "all_quotient_potential_checks": 240,
+            "strongly_connected": true
+          },
+          {
+            "m": 3,
+            "lengths": [
+              2,
+              3,
+              5
+            ],
+            "states": 13,
+            "shortest": 123,
+            "reachable_global_sets": 249,
+            "singleton_images": 44,
+            "all_quotient_potential_checks": 480,
+            "strongly_connected": true
+          },
+          {
+            "m": 3,
+            "lengths": [
+              3,
+              4,
+              5
+            ],
+            "states": 15,
+            "shortest": 243,
+            "reachable_global_sets": 489,
+            "singleton_images": 76,
+            "all_quotient_potential_checks": 960,
+            "strongly_connected": true
+          },
+          {
+            "m": 4,
+            "lengths": [
+              3,
+              5
+            ],
+            "states": 12,
+            "shortest": 78,
+            "reachable_global_sets": 257,
+            "singleton_images": 28,
+            "all_quotient_potential_checks": 1920,
+            "strongly_connected": true
+          },
+          {
+            "m": 4,
+            "lengths": [
+              2,
+              3,
+              5
+            ],
+            "states": 14,
+            "shortest": 155,
+            "reachable_global_sets": 497,
+            "singleton_images": 45,
+            "all_quotient_potential_checks": 1920,
+            "strongly_connected": true
+          },
+          {
+            "m": 4,
+            "lengths": [
+              3,
+              4,
+              5
+            ],
+            "states": 16,
+            "shortest": 301,
+            "reachable_global_sets": 977,
+            "singleton_images": 77,
+            "all_quotient_potential_checks": 1920,
+            "strongly_connected": true
+          },
+          {
+            "m": 2,
+            "lengths": [
+              2
+            ],
+            "states": 4,
+            "shortest": 7,
+            "reachable_global_sets": 11,
+            "singleton_images": 5,
+            "all_quotient_potential_checks": 16,
+            "strongly_connected": true
+          },
+          {
+            "m": 3,
+            "lengths": [
+              4
+            ],
+            "states": 7,
+            "shortest": 21,
+            "reachable_global_sets": 41,
+            "singleton_images": 8,
+            "all_quotient_potential_checks": 192,
+            "strongly_connected": true
+          },
+          {
+            "m": 5,
+            "lengths": [
+              3
+            ],
+            "states": 8,
+            "shortest": 21,
+            "reachable_global_sets": 129,
+            "singleton_images": 9,
+            "all_quotient_potential_checks": 960,
+            "strongly_connected": true
+          },
+          {
+            "m": 2,
+            "lengths": [
+              2,
+              2
+            ],
+            "states": 6,
+            "shortest": 7,
+            "reachable_global_sets": 11,
+            "singleton_images": 9,
+            "all_quotient_potential_checks": 16,
+            "strongly_connected": true
+          },
+          {
+            "m": 3,
+            "lengths": [
+              2,
+              4
+            ],
+            "states": 9,
+            "shortest": 21,
+            "reachable_global_sets": 41,
+            "singleton_images": 14,
+            "all_quotient_potential_checks": 192,
+            "strongly_connected": true
+          },
+          {
+            "m": 5,
+            "lengths": [
+              2,
+              4,
+              6
+            ],
+            "states": 17,
+            "shortest": 80,
+            "reachable_global_sets": 417,
+            "singleton_images": 30,
+            "all_quotient_potential_checks": 3840,
+            "strongly_connected": true
+          },
+          {
+            "m": 2,
+            "lengths": [
+              2,
+              3,
+              4
+            ],
+            "states": 11,
+            "shortest": 37,
+            "reachable_global_sets": 53,
+            "singleton_images": 24,
+            "all_quotient_potential_checks": 96,
+            "strongly_connected": true
+          },
+          {
+            "m": 5,
+            "lengths": [
+              2,
+              2,
+              3,
+              3
+            ],
+            "states": 15,
+            "shortest": 45,
+            "reachable_global_sets": 225,
+            "singleton_images": 22,
+            "all_quotient_potential_checks": 1920,
+            "strongly_connected": true
+          },
+          {
+            "m": 3,
+            "lengths": [
+              2,
+              3,
+              5,
+              7
+            ],
+            "states": 20,
+            "shortest": 843,
+            "reachable_global_sets": 1689,
+            "singleton_images": 231,
+            "all_quotient_potential_checks": 3360,
+            "strongly_connected": true
+          },
+          {
+            "m": 2,
+            "lengths": [
+              2,
+              3
+            ],
+            "states": 7,
+            "shortest": 19,
+            "reachable_global_sets": 29,
+            "singleton_images": 14,
+            "all_quotient_potential_checks": 48,
+            "strongly_connected": true
+          },
+          {
+            "m": 4,
+            "lengths": [
+              2,
+              2
+            ],
+            "states": 8,
+            "shortest": 13,
+            "reachable_global_sets": 49,
+            "singleton_images": 11,
+            "all_quotient_potential_checks": 128,
+            "strongly_connected": true
+          },
+          {
+            "m": 3,
+            "lengths": [
+              3,
+              6
+            ],
+            "states": 12,
+            "shortest": 27,
+            "reachable_global_sets": 57,
+            "singleton_images": 19,
+            "all_quotient_potential_checks": 96,
+            "strongly_connected": true
+          },
+          {
+            "m": 4,
+            "lengths": [
+              2
+            ],
+            "states": 6,
+            "shortest": 13,
+            "reachable_global_sets": 49,
+            "singleton_images": 7,
+            "all_quotient_potential_checks": 128,
+            "strongly_connected": true
+          }
+        ]
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c015-imagebound-gkfrbkc6/reproduction-0.stdout.log"
+    },
+    {
+      "entry": "evidence/portable-reassessment-check.py",
+      "summary": {
+        "finite_cases_recomputed": 61,
+        "serialized_original_records_checked": 18,
+        "potential_checks": 277168,
+        "simultaneous_replacement_checks": 5044,
+        "all_saved_case_results_match": true,
+        "scope": "61 finite case replays and included original-record comparisons; does not rerun nine extra intake certificates, private full-snapshot integrity, infinite proof, literature or novelty review"
+      },
+      "stdout_log": "/Users/mac/Documents/ChatGPT/STOC理论计算机/tmp/continuous-delivery-check/c015-imagebound-gkfrbkc6/reproduction-1.stdout.log"
+    }
+  ],
+  "compile_layout": {
+    "entry": "manuscript/c015-imagebound-write-b795278c1e36/main.tex",
+    "directory": "manuscript/c015-imagebound-write-b795278c1e36",
+    "filename": "main.tex",
+    "jobname": "working_paper",
+    "relative_output": "../../output/pdf",
+    "back_to_root": "../..",
+    "rebuilt_pdf": "output/pdf/working_paper.pdf"
+  },
+  "scope": "Actual delivered archive clean build/render/reproduction; not a new math or novelty verdict."
+}

@@ -1,0 +1,9 @@
+{
+  "job_id": "c015-imagebound-release-2bbd673a9c35",
+  "events": [
+    {
+      "event": "Initial helper regex did not allow the standard BibTeX percent/newline between optional bibitem label and key.",
+      "resolution": "Read BBL directly, strip TeX comments and allow whitespace. All three keys match. No manuscript or compiler defect; no mathematical consequence."
+    }
+  ]
+}

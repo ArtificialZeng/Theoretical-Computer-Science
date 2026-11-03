@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "schema": 1,
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+  "manuscript_digest": "203aa4452ff612d76a7e2cf95734dfb62d168580ad5fa1fe30831cf086035682",
+  "pdf_digest": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660",
+  "pages": 8,
+  "artifacts": {
+    "main.pdf": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660"
+  },
+  "provenance": {
+    "audit/math.json": "87dbebb103b91f40d9ddcc8b879a392685412c70eeace2dc5a0a5903d1e6d996",
+    "audit/math.md": "f72aba5a8e9d9fb011d141cd220d24696caa672d9c1d62f2f10c9a9a61178ed0",
+    "jobs/c040-mstdecfull-referee-8513177dc0bb/role.json": "d2b0ea5f8651d0a711a79b73d1b6b63a4d218bad041e0c9ede8ad8eb580596ab",
+    "audit/citations.json": "e738330216b5c89aa1305d312b219d03036451c7df58170812d71a4ef63bf6a4",
+    "audit/citations.md": "eeb8e64e9ec8d406a1bc6b841658058315e69fa240be640fbd877ce8be9213eb",
+    "jobs/c040-mstdecfull-release-2ca818aceb48/role.json": "698f91e55acc3e8da8d26c5f53fce314147274501367e1854d20ae1060138a7c",
+    "audit/build.json": "9c1f7cc2c4ae25db5a6a9d0283ddb5bafe42221bae18306eef3a9bfa1f046ca2",
+    "audit/build.md": "1e28e38b232bc29384ea06b2afc59cd11bf59235f57544a5f73365635c4deb57",
+    "audit/visual.json": "5919cb934322f52ad050426bc7f178ad15db7dc2978a8d0398e771cbb235a1e1",
+    "audit/visual.md": "42714b4441bd4083937556a82f1bb580dd52fc4682c95aa516ab3b2bd8a1c131",
+    "jobs/c040-mstdecfull-research-e695ca56645f/role.json": "cb8c9d4d596163de51b41a52933a1625e255fde675f174631ae9a59eeb1ebd70",
+    "manuscript/main.log": "d17727b8f8ec473b052fe1689ca049ad0b1170f8730d269c4cac17b6e0f9d9e6"
+  },
+  "citation_verdict": "accept_with_citation_limitations",
+  "unverified_citations": [
+    {
+      "citation": "fletcher2026",
+      "limitation": "Publisher metadata and stated abstract theorem verified; full proof and exclusion of equivalent auxiliary lemmas unverified due full-text access limitation. Manuscript makes only abstract-supported comparison."
+    }
+  ],
+  "job_id": "c040-mstdecfull-release-2ca818aceb48",
+  "command": "python3 /Users/mac/.codex/skills/4prove-or-disprove-math/scripts/release_gate.py check .",
+  "exit_code": 0
+}

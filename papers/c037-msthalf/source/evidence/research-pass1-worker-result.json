@@ -1,0 +1,22 @@
+{
+  "outcome": "continue",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Proved the rectangle cost-transfer bound for all two-level cluster metrics, giving a restricted observable O_p(log n) algorithm throughout p<1/2. Exact finite cluster and multiscale tests found no transfer failure; a small-side construction shows the deterministic kernel needs a linear r loss. General multiscale transfer and the immutable original remain unresolved. No candidate or manuscript; pass 1 recorded without changing runner counters.",
+  "next_test": "Prove or falsify inequality (K) in evidence/research-pass1-rectangle-transfer.md for arbitrary ultrametrics with nonuniform order weights, arbitrary hierarchy depth/heights and unequal clusters. Seek a hierarchy charging invariant paying each order weight O_eta(r) times and the remainder to the exact ultrametric MST sum; a falsifier must have unbounded cost/[r(W+MST)] with verified rectangle density. A positive result still needs extension to general metrics.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "evidence/research-pass1-entry.json",
+    "evidence/research-pass1-rectangle-transfer.md",
+    "evidence/rectangle_cluster_check.py",
+    "evidence/rectangle-cluster-check.json",
+    "evidence/rectangle_multiscale_check.py",
+    "evidence/rectangle-multiscale-check.json",
+    "evidence/rectangle-small-side-certificate.json",
+    "evidence/research-pass1-literature.md",
+    "evidence/checkpoint-before-pass1.md",
+    "evidence/research-pass1-validation.json"
+  ]
+}

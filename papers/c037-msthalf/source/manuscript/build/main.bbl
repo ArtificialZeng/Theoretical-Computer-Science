@@ -1,0 +1,76 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{2}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter does
+%%% not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+\makeatletter
+\@ifundefined{NAT@parse@date}{}{\let\NAT@parse@date@orig\NAT@parse@date}
+\@ifundefined{NAT@parse@date}{}{\def\NAT@parse@date#1#2#3#4#5#6@@{\NAT@parse@date@orig#1#2#3#4#5#6@@\def\NAT@tempyear{0000}\def\NAT@tempexlab{{?}}\ifx\NAT@year\NAT@tempyear\ifx\NAT@exlab\NAT@tempexlab\def\NAT@date{[n.\,d.]}\else\edef\NAT@date{[n.\,d.]\NAT@exlab}\fi\fi}}
+\makeatother
+
+\bibitem[Anand et~al\mbox{.}(2026)]%
+        {AGJLV26}
+\bibfield{author}{\bibinfo{person}{Aditya Anand}, \bibinfo{person}{Anupam
+  Gupta}, \bibinfo{person}{Rajesh Jayaram}, \bibinfo{person}{Euiwoong Lee},
+  {and} \bibinfo{person}{Ali Vakilian}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Approximating Minimum Spanning Trees in Metrics under
+  Semi-Random Corruptions}.
+\newblock
+\showeprint[arxiv]{2610.40594}~[cs.DS]
+\href{https://doi.org/10.48550/arXiv.2610.40594}{doi:\nolinkurl{10.48550/arXiv.2610.40594}}
+\newblock
+\shownote{Version 1, 29 October 2026}.
+
+
+\bibitem[Bateni et~al\mbox{.}(2024)]%
+        {BDJW24}
+\bibfield{author}{\bibinfo{person}{MohammadHossein Bateni},
+  \bibinfo{person}{Prathamesh Dharangutte}, \bibinfo{person}{Rajesh Jayaram},
+  {and} \bibinfo{person}{Chen Wang}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Metric Clustering and {MST} with Strong and Weak
+  Distance Oracles}. In \bibinfo{booktitle}{\emph{Proceedings of Thirty Seventh
+  Conference on Learning Theory}} \emph{(\bibinfo{series}{Proceedings of
+  Machine Learning Research}, Vol.~\bibinfo{volume}{247})},
+  \bibfield{editor}{\bibinfo{person}{Shipra Agrawal} {and}
+  \bibinfo{person}{Aaron Roth}} (Eds.). \bibinfo{publisher}{PMLR},
+  \bibinfo{pages}{498--550}.
+\newblock
+\urldef\tempurl%
+\url{https://proceedings.mlr.press/v247/bateni24a.html}
+\showURL{%
+\tempurl}
+
+
+\end{thebibliography}

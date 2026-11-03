@@ -1,0 +1,17 @@
+{
+  "audit/innovation.json": "bc306cc418128a57ac164648a769dc849f94faed2c414939852233cc3cc430e4",
+  "audit/manuscript-snapshot.json": "6e67880073b370cbc7ccb367a766be8a48ef178f902e789287dbcf4bea00adba",
+  "audit/math.json": "5b3baf84e1291e7616567b792df5d0de7c00f618f61e4864531da767b44991e5",
+  "audit/math.md": "38266073f3a8cf4ad4cf481ef81a754524dee898e5f68d77091a942e052c7894",
+  "audit/snapshot.json": "aacd41b026c18a75454eb97f4bf95d4914fec6bd75b8d26c1142826de4be764b",
+  "audit/stoc-assessment.json": "baf2370c199ab3efa36d5eb0ce3ef6f1901c6fbc15c5a0dac8c02cbe5fb31cf6",
+  "claim.json": "143b4b6b8f64c1e6a87aa5f59bab56d7380ed7eb31badcb3a69e88f08a2a84cf",
+  "manuscript/c015-imagebound-write-b795278c1e36/ACM-Reference-Format.bst": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04",
+  "manuscript/c015-imagebound-write-b795278c1e36/acmart.cls": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "manuscript/c015-imagebound-write-b795278c1e36/main.tex": "f1b1ea8a9b55142cb6c243f4ab27e8f3335844b49256fa33cc2f08eeb77074bb",
+  "manuscript/c015-imagebound-write-b795278c1e36/references.bib": "1aaa57c35d95d31eb46877c9ecd1772dfb026e1a08593a57be41d8c8068171d7",
+  "manuscript/c015-imagebound-write-b795278c1e36/working_paper.bbl": "650ec513518dbc6aa842293241841c44a9cbb3d90b3e1e8a8357b1fe2a445adc",
+  "manuscript/c015-imagebound-write-b795278c1e36/working_paper.pdf": "b2c1af7888a6e47966549882d4c977cefcaf4527cea394aaf4d57d8b62eabefb",
+  "publication.json": "2b4afbd39d13ac44468e1e9ac1cadc4fbd72e1f526d93eae42b2fcaf07003180",
+  "source.md": "7cf4a0de6b28019b0fa2f5e92ea04bee150c74cb9db945e382c75d8379326aa7"
+}

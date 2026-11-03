@@ -1,0 +1,26 @@
+{
+  "job_id": "c037-msthalf-release-aff0d39d4223",
+  "fls_local_inputs": [
+    "manuscript/acmart.cls",
+    "manuscript/build/main.bbl",
+    "manuscript/main.tex"
+  ],
+  "bibtex_inputs": [
+    "manuscript/references.bib",
+    "manuscript/ACM-Reference-Format.bst"
+  ],
+  "declared_source_files": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/acmart.dtx",
+    "manuscript/build.sh",
+    "manuscript/build/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "missing_local_dependencies": [],
+  "snapshot_digest": "d0a2fbd366a632f17366053e75f1a37a1254cc80a92e14c60a7d14734548277b",
+  "pdf_digest": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+  "manuscript_digest": "21d0504817983aa84f21573d2ff6560239183353573fc2cc1d767e3501675427"
+}

@@ -1,0 +1,110 @@
+{
+  "package_schema": 5,
+  "project": "c037-msthalf",
+  "title": "Minimum Spanning Trees under Semi-Random Corruptions below One Half",
+  "readiness_label": "working_paper",
+  "stoc_assessment": {
+    "job_id": "c037-msthalf-referee-9071a36d85a3",
+    "snapshot_digest": "d0a2fbd366a632f17366053e75f1a37a1254cc80a92e14c60a7d14734548277b",
+    "review_type": "fresh_internal_stoc_assessment",
+    "verdict": "working_paper",
+    "strongest_result": "For every fixed real 0<=p<1/2, an explicit finite deterministic algorithm observing only arbitrary symmetrically corrupted pair distances, n and p returns a spanning tree of expected true cost at most C_p max(1,ln n) MST(d), uniformly over every n>=2, every finite metric and every omniscient post-mask adversary. No metric promise on observations or true-distance queries are used. Its central all-metric ordered-path transfer bound is (320r/eta)W+(8r/eta)MST(d) under positive density and domination on all large disjoint rectangles.",
+    "nearest_comparisons": [
+      "Anand et al., arXiv:2610.40594v1, Theorems 1.4/5.3: same information-theoretic objective and arbitrary-replacement model for p<1/4. The accepted result covers every p<1/2; the primary record still lists only v1 on 2 November 2026 UTC. https://arxiv.org/html/2610.40594v1",
+      "Anand et al., Lemmas 3.2 and 5.6: repair and preorder framework is inherited and credited. The old common-good-neighbor argument needs bad density below 1/2; the new star/interval argument works from any positive hereditary rectangle density. The prior repair mechanism, not a new benchmark method, supplies the expected comparison tree.",
+      "Anand et al., Theorem 1.5: linear obstruction for p>=1/2, making the completed threshold sharp; no new lower-bound theorem or computational improvement is supplied.",
+      "Bateni et al., COLT 2024, PMLR 247:498-550, Theorem 4 assumes metric observations and hence does not settle the unrestricted problem. Appendix F.2.2/Theorem 32 supplies a logarithmic obstruction at p=1/3, where the candidate attains that order. https://proceedings.mlr.press/v247/bateni24a.html"
+    ],
+    "criteria": {
+      "importance": {
+        "judgment": "strong",
+        "reason": "This completes a natural information-theoretic threshold for MST under arbitrary post-mask corruptions, closing the entire gap between the verified quarter-corruption logarithmic upper bound and half-corruption linear obstruction in Anand et al., Theorems 1.4 and 1.5. It retains all metrics and the true-cost objective, rather than solving a restricted parameter example."
+      },
+      "novelty": {
+        "judgment": "strong",
+        "reason": "The fresh primary comparison and bounded current searches found no full below-half upper bound. The decisive all-metric rectangle-to-path inequality is absent from the prior common-neighbor proof and does not follow by changing its density parameter; the candidate explicitly credits the repair and selection framework. This supports a substantive original delta relative to the checked literature without certifying exhaustive priority."
+      },
+      "technical_depth": {
+        "judgment": "uncertain",
+        "reason": "The hardest genuinely new step is the all-scale interval overlap bound obtained from hereditary density, a metric star and matching endpoint exclusion. It is correct and nonroutine, but the completed argument is a compact certificate refinement atop the prior exhaustive-search and repair framework. The packet establishes neither a deeper algorithmic implementation nor further structural consequences demonstrating that this technique has the depth or reach expected for a strong STOC submission."
+      },
+      "breadth_or_consequence": {
+        "judgment": "uncertain",
+        "reason": "The threshold is exact and the deterministic transfer lemma has potential reuse, but demonstrated consequences remain confined to information-theoretic MST in one newly studied corruption model. No polynomial or quasi-polynomial algorithm, improvement of the logarithmic approximation order, or application to another optimization or learning objective is proved. Such extensions are not prerequisites for mathematical acceptance, but their absence leaves the broad STOC significance case uncertain."
+      },
+      "exposition_and_verifiability": {
+        "judgment": "strong",
+        "reason": "The frozen proof specifies finite observable selection, tie rules, rational constants, all-n expectation bounds and adversary quantifiers. I reconstructed every central implication and independently checked 160 metrics, 2,802,752 rectangles and all 33,866 masks up to n=6. Finite checks are correctly separated from universal proof. Final manuscript, citation, build and visual release checks remain outstanding and are not asserted here."
+      }
+    },
+    "case_for_stoc": "The affirmative case is a complete sharp-threshold theorem for robust metric optimization: the prior general-corruption method stops at p<1/4, while positive rectangle density and an all-scale metric-star argument reach every p<1/2 without another logarithm. This is conceptually cleaner and stronger than a local counterexample or routine parameter improvement. The critical limitation is that the same inefficient certificate-search paradigm remains, and no wider consequence of the new transfer inequality is demonstrated. The verified result merits a mathematical paper, but the evidence does not justify an all-strong competitive STOC assessment. Retain working_paper rather than upgrading from correctness alone.",
+    "remaining_weaknesses": [
+      "STOC-level technical depth and broad impact remain uncertain for a compact single-problem threshold completion.",
+      "The algorithm enumerates spanning trees and rectangle tests; no new efficiency guarantee is proved.",
+      "Potential uses of the metric transfer lemma outside this MST composition are not established.",
+      "Current novelty searches are bounded and cannot exclude unindexed or unpublished parallel developments.",
+      "A final manuscript and its required citation, build, every-page visual and release checks have not been produced in this referee job."
+    ],
+    "label_is_not_a_venue_decision": true
+  },
+  "pages": 7,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "original_status": "proved",
+  "kind": "resolution-paper",
+  "pdf": "c037-msthalf_working_paper.pdf",
+  "pdf_sha256": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+  "source_archive": "c037-msthalf_source_and_reproducibility.zip",
+  "source_archive_sha256": "09c2542fdb61a65445ece333d11dbe4a503bb38a7a47bea11fe6d757a2207564",
+  "class_file": "manuscript/acmart.cls",
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "reproduce_scripts": [
+    "evidence/interval_packing_check.py",
+    "evidence/verify_interval_packing.py"
+  ],
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4"
+    },
+    "kind": "resolution-paper",
+    "manuscript_digest": "21d0504817983aa84f21573d2ff6560239183353573fc2cc1d767e3501675427",
+    "original_status": "proved",
+    "pages": 7,
+    "pdf_digest": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+    "provenance": {
+      "audit/build.json": "fe51d8927b513b3c8c85c64ec6bc04bc29a632c28b8a537f03c9cac30201416e",
+      "audit/build.md": "ce711bce9a6bf4a0af14fe82761edaa88329eef95dc30d02f7606cd059f548df",
+      "audit/citations.json": "3f82823fcf92e85e6a6fe4342e19ae244e818a0a0700e286e6c25f66aac2e1b7",
+      "audit/citations.md": "8648f585537df6c8c830490b030f8db945464c4905c113dc0384ec1103d0e2fc",
+      "audit/math.json": "b20ddee6f5bfd5886adfdf31d5917f03a176b66fe860a876d3a3d5879be10cd1",
+      "audit/math.md": "1cd923e477e83246cb5880e5eea140d02a2c4fedef220d30b6a3122d28114c9f",
+      "audit/visual.json": "6980949427411f1cc35576d7e388df29e8bfdfc647a857a1f3d989d0c0782bf3",
+      "audit/visual.md": "c82318331a66594fb0cd35118a81648f56e0fa82f86774e10a03aab695f38c4c",
+      "jobs/c037-msthalf-referee-9071a36d85a3/role.json": "d257c6c2a9363aee2d4036ccb61fc7d079132c6857d76158ed8619c1f5ad528f",
+      "jobs/c037-msthalf-release-aff0d39d4223/role.json": "2de8549a19a6946877f14b8972a115b713ec7f691d246fb28a2f353035d79e82",
+      "jobs/c037-msthalf-research-d39900f29f79/role.json": "1afe7321eb03776b4a33de5454f87047100cb76dbf09248ce9e5902a3333d4b5",
+      "manuscript/build/main.log": "6bb194b50532010522e01ccf2c34e7ff953e2470117aea06ff175bd22798aa68"
+    },
+    "schema": 1,
+    "snapshot_digest": "d0a2fbd366a632f17366053e75f1a37a1254cc80a92e14c60a7d14734548277b"
+  },
+  "citation_verdict": "accept",
+  "citation_limitations": [],
+  "excluded_third_party_text_caches": [],
+  "external_submission_performed": false
+}

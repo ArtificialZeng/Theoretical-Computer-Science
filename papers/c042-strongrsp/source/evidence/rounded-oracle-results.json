@@ -1,0 +1,6843 @@
+{
+  "job_id": "c042-strongrsp-research-266844093669",
+  "source_sha256": "93e36d243f9b6fec1df5dda18aacab258ad91c62c8465d0a010fddadbb319aa7",
+  "all_checks_passed": true,
+  "fixtures": 25,
+  "cases": 600,
+  "totals": {
+    "reference_policy_evaluations": 17820,
+    "reference_nonterminating_policies": 240,
+    "settled_states": 3600,
+    "bellman_residual_checks": 6864,
+    "value_and_policy_comparisons": 3600,
+    "strict_rounding_inflations": 603
+  },
+  "records": [
+    {
+      "fixture": 0,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 0,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 0,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 0,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 0,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 0,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 0,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 0,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 0,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 0,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 0,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 0,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 0,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 0,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 0,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 0,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 0,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 0,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 0,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 0,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 0,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 0,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 0,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 0,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 1,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 1,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "1/1024",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 1,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 1,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "1/1024",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 1,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 1,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "1/1024",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 1,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 1,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "1/1024",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 1,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 1,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "1/1024",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 1,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 1,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "1/1024",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 1,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 1,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "1/1024",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 1,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 1,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "1/1024",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 1,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 1,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 1,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 1,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 4,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 1,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 1,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 1,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 1,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 4,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 2,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 2,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "1/64",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 2,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 2,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "1/64",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 2,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 2,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 2,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 2,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 2,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 2,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "3/1024",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 2,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 2,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "3/1024",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 2,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 2,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 2,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 2,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 2,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 2,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 2,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 2,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 2,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 2,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 2,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 2,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 3,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 3,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 3,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 3,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 3,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 3,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 3,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 3,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 3,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 3,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 3,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 3,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 3,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 3,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 3,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 3,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 3,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 3,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 3,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 3,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 3,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 3,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 3,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 3,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 4,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 4,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "15/512",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 4,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 4,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "15/512",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 4,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "3/128",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 4,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "71/2048",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 4,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "3/128",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 4,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 4,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "33/1024",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 5,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 4,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 4,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "11/4096",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 4,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 4,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "11/4096",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 4,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "7/2048",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 4,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "63/16384",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 4,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 4,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 4,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "1/512",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 5,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 4,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 4,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "1/16384",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 4,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 4,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "1/16384",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 4,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "1/8192",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 4,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "33/131072",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 4,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 4,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 4,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 5,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 5,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 5,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 5,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 5,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 5,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 5,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 5,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 5,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 5,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 5,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 5,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 5,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 5,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 5,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 5,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 5,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 5,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 5,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 5,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 5,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 5,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 5,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 5,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 5,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 6,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 6,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "7/256",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 6,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 6,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "1/64",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 6,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 6,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "7/256",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 6,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 6,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "1/64",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 6,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 6,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "3/1024",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 6,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 6,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 6,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 6,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "3/1024",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 6,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 6,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 6,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 6,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "1/8192",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 6,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 6,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 6,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 6,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "1/8192",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 6,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 6,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 7,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 7,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 7,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 7,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 7,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 7,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 7,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 7,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 7,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 7,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 7,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 7,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 7,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 7,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 7,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 7,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 7,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 7,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 7,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 7,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 7,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 7,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 7,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 7,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 8,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 8,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 8,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "7/256",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 8,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "3/128",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 8,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "11/512",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 8,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "11/512",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 8,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "31/1024",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 8,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "63/2048",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 8,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 8,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 8,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "7/2048",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 8,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 8,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "15/4096",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 8,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "15/4096",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 8,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "127/32768",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 8,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "7/2048",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 8,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 8,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 8,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 8,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 8,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "1/16384",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 8,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "1/16384",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 8,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "15/65536",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 8,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 9,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 9,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 9,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 9,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 9,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "3/128",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 9,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 9,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "3/128",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 9,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 9,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 9,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 9,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 9,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 9,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "3/2048",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 9,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 9,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "3/2048",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 9,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 9,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 9,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 9,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 9,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 9,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 9,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 9,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 9,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 10,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 10,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 10,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 10,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 10,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 10,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 10,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 10,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 10,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 10,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 10,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 10,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 10,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 10,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 10,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 10,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 10,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 10,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 10,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 10,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 10,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 10,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 10,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 10,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 11,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 11,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 11,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 11,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 11,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 11,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 11,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 11,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 11,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 11,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 11,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 11,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 11,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 11,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 11,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 11,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 11,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 11,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 11,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 11,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 11,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 11,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 11,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 11,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 12,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 12,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "3/128",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 12,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 12,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "3/128",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 12,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "7/256",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 12,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "7/256",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 12,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "3/128",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 12,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "15/512",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 12,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 12,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "3/1024",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 12,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 12,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "3/1024",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 12,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "3/1024",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 12,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "151/32768",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 12,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 12,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "1/512",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 12,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 12,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "3/16384",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 12,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 12,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "3/16384",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 12,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "1/8192",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 12,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "11/65536",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 12,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 12,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 13,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 13,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 13,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 13,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 13,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 13,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 13,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 13,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 13,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 13,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 13,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 13,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 13,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 13,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 13,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 13,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 13,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 13,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 13,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 13,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 13,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 13,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 13,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 13,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 14,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 14,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 14,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "3/128",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 14,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "3/128",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 14,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 14,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 14,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "3/128",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 14,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "3/128",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 14,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 14,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 14,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "3/2048",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 14,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "3/2048",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 14,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 14,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 14,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 14,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 14,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 14,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 14,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 14,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 14,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 14,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 14,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 14,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 15,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 15,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 15,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 15,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 15,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "3/128",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 15,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "3/128",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 15,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "1/64",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 15,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "1/64",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 15,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 15,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 15,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 15,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 15,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "7/2048",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 15,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "7/2048",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 15,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 15,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 15,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 15,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 15,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 15,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 15,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 15,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 15,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 15,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 16,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 16,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "3/128",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 16,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "7/256",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 16,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "7/256",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 16,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 16,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "1/64",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 4,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 16,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "3/128",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 16,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "3/128",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 4,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 16,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 16,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "7/2048",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 16,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "15/4096",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 16,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "15/4096",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 16,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 16,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 4,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 16,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 16,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 4,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 16,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 16,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 16,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "1/8192",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 16,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "1/8192",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 16,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 16,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 4,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 16,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 16,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 4,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 17,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 17,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "7/256",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 17,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "3/256",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 17,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "7/256",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 17,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 17,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "7/256",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 17,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "3/128",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 17,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "7/256",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 17,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 17,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "7/4096",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 17,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "11/4096",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 17,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "11/4096",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 17,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 17,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 17,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 17,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 17,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 17,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "1/8192",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 17,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "1/8192",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 17,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "1/8192",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 17,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 17,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 17,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 17,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 18,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 18,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "1/64",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 18,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 18,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "1/64",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 18,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 18,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "5/256",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 18,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 18,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "5/256",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 18,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 18,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "1/1024",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 18,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 18,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "19/8192",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 18,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 18,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 18,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 18,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "3/1024",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 18,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 18,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "1/8192",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 18,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 18,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "5/32768",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 18,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 18,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 18,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 18,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 19,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 19,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "7/256",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 19,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 19,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "3/128",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 19,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "1/64",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 19,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "7/256",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 19,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "3/128",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 19,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "3/128",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 19,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 19,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "7/4096",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 19,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 19,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 19,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "3/1024",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 19,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "3/1024",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 19,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 19,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "3/1024",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 19,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 19,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "1/8192",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 19,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 19,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 19,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "1/8192",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 19,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "13/65536",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 19,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 19,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 20,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 20,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 20,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 20,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 20,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 20,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 20,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 20,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 20,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 20,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 20,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 20,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 20,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 20,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 20,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 20,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 20,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 20,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 20,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 20,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 20,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 20,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 20,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 20,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 21,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 21,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 21,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 21,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 21,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 21,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 21,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 21,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 21,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 21,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 21,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 21,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 21,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 21,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 21,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 21,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 21,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 21,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 21,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 21,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 21,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 21,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 21,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 21,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 22,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 22,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "1/64",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 22,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 22,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "1/64",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 22,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "7/256",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 22,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "7/256",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 22,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "1/64",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 22,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "27/1024",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 4,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 22,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 22,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "1/512",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 22,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 22,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "1/512",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 22,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "9/4096",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 22,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "199/65536",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 22,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 22,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "3/1024",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 4,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 22,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 22,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 22,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 22,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 22,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "1/8192",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 22,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "5/32768",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 22,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 3,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 22,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 4,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 23,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 23,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 23,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 23,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 23,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 23,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 23,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 23,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 23,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 23,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 23,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 23,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 23,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 23,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 23,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 23,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 23,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 23,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 23,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 1,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 23,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 23,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 23,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 23,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 23,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 24,
+      "bits": 5,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/32",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 24,
+      "bits": 5,
+      "active": [
+        1
+      ],
+      "max_error": "1/1099511627776",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 24,
+      "bits": 5,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 24,
+      "bits": 5,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "1/1099511627776",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 24,
+      "bits": 5,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/16",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 24,
+      "bits": 5,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "1/1099511627776",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 24,
+      "bits": 5,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/32",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 24,
+      "bits": 5,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "1/1099511627776",
+      "error_bound": "5/8",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 24,
+      "bits": 8,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/256",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 24,
+      "bits": 8,
+      "active": [
+        1
+      ],
+      "max_error": "1/1099511627776",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 24,
+      "bits": 8,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 24,
+      "bits": 8,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "1/1099511627776",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 24,
+      "bits": 8,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/128",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 24,
+      "bits": 8,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "1/1099511627776",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 24,
+      "bits": 8,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/256",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 24,
+      "bits": 8,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "1/1099511627776",
+      "error_bound": "5/64",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    },
+    {
+      "fixture": 24,
+      "bits": 12,
+      "active": [],
+      "max_error": "0",
+      "error_bound": "5/4096",
+      "max_realized_policy_rank": 0,
+      "rank_bound": 5
+    },
+    {
+      "fixture": 24,
+      "bits": 12,
+      "active": [
+        1
+      ],
+      "max_error": "1/1099511627776",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 24,
+      "bits": 12,
+      "active": [
+        2
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 24,
+      "bits": 12,
+      "active": [
+        1,
+        2
+      ],
+      "max_error": "1/1099511627776",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 24,
+      "bits": 12,
+      "active": [
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "5/2048",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 10
+    },
+    {
+      "fixture": 24,
+      "bits": 12,
+      "active": [
+        1,
+        3
+      ],
+      "max_error": "1/1099511627776",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 24,
+      "bits": 12,
+      "active": [
+        2,
+        3
+      ],
+      "max_error": "0",
+      "error_bound": "15/4096",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 15
+    },
+    {
+      "fixture": 24,
+      "bits": 12,
+      "active": [
+        1,
+        2,
+        3
+      ],
+      "max_error": "1/1099511627776",
+      "error_bound": "5/1024",
+      "max_realized_policy_rank": 2,
+      "rank_bound": 20
+    }
+  ],
+  "scope": "Specified rational q=2 finite fixtures with all active vertex subsets and b=5,8,12. Policy enumeration is the prior reference implementation, not an independent referee. No full RSP or conservative Poisson construction claim. This checker tests rounded static values, policies and residuals; rounded offline composition is a proof extension, not experimentally implemented here."
+}

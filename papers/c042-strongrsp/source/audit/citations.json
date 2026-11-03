@@ -1,0 +1,25 @@
+{
+  "verdict": "accept",
+  "job_id": "c042-strongrsp-release-8a7cb8c2de68",
+  "snapshot_digest": "b8a4224397c4874b51af65e8b82a4b17fef250e6e90513e63334f9d6b3b5e4e9",
+  "manuscript_digest": "80de7a1953cf2134fbcf45bdbab2b636aba6fb432d64e347ae0d2bbbc1c528f1",
+  "pdf_digest": "2714f0ab95d08c01d19aeacd5bf39597123d9cca31658ade6773a1bba658e703",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/build.sh",
+    "manuscript/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "All seven declared sources, complete recorder/BibTeX dependencies, all four cited primary records and exact nearby theorem/section attributions, accepted-scope consistency, bounded current novelty comparison, final extracted and rendered references checked on 2026-11-03 UTC. Initial A26 versioned abstract cache miss resolved with current primary record and v2 text. No user-designated Excel/BibTeX authority; no remaining citation-access limitation. Mathematical and working_paper assessments preserved.",
+  "citation_audit_method": "citation-check-skill-advisory + primary-source-manual",
+  "metadata_basis": "accessible_primary_source_records",
+  "unverified_citations": [],
+  "claim_extraction": "evidence/release/citation-extraction.json",
+  "readiness_label": "working_paper"
+}

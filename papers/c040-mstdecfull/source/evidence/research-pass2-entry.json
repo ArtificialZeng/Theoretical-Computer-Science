@@ -1,0 +1,31 @@
+{
+  "job_id": "c040-mstdecfull-research-e695ca56645f",
+  "phase": "research",
+  "accumulated_research_pass": 2,
+  "pass_cap": 3,
+  "actual_dispatch_utc": "2026-11-03T00:42:19+00:00",
+  "entry_read_clock_utc": "2026-11-03T00:44:20+00:00",
+  "recorded_utc": "2026-11-03T00:45:46.675151+00:00",
+  "main_test_deadline_utc": "2026-11-03T00:59:18.999814+00:00",
+  "finalization_deadline_utc": "2026-11-03T01:02:18.999781+00:00",
+  "files_at_entry": {
+    "source.md": "09b52cf01e6e36d50f3090211c0313cda0f436865507abd6c00493d5583fe9a7",
+    "problem.md": "4919e8c0082dcf9dc14ed9f8a35eca4e30c658bfb33e39dc816e3df09d7f7147",
+    "claim.json": "5262c3f5153e1587953e0104e118361a64f4b4f16c7d6e61bca6f9a6e549f955",
+    "research/full-resolution-proof.md": "402a70aefa4ca873f813db680c89ccac93fbf6a7c9b22eca87f0192781bb4f53",
+    "audit/snapshot.json": "c2157e216896c1253affec0332d6a9a9182f49fd913958c255bbfeda1f04a182",
+    "audit/math.json": "6a62945db0159c819812ab5a1e6db32508db5be61406ef7c2359b5f8d03a5fc0",
+    "audit/math.md": "bc9296a6f7cbb72baa4096831fc6a6462ff9aab3f53fbd16c05ffcd4f27f5ee7",
+    "audit/innovation.json": "b81f081f4a0eb4d4ab1b188f5186e01873a95abe79ea4d08df8be3a69f88bc4b",
+    "audit/stoc-assessment.json": "6e1ddcd268c321bd2ad3ed82a3d31ef519288ef705696202f97ba13d578b0fe2",
+    "intake/outlier-sensitive-log2.md": "a9e1bee60fc72ec0d3830b6d17c52025e3392dcdd63a4b1a303be9450451fa99",
+    "history/cubic-pass1-20261103T004138Z/preservation.json": "baab65cf385a5a88508460bb485e1d91de408a8b5050201afdc0670162c7dac7"
+  },
+  "prior_review_scope": "Cubic-log frozen candidate only; actual accept and working_paper assessment preserved. They do not cover quadratic strengthening.",
+  "new_test": "Retain actual outlier charges and test deep uneven hierarchies with independently varying cores, empty cores and repeated clusters; reconstruct full O_q(log^2 n) proof.",
+  "constraints": [
+    "No agents, other Codex processes or background workers.",
+    "No original, frozen proof, past audit, historical counter or scheduling edits.",
+    "No manuscript or authored PDF."
+  ]
+}

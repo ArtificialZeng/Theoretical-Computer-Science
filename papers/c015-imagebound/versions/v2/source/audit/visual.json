@@ -1,0 +1,16 @@
+{
+  "verdict": "accept",
+  "job_id": "c015-imagebound-release-2bbd673a9c35",
+  "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+  "manuscript_digest": "0b0a26f7526dc9b1387c6717bfb131d92f985b87e259fd50d4c89f0e27da96de",
+  "pdf_digest": "b2c1af7888a6e47966549882d4c977cefcaf4527cea394aaf4d57d8b62eabefb",
+  "report": "audit/visual.md",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

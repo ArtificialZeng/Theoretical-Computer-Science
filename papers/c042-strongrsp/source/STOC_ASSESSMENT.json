@@ -1,0 +1,44 @@
+{
+  "job_id": "c042-strongrsp-referee-5010e06f0ba2",
+  "snapshot_digest": "b8a4224397c4874b51af65e8b82a4b17fef250e6e90513e63334f9d6b3b5e4e9",
+  "review_type": "fresh_internal_stoc_assessment",
+  "verdict": "working_paper",
+  "strongest_result": "Full positive resolution of immutable source.md: uniform deterministic all-target bicriteria directed RSP preprocessing and space K(m+n)log(n+2)^20 epsilon^-100 for arbitrary finite nonnegative real weights and parallel edges, with exact zero-optimum handling, actual reported length bounds, and deterministic aspect-independent polynomial-time bounded-space witness queries.",
+  "nearest_comparisons": [
+    "Ashvinkumar, arXiv:2610.18337v2, Theorem 1, Sections 4 and 6: deterministic near-linear all-target RSP with log(nW), supplying the clock DP and conditional-expectation potential. The accepted result removes W rather than improving those basic ingredients.",
+    "Ashvinkumar--Bernstein--Karczmarz, arXiv:2410.17179v1, Lemma C.1: strongly polynomial reduction for a single source-target pair. The accepted result supplies aggregate all-target preprocessing without n separate runs.",
+    "Gorkiewicz--Karczmarz, arXiv:2502.10348v1, Theorem 1.3 and Section 6, Algorithm 4 and Lemmas 6.1--6.3: recursive offline ordinary SSSP and multiplicative counting. The accepted result proves a nonadditive vertex-closed stopped-clock contract with clipping and finite-rank rounding.",
+    "McCauley--Moseley--Niaparast--Niaparast--Singh, ICALP 2025, Theorem 1: offline approximate ordinary SSSP in O(m log(nW) log^3(n) loglog(n)/epsilon). This additional precedent further limits any novelty claim for the recursive architecture itself. Primary links and checked scopes are in audit/referee-literature.md."
+  ],
+  "criteria": {
+    "importance": {
+      "judgment": "strong",
+      "reason": "The result resolves the precise all-target strong-polynomiality issue expressly distinguished after Theorem 2 of Ashvinkumar v2 and in ABK's open-problem discussion, for a classical directed constrained-path problem. It removes an unbounded numerical-aspect dependence while keeping near-linear preprocessing."
+    },
+    "novelty": {
+      "judgment": "strong",
+      "reason": "The bounded primary search found no equivalent full all-target result. The verified single-target bottleneck and offline ordinary-SSSP theorems do not entail the proposed theorem. The nonadditive stopped-control integration, finite-rank error and edge-local coverage constitute a substantive delta; Poisson clocks, witness potentials and recursive activation themselves are credited prior art. This is a bounded priority assessment."
+    },
+    "technical_depth": {
+      "judgment": "uncertain",
+      "reason": "The hardest new step is preserving causality and first-hit pricing under whole-vertex boundary restriction, clipping and bounded-bit rounding, with incident-only aggregate work. Its proof is valid and nonroutine, but the central clock and recursive architectures are imported, and the present assessment cannot confidently establish that their integration has the exceptional conceptual depth expected for competitive STOC work. The deliberately loose epsilon^-100 guarantee also obscures the method's sharp strength."
+    },
+    "breadth_or_consequence": {
+      "judgment": "uncertain",
+      "reason": "All-input directed two-resource RSP is a meaningful consequence and avoids arbitrary numerical precision dependence. A broader theorem for other stochastic systems, multiple resources or additional algorithmic applications is not part of the frozen accepted scope. Such consequences should not be inferred from the plausible reusability of the local oracle."
+    },
+    "exposition_and_verifiability": {
+      "judgment": "uncertain",
+      "reason": "The frozen dossier contains sufficient reconstructible algorithms, proofs and explicit finite numerical bounds; fresh exact boundary/offline checks pass. It is distributed across multiple pass records, and the new parallel ICALP offline-SSSP precedent must be added to any manuscript comparison. A concise self-contained submission exposition, especially of preprocessing versus query work and the numerical compiler, has not yet been evaluated. No formalization or full-scale production implementation is claimed."
+    }
+  },
+  "case_for_stoc": "A complete strongly polynomial near-linear all-target directed RSP algorithm is a concrete advance over an explicit numerical-aspect barrier in recent primary work. The combination of positive bounded failure prices, first-hit nonadditive boundary solving, clipping and local scale events explains why all targets can share near-linear work. This gives a serious significance case and passes the mathematical innovation gate. The present record does not justify treating that case as a confident competitive STOC assessment: broader consequences, the depth beyond the imported architectures, a sharper parameter presentation and final exposition remain uncertain. Therefore the actual classification is working_paper.",
+  "remaining_weaknesses": [
+    "Competitive technical depth beyond the established clock and recursive offline architectures remains uncertain.",
+    "Only the frozen two-resource theorem is established; no broader stochastic-control or multi-resource consequence is certified.",
+    "The epsilon dependence is deliberately very loose and no practical efficiency claim is supported.",
+    "The dossier needs concise manuscript exposition and the additional McCauley et al. primary comparison; no manuscript or artifact-release review has yet occurred.",
+    "Literature screening is bounded, not an exhaustive priority certificate."
+  ],
+  "label_is_not_a_venue_decision": true
+}

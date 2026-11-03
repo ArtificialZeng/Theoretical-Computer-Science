@@ -2,11 +2,13 @@
 
 [English](README.md) · [中文](README.zh-CN.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [日本語](README.ja.md)
 
-理论计算机科学研究：算法、复杂性、组合数学、自动机、优化及程序分析。每个课题提供摘要、论文 PDF、原始源码包及可浏览代码。**共26个课题：0个 submission_ready，26个 working_paper。**
+理论计算机科学研究：算法、复杂性、组合数学、自动机、优化及程序分析。每个课题提供摘要、论文 PDF、原始源码包及可浏览代码。**共29个课题：0个 submission_ready，29个 working_paper。**
 
 全部课题统一按以下两类展示，不再按工作来源分组。submission_ready 需要新的审核对重要性、新颖性、技术深度、影响范围及可核验性均给出有充分依据的强评价，并通过文件交付检查；working_paper 收录未达到该标准的结果，以及范围仍有限或缺少相应审核的已有稿件。分类属于内部判断，不是会议录用结论；各课题的实际数学范围分别说明。详见[质量标准](QUALITY_STANDARD.md)。
 
 点击下方任一分组，展开完整目录与各课题摘要。
+
+**c049 在这些记录中仍未解决。** [四轮研究记录](notes/c049-dualpreserve/README.zh-CN.md) · [代码](notes/c049-dualpreserve/source/code/) · [源码 ZIP](notes/c049-dualpreserve/source.zip)。已证明一个共享选择器图族的稀疏构造，原始任意图问题仍未解决；按研究记录归档，没有论文 PDF。
 
 <details>
 <summary><strong>STOC 级别 · submission_ready (0)</strong></summary>
@@ -16,10 +18,13 @@
 </details>
 
 <details>
-<summary><strong>工作论文 · working_paper (26)</strong></summary>
+<summary><strong>工作论文 · working_paper (29)</strong></summary>
 
 | 课题 | 页数 | 文件 |
 |---|---:|---|
+| Strongly Polynomial Near-Linear Preprocessing for All-Target Restricted Shortest Paths (`c042-strongrsp`) | 9 | [PDF](papers/c042-strongrsp/c042-strongrsp_working_paper.pdf) · [ZIP](papers/c042-strongrsp/source.zip) · [代码](papers/c042-strongrsp/source/) · [复现说明](papers/c042-strongrsp/README.md) |
+| Minimum Spanning Trees under Semi-Random Corruptions below One Half (`c037-msthalf`) | 7 | [PDF](papers/c037-msthalf/c037-msthalf_working_paper.pdf) · [ZIP](papers/c037-msthalf/source.zip) · [代码](papers/c037-msthalf/source/) · [复现说明](papers/c037-msthalf/README.md) |
+| Deterministic Quasipolynomial MST Approximation under Decrease-Only Corruption (`c040-mstdecfull`) | 8 | [PDF](papers/c040-mstdecfull/c040-mstdecfull_working_paper.pdf) · [ZIP](papers/c040-mstdecfull/source.zip) · [代码](papers/c040-mstdecfull/source/) · [复现说明](papers/c040-mstdecfull/README.md) |
 | Truly Subquadratic 3SUM over Every Bounded-Exponent Abelian Group (`c034-group3sum`) | 8 | [PDF](papers/c034-group3sum/c034-group3sum_working_paper.pdf) · [ZIP](papers/c034-group3sum/source.zip) · [代码](papers/c034-group3sum/source/) · [复现说明](papers/c034-group3sum/README.md) |
 | Truly Subcubic Exact Triangle over Bounded-Exponent Abelian Groups (`c034-grouptri`) | 8 | [PDF](papers/c034-grouptri/c034-grouptri_working_paper.pdf) · [ZIP](papers/c034-grouptri/source.zip) · [代码](papers/c034-grouptri/source/) · [复现说明](papers/c034-grouptri/README.md) |
 | Rectangular Batching for Disjoint Shortest Paths on DAGs (`c032-dspdag`) | 8 | [PDF](papers/c032-dspdag/c032-dspdag_working_paper.pdf) · [ZIP](papers/c032-dspdag/source.zip) · [代码](papers/c032-dspdag/source/) · [复现说明](papers/c032-dspdag/README.md) |
@@ -34,7 +39,7 @@
 | A Size-Independent Discrepancy Bound for Sparse Coverage Functions (`c002-coverage`) | 7 | [PDF](papers/c002-coverage/c002-coverage_working_paper.pdf) · [ZIP](papers/c002-coverage/source.zip) · [代码](papers/c002-coverage/source/) · [复现说明](papers/c002-coverage/README.md) |
 | A Global Sidorenko Inequality for 2-Subdivided Alternating Cycles (`c009-cycle2`) | 6 | [PDF](papers/c009-cycle2/c009-cycle2_working_paper.pdf) · [ZIP](papers/c009-cycle2/source.zip) · [代码](papers/c009-cycle2/source/) · [复现说明](papers/c009-cycle2/README.md) |
 | A Universal Partial Cycle with Three Wildcards per Window (`c012-upcycles`) | 5 | [PDF](papers/c012-upcycles/c012-upcycles_working_paper.pdf) · [ZIP](papers/c012-upcycles/source.zip) · [代码](papers/c012-upcycles/source/) · [复现说明](papers/c012-upcycles/README.md) |
-| Tight Mortality Bounds for Image-Bounded Nondeterministic Automata (`c015-imagebound`) | 6 | [PDF](papers/c015-imagebound/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/source.zip) · [代码](papers/c015-imagebound/source/) · [复现说明](papers/c015-imagebound/README.md) |
+| Tight Mortality Bounds for Image-Bounded Nondeterministic Automata (`c015-imagebound`) | 6 | [PDF](papers/c015-imagebound/versions/v2/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/versions/v2/source.zip) · [代码](papers/c015-imagebound/versions/v2/source/) · [复现说明](papers/c015-imagebound/README.md) |
 | Deciding Membership and Realizability for Wheeler Transducers (`c017-wheeler`) | 10 | [PDF](papers/c017-wheeler/c017-wheeler_working_paper.pdf) · [ZIP](papers/c017-wheeler/source.zip) · [代码](papers/c017-wheeler/source/) · [复现说明](papers/c017-wheeler/README.md) |
 | Coverage Correlation Gaps under Graph-Constrained Pairwise Independence (`coverage-sparse`) | 8 | [PDF](papers/coverage-sparse/coverage-sparse_working_paper.pdf) · [ZIP](papers/coverage-sparse/source.zip) · [代码](papers/coverage-sparse/source/) · [复现说明](papers/coverage-sparse/README.md) |
 | A Sparse-Cardinality Curvature Bound under Persistent Adversarial Noise (`curvature-noise`) | 6 | [PDF](papers/curvature-noise/curvature-noise_working_paper.pdf) · [ZIP](papers/curvature-noise/source.zip) · [代码](papers/curvature-noise/source/) · [复现说明](papers/curvature-noise/README.md) |
@@ -46,6 +51,24 @@
 | Is Quadratic Subtyping Optimal? Conditional Hardness on Shared Acyclic Type Graphs (`stoc3`) | 18 | [PDF](conversations/stoc3/stoc3_working_paper.pdf) · [ZIP](conversations/stoc3/source.zip) · [代码](conversations/stoc3/source/) · [复现说明](conversations/stoc3/README.md) |
 | Fully Dynamic Interprocedural Dataflow Analysis: OMv Barriers and Summary-Local TreeFlow Updates (`stoc4`) | 10 | [PDF](conversations/stoc4/stoc4_working_paper.pdf) · [ZIP](conversations/stoc4/versions/v2/source.zip) · [代码](conversations/stoc4/versions/v2/source/) · [复现说明](conversations/stoc4/README.md) |
 | Octagons Are APSP-Complete: Fine-Grained Complexity of Weakly Relational Abstract Domains (`stoc5`) | 19 | [PDF](conversations/stoc5/stoc5_working_paper.pdf) · [ZIP](conversations/stoc5/source.zip) · [代码](conversations/stoc5/source/) · [复现说明](conversations/stoc5/README.md) |
+
+### Strongly Polynomial Near-Linear Preprocessing for All-Target Restricted Shortest Paths
+
+**摘要.** 研究具有非负长度与费用、单源和固定费用预算的有向受限最短路。经过近线性规模、精度倒数多项式依赖的预处理，确定性表示为每个可行终点提供双准则 (1+epsilon) 近似。算术操作次数不依赖权值大小、长宽比或输入精度；路径见证解码另有确定性多项式时间界。构造结合停止双时钟预言过程、离线激活、保守舍入和有界空间解码，精度参数依赖保留了较宽松的上界。
+
+[PDF](papers/c042-strongrsp/c042-strongrsp_working_paper.pdf) · [ZIP](papers/c042-strongrsp/source.zip) · [代码](papers/c042-strongrsp/source/) · [复现说明](papers/c042-strongrsp/README.md)
+
+### Minimum Spanning Trees under Semi-Random Corruptions below One Half
+
+**摘要.** 研究半随机污染下的最小生成树：每个点对距离独立以概率 p 被标记，知晓真实度量和全部标记的对手可任意修改被标记值。对每个固定 p<1/2，仅利用观测矩阵的有限确定性过程达到期望真实代价 O_p(log n) 近似，补齐二分之一阈值以下的保证。过程采用穷举搜索；核心是跨全部距离尺度的矩形密度到路径代价转移不等式。
+
+[PDF](papers/c037-msthalf/c037-msthalf_working_paper.pdf) · [ZIP](papers/c037-msthalf/source.zip) · [代码](papers/c037-msthalf/source/) · [复现说明](papers/c037-msthalf/README.md)
+
+### Deterministic Quasipolynomial MST Approximation under Decrease-Only Corruption
+
+**摘要.** 针对只会降低观测距离的污染，对所有固定标记概率 p<1，给出确定性准多项式时间的度量最小生成树近似算法。对手知晓真实度量与独立随机标记；算法仅使用污染观测，输出期望真实代价为最优值 O_p(log^2 n) 倍的生成路径。其算术和比较次数为 n^{O_p(log n)}，与距离长宽比无关。证明结合基于分位数的隐藏核心层次划分，以及按实际离群点质量计费的深度优先叶序路径界。
+
+[PDF](papers/c040-mstdecfull/c040-mstdecfull_working_paper.pdf) · [ZIP](papers/c040-mstdecfull/source.zip) · [代码](papers/c040-mstdecfull/source/) · [复现说明](papers/c040-mstdecfull/README.md)
 
 ### Truly Subquadratic 3SUM over Every Bounded-Exponent Abelian Group
 
@@ -141,7 +164,9 @@
 
 **摘要.** k-image-bounded 非确定性自动机的已知死亡词长度上界是否紧？本文证明，对每个固定 k≥2，最短死亡词长度的最大值为 Θk(n^(k+1))。对所有充分大的 n，即便要求二元字母表和强连通性，下界仍成立。队列与循环时钟产生所需延迟，全局像集不变量保证任意输入词都不违反 k 像集限制。
 
-[PDF](papers/c015-imagebound/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/source.zip) · [代码](papers/c015-imagebound/source/) · [复现说明](papers/c015-imagebound/README.md)
+[PDF](papers/c015-imagebound/versions/v2/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/versions/v2/source.zip) · [代码](papers/c015-imagebound/versions/v2/source/) · [复现说明](papers/c015-imagebound/README.md)
+
+早期版本 (6 页数): [PDF](papers/c015-imagebound/c015-imagebound_working_paper.pdf) · [ZIP](papers/c015-imagebound/source.zip).
 
 ### Deciding Membership and Realizability for Wheeler Transducers
 
@@ -229,6 +254,12 @@ cd Theoretical-Computer-Science
 python3 scripts/verify_artifacts.py
 python3 scripts/reproduce.py --all
 python3 scripts/build_pdfs.py --all
+```
+
+c049 研究记录单独复现，需要 Python 3.10+ 和 C++17 编译器：
+
+```sh
+python3 -B notes/c049-dualpreserve/source/reproduce.py
 ```
 
 catalog.json 是统一的机器可读目录，readiness.json 记录两类状态。原有文件链接继续有效；当前 PDF 文件名带状态标记，原 PDF 与 ZIP 均保留。此前的[英文](RANKING.md)及[中文](RANKING.zh-CN.md)比较评价仍可查阅，但只针对旧快照，不决定当前就绪状态。

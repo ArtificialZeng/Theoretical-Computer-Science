@@ -1,0 +1,14 @@
+{
+  "job_id": "c037-msthalf-research-d39900f29f79",
+  "role": "research",
+  "assigned_pass": 3,
+  "maximum_accumulated_passes": 3,
+  "dispatch_utc": "2026-11-02T21:04:47Z",
+  "entry_clock_utc": "2026-11-02T21:06:46Z",
+  "recorded_utc": "2026-11-02T21:08:43.056332+00:00",
+  "source_sha256": "d45cd6730fe3f8685cb796b9d75ebe8e7926c1584021d045a282021749e45128",
+  "new_decisive_input": "Supervisor general-metric interval-packing candidate read; checking full original composition instead of repeating ultrametric enumeration",
+  "scientific_deadline_utc": "2026-11-02T21:21:46.999991Z",
+  "finalization_deadline_utc": "2026-11-02T21:24:46.999989Z",
+  "subagents_spawned": 0
+}

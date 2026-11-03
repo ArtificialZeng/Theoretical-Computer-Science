@@ -1,0 +1,7 @@
+{
+  "job_id": "c015-imagebound-write-9f5b77760f77",
+  "operation": "check-math",
+  "exit_code": 0,
+  "stdout": "{\"ok\":true,\"snapshot_digest\":\"cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e\",\"referee_job_id\":\"c015-imagebound-referee-c91c0d194005\"}",
+  "stderr": ""
+}

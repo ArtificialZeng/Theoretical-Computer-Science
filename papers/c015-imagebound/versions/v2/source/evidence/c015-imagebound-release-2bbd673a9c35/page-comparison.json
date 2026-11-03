@@ -1,0 +1,42 @@
+{
+  "job_id": "c015-imagebound-release-2bbd673a9c35",
+  "resolution_dpi": 125,
+  "pages": [
+    {
+      "page": 1,
+      "reviewed_image": "evidence/c015-imagebound-release-2bbd673a9c35/page-1.png",
+      "portable_image": "evidence/c015-imagebound-release-2bbd673a9c35/portable-page-1.png",
+      "rendered_bytes_identical": true
+    },
+    {
+      "page": 2,
+      "reviewed_image": "evidence/c015-imagebound-release-2bbd673a9c35/page-2.png",
+      "portable_image": "evidence/c015-imagebound-release-2bbd673a9c35/portable-page-2.png",
+      "rendered_bytes_identical": true
+    },
+    {
+      "page": 3,
+      "reviewed_image": "evidence/c015-imagebound-release-2bbd673a9c35/page-3.png",
+      "portable_image": "evidence/c015-imagebound-release-2bbd673a9c35/portable-page-3.png",
+      "rendered_bytes_identical": true
+    },
+    {
+      "page": 4,
+      "reviewed_image": "evidence/c015-imagebound-release-2bbd673a9c35/page-4.png",
+      "portable_image": "evidence/c015-imagebound-release-2bbd673a9c35/portable-page-4.png",
+      "rendered_bytes_identical": true
+    },
+    {
+      "page": 5,
+      "reviewed_image": "evidence/c015-imagebound-release-2bbd673a9c35/page-5.png",
+      "portable_image": "evidence/c015-imagebound-release-2bbd673a9c35/portable-page-5.png",
+      "rendered_bytes_identical": true
+    },
+    {
+      "page": 6,
+      "reviewed_image": "evidence/c015-imagebound-release-2bbd673a9c35/page-6.png",
+      "portable_image": "evidence/c015-imagebound-release-2bbd673a9c35/portable-page-6.png",
+      "rendered_bytes_identical": true
+    }
+  ]
+}

@@ -9,7 +9,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def verify(p):
-    for key, digest in [('pdf','pdf_sha256'),('source_archive','source_archive_sha256')]:
+    keys=[('source_archive','source_archive_sha256')]
+    if 'pdf' in p:
+        keys.append(('pdf','pdf_sha256'))
+    else:
+        assert p.get('kind')=='unresolved-research-record' and p.get('has_pdf') is False
+    for key, digest in keys:
         assert hashlib.sha256((ROOT / p[key]).read_bytes()).hexdigest() == p[digest], p[key]
     source = ROOT / p['source_directory']
     prefix = p['archive_prefix']
@@ -35,7 +40,13 @@ def main():
         count=verify(p)
         versions=[{'pdf':v['pdf'],'files':verify(v)} for v in p.get('additional_versions',[])]
         records.append({'id':p['id'],'files':count,'additional_versions':versions,'verified':True})
-    print(json.dumps({'verified':True,'topics':len(records),'papers':records},indent=2))
+    research=[]
+    index=ROOT/'research-records.json'
+    if index.is_file():
+        for p in json.loads(index.read_text())['records']:
+            research.append({'id':p['id'],'original_status':p['original_status'],
+                             'files':verify(p),'verified':True,'has_pdf':False})
+    print(json.dumps({'verified':True,'topics':len(records),'papers':records,'research_records':research},indent=2))
 
 
 if __name__ == '__main__':

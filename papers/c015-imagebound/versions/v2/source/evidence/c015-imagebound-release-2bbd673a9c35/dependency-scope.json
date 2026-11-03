@@ -1,0 +1,41 @@
+{
+  "job_id": "c015-imagebound-release-2bbd673a9c35",
+  "sources_checked": [
+    "manuscript/c015-imagebound-write-b795278c1e36/ACM-Reference-Format.bst",
+    "manuscript/c015-imagebound-write-b795278c1e36/acmart.cls",
+    "manuscript/c015-imagebound-write-b795278c1e36/main.tex",
+    "manuscript/c015-imagebound-write-b795278c1e36/references.bib",
+    "manuscript/c015-imagebound-write-b795278c1e36/working_paper.bbl"
+  ],
+  "citation_keys": [
+    "A2017",
+    "KR2025",
+    "R2024"
+  ],
+  "bibliography_keys": [
+    "A2017",
+    "KR2025",
+    "R2024"
+  ],
+  "undefined_citations": false,
+  "local_fls_inputs": [
+    "./acmart.cls",
+    "./working_paper.aux",
+    "./working_paper.bbl",
+    "./working_paper.out",
+    "acmart.cls",
+    "main.tex",
+    "working_paper.aux",
+    "working_paper.bbl",
+    "working_paper.out"
+  ],
+  "generated_auxiliary_inputs_excluded": [
+    "working_paper.aux",
+    "working_paper.out"
+  ],
+  "system_tex_packages_excluded": true,
+  "other_authored_imports": [],
+  "dependency_scope_complete": true,
+  "fls_digest": "c92060866d395d8a8bfa6a482ac6f7d444886f51695742f676e6bccfc7e45cac",
+  "blg_digest": "d56e69044cff14e76cc2569032d0cf184cb7ee37687f356663cd63568e14c9ee"
+}

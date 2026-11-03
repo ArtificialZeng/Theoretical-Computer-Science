@@ -1,0 +1,68 @@
+{
+  "verdict": "accept",
+  "job_id": "c042-strongrsp-release-8a7cb8c2de68",
+  "snapshot_digest": "b8a4224397c4874b51af65e8b82a4b17fef250e6e90513e63334f9d6b3b5e4e9",
+  "manuscript_digest": "80de7a1953cf2134fbcf45bdbab2b636aba6fb432d64e347ae0d2bbbc1c528f1",
+  "pdf_digest": "2714f0ab95d08c01d19aeacd5bf39597123d9cca31658ade6773a1bba658e703",
+  "report": "audit/visual.md",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "rendering": "pdftoppm -r 115 -png",
+  "page_images": [
+    {
+      "page": 1,
+      "file": "evidence/release/pages/page-01.png",
+      "sha256": "6560e0557cf72d9151ea7452f71a6378ee6a460e612766b007b8760675098ba9"
+    },
+    {
+      "page": 2,
+      "file": "evidence/release/pages/page-02.png",
+      "sha256": "84f1357ee90e02573d66946a810c532480980a0a33e12ae68d6985ca618200cc"
+    },
+    {
+      "page": 3,
+      "file": "evidence/release/pages/page-03.png",
+      "sha256": "1273b5e50133cdb9b9495aa8f069132dcb648cbd938ecf11b08340b5c6fd2a56"
+    },
+    {
+      "page": 4,
+      "file": "evidence/release/pages/page-04.png",
+      "sha256": "5ee735b2343b1f8535a46dab4e5c245d48cd0fb198e3ed2dcae4100e3e0224fb"
+    },
+    {
+      "page": 5,
+      "file": "evidence/release/pages/page-05.png",
+      "sha256": "cfd973e707797ffe495a5d7b74dd7d03d0649b35b606b4d16e6d42f1660528bd"
+    },
+    {
+      "page": 6,
+      "file": "evidence/release/pages/page-06.png",
+      "sha256": "b6314f4f01a8541509874ffe24f19004be78ccdc84bdb0cf6099602c13578c3c"
+    },
+    {
+      "page": 7,
+      "file": "evidence/release/pages/page-07.png",
+      "sha256": "796bc7f240828b6d99c59aa11672934e4e108065cacbd801cab31b3a761d571d"
+    },
+    {
+      "page": 8,
+      "file": "evidence/release/pages/page-08.png",
+      "sha256": "7182569bc2929fce754baa0e7ad540ff4738a4f6c8433aa2460c42313ff1d2d4"
+    },
+    {
+      "page": 9,
+      "file": "evidence/release/pages/page-09.png",
+      "sha256": "f20f8d4e604056a2d8027caf1b3dafb95f00931a4759fd82bd41d28ce3998e46"
+    }
+  ],
+  "readiness_label": "working_paper"
+}

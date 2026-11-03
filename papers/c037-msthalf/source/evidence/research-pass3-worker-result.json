@@ -1,0 +1,21 @@
+{
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Proposed full proof resolves the immutable p<1/2 question using observable rectangle domination and an all-metric interval-packing theorem. Exact finite consistency checks pass. Fresh correctness, novelty, significance and STOC review remains required; no manuscript or acceptance was created.",
+  "next_test": "Freeze claim.json and its evidence, then obtain a genuinely fresh referee check of the metric-star overlap argument, all-n expectation, full original quantifiers, current novelty and STOC significance. No fourth research pass.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "claim.json",
+    "evidence/research-pass3-full-proof.md",
+    "evidence/research-pass3-literature.md",
+    "evidence/research-pass3-adversarial-review.md",
+    "evidence/interval_packing_check.py",
+    "evidence/verify_interval_packing.py",
+    "evidence/interval-packing-check.json",
+    "evidence/interval-packing-validation.json",
+    "evidence/research-pass3-validation.json"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "outcome": "continue",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Pass 2 isolated the ultrametric large-child kernel and proved a 2r*MST bound for the remaining transitions. Verified 180 nonuniform-weight configurations and an exact positive-density family excluding coefficient 2 in the stronger kernel. Universal transfer and the immutable original remain unresolved; one research pass remains.",
+  "next_test": "Prove or parametrically falsify B_r <= 4rW for arbitrary ultrametrics and nonuniform order weights under dominated, nonempty disjoint r-by-r rectangles, using one hierarchy-wide charging invariant. B_r counts transitions whose LCA endpoint children both have more than r leaves. An ultrametric proof still requires extension to general metrics.",
+  "evidence": [
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "evidence/research-pass2-ultrametric-reduction.md",
+    "evidence/ultrametric_nonuniform_check.py",
+    "evidence/ultrametric-nonuniform-check.json",
+    "evidence/verify_ultrametric_nonuniform.py",
+    "evidence/large-child-stress-certificate.json",
+    "evidence/research-pass2-literature.md",
+    "evidence/research-pass2-validation.json"
+  ]
+}

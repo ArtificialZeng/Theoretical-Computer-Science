@@ -1,0 +1,29 @@
+{
+  "job_id": "c040-mstdecfull-release-2ca818aceb48",
+  "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+  "manuscript_digest": "203aa4452ff612d76a7e2cf95734dfb62d168580ad5fa1fe30831cf086035682",
+  "pdf_digest": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660",
+  "reviewed_at": "2026-11-03T01:23:11.061168+00:00",
+  "verdict": "accept",
+  "report": "audit/visual.md",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "rendered_page_files": [
+    "evidence/release-2ca818aceb48/rendered/page-1.png",
+    "evidence/release-2ca818aceb48/rendered/page-2.png",
+    "evidence/release-2ca818aceb48/rendered/page-3.png",
+    "evidence/release-2ca818aceb48/rendered/page-4.png",
+    "evidence/release-2ca818aceb48/rendered/page-5.png",
+    "evidence/release-2ca818aceb48/rendered/page-6.png",
+    "evidence/release-2ca818aceb48/rendered/page-7.png",
+    "evidence/release-2ca818aceb48/rendered/page-8.png"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "job_id": "c049-dualpreserve-research-c6b2b0ea3f71",
+  "status": "all declared finite checks passed",
+  "rows": [
+    {
+      "dim": 2,
+      "digit_bound": 2,
+      "modulus": 33,
+      "progression_free_set": [
+        1,
+        4
+      ],
+      "matching_count": 33,
+      "core_minimum_degree": 2,
+      "n": 199,
+      "m": 330,
+      "core_edges": 66,
+      "all_source_target_reachability_checks": 1089,
+      "mandatory_core_witnesses": 66,
+      "one_failure_witnesses": 33,
+      "two_failure_witnesses": 33,
+      "minimum_outside_sources_on_witness_cuts": 32,
+      "minimum_inside_targets_on_witness_cuts": 2
+    },
+    {
+      "dim": 3,
+      "digit_bound": 2,
+      "modulus": 129,
+      "progression_free_set": [
+        1,
+        4,
+        16
+      ],
+      "matching_count": 129,
+      "core_minimum_degree": 3,
+      "n": 1033,
+      "m": 1935,
+      "core_edges": 387,
+      "all_source_target_reachability_checks": 16641,
+      "mandatory_core_witnesses": 387,
+      "one_failure_witnesses": 129,
+      "two_failure_witnesses": 258,
+      "minimum_outside_sources_on_witness_cuts": 128,
+      "minimum_inside_targets_on_witness_cuts": 6
+    },
+    {
+      "dim": 3,
+      "digit_bound": 3,
+      "modulus": 433,
+      "progression_free_set": [
+        8,
+        13,
+        38,
+        48,
+        73,
+        78
+      ],
+      "matching_count": 433,
+      "core_minimum_degree": 6,
+      "n": 6063,
+      "m": 12990,
+      "core_edges": 2598,
+      "all_source_target_reachability_checks": 187489,
+      "mandatory_core_witnesses": 2598,
+      "one_failure_witnesses": 433,
+      "two_failure_witnesses": 2165,
+      "minimum_outside_sources_on_witness_cuts": 432,
+      "minimum_inside_targets_on_witness_cuts": 26
+    }
+  ],
+  "mandatory_core_witnesses": 3051,
+  "elapsed_seconds": 4.713025208096951,
+  "limits": "Three exact sphere-selector instances only. All matching edges and all original source/target combinations checked. No exhaustive graph search, no finite random-demand expansion claim, and no original-scope resolution.",
+  "code_sha256": "c1c3b3db3f094a3361c83aae795b072066e069652ce3279dc520af3a77b82cd9"
+}

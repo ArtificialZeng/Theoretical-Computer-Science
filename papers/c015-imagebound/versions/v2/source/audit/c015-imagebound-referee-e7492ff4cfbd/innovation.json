@@ -1,0 +1,15 @@
+{
+  "job_id": "c015-imagebound-referee-e7492ff4cfbd",
+  "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+  "verdict": "accept",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    "Kiefer and Ryzhikov, The Complexity of Reachability Problems in Strongly Connected Finite Automata, MFCS 2025, DOI 10.4230/LIPIcs.MFCS.2025.62, Section 7 pp.62:14-15 and Section 9 p.62:16: global image-boundedness and the n^(k+1) mortality upper bound with its tightness question; verified in the frozen primary text and refreshed primary record.",
+    "Ryzhikov, On shortest products for nonnegative matrix mortality, RP 2024, DOI 10.1007/978-3-031-72621-7_8; arXiv:2405.19622v4, Section 4 displayed two-block binary DFA construction: verified queue action and physical deterministic delay block.",
+    "Ananichev, A new lower bound for reset threshold of synchronizing automata with sink state, arXiv:1701.07954v1, Section 2, Lemma 2.1: verified tail construction using h additional states and reset-threshold increase n*h under its stated permutation-order condition; that source credits Vorel's earlier lemma."
+  ],
+  "substantive_delta": "The shared k-clock packet realizes an lcm delay using only the sum of the clock lengths in states. The exact singleton-image invariant and b-boundary potential prove that a linear number of full delays is unavoidable without violating the global all-word image promise. With the explicit pairwise-coprime parameter choice this proves M_k(n)=Theta_k(n^(k+1)) for every fixed k>=2 and every sufficiently large n, already for binary strongly connected examples.",
+  "why_nonroutine": "Neither a physical deterministic tail, whose length consumes equally many states, nor an isolated CRT packet gives the asserted state-count exponent. The missing compatibility facts are that repeated forks cannot accumulate endpoint support and that failed resets or simultaneous packet replacement cannot reduce the queue potential without paying a complete clock interval. These facts are proved for arbitrary words, rather than assumed from the known tail theorem. The resulting full hierarchy is not stated or implied by the verified prior results. The elementary nature of the final proof does not remove this specific new construction-and-invariant step.",
+  "significance": "This determines the optimal polynomial mortality exponent at every fixed endpoint-support level in the exact original question, with binary and strong-connectivity robustness. That is a substantive extremal-automata contribution sufficient for mathematical publication review. Its consequences currently remain within this hierarchy; this acceptance does not establish STOC competitiveness, settle an algorithmic complexity gap, or certify priority beyond the bounded primary-source screen.",
+  "remaining_gaps": []
+}

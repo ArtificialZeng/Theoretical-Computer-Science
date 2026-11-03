@@ -1,0 +1,44 @@
+{
+  "job_id": "c037-msthalf-referee-9071a36d85a3",
+  "snapshot_digest": "d0a2fbd366a632f17366053e75f1a37a1254cc80a92e14c60a7d14734548277b",
+  "review_type": "fresh_internal_stoc_assessment",
+  "verdict": "working_paper",
+  "strongest_result": "For every fixed real 0<=p<1/2, an explicit finite deterministic algorithm observing only arbitrary symmetrically corrupted pair distances, n and p returns a spanning tree of expected true cost at most C_p max(1,ln n) MST(d), uniformly over every n>=2, every finite metric and every omniscient post-mask adversary. No metric promise on observations or true-distance queries are used. Its central all-metric ordered-path transfer bound is (320r/eta)W+(8r/eta)MST(d) under positive density and domination on all large disjoint rectangles.",
+  "nearest_comparisons": [
+    "Anand et al., arXiv:2610.40594v1, Theorems 1.4/5.3: same information-theoretic objective and arbitrary-replacement model for p<1/4. The accepted result covers every p<1/2; the primary record still lists only v1 on 2 November 2026 UTC. https://arxiv.org/html/2610.40594v1",
+    "Anand et al., Lemmas 3.2 and 5.6: repair and preorder framework is inherited and credited. The old common-good-neighbor argument needs bad density below 1/2; the new star/interval argument works from any positive hereditary rectangle density. The prior repair mechanism, not a new benchmark method, supplies the expected comparison tree.",
+    "Anand et al., Theorem 1.5: linear obstruction for p>=1/2, making the completed threshold sharp; no new lower-bound theorem or computational improvement is supplied.",
+    "Bateni et al., COLT 2024, PMLR 247:498-550, Theorem 4 assumes metric observations and hence does not settle the unrestricted problem. Appendix F.2.2/Theorem 32 supplies a logarithmic obstruction at p=1/3, where the candidate attains that order. https://proceedings.mlr.press/v247/bateni24a.html"
+  ],
+  "criteria": {
+    "importance": {
+      "judgment": "strong",
+      "reason": "This completes a natural information-theoretic threshold for MST under arbitrary post-mask corruptions, closing the entire gap between the verified quarter-corruption logarithmic upper bound and half-corruption linear obstruction in Anand et al., Theorems 1.4 and 1.5. It retains all metrics and the true-cost objective, rather than solving a restricted parameter example."
+    },
+    "novelty": {
+      "judgment": "strong",
+      "reason": "The fresh primary comparison and bounded current searches found no full below-half upper bound. The decisive all-metric rectangle-to-path inequality is absent from the prior common-neighbor proof and does not follow by changing its density parameter; the candidate explicitly credits the repair and selection framework. This supports a substantive original delta relative to the checked literature without certifying exhaustive priority."
+    },
+    "technical_depth": {
+      "judgment": "uncertain",
+      "reason": "The hardest genuinely new step is the all-scale interval overlap bound obtained from hereditary density, a metric star and matching endpoint exclusion. It is correct and nonroutine, but the completed argument is a compact certificate refinement atop the prior exhaustive-search and repair framework. The packet establishes neither a deeper algorithmic implementation nor further structural consequences demonstrating that this technique has the depth or reach expected for a strong STOC submission."
+    },
+    "breadth_or_consequence": {
+      "judgment": "uncertain",
+      "reason": "The threshold is exact and the deterministic transfer lemma has potential reuse, but demonstrated consequences remain confined to information-theoretic MST in one newly studied corruption model. No polynomial or quasi-polynomial algorithm, improvement of the logarithmic approximation order, or application to another optimization or learning objective is proved. Such extensions are not prerequisites for mathematical acceptance, but their absence leaves the broad STOC significance case uncertain."
+    },
+    "exposition_and_verifiability": {
+      "judgment": "strong",
+      "reason": "The frozen proof specifies finite observable selection, tie rules, rational constants, all-n expectation bounds and adversary quantifiers. I reconstructed every central implication and independently checked 160 metrics, 2,802,752 rectangles and all 33,866 masks up to n=6. Finite checks are correctly separated from universal proof. Final manuscript, citation, build and visual release checks remain outstanding and are not asserted here."
+    }
+  },
+  "case_for_stoc": "The affirmative case is a complete sharp-threshold theorem for robust metric optimization: the prior general-corruption method stops at p<1/4, while positive rectangle density and an all-scale metric-star argument reach every p<1/2 without another logarithm. This is conceptually cleaner and stronger than a local counterexample or routine parameter improvement. The critical limitation is that the same inefficient certificate-search paradigm remains, and no wider consequence of the new transfer inequality is demonstrated. The verified result merits a mathematical paper, but the evidence does not justify an all-strong competitive STOC assessment. Retain working_paper rather than upgrading from correctness alone.",
+  "remaining_weaknesses": [
+    "STOC-level technical depth and broad impact remain uncertain for a compact single-problem threshold completion.",
+    "The algorithm enumerates spanning trees and rectangle tests; no new efficiency guarantee is proved.",
+    "Potential uses of the metric transfer lemma outside this MST composition are not established.",
+    "Current novelty searches are bounded and cannot exclude unindexed or unpublished parallel developments.",
+    "A final manuscript and its required citation, build, every-page visual and release checks have not been produced in this referee job."
+  ],
+  "label_is_not_a_venue_decision": true
+}

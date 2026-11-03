@@ -1,0 +1,32 @@
+{
+  "kind": "resolution-paper",
+  "statement": "Let M_k(n) be the maximum shortest mortal-word length among incomplete n-state NFAs over finite alphabets satisfying |q.w|<=k for every state q and word w. For every integer k>=2, set A_k=1+k(k+1)/2, N_k=2k+2A_k*k!, and c_k=k!/(2A_k)^(k+1). For every integer n>=N_k there exists a binary strongly connected such NFA with shortest mortal-word length at least c_k*n^(k+1). Consequently c_k*n^(k+1)<=M_k(n)<=n^(k+1) for n>=N_k, and M_k(n)=Theta_k(n^(k+1)) for every fixed k>=2, resolving the full fixed-k interpretation frozen in source.md and problem.md.",
+  "original_status": "proved",
+  "contribution": "A queue with m states and a single packet distributed among k cycles of lengths ell_i has global image bound exactly k and mortality threshold between 1+(m+1)*lcm(ell_i) and that quantity plus m^2. An exact potential charges every unit of global progress to a disjoint full clock event, supplying the missing linear factor while preserving the all-word promise. Explicit pairwise-coprime lengths cover every sufficiently large n for every fixed k. Deterministic queue/tail mechanisms, CRT alone, the k=1 order and the general upper bound are acknowledged as known. The proposed substantive delta is the compressed clock realization and full exponent hierarchy; fresh correctness, novelty and significance review is requested, with no acceptance asserted.",
+  "proposer_job_id": "c015-imagebound-research-337b679e5617",
+  "evidence_files": [
+    "source.md",
+    "problem.md",
+    "intake/primary.pdf",
+    "intake/primary.txt",
+    "evidence/research-proof.md",
+    "evidence/research-literature.md",
+    "evidence/research-check.py",
+    "evidence/research-check-results.json",
+    "evidence/check_clock_baseline.py",
+    "evidence/clock-baseline.md",
+    "evidence/research-baseline-replay.json",
+    "evidence/next-test.md",
+    "evidence/research-provenance.json",
+    "evidence/research-source-receipts.json",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m2-3-5.json",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m2-2-3-5.json",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m2-3-4-5.json",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m3-3-5.json",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m3-2-3-5.json",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m3-3-4-5.json",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m4-3-5.json",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m4-2-3-5.json",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m4-3-4-5.json"
+  ]
+}

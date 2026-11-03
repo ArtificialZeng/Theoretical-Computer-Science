@@ -1,0 +1,16 @@
+{
+  "job_id": "c042-strongrsp-referee-5010e06f0ba2",
+  "snapshot_digest": "b8a4224397c4874b51af65e8b82a4b17fef250e6e90513e63334f9d6b3b5e4e9",
+  "verdict": "accept",
+  "original_scope_resolved": true,
+  "nearest_prior_results": [
+    "Ashvinkumar, arXiv:2610.18337v2, Theorem 1 and paragraph following Theorem 2; Sections 4 and 6. Deterministic all-target bicriteria RSP in Otilde(m log(nW)/epsilon^9), with strongly polynomial all-target time expressly open. https://arxiv.org/html/2610.18337v2",
+    "Ashvinkumar, Bernstein and Karczmarz, arXiv:2410.17179v1, open-problem discussion and Lemma C.1. The bottleneck reduction removes aspect dependence for one target, not a near-linear all-target preprocessing. https://arxiv.org/html/2410.17179v1",
+    "Gorkiewicz and Karczmarz, arXiv:2502.10348v1, Theorem 1.3 and Section 6, Algorithm 4 and Lemmas 6.1--6.3. Recursive offline approximate ordinary SSSP, not the stopped stochastic clock oracle. https://arxiv.org/html/2502.10348v1",
+    "McCauley, Moseley, A. Niaparast, H. Niaparast and Singh, ICALP 2025, Incremental Approximate Single-Source Shortest Paths with Predictions, Theorem 1. Offline ordinary SSSP in O(m log(nW) log^3(n) loglog(n)/epsilon). https://drops.dagstuhl.de/storage/00lipics/lipics-vol334-icalp2025/html/LIPIcs.ICALP.2025.117/LIPIcs.ICALP.2025.117.html"
+  ],
+  "substantive_delta": "A deterministic, strongly polynomial near-linear all-target bicriteria RSP representation for every input in source.md, removing all numerical-aspect dependence while retaining actual compact length bounds and deterministic polynomial-time bounded-space witnesses. It integrates vertex-closed stopped stochastic boundary solves, positive regularization, clipped offline activation, finite-rank rounding and edge-local scale coverage; parallel and zero edges and finite numerical operations are included.",
+  "why_nonroutine": "The ordinary-SSSP theorems use additive path structure and do not establish the nonadditive first-hit boundary contract or clock-compatible clipping and finite-rank numerical error. The source clock algorithm scans a numerical-aspect interval, and its single-target bottleneck corollary does not give an all-target aggregate bound. The frozen proof supplies and costs the missing integration rather than invoking either prior theorem beyond its hypotheses. The individual Poisson DP, witness potential and recursive activation ideas remain credited prior work.",
+  "significance": "The full result removes an expressly recorded strong-polynomiality barrier for a classical directed constrained-path problem, with near-linear total preprocessing for all targets rather than a per-target n factor. Its bounded-value stopped-control integration is a useful new algorithmic component in this setting. Broader generalization and STOC competitiveness remain separate, conservatively assessed questions.",
+  "remaining_gaps": []
+}

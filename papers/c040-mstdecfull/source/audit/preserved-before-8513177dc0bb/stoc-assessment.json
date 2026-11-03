@@ -1,0 +1,44 @@
+{
+  "job_id": "c040-mstdecfull-referee-c896e1b53be0",
+  "snapshot_digest": "bf8c82fd54c9793b5c068f18f7bb44944417a41c982a27be96486504558d316f",
+  "review_type": "fresh_internal_stoc_assessment",
+  "verdict": "working_paper",
+  "strongest_result": "For every fixed p<1 and hardwired rational 0<q<=1-p, an explicit deterministic zero-true-query algorithm always returns a spanning path in worst-execution n^(a_q max(1,log_2 n)) arithmetic/comparison and bit operations, independent of aspect ratio; its expected true cost is at most 10^15 q^-5 max(1,log_2 n)^3 MST(d) for every finite genuine metric and every omniscient decrease-only adversary. This fully resolves immutable source.md. Its general hidden-core DFS lemma gives beta(2+12B)H for every compatible leaf order.",
+  "nearest_comparisons": [
+    "Anand et al., arXiv:2610.40594v1, Theorem 1.3: low-p (p<=0.1) quasipolynomial O(log^4 n); the candidate extends to every fixed p<1, becomes deterministic, and achieves O_q(log^3 n). The primary live record still lists only v1.",
+    "Anand et al., same primary, Theorem 6.2: O(log n log Delta) extraction against hierarchy cost through random physical leaders. The candidate retains promotion/intersection but charges a cluster-DFS leaf path directly to obtain O(B) independent of depth.",
+    "Anand et al., Theorem 1.2 and Section 6: inefficient all-p O_p(log n) benchmark and the inherited hierarchy/admissibility framework. The candidate does not reach that approximation factor or polynomial time.",
+    "Fletcher and Hershkowitz, SODA 2026, pp. 5344-5373, DOI 10.1137/1.9781611978971.193: the official abstract states graph-spanning metric embeddings for Omega(log n) scale growth and broad applications. Its stated theorem differs from unknown-core total path cost at dyadic scales; full proof access was unavailable, so no stronger exclusion is asserted."
+  ],
+  "criteria": {
+    "importance": {
+      "judgment": "uncertain",
+      "reason": "A complete all-p positive computational theorem is a natural robustness advance, rather than a subsidiary obstruction. However the frozen problem is a recent author-independent refinement, not an established major open problem, and its independent importance beyond this baseline has not been demonstrated strongly enough for STOC."
+    },
+    "novelty": {
+      "judgment": "strong",
+      "reason": "Relative to the precisely verified nearest primary theorems, the high-p clique-core bootstrap and direct DFS path charging establish mathematical statements not supplied by those results, giving full noise range, a cubic logarithm and derandomization. The bounded current search found no equivalent final theorem; this is a substantive delta, not a guarantee of priority. Inherited future consistency, normalization and promotion are explicitly credited."
+    },
+    "technical_depth": {
+      "judgment": "uncertain",
+      "reason": "The central new insights are short and useful, but much of the nonaccumulating hierarchy and aspect reduction is inherited. Extending a low-noise proof by a rectangle bootstrap and replacing a loose degree sum may be viewed as a sharp follow-up rather than the technical or conceptual advance expected for a highly competitive STOC paper."
+    },
+    "breadth_or_consequence": {
+      "judgment": "uncertain",
+      "reason": "The deterministic lemma applies to any hierarchy satisfying its hidden-core assumptions, but only one application is proved. No polynomial-time algorithm, optimal logarithmic ratio, new hardness result, or consequence for arbitrary increase/decrease corruptions is established."
+    },
+    "exposition_and_verifiability": {
+      "judgment": "strong",
+      "reason": "The frozen dossier specifies all seed tests, overlaps, update rules, bad-mask expectation, degenerate branches and every-execution operation bound. The proof is reconstructible without hidden center access. A fresh exact verifier tests 96 selected hierarchies and every compatible order, with finite limits disclosed. A final manuscript and all artifact/release checks are still separate obligations."
+    }
+  },
+  "case_for_stoc": "The best case is a complete algorithm throughout all fixed corruption probabilities, with an aspect-independent quasipolynomial guarantee and a general deterministic extraction method that removes a depth factor despite unknown changing cores. This is substantively more than a parameter-only statement. Against the nearest source, however, it preserves the entire carving/admissibility architecture and still has a two-logarithm approximation gap from the inefficient benchmark. The new steps are compact refinements with no established second major consequence. The record supports a useful resolved working paper but does not supply the strong depth, breadth and importance case required for submission_ready.",
+  "remaining_weaknesses": [
+    "Venue-level importance and technical depth relative to the inherited framework remain uncertain.",
+    "No second application of the general extraction lemma or major lower bound is established.",
+    "The cubic logarithm remains above the known inefficient logarithmic benchmark, and runtime remains quasipolynomial with very large q-dependent constants.",
+    "Current literature screening is bounded; the adjacent Fletcher-Hershkowitz full proof could not be inspected, and no global priority claim is made.",
+    "No final manuscript, clean build, citation audit, every-page visual review, or release packaging was performed in this referee job."
+  ],
+  "label_is_not_a_venue_decision": true
+}

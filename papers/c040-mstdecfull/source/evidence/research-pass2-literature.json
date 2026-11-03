@@ -1,0 +1,43 @@
+{
+  "job_id": "c040-mstdecfull-research-e695ca56645f",
+  "checked_utc": "2026-11-03T00:50:30.482782+00:00",
+  "method": "Live primary record/HTML/publisher/PMLR browsing plus focused local primary Section 6 reconstruction; bounded exact-topic searches.",
+  "primary": [
+    {
+      "url": "https://arxiv.org/abs/2610.40594",
+      "observed": "Submission history lists v1 only, 29 October 2026 17:49:41 UTC.",
+      "limit": "Live record check is time-specific; no assertion about future updates."
+    },
+    {
+      "url": "https://arxiv.org/html/2610.40594v1",
+      "positions": [
+        "Theorem 1.2",
+        "Theorem 1.3 and small-p footnote",
+        "Definition 6.1 and Theorem 6.2",
+        "Definitions 6.4-6.6 and Algorithms 1-3",
+        "Theorem 7.2"
+      ],
+      "observed": "Inefficient all-p logarithmic and small-p quasipolynomial fourth-power upper bounds. Section 6 hierarchy, future admissibility, normalization and promotion are inherited. Theorem 7.2 reduces to quiet planted-colorability testing; not a Planted Clique consequence or a universal lower bound from low-degree evidence.",
+      "local_source": "intake/primary/2610.40594v1.txt"
+    },
+    {
+      "url": "https://epubs.siam.org/doi/10.1137/1.9781611978971.193",
+      "observed": "Official abstract and bibliographic metadata checked. Graph-spanning distance embedding with Omega(log n) level growth differs in stated output/objective from the hidden-core dyadic total-cost path lemma.",
+      "limit": "Full proof not accessed. The supplied ordinary-access receipt remains intake/adjacent-soda-primary-access.json. No exclusion of equivalent auxiliary lemmas or priority certificate follows."
+    },
+    {
+      "url": "https://proceedings.mlr.press/v247/bateni24a.html",
+      "observed": "Official COLT2024 record and local full text distinguish the observed-metric square-root-log upper theorem from unrestricted nonmetric observations.",
+      "local_source": "intake/primary/bateni24a-COLT2024.txt"
+    }
+  ],
+  "queries": [
+    "\"minimum spanning\" \"corruptions\" \"log\" Anand Gupta Jayaram Lee Vakilian",
+    "\"corruptions\" \"spanning trees\" \"log^2\"",
+    "\"hidden\" \"outlier\" \"hierarchy\" \"spanning\" \"depth-first\"",
+    "\"Spanning Tree Embeddings Are Not Much Harder\" pdf Fletcher Hershkowitz"
+  ],
+  "bounded_result": "No equivalent full-p quadratic-log computational upper theorem identified in these inspected sources and search results. This is not comprehensive absence or priority.",
+  "new_contribution_comparison": "Complete all-p deterministic zero-query quasipolynomial quadratic-log algorithm versus the primary small-p quasipolynomial fourth-power theorem. The actual-outlier refinement sharpens the same DFS extraction method rather than creating an independent second innovation.",
+  "review_status": "Proposer literature screening only; old cubic accept/working_paper assessment does not review this stronger claim. Fresh correctness, novelty, substantive-value and STOC review required."
+}

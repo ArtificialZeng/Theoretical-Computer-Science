@@ -1,0 +1,28 @@
+{
+  "job_id": "c040-mstdecfull-referee-c896e1b53be0",
+  "started_utc": "2026-11-03T00:28:13Z",
+  "snapshot_digest": "bf8c82fd54c9793b5c068f18f7bb44944417a41c982a27be96486504558d316f",
+  "source_sha256": "09b52cf01e6e36d50f3090211c0313cda0f436865507abd6c00493d5583fe9a7",
+  "frozen_files_checked": 10,
+  "all_hashes_match": true,
+  "review_state": "complete",
+  "checks_so_far": [
+    "Frozen source and every snapshot file verified by SHA-256.",
+    "Read exact algorithm/proof and primary Section 6; independent reconstruction in progress.",
+    "Independently reconstructed the all-p rectangle concentration, seed-core bootstrap, high-quantile comparison including overlap, and global first-absorption invariant.",
+    "Verified separate packing bounds, normalization and unconditional bad-mask expectation; no mathematical gap identified so far.",
+    "Fresh independent extraction verifier passed 96 selected hierarchies, 65280 compatible orders, and 676608 exact edges. This finite test is supplementary, not an infinite proof."
+  ],
+  "constraints": [
+    "No subagents or background workers.",
+    "No checkpoint/state/transcript/previous audit read.",
+    "No frozen evidence modified."
+  ],
+  "completed_utc": "2026-11-03T00:39:28.633517+00:00",
+  "final_verdict": "accept",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "stoc_label": "working_paper",
+  "all_final_frozen_hashes_match": true,
+  "check_math_passed": true
+}

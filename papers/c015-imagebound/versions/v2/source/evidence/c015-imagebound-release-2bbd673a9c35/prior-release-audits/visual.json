@@ -1,0 +1,49 @@
+{
+  "job_id": "c015-imagebound-release-b1a7d726335d",
+  "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+  "manuscript_digest": "5ae9b29ebb33f83bef87cb0ff1d33997e8bf05741cfd88f6086d02fb05f2a360",
+  "pdf_digest": "0abeb3c8720795bb730d6501ea49669b8e9f1006bc34b0e0d9578051921c4d19",
+  "verdict": "accept",
+  "report": "audit/visual.md",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "checked_utc": "2026-11-01T09:23:11.371609+00:00",
+  "rendered_pages": [
+    {
+      "page": 1,
+      "path": "audit/release-pages/page-1.png",
+      "sha256": "7611bbd6643dec50308e5d41c6d18a4e338dd687ed5335478e4acc48a0b2f202"
+    },
+    {
+      "page": 2,
+      "path": "audit/release-pages/page-2.png",
+      "sha256": "9b50970d9bff818b2536c20ea182167998566e74dd5e154454e9dc46818f993a"
+    },
+    {
+      "page": 3,
+      "path": "audit/release-pages/page-3.png",
+      "sha256": "6b9fcc7da8c5ba39994b51aadfd3c7a9d3f61008b2ae788ae5ff98221ec8dfc3"
+    },
+    {
+      "page": 4,
+      "path": "audit/release-pages/page-4.png",
+      "sha256": "a7b13388aa0e5dc793dfbb8d42ce122662669cc24a47c43362780b200b7f024e"
+    },
+    {
+      "page": 5,
+      "path": "audit/release-pages/page-5.png",
+      "sha256": "fa8f88da88210566ffcd1d61b3ce676abab06e5a0416c976f6dee3d825e83b6b"
+    },
+    {
+      "page": 6,
+      "path": "audit/release-pages/page-6.png",
+      "sha256": "8beb9f2c9e03f3e8638ab1105a751e702bdcd559543995ca075a198f0d78bcb2"
+    }
+  ]
+}

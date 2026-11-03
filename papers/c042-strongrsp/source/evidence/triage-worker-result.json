@@ -1,0 +1,13 @@
+{
+  "outcome": "advance",
+  "candidate_kind": "none",
+  "original_status": "unresolved",
+  "summary": "Primary v2 and ABK25 support the open full all-target target. Its scope, plausible substantive payoff and a decisive boundary-oracle test justify bounded research; no resolution or publication candidate exists. Source preserved; research passes remain 0/3.",
+  "next_test": "Formalize and prove or falsify the actual two-clock DP inactive-boundary oracle: correct nontermination/fixed point, first-hit multiplicative comparison, arbitrary endpoint upper labels, tick monotonicity, and work charged only to active states and incident transitions; use exact rational cyclic toy systems as adversarial checks.",
+  "evidence": [
+    "problem.md",
+    "checkpoint.md",
+    "evidence/triage.md",
+    "evidence/triage-common-scale-check.json"
+  ]
+}

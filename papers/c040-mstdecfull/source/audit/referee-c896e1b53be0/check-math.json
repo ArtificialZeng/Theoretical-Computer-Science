@@ -1,0 +1,11 @@
+{
+  "job_id": "c040-mstdecfull-referee-c896e1b53be0",
+  "command": "python3 /Users/mac/.codex/skills/4prove-or-disprove-math/scripts/release_gate.py check-math PROJECT_DIR",
+  "exit_code": 0,
+  "observed_output": {
+    "ok": true,
+    "snapshot_digest": "bf8c82fd54c9793b5c068f18f7bb44944417a41c982a27be96486504558d316f",
+    "referee_job_id": "c040-mstdecfull-referee-c896e1b53be0"
+  },
+  "scope": "Actual preceding structural/provenance gate result; does not certify mathematical truth."
+}

@@ -1,0 +1,64 @@
+{
+  "job_id": "c037-msthalf-release-aff0d39d4223",
+  "snapshot_digest": "d0a2fbd366a632f17366053e75f1a37a1254cc80a92e14c60a7d14734548277b",
+  "manuscript_digest": "21d0504817983aa84f21573d2ff6560239183353573fc2cc1d767e3501675427",
+  "pdf_digest": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+  "verdict": "accept",
+  "report": "audit/visual.md",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "render_method": "Poppler pdftoppm -r 125 -png; direct image inspection of every page",
+  "page_images": [
+    {
+      "page": 1,
+      "path": "evidence/release/rendered/page-1.png",
+      "sha256": "7a627cfa949478b7e122519cbcf813b402978497b8e3bf17fed81420091c5693"
+    },
+    {
+      "page": 2,
+      "path": "evidence/release/rendered/page-2.png",
+      "sha256": "7e66873d1c08a8e8f5b2d097ebc0ece8d90629897896776403d5da36902ffe9a"
+    },
+    {
+      "page": 3,
+      "path": "evidence/release/rendered/page-3.png",
+      "sha256": "420c0bb672e34e95aa476479e254ed75397eff9962f03d2a1a4fd1620004bc60"
+    },
+    {
+      "page": 4,
+      "path": "evidence/release/rendered/page-4.png",
+      "sha256": "f1d3afecf2c1828e1647d68a53d9f0ab78acc1baab7fea3318a2d939d0dd3433"
+    },
+    {
+      "page": 5,
+      "path": "evidence/release/rendered/page-5.png",
+      "sha256": "22cd181f78b64e77a4003431268686f885e5ac0d4ef3c04e040259a15844eae3"
+    },
+    {
+      "page": 6,
+      "path": "evidence/release/rendered/page-6.png",
+      "sha256": "5204e6b204170b36ca46a3b2c4d98ecf9e56d083fd37d910b5217c0fea2ee9a4"
+    },
+    {
+      "page": 7,
+      "path": "evidence/release/rendered/page-7.png",
+      "sha256": "2a286cdf1073a559b0d1290156af2609a9c9af6a6c450e529ea29998cf2cae7f"
+    }
+  ],
+  "page_observations": [
+    "Title wraps cleanly over two lines; sole author and UCSI affiliation are legible; the full abstract is contained; contact line and folio do not overlap. Title-page whitespace follows the requested separate title page.",
+    "Original-scope theorem, expectation display and context/attribution paragraphs are legible; citation numbers, square-root log expression and linked theorem/section numbers resolve; margins and folio are intact.",
+    "Transfer lemma and equations (1)-(5), interval definitions and star inequalities fit; subscripts, summation limits, strict inequalities and right-aligned numbers are distinguishable. The proof continues cleanly on the next page.",
+    "Continuation of interval integration and repair lemma/proof are fully readable; equation (6), geometric sums and proof-end squares are contained. The bottom line and folio remain separated.",
+    "Rational parameter display (7), observable qualification (8), four algorithm steps and concentration display (9) fit without clipping; long mathematical set notation remains within margins.",
+    "Expectation bounds (10)-(11), infinite series, explicit C_p and strict-metric boundary explanation are readable. Superscripts, indicator notation and fraction denominators are clear; no overlap at the section transition.",
+    "Computation counts, limitations and substantial-AI disclosure are legible. Both references have resolved author/title/date/location and intact DOI/URL text. No placeholder glyphs, clipped links or overlap; the last folio is correct."
+  ]
+}

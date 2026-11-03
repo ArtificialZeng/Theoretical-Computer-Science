@@ -1,0 +1,22 @@
+{
+  "job_id": "c042-strongrsp-research-266844093669",
+  "role": "research",
+  "dispatch_utc": "2026-11-03T03:38:19+00:00",
+  "first_clock_read_utc": "2026-11-03T03:40:24+00:00",
+  "main_validation_completed_by_utc": "2026-11-03T03:48:57+00:00",
+  "record_saved_utc": "2026-11-03T03:51:39.181785+00:00",
+  "research_passes_recorded_by_runner": 2,
+  "research_pass_cap": 3,
+  "source_sha256": "93e36d243f9b6fec1df5dda18aacab258ad91c62c8465d0a010fddadbb319aa7",
+  "source_unchanged": true,
+  "worker_recommendation": "continue",
+  "original_status": "unresolved",
+  "candidate_kind": "none",
+  "operational_limit_is_not_mathematical_evidence": true,
+  "manuscript_or_pdf_created": false,
+  "agents_or_background_workers_spawned": false,
+  "scope": "Local offline composition and finite-rank rounding proofs with finite exact tests. No full RSP resolution, candidate, independent review or innovation verdict.",
+  "preserved_prior_pass_record": "evidence/research-pass1-run.json",
+  "earlier_evidence_hashes_preserved": true,
+  "worker_result_schema_checked": true
+}

@@ -1,0 +1,23 @@
+{
+  "job_id": "c040-mstdecfull-research-9063bf54df79",
+  "phase": "research",
+  "research_pass": 1,
+  "entry_clock_utc": "2026-11-03T00:14:40+00:00",
+  "recorded_utc": "2026-11-03T00:19:56.244334+00:00",
+  "source_sha256": "09b52cf01e6e36d50f3090211c0313cda0f436865507abd6c00493d5583fe9a7",
+  "main_test_deadline_utc": "2026-11-03T00:29:39.999916+00:00",
+  "finalization_deadline_utc": "2026-11-03T00:32:39.999901+00:00",
+  "parallel_workers": 0,
+  "test": "Full first-absorption invariant, all-seed quantiles including overlaps, deterministic DFS extraction, normalization and worst-execution operations",
+  "preserved_inputs": [
+    "intake/full-range-upper-quantile-program.md",
+    "intake/deterministic-leaf-path.md",
+    "outer-root-note.md"
+  ],
+  "status": "completed_candidate",
+  "operational_notes": [
+    "Initial combined file inventory included nonexistent sources/; command exited before subsequent reads. Required inputs then read successfully. This is not mathematical evidence.",
+    "A text patch failed exact-context matching and made no change; corrected patch succeeded. This is not mathematical evidence."
+  ],
+  "completed_utc": "2026-11-03T00:26:02.721493+00:00"
+}

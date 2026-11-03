@@ -1,0 +1,20 @@
+{
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Complete proposed proof resolves the immutable target with a deterministic zero-query O_p(log^3 n) algorithm for every fixed p<1 and aspect-independent quasipolynomial worst-execution cost. Full proof and exact finite extraction checks are saved; correctness, novelty and significance await fresh review. No manuscript/PDF.",
+  "next_test": "Freeze claim.json and obtain a fresh referee audit of the full original scope, overlapping-seed invariant, deterministic DFS extraction, current novelty and substantive STOC significance.",
+  "evidence": [
+    "claim.json",
+    "source.md",
+    "problem.md",
+    "checkpoint.md",
+    "research/full-resolution-proof.md",
+    "research/prior-comparison.md",
+    "research/research-checklist.md",
+    "research/check_dfs_hierarchies.py",
+    "evidence/dfs-exhaustive-check.json",
+    "evidence/research-literature.json",
+    "evidence/research-validation.json"
+  ]
+}

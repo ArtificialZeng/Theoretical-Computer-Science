@@ -2,11 +2,11 @@
 
 **working_paper** · 6 total pages.
 
-[PDF](c015-imagebound_working_paper.pdf) · [Unified index](../../README.md)
+[PDF](versions/v2/c015-imagebound_working_paper.pdf) · [Unified index](../../README.md)
 
 Is the known mortality upper bound for k-image-bounded nondeterministic automata tight? For every fixed k≥2, the manuscript proves that the maximum shortest mortal-word length is Θk(n^(k+1)). The lower bound holds for all sufficiently large n even over a binary alphabet with strongly connected automata. A queue-and-clocks construction supplies the delay, while a global image invariant preserves the restriction under every word.
 
-Classification basis: Conservative classification: no explicit fresh review under the new STOC standard.
+Classification basis: fresh_internal_stoc_assessment
 
 Mathematical scope: proved
 

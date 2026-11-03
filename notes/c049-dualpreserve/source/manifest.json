@@ -1,0 +1,295 @@
+{
+  "at_utc": "2026-11-03T21:35:08.125254+00:00",
+  "project": "c049-dualpreserve",
+  "original_status": "unresolved",
+  "candidate_kind": "none",
+  "manuscript_or_pdf": false,
+  "research_passes_used": 4,
+  "authorized_maximum": 4,
+  "one_additional_pass_explicitly_user_authorized": true,
+  "reproduction_adaptation": "Temporary hash-bound removal of one expired absolute research-deadline assertion; every other mathematical assertion and finite case is retained. Original code files are unchanged.",
+  "fresh_acceptance_review_performed": false,
+  "source_sha256": "5d612840eebc5682c6271321050a2e38fcd03511ad0b9efd4244851323d1eb80",
+  "previous_version_archive_sha256": "57158965a22d12cecc7b5caceb14e9fe62c8fde159e2b32fe7da42fa17d7ac82",
+  "copied_original_files": [
+    {
+      "file": "ORIGINAL_PROBLEM.md",
+      "original": "research/queue/projects/c049-dualpreserve/source.md",
+      "sha256": "5d612840eebc5682c6271321050a2e38fcd03511ad0b9efd4244851323d1eb80"
+    },
+    {
+      "file": "proofs/research-67929c1f9552-math.md",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-67929c1f9552-math.md",
+      "sha256": "5f41efbe353b8b7270daa6f05e335d7acafcb8c49c32741dff66b93407109120"
+    },
+    {
+      "file": "proofs/research-c6b2b0ea3f71-math.md",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-c6b2b0ea3f71-math.md",
+      "sha256": "a5587d0b11ec0dfd28c05810ebab7e84e69072f2c59995d239f867bf948c9316"
+    },
+    {
+      "file": "proofs/research-c6b2b0ea3f71-literature.md",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-c6b2b0ea3f71-literature.md",
+      "sha256": "99cd11e752b9980b1578e7afb81166736f7a2c13d39d4a250f89acb5db9645a7"
+    },
+    {
+      "file": "proofs/research-2396269cbd5d-math.md",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-2396269cbd5d-math.md",
+      "sha256": "eeeb8b4fb227c5638da9c098284354980c760672202c8099c949fc32f8e3b8b5"
+    },
+    {
+      "file": "proofs/research-2396269cbd5d-literature.md",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-2396269cbd5d-literature.md",
+      "sha256": "b65b5b32977b1dc3107e3fd7131f7311b57728461cddc2dfd0f0422697afc4e7"
+    },
+    {
+      "file": "code/research-67929c1f9552-flow-test.py",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-67929c1f9552-flow-test.py",
+      "sha256": "a88edda6c56d7fc09a6fa8ea7447b4360e0a5b4d609a911fab3706e9775e4895"
+    },
+    {
+      "file": "code/research-67929c1f9552-return-test.py",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-67929c1f9552-return-test.py",
+      "sha256": "57d49898c5e86f1e4a8440d9cd8a4cc579bc6f3b44e30d038cf2024c82a1fecf"
+    },
+    {
+      "file": "code/research-c6b2b0ea3f71-core-test.py",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-c6b2b0ea3f71-core-test.py",
+      "sha256": "c1c3b3db3f094a3361c83aae795b072066e069652ce3279dc520af3a77b82cd9"
+    },
+    {
+      "file": "code/research-2396269cbd5d-energy-test.py",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-2396269cbd5d-energy-test.py",
+      "sha256": "3821befe550c8ccdf06e9d80bf6034df62f15144316e528a449b42b45e45a4d2"
+    },
+    {
+      "file": "code/research-2396269cbd5d-sharing-test.py",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-2396269cbd5d-sharing-test.py",
+      "sha256": "3ed6d45d676b81df2f5c7ae2f1b2427b5ced014f75116a24a98be76f42865c0a"
+    },
+    {
+      "file": "code/research-2396269cbd5d-independent-check.py",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-2396269cbd5d-independent-check.py",
+      "sha256": "e032296840c301791c6feefab9b342c91ac1b915a512982e5a15f91f395ced2a"
+    },
+    {
+      "file": "results/research-67929c1f9552-flow-results.json",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-67929c1f9552-flow-results.json",
+      "sha256": "ef8923e420caeba1aa3b6c992bcc2fc6bb1b666a209c7715500ccd94798a5f2e"
+    },
+    {
+      "file": "results/research-67929c1f9552-return-results.json",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-67929c1f9552-return-results.json",
+      "sha256": "f816853fa05aa6aa6a66c0bf560210132944222f3fa2feb8d2c8acf491609da5"
+    },
+    {
+      "file": "results/research-c6b2b0ea3f71-core-results.json",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-c6b2b0ea3f71-core-results.json",
+      "sha256": "612ffe6cf795f3c9b6546c19c152ae9154c615d1689f5da40ad35cffd73d54b1"
+    },
+    {
+      "file": "results/research-2396269cbd5d-energy-results.json",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-2396269cbd5d-energy-results.json",
+      "sha256": "0bf1d7f4c4e0e3b0e018f8838728586c607f812defab714f0f812f593190114a"
+    },
+    {
+      "file": "results/research-2396269cbd5d-independent-results.json",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-2396269cbd5d-independent-results.json",
+      "sha256": "be279c51cb9188c50a0ce4a79b69eba9a8e5ba26e1db2aefb2412bc7d64e9201"
+    },
+    {
+      "file": "results/research-2396269cbd5d-sharing-results.json",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-2396269cbd5d-sharing-results.json",
+      "sha256": "77a48f9f4327aee3a2d07ea2025af1a1f8a2d411b8ef00af897021ec5d9aaf8a"
+    },
+    {
+      "file": "proofs/three-connected-demand-cover.md",
+      "original": "research/continuous/batches/20261103-049/three-connected-demand-cover.md",
+      "sha256": "5ce444352d819770a0acb3b0afc3625f8974610f8cfe7ac2c3cb860841557b7c"
+    },
+    {
+      "file": "proofs/HSW-scope-and-positive-kernel.md",
+      "original": "research/continuous/batches/20261103-049/HSW-scope-and-positive-kernel.md",
+      "sha256": "86ebdfb33466e9a096236d4ed94a93fe4d632c018188f542efd1399cccb60172"
+    },
+    {
+      "file": "proofs/research-960416a85f25-math.md",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-960416a85f25-math.md",
+      "sha256": "6e32da05dfb54ca663c9a39b3c33f42367541469b733b1027e214da68be1424a"
+    },
+    {
+      "file": "proofs/research-960416a85f25-literature.md",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-960416a85f25-literature.md",
+      "sha256": "f595249f6fd8ffb4b67a67cec67604fabf4b6ac43722f8465963cb9885056eec"
+    },
+    {
+      "file": "code/research-960416a85f25-selector-test.py",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-960416a85f25-selector-test.py",
+      "sha256": "d588ed92931171afb4ea689f633acaaf50f6882cf7a50a7108b5caabd2e60c38"
+    },
+    {
+      "file": "code/research-960416a85f25-allfault.cpp",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-960416a85f25-allfault.cpp",
+      "sha256": "019aeee7cf6eff079392fdb39b2761fbac09b10b23643d745e6fd2395777e030"
+    },
+    {
+      "file": "code/research-960416a85f25-certificate-test.py",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-960416a85f25-certificate-test.py",
+      "sha256": "375b06704817d5cb79b77e3449299711d2826fb212bb0450ec113e660096b1ae"
+    },
+    {
+      "file": "code/research-960416a85f25-verify.cpp",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-960416a85f25-verify.cpp",
+      "sha256": "0ff3a459bd76dbbe91b6f1b4b0bb14367aa3546a8c39366d03432a5154bb601c"
+    },
+    {
+      "file": "results/research-960416a85f25-selector-results.json",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-960416a85f25-selector-results.json",
+      "sha256": "dd97e509842ca956096b623d0feb175c8a8bafdd99c44767cec031ae35280927"
+    },
+    {
+      "file": "results/research-960416a85f25-certificate-results.json",
+      "original": "research/queue/projects/c049-dualpreserve/evidence/research-960416a85f25-certificate-results.json",
+      "sha256": "8993a9afa9b1f1bfabcac5a4f1fb0426a256c91d44b41f00dca15da3ef0aaefb"
+    }
+  ],
+  "status": "Local research records only; full-original final sync condition unmet",
+  "files": [
+    {
+      "file": "ORIGINAL_PROBLEM.md",
+      "sha256": "5d612840eebc5682c6271321050a2e38fcd03511ad0b9efd4244851323d1eb80"
+    },
+    {
+      "file": "README.de.md",
+      "sha256": "6d0d66b60c21bcb5b66eb7f558c2c19a550e6d4fb55539a7d4a034ffa23753c5"
+    },
+    {
+      "file": "README.fr.md",
+      "sha256": "3df848313dcd797c20e7a4ae2763fcad39acb75424c9ee2e194744f0774be5d7"
+    },
+    {
+      "file": "README.ja.md",
+      "sha256": "398d337f4920526359c1283280e19d252d43cb9bae81bd7060ebc0825a874061"
+    },
+    {
+      "file": "README.md",
+      "sha256": "734cbdb531aa46333763da5b9290c0dd6a9bbf3dea7f3e8ac65050faa22bf574"
+    },
+    {
+      "file": "README.zh-CN.md",
+      "sha256": "c46ff95c22285dd1c7d693df3c2bc7c27155688ab6985abecffc24dc8c9ae2e8"
+    },
+    {
+      "file": "code/research-2396269cbd5d-energy-test.py",
+      "sha256": "3821befe550c8ccdf06e9d80bf6034df62f15144316e528a449b42b45e45a4d2"
+    },
+    {
+      "file": "code/research-2396269cbd5d-independent-check.py",
+      "sha256": "e032296840c301791c6feefab9b342c91ac1b915a512982e5a15f91f395ced2a"
+    },
+    {
+      "file": "code/research-2396269cbd5d-sharing-test.py",
+      "sha256": "3ed6d45d676b81df2f5c7ae2f1b2427b5ced014f75116a24a98be76f42865c0a"
+    },
+    {
+      "file": "code/research-67929c1f9552-flow-test.py",
+      "sha256": "a88edda6c56d7fc09a6fa8ea7447b4360e0a5b4d609a911fab3706e9775e4895"
+    },
+    {
+      "file": "code/research-67929c1f9552-return-test.py",
+      "sha256": "57d49898c5e86f1e4a8440d9cd8a4cc579bc6f3b44e30d038cf2024c82a1fecf"
+    },
+    {
+      "file": "code/research-960416a85f25-allfault.cpp",
+      "sha256": "019aeee7cf6eff079392fdb39b2761fbac09b10b23643d745e6fd2395777e030"
+    },
+    {
+      "file": "code/research-960416a85f25-certificate-test.py",
+      "sha256": "375b06704817d5cb79b77e3449299711d2826fb212bb0450ec113e660096b1ae"
+    },
+    {
+      "file": "code/research-960416a85f25-selector-test.py",
+      "sha256": "d588ed92931171afb4ea689f633acaaf50f6882cf7a50a7108b5caabd2e60c38"
+    },
+    {
+      "file": "code/research-960416a85f25-verify.cpp",
+      "sha256": "0ff3a459bd76dbbe91b6f1b4b0bb14367aa3546a8c39366d03432a5154bb601c"
+    },
+    {
+      "file": "code/research-c6b2b0ea3f71-core-test.py",
+      "sha256": "c1c3b3db3f094a3361c83aae795b072066e069652ce3279dc520af3a77b82cd9"
+    },
+    {
+      "file": "proofs/HSW-scope-and-positive-kernel.md",
+      "sha256": "86ebdfb33466e9a096236d4ed94a93fe4d632c018188f542efd1399cccb60172"
+    },
+    {
+      "file": "proofs/research-2396269cbd5d-literature.md",
+      "sha256": "b65b5b32977b1dc3107e3fd7131f7311b57728461cddc2dfd0f0422697afc4e7"
+    },
+    {
+      "file": "proofs/research-2396269cbd5d-math.md",
+      "sha256": "eeeb8b4fb227c5638da9c098284354980c760672202c8099c949fc32f8e3b8b5"
+    },
+    {
+      "file": "proofs/research-67929c1f9552-math.md",
+      "sha256": "5f41efbe353b8b7270daa6f05e335d7acafcb8c49c32741dff66b93407109120"
+    },
+    {
+      "file": "proofs/research-960416a85f25-literature.md",
+      "sha256": "f595249f6fd8ffb4b67a67cec67604fabf4b6ac43722f8465963cb9885056eec"
+    },
+    {
+      "file": "proofs/research-960416a85f25-math.md",
+      "sha256": "6e32da05dfb54ca663c9a39b3c33f42367541469b733b1027e214da68be1424a"
+    },
+    {
+      "file": "proofs/research-c6b2b0ea3f71-literature.md",
+      "sha256": "99cd11e752b9980b1578e7afb81166736f7a2c13d39d4a250f89acb5db9645a7"
+    },
+    {
+      "file": "proofs/research-c6b2b0ea3f71-math.md",
+      "sha256": "a5587d0b11ec0dfd28c05810ebab7e84e69072f2c59995d239f867bf948c9316"
+    },
+    {
+      "file": "proofs/three-connected-demand-cover.md",
+      "sha256": "5ce444352d819770a0acb3b0afc3625f8974610f8cfe7ac2c3cb860841557b7c"
+    },
+    {
+      "file": "reproduce.py",
+      "sha256": "81a700281afa72a522d479b1f909e01b04b0c8a849edfbb17584086caeb427b8"
+    },
+    {
+      "file": "results/research-2396269cbd5d-energy-results.json",
+      "sha256": "0bf1d7f4c4e0e3b0e018f8838728586c607f812defab714f0f812f593190114a"
+    },
+    {
+      "file": "results/research-2396269cbd5d-independent-results.json",
+      "sha256": "be279c51cb9188c50a0ce4a79b69eba9a8e5ba26e1db2aefb2412bc7d64e9201"
+    },
+    {
+      "file": "results/research-2396269cbd5d-sharing-results.json",
+      "sha256": "77a48f9f4327aee3a2d07ea2025af1a1f8a2d411b8ef00af897021ec5d9aaf8a"
+    },
+    {
+      "file": "results/research-67929c1f9552-flow-results.json",
+      "sha256": "ef8923e420caeba1aa3b6c992bcc2fc6bb1b666a209c7715500ccd94798a5f2e"
+    },
+    {
+      "file": "results/research-67929c1f9552-return-results.json",
+      "sha256": "f816853fa05aa6aa6a66c0bf560210132944222f3fa2feb8d2c8acf491609da5"
+    },
+    {
+      "file": "results/research-960416a85f25-certificate-results.json",
+      "sha256": "8993a9afa9b1f1bfabcac5a4f1fb0426a256c91d44b41f00dca15da3ef0aaefb"
+    },
+    {
+      "file": "results/research-960416a85f25-selector-results.json",
+      "sha256": "dd97e509842ca956096b623d0feb175c8a8bafdd99c44767cec031ae35280927"
+    },
+    {
+      "file": "results/research-c6b2b0ea3f71-core-results.json",
+      "sha256": "612ffe6cf795f3c9b6546c19c152ae9154c615d1689f5da40ad35cffd73d54b1"
+    }
+  ]
+}

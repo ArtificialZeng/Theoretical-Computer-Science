@@ -1,0 +1,134 @@
+{
+  "package_schema": 6,
+  "project": "c015-imagebound",
+  "title": "Tight Mortality Bounds for Image-Bounded Nondeterministic Automata",
+  "readiness_label": "working_paper",
+  "stoc_assessment": {
+    "job_id": "c015-imagebound-referee-e7492ff4cfbd",
+    "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+    "review_type": "fresh_internal_stoc_assessment",
+    "verdict": "working_paper",
+    "strongest_result": "For every fixed integer k>=2, with A_k=1+k(k+1)/2, N_k=2k+2A_k*k! and c_k=k!/(2A_k)^(k+1), every integer n>=N_k admits a binary strongly connected incomplete n-state NFA satisfying |q.w|<=k for all q and w and having mortality threshold at least c_k*n^(k+1). Together with the known upper bound this proves M_k(n)=Theta_k(n^(k+1)) in the full immutable source interpretation.",
+    "nearest_comparisons": [
+      "Kiefer and Ryzhikov, MFCS 2025, DOI 10.4230/LIPIcs.MFCS.2025.62, Sections 7 and 9: same global endpoint-support model and n^(k+1) upper bound; the candidate supplies matching fixed-k lower-bound order across the entire hierarchy. The source's main open complexity question about unambiguous completeness remains different and unresolved here.",
+      "Ryzhikov, RP 2024, DOI 10.1007/978-3-031-72621-7_8, arXiv:2405.19622v4 Section 4, and Ananichev, arXiv:1701.07954v1 Lemma 2.1: prior binary deterministic queue/tail delay mechanisms. The new ingredient shares compressed simultaneous clocks and proves global support compatibility and unavoidable repeated delays.",
+      "Kiefer and Ryzhikov, STACS 2026, DOI 10.4230/LIPIcs.STACS.2026.60, Theorem 29, and Chandelkar and Chadha, arXiv:2609.30817v2 Theorem 1.2: respectively require finite ordinary rational matrix semigroups or joint spectral radius at most one plus cycle hubs. The candidate's b matrix has k^r returns under b^(2r), excluding those hypotheses for k>=2."
+    ],
+    "criteria": {
+      "importance": {
+        "judgment": "uncertain",
+        "reason": "The result fully answers an explicit extremal question for a natural endpoint-support restriction and does so for every fixed k. However, the verified record does not establish this secondary 2025 open question as a major bottleneck for broad TCS. It does not resolve the source's principal unambiguous-completeness complexity gap. Open-problem status by itself is insufficient for a strong STOC importance assessment."
+      },
+      "novelty": {
+        "judgment": "strong",
+        "reason": "Relative to the checked primary results, the all-k tight exponent with two letters and strong connectivity is a distinct theorem. The specific new step is a shared clock packet whose support remains globally bounded while a collision-free potential forces a linear number of lcm delays. The known queue, deterministic tail, CRT arithmetic and upper bound are explicitly credited and excluded from the novelty claim. The bounded refreshed literature screen found no equivalent theorem; it is not exhaustive worldwide priority certification."
+      },
+      "technical_depth": {
+        "judgment": "uncertain",
+        "reason": "The packet-closure invariant and exact charging identity solve a real compatibility issue: failed attempts and simultaneous replacement must not bypass progress costs. This supports substantive mathematical innovation. The rest is a constructive descent, standard coprimality arithmetic and a known upper argument. The frozen work does not demonstrate a wider lower-bound framework, a structural theorem for all such automata, or a major barrier overcome beyond this tailored construction. A short elementary proof can be deep, but the available evidence does not justify a strong venue-level depth claim."
+      },
+      "breadth_or_consequence": {
+        "judgment": "weak",
+        "reason": "Coverage of all fixed k and the binary strongly connected strengthening are meaningful within the extremal question. No consequence for decision/search complexity, algorithmic running-time lower bounds, unambiguous mortality, coding bounds or a different model is proved. Witness-length lower bounds are not computational lower bounds. No general-purpose application of the compressed delay method is established in the frozen packet."
+      },
+      "exposition_and_verifiability": {
+        "judgment": "strong",
+        "reason": "The frozen proof states all quantifiers, explicit transitions, the exact potential, a mortality procedure and a construction for every sufficiently large n. Its finite evidence is separated from its all-parameter proof. A new verifier reproduced all 18 frozen cases, checked nine serialized certificates and 43 additional cases, and checked all 277168 abstract potential transitions across those cases, including replacement events. This assesses the proof packet; future manuscript, citation, build and page-layout gates remain separate."
+      }
+    },
+    "case_for_stoc": "The positive case is a clean and fully sharp exponent hierarchy in a natural restricted-nondeterminism model, obtained by sharing clock states across repeated expensive events while preserving an all-word promise. The central insight is more than a CRT witness or an application of a deterministic tail lemma. Nevertheless, the concrete theorem currently has a specialized extremal payoff, and the packet does not establish broad consequences or a strong case that its technical insight changes a substantial area. Correctness and novelty pass, but importance and depth remain uncertain and demonstrated breadth is weak. The justified label is working_paper, not submission_ready.",
+    "remaining_weaknesses": [
+      "No strong evidence of broad TCS importance beyond settling this particular mortality hierarchy.",
+      "No proved general transfer method, algorithmic complexity consequence, or application outside the frozen extremal construction.",
+      "The technical core is a useful tailored invariant; the record does not yet establish a major conceptual or technical advance by STOC standards.",
+      "Current literature checking is bounded, and the full revised 2019 journal tail paper was not independently inspected; the relevant original arXiv tail lemma and later explicit DFA construction were checked.",
+      "This is a proof-packet assessment. No future manuscript or PDF has received citation, build, reproduction or visual acceptance in this job."
+    ],
+    "label_is_not_a_venue_decision": true
+  },
+  "pages": 6,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "original_status": "proved",
+  "kind": "resolution-paper",
+  "pdf": "c015-imagebound_working_paper.pdf",
+  "pdf_sha256": "b2c1af7888a6e47966549882d4c977cefcaf4527cea394aaf4d57d8b62eabefb",
+  "source_archive": "c015-imagebound_source_and_reproducibility.zip",
+  "source_archive_sha256": "f956abcf3b9d2ba50c4831fd2c1292469f1334d27da887ce263ea8f872474f78",
+  "class_file": "manuscript/c015-imagebound-write-b795278c1e36/acmart.cls",
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "reproduce_scripts": [
+    "evidence/portable-check.py",
+    "evidence/portable-reassessment-check.py"
+  ],
+  "compile_layout": {
+    "entry": "manuscript/c015-imagebound-write-b795278c1e36/main.tex",
+    "directory": "manuscript/c015-imagebound-write-b795278c1e36",
+    "filename": "main.tex",
+    "jobname": "working_paper",
+    "relative_output": "../../output/pdf",
+    "back_to_root": "../..",
+    "rebuilt_pdf": "output/pdf/working_paper.pdf"
+  },
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "b2c1af7888a6e47966549882d4c977cefcaf4527cea394aaf4d57d8b62eabefb"
+    },
+    "kind": "resolution-paper",
+    "manuscript_digest": "0b0a26f7526dc9b1387c6717bfb131d92f985b87e259fd50d4c89f0e27da96de",
+    "original_status": "proved",
+    "pages": 6,
+    "pdf_digest": "b2c1af7888a6e47966549882d4c977cefcaf4527cea394aaf4d57d8b62eabefb",
+    "provenance": {
+      "audit/build.json": "ace1f897ccc26b5faa3c99dad36494b981ca813f995ca2087b3b042df78568f7",
+      "audit/build.md": "58932cef3d2c64900631da3a3939757d1e99561e79542457473056ed7b0ee8ba",
+      "audit/citations.json": "d0f235e05e6963b49eaa71d20f7ac3f29abf6f69e75f0d165dd4f207aa6a23e3",
+      "audit/citations.md": "bc18da34cb01a45a02711adebdd870c06135ad120721584916ace87a458899db",
+      "audit/math.json": "5b3baf84e1291e7616567b792df5d0de7c00f618f61e4864531da767b44991e5",
+      "audit/math.md": "38266073f3a8cf4ad4cf481ef81a754524dee898e5f68d77091a942e052c7894",
+      "audit/visual.json": "6108e3944083d0a881afe552a8e9e167a7b941851be1c99b4f5790f9c796e1de",
+      "audit/visual.md": "d8ddb24281d3f86ccff22237b174a7abd978dffca58e27f287e1f6094a0cbbba",
+      "jobs/c015-imagebound-referee-e7492ff4cfbd/role.json": "1c1b6734fe9d6a7ea3954fd03c25acae8f03d5c88cf311c2e5dee0f0ffe45b92",
+      "jobs/c015-imagebound-release-2bbd673a9c35/role.json": "789d025d34333db0cc5b4fe7f08168acf4a62a01e71ed9909288843e4f9a243f",
+      "jobs/c015-imagebound-research-337b679e5617/role.json": "f710bf7db862036bca74bc740a2a490354c3232835a0c46459f4bdcd71a0850f",
+      "manuscript/c015-imagebound-write-b795278c1e36/working_paper.log": "9b30eadcee993d979938d5ee5b6b60e927b74b70f143ce35010875740feef605"
+    },
+    "schema": 1,
+    "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e"
+  },
+  "citation_verdict": "accept",
+  "citation_limitations": [],
+  "excluded_third_party_text_caches": [
+    {
+      "path": "audit/release-final-literature.json",
+      "sha256": "f4da7442ac6d5453c512bc81a5d61a493c5ba72d3b09babf620bd3aacb443d97",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    },
+    {
+      "path": "audit/release-template-completion.json",
+      "sha256": "640592471e2b0a67772720ea3662d98f91184f9d26359bfad713b7d4bc50aadb",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    },
+    {
+      "path": "audit/release-web-records.json",
+      "sha256": "1b8c7f8d8a8cbbecdfb446da2f4bce58f0d985163065d680db8bfd625f86b1eb",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    }
+  ],
+  "external_submission_performed": false
+}

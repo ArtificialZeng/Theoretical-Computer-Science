@@ -1,0 +1,28 @@
+{
+  "verdict": "accept",
+  "job_id": "c042-strongrsp-release-8a7cb8c2de68",
+  "snapshot_digest": "b8a4224397c4874b51af65e8b82a4b17fef250e6e90513e63334f9d6b3b5e4e9",
+  "manuscript_digest": "80de7a1953cf2134fbcf45bdbab2b636aba6fb432d64e347ae0d2bbbc1c528f1",
+  "pdf_digest": "2714f0ab95d08c01d19aeacd5bf39597123d9cca31658ade6773a1bba658e703",
+  "source_unchanged": true,
+  "mathematical_snapshot_unchanged": true,
+  "stoc_assessment_unchanged": true,
+  "cited_keys": [
+    "A26",
+    "ABK24",
+    "GK25",
+    "MMNNS25"
+  ],
+  "undefined_citations": [],
+  "all_nine_page_images_inspected": true,
+  "all_fonts_embedded": true,
+  "clean_build": true,
+  "source_package_rebuild": true,
+  "source_package_pixel_identity": true,
+  "pages": 9,
+  "max_total_pages": 12,
+  "no_external_submission": true,
+  "gate_pending": false,
+  "release_gate_passed": true,
+  "gate_evidence": "evidence/release/gate-check.json"
+}

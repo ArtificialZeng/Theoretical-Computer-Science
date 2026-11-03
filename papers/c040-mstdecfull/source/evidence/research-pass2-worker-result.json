@@ -1,0 +1,17 @@
+{
+  "outcome": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Proposed complete all-p<1 deterministic zero-query quasipolynomial MST algorithm with expected O_q(log^2 n) cost. Retaining actual outlier charges removes a logarithmic factor; the changed exact stress test passed. The old cubic review is preserved and does not accept this stronger claim.",
+  "next_test": "Freeze the new original-scope claim and obtain a fresh correctness, current-novelty, substantive-value and five-criterion STOC review of the complete quadratic-log proof before any writing.",
+  "evidence": [
+    "claim.json",
+    "checkpoint.md",
+    "research/quadratic-resolution-proof.md",
+    "research/quadratic-prior-comparison.md",
+    "research/quadratic-research-checklist.md",
+    "evidence/outlier-charges-pass2.json",
+    "evidence/research-pass2-literature.json",
+    "evidence/research-pass2-validation.json"
+  ]
+}

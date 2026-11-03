@@ -1,0 +1,45 @@
+{
+  "job_id": "c040-mstdecfull-referee-8513177dc0bb",
+  "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+  "review_type": "fresh_internal_stoc_assessment",
+  "verdict": "working_paper",
+  "strongest_result": "For every fixed p<1 and hardwired rational 0<q<=1-p, a deterministic zero-query algorithm always outputs a spanning path and has E[cost_d(P)]<=10^15 q^-5 max(1,log_2 n)^2 MST(d) against every omniscient decrease-only adversary in source.md. Every execution uses n^(a_q max(1,log_2 n)) exact arithmetic/comparison and control-bit operations independently of aspect ratio. Also cost(P)<=2 beta H+12 beta Omega for every compatible DFS leaf order of any hierarchy satisfying the stated hidden-core conditions. This proves the entire original fourth-power assertion.",
+  "nearest_comparisons": [
+    "Anand, Gupta, Jayaram, Lee and Vakilian, Approximating Minimum Spanning Trees in Metrics under Semi-Random Corruptions, arXiv:2610.40594v1, Theorem 1.2: unrestricted-time O_p(log n) for every fixed p<1; Theorem 1.3: n^O(log n)-time expected O(log^4 n) for p<=0.1. The candidate is deterministic n^O_q(log n)-time expected O_q(log^2 n) for every fixed p<1, with every-execution aspect-independent operations.",
+    "The same primary, Definition 6.1, Theorem 6.2 and Algorithms 1-3: hidden-core hierarchy, future-seed carving and random physical leaders with O(log n log Delta) extraction overhead. The candidate retains this architecture but uses an all-density rectangle bootstrap, high quantiles, a compatible DFS leaf path, and actual-outlier charging cost<=2 beta H+12 beta Omega.",
+    "Bateni, Dharangutte, Jayaram and Wang, Metric Clustering and MST with Strong and Weak Distance Oracles, COLT2024, PMLR247:498-550, Theorems 4-6. The square-root-log upper theorem assumes metric weak observations; it does not cover arbitrary nonmetric decreasing observations.",
+    "Fletcher and Hershkowitz, Spanning Tree Embeddings Are Not Much Harder than Hierarchical Partitions, SODA2026:5344-5373, DOI10.1137/1.9781611978971.193: publisher abstract states constant-distortion graph-spanning embeddings when level diameters grow by Omega(log n). Its output/objective differ; full proof and possible equivalent auxiliary lemmas were not inspected."
+  ],
+  "criteria": {
+    "importance": {
+      "judgment": "uncertain",
+      "reason": "The theorem eliminates a genuine computational-noise-range restriction and two logarithmic approximation factors relative to the primary Theorem 1.3. However, its unrestricted-time Theorem 1.2 already handles all fixed p<1 with O_p(log n), and the candidate remains quasipolynomial and loses another logarithm. The record does not show that this precise refinement is a central obstacle for the broader TCS community."
+    },
+    "novelty": {
+      "judgment": "strong",
+      "reason": "The complete theorem and the direct final-leaf-path extraction are substantive differences from the verified arXiv:2610.40594v1 statements and Section 6 proof. Extending its low quantiles to majority corruption requires a new seed concentration argument, not a parameter renaming. The bounded live search found no equivalent complete theorem. This judgment is bounded to inspected primary results and does not certify priority; the adjacent SODA2026 auxiliary-lemma comparison remains limited by full-text access."
+    },
+    "technical_depth": {
+      "judgment": "uncertain",
+      "reason": "The global first-absorption invariant, all-density quantile analysis and nonnested-core DFS promotion argument are sound and useful. Much of the architecture is inherited from primary Section 6, and the new mechanisms are short elementary structural/charging arguments. There is no verified evidence that they overcome a major established barrier, yield an optimal approximation, or constitute a broadly transformative method."
+    },
+    "breadth_or_consequence": {
+      "judgment": "uncertain",
+      "reason": "The hidden-core outlier-sensitive extraction lemma is abstract and reusable, but this packet demonstrates only its MST application. It does not establish a consequence for general increase/decrease noise, graph-spanning distance embeddings, other optimization problems, or polynomial-time computation. Such consequences cannot be inferred from the adjacent SODA2026 abstract or from the topic alone."
+    },
+    "exposition_and_verifiability": {
+      "judgment": "strong",
+      "reason": "The frozen dossier gives an explicit observable algorithm, rank conventions, complete all-n invariant and extraction proofs, metric normalization, unconditional expectation, boundary branches and every-execution operation accounting. This fresh review reconstructed those steps and independently checked 268560 exhaustive five-point compatible path/core cases using exact integer constraint metrics. Finite tests are explicitly supplementary; no manuscript layout or final publication artifact has yet been assessed."
+    }
+  },
+  "case_for_stoc": "The favorable case is an all-noise-range deterministic algorithm improving a recent quasipolynomial log^4 small-noise theorem to log^2, with a clean outlier-sensitive leaf-path extraction mechanism. This addresses an actual algorithmic question posed in the primary, rather than an isolated subsidiary counterexample. The critical limitation is that the central hierarchy already exists, the high-noise extension and loss removal are elementary once identified, and no wider consequence or major barrier resolution is demonstrated. Those limitations prevent an all-strong competitive-STOC assessment. The complete innovative theorem passes the mathematical/publication gate, while the justified venue label remains working_paper.",
+  "remaining_weaknesses": [
+    "Importance relative to the primary all-p unrestricted logarithmic theorem and small-p quasipolynomial theorem is not yet compelling at the broader STOC level.",
+    "Runtime remains quasipolynomial and the approximation is still a logarithm above the unrestricted benchmark; no optimality or polynomial-time consequence is proved.",
+    "The inherited hierarchy/future-consistency architecture accounts for much of the technical development; an unusually strong depth case for the new short mechanisms has not been established.",
+    "No second substantial application of the abstract extraction lemma is demonstrated.",
+    "The adjacent Fletcher-Hershkowitz SODA2026 full proof was unavailable by the inspected ordinary route, so equivalent auxiliary lemmas there have not been excluded. The bounded search is not a priority certificate.",
+    "Final manuscript exposition, citation/build/visual gates and release artifacts have not been reviewed in this referee-only job."
+  ],
+  "label_is_not_a_venue_decision": true
+}

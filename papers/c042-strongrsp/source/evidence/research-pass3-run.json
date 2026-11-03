@@ -1,0 +1,27 @@
+{
+  "job_id": "c042-strongrsp-research-a3a11d57c4b5",
+  "role": "research",
+  "dispatch_utc": "2026-11-03T03:51:56+00:00",
+  "first_clock_read_utc": "2026-11-03T03:53:58+00:00",
+  "main_validation_completed_utc": "2026-11-03T04:08:29+00:00",
+  "main_test_deadline_utc": "2026-11-03T04:08:55.999990+00:00",
+  "record_saved_utc": "2026-11-03T04:11:13.596857+00:00",
+  "research_pass": 3,
+  "research_pass_cap": 3,
+  "worker_recommendation": "candidate",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "status_meaning": "Proposed positive full resolution for fresh audit; no acceptance or venue decision.",
+  "source_sha256": "93e36d243f9b6fec1df5dda18aacab258ad91c62c8465d0a010fddadbb319aa7",
+  "source_unchanged": true,
+  "manuscript_or_pdf_created": false,
+  "agents_or_background_workers_spawned": false,
+  "prior_checkpoint_preserved": "evidence/research-pass2-checkpoint-preserved.md",
+  "prior_evidence_and_counters_preserved": true,
+  "operational_failures": [
+    "First compiler fixture run lacked pre-rounding clipping; corrected and tests passed.",
+    "One finalization apply_patch rejected duplicate operations on checkpoint; no mathematical implication."
+  ],
+  "scientific_validation_limits": "Compiler/integration checks are exact finite rational evidence, not exhaustive. Bounded exponential reference is 130-digit Decimal numerical evidence; analytic proof supplies proposed uniform bounds. No independent audit performed.",
+  "worker_result_schema_checked": true
+}

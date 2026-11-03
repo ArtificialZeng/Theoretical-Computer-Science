@@ -1,0 +1,35 @@
+{
+  "at_utc": "2026-11-03T16:36:47.935596+00:00",
+  "passed": true,
+  "scope": "Only the declared finite checks for primary indexed versions; not general proof verification, novelty assessment, or certification of additional expanded versions.",
+  "papers": [
+    {
+      "id": "c037-msthalf",
+      "passed": true,
+      "checks": [
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/interval_packing_check.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 8.734,
+          "log": "validation/unified-reproduction/c037-msthalf-1.log"
+        },
+        {
+          "command": [
+            "python3",
+            "-B",
+            "evidence/verify_interval_packing.py"
+          ],
+          "cwd": ".",
+          "exit_code": 0,
+          "seconds": 1.014,
+          "log": "validation/unified-reproduction/c037-msthalf-2.log"
+        }
+      ]
+    }
+  ]
+}

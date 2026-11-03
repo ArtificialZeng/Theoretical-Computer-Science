@@ -1,0 +1,106 @@
+{
+  "mode": "search",
+  "skill": "citation-check-skill",
+  "pass": 1,
+  "scope": "All external bibliographic/attribution claims extracted before verification. New mathematical statements are grouped as C09 for scope comparison with the accepted proof; the release job does not replace fresh mathematical review. Autonomous bounded job overrides skill confirmation pause.",
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "A one-target bottleneck reduction confines a length search to a ratio-n interval; separate all-target repetition adds n.",
+      "type": "Comparative + Attribution",
+      "location": "Section 1, first paragraph",
+      "verification_target": "ABK24 Lemma C.1"
+    },
+    {
+      "id": "C02",
+      "claim": "Ashvinkumar Theorem 1 gives deterministic all-target bicriteria time Otilde(m log(nW)/epsilon^9).",
+      "type": "Attribution + Comparative",
+      "location": "Section 1, second paragraph",
+      "verification_target": "A26 Theorem 1"
+    },
+    {
+      "id": "C03",
+      "claim": "The paragraph after Theorem 2 distinguishes the open strongly polynomial all-target problem from the single-target consequence.",
+      "type": "Attribution",
+      "location": "Section 1, second paragraph",
+      "verification_target": "A26 after Theorem 2"
+    },
+    {
+      "id": "C04",
+      "claim": "Ashvinkumar, Bernstein and Karczmarz make the same all-target aspect distinction.",
+      "type": "Attribution",
+      "location": "Section 1, second paragraph",
+      "verification_target": "ABK24 open problems and Lemma C.1"
+    },
+    {
+      "id": "C05",
+      "claim": "The clock dynamic program and conditional-expectation witness potential originate in Ashvinkumar.",
+      "type": "Attribution",
+      "location": "Section 1, paragraph after Theorem 1",
+      "verification_target": "A26 Sections 4,6"
+    },
+    {
+      "id": "C06",
+      "claim": "Recursive offline activation and multiplicative counting have an ordinary-SSSP precedent in Gorkiewicz and Karczmarz.",
+      "type": "Attribution",
+      "location": "Section 1, paragraph after Theorem 1",
+      "verification_target": "GK25 Section 6"
+    },
+    {
+      "id": "C07",
+      "claim": "McCauley, Moseley, Niaparast, Niaparast and Singh supply an offline ordinary-SSSP precedent.",
+      "type": "Attribution",
+      "location": "Section 1, paragraph after Theorem 1",
+      "verification_target": "MMNNS25 Theorem 1"
+    },
+    {
+      "id": "C08",
+      "claim": "Those additive ordinary-distance results do not provide the stopped stochastic boundary contract used here.",
+      "type": "Comparative + Attribution",
+      "location": "Section 1, paragraph after Theorem 1",
+      "verification_target": "GK25 Section 6; MMNNS25 Theorem 1"
+    },
+    {
+      "id": "C09",
+      "claim": "The paper supplies a full all-input strong-polynomial all-target RSP resolution and its finite-precision, witness and total-work lemmas.",
+      "type": "Existence + Comparative",
+      "location": "Abstract; Theorem 1; Lemmas 2-4; Sections 2-7",
+      "verification_target": "Accepted frozen proof; compare full manuscript"
+    },
+    {
+      "id": "C10",
+      "claim": "The small exact and decimal checks exercise the stated boundary, rounding, compiler and enclosure cases.",
+      "type": "Existence",
+      "location": "Section 7, computational checks paragraph",
+      "verification_target": "Frozen checker/results and actual referee checks"
+    },
+    {
+      "id": "M01",
+      "claim": "A26 author, title, 2026, arXiv 2610.18337v2, revised 29 October, DOI 10.48550/arXiv.2610.18337.",
+      "type": "Bibliographic + Temporal",
+      "location": "Reference 1",
+      "verification_target": "A26 primary record"
+    },
+    {
+      "id": "M02",
+      "claim": "ABK24 three authors, title, 2024 v1, arXiv 2410.17179, SODA 2025, DOI 10.48550/arXiv.2410.17179.",
+      "type": "Bibliographic + Temporal",
+      "location": "Reference 2",
+      "verification_target": "ABK24 primary record"
+    },
+    {
+      "id": "M03",
+      "claim": "GK25 two authors, title, 2025 v1, arXiv 2502.10348, DOI 10.48550/arXiv.2502.10348.",
+      "type": "Bibliographic + Temporal",
+      "location": "Reference 3",
+      "verification_target": "GK25 primary record"
+    },
+    {
+      "id": "M04",
+      "claim": "MMNNS25 five authors, title, ICALP 2025 LIPIcs 334, pages 117:1-117:20, DOI 10.4230/LIPIcs.ICALP.2025.117.",
+      "type": "Bibliographic + Temporal",
+      "location": "Reference 4",
+      "verification_target": "Dagstuhl primary record"
+    }
+  ]
+}

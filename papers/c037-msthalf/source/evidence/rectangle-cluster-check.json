@@ -1,0 +1,206 @@
+{
+  "job_id": "c037-msthalf-research-82a59cd9a4af",
+  "arithmetic": "exact integer/rational",
+  "scope": "two-level cluster metrics; uniform order edge weights optimized at leading scale; all orders modulo cluster renaming; not all metrics/weights/adversaries",
+  "n_range": [
+    2,
+    8
+  ],
+  "cluster_count_range": [
+    2,
+    6
+  ],
+  "r_values": [
+    2,
+    3
+  ],
+  "metric_within": 1,
+  "metric_between": "M >= 1",
+  "density": "eta=3*(1-2*p)/4; all r-by-r rectangles, hence all larger rectangles by averaging",
+  "orders_total": 5257,
+  "configurations_total": 31317,
+  "rectangle_configurations_total": 6536826,
+  "maxima": [
+    {
+      "r": 2,
+      "p": "1/3",
+      "eta": "1/4",
+      "required_good_pairs": 1,
+      "order": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "leading_step_denominator": 3,
+      "switches": 7,
+      "clusters": 2,
+      "leading_ratio_cost_over_W_plus_MST": "21/10",
+      "finite_verification": {
+        "M": 1000000,
+        "step": "1000000/3",
+        "minimum_good_pairs": 1,
+        "path_true_cost": "7000000",
+        "true_mst": "1000006",
+        "observed_order_cost": "7000000/3",
+        "exact_ratio_cost_over_W_plus_MST": "1500000/714287"
+      },
+      "orders_checked": 5252,
+      "rectangles_checked": 964872
+    },
+    {
+      "r": 2,
+      "p": "2/5",
+      "eta": "3/20",
+      "required_good_pairs": 1,
+      "order": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "leading_step_denominator": 3,
+      "switches": 7,
+      "clusters": 2,
+      "leading_ratio_cost_over_W_plus_MST": "21/10",
+      "finite_verification": {
+        "M": 1000000,
+        "step": "1000000/3",
+        "minimum_good_pairs": 1,
+        "path_true_cost": "7000000",
+        "true_mst": "1000006",
+        "observed_order_cost": "7000000/3",
+        "exact_ratio_cost_over_W_plus_MST": "1500000/714287"
+      },
+      "orders_checked": 5252,
+      "rectangles_checked": 964872
+    },
+    {
+      "r": 2,
+      "p": "49/100",
+      "eta": "3/200",
+      "required_good_pairs": 1,
+      "order": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "leading_step_denominator": 3,
+      "switches": 7,
+      "clusters": 2,
+      "leading_ratio_cost_over_W_plus_MST": "21/10",
+      "finite_verification": {
+        "M": 1000000,
+        "step": "1000000/3",
+        "minimum_good_pairs": 1,
+        "path_true_cost": "7000000",
+        "true_mst": "1000006",
+        "observed_order_cost": "7000000/3",
+        "exact_ratio_cost_over_W_plus_MST": "1500000/714287"
+      },
+      "orders_checked": 5252,
+      "rectangles_checked": 964872
+    },
+    {
+      "r": 3,
+      "p": "1/3",
+      "eta": "1/4",
+      "required_good_pairs": 3,
+      "order": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "leading_step_denominator": null,
+      "switches": 4,
+      "clusters": 2,
+      "leading_ratio_cost_over_W_plus_MST": "4",
+      "finite_verification": {
+        "M": 1000000,
+        "step": "1",
+        "minimum_good_pairs": 3,
+        "path_true_cost": "4000001",
+        "true_mst": "1000004",
+        "observed_order_cost": "5",
+        "exact_ratio_cost_over_W_plus_MST": "4000001/1000009"
+      },
+      "orders_checked": 5187,
+      "rectangles_checked": 1214070
+    },
+    {
+      "r": 3,
+      "p": "2/5",
+      "eta": "3/20",
+      "required_good_pairs": 2,
+      "order": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "leading_step_denominator": null,
+      "switches": 4,
+      "clusters": 2,
+      "leading_ratio_cost_over_W_plus_MST": "4",
+      "finite_verification": {
+        "M": 1000000,
+        "step": "1",
+        "minimum_good_pairs": 3,
+        "path_true_cost": "4000001",
+        "true_mst": "1000004",
+        "observed_order_cost": "5",
+        "exact_ratio_cost_over_W_plus_MST": "4000001/1000009"
+      },
+      "orders_checked": 5187,
+      "rectangles_checked": 1214070
+    },
+    {
+      "r": 3,
+      "p": "49/100",
+      "eta": "3/200",
+      "required_good_pairs": 1,
+      "order": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "leading_step_denominator": null,
+      "switches": 4,
+      "clusters": 2,
+      "leading_ratio_cost_over_W_plus_MST": "4",
+      "finite_verification": {
+        "M": 1000000,
+        "step": "1",
+        "minimum_good_pairs": 3,
+        "path_true_cost": "4000001",
+        "true_mst": "1000004",
+        "observed_order_cost": "5",
+        "exact_ratio_cost_over_W_plus_MST": "4000001/1000009"
+      },
+      "orders_checked": 5187,
+      "rectangles_checked": 1214070
+    }
+  ],
+  "conclusion": "No transfer failure in this specified finite family. The general two-level bound is proved separately; this search does not prove a general multiscale theorem."
+}

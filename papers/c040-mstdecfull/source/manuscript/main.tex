@@ -1,0 +1,540 @@
+\documentclass[acmsmall,11pt,nonacm]{acmart}
+\geometry{letterpaper,margin=1in,headheight=14pt,footskip=18pt}
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\setcopyright{none}
+\citestyle{acmnumeric}
+\renewcommand{\bibliofont}{\normalfont\normalsize}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newcommand{\MST}{\operatorname{MST}}
+\newcommand{\cost}{\operatorname{cost}}
+\newcommand{\calC}{\mathcal C}
+\newcommand{\calE}{\mathcal E}
+\newcommand{\calG}{\mathcal G}
+\newcommand{\core}{\operatorname{core}}
+\newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\title[Deterministic MST Approximation under Decrease-Only Corruption]{Deterministic Quasipolynomial MST Approximation under Decrease-Only Corruption}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\authorsaddresses{\normalsize Zijian Zeng, UCSI University,
+\href{mailto:1002266693@ucsiuniversity.edu.my}{1002266693@ucsiuniversity.edu.my}}
+\renewcommand{\shortauthors}{Zijian Zeng}
+\date{}
+\begin{document}
+\begin{abstract}
+An algorithm observes a finite metric after an adversary has decreased an
+independently marked subset of its pairwise distances. The adversary knows
+the metric and the entire mask, and the observations need not form a metric.
+For every fixed marking probability $p<1$, we give a deterministic algorithm
+that uses no true-distance queries and returns a spanning path of expected
+true cost $O_p(\log^2 n)$ times the minimum spanning tree cost. On every input,
+its running time is $n^{O_p(\log n)}$ in the exact arithmetic/comparison model,
+independently of the true and observed aspect ratios.
+
+The construction builds on the hidden-core hierarchy of Anand, Gupta,
+Jayaram, Lee and Vakilian. Their quasipolynomial guarantee has approximation
+factor $O(\log^4 n)$ for $p\leq0.1$; their unrestricted-time algorithm gives
+$O_p(\log n)$ for all fixed $p<1$. A uniform uncorrupted-rectangle argument
+and high quantiles extend hierarchical carving to every fixed positive
+uncorrupted density. A deterministic depth-first leaf path admits an
+outlier-sensitive charging bound: its cost depends on the actual weighted
+outlier mass rather than a worst-case outlier allowance per cluster.
+Separate packing bounds for generated clusters and leftover singletons
+then give the quadratic logarithm.
+\end{abstract}
+\maketitle
+\clearpage
+
+\section{The computational question and the result}
+
+Minimum spanning trees are easy to compute when their edge lengths are
+known. Corrupted distances introduce a different obstacle: a very small
+observed length can conceal a long true edge, and the observed matrix can
+violate every useful triangle inequality. The strong/weak distance-oracle
+framework of Bateni, Dharangutte, Jayaram and Wang~\cite{bateni2024}
+motivates recovering a low-cost tree with few true-distance queries.
+Their $O(\sqrt{\log n})$ MST upper bound assumes metric weak observations
+(Theorems~4--6 distinguish this assumption from unrestricted observations).
+Here all observations are available, but no true-distance queries are allowed.
+
+Let $X=\{1,\ldots,n\}$, $n\geq2$, and let $d$ be a genuine finite metric:
+$d(u,v)>0$ for distinct points. Independently mark each unordered pair with
+probability $p$. An omniscient adversary sees $d$ and the whole mask, and
+chooses finite symmetric observations $0\leq D_{uv}\leq d(u,v)$ on marked
+pairs. Unmarked pairs have $D_{uv}=d(u,v)$; put $D_{uu}=0$.
+Only $D$ is given to the algorithm. Write
+$\cost_d(T)=\sum_{uv\in T}d(u,v)$ and $W=\MST(d)$.
+
+Anand, Gupta, Jayaram, Lee and Vakilian~\cite{anand2026}, Theorems~1.2--1.3,
+give an unrestricted-time $O_p(\log n)$ approximation for every fixed $p<1$
+and an $n^{O(\log n)}$-time $O(\log^4 n)$ approximation for $p\leq0.1$.
+The computational question is to obtain a polylogarithmic approximation
+in quasipolynomial time throughout the decrease-only noise range.
+
+\begin{theorem}\label{thm:main}
+For every rational $0<q\leq1$ there are a deterministic algorithm and a
+constant $a_q>0$ with the following properties. On every observed input
+the algorithm returns a spanning path, uses no true-distance or mask-label
+queries, and performs at most $n^{a_q\log_2 n}$ exact arithmetic/comparison
+and control-bit operations. The bound is independent of aspect ratio.
+For every metric $d$, every $0\leq p\leq1-q$, and every adversary described
+above,
+\[
+ \mathbb E[\cost_d(P)]\leq 10^{15}q^{-5}(\log_2 n)^2\MST(d).
+\]
+The expectation is over the mask; the algorithm uses no private bits.
+\end{theorem}
+
+For each fixed real $0\leq p<1$, hardwiring a rational $0<q\leq1-p$
+gives expected $O_p(\log^2 n)$ approximation in $n^{O_p(\log n)}$ operations.
+Arithmetic on input distances is charged exactly; a bit-complexity claim
+for arbitrary-precision rational distances would additionally charge their
+precision.
+
+\paragraph{Method and relation to the hierarchy framework.}
+The hierarchy, universal future-seed consistency tests, normalization, and
+promotion/intersection framework come from Section~6 of~\cite{anand2026}.
+We retain this architecture. The changes address two losses within it.
+First, even when most pairs are marked, every large observed clique has
+an almost-full hidden core: one dense unmarked rectangle gives many true
+neighbors of a center, and a second rectangle excludes many distant seed
+points. High quantiles can then compare centers at any fixed unmarked
+density. Universal future tests ensure that outliers do not accumulate
+when clusters merge.
+
+Second, we connect the leaves of the cluster tree in depth-first order.
+Its final degree two controls delayed charges, and the contiguous interval
+of each child permits at most one immediate right-exit charge. For weighted
+cluster count $H$ and weighted actual outlier mass $\Omega$, the resulting
+cost is at most $2\beta H+12\beta\Omega$ (Lemma~\ref{lem:extract}).
+Both quantities have the same packing bound. In particular, a leftover
+singleton contributes one outlier, even when generated clusters have a
+logarithmic outlier allowance. These steps form one algorithmic method.
+
+Related hierarchy-to-tree work by Fletcher and Hershkowitz~\cite{fletcher2026}
+concerns graph-spanning distance embeddings; their stated constant-distortion
+guarantee uses level-diameter growth $\Omega(\log n)$. Our objective is total
+path cost in a metric closure, with dyadic levels and hidden cores that may
+change nonmonotonically. This comparison uses the theorem stated in the
+publisher abstract.
+
+\section{Uniform mask control and seed quantiles}\label{sec:seeds}
+
+Set $h=\log_2 n$, $\ell=\ceil{h}$, and
+\[
+ r=\ceil{80q^{-2}\ell},\qquad R=\ceil{128r/q},\qquad
+ \tau=1-q/8,\qquad A=32,\qquad\beta=256.
+\]
+Then $r\leq81q^{-2}\ell$, $R\leq11000q^{-3}\ell$, and $r/R\leq q/128$.
+The case $n=2$ uses its unique edge. If $R>n$, use the label-order path;
+its cost is at most $(n-1)W<RW$, within Theorem~\ref{thm:main}.
+For now assume $R\leq n$.
+
+Let $\calE$ be the mask event that every two disjoint sets $U,V$ of size
+at least $r$ have at least $(q/2)|U||V|$ unmarked cross pairs.
+For fixed sizes $a,b$, Hoeffding's inequality bounds a rectangle's failure
+probability by $\exp(-q^2ab/2)$. Since $ab\geq r(a+b)/2$,
+\begin{equation}\label{eq:mask}
+ \Pr(\calE^c)\leq
+ \sum_{a,b=r}^n\exp\big((a+b)\ln n-q^2r(a+b)/4\big)
+ \leq\sum_{a,b\geq1}n^{-27(a+b)}<n^{-20}.
+\end{equation}
+Indeed $q^2r/4\geq20\ell$ and $20/\ln2-1>27$.
+When the disjoint sets do not exist, the condition is vacuous.
+This event depends only on the mask. Its consequences therefore hold for
+all adversarial observations and all adaptively selected seeds simultaneously.
+
+The following lemmas apply to any metric and compatible decreased observations;
+in the algorithm they will be applied after normalization.
+A \emph{seed at scale $s$} is an $R$-set $S$ with $D_{uv}\leq s$
+for all distinct $u,v\in S$.
+
+\begin{lemma}[Seed core]\label{lem:seed}
+On $\calE$, every seed $S$ at scale $s$ has a center $z_S\in S$ such
+that $G_S=\{x\in S:d(x,z_S)\leq2s\}$ has size at least $R-r$.
+\end{lemma}
+\begin{proof}
+Split $S$ into two halves, each of size at least $r$. The rectangle condition
+gives a point $z$ in the first half with at least $qR/4\geq32r$ unmarked
+neighbors $U$ in the second. All these neighbors are truly within $s$ of $z$.
+If an $r$-set $F\subseteq S$ were farther than $2s$ from $z$, then $U,F$
+would be disjoint and every true $U$--$F$ distance would exceed $s$.
+Every such observation is at most $s$, so all these pairs would be marked,
+contradicting $\calE$.
+\end{proof}
+
+For each $R$-set, fix a hidden center at the smallest scale at which it is
+an observed seed. Its core-radius bound is then valid at every later
+qualifying scale. These centers are analysis devices only.
+For a list of $M$ numbers, its $\tau$-quantile means order statistic
+$\ceil{\tau M}$. Define $Q(x,S)$ from the $R$ entries $D_{xs}$,
+including the diagonal zero if $x\in S$. Define $Z(S,S')$ from all $R^2$
+ordered entries $D_{ss'}$. Overlap can introduce diagonal zeros and repeated
+unordered pairs; the definition is unchanged, including when $S=S'$.
+
+\begin{lemma}[Quantile bounds]\label{lem:quantiles}
+On $\calE$, seeds $S,S'$ with core radii $2s,2s'$ satisfy
+\begin{align}
+ Q(x,S)&\leq d(x,z_S)+2s,\label{eq:pointupper}\\
+ |Z(S,S')-d(z_S,z_{S'})|&\leq2s+2s'.\label{eq:seedcompare}
+\end{align}
+Moreover, for any $B\geq0$, fewer than $r$ points $x\in X$ satisfy both
+$Q(x,S)\leq B$ and $d(x,z_S)>B+2s$.
+\end{lemma}
+\begin{proof}
+At least $R-r>\tau R$ point-to-core entries give~\eqref{eq:pointupper}.
+At least $(R-r)^2>\tau R^2$ core-to-core entries give the upper half
+of~\eqref{eq:seedcompare}. Both use $D\leq d$.
+For its lower half put $b=d(z_S,z_{S'})-2s-2s'$. If $b\leq0$,
+nonnegativity suffices. Otherwise the two cores are disjoint even if
+the seeds overlap. The event $\calE$ gives at least
+$(q/2)(R-r)^2>(1-\tau)R^2$ unmarked core pairs, each with observation
+at least $b$. These are distinct unordered pairs. Thus fewer than
+$\tau R^2$ entries are strictly below $b$, and the specified ceiling-rank
+quantile is at least $b$. This also handles integer rounding.
+
+For the final assertion suppose an $r$-set $F$ of such far points existed.
+It is disjoint from $G_S$. For each $x\in F$, at most
+$R-\ceil{\tau R}\leq qR/8$ observations exceed $B$. Every unmarked edge
+from $x$ to $G_S$ must exceed $B$, by the triangle inequality. Hence the
+rectangle has at most $|F|qR/8$ unmarked pairs. Its required number is at
+least $(q/2)|F||G_S|>|F|qR/8$, since $|G_S|\geq R-r>R/4$.
+\end{proof}
+
+\section{The observable hierarchy}\label{sec:algorithm}
+
+Compute $U=\max_{u<v}D_{uv}$. If $U=0$, return the label-order path.
+Otherwise set
+\[
+ \lambda=2U/n^2,\qquad D^*_{uv}=\max\{1,D_{uv}/\lambda\}\quad(u\ne v),
+ \qquad D^*_{uu}=0,\qquad L=\ceil{\log_2(n^2)}.
+\]
+All predicates below use $D^*$, with scales $t_i=2^i$. For analysis the
+corresponding true metric is $d^*_{uv}=\max\{1,d(u,v)/\lambda\}$ off the
+diagonal, and zero on it. Section~\ref{sec:expectation} verifies this
+normalization without any aspect-ratio assumption.
+
+For every seed $S$ at $t_i$, define $F_i(S,x)$ to mean that for every
+$j\in\{i,\ldots,L\}$ and every $R$-set $S'$ that is a seed at $t_j$,
+\begin{equation}\label{eq:future}
+ Q(x,S')\leq At_i+Z(S,S')+4t_j.
+\end{equation}
+All seeds in the universe are tested, irrespective of their eventual selection
+or intersection with $S$. A fresh seed $S$ is \emph{admissible} at $i$ if
+it is a seed at $t_i$ and $F_i(S,x)$ holds for every $x\in S$.
+
+Start with the singleton partition $\calC_0$. For each $i=1,\ldots,L-1$,
+initialize an active list with all objects in $\calC_{i-1}$. Every
+nonsingleton object carries an $R$-set representative; a singleton carries
+its point. Build $\calC_i$ by the following deterministic loop.
+\begin{enumerate}
+\item If an active nonsingleton exists, select its lexicographically first
+representative $S$. Otherwise select the lexicographically first admissible
+$R$-set of active singleton points. If no such set exists, stop.
+\item Form one output cluster from the selected old object, if any; all
+other active old objects whose representative $S_0$ satisfies
+$Z(S,S_0)\leq At_i$; and all active singletons $x$ satisfying
+$Q(x,S)\leq At_i$ and $F_i(S,x)$.
+\item Remove these entire objects from the active list. Give their union
+representative $S$ and hold it separately until this level ends.
+\end{enumerate}
+At termination, $\calC_i$ consists of the held output clusters and leftover
+singletons. Fresh seed members are included because $Q(x,S)\leq t_i$ and
+admissibility supplies $F_i(S,x)$. Each iteration removes an object; outputs
+never reenter the same level's list. Consequently these are nested partitions,
+and every nonsingleton contains its representative seed, which remains a
+clique at larger scales. Set $\calC_L=\{X\}$.
+
+Treat each level-cluster pair as a node, including repeated underlying sets.
+Order children by their least label. List the singleton leaves in depth-first
+order and connect consecutive leaves. This specifies a spanning path on every
+input using observed data alone.
+
+\paragraph{A useful completeness implication.}
+For the rest of Sections~\ref{sec:algorithm}--\ref{sec:packing}, distances
+mean $d^*$ and quantiles mean those of $D^*$. On $\calE$, if
+$d^*(x,z_S)\leq(A-2)t$ for a seed at current scale $t$, then $x$ passes
+both singleton tests. Equation~\eqref{eq:pointupper} gives $Q(x,S)\leq At$.
+For every future seed at scale $t'$,
+\begin{align*}
+ Q(x,S')&\leq d^*(x,z_S)+d^*(z_S,z_{S'})+2t'\\
+ &\leq(A-2)t+Z(S,S')+2t+4t'=At+Z(S,S')+4t'.
+\end{align*}
+The current radius $2t$ is valid for carried seeds as well.
+In particular any $R$-set of true diameter at most $t$ is admissible.
+
+\begin{lemma}[Nonaccumulating outliers]\label{lem:nonaccum}
+On $\calE$, every non-root nonsingleton $C\in\calC_i$ has a hidden
+core of diameter at most $256t_i$, size greater than $r$, and fewer
+than $r$ outliers. Singletons may be assigned empty cores, with one outlier.
+\end{lemma}
+\begin{proof}
+Let $S_f$ represent $C$ at scale $t$. Each $x\in C$ first ceased to be
+a singleton at a scale $t_0\leq t$, with selected representative $S_0$.
+The singleton test (also for fresh seed members) gave $F_{i_0}(S_0,x)$.
+Follow the representatives up the ancestor chain to $C$. There is at most
+one change per level. At a change at scale $s$, the merge rule and
+\eqref{eq:seedcompare} bound the center displacement by $(A+4)s$.
+Thus
+\[
+ d^*(z_{S_0},z_{S_f})\leq(A+4)\sum_{\text{dyadic }s\leq t}s
+ \leq2(A+4)t.
+\]
+The final seed $S_f$ was among the universal future tests at scale $t$,
+even before it was selected. Its fixed birth center has radius at most $2t$;
+the birth center of $S_0$ has radius at most $2t_0$. Therefore
+\begin{align*}
+ Q(x,S_f)&\leq At_0+Z(S_0,S_f)+4t\\
+ &\leq At+2(A+4)t+2t_0+2t+4t\leq112t.
+\end{align*}
+The setwise soundness in Lemma~\ref{lem:quantiles} says that fewer than
+$r$ points in the entire set $\{x:Q(x,S_f)\leq112t\}$ lie farther than
+$114t$ from $z_{S_f}$. Removing these points from $C$ leaves diameter
+at most $228t<256t$ and size at least $R-r>r$.
+The bound concerns the whole merged cluster and does not add incoming
+outlier allowances.
+\end{proof}
+
+\section{Packing with the actual outlier mass}\label{sec:packing}
+
+Write $W^*=\MST(d^*)$. Selected representatives at one scale $t$ have
+centers more than $(A-4)t=28t$ apart. To see this, suppose an earlier
+selection $S$ and later selection $S'$ had closer centers. If $S'$ was an
+active old object, \eqref{eq:seedcompare} would give $Z(S,S')\leq At$,
+so that object would have been removed. If it was fresh, its nonempty
+seed core consists of singleton points within $2t+28t=(A-2)t$ of $z_S$.
+The completeness implication would have removed these points, contradicting
+their later availability.
+
+In any metric, $k$ points separated by more than $\delta$ satisfy
+$k\leq1+2\MST(d)/\delta$. For $k\geq2$, shortcutting a doubled MST
+gives a cyclic tour through the points of length at most $2\MST(d)$,
+whereas each of its $k$ steps exceeds $\delta$; $k=1$ is immediate.
+Hence the number $K_i$ of seed-generated clusters is at most
+$1+W^*/t_i$.
+
+No true-diameter-$t_i$ set contains $R$ leftover singletons, since those
+points would be an admissible seed and the loop could not stop. Cover
+leftover points greedily by true radius-$t_i/2$ balls centered at uncovered
+leftovers. The centers are more than $t_i/2$ apart, so at most
+$1+4W^*/t_i$ balls are used, each containing at most $R-1$ leftovers.
+If there are none, use zero balls. Writing $N_i$ for the number of leftover
+singletons gives
+\begin{equation}\label{eq:counts}
+ K_i\leq1+W^*/t_i,\quad N_i\leq(R-1)(1+4W^*/t_i),\quad
+ |\calC_i|\leq R+4RW^*/t_i.
+\end{equation}
+These two categories exhaust the partition, including carried old clusters:
+every old nonsingleton is selected or absorbed before the loop stops.
+
+Assign each intermediate nonsingleton its core from
+Lemma~\ref{lem:nonaccum}, each singleton the empty core, and the root the
+full core $X$. Put
+\[
+ H=\sum_{i=0}^L t_i|\calC_i|,\qquad
+ O_i=\sum_{C\in\calC_i}|C\setminus\core_i(C)|,\qquad
+ \Omega=\sum_{i=0}^L t_i O_i.
+\]
+For intermediate levels, \eqref{eq:counts} gives the sharper category bound
+\begin{equation}\label{eq:outliers}
+ O_i\leq rK_i+N_i\leq2R+5RW^*/t_i.
+\end{equation}
+At the bottom $O_0=n$; at the root $O_L=0$.
+
+Assume temporarily that the true normalized minimum distance is at least
+$1$ and its diameter $\Delta^*$ belongs to $[n^2/2,n^2]$. Then
+$W^*\geq n-1$, $n\leq2W^*$, and
+$t_L<2n^2\leq4\Delta^*\leq4W^*$. Summing
+\eqref{eq:counts} and \eqref{eq:outliers}, using
+$\sum_{i=1}^{L-1}t_i<t_L$, yields
+\begin{align}
+ H&\leq n+(R+1)t_L+4R(L-1)W^*
+       \leq14R(L+1)W^*,\label{eq:H}\\
+ \Omega&\leq n+2Rt_L+5R(L-1)W^*
+       \leq14R(L+1)W^*.\label{eq:Omega}
+\end{align}
+The singleton contribution in \eqref{eq:outliers} is one per point.
+Replacing it by the maximum allowance $r$ would lose a logarithmic factor.
+
+\section{Deterministic extraction from hidden cores}\label{sec:extract}
+
+The following statement isolates the extraction step from the carving
+algorithm. Cores need neither be computable nor be nested.
+
+\begin{lemma}[Outlier-sensitive leaf path]\label{lem:extract}
+Let $\calC_0,\ldots,\calC_L$ be nested partitions of a finite metric,
+with singleton bottom and one-cluster top. At scale $t_i=2^i$, each core
+has diameter at most $\beta t_i$. The root core is $X$. Every non-root
+nonempty core has size greater than $b$ and omits at most $b$ points of
+its cluster, where $b\geq1$; each empty-core cluster has at most $B$ points,
+where $B\geq b$. Define $H,\Omega$ as above. Every compatible depth-first
+ordering of the singleton leaves induces a path $P$ with
+\begin{equation}\label{eq:extraction}
+ \cost(P)\leq2\beta H+12\beta\Omega.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Orient each path edge from its earlier leaf $u$ to its later leaf $v$.
+Let $j\geq1$ be their least common cluster level. Promote each endpoint
+$x$ from level $j$ to the first containing cluster $A_x$ whose core
+contains $x$, at level $k_x$. These levels exist because the root core
+is $X$. Put $k=\max\{k_u,k_v\}$ and $D=\calC_k(u)=\calC_k(v)$,
+where $\calC_i(x)$ denotes the cluster containing $x$.
+The core of $D$ is nonempty since the later-promoted endpoint belongs to it.
+
+The cores of $A_x$ and $D$ intersect. This is immediate if $A_x=D$ or
+if $D$ is the root. Otherwise $A_x$ is non-root, its core has more than
+$b$ points, and it is contained in $D$, which omits at most $b$ points.
+Choose $w_x$ in this intersection. Three diameter bounds give
+\[
+ d(u,v)\leq d(u,w_u)+d(w_u,w_v)+d(w_v,v)
+ \leq\beta2^{k_u}+\beta2^k+\beta2^{k_v}\leq3\beta2^k.
+\]
+If $k=j$, both endpoints lie in the common level-$j$ core, giving the
+better bound $d(u,v)\leq\beta2^j$. Charge the edge to the level-$(j-1)$
+child containing $u$. This child occupies a contiguous interval in the
+leaf order; an edge leaves its right boundary at most once. These charges
+sum to at most $2\beta H$.
+
+If $k>j$, choose an endpoint $x$ with $k_x=k$, breaking a tie by $u$.
+It is an outlier in $\calC_{k-1}(x)$ by minimality of its promotion level.
+Charge that cluster; the edge costs at most $6\beta2^{k-1}$. Each outlier
+point has at most two incidences in the final path. Thus a level-cluster
+pair receives at most twice its actual outlier count in charges, for a
+total at most $12\beta\Omega$. The two edge classes prove the bound.
+Repeated underlying clusters are distinct level nodes; no step assumes
+that core membership persists to the next level.
+\end{proof}
+
+For the constructed hierarchy use $b=B=r$ and $\beta=256$.
+Lemma~\ref{lem:nonaccum} supplies all intermediate core conditions.
+Under the temporary scale assumptions the root has diameter at most
+$t_L$, so \eqref{eq:H}--\eqref{eq:extraction} imply
+\begin{equation}\label{eq:normalized}
+ \cost_{d^*}(P)\leq196\beta R(L+1)W^*
+                  =50176R(L+1)W^*.
+\end{equation}
+The path is the leaf order of the cluster tree; no hidden core is needed
+to compute it.
+
+\section{Aspect normalization and unconditional expectation}\label{sec:expectation}
+
+Let $\Delta$ be the original diameter. Fix a diametral pair $a,b$.
+For every other $x$, choose one of $ax,bx$ of length at least $\Delta/2$.
+Together with $ab$, these are $n-1$ distinct pairs depending only on $d$.
+If any is unmarked, then $U\geq\Delta/2$. Thus the scale event
+$\calG=\{U\geq\Delta/2\}$ satisfies
+\begin{equation}\label{eq:scale}
+ \Pr(\calG^c)\leq p^{n-1}
+\end{equation}
+uniformly over the adversary. This also includes the $U=0$ branch.
+
+For $U>0$, the normalized $d^*$ is a genuine metric. For three distinct
+points, if a left-hand distance is $1$, the other two are at least $1$;
+otherwise the original triangle inequality and monotonicity suffice.
+Repeated-vertex triangle inequalities are identities. Also $D^*\leq d^*$,
+and unmarked equality persists. The same mask event $\calE$ therefore
+controls the transformed instance even though $\lambda$ depends on $D$.
+On $\calG$, since $U\leq\Delta$,
+\[
+ n^2/2\leq\Delta^*=\max\{1,\Delta/\lambda\}\leq n^2.
+\]
+This establishes the scale assumptions used above. Moreover
+\[
+ W^*\leq W/\lambda+(n-1),\qquad
+ \lambda(n-1)\leq2\Delta/n\leq2W/n,\qquad
+ d(u,v)\leq\lambda d^*(u,v).
+\]
+For the first inequality evaluate an original MST in $d^*$; for the
+second use $\lambda=2U/n^2$ and $U\leq\Delta$.
+Consequently \eqref{eq:normalized} gives, on $\calE\cap\calG$,
+\[
+ \cost_d(P)\leq100352R(L+1)W.
+\]
+On every other mask the output is still a spanning path, with cost
+at most $(n-1)\Delta<nW$. By \eqref{eq:mask} and \eqref{eq:scale},
+their unconditional expected contribution is at most
+\[
+ n(n^{-20}+p^{n-1})W\leq(1+1/q)W.
+\]
+Indeed $np^{n-1}\leq\sum_{k=0}^{n-1}p^k\leq1/(1-p)\leq1/q$;
+this includes $p=0$ literally for $n\geq2$. No conditional distribution
+of the mask is used.
+
+Finally $L\leq2\ell$, $L+1\leq3\ell$, and $\ell\leq2h$.
+The good-event term is bounded by
+\[
+ 100352\cdot11000\cdot3\cdot4\,q^{-3}h^2 W
+   =13246464000\,q^{-3}h^2 W.
+\]
+Adding $(1+1/q)W$ is within $10^{15}q^{-5}h^2W$.
+The $n=2$ and $R>n$ branches already satisfy that bound, completing
+the approximation part of Theorem~\ref{thm:main}.
+
+\section{Every-execution operation bound}\label{sec:runtime}
+
+Integer doubling computes $\ell,L$; fixed rational arithmetic computes
+$r,R$ and all quantile ranks. No real logarithm or rounding oracle is needed.
+In the nontrivial branch put $N=\binom nR\leq n^R$ and enumerate all
+$R$-subsets. Check their clique status at every scale. Precompute $Q(x,S)$
+and $Z(S,S')$ by sorting lists of lengths $R$ and $R^2$ and selecting
+the exact ceiling ranks. Even quadratic sorting takes $O(R^4)$ comparisons
+per seed pair. Scanning all future scales and all clique seeds computes
+the $F_i(S,x)$ tables with $O(L^2nN^2)$ further comparisons. These tables
+include identical and intersecting seeds.
+
+There are at most $n$ carving iterations per level. Each fresh-seed search
+can scan all $N$ subsets and their active memberships. Label lists or bit
+vectors represent objects, their unions and the partition parents; copying,
+tie breaking, leaf traversal and writing the path have polynomial overhead.
+Since $R\leq n$ and $L\leq2\ell\leq2n$, a fixed implementation uses at
+most $cL^2n^{2R+6}$ elementary operations before charging integer-control
+overhead, for an absolute constant $c$.
+
+Control variables have $O(R\log n+\log L)$ bits plus a $q$-dependent
+constant. Charging their elementary bit operations adds polynomial factors
+in $R,\log n$, so fixed routines have a bound $c_q n^{2R+k}$ for constants
+$c_q,k$. As $R\leq22000q^{-3}h$, choosing an integer
+\[
+ a_q\geq44000q^{-3}+k+\ceil{\log_2\max\{1,c_q\}}+1
+\]
+gives $c_qn^{2R+k}\leq n^{a_qh}$ for $n\geq2$.
+The constants are determined by the fixed enumeration, sorting, and integer
+routines, independently of distances and their precision. All operations
+on distance values are charged in the exact arithmetic/comparison model.
+The loops depend only on $n,q$ and have the same bounds on bad masks.
+There are no rejection loops or private random bits. The early branches
+and the forced root ensure a valid output on every execution. This proves
+the remaining assertions of Theorem~\ref{thm:main}.
+
+\section{Discussion and verification}
+
+The theorem combines the full fixed decrease-only noise range with a
+quasipolynomial deterministic algorithm and a quadratic logarithmic
+approximation. The unrestricted-time logarithmic benchmark remains the
+nearest approximation target. Whether the same computational model admits
+a logarithmic approximation, or whether the extraction inequality yields
+other applications, are further questions.
+
+The proof is analytic for all $n$. As supplementary checks, exact integer
+shortest-path closures were used to test the hidden-core extraction argument
+on finite hierarchies. A separately implemented check enumerated all 358
+nested two-intermediate-level partition chains on five labels, with 8,951
+eligible core assignments for $(b,B)=(1,2),(2,3)$ and 268,560 compatible
+ordered cases. It checked 1,074,240 path edges, the promotion/intersection
+conditions, and both charge bounds. These finite checks support debugging;
+they do not replace Lemma~\ref{lem:extract} or execute the large-constant
+carving algorithm.
+
+\paragraph{AI methodology.}
+OpenAI Codex was used substantially for algorithm and proof development,
+exact finite-check code, literature comparison, and manuscript drafting.
+Separate model contexts performed internal mathematical checks.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\end{document}

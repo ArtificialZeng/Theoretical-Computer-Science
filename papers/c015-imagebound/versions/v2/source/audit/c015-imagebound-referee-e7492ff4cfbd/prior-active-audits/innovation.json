@@ -1,0 +1,31 @@
+{
+  "job_id": "c015-imagebound-referee-c91c0d194005",
+  "verdict": "accept",
+  "original_scope_resolved": true,
+  "snapshot_digest": "cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e",
+  "nearest_prior_results": [
+    {
+      "reference": "Stefan Kiefer and Andrew Ryzhikov, The Complexity of Reachability Problems in Strongly Connected Finite Automata, MFCS 2025, DOI 10.4230/LIPIcs.MFCS.2025.62, Sections 7 and 9.",
+      "verified_result": "Global k-image-bounded model; incomplete n-state automata have a mortal word of length at most n^(k+1); tightness is explicitly asked.",
+      "verification": "Frozen primary.txt and current publisher full text; arXiv record still v2 dated 2025-07-23.",
+      "url": "https://doi.org/10.4230/LIPIcs.MFCS.2025.62"
+    },
+    {
+      "reference": "Andrew Ryzhikov, On shortest products for nonnegative matrix mortality, RP 2024, DOI 10.1007/978-3-031-72621-7_8; arXiv:2405.19622v4, Section 4.",
+      "verified_result": "Explicit binary deterministic cyclic queue and physical tail yielding quadratic mortality; queue action is prior work. General NFA lower bounds elsewhere in the paper lack the fixed global image promise.",
+      "verification": "Current primary full text, including the displayed queue/tail transition formulas and their comparison with older tail constructions.",
+      "url": "https://arxiv.org/html/2405.19622v4"
+    },
+    {
+      "reference": "D. S. Ananichev, A new lower bound for reset threshold of synchronizing automata with sink state, arXiv:1701.07954v1, Section 2, Lemma 2.1 (reproducing Vorel's appended-tail lemma).",
+      "verified_result": "Appending h physical states, for h divisible by the permutation order of an n-state almost permutation automaton, raises the reset threshold by n*h.",
+      "verification": "Primary preprint definitions, lemma and proof inspected. Journal first-page metadata also checked, but its full proof and lemma numbering are not attributed as inspected.",
+      "url": "https://arxiv.org/pdf/1701.07954"
+    }
+  ],
+  "substantive_delta": "The candidate realizes a delay L=lcm(ell_i) using only sum_i ell_i clock states and one k-element packet. An all-word singleton-image invariant preserves the global k bound. A port-separated queue potential forces m+1 disjoint full-period events even with resets and simultaneous reforks. Choosing pairwise-coprime lengths for every sufficiently large n yields Omega_k(n^(k+1)) for every k>=2, matching the known upper bound even for binary strongly connected automata.",
+  "why_nonroutine": "CRT alone supplies only n^k; the verified deterministic tail lemma spends L physical states for an L delay. Neither supplies reusable nondeterministic clock compression with an unchanged global row bound or rules out shortcuts when that compressed delay is shared by a linear-size queue. The candidate proves those missing properties by a new invariant and exact potential. This is a substantive full-hierarchy construction relative to the verified prior work, not a k=1 rediscovery, an isolated finite witness, or a routine application whose hypotheses already contain the result.",
+  "significance": "The theorem resolves the complete fixed-k interpretation of the published MFCS 2025 tightness question, with explicit positive constants and a construction at every n beyond a stated threshold. It establishes the optimal polynomial exponent at every nondeterministic image-bound level while retaining binary alphabet and strong connectivity. This has clear extremal automata and bounded-support mortality value; no claim of venue acceptance or optimal leading constants is made.",
+  "novelty_screen": "Fresh primary-source and equivalent-terminology checks on 2026-11-01 found no equivalent full hierarchy resolution. STACS 2026 finite rational matrix semigroup mortality and arXiv:2609.30817v2 impose hypotheses the candidate directly violates. The search is bounded and does not establish exhaustive priority; details and access limits are in audit/referee-sources.json and audit/math.md.",
+  "remaining_gaps": []
+}

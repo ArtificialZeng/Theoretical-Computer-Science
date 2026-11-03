@@ -1,0 +1,24 @@
+{
+  "job_id": "c015-imagebound-release-2bbd673a9c35",
+  "clean_directory_build_exit": 0,
+  "build_command": [
+    "latexmk",
+    "-pdf",
+    "-jobname=working_paper",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "main.tex"
+  ],
+  "pdf_original_digest": "b2c1af7888a6e47966549882d4c977cefcaf4527cea394aaf4d57d8b62eabefb",
+  "portable_pdf_digest": "a608000cd8c2bc680e50ed3e7b997fe664a0598bcf2e6fd4294833ef77e5803f",
+  "extracted_text_identical": true,
+  "bbl_identical": true,
+  "compiler_findings": {
+    "manuscript/c015-imagebound-write-b795278c1e36/working_paper.log": [],
+    "evidence/c015-imagebound-release-2bbd673a9c35/portable-build/working_paper.log": []
+  },
+  "template_comparison": {
+    "acmart.cls": true,
+    "ACM-Reference-Format.bst": true
+  }
+}

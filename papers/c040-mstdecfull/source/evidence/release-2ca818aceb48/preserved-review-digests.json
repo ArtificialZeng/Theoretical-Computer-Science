@@ -1,0 +1,15 @@
+{
+  "job_id": "c040-mstdecfull-release-2ca818aceb48",
+  "files": {
+    "audit/math.json": "87dbebb103b91f40d9ddcc8b879a392685412c70eeace2dc5a0a5903d1e6d996",
+    "audit/math.md": "f72aba5a8e9d9fb011d141cd220d24696caa672d9c1d62f2f10c9a9a61178ed0",
+    "audit/innovation.json": "b5bc3d2a6f41e273d0cc2af633c9c52b949ade4bb734e02b62ffb3c7116ca413",
+    "audit/stoc-assessment.json": "60a013cc2ee44dd3e3536e305a098c5317254bac73bbfe2b8b1e398b6ead6bc9",
+    "authors.json": "7b4e94eb52ddac3b21ed72e132eb272f0f8f764127e55a814c7b46d7e6b38e1d",
+    "source.md": "09b52cf01e6e36d50f3090211c0313cda0f436865507abd6c00493d5583fe9a7"
+  },
+  "note": "Existing accepted reports and venue assessment retained; no new mathematical/venue verdict written by release.",
+  "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+  "manuscript_digest": "203aa4452ff612d76a7e2cf95734dfb62d168580ad5fa1fe30831cf086035682",
+  "pdf_digest": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660"
+}

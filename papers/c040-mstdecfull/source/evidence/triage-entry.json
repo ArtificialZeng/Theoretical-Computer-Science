@@ -1,0 +1,12 @@
+{
+  "job_id": "c040-mstdecfull-triage-eda4a5236bcc",
+  "role": "triage",
+  "recorded_utc": "2026-11-03T00:10:21.292539+00:00",
+  "source_sha256": "09b52cf01e6e36d50f3090211c0313cda0f436865507abd6c00493d5583fe9a7",
+  "source_bytes": 4266,
+  "original_status": "unresolved",
+  "candidate_kind": "none",
+  "state": "scope and nearest primary theorem validated; final bounded literature/equivalence check pending",
+  "research_passes_used_by_this_job": 0,
+  "existing_checkpoint_verbatim": "# Checkpoint\n\nNo research performed. Start with statement validation and literature triage.\n"
+}

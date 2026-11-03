@@ -1,0 +1,153 @@
+{
+  "package_schema": 6,
+  "project": "c042-strongrsp",
+  "title": "Strongly Polynomial Near-Linear Preprocessing for All-Target Restricted Shortest Paths",
+  "readiness_label": "working_paper",
+  "stoc_assessment": {
+    "job_id": "c042-strongrsp-referee-5010e06f0ba2",
+    "snapshot_digest": "b8a4224397c4874b51af65e8b82a4b17fef250e6e90513e63334f9d6b3b5e4e9",
+    "review_type": "fresh_internal_stoc_assessment",
+    "verdict": "working_paper",
+    "strongest_result": "Full positive resolution of immutable source.md: uniform deterministic all-target bicriteria directed RSP preprocessing and space K(m+n)log(n+2)^20 epsilon^-100 for arbitrary finite nonnegative real weights and parallel edges, with exact zero-optimum handling, actual reported length bounds, and deterministic aspect-independent polynomial-time bounded-space witness queries.",
+    "nearest_comparisons": [
+      "Ashvinkumar, arXiv:2610.18337v2, Theorem 1, Sections 4 and 6: deterministic near-linear all-target RSP with log(nW), supplying the clock DP and conditional-expectation potential. The accepted result removes W rather than improving those basic ingredients.",
+      "Ashvinkumar--Bernstein--Karczmarz, arXiv:2410.17179v1, Lemma C.1: strongly polynomial reduction for a single source-target pair. The accepted result supplies aggregate all-target preprocessing without n separate runs.",
+      "Gorkiewicz--Karczmarz, arXiv:2502.10348v1, Theorem 1.3 and Section 6, Algorithm 4 and Lemmas 6.1--6.3: recursive offline ordinary SSSP and multiplicative counting. The accepted result proves a nonadditive vertex-closed stopped-clock contract with clipping and finite-rank rounding.",
+      "McCauley--Moseley--Niaparast--Niaparast--Singh, ICALP 2025, Theorem 1: offline approximate ordinary SSSP in O(m log(nW) log^3(n) loglog(n)/epsilon). This additional precedent further limits any novelty claim for the recursive architecture itself. Primary links and checked scopes are in audit/referee-literature.md."
+    ],
+    "criteria": {
+      "importance": {
+        "judgment": "strong",
+        "reason": "The result resolves the precise all-target strong-polynomiality issue expressly distinguished after Theorem 2 of Ashvinkumar v2 and in ABK's open-problem discussion, for a classical directed constrained-path problem. It removes an unbounded numerical-aspect dependence while keeping near-linear preprocessing."
+      },
+      "novelty": {
+        "judgment": "strong",
+        "reason": "The bounded primary search found no equivalent full all-target result. The verified single-target bottleneck and offline ordinary-SSSP theorems do not entail the proposed theorem. The nonadditive stopped-control integration, finite-rank error and edge-local coverage constitute a substantive delta; Poisson clocks, witness potentials and recursive activation themselves are credited prior art. This is a bounded priority assessment."
+      },
+      "technical_depth": {
+        "judgment": "uncertain",
+        "reason": "The hardest new step is preserving causality and first-hit pricing under whole-vertex boundary restriction, clipping and bounded-bit rounding, with incident-only aggregate work. Its proof is valid and nonroutine, but the central clock and recursive architectures are imported, and the present assessment cannot confidently establish that their integration has the exceptional conceptual depth expected for competitive STOC work. The deliberately loose epsilon^-100 guarantee also obscures the method's sharp strength."
+      },
+      "breadth_or_consequence": {
+        "judgment": "uncertain",
+        "reason": "All-input directed two-resource RSP is a meaningful consequence and avoids arbitrary numerical precision dependence. A broader theorem for other stochastic systems, multiple resources or additional algorithmic applications is not part of the frozen accepted scope. Such consequences should not be inferred from the plausible reusability of the local oracle."
+      },
+      "exposition_and_verifiability": {
+        "judgment": "uncertain",
+        "reason": "The frozen dossier contains sufficient reconstructible algorithms, proofs and explicit finite numerical bounds; fresh exact boundary/offline checks pass. It is distributed across multiple pass records, and the new parallel ICALP offline-SSSP precedent must be added to any manuscript comparison. A concise self-contained submission exposition, especially of preprocessing versus query work and the numerical compiler, has not yet been evaluated. No formalization or full-scale production implementation is claimed."
+      }
+    },
+    "case_for_stoc": "A complete strongly polynomial near-linear all-target directed RSP algorithm is a concrete advance over an explicit numerical-aspect barrier in recent primary work. The combination of positive bounded failure prices, first-hit nonadditive boundary solving, clipping and local scale events explains why all targets can share near-linear work. This gives a serious significance case and passes the mathematical innovation gate. The present record does not justify treating that case as a confident competitive STOC assessment: broader consequences, the depth beyond the imported architectures, a sharper parameter presentation and final exposition remain uncertain. Therefore the actual classification is working_paper.",
+    "remaining_weaknesses": [
+      "Competitive technical depth beyond the established clock and recursive offline architectures remains uncertain.",
+      "Only the frozen two-resource theorem is established; no broader stochastic-control or multi-resource consequence is certified.",
+      "The epsilon dependence is deliberately very loose and no practical efficiency claim is supported.",
+      "The dossier needs concise manuscript exposition and the additional McCauley et al. primary comparison; no manuscript or artifact-release review has yet occurred.",
+      "Literature screening is bounded, not an exhaustive priority certificate."
+    ],
+    "label_is_not_a_venue_decision": true
+  },
+  "pages": 9,
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "original_status": "proved",
+  "kind": "resolution-paper",
+  "pdf": "c042-strongrsp_working_paper.pdf",
+  "pdf_sha256": "2714f0ab95d08c01d19aeacd5bf39597123d9cca31658ade6773a1bba658e703",
+  "source_archive": "c042-strongrsp_source_and_reproducibility.zip",
+  "source_archive_sha256": "3664805a58e6bef948d8daac04d2dc385fbeb6a8099b9453e5b1f8ca8c2606be",
+  "class_file": "manuscript/acmart.cls",
+  "class_sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+  "reproduce_scripts": [
+    "evidence/check_compiled_poisson.py",
+    "evidence/check_compiled_oracle_integration.py",
+    "evidence/check_rounded_oracle.py",
+    "evidence/check_offline_composition.py",
+    "evidence/check_bounded_exponential.py"
+  ],
+  "compile_layout": {
+    "entry": "manuscript/main.tex",
+    "directory": "manuscript",
+    "filename": "main.tex",
+    "jobname": "main",
+    "relative_output": "../output/pdf",
+    "back_to_root": "..",
+    "rebuilt_pdf": "output/pdf/main.pdf"
+  },
+  "template_download": {
+    "requested_url": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+    "resolved_url": "https://sg.mirrors.cicku.me/ctan/macros/latex/contrib/acmart.zip",
+    "sha256": "93933ce58fbeffa13e23398bb523fcb68275ecc73369c6bc73b421eeef2c10de",
+    "bytes": 15106903,
+    "retrieved_utc": "2026-10-30T21:06:31.109994+00:00",
+    "official_authorization": "STOC 2027 CFP explicitly permits CTAN distribution of acmart and ACM Reference Format",
+    "acm_direct_download": "403 from ACM and portalparts.acm.org; Chrome navigation timed out",
+    "previous_ctan_attempts": []
+  },
+  "original_release_manifest": {
+    "artifacts": {
+      "main.pdf": "2714f0ab95d08c01d19aeacd5bf39597123d9cca31658ade6773a1bba658e703"
+    },
+    "kind": "resolution-paper",
+    "manuscript_digest": "80de7a1953cf2134fbcf45bdbab2b636aba6fb432d64e347ae0d2bbbc1c528f1",
+    "original_status": "proved",
+    "pages": 9,
+    "pdf_digest": "2714f0ab95d08c01d19aeacd5bf39597123d9cca31658ade6773a1bba658e703",
+    "provenance": {
+      "audit/build.json": "20bfa5eda3645a9aba03c1aab6cc6c9b114adb1e0c24fb62a34023a10a1bb45b",
+      "audit/build.md": "85dc8094716ce8a3e32b3685094fa62a95af8c884c45d77616b3078d2a82f8d7",
+      "audit/citations.json": "0b1f49f0ef8b85953b15a0fd08d04cc8165dc8df5a4c19c997775ccc4d02ef92",
+      "audit/citations.md": "7f9027017f3d1eefae439a9c3fa65ecc07107503448983ca7ba959aed517efc8",
+      "audit/math.json": "cc2d9a8c13c420979cc42b30a72c285f928455d878ab8963fff534db40bcb427",
+      "audit/math.md": "12200ef64f9b290efa64d922da1ded970a6a50f2c67cd88170b00f1864201370",
+      "audit/visual.json": "6e0df2b6e404aa0d82b25a3587dfa57767659c39fa72fb298826d944caf3c580",
+      "audit/visual.md": "84c340814a63766243129f9dd3d931a2b673d2467a7cab2437e381216e5febf3",
+      "evidence/release/compiler-final.log": "69a0875502c74537a6acdafd4344199ca7bcbc7bf82ab5411a7cb0b2443bcedb",
+      "jobs/c042-strongrsp-referee-5010e06f0ba2/role.json": "45d174c642ea832624a68482aa1896c3e91332b1c2f55dcc9f2a1e55df3c03b0",
+      "jobs/c042-strongrsp-release-8a7cb8c2de68/role.json": "8dab1b3d7de36e140d65ba5e4021f5d97141730279a207c3ad32feec40e36458",
+      "jobs/c042-strongrsp-research-a3a11d57c4b5/role.json": "dfe4bc5f87927c8feba2e27436868099cd3bb6042f537d5b508fcf5e985d20bb"
+    },
+    "schema": 1,
+    "snapshot_digest": "b8a4224397c4874b51af65e8b82a4b17fef250e6e90513e63334f9d6b3b5e4e9"
+  },
+  "citation_verdict": "accept",
+  "citation_limitations": [],
+  "excluded_third_party_text_caches": [
+    {
+      "path": "evidence/release/primary-passages-web.json",
+      "sha256": "8a5f895811a6d58c00b2dda0d61421b346fbb6489cd7d8afcfbb130db9829387",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    },
+    {
+      "path": "evidence/release/search-1.json",
+      "sha256": "149ff2a469bff908ba748092be3fe82a0c3959467932ac105c3e1a86f451c87c",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    },
+    {
+      "path": "evidence/release/search-2.json",
+      "sha256": "a602fba094cc2f8d13040a12c5cf153c1c40980d4cc045482c0a08cd346b3086",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    },
+    {
+      "path": "evidence/release/search-3.json",
+      "sha256": "f7eb1b1cf068a35ec4db58281215d59127e8fa85d3ba2655e5a2b5fd19113e33",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    },
+    {
+      "path": "evidence/release/search-4.json",
+      "sha256": "b56c21df55abb47875b04c105018f7da1d43fe8871832dedbada6a89a1388712",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    },
+    {
+      "path": "evidence/release/search-5.json",
+      "sha256": "110537445d73b2b594f292eaed3d0e7d3ee48162bb63da42de59c4e4c24b9a75",
+      "reason": "Raw third-party browsing excerpts; authored audit reports and URLs retained"
+    }
+  ],
+  "external_submission_performed": false
+}

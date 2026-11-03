@@ -1,0 +1,233 @@
+{
+  "job_id": "c049-dualpreserve-research-2396269cbd5d",
+  "status": "all declared checks passed",
+  "orientation_crosschecks": [
+    {
+      "n": 0,
+      "all_simple_undirected_graphs": 1,
+      "brute_force_all_orientations": true
+    },
+    {
+      "n": 1,
+      "all_simple_undirected_graphs": 1,
+      "brute_force_all_orientations": true
+    },
+    {
+      "n": 2,
+      "all_simple_undirected_graphs": 2,
+      "brute_force_all_orientations": true
+    },
+    {
+      "n": 3,
+      "all_simple_undirected_graphs": 8,
+      "brute_force_all_orientations": true
+    },
+    {
+      "n": 4,
+      "all_simple_undirected_graphs": 64,
+      "brute_force_all_orientations": true
+    },
+    {
+      "n": 5,
+      "all_simple_undirected_graphs": 1024,
+      "brute_force_all_orientations": true
+    }
+  ],
+  "critical_graph_screens": [
+    {
+      "n": 2,
+      "all_loop_free_digraphs": 4,
+      "graphs_admitting_some_critical_demand_set": 4,
+      "graphs_without_full_edge_cover": 0,
+      "maximum_ratio": "1/3",
+      "maximizer": {
+        "n": 2,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "demands": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "p_min": 2,
+        "energy": 2,
+        "load": [
+          1,
+          1
+        ],
+        "heads": [
+          1,
+          0
+        ],
+        "ratio_energy_over_n_p_plus_1": "1/3"
+      }
+    },
+    {
+      "n": 3,
+      "all_loop_free_digraphs": 64,
+      "graphs_admitting_some_critical_demand_set": 64,
+      "graphs_without_full_edge_cover": 0,
+      "maximum_ratio": "4/3",
+      "maximizer": {
+        "n": 3,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "demands": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "p_min": 2,
+        "energy": 12,
+        "load": [
+          2,
+          2,
+          2
+        ],
+        "heads": [
+          1,
+          2,
+          0,
+          2,
+          0,
+          1
+        ],
+        "ratio_energy_over_n_p_plus_1": "4/3"
+      }
+    },
+    {
+      "n": 4,
+      "all_loop_free_digraphs": 4096,
+      "graphs_admitting_some_critical_demand_set": 4096,
+      "graphs_without_full_edge_cover": 0,
+      "maximum_ratio": "31/12",
+      "maximizer": {
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "demands": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "p_min": 2,
+        "energy": 31,
+        "load": [
+          3,
+          3,
+          2,
+          3
+        ],
+        "heads": [
+          1,
+          2,
+          3,
+          0,
+          2,
+          3,
+          0,
+          1,
+          3,
+          0,
+          1
+        ],
+        "ratio_energy_over_n_p_plus_1": "31/12"
+      }
+    }
+  ],
+  "limits": "Finite tests only. No asymptotic ENERGY proof and no original-scope resolution.",
+  "code_sha256": "3821befe550c8ccdf06e9d80bf6034df62f15144316e528a449b42b45e45a4d2",
+  "antiparallel_flow_crosschecks": 100,
+  "elapsed_seconds": 0.3921677090693265
+}

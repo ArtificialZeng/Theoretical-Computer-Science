@@ -1,0 +1,44 @@
+{
+  "source_files": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/acmart.dtx",
+    "manuscript/build.sh",
+    "manuscript/build/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "pdf": "manuscript/msthalf_working_paper.pdf",
+  "build_command": "sh manuscript/build.sh",
+  "build_log": "manuscript/build/main.log",
+  "kind": "resolution-paper",
+  "original_status": "proved",
+  "readiness_label": "working_paper",
+  "readiness_assessment": "audit/stoc-assessment.json",
+  "readiness_snapshot_digest": "d0a2fbd366a632f17366053e75f1a37a1254cc80a92e14c60a7d14734548277b",
+  "writing_job_id": "c037-msthalf-write-510ed992820b",
+  "authors": [
+    {
+      "name": "Zijian Zeng",
+      "affiliation": "UCSI University",
+      "email": "1002266693@ucsiuniversity.edu.my"
+    }
+  ],
+  "max_total_pages": 12,
+  "external_submission_authorized": false,
+  "stage": "written_pending_separate_release_review",
+  "format": {
+    "class": "unmodified official acmart v2.20",
+    "base_option": "acmlarge",
+    "font_points": 11,
+    "columns": 1,
+    "spacing": "single",
+    "paper": "US Letter",
+    "margin_inches": 1,
+    "anonymous": false,
+    "cfp": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html"
+  },
+  "bibliography_basis": "No user Excel bibliography was designated; two relevant primary papers are cited. See literature/user_bibliography_check.md.",
+  "generated_input_note": "manuscript/build/main.bbl is a generated TeX input included for exact input accounting; BibTeX regenerates it from references.bib during a clean build."
+}

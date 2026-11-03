@@ -1,0 +1,40 @@
+{
+  "stage": "root read-only preview; separate actual release review pending",
+  "pdf": "research/queue/projects/c037-msthalf/manuscript/msthalf_working_paper.pdf",
+  "pdf_sha256_before": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+  "pdf_sha256_after": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+  "pages": {
+    "page-1.png": "c5ff03346b12209b0af84694931fb3f0404195236758327d4deb231d1a2005cc",
+    "page-2.png": "1cb4128f7480915c1213d9483434d5f32d50d49cb4869075051fdd65869659da",
+    "page-3.png": "9cf7f414f0fd2a6f446fbaa3130a7ba2bc5fa94fc28566f95b6c61679df6dc3c",
+    "page-4.png": "082cf5954cd32f650c138f76d24102b4a2ff09b500551315befe61f529667707",
+    "page-5.png": "65fc7b75124d9bce3621d1512730a6ee387e1427d0947a918e7aa4166783a96c",
+    "page-6.png": "2a500ae1ef432934830223b5cff64662f48fe76fed6631fffc1a8d12f97f5cd0",
+    "page-7.png": "68dea5d931cb832718fd60015edcccca81773bc71bbc64cc9f8a37a23e0996db"
+  },
+  "visual_inspection_completed": true,
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "reviewed_at_utc": "2026-11-02T21:42:12.370181+00:00",
+  "observations": {
+    "1": "Title, sole author, institution, abstract and contact footnote legible; separate title-page whitespace consistent with submission title-page layout.",
+    "2": "Model, theorem and nearest-prior discussion fit within margins; references and formulas legible.",
+    "3": "Transfer lemma and first part of its proof render with aligned equations and no clipping.",
+    "4": "Transfer continuation and repair lemma/proof fit; mathematical symbols and proof endings legible.",
+    "5": "Finite algorithm steps and uniform concentration proof fit; numbered equations and long conditions remain readable.",
+    "6": "Expected-cost calculations and credited lower-bound boundary explanation render cleanly.",
+    "7": "Computational scope, limitations, AI methodology and both references readable; URLs stay within margins."
+  },
+  "limitations": "Root read-only visual check of this exact PDF digest. Actual separate fresh release gate and final ZIP clean reproduction are still pending; recompare the final artifact if it changes.",
+  "delivered_pdf": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027_continuous/c037-msthalf/c037-msthalf_working_paper.pdf",
+  "final_archive_verification": "/Users/mac/Documents/ChatGPT/STOC理论计算机/output/STOC2027_continuous/c037-msthalf/package_verification.json",
+  "final_delivered_pdf_identical_to_reviewed": true,
+  "scope": "Root actually inspected all seven renders of the exact delivered PDF; actual separate fresh release and final-ZIP reproduction records are linked, without a new math or venue verdict."
+}

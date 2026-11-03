@@ -1,0 +1,6 @@
+{
+  "job_id": "c015-imagebound-write-b795278c1e36",
+  "returncode": 0,
+  "stdout": "{\"ok\":true,\"snapshot_digest\":\"cb1b52760e44f40d39212ae4e2487e31dff8bbdea70ba237a86a02d321ed9f7e\",\"referee_job_id\":\"c015-imagebound-referee-e7492ff4cfbd\"}\n",
+  "stderr": ""
+}

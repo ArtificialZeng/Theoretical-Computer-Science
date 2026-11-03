@@ -1,8 +1,11 @@
 {
-  "updated_at_utc": "2026-11-02T17:24:24.013706+00:00",
+  "updated_at_utc": "2026-11-03T22:29:07.456847+00:00",
   "standard": "QUALITY_STANDARD.md",
   "submission_ready": [],
   "working_paper": [
+    "c042-strongrsp",
+    "c037-msthalf",
+    "c040-mstdecfull",
     "c034-group3sum",
     "c034-grouptri",
     "c032-dspdag",
@@ -30,5 +33,6 @@
     "stoc4",
     "stoc5"
   ],
-  "scope": "Unified public index, including existing partial drafts. Original PDF/ZIP bytes and author lists unchanged. This is not a new mathematical review."
+  "scope": "Unified public index, including existing partial drafts. Original PDF/ZIP bytes and author lists unchanged. This is not a new mathematical review.",
+  "archival_note": "Index refreshed for final publication; classifications and original manuscript author lists are unchanged."
 }

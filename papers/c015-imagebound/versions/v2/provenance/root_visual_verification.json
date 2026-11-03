@@ -1,0 +1,50 @@
+{
+  "at_utc": "2026-11-02T22:18:40.954126+00:00",
+  "pdf": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/research/queue/projects/c015-imagebound/manuscript/c015-imagebound-write-b795278c1e36/working_paper.pdf",
+  "pdf_sha256": "b2c1af7888a6e47966549882d4c977cefcaf4527cea394aaf4d57d8b62eabefb",
+  "pages": 6,
+  "render_dpi": 96,
+  "images": [
+    {
+      "path": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/research/continuous/reevaluations/20261103-stoc-depth/root-page-previews/c015-imagebound-b2c1af7888a6/page-1.png",
+      "sha256": "00bed521f5b79a4e249ef4d626c582ffa5b1198a8da52c3392975c31ab894d8e"
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/research/continuous/reevaluations/20261103-stoc-depth/root-page-previews/c015-imagebound-b2c1af7888a6/page-2.png",
+      "sha256": "942ab2fd6f88cb9a35c6ac44c1cf2652f40213fb9180edd63aa6098396ba460c"
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/research/continuous/reevaluations/20261103-stoc-depth/root-page-previews/c015-imagebound-b2c1af7888a6/page-3.png",
+      "sha256": "d684f0f81e0035b168e6714d0a6ec7e081da43c68ff667a747edc98680e962f5"
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/research/continuous/reevaluations/20261103-stoc-depth/root-page-previews/c015-imagebound-b2c1af7888a6/page-4.png",
+      "sha256": "66427b278048f3f295aef867b66b208160cd83a3e84f36e34d3f50445e3cd2ce"
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/research/continuous/reevaluations/20261103-stoc-depth/root-page-previews/c015-imagebound-b2c1af7888a6/page-5.png",
+      "sha256": "b7896ab4de456ba8c63076c009942ca7ede1ad4a846962242c0b10a4d092587a"
+    },
+    {
+      "path": "/Users/mac/Documents/ChatGPT/STOC\u7406\u8bba\u8ba1\u7b97\u673a/research/continuous/reevaluations/20261103-stoc-depth/root-page-previews/c015-imagebound-b2c1af7888a6/page-6.png",
+      "sha256": "b94ee4239721969131b3427863970fbc4f1756f76eb5c824e16cabe94dee6384"
+    }
+  ],
+  "actually_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "inspected_at_utc": "2026-11-02T22:19:33.358908+00:00",
+  "visual_findings": {
+    "clipping": false,
+    "overlapping_text_or_equations": false,
+    "unreadable_references": false,
+    "all_rendered_pages_seen": true,
+    "separate_title_page_whitespace": "intentional conference title-page separation",
+    "quality_scope": "layout inspection of this exact PDF; no new mathematical/venue verdict"
+  }
+}

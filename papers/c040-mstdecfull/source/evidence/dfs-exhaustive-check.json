@@ -1,0 +1,57 @@
+{
+  "job_id": "c040-mstdecfull-research-9063bf54df79",
+  "scope": "All 4-level nested partitions on n=2..5; b=1,B=2; all admissible core assignments independently at each level; all contiguous (DFS) leaf orders; maximal constraint metric by exact integer shortest paths.",
+  "limitations": [
+    "Finite combinatorial test, not an all-n proof.",
+    "Does not execute the full seed-carving algorithm.",
+    "No source/intake fixture was rerun or overwritten."
+  ],
+  "passed": true,
+  "totals": {
+    "partition_chains": 433,
+    "core_assignments": 6844,
+    "ordered_core_cases": 162596,
+    "path_edges": 643826,
+    "immediate_charges": 417344,
+    "late_charges": 226482
+  },
+  "by_n": [
+    {
+      "n": 2,
+      "partition_chains": 3,
+      "core_assignments": 7,
+      "ordered_core_cases": 14,
+      "path_edges": 14,
+      "immediate_charges": 8,
+      "late_charges": 6
+    },
+    {
+      "n": 3,
+      "partition_chains": 12,
+      "core_assignments": 63,
+      "ordered_core_cases": 294,
+      "path_edges": 588,
+      "immediate_charges": 336,
+      "late_charges": 252
+    },
+    {
+      "n": 4,
+      "partition_chains": 60,
+      "core_assignments": 551,
+      "ordered_core_cases": 5928,
+      "path_edges": 17784,
+      "immediate_charges": 11160,
+      "late_charges": 6624
+    },
+    {
+      "n": 5,
+      "partition_chains": 358,
+      "core_assignments": 6223,
+      "ordered_core_cases": 156360,
+      "path_edges": 625440,
+      "immediate_charges": 405840,
+      "late_charges": 219600
+    }
+  ],
+  "elapsed_seconds": 2.152103249914944
+}

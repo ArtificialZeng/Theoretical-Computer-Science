@@ -1,0 +1,31 @@
+{
+  "job_id": "c015-imagebound-research-337b679e5617",
+  "source_sha256": "7cf4a0de6b28019b0fa2f5e92ea04bee150c74cb9db945e382c75d8379326aa7",
+  "files": {
+    "claim.json": "143b4b6b8f64c1e6a87aa5f59bab56d7380ed7eb31badcb3a69e88f08a2a84cf",
+    "source.md": "7cf4a0de6b28019b0fa2f5e92ea04bee150c74cb9db945e382c75d8379326aa7",
+    "problem.md": "e2b9a5af4dd5735b3d29c0bb49a47d87ca1cbceb584d73c11d4335ba2b80c4ef",
+    "intake/primary.pdf": "4f75f6531c01749fab79d2584ecdc323f63fde8212d4497a782d70c30241181b",
+    "intake/primary.txt": "3c99881b31cabcc888243756d417d4cbcc506dce4f6e1239bff05167aeb8ed91",
+    "evidence/research-proof.md": "e704ef7302350fd6ddd63b12b83861937c9be8a629d1d1d116d82997f68ab8a5",
+    "evidence/research-literature.md": "60cce7db2844f5db042efc9e73d8eaa29ae72e93e51a6874f4ef9f0c64a00e33",
+    "evidence/research-check.py": "f82a329b06fd7ce1b131f3cb5401492ae54df241f2d1a99639321b08a2029dec",
+    "evidence/research-check-results.json": "3cb337352933b40fee6ff35269838174ab6a8799ab664ed1802b11512b27e95b",
+    "evidence/check_clock_baseline.py": "bc26bdef10d5eef3f42845b4f0dfe5c6e8256265bbc232e44772e241643f8f71",
+    "evidence/clock-baseline.md": "f4963bd0da79be0419d32be545d2642064e7f28ee6d73a9761d0b6ae2c6e195b",
+    "evidence/research-baseline-replay.json": "55e3910cd63c6da03299e49eb479ceb9d34eb15e4918f535451799785383bc65",
+    "evidence/next-test.md": "c7b9e60bd5d334429670c11ccb017a4f8c25f6b47851d17d8e10b36ef4c3d7ac",
+    "evidence/research-provenance.json": "37ed0d76649ea439b3580afffa922b81065d18e74364924a21db431bda9cbe40",
+    "evidence/research-source-receipts.json": "822b38bb6e5f178799b8ee1343fcd746878d5b141e772cee340306fa1d5b45eb",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m2-3-5.json": "11365dfc7aed19fafd508081525d71c7b831f653ef184de8391dff99c4cd95c2",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m2-2-3-5.json": "68431fff6bf51631f676f952f63de19e3cfaad17d7ed331518d4eaf6f552bf5f",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m2-3-4-5.json": "225410f9d053949cc4876534436ce2d017983049c00b77291c7d4439c8de5d95",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m3-3-5.json": "b51fc06bb6f58717724a4b7682d5dcb31fc79cd1ab143c4f1903950d5e977606",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m3-2-3-5.json": "ea1afcef3ea07cacb8f5473b294f88f383f3ecaa89e0a4e541d56e8a5c134be3",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m3-3-4-5.json": "f4ce00d433d7dc086e482f073c63302c9d5c961c82803c4f43362b0c4c672d39",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m4-3-5.json": "ddc3b9c952f684dfd509e6ea4408414d30dc2ae50aa80c0a9aa236fcc979f0b2",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m4-2-3-5.json": "706d946b2fa570a3964e236d06f56be1e995282f0eb434b7413967f2a2dc3828",
+    "intake/root-queue-clock/queue-clock-certificates/queue-clock-m4-3-4-5.json": "e5bdcb9c72433ae2cca18bdcc09d2e6764f095af425843bb479214ad8e73d705"
+  },
+  "note": "Research integrity index only, not the runner freeze or a mathematical acceptance."
+}

@@ -1,0 +1,15 @@
+{
+  "at_utc": "2026-11-03T16:36:52.141343+00:00",
+  "passed": true,
+  "scope": "Clean builds and normalized PDF text comparison for the primary indexed versions; no new manuscript editing or mathematical acceptance.",
+  "papers": [
+    {
+      "id": "c037-msthalf",
+      "passed": true,
+      "exit_code": 0,
+      "normalized_pdf_text_matches_release": true,
+      "seconds": 4.139,
+      "log": "validation/unified-builds/c037-msthalf.log"
+    }
+  ]
+}

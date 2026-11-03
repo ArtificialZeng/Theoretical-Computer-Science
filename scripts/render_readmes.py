@@ -90,6 +90,22 @@ TEXT = {
 }
 
 
+RECORD_NOTICE = {
+ 'en': '**c049 remains unresolved in these records.** [Four-pass research dossier](notes/c049-dualpreserve/README.md) · [Code](notes/c049-dualpreserve/source/code/) · [Source ZIP](notes/c049-dualpreserve/source.zip). A sparse construction is proved for one shared-selector family; the original general-graph target is unresolved. This is an archived research record with no manuscript PDF.',
+ 'zh': '**c049 在这些记录中仍未解决。** [四轮研究记录](notes/c049-dualpreserve/README.zh-CN.md) · [代码](notes/c049-dualpreserve/source/code/) · [源码 ZIP](notes/c049-dualpreserve/source.zip)。已证明一个共享选择器图族的稀疏构造，原始任意图问题仍未解决；按研究记录归档，没有论文 PDF。',
+ 'de': '**c049 bleibt in diesen Aufzeichnungen ungelöst.** [Forschungsdossier aus vier Durchläufen](notes/c049-dualpreserve/README.de.md) · [Code](notes/c049-dualpreserve/source/code/) · [Quellarchiv](notes/c049-dualpreserve/source.zip). Eine dünne Konstruktion ist für eine Familie geteilter Selektoren bewiesen; das ursprüngliche Problem für allgemeine Graphen bleibt offen. Dies sind archivierte Forschungsaufzeichnungen ohne Manuskript-PDF.',
+ 'fr': '**c049 reste non résolu dans ce dossier.** [Dossier de quatre sessions](notes/c049-dualpreserve/README.fr.md) · [Code](notes/c049-dualpreserve/source/code/) · [Archive source](notes/c049-dualpreserve/source.zip). Une construction parcimonieuse est démontrée pour une famille de sélecteurs partagés ; le problème initial sur les graphes généraux reste ouvert. Ces archives de recherche ne comprennent aucun manuscrit PDF.',
+ 'ja': '**本記録で c049 は未解決である。** [四回の研究記録](notes/c049-dualpreserve/README.ja.md) · [コード](notes/c049-dualpreserve/source/code/) · [ソースZIP](notes/c049-dualpreserve/source.zip)。共有セレクターの特定の族では疎な構成を証明したが、一般グラフ上の元問題は未解決である。論文PDFを伴わない研究記録として保存する。'
+}
+RECORD_REPRO = {
+ 'en': 'To reproduce the separate c049 research record, use Python 3.10+ and a C++17 compiler:',
+ 'zh': 'c049 研究记录单独复现，需要 Python 3.10+ 和 C++17 编译器：',
+ 'de': 'Für die gesonderten c049-Aufzeichnungen sind Python 3.10+ und ein C++17-Compiler erforderlich:',
+ 'fr': 'Pour reproduire séparément le dossier c049, utiliser Python 3.10+ et un compilateur C++17 :',
+ 'ja': 'c049 の研究記録は別途再現する。Python 3.10+ と C++17 コンパイラが必要：'
+}
+
+
 def links(p, lang='en'):
     t = TEXT[lang]
     return f"[PDF]({p['pdf']}) · [ZIP]({p['source_archive']}) · [{t['code']}]({p['source_directory']}/) · [{t['reproduce']}]({p['readme']})"
@@ -104,6 +120,8 @@ def main():
         lines = ['# Theoretical Computer Science', '', NAV, '',
                  t['intro'].format(total=len(papers), ready=counts['submission_ready'], working=counts['working_paper']),
                  '', t['policy'], '', t['click'], '']
+        if (ROOT/'research-records.json').is_file():
+            lines += [RECORD_NOTICE[lang], '']
         for label, heading in [('submission_ready', 'ready'), ('working_paper', 'working')]:
             selected = [p for p in papers if p['readiness_label'] == label]
             lines += ['<details>', f"<summary><strong>{t[heading]} ({len(selected)})</strong></summary>", '']
@@ -129,6 +147,8 @@ def main():
                   'git clone https://github.com/ArtificialZeng/Theoretical-Computer-Science.git',
                   'cd Theoretical-Computer-Science', 'python3 scripts/verify_artifacts.py',
                   'python3 scripts/reproduce.py --all', 'python3 scripts/build_pdfs.py --all', '```', '',
+                  RECORD_REPRO[lang], '', '```sh',
+                  'python3 -B notes/c049-dualpreserve/source/reproduce.py', '```', '',
                   t['layout'], '', t['notes'], '', t['author'], '']
         (ROOT / filename).write_text('\n'.join(lines))
     for p in papers:

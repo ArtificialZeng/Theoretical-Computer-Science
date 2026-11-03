@@ -1,0 +1,596 @@
+{
+  "job_id": "c049-dualpreserve-research-67929c1f9552",
+  "status": "declared exact checks passed",
+  "random_critical_graphs": 40,
+  "return_isolation_witness_sample_checks": 8661,
+  "rows": [
+    {
+      "n": 3,
+      "p": 3,
+      "critical_edges": 6,
+      "beta": [
+        0,
+        0,
+        2,
+        1,
+        1,
+        1
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 3,
+      "p": 3,
+      "critical_edges": 0,
+      "beta": [],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 3,
+      "p": 3,
+      "critical_edges": 1,
+      "beta": [
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 3,
+      "p": 3,
+      "critical_edges": 1,
+      "beta": [
+        1
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 3,
+      "p": 3,
+      "critical_edges": 2,
+      "beta": [
+        0,
+        1
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 3,
+      "p": 3,
+      "critical_edges": 2,
+      "beta": [
+        0,
+        1
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 3,
+      "p": 3,
+      "critical_edges": 0,
+      "beta": [],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 3,
+      "p": 3,
+      "critical_edges": 3,
+      "beta": [
+        1,
+        1,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 4,
+      "p": 4,
+      "critical_edges": 3,
+      "beta": [
+        1,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 4,
+      "p": 4,
+      "critical_edges": 1,
+      "beta": [
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 4,
+      "p": 4,
+      "critical_edges": 3,
+      "beta": [
+        0,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 4,
+      "p": 4,
+      "critical_edges": 0,
+      "beta": [],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 4,
+      "p": 4,
+      "critical_edges": 3,
+      "beta": [
+        0,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 4,
+      "p": 4,
+      "critical_edges": 2,
+      "beta": [
+        0,
+        1
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 4,
+      "p": 4,
+      "critical_edges": 7,
+      "beta": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 4,
+      "p": 4,
+      "critical_edges": 3,
+      "beta": [
+        0,
+        1,
+        1
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 5,
+      "p": 4,
+      "critical_edges": 11,
+      "beta": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 5,
+      "p": 4,
+      "critical_edges": 5,
+      "beta": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 5,
+      "p": 4,
+      "critical_edges": 3,
+      "beta": [
+        0,
+        1,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 5,
+      "p": 4,
+      "critical_edges": 5,
+      "beta": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 5,
+      "p": 4,
+      "critical_edges": 9,
+      "beta": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 5,
+      "p": 4,
+      "critical_edges": 9,
+      "beta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 5,
+      "p": 4,
+      "critical_edges": 7,
+      "beta": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        1
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 5,
+      "p": 4,
+      "critical_edges": 7,
+      "beta": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 6,
+      "p": 4,
+      "critical_edges": 11,
+      "beta": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 6,
+      "p": 4,
+      "critical_edges": 3,
+      "beta": [
+        1,
+        1,
+        1
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 6,
+      "p": 4,
+      "critical_edges": 10,
+      "beta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 6,
+      "p": 4,
+      "critical_edges": 2,
+      "beta": [
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 6,
+      "p": 4,
+      "critical_edges": 13,
+      "beta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 6,
+      "p": 4,
+      "critical_edges": 5,
+      "beta": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 6,
+      "p": 4,
+      "critical_edges": 10,
+      "beta": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 6,
+      "p": 4,
+      "critical_edges": 12,
+      "beta": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 7,
+      "p": 4,
+      "critical_edges": 8,
+      "beta": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 7,
+      "p": 4,
+      "critical_edges": 5,
+      "beta": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 7,
+      "p": 4,
+      "critical_edges": 12,
+      "beta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 7,
+      "p": 4,
+      "critical_edges": 4,
+      "beta": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 7,
+      "p": 4,
+      "critical_edges": 14,
+      "beta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 7,
+      "p": 4,
+      "critical_edges": 12,
+      "beta": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 7,
+      "p": 4,
+      "critical_edges": 11,
+      "beta": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "high_at_ceil_sqrt": 0
+    },
+    {
+      "n": 7,
+      "p": 4,
+      "critical_edges": 15,
+      "beta": [
+        0,
+        0,
+        2,
+        0,
+        1,
+        2,
+        1,
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        1
+      ],
+      "high_at_ceil_sqrt": 0
+    }
+  ],
+  "chain_complete_cut_enumeration": [
+    {
+      "r": 2,
+      "L": 3,
+      "n": 12,
+      "p": 4,
+      "crossings": 12,
+      "minimum_cross_beta": 0,
+      "maximum_cross_beta": 1
+    },
+    {
+      "r": 3,
+      "L": 2,
+      "n": 12,
+      "p": 9,
+      "crossings": 18,
+      "minimum_cross_beta": 2,
+      "maximum_cross_beta": 2
+    },
+    {
+      "r": 4,
+      "L": 2,
+      "n": 16,
+      "p": 16,
+      "crossings": 32,
+      "minimum_cross_beta": 6,
+      "maximum_cross_beta": 6
+    }
+  ],
+  "limits": "40 seeded graph/demand instances, not exhaustive graph coverage. Every cut and return subset checked within those instances. Three declared chains have complete cut enumeration. No global high-beta edge bound proved.",
+  "code_sha256": "57d49898c5e86f1e4a8440d9cd8a4cc579bc6f3b44e30d038cf2024c82a1fecf"
+}

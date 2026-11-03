@@ -1,0 +1,20 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Citation, clean ZIP rebuild and all seven rendered-page audits passed; release_gate.py check succeeded. Frozen bytes and the working_paper assessment are preserved.",
+  "next_test": "Supervisor runs release_gate.py publish and verifies local manifest/PDF digests while retaining working_paper.",
+  "evidence": [
+    "evidence/release/gate-check.json",
+    "audit/citations.json",
+    "audit/citations.md",
+    "audit/build.json",
+    "audit/build.md",
+    "audit/visual.json",
+    "audit/visual.md",
+    "evidence/release/reproduction-result.json",
+    "audit/stoc-assessment.json",
+    "manuscript/msthalf_working_paper.pdf",
+    "checkpoint.md"
+  ]
+}

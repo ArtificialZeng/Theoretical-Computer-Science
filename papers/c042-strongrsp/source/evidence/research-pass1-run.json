@@ -1,0 +1,19 @@
+{
+  "job_id": "c042-strongrsp-research-c6b8438a850b",
+  "role": "research",
+  "dispatch_utc": "2026-11-03T03:25:50+00:00",
+  "first_clock_read_utc": "2026-11-03T03:27:59+00:00",
+  "main_validation_completed_by_utc": "2026-11-03T03:36:30+00:00",
+  "record_saved_utc": "2026-11-03T03:37:58.368623+00:00",
+  "research_passes_recorded_by_runner": 1,
+  "research_pass_cap": 3,
+  "source_sha256": "93e36d243f9b6fec1df5dda18aacab258ad91c62c8465d0a010fddadbb319aa7",
+  "source_unchanged": true,
+  "worker_recommendation": "continue",
+  "original_status": "unresolved",
+  "candidate_kind": "none",
+  "operational_limit_is_not_mathematical_evidence": true,
+  "manuscript_or_pdf_created": false,
+  "agents_or_background_workers_spawned": false,
+  "scope": "Local proof and finite validation only; no original-scope resolution or independent audit."
+}

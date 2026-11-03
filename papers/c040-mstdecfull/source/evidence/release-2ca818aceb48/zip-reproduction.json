@@ -1,0 +1,66 @@
+{
+  "job_id": "c040-mstdecfull-release-2ca818aceb48",
+  "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+  "manuscript_digest": "203aa4452ff612d76a7e2cf95734dfb62d168580ad5fa1fe30831cf086035682",
+  "pdf_digest": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660",
+  "archive": "evidence/release-2ca818aceb48/working_paper-source.zip",
+  "archive_sha256": "6826c6f3afc0ae239c9ec94bbf1927d2ec957d95a1a8c60e55915bf08b5c2b82",
+  "archive_source_bytes_match": true,
+  "fresh_extraction_build": true,
+  "build_log": "evidence/release-2ca818aceb48/reproduction/manuscript/main.log",
+  "reproduction_pdf_sha256": "85e72d68945749bbcc0733e41abef54ff839f65be8c1c9db680a65a5bd9f89db",
+  "pdf_bytes_identical": false,
+  "extracted_text_identical": true,
+  "rendered_pages": [
+    {
+      "page": 1,
+      "original_sha256": "e973c0c337bc4db742ce1f76945f426c22e1d13c42386ed4804b68f91aaca7c9",
+      "reproduction_sha256": "e973c0c337bc4db742ce1f76945f426c22e1d13c42386ed4804b68f91aaca7c9",
+      "identical": true
+    },
+    {
+      "page": 2,
+      "original_sha256": "15a2ca0e402e72ad81a4d82d5ea300230dd2c1853ae5993cb1ebf2013a2d29d9",
+      "reproduction_sha256": "15a2ca0e402e72ad81a4d82d5ea300230dd2c1853ae5993cb1ebf2013a2d29d9",
+      "identical": true
+    },
+    {
+      "page": 3,
+      "original_sha256": "0298e3d28b138d2228ed2545ab188725fc998710c69fc2630505b983fe8f2f3d",
+      "reproduction_sha256": "0298e3d28b138d2228ed2545ab188725fc998710c69fc2630505b983fe8f2f3d",
+      "identical": true
+    },
+    {
+      "page": 4,
+      "original_sha256": "322f11280d355b7c58c492001af32dd02ee32e6771206dac2484e8a4a68bee91",
+      "reproduction_sha256": "322f11280d355b7c58c492001af32dd02ee32e6771206dac2484e8a4a68bee91",
+      "identical": true
+    },
+    {
+      "page": 5,
+      "original_sha256": "5f2b0c33b7305f460699b6b6ee53ab7f83c2114253e107450689551f1ff54ffc",
+      "reproduction_sha256": "5f2b0c33b7305f460699b6b6ee53ab7f83c2114253e107450689551f1ff54ffc",
+      "identical": true
+    },
+    {
+      "page": 6,
+      "original_sha256": "59b5d56fb57dca1100f270cf090ef8ca0fd4a06c8ee51786e9fcd5f31f6570d5",
+      "reproduction_sha256": "59b5d56fb57dca1100f270cf090ef8ca0fd4a06c8ee51786e9fcd5f31f6570d5",
+      "identical": true
+    },
+    {
+      "page": 7,
+      "original_sha256": "833b7b845503f0dbb4ddb6c096af07a3de736eac326b4433ec2fe195210a8013",
+      "reproduction_sha256": "833b7b845503f0dbb4ddb6c096af07a3de736eac326b4433ec2fe195210a8013",
+      "identical": true
+    },
+    {
+      "page": 8,
+      "original_sha256": "9e100a861ca1235ee0270e2bf708f8d76b167da9f6129baf98a19e42888fa5f0",
+      "reproduction_sha256": "9e100a861ca1235ee0270e2bf708f8d76b167da9f6129baf98a19e42888fa5f0",
+      "identical": true
+    }
+  ],
+  "all_rendered_pages_identical": true,
+  "scope": "Fresh extraction of complete publication source ZIP and successful latexmk build. PDF timestamp/path metadata may differ; rendered pages and extracted text are compared exactly."
+}

@@ -1,0 +1,23 @@
+{
+  "job_id": "c037-msthalf-release-aff0d39d4223",
+  "snapshot_digest": "d0a2fbd366a632f17366053e75f1a37a1254cc80a92e14c60a7d14734548277b",
+  "manuscript_digest": "21d0504817983aa84f21573d2ff6560239183353573fc2cc1d767e3501675427",
+  "pdf_digest": "67321fa41524b5de24e7bfa5125e659333f1c58a51427d0fa0ef1d1ab378bba4",
+  "verdict": "accept",
+  "report": "audit/citations.md",
+  "sources_checked": [
+    "manuscript/ACM-Reference-Format.bst",
+    "manuscript/README.md",
+    "manuscript/acmart.cls",
+    "manuscript/acmart.dtx",
+    "manuscript/build.sh",
+    "manuscript/build/main.bbl",
+    "manuscript/main.tex",
+    "manuscript/references.bib"
+  ],
+  "dependency_scope_complete": true,
+  "undefined_citations": false,
+  "scope": "All eight sorted publication.json source_files, both primary bibliographic records and original theorem passages, every fixed extracted claim, accepted-proof transcription, complete recorder/BibTeX dependencies and extracted/rendered references checked on 2026-11-02 UTC. No user workbook designated. Both references verified via primary web access; direct local download DNS failures did not prevent primary text inspection. Current novelty screen is bounded and makes no exhaustive-priority certification. No citation remains unverified; working_paper retained.",
+  "citation_audit_method": "citation-check-skill-advisory plus primary-source-manual",
+  "unverified_citations": []
+}

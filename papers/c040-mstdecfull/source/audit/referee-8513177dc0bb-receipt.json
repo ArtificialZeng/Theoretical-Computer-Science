@@ -1,0 +1,14 @@
+{
+  "job_id": "c040-mstdecfull-referee-8513177dc0bb",
+  "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+  "checked_utc": "2026-11-03T00:55:18.092566+00:00",
+  "frozen_file_hashes_verified": true,
+  "source_sha256": "09b52cf01e6e36d50f3090211c0313cda0f436865507abd6c00493d5583fe9a7",
+  "scope": "Fresh review in progress; no verdict at this checkpoint. Only authorized frozen inputs and current primary literature read. Mandatory outer note treated as noncertifying input.",
+  "prior_audit_bytes_preserved_without_consulting_verdicts": [
+    "audit/preserved-before-8513177dc0bb/math.md",
+    "audit/preserved-before-8513177dc0bb/math.json",
+    "audit/preserved-before-8513177dc0bb/innovation.json",
+    "audit/preserved-before-8513177dc0bb/stoc-assessment.json"
+  ]
+}

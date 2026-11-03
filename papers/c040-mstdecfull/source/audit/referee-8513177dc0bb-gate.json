@@ -1,0 +1,9 @@
+{
+  "job_id": "c040-mstdecfull-referee-8513177dc0bb",
+  "checked_utc": "2026-11-03T01:01:49.375059+00:00",
+  "command": "release_gate.py check-math PROJECT_DIR",
+  "returncode": 0,
+  "stdout": "{\"ok\":true,\"snapshot_digest\":\"3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76\",\"referee_job_id\":\"c040-mstdecfull-referee-8513177dc0bb\"}",
+  "stderr": "",
+  "scope": "Structural integrity and real runner role provenance only; not mathematical certification."
+}

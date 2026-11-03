@@ -1,0 +1,393 @@
+\documentclass[acmsmall,screen,nonacm,11pt]{acmart}
+\geometry{letterpaper,margin=1in}
+\settopmatter{printacmref=false}
+\setcopyright{none}
+\pagestyle{plain}
+\renewcommand{\bibfont}{\normalfont\normalsize}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\emp}{\varnothing}
+\newcommand{\calA}{\mathcal{A}}
+\DeclareMathOperator{\lcm}{lcm}
+\title{Tight Mortality Bounds for Image-Bounded Nondeterministic Automata}
+\author{Zijian Zeng}
+\affiliation{\institution{UCSI University}\city{}\country{Malaysia}}
+\email{1002266693@ucsiuniversity.edu.my}
+\authorsaddresses{Author's contact: Zijian Zeng, UCSI University,
+\href{mailto:1002266693@ucsiuniversity.edu.my}{1002266693@ucsiuniversity.edu.my}}
+\begin{abstract}
+\normalsize
+A nondeterministic finite automaton is $k$-image-bounded if every word maps
+every individual state to at most $k$ states. A word is mortal if it maps
+the entire state set to the empty set. Kiefer and Ryzhikov showed that an
+incomplete $n$-state $k$-image-bounded automaton has a mortal word of length
+at most $n^{k+1}$ and asked whether this bound is tight.
+
+We resolve the fixed-parameter tightness question: for every fixed integer
+$k\geq2$, the maximum shortest mortal-word length is
+$\Theta_k(n^{k+1})$. The lower bound holds for every sufficiently large
+$n$, even for binary strongly connected automata. The construction combines
+a linear-size queue with a packet distributed among $k$ cyclic clocks.
+The clocks realize a long least-common-multiple delay using only the sum of
+their lengths in states. A global image invariant preserves the bound $k$
+under every word, and an exact potential forces a linear number of disjoint
+full-delay events. We give explicit constants, a constructive mortality
+argument, and a self-contained proof of the matching known upper bound.
+\end{abstract}
+\keywords{nondeterministic finite automata, image-bounded automata, mortality,
+extremal word length}
+\hypersetup{pdfauthor={Zijian Zeng}}
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+\clearpage
+
+\section{The question and the result}
+
+An automaton can admit a word that eliminates every possible computation,
+yet require a long word to do so. Bounding the number of endpoints reachable
+from each state gives a natural hierarchy between deterministic automata
+and unrestricted nondeterministic automata. The endpoint bound must hold
+after every word: a bound on the number of transitions carrying one letter
+does not suffice.
+
+Formally, an NFA is a finite labelled relational semiautomaton
+$\calA=(Q,\Sigma,\Delta)$, with no designated initial or final states.
+For $X\subseteq Q$ and $w\in\Sigma^*$, write $X\cdot w$ for the union of
+the endpoints of all $w$-labelled paths starting in $X$; abbreviate
+$\{q\}\cdot w$ to $q\cdot w$. Missing transitions are allowed.
+The automaton is \emph{$k$-image-bounded} if
+\begin{equation}\label{eq:global}
+ |q\cdot w|\leq k\qquad(q\in Q,\ w\in\Sigma^*).
+\end{equation}
+A word $w$ is \emph{mortal} if $Q\cdot w=\emp$. We call the automaton
+\emph{incomplete} when a mortal word exists, and denote the minimum length
+of such a word by $\mu(\calA)$. This terminology follows
+Kiefer and Ryzhikov~\cite{KR2025}; incompleteness here means existence of a
+mortal word, rather than merely existence of a missing transition.
+
+Let $M_k(n)$ be the maximum of $\mu(\calA)$ over incomplete $n$-state
+$k$-image-bounded NFAs and finite alphabets. This maximum exists: on a fixed
+state set there are finitely many letter relations, and duplicate relations
+do not affect shortest lengths. Kiefer and Ryzhikov~\cite[Section~9]{KR2025}
+give the bound $M_k(n)\leq n^{k+1}$ and ask whether it is tight.
+We answer the fixed-$k$ asymptotic interpretation of that question.
+
+\begin{theorem}\label{thm:main}
+For each integer $k\geq2$, set
+\[
+ A_k=1+\frac{k(k+1)}2,\qquad
+ N_k=2k+2A_k k!,\qquad
+ c_k=\frac{k!}{(2A_k)^{k+1}}.
+\]
+For every integer $n\geq N_k$, there exists a binary strongly connected
+incomplete $n$-state $k$-image-bounded NFA $\calA$ satisfying
+\[
+ \mu(\calA)\geq c_k n^{k+1}.
+\]
+Consequently, for $n\geq N_k$,
+\[
+ c_k n^{k+1}\leq M_k(n)\leq n^{k+1},
+\]
+and $M_k(n)=\Theta_k(n^{k+1})$ for every fixed $k\geq2$.
+\end{theorem}
+
+The constants and threshold may depend on $k$; the theorem determines the
+exponent at every fixed level $k\geq2$. The general subset bound $2^n-1$
+limits the joint dependence on $k$ and $n$. Strong connectivity means that
+the underlying directed graph is strongly connected. Our lower-bound
+examples have this property and a binary alphabet. The quadratic order
+at $k=1$ is known.
+
+\subsection{Prior mechanisms and the additional ingredient}
+
+Ryzhikov~\cite[Section~4]{R2024} describes a binary deterministic construction
+with a cyclic queue and a physical delay path. Our queue action uses this
+known mechanism, up to indexing. His discussion also recalls the sharp
+arbitrary-alphabet deterministic mortality bound $n(n+1)/2$, attributed
+there to Rystsov. The unrestricted NFA exponential lower bounds in the same
+paper do not impose~\eqref{eq:global}.
+
+Repeated deterministic delays also occur in Vorel's appended-tail lemma,
+reproduced with proof by Ananichev~\cite[Section~2, Lemma~2.1]{A2017}.
+Under its almost-permutation and divisibility hypotheses, adding a tail of
+$h$ states to an $r$-state automaton increases its reset threshold by $rh$.
+That lemma concerns synchronization to a sink; we use it as prior context
+for the delay mechanism, not as a theorem about the present NFA model.
+
+The additional ingredient is a reusable nondeterministic delay. A packet
+with one state in each of $k$ cycles has period
+$L=\lcm(\ell_1,\ldots,\ell_k)$, although it uses only
+$\sum_i\ell_i$ clock states. Pairwise coprime lengths can make $L$ of order
+$n^k$ at fixed $k$. The essential issue is to force a linear number of these
+delays without allowing resets, queue collisions, or simultaneous forks
+to create a shortcut. We arrange for every failed packet to return to a
+single queue port, separate from the injective action on the remaining
+queue. The potential in Lemma~\ref{lem:lower} then measures exactly how much
+progress any word can make. Thus the same clocks are reused, rather than
+copied for each queue state. This supplies the additional factor $n$ while
+preserving the global endpoint promise.
+
+\section{A queue and a packet of clocks}
+
+Fix integers $k\geq2$, $m\geq2$, and $\ell_i\geq2$ for $1\leq i\leq k$.
+The disjoint state sets are
+\[
+ P=\{p_0,\ldots,p_{m-1}\},\qquad
+ C_i=\{c_{i,0},\ldots,c_{i,\ell_i-1}\},\qquad
+ Q=P\cup\bigcup_{i=1}^k C_i.
+\]
+Let $S=\{c_{i,0}:1\leq i\leq k\}$ and
+$L=\lcm(\ell_1,\ldots,\ell_k)$. The alphabet is $\{a,b\}$.
+Letter $a$ rotates each of $P,C_1,\ldots,C_k$ forward by one position:
+\[
+ p_j\cdot a=\{p_{j+1\bmod m}\},\qquad
+ c_{i,j}\cdot a=\{c_{i,j+1\bmod\ell_i}\}.
+\]
+The other letter is defined by
+\begin{align}
+ p_0\cdot b&=S,& p_1\cdot b&=\{p_{m-1}\},\label{eq:bqueue}\\
+ p_j\cdot b&=\{p_{j-1}\} &&(2\leq j<m),\notag\\
+ c_{i,j}\cdot b&=
+ \begin{cases}
+  \{p_0\},&0\leq j<\ell_i-1,\\
+  \emp,&j=\ell_i-1.
+ \end{cases}\label{eq:bclock}
+\end{align}
+Write $f$ for the permutation of $P\setminus\{p_0\}$ induced by $b$.
+For $m=2$ this permutation fixes $p_1$. Call $S\cdot a^t$ a
+\emph{packet}; its position in every clock is determined by the same $t$.
+The state $c_{i,\ell_i-1}$ is the terminal position of clock $i$.
+
+\begin{proposition}\label{prop:threshold}
+The automaton just defined is strongly connected and globally
+$k$-image-bounded, with least possible image bound exactly $k$.
+It is incomplete and satisfies
+\begin{equation}\label{eq:threshold}
+ 1+(m+1)L\ \leq\ \mu(\calA)\ \leq\ 1+(m+1)L+m^2.
+\end{equation}
+\end{proposition}
+
+We prove the properties separately. The clock lengths need not be coprime
+for Proposition~\ref{prop:threshold}, and no condition on $\gcd(m,L)$ is needed.
+
+\begin{lemma}\label{lem:image}
+Every image of a singleton under any word is empty, a singleton, or a packet.
+The underlying directed graph is strongly connected.
+\end{lemma}
+\begin{proof}
+The family consisting of $\emp$, all singletons, and all packets is closed
+under $a$. By~\eqref{eq:bqueue}--\eqref{eq:bclock}, the $b$-image of a
+singleton is empty, a singleton, or $S$. For a packet, each component either
+disappears under $b$ or reaches the same state $p_0$. Its image is therefore
+empty or $\{p_0\}$. This family is closed under both letters and contains
+every initial singleton, so induction on the whole word proves the assertion.
+Each member has size at most $k$, and $|p_0\cdot b|=k$ proves equality of
+the least admissible bound. This induction covers arbitrarily many forks.
+
+Every queue state reaches $p_0$ by a power of $a$. Every clock state reaches
+its position zero by a power of $a$ and then reaches $p_0$ by $b$, since
+$\ell_i\geq2$. Conversely, from $p_0$ powers of $a$ reach the entire queue;
+$b$ followed by suitable powers of $a$ has a path to any prescribed clock
+state. These paths prove strong connectivity.
+\end{proof}
+
+\section{Charging every unit of progress}
+
+We examine global images immediately after occurrences of $b$, called
+\emph{$b$-boundaries}. At such a boundary the image has the form
+\[
+ T\cup E_\eta,\qquad T\subseteq P,\quad \eta\in\{0,1\},\qquad
+ E_0=\emp,\quad E_1=S.
+\]
+The representation is unique because queue and clock states are disjoint.
+For this image define
+\[
+ V(T,\eta)=|T|+\eta.
+\]
+This counts queue states and one unit for an entire packet, rather than
+counting the individual states in that packet.
+
+\begin{lemma}\label{lem:lower}
+Every mortal word has length at least $1+(m+1)L$.
+\end{lemma}
+\begin{proof}
+Letter $a$ is a permutation of $Q$, and
+\begin{equation}\label{eq:first}
+ Q\cdot b=P\cup S.
+\end{equation}
+Indeed, $p_0$ supplies $S$, the other queue states supply
+$P\setminus\{p_0\}$, and the nonterminal clock states supply $p_0$.
+Thus the potential immediately after the first $b$ is $m+1$.
+
+Consider any interval $a^t b$, $t\geq0$, between consecutive occurrences of
+$b$. Suppose its starting image is $T\cup E_\eta$.
+Put $U=T\cdot a^t$, let $\alpha$ be the indicator of $p_0\in U$, and let
+$\varepsilon$ be the indicator that $\eta=1$ and at least one state in
+$S\cdot a^t$ is nonterminal. After this interval the queue part is
+\[
+ T'=f(U\setminus\{p_0\})\cup
+ \begin{cases}\{p_0\},&\varepsilon=1,\\\emp,&\varepsilon=0,\end{cases}
+\]
+and the packet indicator is $\eta'=\alpha$. The displayed union is disjoint,
+and $f$ is injective. Since $a$ permutes $P$, we obtain the exact identity
+\begin{equation}\label{eq:potential}
+ V(T',\eta')=|T|-\alpha+\varepsilon+\alpha
+             =|T|+\varepsilon,
+ \qquad V(T,\eta)-V(T',\eta')=\eta-\varepsilon.
+\end{equation}
+In particular, the representation persists after every $b$.
+
+The drop is either zero or one. It equals one precisely when a packet was
+present and every component of that packet reaches a terminal clock position.
+Since its starting positions are all zero, this condition is
+\[
+ t\equiv-1\pmod{\ell_i}\quad\hbox{for every }i,
+ \qquad\hbox{equivalently}\qquad L\mid t+1.
+\]
+Every interval that lowers $V$ therefore has length $t+1\geq L$.
+The identity includes the case where a killed packet is replaced by a new
+packet at the very same $b$: then $\alpha=1$, and the potential still drops
+by exactly one. Consecutive $b$'s and empty queue subsets are also covered.
+
+A mortal word contains $b$, because $a$ alone is a permutation. Delete an
+initial run of $a$'s, which leaves $Q$ unchanged, and a terminal run of $a$'s,
+which cannot turn a nonempty subset into an empty one. The remaining mortal
+word starts and ends with $b$. By~\eqref{eq:first}, its first $b$ gives
+potential $m+1$; its last gives zero. Equation~\eqref{eq:potential} forces
+exactly $m+1$ unit drops. The intervals between consecutive $b$'s are
+disjoint, and each of these drops costs at least $L$ letters. Including the
+first $b$ proves the lower bound for the shortened word and hence for the
+original word.
+\end{proof}
+
+\begin{lemma}\label{lem:mortal}
+There is a mortal word of length at most $1+(m+1)L+m^2$.
+\end{lemma}
+\begin{proof}
+Begin with $b$, giving potential $m+1$ and a packet. At any $b$-boundary
+with a packet, apply $a^{L-1}b$. By~\eqref{eq:potential}, this lowers the
+potential by exactly one, whatever the queue subset is.
+
+If the packet is absent but the potential is positive, choose any active
+queue state $p_j$. Take $t\in\{0,\ldots,m-1\}$ with $j+t\equiv0\pmod m$,
+and apply $a^t b$. This creates a packet and leaves the potential unchanged:
+in~\eqref{eq:potential} we have $\eta=\varepsilon=0$ and $\alpha=1$.
+This preliminary fork costs at most $m$ letters. Now apply $a^{L-1}b$ to
+lower the potential by one.
+
+After exactly $m+1$ such drops the potential is zero, so the global image
+is empty. The first drop needs no preliminary fork, and at most $m$ later
+forks are needed. The total length is at most $1+(m+1)L+m^2$.
+\end{proof}
+
+Lemmas~\ref{lem:image}--\ref{lem:mortal} prove
+Proposition~\ref{prop:threshold}, including an explicit mortality procedure.
+
+\section{Obtaining every sufficiently large state count}
+
+\begin{proof}[Proof of the lower bound in Theorem~\ref{thm:main}]
+Fix $k\geq2$, write $K=k!$ and $A=A_k$, and take any $n\geq N_k$.
+Choose
+\begin{equation}\label{eq:parameters}
+ M=K\left\lfloor\frac{n-k}{AK}\right\rfloor,\qquad
+ \ell_i=1+iM\ (1\leq i\leq k),\qquad
+ m=n-k-(A-1)M.
+\end{equation}
+Since $AM\leq n-k$, we have $m\geq M$. The floor estimate gives
+\[
+ M\geq\frac{n-k}{A}-K\geq\frac{n}{2A},
+\]
+where the second inequality follows from $n\geq2k+2AK$.
+Also $(n-k)/(AK)\geq2$, so $M\geq2K\geq2$.
+Thus $m\geq2$ and $\ell_i\geq2$, as required. Moreover,
+\[
+ m+\sum_{i=1}^k\ell_i
+ =m+k+\frac{k(k+1)}2M=n.
+\]
+There is no padding by extra states, and strong connectivity is retained.
+
+The lengths $\ell_i$ are pairwise coprime. To see this, suppose $i<j$
+and $d$ divides both $1+iM$ and $1+jM$. Then $\gcd(d,M)=1$, while
+$d\mid(j-i)M$, so $d\mid j-i$. If $d>1$, a prime divisor $p$ of $d$
+satisfies $p\leq j-i\leq k-1$ and therefore divides $K$ and $M$.
+This contradicts $\gcd(d,M)=1$. Hence $d=1$.
+
+It follows that
+\[
+ L=\prod_{i=1}^k(1+iM)\geq K M^k.
+\]
+Proposition~\ref{prop:threshold} now yields
+\[
+ \mu(\calA)\geq1+(m+1)L
+ \geq K M^{k+1}
+ \geq\frac{k!}{(2A_k)^{k+1}}n^{k+1}.
+\]
+The construction is binary, strongly connected, and globally
+$k$-image-bounded by the same proposition, proving the claimed lower bound
+for every $n\geq N_k$.
+\end{proof}
+
+\section{The matching upper bound}
+
+For completeness we reproduce the elementary upper argument behind the
+bound of Kiefer and Ryzhikov~\cite[Section~9]{KR2025}.
+Let $\calA$ be any incomplete $n$-state $k$-image-bounded NFA and put
+\[
+ D=\sum_{j=1}^{\min(k,n)}\binom nj.
+\]
+Consider any nonempty image $q\cdot u$ of an original state.
+A killing continuation exists, since a global mortal word kills every
+subset. Along a shortest killing continuation all the intermediate
+nonempty subsets have size at most $k$: they are images of $q$ under
+longer words, so~\eqref{eq:global} applies.
+No nonempty subset can repeat along this continuation. If it did, deleting
+the factor between equal subsets would preserve the final empty image and
+shorten the continuation. Counting the nonempty subsets before the final
+empty image shows that the continuation has length at most $D$.
+
+List the original states $q_1,\ldots,q_n$. Starting with the empty prefix,
+successively append a shortest killing continuation for the current image
+of $q_i$, skipping it if that image is already empty. A dead row remains
+dead under extensions, so after at most $n$ continuations the global image
+is empty. The resulting mortal word has length at most $nD$.
+
+Finally, order $Q$. Encode each nonempty subset of size at most $k$ by
+listing its elements increasingly and padding the list to length $k$ with
+copies of its maximum. This is an injection into $Q^k$, because the set of
+entries recovers the subset. Thus $D\leq n^k$, giving
+$\mu(\calA)\leq n^{k+1}$. Together with the lower bound, this completes
+Theorem~\ref{thm:main}.
+
+\paragraph{Scope and remaining extremal questions.}
+The bounds leave room to improve constants and determine exact extremal
+thresholds. They concern witness length and do not establish lower bounds on
+algorithmic running time. No unambiguity assumption is imposed, and the result
+does not resolve mortality questions restricted to unambiguous automata.
+The distinction
+between endpoints and path multiplicity is visible in the construction:
+there are $k$ different $b^2$-paths from $p_0$ to itself, and $k^r$ such
+$b^{2r}$-paths. Their endpoints merge, in agreement with
+Lemma~\ref{lem:image}.
+
+\paragraph{Computational checks.}
+Exact finite checks regenerated the transition relations, exhausted the
+reachable global subset graphs and all singleton subset closures in small
+instances, and tested the potential identity and the constructive strategy.
+A fresh separately implemented verifier covered 61 instances, checked nine
+serialized certificates, and tested 277,168 abstract potential transitions,
+including simultaneous packet killing and replacement. The cases include
+repeated and noncoprime clock lengths. These finite checks test implementation
+and boundary cases and complement the all-parameter proof above.
+
+\paragraph{AI methodology.}
+OpenAI Codex contributed substantially to all sections: developing the
+construction and proofs, comparing primary literature, implementing exact
+set and integer-bitmask checks, and drafting the exposition and LaTeX.
+Separate Codex contexts checked the argument and finite computations.
+Responsibility for any submission and its content remains with the named author.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\end{document}

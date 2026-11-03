@@ -1,0 +1,19 @@
+{
+  "outcome": "ready",
+  "candidate_kind": "resolution-paper",
+  "original_status": "proved",
+  "summary": "Fresh citation, clean-build, six-page visual and source-ZIP reproduction audits passed; release gate check passed. Frozen files and working_paper assessment preserved.",
+  "next_test": "Supervisor: run release_gate.py publish on the unchanged project and retain the working_paper label.",
+  "evidence": [
+    "checkpoint.md",
+    "audit/citations.json",
+    "audit/build.json",
+    "audit/visual.json",
+    "audit/stoc-assessment.json",
+    "evidence/c015-imagebound-release-2bbd673a9c35/release-gate-check.json",
+    "evidence/c015-imagebound-release-2bbd673a9c35/final-integrity.json",
+    "evidence/c015-imagebound-release-2bbd673a9c35/portable-build-results.json",
+    "evidence/c015-imagebound-release-2bbd673a9c35/working_paper_sources.zip",
+    "manuscript/c015-imagebound-write-b795278c1e36/working_paper.pdf"
+  ]
+}

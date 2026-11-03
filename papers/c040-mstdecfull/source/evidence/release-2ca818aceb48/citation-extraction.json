@@ -1,0 +1,168 @@
+{
+  "job_id": "c040-mstdecfull-release-2ca818aceb48",
+  "stage": "pass_1_extraction_only",
+  "utc": "2026-11-03T01:19:09.635540+00:00",
+  "document": "manuscript/main.tex",
+  "claims": [
+    {
+      "id": "C01",
+      "location": "Abstract and Theorem 1",
+      "text": "For every fixed p<1, deterministic zero-query expected O_p(log^2 n) path with aspect-independent every-execution n^{O_p(log n)} exact operations.",
+      "type": "Original theorem"
+    },
+    {
+      "id": "C02",
+      "location": "Section 1, first paragraph",
+      "text": "Bateni et al. introduced the strong/weak distance-oracle framework; their square-root-log MST upper theorem assumes metric weak observations.",
+      "type": "Attribution"
+    },
+    {
+      "id": "C03",
+      "location": "Abstract; Section 1, prior bounds",
+      "text": "Anand et al. give unrestricted-time O_p(log n) for every p<1 and quasipolynomial O(log^4 n) for p<=0.1.",
+      "type": "Attribution"
+    },
+    {
+      "id": "C04",
+      "location": "Section 1, Method",
+      "text": "Hierarchy, universal future tests, normalization and promotion/intersection framework are inherited from Anand et al. Section 6.",
+      "type": "Attribution"
+    },
+    {
+      "id": "C05",
+      "location": "Section 1, Related work",
+      "text": "Fletcher-Hershkowitz graph-spanning distance embeddings have constant distortion under level-diameter growth Omega(log n); present objective is dyadic total path cost with hidden cores.",
+      "type": "Attribution and comparison"
+    },
+    {
+      "id": "C06",
+      "location": "Section 2, parameter bounds and boundaries",
+      "text": "r<=81q^-2 ell, R<=11000q^-3 ell, r/R<=q/128; n=2 and R>n paths meet main bound.",
+      "type": "Mathematical bound"
+    },
+    {
+      "id": "C07",
+      "location": "Section 2, equation (1)",
+      "text": "Uniform unmarked-rectangle mask failure probability <n^-20, also for adaptive observations.",
+      "type": "Mathematical bound"
+    },
+    {
+      "id": "C08",
+      "location": "Lemma 2, Seed core",
+      "text": "Every observed R-seed has a hidden true 2s-radius core of size at least R-r.",
+      "type": "Original lemma"
+    },
+    {
+      "id": "C09",
+      "location": "Lemma 3, Quantile bounds",
+      "text": "Ceiling-rank quantiles bound point-center and seed-center distances, with fewer than r universally far accepted points.",
+      "type": "Original lemma"
+    },
+    {
+      "id": "C10",
+      "location": "Section 3, algorithm",
+      "text": "Observable finite carving creates nested partitions and always outputs a spanning path.",
+      "type": "Algorithm guarantee"
+    },
+    {
+      "id": "C11",
+      "location": "Section 3, completeness implication",
+      "text": "Points within (A-2)t pass singleton tests; every true-diameter-t R-set is admissible.",
+      "type": "Mathematical implication"
+    },
+    {
+      "id": "C12",
+      "location": "Lemma 4, Nonaccumulating outliers",
+      "text": "Every intermediate nonsingleton has diameter<=256t core, size>r, fewer than r outliers; singleton core may be empty.",
+      "type": "Original lemma"
+    },
+    {
+      "id": "C13",
+      "location": "Section 4, selected-center packing",
+      "text": "Selected centers are >28t apart; k separated points satisfy k<=1+2MST/delta.",
+      "type": "Mathematical bound"
+    },
+    {
+      "id": "C14",
+      "location": "Section 4, equation (5)",
+      "text": "K_i<=1+W*/t_i; N_i<=(R-1)(1+4W*/t_i); partition count<=R+4RW*/t_i.",
+      "type": "Mathematical bound"
+    },
+    {
+      "id": "C15",
+      "location": "Section 4, equation (6)",
+      "text": "Actual intermediate outlier count<=2R+5RW*/t_i; bottom n, root zero.",
+      "type": "Mathematical bound"
+    },
+    {
+      "id": "C16",
+      "location": "Section 4, equations (7)-(8)",
+      "text": "Under normalized scale bounds, H and Omega each <=14R(L+1)W*.",
+      "type": "Mathematical bound"
+    },
+    {
+      "id": "C17",
+      "location": "Lemma 5, Outlier-sensitive leaf path",
+      "text": "Every compatible DFS path costs <=2 beta H+12 beta Omega under the stated nonnested-core assumptions.",
+      "type": "Original lemma"
+    },
+    {
+      "id": "C18",
+      "location": "Section 5, equation (10)",
+      "text": "Constructed normalized path cost<=50176R(L+1)W*.",
+      "type": "Mathematical bound"
+    },
+    {
+      "id": "C19",
+      "location": "Section 6, equation (11)",
+      "text": "Scale-event failure probability<=p^(n-1), uniformly over adversary.",
+      "type": "Mathematical bound"
+    },
+    {
+      "id": "C20",
+      "location": "Section 6, normalization",
+      "text": "d* is genuine metric, D*<=d*, equality on unmarked pairs; Delta* in [n^2/2,n^2] on scale event.",
+      "type": "Mathematical statement"
+    },
+    {
+      "id": "C21",
+      "location": "Section 6, scaling and expectation",
+      "text": "Scaling good-event cost<=100352R(L+1)W, failure contribution<=(1+1/q)W.",
+      "type": "Mathematical bound"
+    },
+    {
+      "id": "C22",
+      "location": "Section 6, final numerical constant",
+      "text": "100352*11000*3*4=13246464000; final bound<=10^15 q^-5 h^2 W.",
+      "type": "Mathematical bound"
+    },
+    {
+      "id": "C23",
+      "location": "Section 7, resource accounting",
+      "text": "Observable precomputation uses O(L^2 n N^2) plus polynomial factors; c_q n^{2R+k}<=n^{a_q h}; zero private-bit cost.",
+      "type": "Algorithm guarantee"
+    },
+    {
+      "id": "C24",
+      "location": "Section 8, finite-check paragraph",
+      "text": "358 nested chains on five labels, 8951 eligible core assignments for (1,2),(2,3), 268560 compatible ordered cases, 1074240 path edges.",
+      "type": "Exact finite observation"
+    },
+    {
+      "id": "C25",
+      "location": "Section 8, finite-check limitation",
+      "text": "Finite checks concern extraction and do not execute the large-constant carving algorithm or replace all-n proof.",
+      "type": "Evidence scope"
+    },
+    {
+      "id": "C26",
+      "location": "AI methodology",
+      "text": "Substantial Codex assistance for proofs, algorithms, exact code, literature and drafting; separate model contexts checked internally.",
+      "type": "Process disclosure"
+    }
+  ],
+  "scope": "Entire manuscript, including all substantive theorem/lemma/bound assertions, cited comparisons, finite-count evidence and disclosure. Definitions, questions and expressly future work excluded. User authorized bounded autonomous release; no additional confirmation pause.",
+  "snapshot_digest": "3a7133dbcc463bfba827578e6a5a4028802dc5a73d23c647e733201b0be99d76",
+  "manuscript_digest": "203aa4452ff612d76a7e2cf95734dfb62d168580ad5fa1fe30831cf086035682",
+  "pdf_digest": "f6bec7b5610084cfee824109f3245bd1fc875a19f4aa87d77f1ffecb2adb9660"
+}
